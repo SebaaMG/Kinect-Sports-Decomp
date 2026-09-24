@@ -791,7 +791,12 @@
           "/O1"
         ]
       },
-      "auto_match/func_827D9908.c": "MISSING",
+      "auto_match/func_827D9908.c": {
+        "status": "Matching",
+        "extra_cflags": [
+          "/O1"
+        ]
+      },
       "auto_match/func_827D9918.c": {
         "status": "Matching",
         "extra_cflags": [
