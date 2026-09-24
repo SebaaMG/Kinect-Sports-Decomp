@@ -4,12 +4,14 @@ import json
 import bisect
 from pathlib import Path
 import re
+import shutil
 import sqlite3
 
 ROOT = Path(__file__).resolve().parent.parent
 BUILD = ROOT / 'build/4D5308C9'
 from lab_paths import LAB
 DB = LAB / 'analysis/full-game-export/progress.sqlite'
+SNAPSHOT = LAB / 'analysis/jeff-assembly-snapshot/4D5308C9'
 START = re.compile(rb'^\.fn\s+([^,\s]+),')
 END = re.compile(rb'^\.endfn\s+(\S+)')
 INSTRUCTION = re.compile(rb'^/\* ([0-9A-Fa-f]{8}) ')
@@ -37,13 +39,18 @@ def scan(path, symbols):
 
 
 def main():
+    # Jeff rewrites build/asm whenever splits change. Index a private snapshot
+    # so byte offsets remain valid throughout matching work.
+    if not SNAPSHOT.is_dir():
+        SNAPSHOT.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copytree(BUILD / 'asm', SNAPSHOT)
     db = sqlite3.connect(DB)
     db.execute('''CREATE TABLE IF NOT EXISTS assembly_ranges (
       address INTEGER PRIMARY KEY, path TEXT NOT NULL,
       start_offset INTEGER NOT NULL, end_offset INTEGER NOT NULL)''')
-    paths = (list((BUILD / 'asm').glob('auto_*_text.s')) +
-             list((BUILD / 'asm/auto_match').glob('func_*.s')) +
-             list((BUILD / 'asm/compiler_probe').glob('*.s')))
+    paths = (list(SNAPSHOT.glob('auto_*_text.s')) +
+             list((SNAPSHOT / 'auto_match').glob('func_*.s')) +
+             list((SNAPSHOT / 'compiler_probe').glob('*.s')))
     symbols = {}
     for line in (ROOT / 'config/4D5308C9/symbols.txt').read_text().splitlines():
         match = SYMBOL.match(line)
@@ -51,6 +58,7 @@ def main():
             symbols[match[1]] = int(match[2], 16)
     count = 0
     with db:
+        db.execute('DELETE FROM assembly_ranges')
         for path in paths:
             rows = list(scan(path, symbols))
             db.executemany('''INSERT INTO assembly_ranges(address,path,start_offset,end_offset)

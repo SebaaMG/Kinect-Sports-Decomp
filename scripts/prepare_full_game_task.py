@@ -36,11 +36,15 @@ def main():
     task_root = LAB / 'agents/full-game-tasks' / stem
     task_root.mkdir(parents=True, exist_ok=True)
     work = Path(tempfile.mkdtemp(prefix='task-', dir=task_root))
-    with Path(asm_path).open('rb') as stream:
-        stream.seek(start)
-        assembly = stream.read(end - start)
-    if not assembly.strip():
-        raise RuntimeError('Indexed assembly range is empty')
+    isolated_asm = ROOT / 'build/4D5308C9/asm/auto_match' / f'func_{stem}.s'
+    if isolated_asm.is_file():
+        assembly = isolated_asm.read_bytes()
+    else:
+        with Path(asm_path).open('rb') as stream:
+            stream.seek(start)
+            assembly = stream.read(end - start)
+    if not assembly.strip() or f'/* {stem}'.encode() not in assembly:
+        raise RuntimeError(f'Assembly for 0x{stem} is absent or its indexed offsets are stale; regenerate splits')
     (work / 'original.s').write_bytes(assembly)
     shutil.copyfile(seed['path'], work / 'ghidra.c')
     fid = db.execute('SELECT fid_name,score,library,match_count FROM fid_candidates WHERE address=?',

@@ -57,3 +57,33 @@ auto_match/func_8240D018.c:
 
 auto_match/func_8266F768.c:
 	.text       start:0x8266F768 end:0x8266F780
+
+auto_match/func_822300B8.c:
+	.text       start:0x822300B8 end:0x822300C8
+
+auto_match/func_822306E0.c:
+	.text       start:0x822306E0 end:0x822306F0
+
+auto_match/func_82230918.c:
+	.text       start:0x82230918 end:0x82230928
+
+auto_match/func_8223AAA0.c:
+	.text       start:0x8223AAA0 end:0x8223AAB0
+
+auto_match/func_8223B600.c:
+	.text       start:0x8223B600 end:0x8223B610
+
+auto_match/func_8223F610.c:
+	.text       start:0x8223F610 end:0x8223F620
+
+auto_match/func_82247B10.c:
+	.text       start:0x82247B10 end:0x82247B20
+
+auto_match/func_8224C00C.c:
+	.text       start:0x8224C00C end:0x8224C01C
+
+auto_match/func_8227F010.c:
+	.text       start:0x8227F010 end:0x8227F020
+
+auto_match/func_82290DF8.c:
+	.text       start:0x82290DF8 end:0x82290E08
