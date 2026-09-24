@@ -525,7 +525,8 @@
         "extra_cflags": [
           "/O1"
         ]
-      }
+      },
+      "auto_match/func_82549FA0.c": "MISSING"
     }
   }
 }

@@ -312,3 +312,6 @@ auto_match/func_82525F08.c:
 
 auto_match/func_82549F90.c:
 	.text       start:0x82549F90 end:0x82549FA0
+
+auto_match/func_82549FA0.c:
+	.text       start:0x82549FA0 end:0x82549FB0
