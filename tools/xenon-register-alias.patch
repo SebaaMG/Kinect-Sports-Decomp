@@ -1,0 +1,71 @@
+--- a/data/languages/vmx128.sinc
++++ b/data/languages/vmx128.sinc
+@@ -96,8 +96,7 @@
+ # Select operation
+ define pcodeop vectorConditionalSelect128;
+ 
+-define register offset=0x10000 size=16 [
+-	vr0 vr1 vr2 vr3 vr4 vr5 vr6 vr7 vr8 vr9 vr10 vr11 vr12 vr13 vr14 vr15 vr16 vr17 vr18 vr19 vr20 vr21 vr22 vr23 vr24 vr25 vr26 vr27 vr28 vr29 vr30 vr31
++define register offset=0x4400 size=16 [
+ 	vr32 vr33 vr34 vr35 vr36 vr37 vr38 vr39 vr40 vr41 vr42 vr43 vr44 vr45 vr46 vr47 vr48 vr49 vr50 vr51 vr52 vr53 vr54 vr55 vr56 vr57 vr58 vr59 vr60 vr61 vr62 vr63
+ 	vr64 vr65 vr66 vr67 vr68 vr69 vr70 vr71 vr72 vr73 vr74 vr75 vr76 vr77 vr78 vr79 vr80 vr81 vr82 vr83 vr84 vr85 vr86 vr87 vr88 vr89 vr90 vr91 vr92 vr93 vr94 vr95
+ 	vr96 vr97 vr98 vr99 vr100 vr101 vr102 vr103 vr104 vr105 vr106 vr107 vr108 vr109 vr110 vr111 vr112 vr113 vr114 vr115 vr116 vr117 vr118 vr119 vr120 vr121 vr122 vr123 vr124 vr125 vr126 vr127
+@@ -146,7 +145,7 @@
+ ;
+ 
+ attach variables [ vregD_21_25_00 vregA_16_20_00 vregB_11_15_00 ]
+-    [ vr0 vr1 vr2 vr3 vr4 vr5 vr6 vr7 vr8 vr9 vr10 vr11 vr12 vr13 vr14 vr15 vr16 vr17 vr18 vr19 vr20 vr21 vr22 vr23 vr24 vr25 vr26 vr27 vr28 vr29 vr30 vr31 ];
++    [ vs32 vs33 vs34 vs35 vs36 vs37 vs38 vs39 vs40 vs41 vs42 vs43 vs44 vs45 vs46 vs47 vs48 vs49 vs50 vs51 vs52 vs53 vs54 vs55 vs56 vs57 vs58 vs59 vs60 vs61 vs62 vs63 ];
+ attach variables [ vregD_21_25_01 vregA_16_20_01 vregB_11_15_01 ]
+     [ vr32 vr33 vr34 vr35 vr36 vr37 vr38 vr39 vr40 vr41 vr42 vr43 vr44 vr45 vr46 vr47 vr48 vr49 vr50 vr51 vr52 vr53 vr54 vr55 vr56 vr57 vr58 vr59 vr60 vr61 vr62 vr63 ];
+ attach variables [ vregD_21_25_10 vregA_16_20_10 vregB_11_15_10 ]
+@@ -155,7 +154,7 @@
+     [ vr96 vr97 vr98 vr99 vr100 vr101 vr102 vr103 vr104 vr105 vr106 vr107 vr108 vr109 vr110 vr111 vr112 vr113 vr114 vr115 vr116 vr117 vr118 vr119 vr120 vr121 vr122 vr123 vr124 vr125 vr126 vr127 ];
+ 
+ attach variables [ vregC_06_08 ]
+-    [ vr0 vr1 vr2 vr3 vr4 vr5 vr6 vr7 ];
++    [ vs32 vs33 vs34 vs35 vs36 vs37 vs38 vs39 ];
+ 
+ attach variables [ regB_16_20 regC_11_15 ]
+     [ r0  r1  r2  r3  r4  r5  r6  r7  r8  r9  r10 r11 r12 r13 r14 r15
+--- a/data/languages/altivec.sinc
++++ b/data/languages/altivec.sinc
+@@ -293,8 +293,11 @@
+ }
+ 
+ :vaddfp vrD,vrA,vrB		is OP=4 & vrD & vrA & vrB & XOP_0_10=10
+-{   # TODO definition
+-	vrD = vectorAddFloatingPoint(vrA,vrB);
++{
++	vrD[96,32] = vrA[96,32] f+ vrB[96,32];
++	vrD[64,32] = vrA[64,32] f+ vrB[64,32];
++	vrD[32,32] = vrA[32,32] f+ vrB[32,32];
++	vrD[0,32] = vrA[0,32] f+ vrB[0,32];
+ }
+ 
+ :vaddsbs vrD,vrA,vrB	is OP=4 & vrD & vrA & vrB & XOP_0_10=768
+@@ -1066,8 +1069,8 @@
+ }
+ 
+ :vsel vrD,vrA,vrB,vrC	is OP=4 & vrD & vrA & vrB & vrC & XOP_0_5=42
+-{	# TODO definition
+-	vrD = vectorConditionalSelect(vrA,vrB,vrC);
++{	# vsel chooses bits from B where C is one, otherwise A.
++	vrD = (vrA & ~vrC) | (vrB & vrC);
+ }
+ 
+ :vsl vrD,vrA,vrB		is OP=4 & vrD & vrA & vrB & XOP_0_10=452
+@@ -1188,8 +1191,11 @@
+ }
+ 
+ :vsubfp vrD,vrA,vrB		is OP=4 & vrD & vrA & vrB & XOP_0_10=74
+-{	# TODO definition
+-	vrD = vectorSubtractFloatingPoint(vrA,vrB);
++{
++	vrD[96,32] = vrA[96,32] f- vrB[96,32];
++	vrD[64,32] = vrA[64,32] f- vrB[64,32];
++	vrD[32,32] = vrA[32,32] f- vrB[32,32];
++	vrD[0,32] = vrA[0,32] f- vrB[0,32];
+ }
+ 
+ :vsubsbs vrD,vrA,vrB		is OP=4 & vrD & vrA & vrB & XOP_0_10=1792

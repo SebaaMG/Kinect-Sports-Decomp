@@ -1,0 +1,60 @@
+# Kinect Sports Decomp
+
+A matching decompilation of **Kinect Sports** for Xbox 360. The project reconstructs source code that can be built and compared with the original PowerPC executable.
+
+## Target
+
+| | |
+| --- | --- |
+| Game | Kinect Sports |
+| Title ID | `4D5308C9` |
+| Media ID | `655F2429` |
+| Tested `default.xex` SHA-256 | `46388258eddee0cff4753da6c426c99a80d05d65ee38403b65ac21e86a03cf01` |
+
+## Progress
+
+| Measure | Current |
+| --- | ---: |
+| Function ranges indexed by Jeff | 57,731 |
+| Ranges with an initial Ghidra C export | 57,614 |
+| Code matches verified with objdiff | 1 |
+| Matched code bytes within `.text` | 8 / 15,808,620 (0.00005%) |
+
+The indexed ranges cover 99.22% of the executable's `.text` bytes. Generated C is kept in a local analysis directory; `src/` contains reconstructed source. Matching progress counts only compiled code checked against the original with objdiff.
+
+## Getting started
+
+Place `default.xex` from your own copy of the game at `orig/4D5308C9/default.xex`. Install Python 3 and Ninja, then configure the [Jeff](https://github.com/rjkiv/jeff) build:
+
+```sh
+python3 configure.py
+ninja
+```
+
+On Linux, use `python3 configure.py --wrapper /path/to/wibo` if Wibo is not already configured. `python3 configure.py --help` lists paths for the compiler and other tools. The first reconstructed function is `src/compiler_probe/add.c`; `scripts/verify_probe.sh` builds it and checks its code match with objdiff.
+
+## Analysis workflow
+
+Jeff extracts the executable, indexes symbols and splits it into objects. Ghidra produces C candidates for the indexed functions, including Xenon VMX128 code. Matching work starts from an address, its assembly and a C candidate, then compiles a small object and compares it with objdiff.
+
+```sh
+python3 scripts/prepare_full_game_task.py 0x82400E48
+python3 scripts/isolate_functions.py 0x82400E48
+python3 scripts/evaluate_candidate.py 0x82400E48 path/to/candidate.c --cflags /nologo /c /TC /O1
+```
+
+The analysis scripts use a private lab directory. Set `KINECT_LAB_ROOT` or put its absolute path in an untracked `.lab-root` file. The Ghidra exporter, Xenon language patches, switch recovery and current measurements are described in [decompiler research](docs/decompiler-research.md). [Compiler experiments](docs/ghidra-compile-pilot.md) and the [matching workflow](docs/fast-path.md) have further detail.
+
+## Repository layout
+
+- `config/4D5308C9/` — build configuration, symbols and splits.
+- `src/` — reconstructed source.
+- `tools/` — Jeff build support, Ghidra scripts and Xenon language patches.
+- `scripts/` — analysis, task preparation and match verification.
+- `docs/` — technical notes and measurements.
+
+Original game files, generated objects, decompiler output, captures and local credentials stay outside Git.
+
+## Credits
+
+The build layout comes from [jeff-template](https://github.com/rjkiv/jeff-template). The analysis workflow builds on [GhidraXenon](https://github.com/freeqaz/ghidra-xenon-extension), [objdiff](https://github.com/encounter/objdiff) and the [Dance Central 3 decomp](https://github.com/freeqaz/dc3-decomp).

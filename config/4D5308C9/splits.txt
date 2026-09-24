@@ -1,0 +1,41 @@
+Sections:
+	.rdata      type:rodata align:65536
+	.pdata      type:rodata align:65536
+	.text       type:code align:65536
+	_TEXT       type:code align:65536
+	.embsec0    type:code align:65536
+	.data       type:data align:65536
+	.XBMOVIE    type:data align:65536
+	.edata      type:rodata align:65536
+	.idata      type:data align:65536
+	.XBLD       type:data align:65536
+
+compiler_probe/add.c:
+	.text       start:0x82FA5958 end:0x82FA5960
+
+auto_match/func_82363840.c:
+	.pdata      start:0x821E4F98 end:0x821E4FA0
+	.text       start:0x82363840 end:0x82363BEC
+
+auto_match/func_82400E48.c:
+	.pdata      start:0x821E8588 end:0x821E8590
+	.text       start:0x82400E48 end:0x82401008
+
+auto_match/func_82486278.c:
+	.pdata      start:0x821EAD58 end:0x821EAD60
+	.text       start:0x82486278 end:0x82486624
+
+auto_match/func_8225F1B8.c:
+	.text       start:0x8225F1B8 end:0x8225F3BC
+
+auto_match/func_82486A20.c:
+	.pdata      start:0x821EAD78 end:0x821EAD80
+	.text       start:0x82486A20 end:0x82486B04
+
+auto_match/func_823653E0.c:
+	.pdata      start:0x821E5028 end:0x821E5030
+	.text       start:0x823653E0 end:0x82365484
+
+auto_match/func_82456A08.c:
+	.pdata      start:0x821E9D78 end:0x821E9D80
+	.text       start:0x82456A08 end:0x82456AC8

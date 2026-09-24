@@ -1,0 +1,47 @@
+diff --git a/dll/kernel32/fileapi.cpp b/dll/kernel32/fileapi.cpp
+index b65ce90..619d1c7 100644
+--- a/dll/kernel32/fileapi.cpp
++++ b/dll/kernel32/fileapi.cpp
+@@ -1926,6 +1926,29 @@ HANDLE WINAPI FindFirstFileExA(LPCSTR lpFileName, FINDEX_INFO_LEVELS fInfoLevelI
+ 	return findFirstFileCommon(std::string(lpFileName), findData);
+ }
+ 
++HANDLE WINAPI FindFirstFileExW(LPCWSTR lpFileName, FINDEX_INFO_LEVELS fInfoLevelId, LPVOID lpFindFileData,
++							   FINDEX_SEARCH_OPS fSearchOp, LPVOID lpSearchFilter, DWORD dwAdditionalFlags) {
++	HOST_CONTEXT_GUARD();
++	DEBUG_LOG("FindFirstFileExW(%p, %d, %p, %d, %p, 0x%x)", lpFileName, fInfoLevelId,
++			  lpFindFileData, fSearchOp, lpSearchFilter, dwAdditionalFlags);
++	if (!lpFindFileData) {
++		setLastError(ERROR_INVALID_PARAMETER);
++		return INVALID_HANDLE_VALUE;
++	}
++	if (!lpFileName) {
++		setLastError(ERROR_PATH_NOT_FOUND);
++		return INVALID_HANDLE_VALUE;
++	}
++	if (fInfoLevelId != FindExInfoStandard || fSearchOp != FindExSearchNameMatch || lpSearchFilter ||
++		dwAdditionalFlags != 0) {
++		setLastError(ERROR_INVALID_PARAMETER);
++		return INVALID_HANDLE_VALUE;
++	}
++
++	auto *findData = static_cast<LPWIN32_FIND_DATAW>(lpFindFileData);
++	return findFirstFileCommon(wideStringToString(lpFileName), findData);
++}
++
+ BOOL WINAPI FindNextFileA(HANDLE hFindFile, LPWIN32_FIND_DATAA lpFindFileData) {
+ 	HOST_CONTEXT_GUARD();
+ 	DEBUG_LOG("FindNextFileA(%p, %p)\n", hFindFile, lpFindFileData);
+diff --git a/dll/kernel32/fileapi.h b/dll/kernel32/fileapi.h
+index 7531963..1b49d61 100644
+--- a/dll/kernel32/fileapi.h
++++ b/dll/kernel32/fileapi.h
+@@ -66,6 +66,8 @@ HANDLE WINAPI FindFirstFileA(LPCSTR lpFileName, LPWIN32_FIND_DATAA lpFindFileDat
+ HANDLE WINAPI FindFirstFileW(LPCWSTR lpFileName, LPWIN32_FIND_DATAW lpFindFileData);
+ HANDLE WINAPI FindFirstFileExA(LPCSTR lpFileName, FINDEX_INFO_LEVELS fInfoLevelId, LPVOID lpFindFileData,
+ 							   FINDEX_SEARCH_OPS fSearchOp, LPVOID lpSearchFilter, DWORD dwAdditionalFlags);
++HANDLE WINAPI FindFirstFileExW(LPCWSTR lpFileName, FINDEX_INFO_LEVELS fInfoLevelId, LPVOID lpFindFileData,
++							   FINDEX_SEARCH_OPS fSearchOp, LPVOID lpSearchFilter, DWORD dwAdditionalFlags);
+ BOOL WINAPI FindNextFileA(HANDLE hFindFile, LPWIN32_FIND_DATAA lpFindFileData);
+ BOOL WINAPI FindNextFileW(HANDLE hFindFile, LPWIN32_FIND_DATAW lpFindFileData);
+ BOOL WINAPI FindClose(HANDLE hFindFile);

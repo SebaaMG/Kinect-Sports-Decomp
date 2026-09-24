@@ -1,0 +1,73 @@
+--- a/data/languages/altivec.sinc
++++ b/data/languages/altivec.sinc
+@@ -387,13 +387,13 @@
+ }
+ 
+ :vand vrD,vrA,vrB		is OP=4 & vrD & vrA & vrB & XOP_0_10=1028
+-{   # TODO definition
+-	vrD = vectorLogicalAnd(vrA,vrB);
++{
++	vrD = vrA & vrB;
+ }
+ 
+ :vandc vrD,vrA,vrB		is OP=4 & vrD & vrA & vrB & XOP_0_10=1092
+-{   # TODO definition
+-	vrD = vectorLogicalAndWithComplement(vrA,vrB);
++{
++	vrD = vrA & ~vrB;
+ }
+ 
+ :vavgsb vrD,vrA,vrB		is OP=4 & vrD & vrA & vrB & XOP_0_10=1282
+@@ -590,9 +590,49 @@
+ }
+ 
+ :vcmpeqfp vrD,vrA,vrB	is OP=4 & vrD & vrA & vrB & BIT_10=0 & XOP_0_9=198
+-{   # TODO definition
+-    # TODO change CR6
+-	vrD = vectorCompareEqualToFloatingPoint(vrA,vrB);
++{
++	# Lane-wise FP compare equal: mask is 0xFFFFFFFF when true, 0x00000000 when false
++	local a_0:4 = vrA[96,32];
++	local a_1:4 = vrA[64,32];
++	local a_2:4 = vrA[32,32];
++	local a_3:4 = vrA[0,32];
++	local b_0:4 = vrB[96,32];
++	local b_1:4 = vrB[64,32];
++	local b_2:4 = vrB[32,32];
++	local b_3:4 = vrB[0,32];
++
++	local mask_0:4 = 0;
++	if (a_0 f== b_0) goto <set_lane0>;
++	goto <lane1>;
++	<set_lane0>
++	mask_0 = 0xFFFFFFFF;
++	<lane1>
++
++	local mask_1:4 = 0;
++	if (a_1 f== b_1) goto <set_lane1>;
++	goto <lane2>;
++	<set_lane1>
++	mask_1 = 0xFFFFFFFF;
++	<lane2>
++
++	local mask_2:4 = 0;
++	if (a_2 f== b_2) goto <set_lane2>;
++	goto <lane3>;
++	<set_lane2>
++	mask_2 = 0xFFFFFFFF;
++	<lane3>
++
++	local mask_3:4 = 0;
++	if (a_3 f== b_3) goto <set_lane3>;
++	goto <done>;
++	<set_lane3>
++	mask_3 = 0xFFFFFFFF;
++	<done>
++
++	vrD[96,32] = mask_0;
++	vrD[64,32] = mask_1;
++	vrD[32,32] = mask_2;
++	vrD[0,32] = mask_3;
+ }
+ 
+ :vcmpeqfp. vrD,vrA,vrB	is OP=4 & vrD & vrA & vrB & BIT_10=1 & XOP_0_9=198

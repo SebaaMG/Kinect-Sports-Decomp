@@ -1,0 +1,20 @@
+{
+  "game": {
+    "cflags": "base",
+    "objects": {
+      "compiler_probe/add.c": {
+        "status": "Matching",
+        "extra_cflags": [
+          "/O2"
+        ]
+      },
+      "auto_match/func_82363840.c": "MISSING",
+      "auto_match/func_82400E48.c": "MISSING",
+      "auto_match/func_82486278.c": "MISSING",
+      "auto_match/func_8225F1B8.c": "MISSING",
+      "auto_match/func_82486A20.c": "MISSING",
+      "auto_match/func_823653E0.c": "MISSING",
+      "auto_match/func_82456A08.c": "MISSING"
+    }
+  }
+}
