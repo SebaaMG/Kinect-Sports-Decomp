@@ -1124,7 +1124,12 @@
         ]
       },
       "auto_match/func_8281F798.c": "MISSING",
-      "auto_match/func_828222B8.c": "MISSING",
+      "auto_match/func_828222B8.c": {
+        "status": "Matching",
+        "extra_cflags": [
+          "/O1"
+        ]
+      },
       "auto_match/func_82829F80.c": "MISSING",
       "auto_match/func_8282AFC0.c": "MISSING",
       "auto_match/func_8282B9F8.c": "MISSING",
