@@ -192,3 +192,123 @@ auto_match/func_82388968.c:
 
 auto_match/func_82388978.c:
 	.text       start:0x82388978 end:0x82388988
+
+auto_match/func_82388988.c:
+	.text       start:0x82388988 end:0x82388998
+
+auto_match/func_82388998.c:
+	.text       start:0x82388998 end:0x823889A8
+
+auto_match/func_823889A8.c:
+	.text       start:0x823889A8 end:0x823889B8
+
+auto_match/func_823889B8.c:
+	.text       start:0x823889B8 end:0x823889C8
+
+auto_match/func_823889C8.c:
+	.text       start:0x823889C8 end:0x823889D8
+
+auto_match/func_823889D8.c:
+	.text       start:0x823889D8 end:0x823889E8
+
+auto_match/func_823889E8.c:
+	.text       start:0x823889E8 end:0x823889F8
+
+auto_match/func_823889F8.c:
+	.text       start:0x823889F8 end:0x82388A08
+
+auto_match/func_82388A08.c:
+	.text       start:0x82388A08 end:0x82388A18
+
+auto_match/func_82388A18.c:
+	.text       start:0x82388A18 end:0x82388A28
+
+auto_match/func_82388A28.c:
+	.text       start:0x82388A28 end:0x82388A38
+
+auto_match/func_82388A38.c:
+	.text       start:0x82388A38 end:0x82388A48
+
+auto_match/func_82388A48.c:
+	.text       start:0x82388A48 end:0x82388A58
+
+auto_match/func_82388A58.c:
+	.text       start:0x82388A58 end:0x82388A68
+
+auto_match/func_82388A68.c:
+	.text       start:0x82388A68 end:0x82388A78
+
+auto_match/func_82388A78.c:
+	.text       start:0x82388A78 end:0x82388A88
+
+auto_match/func_82388A88.c:
+	.text       start:0x82388A88 end:0x82388A98
+
+auto_match/func_82388A98.c:
+	.text       start:0x82388A98 end:0x82388AA8
+
+auto_match/func_8238DED0.c:
+	.text       start:0x8238DED0 end:0x8238DEE0
+
+auto_match/func_823AA328.c:
+	.text       start:0x823AA328 end:0x823AA338
+
+auto_match/func_823AA3F8.c:
+	.text       start:0x823AA3F8 end:0x823AA408
+
+auto_match/func_823AA470.c:
+	.text       start:0x823AA470 end:0x823AA480
+
+auto_match/func_823AA980.c:
+	.text       start:0x823AA980 end:0x823AA990
+
+auto_match/func_823AB350.c:
+	.text       start:0x823AB350 end:0x823AB360
+
+auto_match/func_823AB4F0.c:
+	.text       start:0x823AB4F0 end:0x823AB500
+
+auto_match/func_823DEBD8.c:
+	.text       start:0x823DEBD8 end:0x823DEBE8
+
+auto_match/func_82404B58.c:
+	.text       start:0x82404B58 end:0x82404B68
+
+auto_match/func_82424D90.c:
+	.text       start:0x82424D90 end:0x82424DA0
+
+auto_match/func_8242F2E8.c:
+	.text       start:0x8242F2E8 end:0x8242F2F8
+
+auto_match/func_8246F0E8.c:
+	.text       start:0x8246F0E8 end:0x8246F0F8
+
+auto_match/func_824717E0.c:
+	.text       start:0x824717E0 end:0x824717F0
+
+auto_match/func_82471878.c:
+	.text       start:0x82471878 end:0x82471888
+
+auto_match/func_82479750.c:
+	.text       start:0x82479750 end:0x82479760
+
+auto_match/func_824A22E8.c:
+	.text       start:0x824A22E8 end:0x824A22F8
+
+auto_match/func_824E1BD8.c:
+	.text       start:0x824E1BD8 end:0x824E1BE8
+
+auto_match/func_824FB8C0.c:
+	.text       start:0x824FB8C0 end:0x824FB8D0
+
+auto_match/func_8250DD50.c:
+	.text       start:0x8250DD50 end:0x8250DD60
+
+auto_match/func_82525590.c:
+	.text       start:0x82525590 end:0x825255A0
+
+auto_match/func_82525F08.c:
+	.text       start:0x82525F08 end:0x82525F18
+
+auto_match/func_82549F90.c:
+	.text       start:0x82549F90 end:0x82549FA0
