@@ -39,3 +39,6 @@ auto_match/func_823653E0.c:
 auto_match/func_82456A08.c:
 	.pdata      start:0x821E9D78 end:0x821E9D80
 	.text       start:0x82456A08 end:0x82456AC8
+
+auto_match/func_822CF910.c:
+	.text       start:0x822CF910 end:0x822CF920
