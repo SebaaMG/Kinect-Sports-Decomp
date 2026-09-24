@@ -170,7 +170,27 @@
         "extra_cflags": [
           "/O1"
         ]
-      }
+      },
+      "auto_match/func_823884F0.c": "MISSING",
+      "auto_match/func_82388500.c": "MISSING",
+      "auto_match/func_82388510.c": "MISSING",
+      "auto_match/func_82388520.c": "MISSING",
+      "auto_match/func_82388530.c": "MISSING",
+      "auto_match/func_82388540.c": "MISSING",
+      "auto_match/func_82388550.c": "MISSING",
+      "auto_match/func_82388560.c": "MISSING",
+      "auto_match/func_82388570.c": "MISSING",
+      "auto_match/func_82388580.c": "MISSING",
+      "auto_match/func_82388590.c": "MISSING",
+      "auto_match/func_823885A0.c": "MISSING",
+      "auto_match/func_823885B0.c": "MISSING",
+      "auto_match/func_823885C0.c": "MISSING",
+      "auto_match/func_823885D0.c": "MISSING",
+      "auto_match/func_823888D0.c": "MISSING",
+      "auto_match/func_82388948.c": "MISSING",
+      "auto_match/func_82388958.c": "MISSING",
+      "auto_match/func_82388968.c": "MISSING",
+      "auto_match/func_82388978.c": "MISSING"
     }
   }
 }

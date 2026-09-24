@@ -132,3 +132,63 @@ auto_match/func_823884D0.c:
 
 auto_match/func_823884E0.c:
 	.text       start:0x823884E0 end:0x823884F0
+
+auto_match/func_823884F0.c:
+	.text       start:0x823884F0 end:0x82388500
+
+auto_match/func_82388500.c:
+	.text       start:0x82388500 end:0x82388510
+
+auto_match/func_82388510.c:
+	.text       start:0x82388510 end:0x82388520
+
+auto_match/func_82388520.c:
+	.text       start:0x82388520 end:0x82388530
+
+auto_match/func_82388530.c:
+	.text       start:0x82388530 end:0x82388540
+
+auto_match/func_82388540.c:
+	.text       start:0x82388540 end:0x82388550
+
+auto_match/func_82388550.c:
+	.text       start:0x82388550 end:0x82388560
+
+auto_match/func_82388560.c:
+	.text       start:0x82388560 end:0x82388570
+
+auto_match/func_82388570.c:
+	.text       start:0x82388570 end:0x82388580
+
+auto_match/func_82388580.c:
+	.text       start:0x82388580 end:0x82388590
+
+auto_match/func_82388590.c:
+	.text       start:0x82388590 end:0x823885A0
+
+auto_match/func_823885A0.c:
+	.text       start:0x823885A0 end:0x823885B0
+
+auto_match/func_823885B0.c:
+	.text       start:0x823885B0 end:0x823885C0
+
+auto_match/func_823885C0.c:
+	.text       start:0x823885C0 end:0x823885D0
+
+auto_match/func_823885D0.c:
+	.text       start:0x823885D0 end:0x823885E0
+
+auto_match/func_823888D0.c:
+	.text       start:0x823888D0 end:0x823888E0
+
+auto_match/func_82388948.c:
+	.text       start:0x82388948 end:0x82388958
+
+auto_match/func_82388958.c:
+	.text       start:0x82388958 end:0x82388968
+
+auto_match/func_82388968.c:
+	.text       start:0x82388968 end:0x82388978
+
+auto_match/func_82388978.c:
+	.text       start:0x82388978 end:0x82388988
