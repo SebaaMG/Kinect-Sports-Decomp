@@ -110,7 +110,17 @@
         "extra_cflags": [
           "/O1"
         ]
-      }
+      },
+      "auto_match/func_822EB700.c": "MISSING",
+      "auto_match/func_82306478.c": "MISSING",
+      "auto_match/func_82312B60.c": "MISSING",
+      "auto_match/func_82388480.c": "MISSING",
+      "auto_match/func_82388490.c": "MISSING",
+      "auto_match/func_823884A0.c": "MISSING",
+      "auto_match/func_823884B0.c": "MISSING",
+      "auto_match/func_823884C0.c": "MISSING",
+      "auto_match/func_823884D0.c": "MISSING",
+      "auto_match/func_823884E0.c": "MISSING"
     }
   }
 }

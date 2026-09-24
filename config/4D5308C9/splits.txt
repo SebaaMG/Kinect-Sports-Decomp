@@ -102,3 +102,33 @@ auto_match/func_823770E0.c:
 
 auto_match/func_82388458.c:
 	.text       start:0x82388458 end:0x82388468
+
+auto_match/func_822EB700.c:
+	.text       start:0x822EB700 end:0x822EB710
+
+auto_match/func_82306478.c:
+	.text       start:0x82306478 end:0x82306488
+
+auto_match/func_82312B60.c:
+	.text       start:0x82312B60 end:0x82312B70
+
+auto_match/func_82388480.c:
+	.text       start:0x82388480 end:0x82388490
+
+auto_match/func_82388490.c:
+	.text       start:0x82388490 end:0x823884A0
+
+auto_match/func_823884A0.c:
+	.text       start:0x823884A0 end:0x823884B0
+
+auto_match/func_823884B0.c:
+	.text       start:0x823884B0 end:0x823884C0
+
+auto_match/func_823884C0.c:
+	.text       start:0x823884C0 end:0x823884D0
+
+auto_match/func_823884D0.c:
+	.text       start:0x823884D0 end:0x823884E0
+
+auto_match/func_823884E0.c:
+	.text       start:0x823884E0 end:0x823884F0
