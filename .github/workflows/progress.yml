@@ -3,6 +3,9 @@ name: Progress
 on:
   push:
     branches: [main]
+    paths:
+      - progress/report.json
+      - .github/workflows/progress.yml
   workflow_dispatch:
 
 permissions:
