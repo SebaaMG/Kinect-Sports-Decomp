@@ -440,7 +440,12 @@
           "/O1"
         ]
       },
-      "auto_match/func_82549F90.c": "MISSING"
+      "auto_match/func_82549F90.c": {
+        "status": "Matching",
+        "extra_cflags": [
+          "/O1"
+        ]
+      }
     }
   }
 }
