@@ -1,0 +1,30 @@
+name: Progress
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check report
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          report = json.loads(Path('progress/report.json').read_text())
+          assert int(report['measures']['total_code']) > 0
+          assert report['units']
+          PY
+      - name: Upload report
+        uses: actions/upload-artifact@v4
+        with:
+          name: 4D5308C9_report
+          path: progress/report.json
+          if-no-files-found: error

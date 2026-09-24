@@ -1,7 +1,5 @@
 {
-    "progress_categories": {
-        "sdk": "XDK Code"
-    },
+    "progress_categories": {},
     "asflags": [],
     "ldflags": [],
     "cflags": {
