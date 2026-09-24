@@ -17,8 +17,8 @@ A matching decompilation of **Kinect Sports** for Xbox 360. The project reconstr
 | --- | ---: |
 | Function ranges indexed by Jeff | 57,731 |
 | Ranges with an initial Ghidra C export | 57,614 |
-| Code matches verified with objdiff | 2 |
-| Matched code bytes in target objects | 24 / 15,706,240 (0.00015%) |
+| Code matches verified with objdiff | 7 |
+| Matched code bytes in target objects | 132 / 15,706,240 (0.00084%) |
 
 The indexed ranges cover 99.22% of the executable's `.text` bytes. Generated C is kept in a local analysis directory; `src/` contains reconstructed source. Matching progress counts only compiled code checked against the original with objdiff.
 
