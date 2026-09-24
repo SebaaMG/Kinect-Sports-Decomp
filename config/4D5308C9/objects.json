@@ -219,7 +219,12 @@
         ]
       },
       "auto_match/func_823885B0.c": "MISSING",
-      "auto_match/func_823885C0.c": "MISSING",
+      "auto_match/func_823885C0.c": {
+        "status": "Matching",
+        "extra_cflags": [
+          "/O1"
+        ]
+      },
       "auto_match/func_823885D0.c": {
         "status": "Matching",
         "extra_cflags": [
