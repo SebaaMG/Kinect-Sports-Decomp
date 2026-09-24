@@ -42,3 +42,18 @@ auto_match/func_82456A08.c:
 
 auto_match/func_822CF910.c:
 	.text       start:0x822CF910 end:0x822CF920
+
+auto_match/func_82231700.c:
+	.text       start:0x82231700 end:0x82231714
+
+auto_match/func_8223F658.c:
+	.text       start:0x8223F658 end:0x8223F66C
+
+auto_match/func_82259BB0.c:
+	.text       start:0x82259BB0 end:0x82259BC4
+
+auto_match/func_8240D018.c:
+	.text       start:0x8240D018 end:0x8240D030
+
+auto_match/func_8266F768.c:
+	.text       start:0x8266F768 end:0x8266F780
