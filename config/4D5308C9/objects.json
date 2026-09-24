@@ -823,7 +823,12 @@
           "/O1"
         ]
       },
-      "auto_match/func_827D9930.c": "MISSING",
+      "auto_match/func_827D9930.c": {
+        "status": "Matching",
+        "extra_cflags": [
+          "/O1"
+        ]
+      },
       "auto_match/func_827D9DC8.c": {
         "status": "Matching",
         "extra_cflags": [
