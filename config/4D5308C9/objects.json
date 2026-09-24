@@ -611,7 +611,12 @@
           "/O1"
         ]
       },
-      "auto_match/func_82639020.c": "MISSING",
+      "auto_match/func_82639020.c": {
+        "status": "Matching",
+        "extra_cflags": [
+          "/O1"
+        ]
+      },
       "auto_match/func_82639360.c": {
         "status": "Matching",
         "extra_cflags": [
