@@ -80,7 +80,12 @@
         "extra_cflags": [
           "/O1"
         ]
-      }
+      },
+      "auto_match/func_82290E90.c": "MISSING",
+      "auto_match/func_822D8848.c": "MISSING",
+      "auto_match/func_822DDCB0.c": "MISSING",
+      "auto_match/func_823770E0.c": "MISSING",
+      "auto_match/func_82388458.c": "MISSING"
     }
   }
 }
