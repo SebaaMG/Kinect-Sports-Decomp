@@ -1941,7 +1941,12 @@
       },
       "auto_match/func_8234ADB8.c": "MISSING",
       "auto_match/func_82361FD0.c": "MISSING",
-      "auto_match/func_82394380.c": "MISSING",
+      "auto_match/func_82394380.c": {
+        "status": "Matching",
+        "extra_cflags": [
+          "/O1"
+        ]
+      },
       "auto_match/func_82394448.c": "MISSING",
       "auto_match/func_82396E50.c": "MISSING",
       "auto_match/func_82397FE0.c": "MISSING",
