@@ -1323,7 +1323,12 @@
           "/O1"
         ]
       },
-      "auto_match/func_828ACC40.c": "MISSING",
+      "auto_match/func_828ACC40.c": {
+        "status": "Matching",
+        "extra_cflags": [
+          "/O2"
+        ]
+      },
       "auto_match/func_828B0328.c": {
         "status": "Matching",
         "extra_cflags": [
