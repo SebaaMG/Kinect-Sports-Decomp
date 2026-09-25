@@ -1932,7 +1932,12 @@
       "auto_match/func_82397FE0.c": "MISSING",
       "auto_match/func_82398048.c": "MISSING",
       "auto_match/func_823A4740.c": "MISSING",
-      "auto_match/func_823A9DB8.c": "MISSING",
+      "auto_match/func_823A9DB8.c": {
+        "status": "Matching",
+        "extra_cflags": [
+          "/O1"
+        ]
+      },
       "auto_match/func_823A9E78.c": {
         "status": "Matching",
         "extra_cflags": [
