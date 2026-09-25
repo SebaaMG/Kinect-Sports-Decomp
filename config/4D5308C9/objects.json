@@ -1623,7 +1623,12 @@
           "/O1"
         ]
       },
-      "auto_match/func_8224AFF0.c": "MISSING",
+      "auto_match/func_8224AFF0.c": {
+        "status": "Matching",
+        "extra_cflags": [
+          "/O1"
+        ]
+      },
       "auto_match/func_8224C520.c": {
         "status": "Matching",
         "extra_cflags": [
