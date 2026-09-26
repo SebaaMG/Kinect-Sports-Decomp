@@ -2853,7 +2853,12 @@
           "/O2"
         ]
       },
-      "auto_match/func_824B3E60.c": "MISSING",
+      "auto_match/func_824B3E60.c": {
+        "status": "NonMatching",
+        "extra_cflags": [
+          "/O2"
+        ]
+      },
       "auto_match/func_824B5ED0.c": {
         "status": "NonMatching",
         "extra_cflags": [
