@@ -1,0 +1,10 @@
+void fn_824E35E0(int param_1)
+{
+  unsigned int *obj = *(unsigned int **)(param_1 + 0x20c);
+  obj[0x40 / 4] |= 0x1800000;
+  obj[0x38 / 4] |= 0x1800000;
+  obj[0x3c / 4] |= 0x1c00000;
+  obj[0x8c / 4] = (obj[0x8c / 4] & 0xfe7ffffb) | 0x1000004;
+  obj[0x90 / 4] = (obj[0x90 / 4] & 0xfe3ffff1) | 0x80000e;
+  obj[0x94 / 4] = (obj[0x94 / 4] & 0xfe3ffff1) | 0x140000e;
+}

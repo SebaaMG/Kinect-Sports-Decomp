@@ -2622,7 +2622,12 @@
       "auto_match/func_82627E18.c": "MISSING",
       "auto_match/func_8262CEC0.c": "MISSING",
       "auto_match/func_8262D0D0.c": "MISSING",
-      "auto_match/func_824E35E0.c": "MISSING",
+      "auto_match/func_824E35E0.c": {
+        "status": "Matching",
+        "extra_cflags": [
+          "/O1"
+        ]
+      },
       "auto_match/func_8270A558.c": {
         "status": "Matching",
         "extra_cflags": [
