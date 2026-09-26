@@ -2799,7 +2799,12 @@
         ]
       },
       "auto_match/func_824B0CF8.c": "MISSING",
-      "auto_match/func_824B13A8.c": "MISSING",
+      "auto_match/func_824B13A8.c": {
+        "status": "NonMatching",
+        "extra_cflags": [
+          "/O1"
+        ]
+      },
       "auto_match/func_824B15D8.c": "MISSING",
       "auto_match/func_824B1F68.c": "MISSING",
       "auto_match/func_824B2768.c": "MISSING",
