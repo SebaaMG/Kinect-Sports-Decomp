@@ -1,0 +1,82 @@
+typedef unsigned int undefined4;
+typedef unsigned __int64 undefined8;
+extern void fn_82366908(undefined4 *, undefined8, undefined8);
+extern undefined4 lbl_821B7B38;
+extern float lbl_821CC160;
+
+undefined4 *
+fn_82400E48(undefined4 *param_1,undefined4 param_2,undefined8 param_3,undefined4 *param_4)
+
+{
+  float fVar1;
+  const char *str = "Boxing Camera";
+
+  fn_82366908(param_1,param_3,(undefined8)str);
+  param_1[0x90] = param_2;
+  *param_1 = (undefined4)&lbl_821B7B38;
+  param_1[0x91] = 0;
+  param_1[0x92] = 0;
+  param_1[0x93] = 0;
+  param_1[0x94] = 0;
+  fVar1 = lbl_821CC160;
+  param_1[0x95] = 0;
+  param_1[0x96] = 0;
+  param_1[0x97] = 0;
+  param_1[0x98] = 0;
+  param_1[0x99] = 0;
+  param_1[0x9a] = 0;
+  param_1[0x9b] = 0;
+  param_1[0x9c] = 0;
+  param_1[0x9d] = 0;
+  param_1[0x9e] = 0;
+  ((float *)param_1)[0xa0] = fVar1;
+  param_1[0x9f] = 0;
+  param_1[0xa1] = 1;
+  param_1[0xa2] = 0;
+  param_1[0xa3] = 0;
+  param_1[0xa4] = 0;
+  param_1[0xa5] = 0;
+  param_1[0xa6] = 0;
+  param_1[0xa7] = 0;
+  param_1[0xa8] = 0;
+  param_1[0xa9] = 0;
+  param_1[0xaa] = 0;
+  param_1[0xab] = 0;
+  param_1[0xb5] = 0;
+  param_1[0xd3] = 0xffffffff;
+  param_1[0xd4] = 0xffffffff;
+  param_1[0xd5] = 0xffffffff;
+  param_1[0xd6] = 0xffffffff;
+  param_1[0xd7] = 0xffffffff;
+  param_1[0xd8] = 0xffffffff;
+  param_1[0xd9] = 0xffffffff;
+  param_1[0xda] = 0;
+  param_1[0xb8] = *param_4;
+  param_1[0xb9] = param_4[1];
+  param_1[0xba] = param_4[2];
+  param_1[0xbb] = param_4[3];
+  param_1[0xbc] = param_4[4];
+  param_1[0xbd] = param_4[5];
+  param_1[0xc0] = param_4[6];
+  param_1[0xc3] = param_4[7];
+  param_1[0xc6] = param_4[8];
+  param_1[0xc9] = param_4[9];
+  param_1[0xcc] = param_4[10];
+  param_1[0xcf] = param_4[0xb];
+  param_1[0xd2] = param_4[0xc];
+  param_1[0xbf] = param_4[0xd];
+  param_1[0xc2] = param_4[0xe];
+  param_1[0xc5] = param_4[0xf];
+  param_1[200] = param_4[0x10];
+  param_1[0xcb] = param_4[0x11];
+  param_1[0xce] = param_4[0x12];
+  param_1[0xd1] = param_4[0x13];
+  param_1[0xbe] = param_4[0x14];
+  param_1[0xc1] = param_4[0x15];
+  param_1[0xc4] = param_4[0x16];
+  param_1[199] = param_4[0x17];
+  param_1[0xca] = param_4[0x18];
+  param_1[0xcd] = param_4[0x19];
+  param_1[0xd0] = param_4[0x1a];
+  return param_1;
+}
