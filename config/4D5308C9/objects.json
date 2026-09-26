@@ -1824,7 +1824,12 @@
           "/O1"
         ]
       },
-      "auto_match/func_82DF4940.c": "MISSING",
+      "auto_match/func_82DF4940.c": {
+        "status": "Matching",
+        "extra_cflags": [
+          "/O2"
+        ]
+      },
       "auto_match/func_82E163F8.c": "MISSING",
       "auto_match/func_82E2AA08.c": {
         "status": "Matching",
