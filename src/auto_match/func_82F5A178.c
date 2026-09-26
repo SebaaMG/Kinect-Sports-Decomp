@@ -1,0 +1,62 @@
+typedef unsigned char undefined1;
+typedef unsigned char byte;
+typedef unsigned char undefined;
+typedef unsigned char bool;
+#define true 1
+#define false 0
+typedef unsigned short undefined2;
+typedef unsigned short ushort;
+typedef unsigned short word;
+typedef unsigned int undefined4;
+typedef unsigned int uint;
+typedef unsigned int dword;
+typedef unsigned int ulong;
+typedef unsigned __int64 undefined8;
+typedef unsigned __int64 ulonglong;
+typedef unsigned __int64 qword;
+typedef __int64 longlong;
+typedef int (*code)();
+typedef unsigned char U8;
+typedef unsigned short U16;
+typedef unsigned int U32;
+typedef unsigned __int64 U64;
+typedef signed char S8;
+typedef signed short S16;
+typedef signed int S32;
+typedef __int64 S64;
+typedef struct { U64 lo, hi; } V16;
+extern int fn_82F534A0();
+extern int fn_82F53528();
+extern int fn_82F53548();
+extern int fn_82F53580();
+extern int fn_82F59428();
+extern int fn_82F59D58();
+extern int fn_82F5A0A0();
+extern unsigned int lbl_82002AE0;
+extern unsigned int lbl_82006848;
+extern unsigned int lbl_8201DD74;
+extern unsigned int lbl_821327A4;
+
+
+void fn_82F5A178(void)
+
+{
+  double dVar1;
+  
+  fn_82F59D58();
+  dVar1 = (double)fn_82F534A0();
+  if ((float)(dVar1 - (double)lbl_82002AE0) <= lbl_821327A4) {
+    if (lbl_82006848 <= (float)(dVar1 + (double)lbl_82002AE0)) {
+      dVar1 = (double)fn_82F59428();
+      fn_82F53528();
+      fn_82F53548();
+    }
+    else {
+      fn_82F53580();
+      dVar1 = (double)lbl_8201DD74;
+    }
+    fn_82F5A0A0(dVar1);
+  }
+  return;
+}
+
