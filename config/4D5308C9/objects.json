@@ -2932,7 +2932,12 @@
           "/O1"
         ]
       },
-      "auto_match/func_82512B08.c": "MISSING",
+      "auto_match/func_82512B08.c": {
+        "status": "NonMatching",
+        "extra_cflags": [
+          "/O1"
+        ]
+      },
       "auto_match/func_82516318.c": {
         "status": "NonMatching",
         "extra_cflags": [
