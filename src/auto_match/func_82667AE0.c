@@ -1,0 +1,56 @@
+typedef unsigned char undefined1;
+typedef unsigned char byte;
+typedef unsigned char undefined;
+typedef unsigned char bool;
+#define true 1
+#define false 0
+typedef unsigned short undefined2;
+typedef unsigned short ushort;
+typedef unsigned short word;
+typedef unsigned int undefined4;
+typedef unsigned int uint;
+typedef unsigned int dword;
+typedef unsigned int ulong;
+typedef unsigned __int64 undefined8;
+typedef unsigned __int64 ulonglong;
+typedef unsigned __int64 qword;
+typedef __int64 longlong;
+typedef int (*code)();
+typedef unsigned char U8;
+typedef unsigned short U16;
+typedef unsigned int U32;
+typedef unsigned __int64 U64;
+typedef signed char S8;
+typedef signed short S16;
+typedef signed int S32;
+typedef __int64 S64;
+typedef struct { U64 lo, hi; } V16;
+extern int fn_8265D5A8();
+extern unsigned int iStack00000014;
+extern unsigned int iStack0000001c;
+extern unsigned int uStack0000002f;
+
+
+undefined4 * fn_82667AE0(int param_1,int param_2,undefined4 *param_3,undefined1 param_4)
+
+{
+  undefined4 *puVar1;
+  int iStack00000014;
+  int iStack0000001c;
+  undefined4 *puStack00000024;
+  undefined1 uStack0000002f;
+  
+  iStack0000001c = param_2;
+  puStack00000024 = param_3;
+  uStack0000002f = param_4;
+  for (iStack00000014 = param_1; iStack00000014 != iStack0000001c;
+      iStack00000014 = iStack00000014 + 0xc) {
+    puVar1 = (undefined4 *)fn_8265D5A8(iStack00000014);
+    *puStack00000024 = *puVar1;
+    puStack00000024[1] = puVar1[1];
+    puStack00000024[2] = puVar1[2];
+    puStack00000024 = puStack00000024 + 3;
+  }
+  return puStack00000024;
+}
+

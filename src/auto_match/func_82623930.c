@@ -1,0 +1,166 @@
+typedef unsigned char undefined1;
+typedef unsigned char byte;
+typedef unsigned char undefined;
+typedef unsigned char bool;
+#define true 1
+#define false 0
+typedef unsigned short undefined2;
+typedef unsigned short ushort;
+typedef unsigned short word;
+typedef unsigned int undefined4;
+typedef unsigned int uint;
+typedef unsigned int dword;
+typedef unsigned int ulong;
+typedef unsigned __int64 undefined8;
+typedef unsigned __int64 ulonglong;
+typedef unsigned __int64 qword;
+typedef __int64 longlong;
+typedef int (*code)();
+typedef unsigned char U8;
+typedef unsigned short U16;
+typedef unsigned int U32;
+typedef unsigned __int64 U64;
+typedef signed char S8;
+typedef signed short S16;
+typedef signed int S32;
+typedef __int64 S64;
+typedef struct { U64 lo, hi; } V16;
+extern unsigned int *auStack_30;
+extern unsigned int *auStack_40;
+extern unsigned int *auStack_50;
+extern unsigned int *auStack_60;
+extern int fn_82544918();
+extern int fn_826310E0();
+extern int fn_82631578();
+extern int fn_82631920();
+extern int fn_82637B30();
+extern int fn_82637BC0();
+extern int fn_82637C50();
+extern int fn_82637CE0();
+extern int fn_82639380();
+extern int fn_82639528();
+extern unsigned int lbl_821954D0;
+extern unsigned int lbl_831C1D0C;
+extern unsigned int lbl_8320A898;
+extern unsigned int lbl_8327F8B4;
+extern unsigned int lbl_8327F95C;
+extern unsigned int lbl_832968D0;
+extern unsigned int lbl_83296BE0;
+extern unsigned int lbl_83296C80;
+extern V16 vectorMergeHighWord();
+extern V16 vectorMergeLowWord();
+extern void *memcpy(void *, const void *, unsigned int);
+
+
+void fn_82623930(int param_1)
+
+{
+  undefined4 *puVar1;
+  int iVar2;
+  int in_r0;
+  undefined8 *puVar3;
+  undefined1 in_vs32 [16];
+  undefined1 auVar4 [16];
+  undefined1 auVar5 [16];
+  undefined1 in_vs43 [16];
+  undefined1 in_vs44 [16];
+  undefined1 auVar6 [16];
+  undefined1 in_vs45 [16];
+  undefined1 auVar7 [16];
+  undefined4 uVar8;
+  undefined4 uVar9;
+  undefined4 uVar10;
+  undefined4 uVar11;
+  undefined4 in_register_000100a0;
+  undefined4 in_register_000100a4;
+  undefined4 in_register_000100a8;
+  undefined4 in_vr10;
+  undefined4 uVar12;
+  undefined4 uVar13;
+  undefined4 uVar14;
+  undefined4 uVar15;
+  undefined4 uVar16;
+  undefined4 uVar17;
+  undefined4 uVar18;
+  undefined1 auStack_60 [16];
+  undefined1 auStack_50 [16];
+  undefined1 auStack_40 [16];
+  undefined1 auStack_30 [48];
+  
+  fn_82544918(1,lbl_8320A898);
+  iVar2 = lbl_8320A898;
+  *(uint *)(lbl_8320A898 + 0x2948) = *(uint *)(lbl_8320A898 + 0x2948) & 0xfffffff8;
+  *(ulonglong *)(iVar2 + 0x10) = *(ulonglong *)(iVar2 + 0x10) | 0x40;
+  fn_82637B30(lbl_8320A898,1);
+  iVar2 = lbl_8320A898;
+  *(uint *)(lbl_8320A898 + 0x293c) = *(uint *)(lbl_8320A898 + 0x293c) | 8;
+  *(ulonglong *)(iVar2 + 0x10) = *(ulonglong *)(iVar2 + 0x10) | 0x40200;
+  fn_82637BC0(lbl_8320A898,0);
+  fn_82637C50(lbl_8320A898,6);
+  fn_82637CE0(lbl_8320A898,7);
+  iVar2 = lbl_8320A898;
+  *(undefined4 *)(lbl_8320A898 + 0x2904) = lbl_821954D0;
+  *(ulonglong *)(iVar2 + 0x10) = *(ulonglong *)(iVar2 + 0x10) | 0x8000000;
+  iVar2 = lbl_8320A898;
+  *(uint *)(lbl_8320A898 + 0x480) = *(uint *)(lbl_8320A898 + 0x480) & 0xffffe3ff | 0x800;
+  *(ulonglong *)(iVar2 + 0x18) = *(ulonglong *)(iVar2 + 0x18) | 0x80000000;
+  iVar2 = lbl_8320A898;
+  *(uint *)(lbl_8320A898 + 0x480) = *(uint *)(lbl_8320A898 + 0x480) & 0xffff1fff | 0x4000;
+  *(ulonglong *)(iVar2 + 0x18) = *(ulonglong *)(iVar2 + 0x18) | 0x80000000;
+  fn_82639380(lbl_8320A898,0,1);
+  fn_82639528(lbl_8320A898,0);
+  iVar2 = lbl_8320A898;
+  *(uint *)(lbl_8320A898 + 0x48c) = *(uint *)(lbl_8320A898 + 0x48c) & 0xfe7fffff | 0x800000;
+  *(ulonglong *)(iVar2 + 0x18) = *(ulonglong *)(iVar2 + 0x18) | 0x80000000;
+  fn_82631920(lbl_8320A898,lbl_8327F8B4);
+  iVar2 = lbl_8320A898;
+  *(undefined4 *)(lbl_8320A898 + 0x2ed8) = lbl_831C1D0C;
+  *(ulonglong *)(iVar2 + 0x10) = *(ulonglong *)(iVar2 + 0x10) | 0x80000;
+  fn_82631578(lbl_8320A898,lbl_8327F95C);
+  iVar2 = lbl_8320A898;
+  if ((&lbl_83296C80)[param_1 * 0x2c] == 0) {
+    puVar3 = &lbl_832968D0;
+  }
+  else {
+    puVar3 = (undefined8 *)(&lbl_83296BE0 + param_1 * 0x2c);
+  }
+  puVar1 = (undefined4 *)(in_r0 + (int)puVar3 & 0xfffffff0);
+  uVar8 = *puVar1;
+  uVar9 = puVar1[1];
+  uVar10 = puVar1[2];
+  uVar11 = puVar1[3];
+  uVar15 = *(undefined4 *)(puVar3 + 4);
+  uVar16 = *(undefined4 *)((int)puVar3 + 0x24);
+  uVar17 = *(undefined4 *)(puVar3 + 5);
+  uVar18 = *(undefined4 *)((int)puVar3 + 0x2c);
+  uVar12 = *(undefined4 *)((int)puVar3 + 0x14);
+  uVar13 = *(undefined4 *)(puVar3 + 3);
+  uVar14 = *(undefined4 *)((int)puVar3 + 0x1c);{ V16 _vt0 = vectorMergeHighWord(in_vs32,in_vs45); memcpy(auVar5, &_vt0, 16); }{ V16 _vt1 = vectorMergeLowWord(in_vs32,in_vs45); memcpy(auVar4, &_vt1, 16); }{ V16 _vt2 = vectorMergeHighWord(in_vs43,in_vs44); memcpy(auVar7, &_vt2, 16); }{ V16 _vt3 = vectorMergeLowWord(in_vs43,in_vs44); memcpy(auVar6, &_vt3, 16); }
+  vectorMergeHighWord(auVar5,auVar7);
+  vectorMergeLowWord(auVar5,auVar7);
+  vectorMergeHighWord(auVar4,auVar6);
+  vectorMergeLowWord(auVar4,auVar6);
+  puVar1 = (undefined4 *)((uint)(auStack_60 + in_r0) & 0xfffffff0);
+  *puVar1 = *(undefined4 *)(puVar3 + 2);
+  puVar1[1] = uVar12;
+  puVar1[2] = uVar13;
+  puVar1[3] = uVar14;
+  puVar1 = (undefined4 *)((uint)(auStack_50 + in_r0) & 0xfffffff0);
+  *puVar1 = uVar15;
+  puVar1[1] = uVar16;
+  puVar1[2] = uVar17;
+  puVar1[3] = uVar18;
+  puVar1 = (undefined4 *)((uint)(auStack_40 + in_r0) & 0xfffffff0);
+  *puVar1 = in_register_000100a0;
+  puVar1[1] = in_register_000100a4;
+  puVar1[2] = in_register_000100a8;
+  puVar1[3] = in_vr10;
+  puVar1 = (undefined4 *)((uint)(auStack_30 + in_r0) & 0xfffffff0);
+  *puVar1 = uVar8;
+  puVar1[1] = uVar9;
+  puVar1[2] = uVar10;
+  puVar1[3] = uVar11;
+  fn_826310E0(iVar2,4,auStack_60,4,0x4000000000000000);
+  return;
+}
+

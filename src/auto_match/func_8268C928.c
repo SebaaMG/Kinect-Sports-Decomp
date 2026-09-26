@@ -1,0 +1,72 @@
+typedef unsigned char undefined1;
+typedef unsigned char byte;
+typedef unsigned char undefined;
+typedef unsigned char bool;
+#define true 1
+#define false 0
+typedef unsigned short undefined2;
+typedef unsigned short ushort;
+typedef unsigned short word;
+typedef unsigned int undefined4;
+typedef unsigned int uint;
+typedef unsigned int dword;
+typedef unsigned int ulong;
+typedef unsigned __int64 undefined8;
+typedef unsigned __int64 ulonglong;
+typedef unsigned __int64 qword;
+typedef __int64 longlong;
+typedef int (*code)();
+typedef unsigned char U8;
+typedef unsigned short U16;
+typedef unsigned int U32;
+typedef unsigned __int64 U64;
+typedef signed char S8;
+typedef signed short S16;
+typedef signed int S32;
+typedef __int64 S64;
+typedef struct { U64 lo, hi; } V16;
+extern int fn_8268ACE8();
+extern int fn_8268C6A8();
+extern int fn_826BD7D0();
+extern unsigned int lbl_83155184;
+extern unsigned int lbl_83155188;
+extern U64 storeWordConditionalIndexed();
+
+
+undefined4 * fn_8268C928(undefined4 *param_1,uint *param_2,uint param_3,uint param_4)
+
+{
+  int *piVar1;
+  uint uVar2;
+  int iVar3;
+  int iVar4;
+  char in_RESERVE;
+  byte in_cr0;
+  
+  uVar2 = fn_8268ACE8(param_2);
+  if ((param_3 < uVar2) && (param_3 < param_4)) {
+    piVar1 = (int *)(*param_2 & 0xfffffffc);
+    if (*piVar1 < 0) {
+      iVar3 = param_4 - param_3;
+      iVar4 = (int)piVar1 + param_3 + 8;
+    }
+    else {
+      iVar3 = fn_826BD7D0(param_3,piVar1 + 2,0xffffffffffffffff);
+      iVar4 = (int)piVar1 + iVar3 + 8;
+      iVar3 = fn_826BD7D0(param_4 - param_3,iVar4,0xffffffffffffffff);
+    }
+    fn_8268C6A8(param_1,iVar4,iVar3);
+  }
+  else {
+    *param_1 = &lbl_83155184;
+    do {
+      if (in_RESERVE != '\0') {
+        lbl_83155188 = storeWordConditionalIndexed((ulonglong)lbl_83155188 + 1,0,0xffffffff83155188)
+        ;
+        in_cr0 = 2;
+      }
+    } while (!(bool)(in_cr0 >> 1 & 1));
+  }
+  return param_1;
+}
+
