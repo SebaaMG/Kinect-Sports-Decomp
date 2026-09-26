@@ -804,7 +804,12 @@
           "/O1"
         ]
       },
-      "auto_match/func_826D84D8.c": "MISSING",
+      "auto_match/func_826D84D8.c": {
+        "status": "NonMatching",
+        "extra_cflags": [
+          "/O1"
+        ]
+      },
       "auto_match/func_826D8580.c": "MISSING",
       "auto_match/func_826E6A20.c": {
         "status": "Matching",
