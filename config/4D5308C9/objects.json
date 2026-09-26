@@ -1983,7 +1983,12 @@
           "/O1"
         ]
       },
-      "auto_match/func_82FA4E80.c": "MISSING",
+      "auto_match/func_82FA4E80.c": {
+        "status": "Matching",
+        "extra_cflags": [
+          "/O2"
+        ]
+      },
       "auto_match/func_82FA58F8.c": "MISSING",
       "auto_match/func_82FA5908.c": {
         "status": "Matching",
