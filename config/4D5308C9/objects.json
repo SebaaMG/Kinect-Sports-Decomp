@@ -2422,7 +2422,12 @@
           "/O1"
         ]
       },
-      "auto_match/func_822B8700.c": "MISSING",
+      "auto_match/func_822B8700.c": {
+        "status": "NonMatching",
+        "extra_cflags": [
+          "/O1"
+        ]
+      },
       "auto_match/func_822C28E8.c": {
         "status": "Matching",
         "extra_cflags": [
