@@ -2809,7 +2809,12 @@
         ]
       },
       "auto_match/func_824A7658.c": "MISSING",
-      "auto_match/func_824ADD00.c": "MISSING",
+      "auto_match/func_824ADD00.c": {
+        "status": "NonMatching",
+        "extra_cflags": [
+          "/O2"
+        ]
+      },
       "auto_match/func_824AE420.c": "MISSING",
       "auto_match/func_824AF888.c": "MISSING",
       "auto_match/func_824AFFF0.c": {
