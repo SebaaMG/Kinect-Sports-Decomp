@@ -1955,7 +1955,12 @@
       "auto_match/func_82FA5938.c": "MISSING",
       "auto_match/func_82FA5A18.c": "MISSING",
       "auto_match/func_82FA8938.c": "MISSING",
-      "auto_match/func_82FA9548.c": "MISSING",
+      "auto_match/func_82FA9548.c": {
+        "status": "Matching",
+        "extra_cflags": [
+          "/O1"
+        ]
+      },
       "auto_match/func_82FAC768.c": "MISSING",
       "auto_match/func_82FAC778.c": "MISSING",
       "auto_match/func_82FAC788.c": "MISSING",
