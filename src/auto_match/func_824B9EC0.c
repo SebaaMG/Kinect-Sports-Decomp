@@ -1,0 +1,152 @@
+typedef unsigned char undefined1;
+typedef unsigned char byte;
+typedef unsigned char undefined;
+typedef unsigned char bool;
+#define true 1
+#define false 0
+typedef unsigned short undefined2;
+typedef unsigned short ushort;
+typedef unsigned short word;
+typedef unsigned int undefined4;
+typedef unsigned int uint;
+typedef unsigned int dword;
+typedef unsigned int ulong;
+typedef unsigned __int64 undefined8;
+typedef unsigned __int64 ulonglong;
+typedef unsigned __int64 qword;
+typedef __int64 longlong;
+typedef int (*code)();
+typedef unsigned char U8;
+typedef unsigned short U16;
+typedef unsigned int U32;
+typedef unsigned __int64 U64;
+typedef signed char S8;
+typedef signed short S16;
+typedef signed int S32;
+typedef __int64 S64;
+typedef struct { U64 lo, hi; } V16;
+extern unsigned int *auStack_a0;
+extern int fn_823AB478();
+extern int fn_8245AE18();
+extern int fn_8245AF50();
+extern int fn_8245AFC0();
+extern int fn_8245B050();
+extern int fn_8245B100();
+extern int fn_8245B168();
+extern int fn_8245B1F0();
+extern unsigned int uStack_a4;
+extern unsigned int uStack_a8;
+extern unsigned int uStack_ac;
+extern unsigned int uStack_b0;
+extern unsigned int uStack_b4;
+extern unsigned int uStack_b8;
+extern unsigned int uStack_bc;
+extern unsigned int uStack_c0;
+
+
+bool fn_824B9EC0(undefined8 param_1,int param_2)
+
+{
+  undefined4 uVar1;
+  undefined4 uVar2;
+  undefined4 uVar3;
+  undefined4 uVar4;
+  undefined4 uVar5;
+  undefined4 uVar6;
+  undefined4 uVar7;
+  undefined4 uVar8;
+  undefined4 uVar9;
+  undefined4 uVar10;
+  undefined4 uVar11;
+  undefined4 uVar12;
+  undefined4 uVar13;
+  undefined4 uVar14;
+  int iVar15;
+  int iVar16;
+  undefined1 uVar18;
+  int iVar17;
+  undefined4 uStack_c0;
+  undefined4 uStack_bc;
+  undefined4 uStack_b8;
+  undefined4 uStack_b4;
+  undefined4 uStack_b0;
+  undefined4 uStack_ac;
+  undefined4 uStack_a8;
+  undefined4 uStack_a4;
+  undefined4 auStack_a0 [40];
+  
+  iVar15 = *(int *)(param_2 + 0x100);
+  uStack_bc = *(undefined4 *)(iVar15 + 0x48c);
+  uStack_b8 = *(undefined4 *)(iVar15 + 0x4b0);
+  uStack_b4 = *(undefined4 *)(iVar15 + 0x4a4);
+  uStack_b0 = *(undefined4 *)(iVar15 + 0x474);
+  uStack_ac = *(undefined4 *)(iVar15 + 0x478);
+  uStack_a8 = *(undefined4 *)(iVar15 + 0x46c);
+  uStack_a4 = *(undefined4 *)(iVar15 + 0x468);
+  auStack_a0[0] = *(undefined4 *)(iVar15 + 0x464);
+  uVar1 = *(undefined4 *)(iVar15 + 0x4c0);
+  uVar2 = *(undefined4 *)(iVar15 + 0x4a8);
+  uVar3 = *(undefined4 *)(iVar15 + 0x460);
+  uVar4 = *(undefined4 *)(iVar15 + 0x4cc);
+  uVar5 = *(undefined4 *)(iVar15 + 0x4c8);
+  uVar6 = *(undefined4 *)(iVar15 + 0x498);
+  uVar7 = *(undefined4 *)(iVar15 + 0x480);
+  uVar8 = *(undefined4 *)(iVar15 + 0x4c4);
+  uVar9 = *(undefined4 *)(iVar15 + 0x494);
+  uVar10 = *(undefined4 *)(iVar15 + 0x47c);
+  uVar11 = *(undefined4 *)(iVar15 + 0x4b8);
+  uVar12 = *(undefined4 *)(iVar15 + 0x4bc);
+  uVar13 = *(undefined4 *)(iVar15 + 0x4a0);
+  uVar14 = *(undefined4 *)(iVar15 + 0x4ac);
+  iVar15 = fn_8245AE18();
+  iVar17 = -0x7fffbffb;
+  iVar16 = fn_8245B1F0();
+  if (iVar16 != 0) {
+    fn_8245AF50(iVar15,0xf);
+    if (*(int *)(iVar15 + 0x14) == 0) {
+      *(undefined4 *)(iVar15 + 0x14) = 1;
+    }
+    uVar18 = fn_823AB478(param_2);
+    fn_8245B050(iVar15,uVar18,4);
+    fn_8245B100(iVar15);
+    uStack_c0 = uVar1;
+    fn_8245B168(iVar15,&uStack_c0,4);
+    uStack_c0 = uVar2;
+    fn_8245B168(iVar15,&uStack_c0,4);
+    uStack_c0 = uVar3;
+    fn_8245B168(iVar15,&uStack_c0,4);
+    uStack_c0 = uVar4;
+    fn_8245B168(iVar15,&uStack_c0,4);
+    uStack_c0 = uVar5;
+    fn_8245B168(iVar15,&uStack_c0,4);
+    uStack_c0 = uVar6;
+    fn_8245B168(iVar15,&uStack_c0,4);
+    uStack_c0 = uVar7;
+    fn_8245B168(iVar15,&uStack_c0,4);
+    uStack_c0 = uVar8;
+    fn_8245B168(iVar15,&uStack_c0,4);
+    uStack_c0 = uVar9;
+    fn_8245B168(iVar15,&uStack_c0,4);
+    uStack_c0 = uVar10;
+    fn_8245B168(iVar15,&uStack_c0,4);
+    uStack_c0 = uVar11;
+    fn_8245B168(iVar15,&uStack_c0,4);
+    uStack_c0 = uVar12;
+    fn_8245B168(iVar15,&uStack_c0,4);
+    uStack_c0 = uVar13;
+    fn_8245B168(iVar15,&uStack_c0,4);
+    uStack_c0 = uVar14;
+    fn_8245B168(iVar15,&uStack_c0,4);
+    fn_8245B168(iVar15,&uStack_bc,4);
+    fn_8245B168(iVar15,&uStack_b8,4);
+    fn_8245B168(iVar15,&uStack_b4,4);
+    fn_8245B168(iVar15,&uStack_b0,4);
+    fn_8245B168(iVar15,&uStack_ac,4);
+    fn_8245B168(iVar15,&uStack_a8,4);
+    fn_8245B168(iVar15,&uStack_a4,4);
+    fn_8245B168(iVar15,auStack_a0,4);
+    iVar17 = fn_8245AFC0(iVar15,0xffffffff824b8538,param_1);
+  }
+  return iVar17 == 0;
+}
+

@@ -1,0 +1,106 @@
+typedef unsigned char undefined1;
+typedef unsigned char byte;
+typedef unsigned char undefined;
+typedef unsigned char bool;
+#define true 1
+#define false 0
+typedef unsigned short undefined2;
+typedef unsigned short ushort;
+typedef unsigned short word;
+typedef unsigned int undefined4;
+typedef unsigned int uint;
+typedef unsigned int dword;
+typedef unsigned int ulong;
+typedef unsigned __int64 undefined8;
+typedef unsigned __int64 ulonglong;
+typedef unsigned __int64 qword;
+typedef __int64 longlong;
+typedef int (*code)();
+typedef unsigned char U8;
+typedef unsigned short U16;
+typedef unsigned int U32;
+typedef unsigned __int64 U64;
+typedef signed char S8;
+typedef signed short S16;
+typedef signed int S32;
+typedef __int64 S64;
+typedef struct { U64 lo, hi; } V16;
+extern int fn_8233EEA8();
+extern int fn_82F622A8();
+
+
+void fn_8233E9E0(int *param_1,undefined4 *param_2)
+
+{
+  int iVar1;
+  uint uVar2;
+  bool bVar3;
+  ulonglong uVar4;
+  ulonglong uVar5;
+  undefined4 *puVar6;
+  undefined4 uVar7;
+  undefined4 *puVar8;
+  
+  puVar8 = (undefined4 *)param_1[1];
+  if ((puVar8 <= param_2) || (bVar3 = true, param_2 < (undefined4 *)*param_1)) {
+    bVar3 = false;
+  }
+  puVar6 = (undefined4 *)param_1[2];
+  if (bVar3) {
+    iVar1 = *param_1;
+    if (puVar8 == puVar6) {
+      uVar2 = (int)puVar8 - iVar1 >> 3;
+      if (0x1ffffffe < uVar2) {
+                    /* WARNING: Subroutine does not return */
+        fn_82F622A8(0xffffffff82196fd4);
+      }
+      uVar5 = (longlong)(int)uVar2 + 1;
+      uVar2 = (int)puVar6 - iVar1 >> 3;
+      if ((ulonglong)uVar2 < (uVar5 & 0xffffffff)) {
+        uVar4 = 0;
+        if ((ulonglong)uVar2 <= (0x1fffffff - (ulonglong)(uVar2 >> 1) & 0xffffffff)) {
+          uVar4 = (ulonglong)(uVar2 >> 1) + (longlong)(int)uVar2;
+        }
+        if ((uVar4 & 0xffffffff) < (uVar5 & 0xffffffff)) {
+          uVar4 = uVar5;
+        }
+        fn_8233EEA8(param_1,uVar4);
+      }
+    }
+    puVar8 = (undefined4 *)param_1[1];
+    puVar6 = (undefined4 *)(((int)param_2 - iVar1 >> 3) * 8 + *param_1);
+    if (puVar8 == (undefined4 *)0x0) goto LAB_8233eb60;
+    *puVar8 = *puVar6;
+    uVar7 = puVar6[1];
+  }
+  else {
+    if (puVar8 == puVar6) {
+      uVar2 = (int)puVar8 - *param_1 >> 3;
+      if (0x1ffffffe < uVar2) {
+                    /* WARNING: Subroutine does not return */
+        fn_82F622A8(0xffffffff82196fd4);
+      }
+      uVar5 = (longlong)(int)uVar2 + 1;
+      uVar2 = (int)puVar6 - *param_1 >> 3;
+      if ((ulonglong)uVar2 < (uVar5 & 0xffffffff)) {
+        uVar4 = 0;
+        if ((ulonglong)uVar2 <= (0x1fffffff - (ulonglong)(uVar2 >> 1) & 0xffffffff)) {
+          uVar4 = (ulonglong)(uVar2 >> 1) + (longlong)(int)uVar2;
+        }
+        if ((uVar4 & 0xffffffff) < (uVar5 & 0xffffffff)) {
+          uVar4 = uVar5;
+        }
+        fn_8233EEA8(param_1,uVar4);
+      }
+    }
+    puVar8 = (undefined4 *)param_1[1];
+    if (puVar8 == (undefined4 *)0x0) goto LAB_8233eb60;
+    *puVar8 = *param_2;
+    uVar7 = param_2[1];
+  }
+  puVar8[1] = uVar7;
+LAB_8233eb60:
+  param_1[1] = param_1[1] + 8;
+  return;
+}
+

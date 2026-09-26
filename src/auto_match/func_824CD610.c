@@ -1,0 +1,126 @@
+typedef unsigned char undefined1;
+typedef unsigned char byte;
+typedef unsigned char undefined;
+typedef unsigned char bool;
+#define true 1
+#define false 0
+typedef unsigned short undefined2;
+typedef unsigned short ushort;
+typedef unsigned short word;
+typedef unsigned int undefined4;
+typedef unsigned int uint;
+typedef unsigned int dword;
+typedef unsigned int ulong;
+typedef unsigned __int64 undefined8;
+typedef unsigned __int64 ulonglong;
+typedef unsigned __int64 qword;
+typedef __int64 longlong;
+typedef int (*code)();
+typedef unsigned char U8;
+typedef unsigned short U16;
+typedef unsigned int U32;
+typedef unsigned __int64 U64;
+typedef signed char S8;
+typedef signed short S16;
+typedef signed int S32;
+typedef __int64 S64;
+typedef struct { U64 lo, hi; } V16;
+extern unsigned int *auStack_110;
+extern unsigned int *auStack_130;
+extern unsigned int *auStack_150;
+extern unsigned int *auStack_170;
+extern unsigned int *auStack_190;
+extern unsigned int *auStack_1b0;
+extern unsigned int *auStack_1d0;
+extern unsigned int *auStack_cc;
+extern unsigned int *auStack_d0;
+extern unsigned int *auStack_f0;
+extern int fn_82230110();
+extern int fn_82230300();
+extern int fn_8223CFC0();
+extern int fn_8223DCC8();
+extern int fn_82240158();
+extern int fn_822403C8();
+extern int fn_82520AC8();
+extern int fn_82897B40();
+extern int fn_82897D70();
+extern int fn_82897DF8();
+extern int fn_828EA268();
+
+
+void fn_824CD610(int param_1)
+
+{
+  undefined8 uVar1;
+  undefined4 uVar2;
+  int iVar3;
+  ulonglong uVar4;
+  undefined1 auStack_1d0 [32];
+  undefined1 auStack_1b0 [32];
+  undefined1 auStack_190 [32];
+  undefined1 auStack_170 [32];
+  undefined1 auStack_150 [32];
+  undefined1 auStack_130 [32];
+  undefined1 auStack_110 [32];
+  undefined1 auStack_f0 [32];
+  undefined1 auStack_d0 [4];
+  undefined1 auStack_cc [204];
+  
+  fn_82230110(auStack_1b0,0xffffffff821c0b64);
+  fn_82897DF8(param_1 + 0x34,param_1,auStack_1b0);
+  fn_82230300(auStack_1b0,1,0);
+  fn_82897D70(param_1 + 0x34);
+  fn_82230110(auStack_130,0xffffffff821c0b70);
+  fn_82897DF8(param_1 + 0x8c,param_1,auStack_130);
+  fn_82230300(auStack_130,1,0);
+  fn_82897D70(param_1 + 0x8c);
+  iVar3 = param_1 + 0xe4;
+  uVar4 = 0;
+  do {
+    fn_8223CFC0(auStack_d0,2,1);
+    uVar1 = fn_82240158(auStack_d0,0xffffffff821c0b80);
+    fn_82520AC8(uVar1,uVar4);
+    fn_822403C8(auStack_170,auStack_cc);
+    fn_82897DF8(iVar3,param_1,auStack_170);
+    fn_82230300(auStack_170,1,0);
+    fn_82897D70(iVar3);
+    fn_8223DCC8(auStack_d0);
+    uVar4 = uVar4 + 1;
+    iVar3 = iVar3 + 0x58;
+  } while ((uVar4 & 0xffffffff) < 0x14);
+  fn_82230110(auStack_f0,0xffffffff821c0b8c);
+  *(undefined4 *)(param_1 + 0x880) = 0;
+  *(undefined4 *)(param_1 + 0x8d4) = 0xffffffff;
+  *(undefined1 *)(param_1 + 0x8cc) = 1;
+  *(undefined4 *)(param_1 + 0x8d0) = 0;
+  uVar2 = fn_828EA268(0xffffffffffffffff);
+  *(undefined4 *)(param_1 + 0x8d8) = uVar2;
+  fn_82897DF8(param_1 + 0x874,param_1,auStack_f0);
+  fn_82230300(auStack_f0,1,0);
+  fn_82897B40(param_1 + 0x874);
+  fn_82230110(auStack_1d0,0xffffffff821c0b98);
+  *(undefined4 *)(param_1 + 0x93c) = 0xffffffff;
+  *(undefined4 *)(param_1 + 0x8e8) = 0;
+  *(undefined1 *)(param_1 + 0x934) = 1;
+  *(undefined4 *)(param_1 + 0x938) = 0;
+  uVar2 = fn_828EA268(0xffffffffffffffff);
+  *(undefined4 *)(param_1 + 0x940) = uVar2;
+  fn_82897DF8(param_1 + 0x8dc,param_1,auStack_1d0);
+  fn_82230300(auStack_1d0,1,0);
+  fn_82897B40(param_1 + 0x8dc);
+  fn_82230110(auStack_190,0xffffffff821c0ba4);
+  *(undefined1 *)(param_1 + 2000) = 1;
+  fn_82897DF8(param_1 + 0x7c4,param_1,auStack_190);
+  fn_82230300(auStack_190,1,0);
+  fn_82897D70(param_1 + 0x7c4);
+  fn_82230110(auStack_150,0xffffffff821c0bb0);
+  *(undefined1 *)(param_1 + 0x828) = 1;
+  fn_82897DF8(param_1 + 0x81c,param_1,auStack_150);
+  fn_82230300(auStack_150,1,0);
+  fn_82230110(auStack_110,0xffffffff821c0bc4);
+  fn_82897DF8(param_1 + 0x944,param_1,auStack_110);
+  fn_82230300(auStack_110,1,0);
+  fn_82897D70(param_1 + 0x944);
+  return;
+}
+
