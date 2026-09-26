@@ -2840,7 +2840,12 @@
           "/O1"
         ]
       },
-      "auto_match/func_8249025C.c": "MISSING",
+      "auto_match/func_8249025C.c": {
+        "status": "NonMatching",
+        "extra_cflags": [
+          "/O1"
+        ]
+      },
       "auto_match/func_82490F58.c": "MISSING",
       "auto_match/func_824A0D10.c": {
         "status": "Matching",
