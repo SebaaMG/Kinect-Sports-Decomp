@@ -1,0 +1,102 @@
+typedef unsigned char undefined1;
+typedef unsigned char byte;
+typedef unsigned char undefined;
+typedef unsigned char bool;
+#define true 1
+#define false 0
+typedef unsigned short undefined2;
+typedef unsigned short ushort;
+typedef unsigned short word;
+typedef unsigned int undefined4;
+typedef unsigned int uint;
+typedef unsigned int dword;
+typedef unsigned int ulong;
+typedef unsigned __int64 undefined8;
+typedef unsigned __int64 ulonglong;
+typedef unsigned __int64 qword;
+typedef __int64 longlong;
+typedef int (*code)();
+typedef unsigned char U8;
+typedef unsigned short U16;
+typedef unsigned int U32;
+typedef unsigned __int64 U64;
+typedef signed char S8;
+typedef signed short S16;
+typedef signed int S32;
+typedef __int64 S64;
+typedef struct { U64 lo, hi; } V16;
+extern int fn_8265BF48();
+extern unsigned int lbl_821BC8B8;
+extern unsigned int lbl_821BC908;
+extern unsigned int lbl_821BC958;
+extern unsigned int lbl_821BCA08;
+extern unsigned int lbl_821BCA58;
+extern unsigned int lbl_821BCBA8;
+extern unsigned int lbl_821BCBFC;
+extern unsigned int lbl_821BCCA4;
+extern unsigned int lbl_831D49A4;
+extern unsigned int lbl_831D49A8;
+extern unsigned int lbl_831D49AC;
+extern unsigned int lbl_831D49B0;
+extern unsigned int lbl_831D49B4;
+extern unsigned int lbl_831D49B8;
+extern unsigned int lbl_831D49BC;
+extern unsigned int lbl_831D49C0;
+extern unsigned int lbl_831D49C4;
+extern unsigned int lbl_831D49C8;
+extern unsigned int lbl_831D49CC;
+extern unsigned int lbl_831D49D0;
+extern unsigned int lbl_831D49D4;
+extern unsigned int lbl_831D49D8;
+extern unsigned int lbl_831D49DC;
+extern unsigned int lbl_831D49E0;
+extern unsigned int lbl_831D49E4;
+extern unsigned int lbl_831D49E8;
+extern unsigned int lbl_831D49EC;
+extern unsigned int lbl_831D49F0;
+extern unsigned int lbl_831D49F4;
+extern unsigned int lbl_831D49F8;
+extern unsigned int lbl_831D49FC;
+extern unsigned int lbl_831D4A00;
+extern unsigned int lbl_831D4A04;
+extern unsigned int lbl_831D4A08;
+extern unsigned int lbl_831D4A0C;
+extern unsigned int lbl_831D4A10;
+extern unsigned int lbl_831D4A14;
+
+
+void fn_8311C780(void)
+
+{
+  lbl_831D49A4 = fn_8265BF48(0xffffffff821bcca8,0);
+  lbl_831D49A8 = &lbl_821BCCA4;
+  lbl_831D49AC = fn_8265BF48(0xffffffff821bcc58,0);
+  lbl_831D49B0 = "en-us";
+  lbl_831D49B4 = fn_8265BF48(0xffffffff821bcc00,0);
+  lbl_831D49B8 = &lbl_821BCBFC;
+  lbl_831D49BC = fn_8265BF48(0xffffffff821bcbb0,0);
+  lbl_831D49C0 = &lbl_821BCBA8;
+  lbl_831D49C4 = fn_8265BF48(0xffffffff821bcb60,0);
+  lbl_831D49C8 = "fr-fr";
+  lbl_831D49CC = fn_8265BF48(0xffffffff821bcb10,0);
+  lbl_831D49D0 = "es-mx";
+  lbl_831D49D4 = fn_8265BF48(0xffffffff821bcab8,0);
+  lbl_831D49D8 = "es-es";
+  lbl_831D49DC = fn_8265BF48(0xffffffff821bca68,0);
+  lbl_831D49E0 = "es-us";
+  lbl_831D49E4 = fn_8265BF48(0xffffffff821bcab8,0);
+  lbl_831D49E8 = &lbl_821BCA58;
+  lbl_831D49EC = fn_8265BF48(0xffffffff821bca10,0);
+  lbl_831D49F0 = &lbl_821BCA08;
+  lbl_831D49F4 = fn_8265BF48(0xffffffff821bc9c0,0);
+  lbl_831D49F8 = "pt-br";
+  lbl_831D49FC = fn_8265BF48(0xffffffff821bc960,0);
+  lbl_831D4A00 = &lbl_821BC958;
+  lbl_831D4A04 = fn_8265BF48(0xffffffff821bc910,0);
+  lbl_831D4A08 = &lbl_821BC908;
+  lbl_831D4A0C = fn_8265BF48(0xffffffff821bc8c0,0);
+  lbl_831D4A10 = &lbl_821BC8B8;
+  lbl_831D4A14 = fn_8265BF48(0xffffffff821bc870,0);
+  return;
+}
+
