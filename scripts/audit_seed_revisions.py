@@ -11,7 +11,7 @@ from seed_selection import SeedSelector
 ROOT = Path(__file__).resolve().parent.parent
 from lab_paths import LAB
 BASE = LAB / 'analysis/full-game-export'
-REVISIONS = ('xenon-alias-addsub-v1', 'xenon-altivec-v2', 'scalar-crt-v1',
+REVISIONS = ('xenon-stack-abi-v1', 'xenon-alias-addsub-v1', 'xenon-altivec-v2', 'scalar-crt-v1',
              'scalar-switch-v1', 'xenon-switch-v1', 'scalar-switch-merge-v1')
 
 
