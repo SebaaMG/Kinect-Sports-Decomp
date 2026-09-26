@@ -17,11 +17,11 @@ A matching decompilation of **Kinect Sports** for Xbox 360. The project reconstr
 | --- | ---: |
 | Function ranges indexed by Jeff | 57,731 |
 | Functions with Ghidra C | 57,614 |
-| Functions with matching code | 4,163 |
-| Matched code | 147,256 / 15,706,240 (0.93756%) |
+| Functions with matching code | 4,909 |
+| Matched code | 173,568 / 15,706,240 (1.10509%) |
 | Fully linked code | 13,024 / 15,706,240 (0.08292%) |
-| Units with source | 39,424 |
-| Fuzzy match | 31.77277% |
+| Units with source | 47,087 |
+| Fuzzy match | 37.68526% |
 
 The indexed ranges cover 99.22% of the executable's `.text` bytes. `src/auto_match/` includes C extracted with Ghidra alongside functions refined by contributors. The matched, fully linked and fuzzy figures come from compiling that source and comparing it with the original using objdiff.
 
