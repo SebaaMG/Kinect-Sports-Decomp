@@ -4,7 +4,7 @@ Kinect Sports is being reconstructed one function at a time. The C already in `s
 
 ## Set up
 
-Follow the build instructions in the [README](README.md) with `default.xex` from your own copy of the game. You will need the Xbox 360 compiler, Jeff, objdiff and, on Linux, Wibo. Keep game files and generated objects out of commits.
+Place `default.xex` from your own copy of the game as shown in the [README](README.md), then run `python3 configure.py`. You will need the Xbox 360 compiler, Jeff, objdiff and, on Linux, Wibo. Build the original object for the function you choose; a full `ninja` build is not needed for each iteration. Keep game files and generated objects out of commits.
 
 ## Work on a function
 
