@@ -1347,7 +1347,12 @@
           "/O2"
         ]
       },
-      "auto_match/func_8289A8F8.c": "MISSING",
+      "auto_match/func_8289A8F8.c": {
+        "status": "Matching",
+        "extra_cflags": [
+          "/O2"
+        ]
+      },
       "auto_match/func_8289A908.c": {
         "status": "Matching",
         "extra_cflags": [
