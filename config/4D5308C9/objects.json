@@ -1815,7 +1815,12 @@
           "/O2"
         ]
       },
-      "auto_match/func_82D3DBD8.c": "MISSING",
+      "auto_match/func_82D3DBD8.c": {
+        "status": "NonMatching",
+        "extra_cflags": [
+          "/O1"
+        ]
+      },
       "auto_match/func_82D3E620.c": {
         "status": "Matching",
         "extra_cflags": [
