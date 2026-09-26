@@ -2464,7 +2464,12 @@
           "/O1"
         ]
       },
-      "auto_match/func_8234ADB8.c": "MISSING",
+      "auto_match/func_8234ADB8.c": {
+        "status": "NonMatching",
+        "extra_cflags": [
+          "/O1"
+        ]
+      },
       "auto_match/func_82361FD0.c": {
         "status": "Matching",
         "extra_cflags": [
