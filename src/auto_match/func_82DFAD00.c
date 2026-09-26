@@ -1,0 +1,114 @@
+typedef unsigned char undefined1;
+typedef unsigned char byte;
+typedef unsigned char undefined;
+typedef unsigned char bool;
+#define true 1
+#define false 0
+typedef unsigned short undefined2;
+typedef unsigned short ushort;
+typedef unsigned short word;
+typedef unsigned int undefined4;
+typedef unsigned int uint;
+typedef unsigned int dword;
+typedef unsigned int ulong;
+typedef unsigned __int64 undefined8;
+typedef unsigned __int64 ulonglong;
+typedef unsigned __int64 qword;
+typedef __int64 longlong;
+typedef int (*code)();
+typedef unsigned char U8;
+typedef unsigned short U16;
+typedef unsigned int U32;
+typedef unsigned __int64 U64;
+typedef signed char S8;
+typedef signed short S16;
+typedef signed int S32;
+typedef __int64 S64;
+typedef struct { U64 lo, hi; } V16;
+extern unsigned int *auStack_20;
+extern unsigned int lbl_82002AE0;
+extern unsigned int lbl_8200D898;
+extern unsigned int lbl_82015B38;
+extern unsigned int lbl_821462EC;
+extern unsigned int lbl_82186E6C;
+extern unsigned int lbl_821AAD20;
+
+
+void fn_82DFAD00(undefined4 *param_1)
+
+{
+  undefined4 *puVar1;
+  undefined4 uVar2;
+  int in_r0;
+  undefined4 uVar3;
+  undefined4 uVar4;
+  undefined4 uVar5;
+  undefined4 uVar6;
+  undefined4 in_register_000100a0;
+  undefined4 in_register_000100a4;
+  undefined4 in_register_000100a8;
+  undefined4 in_vr10;
+  undefined4 in_register_000100c0;
+  undefined4 in_register_000100c4;
+  undefined4 in_register_000100c8;
+  undefined4 in_vr12;
+  undefined1 auStack_20 [16];
+  
+  *(undefined2 *)((int)param_1 + 6) = 1;
+  *param_1 = &lbl_821462EC;
+  param_1[0x25] = 0x80000000;
+  param_1[0x23] = 0;
+  param_1[0x24] = 0;
+  param_1[0x28] = 0x80000000;
+  param_1[0x26] = 0;
+  param_1[0x27] = 0;
+  puVar1 = (undefined4 *)((uint)(auStack_20 + in_r0) & 0xfffffff0);
+  uVar3 = *puVar1;
+  uVar4 = puVar1[1];
+  uVar5 = puVar1[2];
+  uVar6 = puVar1[3];
+  *(undefined1 *)(param_1 + 8) = 0;
+  uVar2 = lbl_821AAD20;
+  puVar1 = (undefined4 *)((uint)(param_1 + 0x10) & 0xfffffff0);
+  *puVar1 = uVar3;
+  puVar1[1] = uVar4;
+  puVar1[2] = uVar5;
+  puVar1[3] = uVar6;
+  puVar1 = (undefined4 *)((int)param_1 + in_r0 + 0x30 & 0xfffffff0);
+  *puVar1 = uVar3;
+  puVar1[1] = uVar4;
+  puVar1[2] = uVar5;
+  puVar1[3] = uVar6;
+  puVar1 = (undefined4 *)((uint)(param_1 + 0x14) & 0xfffffff0);
+  *puVar1 = uVar3;
+  puVar1[1] = uVar4;
+  puVar1[2] = uVar5;
+  puVar1[3] = uVar6;
+  uVar5 = lbl_82186E6C;
+  uVar4 = lbl_8200D898;
+  uVar3 = lbl_82002AE0;
+  param_1[0x18] = uVar2;
+  param_1[0x19] = uVar2;
+  param_1[0x1b] = uVar2;
+  param_1[0x20] = uVar2;
+  param_1[0x1a] = uVar3;
+  param_1[0x1c] = uVar4;
+  param_1[0x1d] = uVar3;
+  param_1[0x1e] = uVar3;
+  param_1[0x1f] = uVar3;
+  param_1[0x21] = uVar5;
+  puVar1 = (undefined4 *)((int)param_1 + in_r0 + 0x180 & 0xfffffff0);
+  *puVar1 = in_register_000100c0;
+  puVar1[1] = in_register_000100c4;
+  puVar1[2] = in_register_000100c8;
+  puVar1[3] = in_vr12;
+  puVar1 = (undefined4 *)((int)param_1 + in_r0 + 0x10 & 0xfffffff0);
+  *puVar1 = in_register_000100a0;
+  puVar1[1] = in_register_000100a4;
+  puVar1[2] = in_register_000100a8;
+  puVar1[3] = in_vr10;
+  *(undefined1 *)(param_1 + 100) = 0;
+  param_1[0x22] = lbl_82015B38;
+  return;
+}
+

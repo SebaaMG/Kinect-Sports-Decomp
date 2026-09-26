@@ -1,0 +1,172 @@
+typedef unsigned char undefined1;
+typedef unsigned char byte;
+typedef unsigned char undefined;
+typedef unsigned char bool;
+#define true 1
+#define false 0
+typedef unsigned short undefined2;
+typedef unsigned short ushort;
+typedef unsigned short word;
+typedef unsigned int undefined4;
+typedef unsigned int uint;
+typedef unsigned int dword;
+typedef unsigned int ulong;
+typedef unsigned __int64 undefined8;
+typedef unsigned __int64 ulonglong;
+typedef unsigned __int64 qword;
+typedef __int64 longlong;
+typedef int (*code)();
+typedef unsigned char U8;
+typedef unsigned short U16;
+typedef unsigned int U32;
+typedef unsigned __int64 U64;
+typedef signed char S8;
+typedef signed short S16;
+typedef signed int S32;
+typedef __int64 S64;
+typedef struct { U64 lo, hi; } V16;
+extern int fn_82BE1368();
+extern int fn_82F6A530();
+extern int fn_82F6A57C();
+extern unsigned int lbl_83223F80;
+extern unsigned int lbl_83223F84;
+extern unsigned int lbl_83223F88;
+extern unsigned int lbl_83223F8C;
+extern unsigned int lbl_83224470;
+extern unsigned int lbl_83224474;
+extern unsigned int lbl_83224478;
+extern unsigned int lbl_8322447C;
+
+
+void fn_82BDD9F8(undefined8 param_1,undefined8 param_2,longlong param_3,longlong param_4,
+                  uint param_5,longlong param_6)
+
+{
+  float fVar1;
+  float fVar2;
+  float fVar3;
+  float fVar4;
+  float fVar5;
+  float fVar6;
+  float fVar7;
+  float fVar8;
+  float fVar9;
+  float fVar10;
+  float fVar11;
+  float fVar12;
+  float fVar13;
+  float fVar14;
+  float fVar15;
+  float fVar16;
+  float fVar17;
+  float fVar18;
+  float fVar19;
+  int iVar20;
+  undefined8 uVar21;
+  float *pfVar22;
+  longlong lVar23;
+  float *pfVar24;
+  float *pfVar25;
+  longlong lVar26;
+  float *pfVar27;
+  longlong lVar28;
+  float *pfVar29;
+  longlong lVar30;
+  
+  uVar21 = fn_82F6A530();
+  if (((param_5 & 7) == 0) && (param_5 == 0x140)) {
+    pfVar22 = (float *)param_3;
+    fVar1 = *pfVar22;
+    fVar2 = pfVar22[1];
+    fVar3 = pfVar22[2];
+    fVar4 = pfVar22[3];
+    lVar26 = param_6 + 0x280;
+    fVar5 = pfVar22[0x13f];
+    pfVar29 = &lbl_83224470;
+    fVar6 = pfVar22[0x13e];
+    param_4 = param_4 + 0x27c;
+    lVar23 = param_6 + 0x27c;
+    lVar28 = param_3 + 0xc;
+    param_3 = param_3 + 0x4f0;
+    lVar30 = 0x27;
+    pfVar25 = &lbl_83223F8C;
+    fVar7 = pfVar22[0x13d];
+    fVar8 = pfVar22[0x13c];
+    fVar15 = lbl_8322447C;
+    fVar12 = lbl_83223F80;
+    fVar16 = lbl_83224478;
+    fVar13 = lbl_83223F84;
+    fVar17 = lbl_83224474;
+    fVar14 = lbl_83223F88;
+    fVar19 = lbl_83224470;
+    fVar18 = lbl_83223F8C;
+    do {
+      pfVar22 = (float *)param_4;
+      fVar9 = pfVar22[-1];
+      fVar10 = pfVar22[-2];
+      fVar11 = pfVar22[-3];
+      pfVar24 = (float *)lVar23;
+      *pfVar24 = *pfVar22;
+      pfVar24[-1] = fVar9;
+      pfVar24[-2] = fVar10;
+      pfVar24[-3] = fVar11;
+      lVar23 = lVar23 + -0x10;
+      pfVar27 = (float *)lVar26;
+      *pfVar27 = fVar1 * fVar15 - fVar5 * fVar12;
+      pfVar27[1] = fVar2 * fVar16 - fVar6 * fVar13;
+      pfVar27[2] = fVar3 * fVar17 - fVar7 * fVar14;
+      pfVar27[3] = fVar4 * fVar19 - fVar8 * fVar18;
+      *pfVar22 = fVar5 * fVar15 + fVar1 * fVar12;
+      pfVar22[-1] = fVar6 * fVar16 + fVar2 * fVar13;
+      pfVar22[-2] = fVar7 * fVar17 + fVar3 * fVar14;
+      lVar26 = lVar26 + 0x10;
+      pfVar22[-3] = fVar8 * fVar19 + fVar4 * fVar18;
+      param_4 = param_4 + -0x10;
+      fVar12 = pfVar25[1];
+      fVar13 = pfVar25[2];
+      fVar14 = pfVar25[3];
+      fVar15 = pfVar29[-1];
+      fVar16 = pfVar29[-2];
+      fVar17 = pfVar29[-3];
+      iVar20 = (int)lVar28;
+      fVar1 = *(float *)(iVar20 + 4);
+      fVar2 = *(float *)(iVar20 + 8);
+      fVar3 = *(float *)(iVar20 + 0xc);
+      iVar20 = (int)param_3;
+      fVar5 = *(float *)(iVar20 + -4);
+      fVar6 = *(float *)(iVar20 + -8);
+      fVar7 = *(float *)(iVar20 + -0xc);
+      pfVar25 = pfVar25 + 4;
+      fVar18 = *pfVar25;
+      pfVar29 = pfVar29 + -4;
+      fVar19 = *pfVar29;
+      lVar28 = lVar28 + 0x10;
+      fVar4 = *(float *)lVar28;
+      param_3 = param_3 + -0x10;
+      fVar8 = *(float *)param_3;
+      lVar30 = lVar30 + -1;
+    } while (lVar30 != 0);
+    fVar9 = pfVar22[-5];
+    fVar10 = pfVar22[-6];
+    fVar11 = pfVar22[-7];
+    *(float *)lVar23 = *(float *)param_4;
+    pfVar24[-5] = fVar9;
+    pfVar24[-6] = fVar10;
+    pfVar24[-7] = fVar11;
+    *(float *)lVar26 = fVar1 * fVar15 - fVar5 * fVar12;
+    pfVar27[5] = fVar2 * fVar16 - fVar6 * fVar13;
+    pfVar27[6] = fVar3 * fVar17 - fVar7 * fVar14;
+    pfVar27[7] = fVar4 * fVar19 - fVar8 * fVar18;
+    *(float *)param_4 = fVar5 * fVar15 + fVar1 * fVar12;
+    pfVar22[-5] = fVar6 * fVar16 + fVar2 * fVar13;
+    pfVar22[-6] = fVar7 * fVar17 + fVar3 * fVar14;
+    pfVar22[-7] = fVar8 * fVar19 + fVar4 * fVar18;
+    fn_82BE1368(uVar21,param_2,param_6,param_6,0x140);
+    fn_82F6A57C(0);
+  }
+  else {
+    fn_82F6A57C(4);
+  }
+  return;
+}
+

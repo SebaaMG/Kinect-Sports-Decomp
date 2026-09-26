@@ -1,0 +1,61 @@
+typedef unsigned char undefined1;
+typedef unsigned char byte;
+typedef unsigned char undefined;
+typedef unsigned char bool;
+#define true 1
+#define false 0
+typedef unsigned short undefined2;
+typedef unsigned short ushort;
+typedef unsigned short word;
+typedef unsigned int undefined4;
+typedef unsigned int uint;
+typedef unsigned int dword;
+typedef unsigned int ulong;
+typedef unsigned __int64 undefined8;
+typedef unsigned __int64 ulonglong;
+typedef unsigned __int64 qword;
+typedef __int64 longlong;
+typedef int (*code)();
+typedef unsigned char U8;
+typedef unsigned short U16;
+typedef unsigned int U32;
+typedef unsigned __int64 U64;
+typedef signed char S8;
+typedef signed short S16;
+typedef signed int S32;
+typedef __int64 S64;
+typedef struct { U64 lo, hi; } V16;
+extern unsigned int *auStack_28;
+extern int fn_82CE4040();
+extern int fn_82D9FE70();
+extern unsigned int lbl_8200D898;
+extern unsigned int lbl_82141744;
+extern unsigned int uStack_22;
+extern unsigned int uStack_26;
+
+
+undefined4 * fn_82D98360(undefined4 *param_1,undefined4 param_2)
+
+{
+  undefined4 uVar1;
+  undefined1 auStack_28 [2];
+  undefined2 uStack_26;
+  undefined2 uStack_22;
+  
+  param_1[2] = 0;
+  *(undefined2 *)((int)param_1 + 6) = 1;
+  *param_1 = &lbl_82141744;
+  uVar1 = lbl_8200D898;
+  *(undefined2 *)(param_1 + 3) = 1;
+  param_1[8] = uVar1;
+  param_1[6] = param_2;
+  *(undefined1 *)(param_1 + 9) = 0;
+  *(undefined1 *)((int)param_1 + 0x25) = 0;
+  fn_82CE4040(param_1[6]);
+  (**(code **)(*(int *)param_1[6] + 0x24))((int *)param_1[6],1,auStack_28);
+  *(undefined2 *)(param_1 + 7) = uStack_26;
+  *(undefined2 *)((int)param_1 + 0x1e) = uStack_22;
+  fn_82D9FE70(param_1 + 3,param_1);
+  return param_1;
+}
+

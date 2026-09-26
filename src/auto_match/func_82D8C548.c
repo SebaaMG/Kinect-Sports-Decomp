@@ -1,0 +1,114 @@
+typedef unsigned char undefined1;
+typedef unsigned char byte;
+typedef unsigned char undefined;
+typedef unsigned char bool;
+#define true 1
+#define false 0
+typedef unsigned short undefined2;
+typedef unsigned short ushort;
+typedef unsigned short word;
+typedef unsigned int undefined4;
+typedef unsigned int uint;
+typedef unsigned int dword;
+typedef unsigned int ulong;
+typedef unsigned __int64 undefined8;
+typedef unsigned __int64 ulonglong;
+typedef unsigned __int64 qword;
+typedef __int64 longlong;
+typedef int (*code)();
+typedef unsigned char U8;
+typedef unsigned short U16;
+typedef unsigned int U32;
+typedef unsigned __int64 U64;
+typedef signed char S8;
+typedef signed short S16;
+typedef signed int S32;
+typedef __int64 S64;
+typedef struct { U64 lo, hi; } V16;
+extern int fn_82D93128();
+extern unsigned int lbl_82131F88;
+
+
+void fn_82D8C548(int param_1,undefined4 *param_2)
+
+{
+  undefined4 *puVar1;
+  undefined4 *puVar2;
+  longlong lVar3;
+  double dVar4;
+  undefined4 uVar5;
+  undefined4 uVar6;
+  undefined4 uVar7;
+  
+  *(byte *)((int)param_2 + 0xbb) = *(byte *)(param_1 + 0x21) & 1;
+  *(undefined1 *)(param_2 + 0x2e) = *(undefined1 *)(param_1 + 0xd0);
+  *(undefined1 *)((int)param_2 + 0xba) = *(undefined1 *)(param_1 + 0xd1);
+  *(undefined2 *)((int)param_2 + 0xe) = *(undefined2 *)(param_1 + 0xaa);
+  lVar3 = (ulonglong)*(byte *)(param_1 + 0xe9) - 0xff;
+  *(byte *)((int)param_2 + 0xb5) = (char)lVar3 - (*(byte *)(param_1 + 0xe9) + (lVar3 == 0));
+  param_2[2] = *(undefined4 *)(param_1 + 0x210);
+  param_2[0x28] = *(undefined4 *)(param_1 + 0x90);
+  *(undefined1 *)(param_2 + 3) = *(undefined1 *)(param_1 + 0x8c);
+  param_2[0x29] = *(undefined4 *)(param_1 + 0x94);
+  param_2[0x25] = *(undefined4 *)(param_1 + 0x194);
+  param_2[0x26] = *(undefined4 *)(param_1 + 0x198);
+  puVar1 = (undefined4 *)(param_1 + 0x1b0U & 0xfffffff0);
+  uVar5 = puVar1[1];
+  uVar6 = puVar1[2];
+  uVar7 = puVar1[3];
+  puVar2 = (undefined4 *)((uint)(param_2 + 0xc) & 0xfffffff0);
+  *puVar2 = *puVar1;
+  puVar2[1] = uVar5;
+  puVar2[2] = uVar6;
+  puVar2[3] = uVar7;
+  puVar1 = (undefined4 *)(param_1 + 0x1c0U & 0xfffffff0);
+  uVar5 = puVar1[1];
+  uVar6 = puVar1[2];
+  uVar7 = puVar1[3];
+  puVar2 = (undefined4 *)((uint)(param_2 + 0x10) & 0xfffffff0);
+  *puVar2 = *puVar1;
+  puVar2[1] = uVar5;
+  puVar2[2] = uVar6;
+  puVar2[3] = uVar7;
+  dVar4 = (double)fn_82D93128(param_1 + 0xe0);
+  param_2[0x24] = (float)dVar4;
+  (**(code **)(*(int *)(param_1 + 0xe0) + 0x14))(param_1 + 0xe0,param_2 + 0x14);
+  *(undefined1 *)(param_2 + 0x2d) = *(undefined1 *)(param_1 + 0xe8);
+  *(undefined1 *)((int)param_2 + 0xb6) = *(undefined1 *)(param_1 + 0x19e);
+  param_2[0x2a] = *(undefined4 *)(&lbl_82131F88 + (uint)*(byte *)(param_1 + 0x19c) * 4);
+  param_2[0x2b] = *(undefined4 *)(&lbl_82131F88 + (uint)*(byte *)(param_1 + 0x19d) * 4);
+  puVar1 = (undefined4 *)(param_1 + 0x120U & 0xfffffff0);
+  uVar5 = puVar1[1];
+  uVar6 = puVar1[2];
+  uVar7 = puVar1[3];
+  puVar2 = (undefined4 *)((uint)(param_2 + 4) & 0xfffffff0);
+  *puVar2 = *puVar1;
+  puVar2[1] = uVar5;
+  puVar2[2] = uVar6;
+  puVar2[3] = uVar7;
+  puVar1 = (undefined4 *)(param_1 + 0x160U & 0xfffffff0);
+  uVar5 = puVar1[1];
+  uVar6 = puVar1[2];
+  uVar7 = puVar1[3];
+  puVar2 = (undefined4 *)((uint)(param_2 + 8) & 0xfffffff0);
+  *puVar2 = *puVar1;
+  puVar2[1] = uVar5;
+  puVar2[2] = uVar6;
+  puVar2[3] = uVar7;
+  puVar1 = (undefined4 *)(param_1 + 0x170U & 0xfffffff0);
+  uVar5 = puVar1[1];
+  uVar6 = puVar1[2];
+  uVar7 = puVar1[3];
+  puVar2 = (undefined4 *)((uint)(param_2 + 0x20) & 0xfffffff0);
+  *puVar2 = *puVar1;
+  puVar2[1] = uVar5;
+  puVar2[2] = uVar6;
+  puVar2[3] = uVar7;
+  param_2[1] = *(undefined4 *)(param_1 + 0x10);
+  *param_2 = *(undefined4 *)(param_1 + 0x2c);
+  param_2[0x2c] = *(undefined4 *)(param_1 + 0x5c);
+  *(undefined1 *)((int)param_2 + 0xb7) = *(undefined1 *)(param_1 + 0x2a);
+  param_2[0x27] = (uint)*(ushort *)(param_1 + 0x1fe) << 0x10;
+  return;
+}
+

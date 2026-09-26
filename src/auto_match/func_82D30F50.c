@@ -1,0 +1,151 @@
+typedef unsigned char undefined1;
+typedef unsigned char byte;
+typedef unsigned char undefined;
+typedef unsigned char bool;
+#define true 1
+#define false 0
+typedef unsigned short undefined2;
+typedef unsigned short ushort;
+typedef unsigned short word;
+typedef unsigned int undefined4;
+typedef unsigned int uint;
+typedef unsigned int dword;
+typedef unsigned int ulong;
+typedef unsigned __int64 undefined8;
+typedef unsigned __int64 ulonglong;
+typedef unsigned __int64 qword;
+typedef __int64 longlong;
+typedef int (*code)();
+typedef unsigned char U8;
+typedef unsigned short U16;
+typedef unsigned int U32;
+typedef unsigned __int64 U64;
+typedef signed char S8;
+typedef signed short S16;
+typedef signed int S32;
+typedef __int64 S64;
+typedef struct { U64 lo, hi; } V16;
+#define CONCAT44(h,l) ((U64)((((U32)(h)) << 32) | ((U32)(l))))
+extern unsigned int fStack_44;
+extern unsigned int fStack_48;
+extern int fn_82D067F8();
+extern int fn_82D30C78();
+extern int fn_82F64318();
+extern int fn_82F643F8();
+extern unsigned int lbl_82002AE0;
+extern unsigned int lbl_82005344;
+extern unsigned int lbl_8200D8A0;
+extern unsigned int lbl_821AAD20;
+extern unsigned int lbl_8323B530;
+extern unsigned int lbl_8323B540;
+extern unsigned int lbl_8323B550;
+extern unsigned int lbl_8323B560;
+extern unsigned int uRam8323b544;
+extern unsigned int uRam8323b548;
+extern unsigned int uRam8323b54c;
+extern unsigned int uRam8323b554;
+extern unsigned int uRam8323b558;
+extern unsigned int uRam8323b55c;
+extern unsigned int uRam8323b564;
+extern unsigned int uRam8323b568;
+extern unsigned int uRam8323b56c;
+extern unsigned int uStack_50;
+
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void fn_82D30F50(undefined8 param_1,int param_2,float *param_3,float *param_4,undefined8 param_5,
+                  char param_6)
+
+{
+  float fVar1;
+  float fVar2;
+  float fVar3;
+  float fVar4;
+  undefined4 *puVar5;
+  undefined4 *puVar6;
+  int in_r0;
+  double dVar7;
+  double dVar8;
+  double dVar9;
+  double dVar10;
+  double dVar11;
+  undefined4 uVar12;
+  undefined4 uVar13;
+  undefined4 uVar14;
+  undefined8 uStack_50;
+  float fStack_48;
+  float fStack_44;
+  
+  uStack_50 = (longlong)(int)(uint)(param_6 != '\0');
+  *(uint *)(param_2 + 0x65c) = (uint)(param_6 != '\0');
+  dVar11 = -(double)((float)uStack_50 * lbl_82005344 - lbl_8200D8A0);
+  dVar8 = (double)fn_82F64318();
+  dVar10 = (double)(float)dVar8;
+  dVar9 = (double)fn_82F643F8(param_1);
+  fStack_44 = lbl_821AAD20;
+  fVar1 = *param_4;
+  fVar2 = param_4[1];
+  fVar3 = *param_3;
+  fVar4 = param_3[1];
+  dVar8 = (double)lbl_82002AE0;
+  dVar7 = (double)lbl_821AAD20;
+  fStack_48 = lbl_821AAD20;
+  puVar5 = (undefined4 *)((int)&lbl_8323B530 + in_r0 & 0xfffffff0);
+  uVar12 = puVar5[1];
+  uVar13 = puVar5[2];
+  uVar14 = puVar5[3];
+  puVar6 = (undefined4 *)(in_r0 + param_2 + 0x660 & 0xfffffff0);
+  *puVar6 = *puVar5;
+  puVar6[1] = uVar12;
+  puVar6[2] = uVar13;
+  puVar6[3] = uVar14;
+  fVar1 = (fVar1 - fVar3) * (float)(dVar8 / dVar11);
+  fVar2 = (fVar2 - fVar4) * (float)(dVar8 / dVar11);
+  uStack_50 = CONCAT44(fVar1,fVar2);
+  puVar5 = (undefined4 *)((int)&uStack_50 + in_r0 & 0xfffffff0);
+  uVar12 = puVar5[1];
+  uVar13 = puVar5[2];
+  uVar14 = puVar5[3];
+  puVar6 = (undefined4 *)((int)&uStack_50 + in_r0 & 0xfffffff0);
+  *puVar6 = *puVar5;
+  puVar6[1] = uVar12;
+  puVar6[2] = uVar13;
+  puVar6[3] = uVar14;
+  uVar14 = uRam8323b54c;
+  uVar13 = uRam8323b548;
+  uVar12 = uRam8323b544;
+  puVar5 = (undefined4 *)(param_2 + 0x670U & 0xfffffff0);
+  *puVar5 = lbl_8323B540;
+  puVar5[1] = uVar12;
+  puVar5[2] = uVar13;
+  puVar5[3] = uVar14;
+  uVar14 = uRam8323b55c;
+  uVar13 = uRam8323b558;
+  uVar12 = uRam8323b554;
+  dVar11 = (double)fVar2;
+  dVar8 = (double)fVar1;
+  puVar5 = (undefined4 *)(param_2 + 0x680U & 0xfffffff0);
+  *puVar5 = lbl_8323B550;
+  puVar5[1] = uVar12;
+  puVar5[2] = uVar13;
+  puVar5[3] = uVar14;
+  uVar14 = uRam8323b56c;
+  uVar13 = uRam8323b568;
+  uVar12 = uRam8323b564;
+  puVar5 = (undefined4 *)(param_2 + 0x690U & 0xfffffff0);
+  *puVar5 = lbl_8323B560;
+  puVar5[1] = uVar12;
+  puVar5[2] = uVar13;
+  puVar5[3] = uVar14;
+  *(float *)(param_2 + 0x660) = (float)(dVar8 * (double)(float)dVar9);
+  *(float *)(param_2 + 0x670) = (float)(dVar11 * dVar10);
+  *(float *)(param_2 + 0x690) = *param_3;
+  *(float *)(param_2 + 0x664) = -(float)(dVar8 * dVar10);
+  *(float *)(param_2 + 0x674) = (float)(dVar11 * (double)(float)dVar9);
+  *(float *)(param_2 + 0x694) = param_3[1];
+  fn_82D067F8(dVar7,param_2 + 0x6a0);
+  fn_82D30C78(param_2,1);
+  return;
+}
+

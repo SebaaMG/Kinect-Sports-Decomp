@@ -1,0 +1,65 @@
+typedef unsigned char undefined1;
+typedef unsigned char byte;
+typedef unsigned char undefined;
+typedef unsigned char bool;
+#define true 1
+#define false 0
+typedef unsigned short undefined2;
+typedef unsigned short ushort;
+typedef unsigned short word;
+typedef unsigned int undefined4;
+typedef unsigned int uint;
+typedef unsigned int dword;
+typedef unsigned int ulong;
+typedef unsigned __int64 undefined8;
+typedef unsigned __int64 ulonglong;
+typedef unsigned __int64 qword;
+typedef __int64 longlong;
+typedef int (*code)();
+typedef unsigned char U8;
+typedef unsigned short U16;
+typedef unsigned int U32;
+typedef unsigned __int64 U64;
+typedef signed char S8;
+typedef signed short S16;
+typedef signed int S32;
+typedef __int64 S64;
+typedef struct { U64 lo, hi; } V16;
+extern int fn_82F6AB08();
+extern int fn_82F6AC80();
+extern int fn_82F6BC30();
+extern int fn_82F6BCB0();
+extern int fn_82F6BF4C();
+extern unsigned int iStack00000014;
+
+
+ulonglong fn_82CFB580(int param_1)
+
+{
+  int iVar1;
+  int iVar3;
+  ulonglong uVar2;
+  uint uVar4;
+  int iStack00000014;
+  
+  iVar1 = *(int *)(param_1 + 8);
+  if (iVar1 == 0) {
+    return 0;
+  }
+  iStack00000014 = iVar1;
+  iVar3 = fn_82F6AB08();
+  if ((iVar1 == iVar3 + 0x20) || (iVar3 = fn_82F6AB08(), iVar1 == iVar3 + 0x40)) {
+    uVar2 = 0;
+  }
+  else if (iVar1 == 0) {
+    uVar2 = fn_82F6BCB0(0);
+  }
+  else {
+    fn_82F6AC80(iVar1);
+    uVar4 = fn_82F6BC30(iVar1);
+    fn_82F6BF4C();
+    uVar2 = (ulonglong)uVar4;
+  }
+  return uVar2;
+}
+
