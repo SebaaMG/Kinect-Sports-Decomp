@@ -1,0 +1,54 @@
+typedef unsigned char undefined1;
+typedef unsigned char byte;
+typedef unsigned char undefined;
+typedef unsigned char bool;
+#define true 1
+#define false 0
+typedef unsigned short undefined2;
+typedef unsigned short ushort;
+typedef unsigned short word;
+typedef unsigned int undefined4;
+typedef unsigned int uint;
+typedef unsigned int dword;
+typedef unsigned int ulong;
+typedef unsigned __int64 undefined8;
+typedef unsigned __int64 ulonglong;
+typedef unsigned __int64 qword;
+typedef __int64 longlong;
+typedef int (*code)();
+typedef unsigned char U8;
+typedef unsigned short U16;
+typedef unsigned int U32;
+typedef unsigned __int64 U64;
+typedef signed char S8;
+typedef signed short S16;
+typedef signed int S32;
+typedef __int64 S64;
+typedef struct { U64 lo, hi; } V16;
+extern int fn_82AB15D0();
+extern int fn_82AB5818();
+extern int fn_82B9F880();
+
+
+void fn_82B6E928(int *param_1,undefined8 param_2,undefined8 param_3)
+
+{
+  uint uVar1;
+  int iVar2;
+  ulonglong uVar3;
+  
+  if (param_1 == (int *)0x0) {
+    fn_82AB15D0(0,0xffffffff820d2ea4,0xffffffff820da3a8,0xffffffff820da300,0x2ea);
+  }
+  uVar3 = fn_82B9F880(param_2,param_3,0);
+  uVar1 = param_1[5];
+  trapWord(6,(ulonglong)uVar1,0);
+  iVar2 = *(int *)((int)((uVar3 - (longlong)(int)((uVar3 & 0xffffffff) / (ulonglong)uVar1) *
+                                  (longlong)(int)uVar1 & 0xffffffff) << 2) + *param_1);
+  if (iVar2 == 0) {
+    fn_82AB15D0(0,0xffffffff820d2ea4,0xffffffff820d6a6c,0xffffffff820da300,0x2f5);
+  }
+  fn_82AB5818(iVar2,uVar3);
+  return;
+}
+

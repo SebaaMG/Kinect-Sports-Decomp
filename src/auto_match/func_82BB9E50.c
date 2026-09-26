@@ -1,0 +1,59 @@
+typedef unsigned char undefined1;
+typedef unsigned char byte;
+typedef unsigned char undefined;
+typedef unsigned char bool;
+#define true 1
+#define false 0
+typedef unsigned short undefined2;
+typedef unsigned short ushort;
+typedef unsigned short word;
+typedef unsigned int undefined4;
+typedef unsigned int uint;
+typedef unsigned int dword;
+typedef unsigned int ulong;
+typedef unsigned __int64 undefined8;
+typedef unsigned __int64 ulonglong;
+typedef unsigned __int64 qword;
+typedef __int64 longlong;
+typedef int (*code)();
+typedef unsigned char U8;
+typedef unsigned short U16;
+typedef unsigned int U32;
+typedef unsigned __int64 U64;
+typedef signed char S8;
+typedef signed short S16;
+typedef signed int S32;
+typedef __int64 S64;
+typedef struct { U64 lo, hi; } V16;
+#define CONCAT11(h,l) ((U16)((((U8)(h)) << 8) | ((U8)(l))))
+#define CONCAT21(h,l) ((U32)((((U16)(h)) << 8) | ((U8)(l))))
+#define CONCAT31(h,l) ((U32)((((U32)(h)) << 8) | ((U8)(l))))
+extern unsigned int uStack_10;
+
+
+undefined4 fn_82BB9E50(undefined4 param_1)
+
+{
+  byte bStack00000014;
+  byte bStack00000015;
+  byte bStack00000016;
+  byte bStack00000017;
+  undefined4 uStack_10;
+  
+  bStack00000015 = (byte)((uint)param_1 >> 0x10);
+  bStack00000016 = (byte)((uint)param_1 >> 8);
+  bStack00000017 = (byte)param_1;
+  bStack00000014 = (byte)((uint)param_1 >> 0x18);
+  uStack_10 = CONCAT31(CONCAT21(CONCAT11((char)((ulonglong)bStack00000014 - 1) -
+                                         ((bStack00000014 - 2) +
+                                         ((ulonglong)bStack00000014 - 1 == 0)),
+                                         (char)((ulonglong)bStack00000015 - 1) -
+                                         ((bStack00000015 - 2) +
+                                         ((ulonglong)bStack00000015 - 1 == 0))),
+                                (char)((ulonglong)bStack00000016 - 1) -
+                                ((bStack00000016 - 2) + ((ulonglong)bStack00000016 - 1 == 0))),
+                       (char)((ulonglong)bStack00000017 - 1) -
+                       ((bStack00000017 - 2) + ((ulonglong)bStack00000017 - 1 == 0)));
+  return uStack_10;
+}
+
