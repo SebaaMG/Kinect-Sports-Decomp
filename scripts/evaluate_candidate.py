@@ -19,6 +19,8 @@ def main() -> int:
     parser.add_argument("address", help="Jeff function start, for example 0x82400E48")
     parser.add_argument("source", type=Path, help="candidate C with a fn_<ADDRESS> definition")
     parser.add_argument("--lab", type=Path, default=DEFAULT_LAB)
+    parser.add_argument("--compiler", type=Path,
+                        help="path to the Xbox 360 cl.exe (defaults to the local lab compiler)")
     parser.add_argument("--cflags", nargs="+", default=["/nologo", "/c", "/TC", "/O2"])
     args = parser.parse_args()
     address = int(args.address, 16)
@@ -34,7 +36,9 @@ def main() -> int:
     runs.mkdir(parents=True, exist_ok=True)
     work = Path(tempfile.mkdtemp(prefix="run-", dir=runs))
     shutil.copyfile(source, work / "candidate.c")
-    compiler = args.lab / "tools/compilers/X360/16.00.10224.00/cl.exe"
+    compiler = (args.compiler or args.lab / "tools/compilers/X360/16.00.10224.00/cl.exe").resolve()
+    if not compiler.is_file():
+        parser.error(f"Xbox 360 compiler not found: {compiler}; pass --compiler /path/to/cl.exe")
     wibo = os.environ.get("WIBO") or shutil.which("wibo-kinect") or shutil.which("wibo") or "wibo"
     objdiff = os.environ.get("OBJDIFF_CLI") or shutil.which("objdiff-cli") or "objdiff-cli"
     report = {
