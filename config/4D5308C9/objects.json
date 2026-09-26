@@ -2018,7 +2018,12 @@
       "auto_match/func_82F79430.c": "MISSING",
       "auto_match/func_82F79484.c": "MISSING",
       "auto_match/func_82F79494.c": "MISSING",
-      "auto_match/func_82F8E340.c": "MISSING",
+      "auto_match/func_82F8E340.c": {
+        "status": "NonMatching",
+        "extra_cflags": [
+          "/O1"
+        ]
+      },
       "auto_match/func_82F8EDC0.c": "MISSING",
       "auto_match/func_82F919B8.c": {
         "status": "Matching",
