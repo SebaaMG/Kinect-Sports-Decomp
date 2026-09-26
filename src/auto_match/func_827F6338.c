@@ -32,9 +32,9 @@ extern int fn_827FEF40();
 undefined4 fn_827F6338(longlong param_1)
 
 {
-  undefined4 auStack_10 [4];
+  undefined4 auStack_10;
   
-  fn_827FEF40(param_1 + 0x24,auStack_10);
-  return auStack_10[0];
+  fn_827FEF40(param_1 + 0x24,&auStack_10);
+  return auStack_10;
 }
 

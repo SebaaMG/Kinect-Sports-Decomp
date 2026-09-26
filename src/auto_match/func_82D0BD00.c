@@ -32,7 +32,7 @@ extern int fn_82D10D20();
 void fn_82D0BD00(int param_1,undefined8 param_2,undefined8 param_3,undefined8 param_4)
 
 {
-  undefined1 auStack_10 [16];
+  undefined1 auStack_10 [1];
   
   fn_82D10D20(*(undefined4 *)(param_1 + 8),param_2,param_3,auStack_10,param_4);
   return;

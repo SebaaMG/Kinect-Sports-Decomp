@@ -1,5 +1,13 @@
 # Kinect Sports decompiler research and measured customizations
 
+## Xenon ABI and automatic source refinement (26 September 2026)
+
+The generic Ghidra PowerPC compiler specification places overflow arguments at stack offset `0x8`. Xbox 360 MSVC uses eight general-purpose argument registers and places subsequent arguments in eight-byte slots starting at `0x50` on entry. `DecompileBatch.java --xenon-stack-abi` adds a temporary calling convention to the read-only analysis session. On `0x82BF52A0`, this changes an uninitialized `in_stack_00000056` local into the ninth parameter. The reexported C compiled with X360 MSVC `/O1` to an exact 372-byte `.text` and `.pdata` match. The convention is available to both scalar and Xenon exports through `scripts/export_xenon_abi_revision.py`; the exporter stores a separate, hashed revision and removes the Ghidra-only calling-convention annotation from saved C.
+
+`--mask-fpr-helper-calls` temporarily masks verified calls to `__savefpr_*` and `__restfpr_*` during decompilation. On `0x8268D280`, masking the save call recovered the first parameter and improved the compiled code match from 32.92% to 53.59% with the same compiler settings. This particular function is still nonmatching.
+
+`scripts/optimize_ghidra_c.py` compiles conservative variants of Ghidra C and keeps exact results only when objdiff confirms code, `.pdata`, function size and every instruction. It tests reconstructed stack arguments, scalar or resized local arrays, adjacent stack words, Jeff call names and `/O1` versus `/O2`. In the first 800 near-match units (`98% <= fuzzy < 100%`), it produced 220 additional exact functions and 14,180 matching code bytes; a follow-up stack-layout trial added six functions and 444 bytes. The 226 accepted units total 14,624 bytes. The trials and diff JSON are private in `analysis/ghidra-codegen-near/` and `analysis/ghidra-codegen-structural/`. These measurements cover near-match units and do not predict the yield for the rest of the executable.
+
 The stable imported program uses Ghidra language `PowerPC:BE:64:A2ALT-32addr`, compiler spec `default`, 32-bit pointers, 64-bit registers, and big-endian memory. This is a generic Power ISA/Altivec language, not an Xbox 360 Xenon-specific language. The XEX metadata alone does not validate its instruction coverage or inferred C types.
 
 ## Applied to the current read-only exporter

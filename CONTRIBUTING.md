@@ -10,6 +10,8 @@ Place `default.xex` from your own copy of the game as shown in the [README](READ
 
 Choose a function in `src/auto_match/` whose entry in `config/4D5308C9/objects.json` is `NonMatching`. Work on a separate branch so others can work on different functions at the same time. Read its C, the corresponding assembly in `build/4D5308C9/asm/auto_match/`, and its object in objdiff.
 
+For a batch of near matches, `scripts/optimize_ghidra_c.py` can try local stack layouts and both optimization settings automatically. Give it a private output directory, the Xbox 360 compiler, and `--report progress/report.json`; `--apply` writes only functions whose rebuilt code and `.pdata` match exactly. Run it on an isolated worktree so other contributors can keep building while it works.
+
 Build the original object once, then compile and compare just your function as you iterate:
 
 ```sh

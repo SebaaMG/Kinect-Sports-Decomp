@@ -33,7 +33,7 @@ void fn_82D4B9E0(int param_1,undefined8 param_2,undefined8 param_3,undefined8 pa
                   undefined8 param_5)
 
 {
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [64];
   
   fn_82DCADF8(auStack_50,*(undefined4 *)(param_1 + 0x14),param_2,param_3,param_5,param_5);
   return;

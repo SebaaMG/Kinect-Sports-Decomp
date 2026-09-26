@@ -32,11 +32,11 @@ extern unsigned int lbl_821AC670;
 void fn_822B0338(int param_1)
 
 {
-  undefined **appuStack_10 [4];
+  undefined ** appuStack_10;
   
-  appuStack_10[0] = &lbl_821AC670;
+  appuStack_10 = &lbl_821AC670;
   fn_822ABBF0(*(undefined4 *)((*(int **)(param_1 + 0xc))[4] * 4 + **(int **)(param_1 + 0xc)),
-                appuStack_10);
+                &appuStack_10);
   return;
 }
 

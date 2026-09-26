@@ -33,13 +33,13 @@ undefined4 fn_82A1F308(undefined8 param_1)
 
 {
   int iVar1;
-  undefined4 auStack_10 [4];
+  undefined4 auStack_10;
   
-  iVar1 = XexGetModuleHandle(param_1,auStack_10);
+  iVar1 = XexGetModuleHandle(param_1,&auStack_10);
   if (iVar1 < 0) {
     fn_82A2B760();
-    auStack_10[0] = 0;
+    auStack_10 = 0;
   }
-  return auStack_10[0];
+  return auStack_10;
 }
 

@@ -32,7 +32,7 @@ extern int fn_822CDCF8();
 void fn_82377210(undefined8 param_1,longlong param_2)
 
 {
-  undefined1 auStack_20 [32];
+  undefined1 auStack_20 [16];
   
                     /* WARNING: Subroutine does not return */
   fn_822CDCF8(param_2,param_2 + 0x2c0,auStack_20);

@@ -34,7 +34,7 @@ extern int fn_82DE0D40();
 void fn_82DCDEA8(undefined8 param_1,undefined8 param_2,undefined8 param_3)
 
 {
-  undefined1 auStack_f0 [240];
+  undefined1 auStack_f0 [208];
   
   fn_82DE0D10(auStack_f0);
   fn_82DE0C30(auStack_f0,param_1,param_2,param_3);

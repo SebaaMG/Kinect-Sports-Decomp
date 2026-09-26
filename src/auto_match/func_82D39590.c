@@ -32,7 +32,7 @@ extern int fn_82D45F58();
 undefined4 fn_82D39590(void)
 
 {
-  undefined4 auStack_f0 [60];
+  undefined4 auStack_f0 [56];
   
   fn_82D45F58(auStack_f0,0);
   return auStack_f0[0];

@@ -41,22 +41,22 @@ extern unsigned int lbl_8202396C;
 undefined4 * fn_82897318(undefined4 *param_1,undefined4 param_2)
 
 {
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30;
   
   *param_1 = &lbl_8202396C;
-  fn_8224EE50(param_1 + 1,auStack_30,auStack_30);
-  fn_8288C4B0(param_1 + 5,auStack_30,auStack_30);
-  fn_8224EE50(param_1 + 9,auStack_30,auStack_30);
-  fn_8288C4B0(param_1 + 0xd,auStack_30,auStack_30);
-  fn_8288C2E0(param_1 + 0x11,auStack_30);
-  fn_8288C2E0(param_1 + 0x14,auStack_30);
-  fn_828C92E8(param_1 + 0x17,auStack_30,auStack_30);
-  fn_828A2240(param_1 + 0x1b,auStack_30,auStack_30);
-  fn_8288BEC0(param_1 + 0x1f,auStack_30,auStack_30[0]);
+  fn_8224EE50(param_1 + 1,&auStack_30,&auStack_30);
+  fn_8288C4B0(param_1 + 5,&auStack_30,&auStack_30);
+  fn_8224EE50(param_1 + 9,&auStack_30,&auStack_30);
+  fn_8288C4B0(param_1 + 0xd,&auStack_30,&auStack_30);
+  fn_8288C2E0(param_1 + 0x11,&auStack_30);
+  fn_8288C2E0(param_1 + 0x14,&auStack_30);
+  fn_828C92E8(param_1 + 0x17,&auStack_30,&auStack_30);
+  fn_828A2240(param_1 + 0x1b,&auStack_30,&auStack_30);
+  fn_8288BEC0(param_1 + 0x1f,&auStack_30,auStack_30);
   *(undefined1 *)(param_1 + 0x24) = 0;
-  fn_8288C420(param_1 + 0x25,auStack_30,auStack_30);
+  fn_8288C420(param_1 + 0x25,&auStack_30,&auStack_30);
   fn_828C61B8(param_1 + 0x29);
-  fn_82511350(param_1 + 0x30,auStack_30,auStack_30);
+  fn_82511350(param_1 + 0x30,&auStack_30,&auStack_30);
   param_1[0x35] = param_2;
   *(undefined1 *)(param_1 + 0x34) = 0;
   return param_1;

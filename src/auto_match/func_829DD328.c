@@ -32,10 +32,10 @@ extern int fn_829DCFB0();
 void fn_829DD328(int param_1,undefined8 param_2,undefined8 param_3)
 
 {
-  int aiStack_30 [12];
+  int aiStack_30;
   
-  aiStack_30[0] = param_1;
-  fn_829DCFB0(*(undefined4 *)(param_1 + 0xf4a10),param_2,aiStack_30,param_3);
+  aiStack_30 = param_1;
+  fn_829DCFB0(*(undefined4 *)(param_1 + 0xf4a10),param_2,&aiStack_30,param_3);
   fn_829DC830(param_1,param_1,param_2,param_3);
   *(undefined4 *)(param_1 + 0xf4a14) = 0;
   return;

@@ -27,11 +27,10 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 
 
-void fn_828B0300(undefined4 *param_1,undefined4 param_2,undefined4 param_3,undefined4 param_4,
-                  undefined1 param_5,undefined1 param_6,undefined4 param_7,undefined4 param_8)
+void fn_828B0300(undefined4 *param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4, undefined1 param_5, undefined1 param_6, undefined4 param_7, undefined4 param_8, undefined4 in_stack_00000054)
 
 {
-  undefined4 in_stack_00000054;
+
   
   *param_1 = param_2;
   param_1[1] = param_3;

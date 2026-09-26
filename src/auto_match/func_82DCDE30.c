@@ -35,7 +35,7 @@ bool fn_82DCDE30(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefi
 {
   char *pcVar1;
   undefined1 auStack_70 [16];
-  undefined1 auStack_60 [96];
+  undefined1 auStack_60 [80];
   
   pcVar1 = (char *)fn_82DDEEC0(auStack_70,auStack_60,param_1,param_2,param_3,param_4);
   return *pcVar1 != '\0';

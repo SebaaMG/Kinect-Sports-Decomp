@@ -32,7 +32,7 @@ extern int fn_82CF6810();
 void fn_82CF6898(undefined8 param_1,undefined8 param_2)
 
 {
-  undefined1 auStack_10 [16];
+  undefined1 auStack_10 [1];
   
   fn_82CF6810(auStack_10,param_1,param_2);
   return;

@@ -32,7 +32,7 @@ extern int fn_82878620();
 undefined8 fn_82877F18(int param_1)
 
 {
-  undefined1 auStack_10 [16];
+  undefined1 auStack_10 [1];
   
   fn_82878620(auStack_10,param_1 + 4,*(undefined4 *)(param_1 + 4),*(undefined4 *)(param_1 + 8)
                    );

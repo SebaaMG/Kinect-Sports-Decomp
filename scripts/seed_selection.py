@@ -7,9 +7,9 @@ import sqlite3
 
 from lab_paths import LAB
 ROOT = LAB / 'analysis/full-game-export/revisions'
-REVISIONS = {'scalar': ('scalar-switch-merge-v1', 'scalar-switch-v1',
+REVISIONS = {'scalar': ('xenon-stack-abi-v1', 'scalar-switch-merge-v1', 'scalar-switch-v1',
                         'xenon-alias-addsub-v1', 'scalar-crt-v1'),
-             'xenon': ('xenon-switch-v1', 'xenon-altivec-v2',
+             'xenon': ('xenon-stack-abi-v1', 'xenon-switch-v1', 'xenon-altivec-v2',
                        'xenon-alias-addsub-v1')}
 MARKERS = (
     ('halt_baddata', 'bad_data'),
@@ -45,6 +45,11 @@ class SeedSelector:
                 if hashlib.sha256(data).hexdigest() != row[2]:
                     raise ValueError(f'Seed revision hash mismatch at 0x{address:08X}')
                 code = data.decode('utf-8', 'replace')
+                if name == 'xenon-stack-abi-v1' and base_path and Path(base_path).is_file():
+                    original = Path(base_path).read_text(encoding='utf-8', errors='replace')
+                    if any(marker in code and marker not in original
+                           for marker in REGRESSION_MARKERS):
+                        continue
                 if name == 'xenon-altivec-v2':
                     previous = self.connections.get('xenon-alias-addsub-v1')
                     if previous is None:

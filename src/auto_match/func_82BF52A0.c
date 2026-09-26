@@ -32,13 +32,12 @@ extern int fn_82BE67E0();
 extern int fn_82BF4EE8();
 
 
-undefined8
-fn_82BF52A0(int param_1,undefined1 param_2,undefined8 param_3,undefined8 param_4,
-             undefined8 param_5,undefined8 param_6,undefined8 param_7,undefined8 param_8)
+undefined8 fn_82BF52A0(int param_1,undefined1 param_2,undefined8 param_3,undefined8 param_4,
+             undefined8 param_5,undefined8 param_6,undefined8 param_7,undefined8 param_8,
+             undefined2 param_9)
 
 {
   int iVar1;
-  undefined2 in_stack_00000056;
   
   iVar1 = fn_82BF4EE8(param_1,0x2a);
   if (iVar1 != 0) {
@@ -59,7 +58,7 @@ fn_82BF52A0(int param_1,undefined1 param_2,undefined8 param_3,undefined8 param_4
     fn_82BE6720(param_1,0x35,0);
     fn_82BE6760(param_1,param_8,0);
     fn_82BE6720(param_1,0x46,0);
-    fn_82BE6760(param_1,in_stack_00000056,0);
+    fn_82BE6760(param_1,param_9,0);
     *(short *)(param_1 + 0x50) = *(short *)(param_1 + 0x50) + 1;
   }
   return 0;

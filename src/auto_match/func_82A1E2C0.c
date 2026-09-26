@@ -34,15 +34,15 @@ ulonglong fn_82A1E2C0(undefined8 param_1)
 {
   int iVar2;
   ulonglong uVar1;
-  uint auStack_10 [4];
+  uint auStack_10;
   
-  iVar2 = NtResumeThread(param_1,auStack_10);
+  iVar2 = NtResumeThread(param_1,&auStack_10);
   if (iVar2 < 0) {
     fn_82A2B760();
     uVar1 = 0xffffffffffffffff;
   }
   else {
-    uVar1 = (ulonglong)auStack_10[0];
+    uVar1 = (ulonglong)auStack_10;
   }
   return uVar1;
 }

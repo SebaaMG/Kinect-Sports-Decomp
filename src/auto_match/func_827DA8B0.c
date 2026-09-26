@@ -35,19 +35,19 @@ undefined4 fn_827DA8B0(int param_1)
   undefined4 *puVar1;
   int iVar2;
   undefined4 *puVar3;
-  undefined4 auStack_30 [12];
+  undefined4 auStack_30;
   
   puVar3 = *(undefined4 **)(param_1 + 4);
   puVar1 = *(undefined4 **)(param_1 + 8);
-  auStack_30[0] = 0;
+  auStack_30 = 0;
   for (; puVar3 != puVar1; puVar3 = puVar3 + 1) {
-    fn_827E3BF8(*puVar3,auStack_30);
+    fn_827E3BF8(*puVar3,&auStack_30);
   }
   puVar3 = *(undefined4 **)(param_1 + 0x2c);
   puVar1 = *(undefined4 **)(param_1 + 0x30);
-  while ((puVar3 != puVar1 && (iVar2 = fn_827E3BF8(*puVar3,auStack_30), iVar2 != 0x10e1))) {
+  while ((puVar3 != puVar1 && (iVar2 = fn_827E3BF8(*puVar3,&auStack_30), iVar2 != 0x10e1))) {
     puVar3 = puVar3 + 1;
   }
-  return auStack_30[0];
+  return auStack_30;
 }
 

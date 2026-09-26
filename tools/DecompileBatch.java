@@ -2,6 +2,7 @@
 import ghidra.app.decompiler.DecompInterface;
 import ghidra.app.decompiler.DecompileResults;
 import ghidra.app.script.GhidraScript;
+import ghidra.program.database.SpecExtension;
 import ghidra.program.model.address.Address;
 import ghidra.program.model.address.AddressSet;
 import ghidra.program.model.listing.Function;
@@ -39,10 +40,12 @@ public class DecompileBatch extends GhidraScript {
     @Override
     protected void run() throws Exception {
         String[] args = getScriptArgs();
-        if (args.length < 2 || args.length > 11) {
+        if (args.length < 2 || args.length > 13) {
             throw new IllegalArgumentException("Usage: DecompileBatch.java <address-list> <output-dir> [--mask-save-helper-calls] [--type-known-floats] [--type-boxing-camera] [--type-known-crt] [--type-sport-selector] [--export-pcode] [--preserve-noreturn] [--clear-all-noreturn] [--switch-overrides=path]");
         }
         boolean maskSaveCalls = false;
+        boolean maskFprCalls = false;
+        boolean xenonStackAbi = false;
         boolean typeKnownFloats = false;
         boolean typeBoxingCamera = false;
         boolean typeKnownCrt = false;
@@ -53,6 +56,8 @@ public class DecompileBatch extends GhidraScript {
         Path switchManifest = null;
         for (int i = 2; i < args.length; i++) {
             if (args[i].equals("--mask-save-helper-calls")) maskSaveCalls = true;
+            else if (args[i].equals("--mask-fpr-helper-calls")) maskFprCalls = true;
+            else if (args[i].equals("--xenon-stack-abi")) xenonStackAbi = true;
             else if (args[i].equals("--type-known-floats")) typeKnownFloats = true;
             else if (args[i].equals("--type-boxing-camera")) typeBoxingCamera = true;
             else if (args[i].equals("--type-known-crt")) typeKnownCrt = true;
@@ -83,6 +88,22 @@ public class DecompileBatch extends GhidraScript {
         Path output = Path.of(args[1]);
         Files.createDirectories(output);
         Files.deleteIfExists(output.resolve("failures.txt"));
+        if (xenonStackAbi) {
+            // Preserve the existing scalar register model, but put overflow
+            // arguments in Xenon's 8-byte slots starting at entry SP+0x50.
+            StringBuilder xml = new StringBuilder(
+                "<prototype name=\"__xenon_stack\" extrapop=\"0\" stackshift=\"0\"><input>");
+            for (int i = 1; i <= 13; i++) xml.append(
+                "<pentry minsize=\"1\" maxsize=\"8\" metatype=\"float\" extension=\"float\"><register name=\"f" + i + "\"/></pentry>");
+            for (int i = 3; i <= 10; i++) xml.append(
+                "<pentry minsize=\"1\" maxsize=\"8\" extension=\"sign\"><register name=\"r" + i + "\"/></pentry>");
+            xml.append("<pentry minsize=\"1\" maxsize=\"500\" align=\"8\"><addr offset=\"0x50\" space=\"stack\"/></pentry></input><output>");
+            xml.append("<pentry minsize=\"1\" maxsize=\"8\" metatype=\"float\" extension=\"float\"><register name=\"f1\"/></pentry>");
+            xml.append("<pentry minsize=\"1\" maxsize=\"8\" extension=\"sign\"><register name=\"r3\"/></pentry></output><unaffected>");
+            for (int i = 14; i <= 31; i++) xml.append("<register name=\"r" + i + "\"/>");
+            xml.append("<register name=\"r1\"/><register name=\"cr4\"/></unaffected></prototype>");
+            new SpecExtension(currentProgram).addReplaceCompilerSpecExtension(xml.toString(), monitor);
+        }
         DecompInterface decompiler = new DecompInterface();
         decompiler.openProgram(currentProgram);
         int done = 0;
@@ -192,7 +213,7 @@ public class DecompileBatch extends GhidraScript {
                         Instruction instruction = currentProgram.getListing().getInstructionAt(address.add(offset));
                         if (instruction != null && instruction.getFlowOverride() == FlowOverride.CALL_RETURN)
                             instruction.setFlowOverride(FlowOverride.NONE);
-                        if (maskSaveCalls) {
+                        if (maskSaveCalls || maskFprCalls) {
                             Address site = address.add(offset);
                             byte[] bytes = new byte[4];
                             currentProgram.getMemory().getBytes(site, bytes);
@@ -202,9 +223,15 @@ public class DecompileBatch extends GhidraScript {
                             if ((word >>> 26) == 18 && (word & 2) == 0) {
                                 int displacement = (word & 0x03fffffc) << 6 >> 6;
                                 long target = site.getOffset() + displacement;
-                                if ((word & 1) == 1 &&
+                                boolean gprSave = maskSaveCalls &&
                                     target >= 0x82F68B40L && target <= 0x82F68B84L &&
-                                    (target - 0x82F68B40L) % 4 == 0) {
+                                    (target - 0x82F68B40L) % 4 == 0;
+                                boolean fprHelper = maskFprCalls &&
+                                    ((target >= 0x82F6A510L && target <= 0x82F6A554L &&
+                                      (target - 0x82F6A510L) % 4 == 0) ||
+                                     (target >= 0x82F6A55CL && target <= 0x82F6A5A0L &&
+                                      (target - 0x82F6A55CL) % 4 == 0));
+                                if ((word & 1) == 1 && (gprSave || fprHelper)) {
                                     currentProgram.getListing().clearCodeUnits(site, site.add(3), false);
                                     Memory memory = currentProgram.getMemory();
                                     memory.setBytes(site, new byte[] {0x60, 0, 0, 0});
@@ -221,6 +248,7 @@ public class DecompileBatch extends GhidraScript {
                     for (Address entry : remove) currentProgram.getFunctionManager().removeFunction(entry);
                     Function function = currentProgram.getListing().createFunction("Jeff_" + value,
                         address, body, SourceType.USER_DEFINED);
+                    if (xenonStackAbi) function.setCallingConvention("__xenon_stack");
                     SwitchOverride override = switchOverrides.get(address.getOffset());
                     if (override != null) {
                         Address branch = toAddr(override.branch());

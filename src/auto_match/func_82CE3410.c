@@ -32,10 +32,10 @@ extern int fn_82CE2C20();
 void fn_82CE3410(undefined8 param_1)
 
 {
-  undefined4 auStack_10 [4];
+  undefined4 auStack_10;
   
-  auStack_10[0] = 0;
-  fn_82CE2C20(param_1,0,auStack_10);
+  auStack_10 = 0;
+  fn_82CE2C20(param_1,0,&auStack_10);
   return;
 }
 

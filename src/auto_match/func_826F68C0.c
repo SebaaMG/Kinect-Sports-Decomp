@@ -32,10 +32,10 @@ extern int fn_826C7400();
 void fn_826F68C0(int param_1,undefined8 param_2)
 
 {
-  uint auStack_10 [4];
+  uint auStack_10;
   
-  auStack_10[0] = (uint)*(ushort *)(param_1 + 4);
-  fn_826C7400(param_2,*(undefined2 *)(param_1 + 6),auStack_10);
+  auStack_10 = (uint)*(ushort *)(param_1 + 4);
+  fn_826C7400(param_2,*(undefined2 *)(param_1 + 6),&auStack_10);
   return;
 }
 
