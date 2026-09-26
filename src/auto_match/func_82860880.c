@@ -1,0 +1,75 @@
+typedef unsigned char undefined1;
+typedef unsigned char byte;
+typedef unsigned char undefined;
+typedef unsigned char bool;
+#define true 1
+#define false 0
+typedef unsigned short undefined2;
+typedef unsigned short ushort;
+typedef unsigned short word;
+typedef unsigned int undefined4;
+typedef unsigned int uint;
+typedef unsigned int dword;
+typedef unsigned int ulong;
+typedef unsigned __int64 undefined8;
+typedef unsigned __int64 ulonglong;
+typedef unsigned __int64 qword;
+typedef __int64 longlong;
+typedef int (*code)();
+typedef unsigned char U8;
+typedef unsigned short U16;
+typedef unsigned int U32;
+typedef unsigned __int64 U64;
+typedef signed char S8;
+typedef signed short S16;
+typedef signed int S32;
+typedef __int64 S64;
+typedef struct { U64 lo, hi; } V16;
+extern int fn_8280AD30();
+extern int fn_8285A808();
+extern int fn_8285A830();
+extern int fn_8305C550();
+extern unsigned int uStack_38;
+extern unsigned int uStack_3c;
+extern unsigned int uStack_40;
+
+
+undefined8 fn_82860880(int param_1,undefined8 param_2,undefined4 *param_3)
+
+{
+  int iVar2;
+  int *piVar3;
+  int iVar4;
+  undefined8 uVar1;
+  undefined4 uStack_40;
+  undefined4 uStack_3c;
+  undefined4 uStack_38;
+  
+  iVar2 = fn_8285A808();
+  piVar3 = (int *)fn_8285A830(param_1,param_2);
+  if (*(int *)(iVar2 + 0x94) == 0) {
+    uStack_40 = *param_3;
+    uStack_3c = param_3[1];
+    uStack_38 = param_3[2];
+  }
+  else {
+    fn_8280AD30(iVar2 + 0x10,param_3,&uStack_40);
+  }
+  iVar4 = fn_8305C550(param_1 + 0x6c,&uStack_40);
+  if (iVar4 == 0) {
+    if (*(int *)(iVar2 + 0x90) == 0) {
+      uVar1 = 0;
+    }
+    else {
+      *piVar3 = *(int *)(iVar2 + 0x90);
+      uVar1 = 1;
+    }
+  }
+  else {
+    uVar1 = 1;
+    *piVar3 = *(int *)((*(int *)(iVar4 + 0x28) - (uint)(*(int *)(iVar2 + 0x90) == 0)) * 4 +
+                      *(int *)(param_1 + 0x40));
+  }
+  return uVar1;
+}
+

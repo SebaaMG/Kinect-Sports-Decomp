@@ -1,0 +1,103 @@
+typedef unsigned char undefined1;
+typedef unsigned char byte;
+typedef unsigned char undefined;
+typedef unsigned char bool;
+#define true 1
+#define false 0
+typedef unsigned short undefined2;
+typedef unsigned short ushort;
+typedef unsigned short word;
+typedef unsigned int undefined4;
+typedef unsigned int uint;
+typedef unsigned int dword;
+typedef unsigned int ulong;
+typedef unsigned __int64 undefined8;
+typedef unsigned __int64 ulonglong;
+typedef unsigned __int64 qword;
+typedef __int64 longlong;
+typedef int (*code)();
+typedef unsigned char U8;
+typedef unsigned short U16;
+typedef unsigned int U32;
+typedef unsigned __int64 U64;
+typedef signed char S8;
+typedef signed short S16;
+typedef signed int S32;
+typedef __int64 S64;
+typedef struct { U64 lo, hi; } V16;
+extern int fn_82865100();
+extern int fn_828681F8();
+extern int fn_828682B8();
+extern int fn_82868378();
+extern int fn_82868438();
+extern int fn_828684F8();
+extern int fn_82868568();
+extern int fn_828685D8();
+extern int fn_82868698();
+extern int fn_82868758();
+extern int fn_82868E78();
+extern int fn_82868EF0();
+extern int fn_82868F50();
+extern int fn_82868FB0();
+extern int fn_82869010();
+extern int fn_82869070();
+extern int fn_828690D0();
+extern int fn_82869130();
+extern int fn_82869190();
+extern int fn_828691F0();
+extern int fn_82869268();
+extern int fn_828692E0();
+extern int fn_82869358();
+extern int fn_828693D0();
+extern int fn_82869448();
+extern int fn_828694C0();
+extern int fn_82869538();
+extern int fn_828695B0();
+extern int fn_82869628();
+extern int fn_82869EA0();
+extern int fn_82869F18();
+extern int fn_82869F90();
+extern int fn_8286A008();
+extern int fn_8286B080();
+
+
+undefined8 fn_82867780(void)
+
+{
+  fn_82868378();
+  fn_82868EF0();
+  fn_82868F50();
+  fn_82868FB0();
+  fn_82869010();
+  fn_82869070();
+  fn_828690D0();
+  fn_82869130();
+  fn_82869190();
+  fn_82868568();
+  fn_82869EA0();
+  fn_82869F18();
+  fn_82869F90();
+  fn_8286A008();
+  fn_828684F8();
+  fn_82869448();
+  fn_828694C0();
+  fn_82869538();
+  fn_828695B0();
+  fn_82869628();
+  fn_82868438();
+  fn_828685D8();
+  fn_82868698();
+  fn_82868758();
+  fn_828682B8();
+  fn_82868E78();
+  fn_828691F0();
+  fn_82869268();
+  fn_828692E0();
+  fn_82869358();
+  fn_828693D0();
+  fn_828681F8();
+  fn_8286B080();
+  fn_82865100();
+  return 0x200a0000;
+}
+

@@ -1,0 +1,48 @@
+typedef unsigned char undefined1;
+typedef unsigned char byte;
+typedef unsigned char undefined;
+typedef unsigned char bool;
+#define true 1
+#define false 0
+typedef unsigned short undefined2;
+typedef unsigned short ushort;
+typedef unsigned short word;
+typedef unsigned int undefined4;
+typedef unsigned int uint;
+typedef unsigned int dword;
+typedef unsigned int ulong;
+typedef unsigned __int64 undefined8;
+typedef unsigned __int64 ulonglong;
+typedef unsigned __int64 qword;
+typedef __int64 longlong;
+typedef int (*code)();
+typedef unsigned char U8;
+typedef unsigned short U16;
+typedef unsigned int U32;
+typedef unsigned __int64 U64;
+typedef signed char S8;
+typedef signed short S16;
+typedef signed int S32;
+typedef __int64 S64;
+typedef struct { U64 lo, hi; } V16;
+
+
+ulonglong fn_8281E9C8(uint *param_1)
+
+{
+  longlong lVar1;
+  longlong lVar2;
+  longlong lVar3;
+  longlong lVar4;
+  
+  lVar3 = -((ulonglong)param_1[3] & 0x7f800000) + 0x7f800000;
+  lVar2 = -((ulonglong)param_1[2] & 0x7f800000) + 0x7f800000;
+  lVar1 = -((ulonglong)param_1[1] & 0x7f800000) + 0x7f800000;
+  lVar4 = -((ulonglong)*param_1 & 0x7f800000) + 0x7f800000;
+  return lVar3 + (-(ulonglong)(lVar3 == 0) - (-((ulonglong)param_1[3] & 0x7f800000) + 0x7f7fffff)) &
+         lVar2 + (-(ulonglong)(lVar2 == 0) - (-((ulonglong)param_1[2] & 0x7f800000) + 0x7f7fffff)) &
+         lVar1 + (-(ulonglong)(lVar1 == 0) - (-((ulonglong)param_1[1] & 0x7f800000) + 0x7f7fffff)) &
+         lVar4 + (-(ulonglong)(lVar4 == 0) - (-((ulonglong)*param_1 & 0x7f800000) + 0x7f7fffff)) & 1
+  ;
+}
+
