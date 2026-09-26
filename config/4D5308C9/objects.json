@@ -1944,7 +1944,12 @@
           "/O1"
         ]
       },
-      "auto_match/func_82F953A8.c": "MISSING",
+      "auto_match/func_82F953A8.c": {
+        "status": "Matching",
+        "extra_cflags": [
+          "/O1"
+        ]
+      },
       "auto_match/func_82F953B8.c": "MISSING",
       "auto_match/func_82F96B78.c": "MISSING",
       "auto_match/func_82FA4E70.c": {
