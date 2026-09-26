@@ -1938,7 +1938,12 @@
       "auto_match/func_82F93778.c": "MISSING",
       "auto_match/func_82F93A00.c": "MISSING",
       "auto_match/func_82F946C0.c": "MISSING",
-      "auto_match/func_82F95398.c": "MISSING",
+      "auto_match/func_82F95398.c": {
+        "status": "Matching",
+        "extra_cflags": [
+          "/O1"
+        ]
+      },
       "auto_match/func_82F953A8.c": "MISSING",
       "auto_match/func_82F953B8.c": "MISSING",
       "auto_match/func_82F96B78.c": "MISSING",
