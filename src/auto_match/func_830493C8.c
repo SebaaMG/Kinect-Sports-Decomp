@@ -43,7 +43,7 @@ undefined8 fn_830493C8(int param_1,uint *param_2,int param_3,int param_4,int par
   int iVar6;
   int iStack_30;
   int iStack_2c;
-  undefined4 auStack_28 [10];
+  undefined4 auStack_28;
   
   puVar4 = (uint *)(param_4 + param_5);
   iVar3 = 0;
@@ -63,9 +63,9 @@ undefined8 fn_830493C8(int param_1,uint *param_2,int param_3,int param_4,int par
   }
   iStack_30 = *param_2 - uVar5;
   iVar3 = fn_83048F80(*(int *)(param_1 + 0x30) + iVar6 + param_5,
-                            *(int *)(param_1 + 0x2c) - iVar6,&iStack_30,&iStack_2c,auStack_28);
+                            *(int *)(param_1 + 0x2c) - iVar6,&iStack_30,&iStack_2c,&auStack_28);
   if (iVar3 == 1) {
-    fn_8307E570(*(undefined4 *)(param_1 + 0x28),0,iVar6 * 8 + iStack_2c,auStack_28[0]);
+    fn_8307E570(*(undefined4 *)(param_1 + 0x28),0,iVar6 * 8 + iStack_2c,auStack_28);
     uVar2 = 1;
     *param_2 = *param_2 - iStack_30;
   }

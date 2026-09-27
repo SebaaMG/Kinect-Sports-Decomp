@@ -43,7 +43,7 @@ byte fn_8301D698(int param_1,int param_2)
   char cVar5;
   byte bVar6;
   undefined8 uVar7;
-  char acStack_60 [96];
+  char acStack_60 [16];
   
   if (*(int *)(param_1 + 8) != 1) {
     return 0;

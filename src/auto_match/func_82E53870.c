@@ -37,13 +37,13 @@ undefined8 fn_82E53870(int param_1)
   longlong lVar1;
   ulonglong uVar2;
   uint uVar3;
-  uint auStack_40 [16];
+  uint auStack_40;
   
   uVar2 = 0;
   if (*(int *)(param_1 + 0x108) != 0) {
     do {
-      lVar1 = fn_82E531C8(param_1 + 0xa0,uVar2,auStack_40);
-      uVar3 = -(uint)(lVar1 != 0) & auStack_40[0];
+      lVar1 = fn_82E531C8(param_1 + 0xa0,uVar2,&auStack_40);
+      uVar3 = -(uint)(lVar1 != 0) & auStack_40;
       if (uVar3 != 0) {
         if (*(int *)(uVar3 + 0x18) != 0) {
           fn_82E4FE40();

@@ -72,7 +72,7 @@ fn_82E68100(int *param_1,int *param_2,int param_3,int param_4,longlong param_5,i
   int in_stack_000000a4;
   undefined4 *in_stack_000000ac;
   uint auStack_cc [3];
-  undefined1 auStack_c0 [192];
+  undefined1 auStack_c0 [16];
   
   iVar1 = *param_1;
   *param_6 = 0;

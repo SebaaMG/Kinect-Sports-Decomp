@@ -35,7 +35,7 @@ void fn_82FB6FE8(undefined4 *param_1,int *param_2,ulonglong param_3)
   ulonglong uVar2;
   int iVar3;
   ulonglong uVar4;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [1];
   
   iVar1 = *param_2;
   uVar4 = 0;

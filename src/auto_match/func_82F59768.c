@@ -28,7 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_50;
 extern unsigned int *auStack_60;
 extern int fn_8280D630();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int stack0x00000050;
 extern unsigned int uStack00000020;
 extern unsigned int uStack00000028;
@@ -52,7 +52,7 @@ fn_82F59768(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefined8 
   undefined8 uStack00000048;
   undefined8 uStack00000050;
   undefined1 auStack_60 [16];
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [16];
   
   uStack00000020 = param_2;
   uStack00000028 = param_3;
@@ -61,7 +61,7 @@ fn_82F59768(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefined8 
   uStack00000040 = param_6;
   uStack00000048 = param_7;
   uStack00000050 = param_8;
-  fn_82F68CC0(auStack_60,&stack0x00000050,0x10);
+  memcpy(auStack_60,&stack0x00000050,0x10);
   fn_8280D630(param_1,auStack_50,param_2,param_3,param_4,param_5,param_6,param_7);
   return param_1;
 }

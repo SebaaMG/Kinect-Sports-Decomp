@@ -49,7 +49,7 @@ void fn_82D463A0(undefined8 param_1,double param_2,undefined8 param_3,longlong p
   undefined4 in_register_000100d4;
   undefined4 in_register_000100d8;
   undefined4 in_vr13;
-  char acStack_80 [128];
+  char acStack_80;
   
   piVar2 = (int *)fn_82F6A544();
   dVar7 = (double)lbl_82002AE0;
@@ -60,8 +60,8 @@ void fn_82D463A0(undefined8 param_1,double param_2,undefined8 param_3,longlong p
   puVar1[2] = in_register_000100d8;
   puVar1[3] = in_vr13;
   dVar8 = extraout_f1;
-  (**(code **)(*piVar2 + 0x38))(acStack_80,piVar2);
-  if (acStack_80[0] == '\0') {
+  (**(code **)(*piVar2 + 0x38))(&acStack_80,piVar2);
+  if (acStack_80 == '\0') {
     dVar5 = (double)(**(code **)(*piVar2 + 0x34))(piVar2,param_4 + 1,param_5);
     dVar4 = (double)(**(code **)(*piVar2 + 0x34))(piVar2,param_4,param_5 + 1);
     if (dVar7 < (double)(float)(dVar8 + param_2)) {

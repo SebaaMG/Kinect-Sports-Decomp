@@ -54,7 +54,7 @@ longlong fn_82E42D28(int param_1,ulonglong param_2)
   uint uStack_58;
   uint uStack_54;
   longlong lStack_50;
-  longlong alStack_48 [9];
+  longlong alStack_48;
   
   if ((param_2 & 0xffffffff) == 0) {
     lVar2 = -0x7ff8ffa9;
@@ -133,10 +133,10 @@ longlong fn_82E42D28(int param_1,ulonglong param_2)
                 lStack_50 = 0;
                 lVar2 = (**(code **)(*piStack_60 + 0x14))(piStack_60,0,&lStack_50);
                 if (-1 < lVar2) {
-                  alStack_48[0] = 0;
-                  lVar2 = (**(code **)(*piStack_5c + 0x14))(piStack_5c,0,alStack_48);
+                  alStack_48 = 0;
+                  lVar2 = (**(code **)(*piStack_5c + 0x14))(piStack_5c,0,&alStack_48);
                   if (-1 < lVar2) {
-                    lVar2 = fn_82E627B8(piStack_6c,alStack_48[0] + lStack_50);
+                    lVar2 = fn_82E627B8(piStack_6c,alStack_48 + lStack_50);
                   }
                 }
               }

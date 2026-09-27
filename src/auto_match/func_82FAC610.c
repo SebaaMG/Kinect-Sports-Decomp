@@ -35,14 +35,14 @@ void fn_82FAC610(int param_1,longlong param_2,undefined8 param_3)
 
 {
   int iVar1;
-  uint uStack_30;
-  undefined4 uStack_2c;
+  struct { uint first; undefined4 second; } stack_pair_30;
+
   
-  iVar1 = fn_82FB3578(param_1 + 0x38,param_3,&uStack_30);
+  iVar1 = fn_82FB3578(param_1 + 0x38,param_3,&stack_pair_30.first);
   while (iVar1 == 0x2d) {
-    fn_82FA8588(uStack_2c,
-                    ((ulonglong)uStack_30 - (ulonglong)*(uint *)(param_1 + 0x5c)) + param_2);
-    iVar1 = fn_82FB3578(param_1 + 0x38,param_3,&uStack_30);
+    fn_82FA8588(stack_pair_30.second,
+                    ((ulonglong)stack_pair_30.first - (ulonglong)*(uint *)(param_1 + 0x5c)) + param_2);
+    iVar1 = fn_82FB3578(param_1 + 0x38,param_3,&stack_pair_30.first);
   }
   return;
 }

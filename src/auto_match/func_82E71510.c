@@ -34,7 +34,7 @@ void fn_82E71510(int *param_1,undefined8 param_2,ulonglong param_3,undefined4 *p
 {
   int iVar1;
   longlong lVar2;
-  undefined8 auStack_30 [6];
+  undefined8 auStack_30;
   
   if (*(ulonglong *)(param_1 + 0x10) - param_3 < 0x100000000) {
     lVar2 = (*(ulonglong *)(param_1 + 0x10) & 0xffffffff) - (param_3 & 0xffffffff);
@@ -42,9 +42,9 @@ void fn_82E71510(int *param_1,undefined8 param_2,ulonglong param_3,undefined4 *p
   else {
     lVar2 = -1;
   }
-  auStack_30[0] = 0;
-  iVar1 = (**(code **)(*param_1 + 0x24))(param_1,param_2,auStack_30,0);
-  if (((-1 < iVar1) && (iVar1 = fn_82E6FC00(param_1,auStack_30[0],lVar2), -1 < iVar1)) &&
+  auStack_30 = 0;
+  iVar1 = (**(code **)(*param_1 + 0x24))(param_1,param_2,&auStack_30,0);
+  if (((-1 < iVar1) && (iVar1 = fn_82E6FC00(param_1,auStack_30,lVar2), -1 < iVar1)) &&
      (param_4 != (undefined4 *)0x0)) {
     *param_4 = (int)lVar2;
   }

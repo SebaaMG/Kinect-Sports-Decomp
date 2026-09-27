@@ -31,7 +31,7 @@ extern int fn_82C4E470();
 extern int fn_82C4E5E8();
 extern int fn_82CA5860();
 extern int fn_82CA5C50();
-extern int fn_82F691F0();
+extern int memset();
 extern int fn_830C6850();
 extern int fn_830C6D68();
 extern int fn_830D9228();
@@ -146,7 +146,7 @@ undefined8 fn_830CBDA8(int param_1,int *param_2,int *param_3)
   *(undefined2 *)(param_3 + 4) = 0;
   iStack00000014 = param_1;
   piStack00000024 = param_3;
-  fn_82F691F0(iVar29,0,(longlong)(int)(uint)uVar21 * (longlong)(int)(uint)uVar22 * 0x10 &
+  memset(iVar29,0,(longlong)(int)(uint)uVar21 * (longlong)(int)(uint)uVar22 * 0x10 &
                         0xfffffff0);
   uVar46 = 0;
   uStack_e8 = 0;

@@ -32,7 +32,7 @@ undefined8 fn_82E3F410(int param_1,short param_2)
 
 {
   ulonglong uVar1;
-  short *apsStack_40 [16];
+  short *apsStack_40 [4];
   
   uVar1 = 0;
   if (*(int *)(param_1 + 0xb8) != 0) {

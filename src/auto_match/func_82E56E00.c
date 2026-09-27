@@ -36,7 +36,7 @@ ulonglong fn_82E56E00(int param_1,ulonglong param_2,ulonglong param_3)
 {
   longlong lVar1;
   ulonglong uVar2;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [1];
   
   fn_82E50CB8(param_1 + 8);
   if (*(uint *)(param_1 + 0xac) < 0x7f) {

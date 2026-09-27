@@ -38,14 +38,14 @@ undefined8 fn_8304E390(int param_1)
 {
   undefined8 uVar1;
   int iVar2;
-  undefined4 auStack_40 [4];
+  undefined4 auStack_40;
   undefined1 auStack_30 [4];
   undefined4 uStack_2c;
   undefined4 uStack_28;
   
-  uVar1 = fn_8304DD90(param_1,auStack_40);
+  uVar1 = fn_8304DD90(param_1,&auStack_40);
   if ((int)uVar1 == 1) {
-    iVar2 = fn_8304DE60(param_1,auStack_40[0]);
+    iVar2 = fn_8304DE60(param_1,auStack_40);
     if (iVar2 == 1) {
       (**(code **)(**(int **)(param_1 + 0x28) + 0xc))(*(int **)(param_1 + 0x28),auStack_30);
       if ((*(ushort *)(param_1 + 0x1c) == 0) || (1 < *(ushort *)(param_1 + 0x1c))) {

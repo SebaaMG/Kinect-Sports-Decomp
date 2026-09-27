@@ -28,7 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_30;
 extern unsigned int *auStack_40;
 extern int fn_82A1E0C0();
-extern int fn_82A2AA10();
+extern int RaiseException();
 
 
 bool fn_82D005F8(int *param_1,undefined8 param_2,undefined8 param_3,undefined8 param_4,
@@ -37,13 +37,13 @@ bool fn_82D005F8(int *param_1,undefined8 param_2,undefined8 param_3,undefined8 p
 {
   int iVar1;
   uint auStack_40 [4];
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
   
   iVar1 = fn_82A1E0C0(0,param_5,param_2,param_3,0,auStack_40);
   *param_1 = iVar1;
   if (iVar1 != 0) {
     *(ulonglong *)(param_1 + 2) = (ulonglong)auStack_40[0];
-    fn_82A2AA10(0x406d1388,0,4,auStack_30);
+    RaiseException(0x406d1388,0,4,auStack_30);
   }
   return iVar1 == 0;
 }

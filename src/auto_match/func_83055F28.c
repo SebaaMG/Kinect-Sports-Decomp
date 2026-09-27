@@ -44,22 +44,22 @@ undefined8 fn_83055F28(int *param_1)
   char cVar5;
   int iStack_40;
   int iStack_3c;
-  int iStack_38;
-  int iStack_34;
+  struct { int first; int second; } stack_pair_38;
+
   int iStack_30;
   
   iStack_40 = param_1[0xb];
-  iStack_34 = param_1[0xd];
+  stack_pair_38.second = param_1[0xd];
   bVar2 = true;
   iStack_30 = param_1[0xe];
   iStack_3c = param_1[0xc];
-  iStack_38 = iStack_40;
+  stack_pair_38.first = iStack_40;
   (**(code **)(*param_1 + 0xc))();
   do {
     iVar3 = fn_82A2A650(2,&iStack_40,0,0xffffffffffffffff,1);
     uVar4 = 0;
     if (iVar3 != 0) {
-      uVar4 = fn_82A2A650(3,&iStack_38,0,param_1[1],1);
+      uVar4 = fn_82A2A650(3,&stack_pair_38.first,0,param_1[1],1);
     }
     if (uVar4 < 0xc1) {
       if (uVar4 != 0xc0) {

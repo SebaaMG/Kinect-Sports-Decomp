@@ -37,7 +37,7 @@ longlong fn_82E9B140(int param_1,longlong param_2,longlong param_3,int param_4,u
   ulonglong uVar1;
   int iVar2;
   uint uStack_10;
-  uint auStack_c [3];
+  uint auStack_c;
   
   if ((((int)param_2 == 0) && ((int)param_3 == 0)) && (param_4 == 0)) {
     return param_2;
@@ -52,10 +52,10 @@ longlong fn_82E9B140(int param_1,longlong param_2,longlong param_3,int param_4,u
   }
   if ((int)param_2 <= iVar2) {
     if (((-iVar2 <= (int)param_2) && ((int)param_3 <= iVar2)) && (-iVar2 <= (int)param_3)) {
-      fn_82E9B0D0(param_2,auStack_c);
+      fn_82E9B0D0(param_2,&auStack_c);
       fn_82E9B0D0(param_3,&uStack_10);
       uVar1 = (((ulonglong)uStack_10 + ((ulonglong)uStack_10 & 0x7fffffff) * 2 & 0x7fffffff) * 2 +
-              (ulonglong)auStack_c[0]) - 1;
+              (ulonglong)auStack_c) - 1;
       goto LAB_82e9b1f4;
     }
   }

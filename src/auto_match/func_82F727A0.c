@@ -37,14 +37,14 @@ undefined8 fn_82F727A0(undefined8 param_1)
 {
   undefined4 uStack_20;
   uint uStack_1c;
-  undefined4 uStack_18;
-  uint uStack_14;
+  struct { undefined4 first; uint second; } stack_pair_18;
+
   
   uStack_1c = uStack_1c & 0xffff;
   uStack_20 = 0;
-  uStack_14 = uStack_14 & 0xffff;
-  uStack_18 = 0;
-  fn_82F775F0(param_1,&uStack_18,0xffffffff82196582,&uStack_20,1);
+  stack_pair_18.second = stack_pair_18.second & 0xffff;
+  stack_pair_18.first = 0;
+  fn_82F775F0(param_1,&stack_pair_18.first,0xffffffff82196582,&uStack_20,1);
   return param_1;
 }
 

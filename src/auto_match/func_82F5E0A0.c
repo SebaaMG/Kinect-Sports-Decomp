@@ -42,13 +42,13 @@ byte fn_82F5E0A0(undefined8 param_1,int *param_2)
   bool bVar5;
   byte bVar6;
   double dVar7;
-  int aiStack_30 [6];
+  int aiStack_30;
   
-  aiStack_30[0] = -1;
+  aiStack_30 = -1;
   bVar6 = 1;
-  fn_829C8658(0,0,aiStack_30);
-  if (*param_2 != aiStack_30[0]) {
-    if (aiStack_30[0] == 0) {
+  fn_829C8658(0,0,&aiStack_30);
+  if (*param_2 != aiStack_30) {
+    if (aiStack_30 == 0) {
       iVar1 = fn_829C9100((double)lbl_82015B38,0,0);
       dVar7 = (double)lbl_821AAD20;
       iVar2 = fn_829C9100(dVar7,0,6);
@@ -57,7 +57,7 @@ byte fn_82F5E0A0(undefined8 param_1,int *param_2)
       bVar5 = (iVar2 == 0 && iVar1 == 0) && iVar3 == 0;
     }
     else {
-      if (aiStack_30[0] != 1) {
+      if (aiStack_30 != 1) {
         return 1;
       }
       iVar1 = fn_829C90F0(0,2,0);

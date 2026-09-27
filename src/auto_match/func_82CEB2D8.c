@@ -38,13 +38,13 @@ undefined8 fn_82CEB2D8(undefined8 param_1,undefined8 param_2,int *param_3)
   undefined8 uVar2;
   undefined8 uVar3;
   undefined4 uStack_30;
-  undefined4 auStack_2c [11];
+  undefined4 auStack_2c;
   
-  uVar2 = fn_82CEB1F0(param_1,param_2,auStack_2c,&uStack_30);
+  uVar2 = fn_82CEB1F0(param_1,param_2,&auStack_2c,&uStack_30);
   if ((int)uVar2 == 0) {
     iVar1 = *param_3;
     uVar3 = fn_82CFD5F0(uStack_30);
-    (**(code **)(iVar1 + 0x10))(param_3,auStack_2c[0],uVar3);
+    (**(code **)(iVar1 + 0x10))(param_3,auStack_2c,uVar3);
   }
   return uVar2;
 }

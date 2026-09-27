@@ -37,14 +37,14 @@ ulonglong fn_82EEA850(int param_1,undefined4 *param_2)
 {
   int iVar1;
   ulonglong uVar2;
-  undefined4 uStack_30;
-  undefined4 uStack_2c;
+  struct { undefined4 first; undefined4 second; } stack_pair_30;
+
   
-  uStack_2c = *(undefined4 *)(param_1 + 0x40);
+  stack_pair_30.second = *(undefined4 *)(param_1 + 0x40);
   uVar2 = 0;
-  uStack_30 = *(undefined4 *)(param_1 + 0x70);
+  stack_pair_30.first = *(undefined4 *)(param_1 + 0x70);
   *param_2 = 0;
-  iVar1 = fn_82A2A700(2,&uStack_30,0,0xffffffffffffffff);
+  iVar1 = fn_82A2A700(2,&stack_pair_30.first,0,0xffffffffffffffff);
   if (iVar1 == 0) {
     RtlEnterCriticalSection(param_1 + 0x54);
     if (*(int *)(param_1 + 0x50) != 0) {

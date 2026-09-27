@@ -28,11 +28,10 @@ typedef struct { U64 lo, hi; } V16;
 extern int fn_82F07E00();
 
 
-void fn_82ED5FA8(int param_1,longlong param_2,undefined8 param_3,undefined8 param_4,
-                  longlong param_5,short *param_6,ulonglong param_7,ulonglong param_8)
+void fn_82ED5FA8(int param_1, longlong param_2, undefined8 param_3, undefined8 param_4, longlong param_5, short *param_6, ulonglong param_7, ulonglong param_8, undefined4 in_stack_00000054)
 
 {
-  undefined4 in_stack_00000054;
+
   
   if ((param_7 & 8) != 0) {
     fn_82F07E00(param_1,param_5,*param_6,param_4,*(undefined4 *)(param_1 + 0x203c),

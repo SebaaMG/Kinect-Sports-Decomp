@@ -37,14 +37,14 @@ longlong fn_82E7C9B8(undefined4 *param_1,int *param_2)
   int *apiStack_48 [2];
   longlong lStack_40;
   longlong lStack_38;
-  longlong alStack_30 [6];
+  longlong alStack_30;
   
   piStack_50 = (int *)0x0;
   piStack_4c = (int *)0x0;
   apiStack_48[0] = (int *)0x0;
   lStack_38 = 0;
   lStack_40 = 0;
-  alStack_30[0] = 0;
+  alStack_30 = 0;
   if (param_2 == (int *)0x0) {
     lVar2 = -0x7fffbffd;
   }
@@ -58,9 +58,9 @@ longlong fn_82E7C9B8(undefined4 *param_1,int *param_2)
         if (-1 < lVar2) {
           lVar2 = (**(code **)(*piStack_4c + 0x14))(piStack_4c,0,&lStack_38);
           if (-1 < lVar2) {
-            lVar2 = (**(code **)(*apiStack_48[0] + 0x14))(apiStack_48[0],&lStack_40,alStack_30);
+            lVar2 = (**(code **)(*apiStack_48[0] + 0x14))(apiStack_48[0],&lStack_40,&alStack_30);
             if (-1 < lVar2) {
-              lVar1 = alStack_30[0] - lStack_40;
+              lVar1 = alStack_30 - lStack_40;
               lVar2 = (**(code **)(*param_2 + 0x58))
                                 (param_2,0xffffffff8214c1b0,lStack_40 + lStack_38);
               if (-1 < lVar2) {

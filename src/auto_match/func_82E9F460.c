@@ -33,8 +33,7 @@ extern unsigned int uStack_ac;
 extern unsigned int *uStack_b0;
 
 
-void fn_82E9F460(int param_1,undefined8 param_2,ulonglong param_3,undefined8 param_4,
-                  undefined8 param_5,int param_6,longlong param_7,longlong param_8)
+void fn_82E9F460(int param_1, undefined8 param_2, ulonglong param_3, undefined8 param_4, undefined8 param_5, int param_6, longlong param_7, longlong param_8, int in_stack_00000054, int in_stack_0000005c, undefined8 unused_arg_11, undefined4 in_stack_0000006c, undefined8 unused_arg_13, undefined8 unused_arg_14, int in_stack_00000084, uint in_stack_0000008c, uint in_stack_00000094, undefined8 unused_arg_18, undefined8 unused_arg_19, int in_stack_000000ac, int in_stack_000000b4)
 
 {
   uint uVar1;
@@ -53,14 +52,14 @@ void fn_82E9F460(int param_1,undefined8 param_2,ulonglong param_3,undefined8 par
   ulonglong uVar14;
   int iVar15;
   uint uStack00000024;
-  int in_stack_00000054;
-  int in_stack_0000005c;
-  undefined4 in_stack_0000006c;
-  int in_stack_00000084;
-  uint in_stack_0000008c;
-  uint in_stack_00000094;
-  int in_stack_000000ac;
-  int in_stack_000000b4;
+
+
+
+
+
+
+
+
   undefined4 *in_stack_000000bc;
   undefined4 *in_stack_000000c4;
   int *in_stack_000000cc;

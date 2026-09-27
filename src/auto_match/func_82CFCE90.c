@@ -47,7 +47,7 @@ undefined1 * fn_82CFCE90(undefined1 *param_1,int *param_2,undefined4 *param_3,in
   undefined1 *puStack_80;
   int iStack_7c;
   uint uStack_78;
-  undefined1 auStack_74 [116];
+  undefined1 auStack_74 [52];
   
   puStack_80 = auStack_74;
   uStack_78 = 0x8000000c;

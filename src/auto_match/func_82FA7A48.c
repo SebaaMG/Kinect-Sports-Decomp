@@ -42,16 +42,16 @@ void fn_82FA7A48(undefined8 param_1,undefined8 param_2)
   int iVar2;
   int iStack_30;
   undefined4 uStack_2c;
-  undefined4 auStack_28 [2];
+  undefined4 auStack_28;
   int aiStack_20 [2];
   
   fn_82FA7468(param_2,aiStack_20);
   if ((*(uint *)(aiStack_20[0] + 0xc) & 0x80000000) == 0) {
     uVar1 = *(undefined4 *)(aiStack_20[0] + 4);
     iStack_30 = 0;
-    iVar2 = fn_82FA73C8(uVar1,&iStack_30,&uStack_2c,auStack_28);
+    iVar2 = fn_82FA73C8(uVar1,&iStack_30,&uStack_2c,&auStack_28);
     if ((iVar2 < 1) ||
-       (iVar2 = fn_82FAABA8(*(undefined4 *)(iStack_30 + 0x38),param_2,auStack_28[0],uStack_2c),
+       (iVar2 = fn_82FAABA8(*(undefined4 *)(iStack_30 + 0x38),param_2,auStack_28,uStack_2c),
        iVar2 != 1)) {
       fn_82FA78F8(uVar1,aiStack_20);
     }

@@ -37,7 +37,7 @@ void fn_82DFFE10(int *param_1,undefined8 param_2,int param_3,longlong param_4)
   longlong lVar3;
   ulonglong uVar4;
   undefined1 auStack_80 [16];
-  undefined1 auStack_70 [112];
+  undefined1 auStack_70 [48];
   
   uVar4 = 0;
   uVar2 = (ulonglong)*(byte *)(*(int *)(param_3 + 0x1c) + 0x20);

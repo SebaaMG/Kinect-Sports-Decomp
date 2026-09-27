@@ -42,7 +42,7 @@ extern int fn_82F04E20();
 extern int fn_82F0D688();
 extern int fn_82F0F900();
 extern int fn_82F0F9A0();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 void fn_82E8EF60(int param_1,longlong param_2)
@@ -113,11 +113,11 @@ void fn_82E8EF60(int param_1,longlong param_2)
       iVar4 = *(int *)(param_1 + 0x304);
       uVar1 = *(undefined4 *)(iVar4 + 0x58);
       uVar2 = *(undefined4 *)(iVar4 + 0x70);
-      fn_82F68CC0(*(undefined4 *)(iVar4 + 0x40),*(undefined4 *)(param_1 + 0x14),
+      memcpy(*(undefined4 *)(iVar4 + 0x40),*(undefined4 *)(param_1 + 0x14),
                    (longlong)*(int *)(param_1 + 0x56c) * (longlong)*(int *)(param_1 + 0x564));
-      fn_82F68CC0(uVar1,*(undefined4 *)(param_1 + 0x18),
+      memcpy(uVar1,*(undefined4 *)(param_1 + 0x18),
                    (longlong)*(int *)(param_1 + 0x570) * (longlong)*(int *)(param_1 + 0x568));
-      fn_82F68CC0(uVar2,*(undefined4 *)(param_1 + 0x1c),
+      memcpy(uVar2,*(undefined4 *)(param_1 + 0x1c),
                    (longlong)*(int *)(param_1 + 0x570) * (longlong)*(int *)(param_1 + 0x568));
       if ((*(int *)(param_1 + 0x84c) != 0) && (0 < *(int *)(param_1 + 0x2d4))) {
         puVar8 = (undefined4 *)(*(int *)(param_1 + 0x1e6c) + -0x2c);

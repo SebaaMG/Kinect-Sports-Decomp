@@ -51,7 +51,7 @@ undefined8 fn_82C0CC48(double param_1,int *param_2)
   undefined4 uStack_40;
   int *piStack_3c;
   int *piStack_38;
-  undefined4 auStack_34 [13];
+  undefined4 auStack_34;
   
   piStack_3c = (int *)0x0;
   piStack_38 = (int *)0x0;
@@ -106,7 +106,7 @@ undefined8 fn_82C0CC48(double param_1,int *param_2)
   dVar7 = (double)lbl_82002AE0;
   param_2[0x41] = (uint)(param_1 != dVar7);
   if (param_1 != dVar7) goto LAB_82c0cf44;
-  auStack_34[0] = 0;
+  auStack_34 = 0;
   uStack_40 = 0;
   if (dVar8 <= (double)fVar1) {
     uVar2 = (**(code **)(*piStack_50 + 0x7c))
@@ -118,9 +118,9 @@ LAB_82c0cef4:
   }
   else {
     uVar2 = (**(code **)(*piStack_4c + 0x7c))
-                      (piStack_4c,*(ulonglong *)(param_2 + 0x48) & 0xffffffff,auStack_34);
+                      (piStack_4c,*(ulonglong *)(param_2 + 0x48) & 0xffffffff,&auStack_34);
     if ((-1 < (int)uVar2) &&
-       (uVar2 = (**(code **)(*piStack_50 + 0x7c))(piStack_50,auStack_34[0],&uStack_40),
+       (uVar2 = (**(code **)(*piStack_50 + 0x7c))(piStack_50,auStack_34,&uStack_40),
        -1 < (int)uVar2)) {
       uVar2 = (**(code **)(*piStack_48 + 0x54))(piStack_48,4);
       fn_82C0BF10(piStack_38);

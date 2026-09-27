@@ -42,7 +42,7 @@ undefined8 fn_83066D20(longlong param_1,undefined8 param_2,undefined8 param_3,in
   undefined8 uVar1;
   double dVar2;
   double dVar3;
-  undefined1 auStack_50 [16];
+  undefined1 auStack_50 [1];
   undefined1 auStack_40 [64];
   
   dVar2 = (double)fn_82810280(param_3,param_1);

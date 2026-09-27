@@ -30,7 +30,7 @@ extern unsigned int *auStack_40;
 extern unsigned int *auStack_50;
 extern unsigned int *auStack_60;
 extern unsigned int fStack0000001c;
-extern int fn_82F68CC0();
+extern int memcpy();
 extern int fn_8300F160();
 extern int fn_8300F208();
 extern unsigned int lbl_832642E4;
@@ -53,7 +53,7 @@ void fn_82FE8F28(double param_1,undefined4 param_2)
   undefined1 auStack_40 [2];
   undefined2 uStack_3e;
   undefined4 uStack_3c;
-  undefined1 auStack_38 [56];
+  undefined1 auStack_38 [8];
   
   fStack0000001c = (float)param_1;
   altv300_21(in_vs32,in_vs43);
@@ -69,7 +69,7 @@ void fn_82FE8F28(double param_1,undefined4 param_2)
   puVar1[3] = in_register_000103f0;
   uStack_3e = 0xf;
   uStack_3c = param_2;
-  fn_82F68CC0(auStack_38,auStack_60,0x18);
+  memcpy(auStack_38,auStack_60,0x18);
   uVar2 = fn_8300F160();
   fn_8300F208(lbl_832642E4,auStack_40,uVar2);
   return;

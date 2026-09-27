@@ -44,10 +44,10 @@ undefined8 fn_82FA7610(ulonglong param_1,undefined4 param_2)
   undefined8 uVar2;
   int iStack_40;
   undefined4 uStack_3c;
-  undefined4 auStack_38 [14];
+  undefined4 auStack_38;
   
   iStack_40 = 0;
-  iVar3 = fn_82FA73C8(param_1,&iStack_40,&uStack_3c,auStack_38);
+  iVar3 = fn_82FA73C8(param_1,&iStack_40,&uStack_3c,&auStack_38);
   if (0 < iVar3) {
     puVar4 = (undefined4 *)fn_82FA7C48(0xffffffff831bc680);
     if (puVar4 == (undefined4 *)0x0) {
@@ -63,7 +63,7 @@ undefined8 fn_82FA7610(ulonglong param_1,undefined4 param_2)
       }
     }
     else {
-      uVar2 = fn_82FAABA8(*(undefined4 *)(iStack_40 + 0x38),puVar4,auStack_38[0],uStack_3c);
+      uVar2 = fn_82FAABA8(*(undefined4 *)(iStack_40 + 0x38),puVar4,auStack_38,uStack_3c);
       if ((int)uVar2 == 1) {
         *puVar4 = (int)param_1;
         puVar4[1] = param_2;

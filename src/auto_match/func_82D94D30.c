@@ -72,8 +72,8 @@ int fn_82D94D30(int param_1)
   int iStack_98;
   uint uStack_94;
   uint uStack_90;
-  int iStack_88;
-  uint uStack_84;
+  struct { int first; uint second; } stack_pair_88;
+
   uint uStack_80;
   int iStack_78;
   uint uStack_74;
@@ -239,15 +239,15 @@ LAB_82d95110:
             uVar16 = uVar16 - 1;
           } while (uVar16 != 0);
         }
-        iStack_88 = 0;
-        uStack_84 = 0;
+        stack_pair_88.first = 0;
+        stack_pair_88.second = 0;
         uStack_80 = 0x80000000;
-        (**(code **)(*piVar9 + 0x14))(piVar9,&iStack_88);
-        uVar1 = uStack_84;
+        (**(code **)(*piVar9 + 0x14))(piVar9,&stack_pair_88.first);
+        uVar1 = stack_pair_88.second;
         iStack_a8 = 0;
         uStack_a4 = 0;
         uStack_a0 = 0x80000000;
-        uVar16 = (ulonglong)uStack_84;
+        uVar16 = (ulonglong)stack_pair_88.second;
         iVar7 = fn_82CE5410();
         if ((int)(uStack_a0 & 0x3fffffff) < (int)uVar1) {
           uVar11 = ((ulonglong)uStack_a0 & 0x3fffffff) << 1;
@@ -264,7 +264,7 @@ LAB_82d95110:
             if (0 < *(int *)(param_1 + 0x30)) {
               piVar10 = *(int **)(param_1 + 0x2c);
               do {
-                if (*piVar10 == *(int *)(iVar7 + iStack_88)) goto LAB_82d951ec;
+                if (*piVar10 == *(int *)(iVar7 + stack_pair_88.first)) goto LAB_82d951ec;
                 iVar12 = iVar12 + 1;
                 piVar10 = piVar10 + 1;
               } while (iVar12 < *(int *)(param_1 + 0x30));
@@ -288,12 +288,12 @@ LAB_82d951ec:
         iStack_a8 = 0;
         uStack_a0 = 0x80000000;
         iVar7 = fn_82CE5410();
-        uStack_84 = 0;
+        stack_pair_88.second = 0;
         if ((uStack_80 & 0x80000000) == 0) {
           (**(code **)(**(int **)(iVar7 + 0x10) + 0x10))
-                    (*(int **)(iVar7 + 0x10),iStack_88,uStack_80 & 0x3fffffff,4);
+                    (*(int **)(iVar7 + 0x10),stack_pair_88.first,uStack_80 & 0x3fffffff,4);
         }
-        iStack_88 = 0;
+        stack_pair_88.first = 0;
         uStack_80 = 0x80000000;
         iVar7 = fn_82CE5410();
         uStack_94 = 0;

@@ -41,7 +41,7 @@ int fn_82D8D760(int param_1)
   ulonglong uVar5;
   undefined4 *puVar6;
   int *piVar7;
-  undefined4 auStack_40 [16];
+  undefined4 auStack_40 [8];
   
   iVar3 = fn_82CE5410();
   iVar3 = (**(code **)(**(int **)(iVar3 + 0x10) + 4))(*(int **)(iVar3 + 0x10),0xe0);

@@ -51,8 +51,7 @@ extern unsigned int uStack_37c;
 extern unsigned int uStack_380;
 
 
-void fn_82EC96A8(int param_1,undefined4 param_2,undefined4 param_3,undefined4 param_4,uint param_5
-                  ,undefined4 param_6,undefined4 param_7)
+void fn_82EC96A8(int param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4, uint param_5, undefined4 param_6, undefined4 param_7, undefined8 unused_arg_8, undefined8 unused_arg_9, int in_stack_0000005c, undefined4 in_stack_00000064, undefined4 in_stack_0000006c, int in_stack_00000074, int in_stack_0000007c, undefined8 unused_arg_15, undefined8 unused_arg_16, undefined8 unused_arg_17, int in_stack_0000009c, int in_stack_000000a4)
 
 {
   int iVar1;
@@ -81,19 +80,19 @@ void fn_82EC96A8(int param_1,undefined4 param_2,undefined4 param_3,undefined4 pa
   undefined4 uStack0000003c;
   undefined4 uStack00000044;
   int *in_stack_00000054;
-  int in_stack_0000005c;
-  undefined4 in_stack_00000064;
-  undefined4 in_stack_0000006c;
-  int in_stack_00000074;
-  int in_stack_0000007c;
-  int in_stack_0000009c;
-  int in_stack_000000a4;
+
+
+
+
+
+
+
   uint *in_stack_000000c4;
   uint *in_stack_000000cc;
   int *in_stack_000000d4;
   uint uStack_380;
-  uint uStack_37c;
-  int iStack_378;
+  struct { uint first; int second; } stack_pair_37c;
+
   uint uStack_374;
   int iStack_370;
   uint uStack_36c;
@@ -113,17 +112,17 @@ void fn_82EC96A8(int param_1,undefined4 param_2,undefined4 param_3,undefined4 pa
     fn_82EB71E8();
   }
   else {
-    iStack_378 = in_stack_0000007c;
+    stack_pair_37c.second = in_stack_0000007c;
     iStack_370 = in_stack_00000074;
     fn_82EBF358();
   }
-  uVar8 = uStack_37c;
+  uVar8 = stack_pair_37c.first;
   uVar7 = uStack_380;
-  uVar14 = (ulonglong)uStack_37c;
+  uVar14 = (ulonglong)stack_pair_37c.first;
   uVar13 = (ulonglong)uStack_380;
   if ((*(int *)(param_1 + 0x6d74) != 0) && (*(int *)(param_1 + 0x6d84) == 0)) {
     uStack_36c = uStack_380;
-    uStack_374 = uStack_37c;
+    uStack_374 = stack_pair_37c.first;
     fn_82F261D8(param_1,&uStack_36c,&uStack_374,in_stack_00000064,in_stack_0000006c);
     lVar11 = (longlong)((int)uStack_374 >> 2) * (longlong)*(int *)(param_1 + 0x564);
     if (in_stack_000000a4 == 1) {
@@ -138,19 +137,19 @@ void fn_82EC96A8(int param_1,undefined4 param_2,undefined4 param_3,undefined4 pa
     fn_82E9AC18(param_1,uStack0000001c,0x10,auStack_340,0x10,0x10,0x10,in_stack_0000005c);
     auStack_350[0] = uStack_36c;
     auStack_360[0] = uStack_374;
-    fn_82EAA320(param_1,auStack_350,auStack_360,&uStack_380,&uStack_37c,1);
-    uVar3 = uStack_37c;
+    fn_82EAA320(param_1,auStack_350,auStack_360,&uStack_380,&stack_pair_37c.first,1);
+    uVar3 = stack_pair_37c.first;
     uVar2 = uStack_380;
     iVar15 = iStack_370;
     uVar6 = uStack_364;
-    iVar17 = iStack_378;
+    iVar17 = stack_pair_37c.second;
     if ((*(uint *)(param_1 + 0x6dc4) & 1) != 0) {
       fn_82F26F98(param_1,uStack0000003c,*(undefined4 *)(param_1 + 0x568),auStack_340,8,
-                        uStack_380,uStack_37c,0);
+                        uStack_380,stack_pair_37c.first,0);
       fn_82E9AC18(param_1,uStack00000024,8,auStack_340,8,8,8,in_stack_0000005c);
       iVar15 = uStack_380 + iStack_370;
-      uVar6 = uStack_37c | uStack_364;
-      iVar17 = iStack_368 + iStack_378;
+      uVar6 = stack_pair_37c.first | uStack_364;
+      iVar17 = iStack_368 + stack_pair_37c.second;
     }
     if ((*(uint *)(param_1 + 0x6dc4) & 2) != 0) {
       fn_82F26F98(param_1,uStack00000044,*(undefined4 *)(param_1 + 0x568),auStack_340,8,uVar2,
@@ -158,7 +157,7 @@ void fn_82EC96A8(int param_1,undefined4 param_2,undefined4 param_3,undefined4 pa
       fn_82E9AC18(param_1,uStack0000002c,8,auStack_340,8,8,8,in_stack_0000005c);
       iVar17 = iStack_368 + iVar17;
       iVar15 = uStack_380 + iVar15;
-      uVar6 = uStack_37c | uVar6;
+      uVar6 = stack_pair_37c.first | uVar6;
     }
     iVar1 = *in_stack_00000054;
     uVar19 = (ulonglong)(uint)in_stack_00000054[3];
@@ -189,11 +188,11 @@ void fn_82EC96A8(int param_1,undefined4 param_2,undefined4 param_3,undefined4 pa
     if (iVar1 != 0) {
       iVar9 = iVar9 + 1;
     }
-    iStack_378 = *(int *)(in_stack_0000005c + 0x6c) * iVar9 + iVar15;
+    stack_pair_37c.second = *(int *)(in_stack_0000005c + 0x6c) * iVar9 + iVar15;
   }
   *in_stack_000000c4 = uVar7;
   *in_stack_000000cc = uVar8;
-  *in_stack_000000d4 = iStack_378;
+  *in_stack_000000d4 = stack_pair_37c.second;
   return;
 }
 

@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_8265C940();
 extern int fn_8265C990();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int lbl_8216079C;
 extern unsigned int lbl_82160864;
 extern unsigned int lbl_82160928;
@@ -101,9 +101,9 @@ void fn_82F01850(int param_1,int param_2,int param_3,int param_4)
   iVar6 = fn_8265C940(uVar22,0x248c8000);
   if (iVar6 != 0) {
     iVar26 = param_3 * 3;
-    fn_82F68CC0(iVar6,param_2,iVar26);
+    memcpy(iVar6,param_2,iVar26);
     param_4 = param_4 + -3;
-    fn_82F68CC0(param_4 * param_3 + iVar6,param_4 * param_3 + param_2,iVar26);
+    memcpy(param_4 * param_3 + iVar6,param_4 * param_3 + param_2,iVar26);
     piVar7 = (int *)fn_8265C940(0xc4,0x248c8000);
     if (piVar7 != (int *)0x0) {
       piVar8 = (int *)fn_8265C940(0x80,0x248c8000);
@@ -221,7 +221,7 @@ void fn_82F01850(int param_1,int param_2,int param_3,int param_4)
         } while (iVar25 < param_4);
         uVar22 = uVar22 & 0xffffffff;
       }
-      fn_82F68CC0(param_2,iVar6,uVar22);
+      memcpy(param_2,iVar6,uVar22);
       fn_8265C990(piVar7,0x248c8000);
       fn_8265C990(piVar8,0x248c8000);
     }

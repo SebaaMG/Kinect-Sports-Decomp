@@ -45,7 +45,7 @@ void fn_82DBBF60(int param_1,int *param_2,short *param_3)
   ushort *puVar4;
   byte bVar5;
   ushort *puVar6;
-  byte abStack_60 [16];
+  byte abStack_60;
   undefined4 uStack_50;
   undefined4 uStack_4c;
   undefined4 uStack_48;
@@ -102,13 +102,13 @@ void fn_82DBBF60(int param_1,int *param_2,short *param_3)
     uStack_4c = 0;
     uStack_48 = 0;
     uStack_44 = 0;
-    abStack_60[0] = 0;
-    bVar5 = fn_82DA0180(param_3,&uStack_50,abStack_60);
+    abStack_60 = 0;
+    bVar5 = fn_82DA0180(param_3,&uStack_50,&abStack_60);
     fn_82D92F30(param_2,param_1,&uStack_50);
     uVar1 = *(ushort *)
              (&lbl_82142544 +
              (((*(byte *)(*(int *)(param_1 + 0x18) + 0xd2) |
-               *(byte *)(*(int *)(param_1 + 0x14) + 0xd2)) & abStack_60[0]) & 7) * 2);
+               *(byte *)(*(int *)(param_1 + 0x14) + 0xd2)) & abStack_60) & 7) * 2);
     param_2[3] = param_2[3] - (uint)uVar1;
     *(ushort *)(*(int *)(param_1 + 0x30) + 0x14) =
          *(short *)(*(int *)(param_1 + 0x30) + 0x14) - uVar1;

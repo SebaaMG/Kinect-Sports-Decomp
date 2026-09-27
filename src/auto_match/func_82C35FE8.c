@@ -38,7 +38,7 @@ undefined8 fn_82C35FE8(int param_1,int param_2,int param_3)
   uint uVar4;
   undefined8 uVar5;
   short sVar6;
-  uint auStack_40 [16];
+  uint auStack_40;
   
   iVar3 = *(int *)(param_3 + 0x38);
   uVar5 = 0;
@@ -55,16 +55,16 @@ undefined8 fn_82C35FE8(int param_1,int param_2,int param_3)
       do {
         uVar5 = fn_82C30370(param_2 + 0xe0,
                               (ulonglong)*(ushort *)(param_1 + 0x6e) -
-                              (longlong)*(char *)(param_1 + 200),auStack_40);
+                              (longlong)*(char *)(param_1 + 200),&auStack_40);
         if ((int)uVar5 < 0) {
           return uVar5;
         }
         uVar4 = 1 << (((uint)*(ushort *)(param_1 + 0x6e) - (int)*(char *)(param_1 + 200)) - 1 & 0x3f
                      );
-        if ((uVar4 & auStack_40[0]) != 0) {
-          auStack_40[0] = auStack_40[0] | ~(uVar4 - 1);
+        if ((uVar4 & auStack_40) != 0) {
+          auStack_40 = auStack_40 | ~(uVar4 - 1);
         }
-        *(uint *)(*(short *)(param_1 + 0xca) * 4 + sVar1 * 4 + iVar3) = auStack_40[0];
+        *(uint *)(*(short *)(param_1 + 0xca) * 4 + sVar1 * 4 + iVar3) = auStack_40;
         sVar6 = *(short *)(param_1 + 0xca) + 1;
         *(short *)(param_1 + 0xca) = sVar6;
       } while (sVar6 < sVar2);

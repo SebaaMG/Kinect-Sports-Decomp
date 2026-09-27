@@ -40,7 +40,7 @@ void fn_82E05640(int *param_1,uint param_2,undefined8 param_3)
   int *piVar5;
   longlong lVar6;
   int *piVar7;
-  int aiStack_60 [24];
+  int aiStack_60 [4];
   
   for (lVar6 = (longlong)((int)param_2 >> 1) + (ulonglong)((int)param_2 < 0 && (param_2 & 1) != 0);
       0 < lVar6; lVar6 = lVar6 + -1) {

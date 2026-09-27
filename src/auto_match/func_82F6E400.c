@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 
 
-void fn_82F6E400(char *param_1,int param_2,int param_3)
+void strncat(char *param_1,int param_2,int param_3)
 
 {
   char cVar1;

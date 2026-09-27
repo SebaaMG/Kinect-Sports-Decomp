@@ -63,8 +63,8 @@ undefined8 fn_830245B0(int param_1,undefined8 param_2)
   int *piVar12;
   undefined8 uVar13;
   int *piVar14;
-  undefined4 uStack_b0;
-  uint uStack_ac;
+  struct { undefined4 first; uint second; } stack_pair_b0;
+
   undefined1 auStack_a8 [5];
   char cStack_a3;
   int iStack_a0;
@@ -128,8 +128,8 @@ undefined8 fn_830245B0(int param_1,undefined8 param_2)
             for (uVar9 = *(uint *)(param_1 + 0x84); uVar9 != 0; uVar9 = uVar9 - 1 & uVar9) {
               uVar8 = uVar8 + 1;
             }
-            uStack_b0 = 48000;
-            uStack_ac = (uVar8 & 7) << 5 | *(uint *)(param_1 + 0x84) << 0xe | 0x2003;
+            stack_pair_b0.first = 48000;
+            stack_pair_b0.second = (uVar8 & 7) << 5 | *(uint *)(param_1 + 0x84) << 0xe | 0x2003;
             *piVar14 = iStack_a0;
             uVar5 = fn_82FA5060(lbl_831BC770,0x10);
             if ((uVar5 & 0xffffffff) == 0) {
@@ -152,7 +152,7 @@ undefined8 fn_830245B0(int param_1,undefined8 param_2)
                   }
                   uVar13 = (**(code **)(*(int *)*piVar12 + 0x14))
                                      ((int *)*piVar12,0xffffffff831bc7fc,lVar7,piVar12[-1],
-                                      &uStack_b0);
+                                      &stack_pair_b0.first);
                   if (((int)uVar13 == 1) &&
                      (uVar13 = (**(code **)(*(int *)*piVar12 + 8))(), (int)uVar13 == 1))
                   goto LAB_83024930;

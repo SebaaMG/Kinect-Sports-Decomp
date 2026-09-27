@@ -29,7 +29,7 @@ extern unsigned int *auStack_30;
 extern int fn_82230110();
 extern int fn_82235D10();
 extern int fn_8265CA20();
-extern int fn_82F63EC8();
+extern int atexit();
 extern unsigned int uStack_1c;
 extern unsigned int uStack_20;
 
@@ -37,19 +37,19 @@ extern unsigned int uStack_20;
 void fn_831094C8(void)
 
 {
-  uint auStack_30 [4];
+  uint auStack_30;
   undefined4 uStack_20;
   uint uStack_1c;
   
-  fn_82230110(auStack_30,0xffffffff821967e8);
-  fn_82235D10(0xffffffff83283298,auStack_30,5);
+  fn_82230110(&auStack_30,0xffffffff821967e8);
+  fn_82235D10(0xffffffff83283298,&auStack_30,5);
   if (0xf < uStack_1c) {
-    fn_8265CA20(auStack_30[0]);
+    fn_8265CA20(auStack_30);
   }
   uStack_20 = 0;
   uStack_1c = 0xf;
-  auStack_30[0] = auStack_30[0] & 0xffffff;
-  fn_82F63EC8(0xffffffff8313acc8);
+  auStack_30 = auStack_30 & 0xffffff;
+  atexit(0xffffffff8313acc8);
   return;
 }
 

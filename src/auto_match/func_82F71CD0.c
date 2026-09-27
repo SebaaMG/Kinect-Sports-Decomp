@@ -25,18 +25,18 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F6CE08();
+extern int _amsg_exit();
 extern int fn_82F71B90();
 extern unsigned int lbl_831BB940;
 
 
-void fn_82F71CD0(int param_1)
+void _lock(int param_1)
 
 {
   int iVar1;
   
   if (((&lbl_831BB940)[param_1 * 2] == 0) && (iVar1 = fn_82F71B90(), iVar1 == 0)) {
-    fn_82F6CE08(0x11);
+    _amsg_exit(0x11);
   }
   RtlEnterCriticalSection((&lbl_831BB940)[param_1 * 2]);
   return;

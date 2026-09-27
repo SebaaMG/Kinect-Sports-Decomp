@@ -25,7 +25,7 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int lbl_8329F068;
 extern unsigned int lbl_8329F070;
 extern unsigned int lbl_8329F078;
@@ -502,15 +502,15 @@ void fn_82F2C030(void)
   uStack_101 = 0xff;
   uRam8329f600 = 0x8325f910;
   uRam8329f07c = 0x8325f920;
-  fn_82F68CC0(0x8325f8a0,&uStack_d0,0x10);
-  fn_82F68CC0(uRam8329f074,&uStack_140,0x10);
-  fn_82F68CC0(*(undefined4 *)(pcStack_a4 + -0xf6c),&uStack_130,0x10);
-  fn_82F68CC0(*(undefined4 *)(pcStack_b0 + -0xf80),&uStack_f0,0x10);
-  fn_82F68CC0(*(undefined4 *)(pcStack_ac + -0xf98),&uStack_120,0x10);
-  fn_82F68CC0(*(undefined4 *)(pcStack_a0 + -0xf88),&uStack_100,0x10);
-  fn_82F68CC0(*(undefined4 *)(pcStack_a8 + -0xf94),&uStack_e0,0x10);
-  fn_82F68CC0(uRam8329f600,&uStack_c0,0x10);
-  fn_82F68CC0(uRam8329f07c,&uStack_110,0x10);
+  memcpy(0x8325f8a0,&uStack_d0,0x10);
+  memcpy(uRam8329f074,&uStack_140,0x10);
+  memcpy(*(undefined4 *)(pcStack_a4 + -0xf6c),&uStack_130,0x10);
+  memcpy(*(undefined4 *)(pcStack_b0 + -0xf80),&uStack_f0,0x10);
+  memcpy(*(undefined4 *)(pcStack_ac + -0xf98),&uStack_120,0x10);
+  memcpy(*(undefined4 *)(pcStack_a0 + -0xf88),&uStack_100,0x10);
+  memcpy(*(undefined4 *)(pcStack_a8 + -0xf94),&uStack_e0,0x10);
+  memcpy(uRam8329f600,&uStack_c0,0x10);
+  memcpy(uRam8329f07c,&uStack_110,0x10);
   return;
 }
 

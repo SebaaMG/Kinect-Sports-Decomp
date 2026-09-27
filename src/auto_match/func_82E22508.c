@@ -36,7 +36,7 @@ extern int fn_82E220D0();
 void fn_82E22508(int param_1,undefined8 param_2)
 
 {
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [32];
   
   RtlEnterCriticalSection(param_1 + 0x6c);
   fn_82230110(auStack_40,param_2);

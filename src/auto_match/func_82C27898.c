@@ -35,17 +35,17 @@ undefined8 fn_82C27898(int param_1,int param_2)
   int iVar2;
   undefined8 uVar3;
   longlong lVar4;
-  int aiStack_10 [4];
+  int aiStack_10;
   
   iVar1 = *(int *)(param_1 + 0x2c);
   if (*(int *)(iVar1 + 4) != 0) {
-    for (aiStack_10[0] = *(int *)(iVar1 + 8); aiStack_10[0] != 0;
-        aiStack_10[0] = *(int *)(aiStack_10[0] + 0x28)) {
-      if (aiStack_10[0] == param_2) {
-        if (aiStack_10[0] == *(int *)(iVar1 + 8)) {
-          *(undefined4 *)(iVar1 + 8) = *(undefined4 *)(aiStack_10[0] + 0x28);
+    for (aiStack_10 = *(int *)(iVar1 + 8); aiStack_10 != 0;
+        aiStack_10 = *(int *)(aiStack_10 + 0x28)) {
+      if (aiStack_10 == param_2) {
+        if (aiStack_10 == *(int *)(iVar1 + 8)) {
+          *(undefined4 *)(iVar1 + 8) = *(undefined4 *)(aiStack_10 + 0x28);
         }
-        if (aiStack_10[0] == *(int *)(iVar1 + 4)) {
+        if (aiStack_10 == *(int *)(iVar1 + 4)) {
           iVar2 = *(int *)(*(int *)(iVar1 + 4) + 0x24);
           *(int *)(iVar1 + 4) = iVar2;
           if (iVar2 != 0) {
@@ -53,13 +53,13 @@ undefined8 fn_82C27898(int param_1,int param_2)
           }
         }
         else {
-          if (*(int *)(aiStack_10[0] + 0x28) != 0) {
-            *(undefined4 *)(*(int *)(aiStack_10[0] + 0x28) + 0x24) =
-                 *(undefined4 *)(aiStack_10[0] + 0x24);
+          if (*(int *)(aiStack_10 + 0x28) != 0) {
+            *(undefined4 *)(*(int *)(aiStack_10 + 0x28) + 0x24) =
+                 *(undefined4 *)(aiStack_10 + 0x24);
           }
-          if (*(int *)(aiStack_10[0] + 0x24) != 0) {
-            *(undefined4 *)(*(int *)(aiStack_10[0] + 0x24) + 0x28) =
-                 *(undefined4 *)(aiStack_10[0] + 0x28);
+          if (*(int *)(aiStack_10 + 0x24) != 0) {
+            *(undefined4 *)(*(int *)(aiStack_10 + 0x24) + 0x28) =
+                 *(undefined4 *)(aiStack_10 + 0x28);
           }
         }
         lVar4 = (ulonglong)*(uint *)(iVar1 + 0xc) - 1;
@@ -68,7 +68,7 @@ undefined8 fn_82C27898(int param_1,int param_2)
           *(undefined4 *)(iVar1 + 4) = 0;
           *(undefined4 *)(iVar1 + 8) = 0;
         }
-        uVar3 = fn_82C10B28(*(undefined4 *)(iVar1 + 0x48),0x1d,aiStack_10);
+        uVar3 = fn_82C10B28(*(undefined4 *)(iVar1 + 0x48),0x1d,&aiStack_10);
         return uVar3;
       }
     }

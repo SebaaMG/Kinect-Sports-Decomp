@@ -45,7 +45,7 @@ longlong fn_82E63E98(int param_1,int *param_2)
   undefined1 auStack_60 [8];
   undefined8 uStack_58;
   undefined1 auStack_50 [16];
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [16];
   
   fn_82E50CB8(param_1 + 8);
   if (param_2 == (int *)0x0) {

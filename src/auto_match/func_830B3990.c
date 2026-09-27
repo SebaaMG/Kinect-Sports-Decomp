@@ -45,8 +45,8 @@ fn_830B3990(undefined8 param_1,undefined4 *param_2,undefined8 param_3,ulonglong 
   uint uVar3;
   undefined4 uStack_240;
   undefined4 uStack_23c;
-  undefined4 uStack_130;
-  undefined4 uStack_12c;
+  struct { undefined4 first; undefined4 second; } stack_pair_130;
+
   
   if ((param_4 & 0xffffffff) == 0) {
 LAB_830b39b4:
@@ -56,9 +56,9 @@ LAB_830b39b4:
   else {
     uStack_23c = *param_2;
     uStack_240 = 1;
-    uStack_130 = 1;
-    uStack_12c = uStack_23c;
-    iVar2 = fn_82CE09D0(0,&uStack_240,0,&uStack_130,0);
+    stack_pair_130.first = 1;
+    stack_pair_130.second = uStack_23c;
+    iVar2 = fn_82CE09D0(0,&uStack_240,0,&stack_pair_130.first,0);
     if (iVar2 != -1) {
       if (iVar2 == 0) {
 LAB_830b3a60:

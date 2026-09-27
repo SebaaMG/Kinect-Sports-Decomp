@@ -42,7 +42,7 @@ void fn_82D88D00(undefined8 param_1,int *param_2,int param_3)
   int *piStack_50;
   int iStack_4c;
   uint uStack_48;
-  int aiStack_44 [17];
+  int aiStack_44 [9];
   
   iVar1 = 0;
   if (*(ushort *)(param_3 + 0x20c) != 0) {

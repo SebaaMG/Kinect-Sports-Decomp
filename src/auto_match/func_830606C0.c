@@ -41,7 +41,7 @@ undefined8 fn_830606C0(int param_1)
   longlong lVar1;
   undefined4 *puVar4;
   undefined8 uVar5;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [16];
   
   iVar2 = fn_83065B90(*(int *)(param_1 + 0x18) << 2);
   iVar3 = 0;

@@ -38,7 +38,7 @@ undefined1 * fn_82CEED70(undefined1 *param_1,undefined8 param_2)
   undefined8 uVar1;
   char *pcVar3;
   longlong lVar4;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [1];
   
   iVar2 = fn_82CEAF18(param_2);
   lVar4 = 0;

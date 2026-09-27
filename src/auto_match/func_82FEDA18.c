@@ -48,7 +48,7 @@ int fn_82FEDA18(ulonglong param_1)
   undefined4 *puVar3;
   int iVar4;
   int iVar5;
-  undefined4 auStack_30 [12];
+  undefined4 auStack_30;
   
   for (puVar1 = lbl_831BC774; puVar1 != (undefined4 *)0x0; puVar1 = (undefined4 *)*puVar1) {
     if ((ulonglong)(uint)puVar1[1] == (param_1 & 0xffffffff)) {
@@ -58,8 +58,8 @@ int fn_82FEDA18(ulonglong param_1)
       break;
     }
   }
-  fn_82FEF800(auStack_30);
-  iVar4 = fn_82FED500(param_1,auStack_30[0]);
+  fn_82FEF800(&auStack_30);
+  iVar4 = fn_82FED500(param_1,auStack_30);
   if (iVar4 != 0) {
     iVar5 = fn_830245B0(iVar4,param_1);
     if (iVar5 == 1) {

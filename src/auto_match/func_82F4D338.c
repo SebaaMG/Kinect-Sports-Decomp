@@ -35,7 +35,7 @@ void fn_82F4D338(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefi
 
 {
   longlong lVar1;
-  undefined1 auStack_330 [816];
+  undefined1 auStack_330 [768];
   
   lVar1 = (param_7 + 1U & 0x1fffffff) << 3;
   fn_82F4C260(param_1,param_2,auStack_330,0x18,lVar1);

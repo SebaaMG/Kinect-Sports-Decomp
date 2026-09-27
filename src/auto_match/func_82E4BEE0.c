@@ -28,7 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 extern int fn_82E99CD0();
 extern int fn_82E99D70();
 extern int fn_82F174E0();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 undefined8 fn_82E4BEE0(int param_1,undefined4 *param_2,undefined8 param_3,int param_4,int param_5)
@@ -40,7 +40,7 @@ undefined8 fn_82E4BEE0(int param_1,undefined4 *param_2,undefined8 param_3,int pa
   undefined4 *puVar4;
   undefined4 *puVar5;
   longlong lVar6;
-  int aiStack_50 [20];
+  int aiStack_50;
   
   if ((*(int *)(param_4 + 0x10) == 0x56555949) || (*(int *)(param_4 + 0x10) == 0x30323449)) {
     puVar5 = (undefined4 *)(param_4 + -4);
@@ -52,12 +52,12 @@ undefined8 fn_82E4BEE0(int param_1,undefined4 *param_2,undefined8 param_3,int pa
       *puVar4 = *puVar5;
       lVar6 = lVar6 + -1;
     } while (lVar6 != 0);
-    fn_82F68CC0(*param_2,param_3,*(undefined4 *)(param_4 + 0x14));
+    memcpy(*param_2,param_3,*(undefined4 *)(param_4 + 0x14));
   }
   else {
     if (*(int *)(param_1 + 0x5c) == 0) {
       puVar5 = (undefined4 *)(param_4 + -4);
-      aiStack_50[0] = 1;
+      aiStack_50 = 1;
       puVar4 = (undefined4 *)(param_1 + 0x60);
       lVar6 = 10;
       do {
@@ -81,11 +81,11 @@ undefined8 fn_82E4BEE0(int param_1,undefined4 *param_2,undefined8 param_3,int pa
       if ((*(int *)(*(int *)(param_1 + 0xc) + 4) != 8) || (uVar3 = 2, param_5 != 0)) {
         uVar3 = 0;
       }
-      uVar2 = fn_82E99D70(aiStack_50,param_4,(undefined4 *)(param_1 + 100),0,uVar3);
+      uVar2 = fn_82E99D70(&aiStack_50,param_4,(undefined4 *)(param_1 + 100),0,uVar3);
       *(undefined4 *)(param_1 + 0x8c) = uVar2;
-      if (aiStack_50[0] != 0) {
-        if (((aiStack_50[0] != 3) && (aiStack_50[0] != 4)) && (aiStack_50[0] != 5)) {
-          if (aiStack_50[0] == 2) {
+      if (aiStack_50 != 0) {
+        if (((aiStack_50 != 3) && (aiStack_50 != 4)) && (aiStack_50 != 5)) {
+          if (aiStack_50 == 2) {
             return 0xfffffffffffffffd;
           }
           return 0xffffffffffffff9c;

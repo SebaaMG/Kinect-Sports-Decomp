@@ -54,7 +54,7 @@ void fn_82DB0430(int *param_1,int *param_2,int *param_3)
   undefined1 auStack_650 [64];
   undefined1 auStack_610 [64];
   undefined1 auStack_5d0 [704];
-  undefined1 auStack_310 [784];
+  undefined1 auStack_310 [704];
   
   iVar5 = (int)*(char *)(param_1 + 4) + (int)param_1;
   iVar4 = (int)*(char *)(param_2 + 4) + (int)param_2;

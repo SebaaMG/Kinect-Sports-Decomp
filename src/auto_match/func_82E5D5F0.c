@@ -37,7 +37,7 @@ longlong fn_82E5D5F0(undefined4 *param_1,int *param_2)
   int *piStack_40;
   int *piStack_3c;
   int *apiStack_38 [2];
-  longlong alStack_30 [6];
+  longlong alStack_30;
   
   if ((param_1 == (undefined4 *)0x0) || (param_2 == (int *)0x0)) {
     lVar1 = -0x7ff8ffa9;
@@ -53,10 +53,10 @@ longlong fn_82E5D5F0(undefined4 *param_1,int *param_2)
        (lVar1 = (**(code **)(*piStack_3c + 0x14))(), -1 < lVar1)) {
       lVar3 = 0;
       while (iVar2 = (**(code **)(*piStack_3c + 0xc))(piStack_3c,1,&piStack_40,0), iVar2 == 0) {
-        alStack_30[0] = 0;
-        lVar1 = (**(code **)(*piStack_40 + 0x14))(piStack_40,0,alStack_30);
+        alStack_30 = 0;
+        lVar1 = (**(code **)(*piStack_40 + 0x14))(piStack_40,0,&alStack_30);
         if (lVar1 < 0) goto LAB_82e5d744;
-        lVar3 = alStack_30[0] + lVar3;
+        lVar3 = alStack_30 + lVar3;
         if (piStack_40 != (int *)0x0) {
           (**(code **)(*piStack_40 + 8))();
           piStack_40 = (int *)0x0;

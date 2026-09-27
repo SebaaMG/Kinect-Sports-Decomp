@@ -51,7 +51,7 @@ void fn_82FAC850(int param_1,longlong param_2,undefined8 param_3,int param_4)
   int iVar12;
   uint *puVar13;
   uint uStack_a0;
-  int aiStack_98 [38];
+  int aiStack_98 [10];
   
   uVar4 = (**(code **)(**(int **)(param_1 + 0x60) + 0x158))();
   if ((uVar4 & 0xffff) != 0) {

@@ -53,7 +53,7 @@ void fn_83011EE0(int param_1,ulonglong param_2,undefined8 param_3,ulonglong para
   undefined8 uStack_c0;
   undefined4 *puStack_b8;
   undefined4 *puStack_b4;
-  undefined4 auStack_b0 [44];
+  undefined4 auStack_b0 [20];
   
   puVar1 = *(undefined4 **)(param_1 + 0x70);
   puVar4 = (undefined4 *)0x0;

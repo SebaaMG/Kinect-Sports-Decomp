@@ -37,16 +37,16 @@ void fn_82CE07F0(undefined8 param_1,undefined8 param_2,undefined8 param_3)
   int iVar3;
   ulonglong uVar1;
   uint uStack_30;
-  undefined4 auStack_2c [11];
+  undefined4 auStack_2c;
   
   uStack_30 = 0;
   uVar2 = XamGetSystemVersion();
-  if ((uVar2 < 0x200a3200) || (iVar3 = XexGetModuleHandle(0xffffffff820886b4,auStack_2c), iVar3 < 0)
+  if ((uVar2 < 0x200a3200) || (iVar3 = XexGetModuleHandle(0xffffffff820886b4,&auStack_2c), iVar3 < 0)
      ) {
     uVar1 = (ulonglong)uStack_30;
   }
   else {
-    uVar1 = XexGetProcedureAddress(auStack_2c[0],0x24,&uStack_30);
+    uVar1 = XexGetProcedureAddress(auStack_2c,0x24,&uStack_30);
     uVar1 = ((uVar1 & 0xffffffff) >> 0x1f) - 1 & (ulonglong)uStack_30;
     uStack_30 = (uint)uVar1;
   }

@@ -44,7 +44,7 @@ undefined4 * fn_82F57198(undefined4 *param_1,undefined4 *param_2)
   undefined8 uVar1;
   undefined4 *puVar3;
   undefined1 auStack_ae0 [48];
-  undefined1 auStack_ab0 [2736];
+  undefined1 auStack_ab0 [2672];
   
   puVar3 = param_2 + 0x74;
   if (param_2[0x74] == 0) {

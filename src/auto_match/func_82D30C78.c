@@ -56,7 +56,7 @@ void fn_82D30C78(int param_1,char param_2)
   undefined1 auStack_f0 [32];
   undefined1 auStack_d0 [32];
   undefined1 auStack_b0 [48];
-  undefined1 auStack_80 [128];
+  undefined1 auStack_80 [48];
   
   fn_82D2BA38(param_1 + 0x10);
   fn_82D2BAB0(param_1 + 0x28);

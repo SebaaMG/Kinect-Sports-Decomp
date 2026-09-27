@@ -39,7 +39,7 @@ void fn_83060FF8(int param_1,undefined8 param_2,float *param_3)
 {
   double dVar1;
   double dVar2;
-  undefined1 auStack_40 [16];
+  undefined1 auStack_40 [1];
   undefined1 auStack_30 [48];
   
   fn_83060EC8(param_1,auStack_40,auStack_30);

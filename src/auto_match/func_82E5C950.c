@@ -46,7 +46,7 @@ longlong fn_82E5C950(int *param_1,uint *param_2)
   int *piVar5;
   int *piVar6;
   int *piVar7;
-  ushort auStack_50 [40];
+  ushort auStack_50;
   
   if (param_1[3] == 0) {
     return -0x3ff2c94a;
@@ -74,12 +74,12 @@ LAB_82e5c9a8:
       piVar5 = param_1 + 0x21;
       lVar2 = fn_82E59EC8(piVar5,piVar7);
       if (-1 < lVar2) {
-        auStack_50[0] = 0;
-        lVar2 = fn_82E57738(auStack_50,piVar7);
+        auStack_50 = 0;
+        lVar2 = fn_82E57738(&auStack_50,piVar7);
         if (-1 < lVar2) {
-          *(ushort *)(param_1 + 0x1c) = auStack_50[0] & 0x7f;
-          param_1[0x1d] = auStack_50[0] & 0xffff8000;
-          lVar2 = fn_82E59EC8(auStack_50,piVar7);
+          *(ushort *)(param_1 + 0x1c) = auStack_50 & 0x7f;
+          param_1[0x1d] = auStack_50 & 0xffff8000;
+          lVar2 = fn_82E59EC8(&auStack_50,piVar7);
           if (-1 < lVar2) {
             uVar4 = *piVar5 + *piVar6 + 0x4e;
             if (uVar1 < uVar4) goto LAB_82e5c9a8;

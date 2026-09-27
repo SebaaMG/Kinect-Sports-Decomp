@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 
 
-void fn_82F68BE4(undefined8 param_1,code *UNRECOVERED_JUMPTABLE)
+void __C_ExecuteExceptionFilter(undefined8 param_1,code *UNRECOVERED_JUMPTABLE)
 
 {
                     /* WARNING: Could not recover jumptable at 0x82f68bec. Too many branches */

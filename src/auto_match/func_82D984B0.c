@@ -50,8 +50,8 @@ void fn_82D984B0(double param_1,int param_2,int param_3,char param_4)
   int iStack_3c;
   undefined *puStack_38;
   undefined4 uStack_34;
-  undefined4 uStack_30;
-  int iStack_2c;
+  struct { undefined4 first; int second; } stack_pair_30;
+
   undefined *puStack_28;
   undefined4 uStack_24;
   float fStack_20;
@@ -75,12 +75,12 @@ void fn_82D984B0(double param_1,int param_2,int param_3,char param_4)
       fStack_20 = (float)param_1;
       puStack_28 = &lbl_8323CCA0;
       uStack_24 = 0;
-      uStack_30 = uVar2;
-      iStack_2c = param_3;
+      stack_pair_30.first = uVar2;
+      stack_pair_30.second = param_3;
       if (*(short *)(param_3 + 0x24) != 0) {
-        fn_82DBFB80(&uStack_30);
+        fn_82DBFB80(&stack_pair_30.first);
       }
-      fn_82DADF68(uVar2,&uStack_30);
+      fn_82DADF68(uVar2,&stack_pair_30.first);
       return;
     }
     uStack_34 = 0;

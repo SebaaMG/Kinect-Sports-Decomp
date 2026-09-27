@@ -70,18 +70,18 @@ undefined8 fn_82D05F78(int param_1)
   undefined4 uStack_45c;
   undefined4 uStack_450;
   uint uStack_44c;
-  undefined4 uStack_340;
-  uint uStack_33c;
+  struct { undefined4 first; uint second; } stack_pair_340;
+
   undefined1 auStack_230 [560];
   
   uStack_44c = *(uint *)(param_1 + 0x20);
   if (uStack_44c != 0xffffffff) {
     uStack_450 = 1;
-    uStack_340 = 1;
+    stack_pair_340.first = 1;
     uStack_480 = 0;
     uStack_47c = 0;
-    uStack_33c = uStack_44c;
-    iVar1 = fn_82CE09D0((ulonglong)uStack_44c + 1,&uStack_450,0,&uStack_340,&uStack_480);
+    stack_pair_340.second = uStack_44c;
+    iVar1 = fn_82CE09D0((ulonglong)uStack_44c + 1,&uStack_450,0,&stack_pair_340.first,&uStack_480);
     if ((0 < iVar1) &&
        (iVar1 = fn_82CE0BE8(*(undefined4 *)(param_1 + 0x20),&uStack_450), iVar1 != 0)) {
       auStack_4bc[0] = 0x10;

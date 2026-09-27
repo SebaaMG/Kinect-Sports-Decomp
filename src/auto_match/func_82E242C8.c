@@ -40,13 +40,13 @@ longlong fn_82E242C8(int param_1,int *param_2)
   int iStack_4c;
   uint uStack_48;
   undefined4 uStack_44;
-  undefined4 auStack_40 [16];
+  undefined4 auStack_40;
   
   uStack_48 = 0;
   piStack_50 = (int *)0x0;
   iStack_4c = 0;
   uStack_44 = 0;
-  auStack_40[0] = 0;
+  auStack_40 = 0;
   lVar1 = (**(code **)(*param_2 + 0x9c))(param_2,&uStack_48);
   if ((-1 < lVar1) && (uVar2 = 0, uStack_48 != 0)) {
     do {
@@ -58,7 +58,7 @@ longlong fn_82E242C8(int param_1,int *param_2)
       if ((((lVar1 < 0) ||
            (lVar1 = (**(code **)(*piStack_50 + 0xc))(piStack_50,&iStack_4c,0,&uStack_44), lVar1 < 0)
            ) || (lVar1 = (**(code **)(**(int **)(param_1 + 0x104) + 0x30))
-                                   (*(int **)(param_1 + 0x104),iStack_4c,uStack_44,auStack_40),
+                                   (*(int **)(param_1 + 0x104),iStack_4c,uStack_44,&auStack_40),
                 lVar1 < 0)) || (lVar1 = (**(code **)(*piStack_50 + 0x10))(), lVar1 < 0)) break;
       uVar2 = uVar2 + 1;
       iStack_4c = 0;

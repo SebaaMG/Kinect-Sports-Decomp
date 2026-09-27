@@ -56,8 +56,8 @@ longlong fn_82E61058(ulonglong param_1,int *param_2,int *param_3)
   int *piStack_50;
   undefined4 uStack_4c;
   undefined1 auStack_48 [8];
-  undefined4 uStack_40;
-  undefined4 uStack_3c;
+  struct { undefined4 first; undefined4 second; } stack_pair_40;
+
   undefined4 uStack_38;
   undefined4 uStack_34;
   
@@ -71,12 +71,12 @@ longlong fn_82E61058(ulonglong param_1,int *param_2,int *param_3)
        ((lVar3 = (**(code **)(*param_2 + 0x1c))(param_2,0xffffffff82154aa8,&piStack_50), -1 < lVar3
         && (lVar3 = (**(code **)(*param_3 + 0x14))(param_3,piStack_50,0), -1 < lVar3)))) {
       piVar1 = piStack_50;
-      uStack_40 = lbl_8202E618;
-      uStack_3c = lbl_8202E61C;
+      stack_pair_40.first = lbl_8202E618;
+      stack_pair_40.second = lbl_8202E61C;
       uStack_38 = lbl_8202E620;
       uStack_34 = lbl_8202E624;
-      lVar3 = fn_82E66648(&uStack_40);
-      if ((-1 < lVar3) && (lVar3 = fn_82E62770(piVar1,&uStack_40), -1 < lVar3)) {
+      lVar3 = fn_82E66648(&stack_pair_40.first);
+      if ((-1 < lVar3) && (lVar3 = fn_82E62770(piVar1,&stack_pair_40.first), -1 < lVar3)) {
         fn_82A1E228(auStack_48);
         lVar3 = fn_82E627E0(piVar1,auStack_48);
         if ((-1 < lVar3) && (lVar3 = fn_82E5FA90(param_1,piVar1), -1 < lVar3)) {

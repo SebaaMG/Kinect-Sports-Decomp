@@ -32,7 +32,7 @@ extern unsigned int lbl_8216A9E0;
 extern unsigned int lbl_831BB900;
 
 
-undefined4 * fn_82F6F960(void)
+undefined4 * _getptd_noexit(void)
 
 {
   undefined8 uVar1;

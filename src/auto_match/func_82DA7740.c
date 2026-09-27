@@ -45,7 +45,7 @@ void fn_82DA7740(int param_1,int param_2,int param_3,code *param_4)
   int iVar8;
   longlong lVar9;
   undefined1 uStack_90;
-  undefined1 auStack_8f [11];
+  undefined1 auStack_8f [1];
   undefined4 uStack_84;
   undefined1 auStack_80 [28];
   undefined4 auStack_64 [25];

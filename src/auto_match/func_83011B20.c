@@ -47,7 +47,7 @@ void fn_83011B20(int param_1,undefined8 param_2)
   longlong *plVar4;
   undefined8 uStack_90;
   undefined1 auStack_88 [8];
-  undefined4 auStack_80 [32];
+  undefined4 auStack_80 [16];
   
   uStack_90 = ZEXT48(*(uint **)(param_1 + 0x70)) << 0x20;
   puVar3 = *(uint **)(param_1 + 0x70);

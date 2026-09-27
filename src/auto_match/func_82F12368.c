@@ -69,7 +69,7 @@ void fn_82F12368(int param_1,int param_2,undefined8 param_3,int param_4,int para
   undefined1 auStack_810 [272];
   undefined1 auStack_700 [576];
   short asStack_4c0 [264];
-  short asStack_2b0 [8];
+  short asStack_2b0 [1];
   undefined1 auStack_2a0 [672];
   
   uVar2 = *(undefined4 *)(param_1 + 0x2030);

@@ -33,26 +33,26 @@ longlong fn_82E43270(int param_1,undefined4 *param_2)
 {
   longlong lVar1;
   int *piStack_30;
-  int *apiStack_2c [11];
+  int * apiStack_2c;
   
   if (param_2 == (undefined4 *)0x0) {
     lVar1 = -0x7ff8ffa9;
   }
   else {
     piStack_30 = (int *)0x0;
-    apiStack_2c[0] = (int *)0x0;
+    apiStack_2c = (int *)0x0;
     if (*(int *)(param_1 + 0x594) == 0) {
       lVar1 = (**(code **)*param_2)(param_2,0xffffffff8215ed68,&piStack_30);
       if ((-1 < lVar1) &&
-         (lVar1 = (**(code **)(*piStack_30 + 0x28))(piStack_30,apiStack_2c), -1 < lVar1)) {
-        lVar1 = fn_82E42D28(param_1,apiStack_2c[0]);
+         (lVar1 = (**(code **)(*piStack_30 + 0x28))(piStack_30,&apiStack_2c), -1 < lVar1)) {
+        lVar1 = fn_82E42D28(param_1,apiStack_2c);
       }
       if (piStack_30 != (int *)0x0) {
         (**(code **)(*piStack_30 + 8))();
         piStack_30 = (int *)0x0;
       }
-      if (apiStack_2c[0] != (int *)0x0) {
-        (**(code **)(*apiStack_2c[0] + 8))();
+      if (apiStack_2c != (int *)0x0) {
+        (**(code **)(*apiStack_2c + 8))();
       }
     }
     else {

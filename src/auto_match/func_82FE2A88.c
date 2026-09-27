@@ -70,7 +70,7 @@ undefined8 fn_82FE2A88(int param_1,int *param_2)
   undefined4 auStack_340 [64];
   undefined1 auStack_240 [252];
   undefined4 uStack_144;
-  undefined1 auStack_140 [320];
+  undefined1 auStack_140 [256];
   
   iVar8 = (**(code **)(*param_2 + 4))(param_2,(ulonglong)*(uint *)(param_1 + 0xc4) * 0x6c);
   *(int *)(param_1 + 0xd4) = iVar8;

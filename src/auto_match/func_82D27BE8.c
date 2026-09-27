@@ -48,20 +48,20 @@ void fn_82D27BE8(undefined8 param_1,undefined8 param_2)
   undefined4 uVar4;
   undefined4 uVar5;
   undefined1 auStack_40 [16];
-  undefined4 uStack_30;
-  undefined4 uStack_2c;
+  struct { undefined4 first; undefined4 second; } stack_pair_30;
+
   undefined4 uStack_28;
   undefined4 uStack_24;
   undefined4 uStack_20;
   undefined4 uStack_1c;
   
-  uStack_30 = 0;
-  uStack_2c = 0;
+  stack_pair_30.first = 0;
+  stack_pair_30.second = 0;
   uStack_28 = 0x80000000;
   uStack_24 = 0;
   uStack_20 = 0;
   uStack_1c = 0x80000000;
-  fn_82D0CA60(param_2,0,&uStack_30);
+  fn_82D0CA60(param_2,0,&stack_pair_30.first);
   puVar1 = (undefined4 *)((uint)(&lbl_821CE8A0 + in_r0) & 0xfffffff0);
   uVar3 = puVar1[1];
   uVar4 = puVar1[2];
@@ -71,8 +71,8 @@ void fn_82D27BE8(undefined8 param_1,undefined8 param_2)
   puVar2[1] = uVar3;
   puVar2[2] = uVar4;
   puVar2[3] = uVar5;
-  fn_82D27010(param_1,&uStack_30,auStack_40);
-  fn_82421E98(&uStack_30);
+  fn_82D27010(param_1,&stack_pair_30.first,auStack_40);
+  fn_82421E98(&stack_pair_30.first);
   return;
 }
 

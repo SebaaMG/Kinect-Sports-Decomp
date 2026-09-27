@@ -32,8 +32,7 @@ extern unsigned int lbl_821090EC;
 extern unsigned int lbl_821090EE;
 
 
-void fn_82CDA950(undefined8 param_1,longlong param_2,ulonglong param_3,int param_4,int param_5,
-                  uint param_6,uint param_7)
+void fn_82CDA950(undefined8 param_1, longlong param_2, ulonglong param_3, int param_4, int param_5, uint param_6, uint param_7, undefined8 unused_arg_8, int in_stack_00000054, uint in_stack_0000005c)
 
 {
   int iVar1;
@@ -58,10 +57,10 @@ void fn_82CDA950(undefined8 param_1,longlong param_2,ulonglong param_3,int param
   short *psVar20;
   longlong lVar21;
   longlong lVar22;
-  int in_stack_00000054;
-  uint in_stack_0000005c;
+
+
   undefined1 auStack_4c0 [4];
-  short asStack_4bc [606];
+  short asStack_4bc [510];
   
   param_6 = param_6 & 3;
   param_7 = param_7 & 3;

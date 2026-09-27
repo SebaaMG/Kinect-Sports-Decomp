@@ -40,7 +40,7 @@ undefined8 fn_82F36830(int param_1,int param_2,longlong *param_3)
   int *piStack_50;
   int *piStack_4c;
   undefined4 *puStack_48;
-  uint auStack_44 [17];
+  uint auStack_44;
   
   if (*(int *)(param_1 + 0xc) == 0) {
     uVar2 = 0xffffffffc00d36b6;
@@ -63,9 +63,9 @@ undefined8 fn_82F36830(int param_1,int param_2,longlong *param_3)
         fn_82F35400(param_1,uVar5,&piStack_4c);
         if (*piStack_4c != 0) {
           fn_82F35400(param_1,uVar5,&puStack_48);
-          iVar3 = (**(code **)(*(int *)*puStack_48 + 0x24))((int *)*puStack_48,auStack_44);
+          iVar3 = (**(code **)(*(int *)*puStack_48 + 0x24))((int *)*puStack_48,&auStack_44);
           if (-1 < iVar3) {
-            lVar4 = (ulonglong)auStack_44[0] + lVar4;
+            lVar4 = (ulonglong)auStack_44 + lVar4;
           }
         }
         uVar5 = uVar5 + 1;

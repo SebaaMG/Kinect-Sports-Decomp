@@ -28,8 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 extern unsigned int uStack_a0;
 
 
-void fn_82CDED68(int param_1,int param_2,byte *param_3,int param_4,int param_5,int param_6,
-                  int param_7,longlong param_8)
+void fn_82CDED68(int param_1, int param_2, byte *param_3, int param_4, int param_5, int param_6, int param_7, longlong param_8, uint in_stack_00000054, undefined8 unused_arg_10, uint in_stack_00000064, int in_stack_0000006c, undefined8 unused_arg_13, int in_stack_0000007c, int in_stack_00000084)
 
 {
   byte bVar1;
@@ -44,11 +43,11 @@ void fn_82CDED68(int param_1,int param_2,byte *param_3,int param_4,int param_5,i
   int iVar9;
   int iVar10;
   int iVar11;
-  uint in_stack_00000054;
-  uint in_stack_00000064;
-  int in_stack_0000006c;
-  int in_stack_0000007c;
-  int in_stack_00000084;
+
+
+
+
+
   uint uStack_a0;
   
   pbVar6 = param_3 + param_5;

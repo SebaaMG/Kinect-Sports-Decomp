@@ -39,12 +39,12 @@ undefined1 * fn_82D03028(undefined1 *param_1,int param_2,undefined8 param_3)
   uint uVar6;
   char *pcVar7;
   undefined1 auStack_30 [4];
-  int aiStack_2c [11];
+  int aiStack_2c;
   
   iVar1 = *(int *)(param_2 + 0xa8);
   pcVar7 = (char *)(**(code **)(**(int **)(param_2 + 0x98) + 0x14))
                              (auStack_30,*(int **)(param_2 + 0x98),iVar1,
-                              *(undefined4 *)(iVar1 + 0xc),param_3,aiStack_2c);
+                              *(undefined4 *)(iVar1 + 0xc),param_3,&aiStack_2c);
   if (*pcVar7 == '\0') {
     *param_1 = 0;
   }
@@ -53,10 +53,10 @@ undefined1 * fn_82D03028(undefined1 *param_1,int param_2,undefined8 param_3)
     iVar3 = *(int *)(param_2 + 0x14);
     iVar4 = *(int *)(param_2 + 0x10);
     *param_1 = 1;
-    uVar6 = aiStack_2c[0] - iVar2 & 0xfffffff0;
+    uVar6 = aiStack_2c - iVar2 & 0xfffffff0;
     uVar5 = *(uint *)(iVar3 + iVar4 + 4);
     *(uint *)(param_2 + 0x14) = iVar3 + uVar6;
-    *(int *)(iVar1 + 0xc) = aiStack_2c[0];
+    *(int *)(iVar1 + 0xc) = aiStack_2c;
     *(uint *)(iVar1 + 0x14) = *(int *)(iVar1 + 0x14) + uVar6;
     *(uint *)(*(int *)(param_2 + 0x14) + *(int *)(param_2 + 0x10) + 4) =
          (uVar5 & 0xfffffffc) - uVar6 | 2;

@@ -39,7 +39,7 @@ void fn_82FFBC38(longlong param_1,undefined8 param_2)
   int iVar1;
   undefined1 auStack_40 [8];
   uint uStack_38;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
   
   RtlEnterCriticalSection(param_1 + 0x50);
   fn_82FFDF28(auStack_40,param_1 + 0x90,param_2);

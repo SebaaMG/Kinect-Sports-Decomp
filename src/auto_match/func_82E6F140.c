@@ -37,20 +37,20 @@ longlong fn_82E6F140(int *param_1,undefined8 param_2,undefined8 param_3,short *p
   longlong lVar3;
   uint uStack_60;
   int iStack_5c;
-  longlong alStack_58 [11];
+  longlong alStack_58;
   
   if (param_4 == (short *)0x0) {
     lVar1 = -0x7fffbffd;
   }
   else if (*(short *)(param_1 + 2) == *param_4) {
-    alStack_58[0] = 0;
-    lVar1 = (**(code **)(*param_1 + 0x28))(param_1,param_4,alStack_58);
+    alStack_58 = 0;
+    lVar1 = (**(code **)(*param_1 + 0x28))(param_1,param_4,&alStack_58);
     if (-1 < lVar1) {
       uStack_60 = 0;
       lVar1 = (**(code **)(*param_1 + 8))(param_1,&uStack_60);
       if (-1 < lVar1) {
-        if (alStack_58[0] != 0) {
-          uVar2 = (alStack_58[0] - 1U) / (ulonglong)uStack_60;
+        if (alStack_58 != 0) {
+          uVar2 = (alStack_58 - 1U) / (ulonglong)uStack_60;
           trapDoubleWordImmediate(6,(ulonglong)uStack_60,0);
           if ((*(ulonglong *)(param_1 + 0x12) < uVar2 + 1) && (*(longlong *)(param_1 + 0x14) != 0))
           {

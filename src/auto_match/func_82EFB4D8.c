@@ -49,8 +49,7 @@ extern unsigned int uStack_130;
 extern unsigned int uStack_f0;
 
 
-void fn_82EFB4D8(byte *param_1,byte *param_2,byte *param_3,int param_4,int param_5,int param_6,
-                  int param_7,int param_8)
+void fn_82EFB4D8(byte *param_1, byte *param_2, byte *param_3, int param_4, int param_5, int param_6, int param_7, int param_8, int in_stack_00000054, int in_stack_0000005c, undefined8 unused_arg_11, int in_stack_0000006c)
 
 {
   uint uVar1;
@@ -102,10 +101,10 @@ void fn_82EFB4D8(byte *param_1,byte *param_2,byte *param_3,int param_4,int param
   uint uVar47;
   uint uVar48;
   longlong lVar49;
-  int in_stack_00000054;
-  int in_stack_0000005c;
+
+
   int *in_stack_00000064;
-  int in_stack_0000006c;
+
   byte *pbStack_13c;
   uint uStack_130;
   uint uStack_12c;

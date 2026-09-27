@@ -28,7 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_220;
 extern unsigned int *auStack_2a0;
 extern int fn_82F09EE0();
-extern int fn_82F69148();
+extern int _blkmov();
 extern unsigned int uStack_2a2;
 
 
@@ -48,7 +48,7 @@ void fn_82F0AB90(int param_1,int param_2,undefined8 param_3)
   longlong lVar11;
   ushort uStack_2a2;
   undefined1 auStack_2a0 [128];
-  undefined1 auStack_220 [544];
+  undefined1 auStack_220 [496];
   
   puVar9 = &uStack_2a2;
   pbVar10 = (byte *)(param_1 + 2);
@@ -75,7 +75,7 @@ void fn_82F0AB90(int param_1,int param_2,undefined8 param_3)
     lVar11 = lVar11 + -1;
   } while (lVar11 != 0);
   fn_82F09EE0(auStack_2a0,8,auStack_220,0);
-  fn_82F69148(param_3,auStack_220,0x80);
+  _blkmov(param_3,auStack_220,0x80);
   return;
 }
 

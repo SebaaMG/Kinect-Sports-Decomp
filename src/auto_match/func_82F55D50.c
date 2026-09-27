@@ -37,16 +37,16 @@ undefined8 fn_82F55D50(void)
 {
   undefined8 uVar1;
   double dVar2;
-  float fStack_20;
-  float afStack_1c [7];
+  struct { float first; float second; } stack_pair_20;
+
   
   dVar2 = (double)lbl_821AAD20;
-  fStack_20 = lbl_821AAD20;
-  afStack_1c[0] = lbl_821AAD20;
-  fn_82F55CC8(&fStack_20,afStack_1c);
-  if (((((double)lbl_82057270 <= (double)fStack_20) || ((double)fStack_20 <= dVar2)) ||
-      ((double)lbl_82010E78 <= (double)afStack_1c[0])) ||
-     (uVar1 = 1, (double)afStack_1c[0] <= dVar2)) {
+  stack_pair_20.first = lbl_821AAD20;
+  stack_pair_20.second = lbl_821AAD20;
+  fn_82F55CC8(&stack_pair_20.first,&stack_pair_20.second);
+  if (((((double)lbl_82057270 <= (double)stack_pair_20.first) || ((double)stack_pair_20.first <= dVar2)) ||
+      ((double)lbl_82010E78 <= (double)stack_pair_20.second)) ||
+     (uVar1 = 1, (double)stack_pair_20.second <= dVar2)) {
     uVar1 = 0;
   }
   return uVar1;

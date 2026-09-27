@@ -36,7 +36,7 @@ longlong fn_83061680(int param_1,int param_2,int param_3)
   int iVar2;
   int iVar3;
   int *piVar4;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [16];
   
   piVar4 = (int *)(param_1 + 4);
   lVar1 = 0;

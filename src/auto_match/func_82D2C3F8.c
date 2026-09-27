@@ -65,7 +65,7 @@ undefined4 * fn_82D2C3F8(undefined4 *param_1,int param_2,int param_3,int param_4
   int iStack_27c;
   int *piStack_278;
   undefined4 uStack_274;
-  undefined1 auStack_270 [624];
+  undefined1 auStack_270 [496];
   
   piVar15 = *(int **)(((param_4 >> 0xb) * 0x10 + (param_3 >> 0xb) + 0x97) * 4 + param_2);
   if (piVar15 == (int *)0x0) {

@@ -40,7 +40,7 @@ fn_83005FA8(int *param_1,undefined8 param_2,uint param_3,undefined8 param_4,unde
   undefined8 uVar2;
   undefined8 uVar5;
   int *piVar6;
-  int *apiStack_60 [24];
+  int *apiStack_60 [4];
   
   if (3 < param_3) {
     return 0x1f;

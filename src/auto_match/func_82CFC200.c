@@ -29,7 +29,7 @@ extern unsigned int *auStack_50;
 extern int fn_82CE52E0();
 extern int fn_82CE5410();
 extern int fn_82CE5430();
-extern int fn_82F672D8();
+extern int strncpy();
 
 
 int fn_82CFC200(char *param_1,char *param_2)
@@ -39,7 +39,7 @@ int fn_82CFC200(char *param_1,char *param_2)
   int iVar2;
   char *pcVar3;
   char *pcVar4;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [48];
   
   fn_82CE5430(auStack_50);
   iVar2 = fn_82CE5410();
@@ -54,7 +54,7 @@ int fn_82CFC200(char *param_1,char *param_2)
   }
   iVar2 = fn_82CE52E0(*(undefined4 *)(iVar2 + 0x10),pcVar4 + 1);
   if (pcVar4 != (char *)0x0) {
-    fn_82F672D8(iVar2,param_1,pcVar4);
+    strncpy(iVar2,param_1,pcVar4);
   }
   pcVar4[iVar2] = '\0';
   return iVar2;

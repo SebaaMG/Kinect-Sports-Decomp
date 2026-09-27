@@ -25,10 +25,10 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F80708();
+extern int __BuildCatchObjectHelper();
 
 
-void fn_82F80998(int param_1,longlong param_2,uint *param_3,int param_4,undefined8 param_5,
+void __BuildCatchObject(int param_1,longlong param_2,uint *param_3,int param_4,undefined8 param_5,
                   undefined8 param_6)
 
 {
@@ -39,7 +39,7 @@ void fn_82F80998(int param_1,longlong param_2,uint *param_3,int param_4,undefine
   if ((*param_3 & 0x80000000) == 0) {
     lVar2 = (ulonglong)param_3[2] + param_2;
   }
-  iVar1 = fn_82F80708(param_1,param_2,param_3,param_4,param_5,param_6);
+  iVar1 = __BuildCatchObjectHelper(param_1,param_2,param_3,param_4,param_5,param_6);
   if (iVar1 == 1) {
     (**(code **)(param_4 + 0x18))(lVar2);
   }

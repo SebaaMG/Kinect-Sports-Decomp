@@ -35,7 +35,7 @@ undefined1 * fn_82CF8A08(undefined1 *param_1,int param_2)
   int iVar2;
   undefined4 *puVar3;
   int iVar4;
-  char acStack_40 [64];
+  char acStack_40;
   
   iVar2 = param_2 + 4;
   RtlEnterCriticalSection(iVar2);
@@ -49,8 +49,8 @@ LAB_82cf8a8c:
   else {
     puVar3 = (undefined4 *)(param_2 + 0x17c);
     do {
-      fn_82D01468(acStack_40,*puVar3);
-      if (acStack_40[0] == '\0') {
+      fn_82D01468(&acStack_40,*puVar3);
+      if (acStack_40 == '\0') {
         *param_1 = 0;
         goto LAB_82cf8a8c;
       }

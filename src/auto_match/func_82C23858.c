@@ -42,19 +42,19 @@ ulonglong fn_82C23858(int param_1,int param_2,byte *param_3,int *param_4)
   ulonglong uVar3;
   undefined1 auStack_40 [4];
   undefined1 *puStack_3c;
-  undefined4 uStack_38;
-  int aiStack_34 [13];
+  struct { undefined4 first; int second; } stack_pair_38;
+
   
   if (*param_4 == 0) {
     if (param_2 == 0x20050) {
       bVar1 = *param_3;
-      uStack_38 = 0;
+      stack_pair_38.first = 0;
       puStack_3c = (undefined1 *)0x0;
-      uVar3 = fn_82C10F40(*(undefined4 *)(param_1 + 0x94),bVar1,aiStack_34);
+      uVar3 = fn_82C10F40(*(undefined4 *)(param_1 + 0x94),bVar1,&stack_pair_38.second);
       if ((-1 < (int)uVar3) &&
-         (*(undefined4 *)(aiStack_34[0] + 100) = *(undefined4 *)(param_3 + 4),
+         (*(undefined4 *)(stack_pair_38.second + 100) = *(undefined4 *)(param_3 + 4),
          0 < *(short *)(*(int *)(param_1 + 4) + 0x48))) {
-        uVar3 = fn_82C10F68(*(undefined4 *)(param_1 + 0x94),&uStack_38,&puStack_3c,auStack_40);
+        uVar3 = fn_82C10F68(*(undefined4 *)(param_1 + 0x94),&stack_pair_38.first,&puStack_3c,auStack_40);
         if ((uVar3 & 0xffffffff) != 0x80500016) {
           if ((int)uVar3 < 0) {
             return uVar3;
@@ -66,17 +66,17 @@ ulonglong fn_82C23858(int param_1,int param_2,byte *param_3,int *param_4)
             if ((*(int *)(puStack_3c + 0x50) != 0) &&
                (uVar2 = 1 << ((uint)bVar1 + ((int)(uint)bVar1 >> 5) * -0x20 & 0x3f),
                (*(uint *)(puStack_3c + ((bVar1 >> 5) + 0x15) * 4) & uVar2) == uVar2)) {
-              *(undefined4 *)(puStack_3c + 100) = *(undefined4 *)(aiStack_34[0] + 100);
+              *(undefined4 *)(puStack_3c + 100) = *(undefined4 *)(stack_pair_38.second + 100);
               uVar3 = fn_82C11CB8(*(undefined4 *)(puStack_3c + 100),*puStack_3c,puStack_3c + 0x54,
                                     *(undefined4 *)(puStack_3c + 0x40));
               if ((int)uVar3 < 0) {
                 return uVar3;
               }
             }
-            uVar3 = fn_82C10FD0(*(undefined4 *)(param_1 + 0x94),uStack_38,&puStack_3c,auStack_40);
+            uVar3 = fn_82C10FD0(*(undefined4 *)(param_1 + 0x94),stack_pair_38.first,&puStack_3c,auStack_40);
           } while ((uVar3 & 0xffffffff) != 0x80500016);
         }
-        uVar3 = fn_82C11038(*(undefined4 *)(param_1 + 0x94),uStack_38);
+        uVar3 = fn_82C11038(*(undefined4 *)(param_1 + 0x94),stack_pair_38.first);
         uVar3 = -(ulonglong)(uVar3 != 0xffffffff80500016) & uVar3;
       }
     }

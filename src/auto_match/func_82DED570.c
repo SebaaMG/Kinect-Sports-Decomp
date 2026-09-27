@@ -42,7 +42,7 @@ undefined8 fn_82DED570(int *param_1,int *param_2,undefined4 *param_3,undefined4 
   int iVar1;
   undefined4 uVar2;
   undefined1 auStack_240 [16];
-  undefined1 auStack_230 [560];
+  undefined1 auStack_230 [512];
   
   iVar1 = (**(code **)(*param_1 + 0x20))();
   if (iVar1 == 2) {

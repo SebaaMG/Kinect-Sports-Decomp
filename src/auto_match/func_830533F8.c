@@ -34,12 +34,12 @@ void fn_830533F8(undefined8 param_1)
 
 {
   ulonglong uVar1;
-  undefined4 uStack_20;
-  float afStack_1c [3];
+  struct { undefined4 first; float second; } stack_pair_20;
+
   
-  uVar1 = fn_83052680(param_1,&uStack_20,afStack_1c);
+  uVar1 = fn_83052680(param_1,&stack_pair_20.first,&stack_pair_20.second);
   if ((uVar1 & 0xffffffff) != 0) {
-    fn_830530F8((double)afStack_1c[0],param_1,uVar1,uStack_20);
+    fn_830530F8((double)stack_pair_20.second,param_1,uVar1,stack_pair_20.first);
   }
   return;
 }

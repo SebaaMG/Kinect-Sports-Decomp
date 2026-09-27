@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_82EEFC00();
 extern int fn_82F64CE0();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int iStack_34;
 extern unsigned int uStack_38;
 extern unsigned int uStack_3c;
@@ -45,7 +45,7 @@ fn_82EF0858(int param_1,uint param_2,undefined4 *param_3,undefined2 *param_4,und
   longlong lVar3;
   undefined8 uVar4;
   ulonglong uVar5;
-  undefined4 *apuStack_50 [5];
+  undefined4 * apuStack_50;
   undefined4 uStack_3c;
   undefined4 uStack_38;
   int iStack_34;
@@ -53,12 +53,12 @@ fn_82EF0858(int param_1,uint param_2,undefined4 *param_3,undefined2 *param_4,und
   if ((((((param_2 & 0xffff) < *(uint *)(param_1 + 0x1ac)) && (param_3 != (undefined4 *)0x0)) &&
        (param_4 != (undefined2 *)0x0)) && (param_6 != (ushort *)0x0)) &&
      ((*param_6 == 0 || (param_5 != (undefined2 *)0x0)))) {
-    fn_82EEFC00(param_1 + 0x48,param_2 & 0xffff,apuStack_50);
-    uVar1 = apuStack_50[0][1];
-    uStack_38 = apuStack_50[0][2];
-    iVar2 = apuStack_50[0][3];
+    fn_82EEFC00(param_1 + 0x48,param_2 & 0xffff,&apuStack_50);
+    uVar1 = apuStack_50[1];
+    uStack_38 = apuStack_50[2];
+    iVar2 = apuStack_50[3];
     uStack_3c = ((((U64)(uStack_3c)) & (~(((U64)0xFFFF) << 0))) | ((((U64)((undefined2)((uint)uVar1 >> 0x10))) & ((U64)0xFFFF)) << 0));
-    *param_3 = *apuStack_50[0];
+    *param_3 = *apuStack_50;
     *param_4 = (((U64)(uStack_3c) >> 0) & 0xFFFF);
     uStack_3c = uVar1;
     iStack_34 = iVar2;
@@ -81,7 +81,7 @@ fn_82EF0858(int param_1,uint param_2,undefined4 *param_3,undefined2 *param_4,und
         }
       }
       else if (param_5 != (undefined2 *)0x0) {
-        fn_82F68CC0(param_5,iVar2,uVar5 << 1);
+        memcpy(param_5,iVar2,uVar5 << 1);
       }
       uVar4 = 0;
     }

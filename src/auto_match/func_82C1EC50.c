@@ -38,7 +38,7 @@ undefined8 fn_82C1EC50(int param_1,ulonglong *param_2,int *param_3,uint *param_4
   byte bVar5;
   char cVar6;
   char cVar7;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [16];
   
   piVar1 = *(int **)(param_1 + 0x1c);
   uVar4 = 0;

@@ -41,7 +41,7 @@ undefined8 fn_82F512E8(undefined8 param_1,int param_2,undefined8 param_3,int par
   undefined4 uVar5;
   undefined4 uVar6;
   undefined4 uVar7;
-  undefined1 auStack_30 [24];
+  undefined1 auStack_30 [1];
   
   if (param_4 == 0) {
     iVar3 = fn_82F4FF20(param_3);

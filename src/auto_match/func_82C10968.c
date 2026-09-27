@@ -25,7 +25,7 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F6DF30();
+extern int tolower();
 
 
 undefined8 fn_82C10968(char *param_1,char *param_2)
@@ -38,8 +38,8 @@ undefined8 fn_82C10968(char *param_1,char *param_2)
   
   cVar1 = *param_1;
   for (; (cVar1 != '\0' && (*param_2 != '\0')); param_2 = param_2 + 1) {
-    iVar3 = fn_82F6DF30(*param_2);
-    iVar4 = fn_82F6DF30(cVar1);
+    iVar3 = tolower(*param_2);
+    iVar4 = tolower(cVar1);
     if (iVar4 != iVar3) break;
     param_1 = param_1 + 1;
     cVar1 = *param_1;
@@ -49,8 +49,8 @@ undefined8 fn_82C10968(char *param_1,char *param_2)
     uVar2 = 0;
   }
   else {
-    iVar3 = fn_82F6DF30(*param_2);
-    iVar4 = fn_82F6DF30(cVar1);
+    iVar3 = tolower(*param_2);
+    iVar4 = tolower(cVar1);
     uVar2 = 0xffffffffffffffff;
     if (iVar3 <= iVar4) {
       uVar2 = 1;

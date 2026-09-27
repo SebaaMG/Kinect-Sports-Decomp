@@ -38,26 +38,26 @@ void fn_83089FA0(int param_1,int param_2,int param_3,code *param_4)
   int iVar5;
   int iVar6;
   int iVar7;
-  undefined8 auStack_50 [10];
+  undefined8 auStack_50;
   
   do {
-    auStack_50[0] = *(undefined8 *)((param_2 + param_3 >> 1) * 8 + param_1);
+    auStack_50 = *(undefined8 *)((param_2 + param_3 >> 1) * 8 + param_1);
     iVar7 = param_3;
     iVar6 = param_2;
     do {
       iVar5 = iVar6 * 8 + param_1;
-      cVar1 = (*param_4)(iVar5,auStack_50);
+      cVar1 = (*param_4)(iVar5,&auStack_50);
       while (cVar1 != '\0') {
         iVar5 = iVar5 + 8;
         iVar6 = iVar6 + 1;
-        cVar1 = (*param_4)(iVar5,auStack_50);
+        cVar1 = (*param_4)(iVar5,&auStack_50);
       }
       iVar5 = iVar7 * 8 + param_1;
-      cVar1 = (*param_4)(auStack_50,iVar5);
+      cVar1 = (*param_4)(&auStack_50,iVar5);
       while (cVar1 != '\0') {
         iVar5 = iVar5 + -8;
         iVar7 = iVar7 + -1;
-        cVar1 = (*param_4)(auStack_50,iVar5);
+        cVar1 = (*param_4)(&auStack_50,iVar5);
       }
       if (iVar7 < iVar6) break;
       if (iVar7 != iVar6) {

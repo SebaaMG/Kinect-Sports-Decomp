@@ -33,23 +33,23 @@ longlong fn_82E73380(int param_1,undefined8 param_2,undefined8 param_3)
 
 {
   longlong lVar1;
-  int *apiStack_30 [12];
+  int * apiStack_30;
   
-  apiStack_30[0] = (int *)0x0;
+  apiStack_30 = (int *)0x0;
   lVar1 = fn_82E73268();
   if (-1 < lVar1) {
     lVar1 = (**(code **)(**(int **)(param_1 + 0x1d8) + 0x20))
-                      (*(int **)(param_1 + 0x1d8),apiStack_30);
+                      (*(int **)(param_1 + 0x1d8),&apiStack_30);
     if (-1 < lVar1) {
-      lVar1 = (**(code **)(*apiStack_30[0] + 0x90))(apiStack_30[0],param_3);
+      lVar1 = (**(code **)(*apiStack_30 + 0x90))(apiStack_30,param_3);
       if ((-1 < lVar1) &&
-         (lVar1 = (**(code **)(*apiStack_30[0] + 0x98))(apiStack_30[0],param_2), -1 < lVar1)) {
-        lVar1 = fn_82E41B70(*(undefined4 *)(param_1 + 0xc),apiStack_30[0]);
+         (lVar1 = (**(code **)(*apiStack_30 + 0x98))(apiStack_30,param_2), -1 < lVar1)) {
+        lVar1 = fn_82E41B70(*(undefined4 *)(param_1 + 0xc),apiStack_30);
       }
     }
   }
-  if (apiStack_30[0] != (int *)0x0) {
-    (**(code **)(*apiStack_30[0] + 8))();
+  if (apiStack_30 != (int *)0x0) {
+    (**(code **)(*apiStack_30 + 8))();
   }
   return lVar1;
 }

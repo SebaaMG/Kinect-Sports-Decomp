@@ -49,7 +49,7 @@ void fn_8305E4E8(void)
   double dVar9;
   double dVar10;
   double dVar11;
-  undefined1 auStack_60 [96];
+  undefined1 auStack_60 [16];
   
   iVar2 = fn_82F6A548();
   iVar5 = 0;

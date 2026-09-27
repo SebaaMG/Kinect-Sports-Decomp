@@ -50,7 +50,7 @@ int fn_82D496A0(int param_1,ulonglong param_2,ulonglong param_3)
   undefined4 uVar15;
   undefined4 uVar16;
   undefined4 uVar17;
-  undefined1 auStack_270 [624];
+  undefined1 auStack_270 [512];
   
   iVar8 = 0;
   if ((param_3 & 0xffffffff) == 0) {

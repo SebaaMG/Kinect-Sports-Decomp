@@ -28,8 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 extern int fn_82F20F70();
 
 
-void fn_82F24118(int param_1,longlong param_2,longlong param_3,longlong param_4,longlong param_5,
-                  int param_6,int param_7,int param_8)
+void fn_82F24118(int param_1, longlong param_2, longlong param_3, longlong param_4, longlong param_5, int param_6, int param_7, int param_8, int in_stack_00000054)
 
 {
   byte bVar1;
@@ -41,7 +40,7 @@ void fn_82F24118(int param_1,longlong param_2,longlong param_3,longlong param_4,
   longlong lVar7;
   longlong lVar8;
   longlong lVar9;
-  int in_stack_00000054;
+
   
   param_2 = param_2 + -5;
   param_3 = param_3 + -5;

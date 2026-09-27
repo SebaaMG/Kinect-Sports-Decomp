@@ -47,10 +47,10 @@ ulonglong fn_82C225E8(int param_1,uint param_2)
   byte abStack_50 [4];
   undefined4 uStack_4c;
   undefined4 uStack_48;
-  undefined4 auStack_44 [17];
+  undefined4 auStack_44;
   
   piVar2 = *(int **)(param_1 + 0x1c);
-  auStack_44[0] = 0;
+  auStack_44 = 0;
   uStack_48 = 0;
   abStack_50[0] = 0;
   uVar6 = (**(code **)(*piVar2 + 0xc))(*piVar2);
@@ -69,7 +69,7 @@ LAB_82c22988:
     piVar3[0x12] = 0;
     if (param_2 == 0) goto LAB_82c22800;
     iVar10 = 1;
-    uVar6 = fn_82C1E828(param_1,abStack_50,auStack_44,&uStack_48,&uStack_4c);
+    uVar6 = fn_82C1E828(param_1,abStack_50,&auStack_44,&uStack_48,&uStack_4c);
     if ((int)uVar6 < 0) goto LAB_82c22988;
     uVar6 = (ulonglong)abStack_50[0];
     *piVar3 = 0;
@@ -88,7 +88,7 @@ LAB_82c22740:
         piVar3[2] = (uint)uVar6 & 1;
         piVar3[3] = piVar3[3] + 1;
         if (iVar10 + 1U <= param_2) {
-          uVar6 = fn_82C1E828(param_1,abStack_50,auStack_44,&uStack_48,&uStack_4c);
+          uVar6 = fn_82C1E828(param_1,abStack_50,&auStack_44,&uStack_48,&uStack_4c);
           if ((int)uVar6 < 0) goto LAB_82c22988;
           *(undefined1 *)(piVar3 + 6) = 4;
           *(undefined1 *)((int)piVar3 + 0x19) = 3;
@@ -206,7 +206,7 @@ LAB_82c2293c:
           *(longlong *)(piVar2 + 2) = *(longlong *)(piVar2 + 2) + 2;
           piVar3[3] = *(byte *)(piVar3 + 4) + 1;
           if (param_2 < 4) goto LAB_82c22800;
-          uVar6 = fn_82C1E828(param_1,abStack_50,auStack_44,&uStack_48,&uStack_4c);
+          uVar6 = fn_82C1E828(param_1,abStack_50,&auStack_44,&uStack_48,&uStack_4c);
           if (-1 < (int)uVar6) {
             uVar6 = (ulonglong)abStack_50[0];
             goto LAB_82c22740;

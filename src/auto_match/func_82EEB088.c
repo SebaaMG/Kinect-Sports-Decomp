@@ -34,7 +34,7 @@ undefined8 fn_82EEB088(int param_1,int param_2,char param_3,undefined2 *param_4)
 {
   int *piVar1;
   undefined8 uVar2;
-  int aiStack_40 [16];
+  int aiStack_40;
   
   uVar2 = 0;
   if (param_4 == (undefined2 *)0x0) {
@@ -48,9 +48,9 @@ undefined8 fn_82EEB088(int param_1,int param_2,char param_3,undefined2 *param_4)
         *param_4 = *(undefined2 *)((int)piVar1 + 6);
         return 0;
       }
-      aiStack_40[0] = 0;
-      fn_82E58BE8(param_1,aiStack_40);
-      if (aiStack_40[0] != 0) {
+      aiStack_40 = 0;
+      fn_82E58BE8(param_1,&aiStack_40);
+      if (aiStack_40 != 0) {
         fn_82E4FE40();
       }
     }

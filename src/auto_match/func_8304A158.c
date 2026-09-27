@@ -48,7 +48,7 @@ char fn_8304A158(int param_1)
   int *piVar8;
   uint uStack_60;
   undefined4 uStack_5c;
-  undefined4 auStack_58 [22];
+  undefined4 auStack_58;
   
   cVar6 = '\x01';
   piVar8 = (int *)(param_1 + 0x60);
@@ -75,7 +75,7 @@ LAB_8304a1d0:
           cVar6 = (iVar2 != 0) + '\x01';
         }
         else {
-          iVar3 = fn_83048F80(iVar2,lVar4,(undefined4 *)(param_1 + 0x44),auStack_58,&uStack_5c
+          iVar3 = fn_83048F80(iVar2,lVar4,(undefined4 *)(param_1 + 0x44),&auStack_58,&uStack_5c
                                    );
           uVar1 = uStack_60;
           if (iVar3 == 1) {
@@ -83,7 +83,7 @@ LAB_8304a1d0:
             iVar2 = fn_8307E600(*(undefined4 *)(param_1 + 0x28),0,iVar2,uVar1);
             cVar6 = (iVar2 != 0) + '\x01';
             if (cVar6 == '\x01') {
-              fn_8307E570(*(undefined4 *)(param_1 + 0x28),0,auStack_58[0],uStack_5c);
+              fn_8307E570(*(undefined4 *)(param_1 + 0x28),0,auStack_58,uStack_5c);
               *(undefined4 *)(param_1 + 0x44) = 0;
             }
           }

@@ -37,13 +37,13 @@ void fn_82FFA118(int param_1)
 
 {
   int *piVar1;
-  int iStack_40;
-  uint uStack_3c;
+  struct { int first; uint second; } stack_pair_40;
+
   int *piStack_38;
   
   piVar1 = (int *)(param_1 + 0x41c);
   if (*(int *)(param_1 + 0x41c) != -1) {
-    fn_82FF4618(&iStack_40,piVar1);
+    fn_82FF4618(&stack_pair_40.first,piVar1);
 joined_r0x82ffa148:
     if (piStack_38 != (int *)0x0) {
       do {
@@ -52,9 +52,9 @@ joined_r0x82ffa148:
           piStack_38 = (int *)*piStack_38;
         } while (piStack_38 != (int *)0x0);
         do {
-          uStack_3c = uStack_3c + 1;
-          if (0x1e < uStack_3c) goto joined_r0x82ffa148;
-          piStack_38 = *(int **)(uStack_3c * 4 + iStack_40);
+          stack_pair_40.second = stack_pair_40.second + 1;
+          if (0x1e < stack_pair_40.second) goto joined_r0x82ffa148;
+          piStack_38 = *(int **)(stack_pair_40.second * 4 + stack_pair_40.first);
         } while (piStack_38 == (int *)0x0);
       } while( true );
     }

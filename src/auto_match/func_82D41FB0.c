@@ -37,7 +37,7 @@ ulonglong fn_82D41FB0(int *param_1)
   ulonglong uVar1;
   int iVar2;
   char *pcVar3;
-  undefined1 auStack_230 [16];
+  undefined1 auStack_230 [1];
   undefined1 auStack_220 [520];
   
   if ((ulonglong)(uint)param_1[0x2d] + (ulonglong)(uint)param_1[0x2a] == 0) {

@@ -43,7 +43,7 @@ void fn_82CF7020(int param_1,int param_2,int *param_3)
   int *piVar9;
   longlong lVar10;
   int iStack_54;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [1];
   
   uVar8 = *(uint *)(param_1 + 8);
   uVar1 = *(undefined4 *)((param_2 + 0x25) * 4 + param_1);

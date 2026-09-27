@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_14c;
 extern int fn_82F08110();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 void fn_82F081B8(undefined8 param_1,int param_2,undefined2 *param_3,longlong param_4,
@@ -52,7 +52,7 @@ void fn_82F081B8(undefined8 param_1,int param_2,undefined2 *param_3,longlong par
   undefined2 *puVar16;
   longlong lVar17;
   short asStack_150 [2];
-  undefined1 auStack_14c [332];
+  undefined1 auStack_14c [172];
   
   lVar15 = 1;
   lVar17 = param_4 + 0x80;
@@ -90,7 +90,7 @@ void fn_82F081B8(undefined8 param_1,int param_2,undefined2 *param_3,longlong par
         iVar9 = uVar8 << 2;
       } while (uVar8 < 0x40);
       *psVar12 = sVar6;
-      fn_82F68CC0(lVar14 + 4,auStack_14c,((longlong)sVar6 - 2U & 0x7fffffff) << 1);
+      memcpy(lVar14 + 4,auStack_14c,((longlong)sVar6 - 2U & 0x7fffffff) << 1);
     }
     lVar15 = lVar15 + 1;
     param_3 = puVar16 + 8;
@@ -125,7 +125,7 @@ void fn_82F081B8(undefined8 param_1,int param_2,undefined2 *param_3,longlong par
       iVar9 = uVar8 << 2;
     } while (uVar8 < 0x40);
     psVar12[1] = sVar6;
-    fn_82F68CC0(lVar14 + 0x104,auStack_14c,((longlong)sVar6 - 2U & 0x7fffffff) << 1);
+    memcpy(lVar14 + 0x104,auStack_14c,((longlong)sVar6 - 2U & 0x7fffffff) << 1);
   }
   lVar7 = lVar7 + 0x200;
   puVar3[0x100] = puVar16[0x10];
@@ -152,7 +152,7 @@ void fn_82F081B8(undefined8 param_1,int param_2,undefined2 *param_3,longlong par
       iVar9 = uVar8 << 2;
     } while (uVar8 < 0x40);
     psVar12[2] = sVar6;
-    fn_82F68CC0(lVar14 + 0x204,auStack_14c,((longlong)sVar6 - 2U & 0x7fffffff) << 1);
+    memcpy(lVar14 + 0x204,auStack_14c,((longlong)sVar6 - 2U & 0x7fffffff) << 1);
   }
   return;
 }

@@ -37,7 +37,7 @@ char * fn_82D4CA48(char *param_1,int param_2,undefined8 param_3,undefined8 param
   undefined8 uVar1;
   longlong lVar2;
   undefined1 auStack_70 [32];
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [32];
   
   uVar1 = fn_82D4C8B0(param_3,param_2 + 0x20,*(undefined4 *)(param_2 + 0x10),auStack_50,
                           auStack_70);

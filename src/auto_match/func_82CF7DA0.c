@@ -50,7 +50,7 @@ undefined8 fn_82CF7DA0(int param_1,int *param_2)
   undefined4 *puVar12;
   int iVar13;
   undefined4 *puVar14;
-  undefined1 auStack_90 [144];
+  undefined1 auStack_90 [80];
   
   RtlEnterCriticalSection(param_1 + 0x18);
   fn_82D01108(param_2);

@@ -35,16 +35,16 @@ extern unsigned int uStack_30;
 void fn_82DC4C10(int param_1,undefined8 param_2)
 
 {
-  undefined4 uStack_30;
-  undefined4 uStack_2c;
+  struct { undefined4 first; undefined4 second; } stack_pair_30;
+
   undefined4 uStack_28;
   
-  uStack_30 = 0;
-  uStack_2c = 0;
+  stack_pair_30.first = 0;
+  stack_pair_30.second = 0;
   *(byte *)(param_1 + 0x25) = *(byte *)(param_1 + 0x25) & 0x3f;
   uStack_28 = 0x80000000;
   fn_82DAF6C8();
-  fn_82D91828(param_1,*(undefined4 *)(param_1 + 0x18),param_2,&uStack_30);
+  fn_82D91828(param_1,*(undefined4 *)(param_1 + 0x18),param_2,&stack_pair_30.first);
   return;
 }
 

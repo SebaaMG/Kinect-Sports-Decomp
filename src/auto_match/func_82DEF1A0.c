@@ -38,7 +38,7 @@ void fn_82DEF1A0(int param_1,ulonglong param_2)
   int iVar3;
   longlong lVar4;
   ulonglong uVar5;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [1];
   
   piVar1 = *(int **)(param_1 + 0x50);
   iVar2 = piVar1[4];

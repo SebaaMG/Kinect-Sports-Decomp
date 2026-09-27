@@ -28,13 +28,12 @@ typedef struct { U64 lo, hi; } V16;
 extern int fn_82F07E00();
 
 
-void fn_82ED5EB0(int param_1,longlong param_2,undefined8 param_3,undefined8 param_4,
-                  undefined8 param_5,undefined8 param_6,undefined8 param_7,undefined8 param_8)
+void fn_82ED5EB0(int param_1, longlong param_2, undefined8 param_3, undefined8 param_4, undefined8 param_5, undefined8 param_6, undefined8 param_7, undefined8 param_8, byte in_stack_00000057, undefined4 in_stack_0000005c, undefined4 in_stack_00000064)
 
 {
-  byte in_stack_00000057;
-  undefined4 in_stack_0000005c;
-  undefined4 in_stack_00000064;
+
+
+
   
   if ((in_stack_00000057 & 2) != 0) {
     fn_82F07E00(param_1,param_5,param_6,param_4,*(undefined4 *)(param_1 + 0x2038),

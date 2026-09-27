@@ -25,7 +25,7 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F6EDF8();
+extern int toupper();
 
 
 undefined8 fn_82C10A40(undefined1 *param_1,undefined1 *param_2)
@@ -40,8 +40,8 @@ undefined8 fn_82C10A40(undefined1 *param_1,undefined1 *param_2)
   iVar5 = 0;
   do {
     if ((param_2[iVar5] == '\0') || (param_1[iVar5] == '\0')) goto LAB_82c10ac4;
-    iVar2 = fn_82F6EDF8(*param_1);
-    iVar3 = fn_82F6EDF8(*param_2);
+    iVar2 = toupper(*param_1);
+    iVar3 = toupper(*param_2);
     if (iVar2 != iVar3) goto LAB_82c10ac4;
     cVar4 = (char)iVar5 + '\x01';
     iVar5 = (int)cVar4;

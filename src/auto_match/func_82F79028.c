@@ -31,7 +31,7 @@ typedef struct { U64 lo, hi; } V16;
 #define _uStack00000030 ((*(U64*)&uStack00000030))
 extern int fn_82D7E470();
 extern int fn_82F78F98();
-extern int fn_82F79400();
+extern int _ctrlfp();
 extern unsigned int iStack_3c;
 extern unsigned int lbl_831BBCB0;
 extern unsigned int uStack00000020;
@@ -63,8 +63,8 @@ fn_82F79028(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefined8 
   undefined4 uStack0000002c;
   undefined4 uStack00000030;
   undefined4 uStack00000034;
-  undefined4 uStack_40;
-  int iStack_3c;
+  struct { undefined4 first; int second; } stack_pair_40;
+
   undefined4 uStack_38;
   undefined4 uStack_34;
   undefined4 uStack_30;
@@ -76,19 +76,19 @@ fn_82F79028(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefined8 
   iVar1 = 0;
   do {
     if (*piVar2 == param_5) {
-      iStack_3c = *(int *)(iVar1 * 8 + -0x7ce4434c);
+      stack_pair_40.second = *(int *)(iVar1 * 8 + -0x7ce4434c);
       goto LAB_82f79088;
     }
     piVar2 = piVar2 + 2;
     iVar1 = iVar1 + 1;
   } while ((int)piVar2 < -0x7ce44268);
-  iStack_3c = 0;
+  stack_pair_40.second = 0;
 LAB_82f79088:
   _uStack00000020 = param_1;
   _uStack00000028 = param_2;
   _uStack00000030 = param_3;
-  if (iStack_3c == 0) {
-    fn_82F79400(in_r8,0xffffffffc007feff);
+  if (stack_pair_40.second == 0) {
+    _ctrlfp(in_r8,0xffffffffc007feff);
     fn_82F78F98(param_4);
   }
   else {
@@ -98,15 +98,15 @@ LAB_82f79088:
     uStack0000002c = (undefined4)param_2;
     uStack00000030 = (undefined4)((ulonglong)param_3 >> 0x20);
     uStack00000034 = (undefined4)param_3;
-    uStack_40 = (undefined4)param_4;
+    stack_pair_40.first = (undefined4)param_4;
     uStack_38 = uStack00000020;
     uStack_34 = uStack00000024;
     uStack_30 = uStack00000028;
     uStack_2c = uStack0000002c;
     uStack_28 = uStack00000030;
     uStack_24 = uStack00000034;
-    fn_82F79400(in_r8,0xffffffffc007feff);
-    iVar1 = fn_82D7E470(&uStack_40);
+    _ctrlfp(in_r8,0xffffffffc007feff);
+    iVar1 = fn_82D7E470(&stack_pair_40.first);
     if (iVar1 == 0) {
       fn_82F78F98(param_4);
     }

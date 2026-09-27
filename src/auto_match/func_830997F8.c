@@ -89,7 +89,7 @@ undefined8 fn_830997F8(undefined8 param_1,int param_2)
   undefined1 *puStack_8a0;
   int iStack_89c;
   uint uStack_898;
-  undefined1 auStack_890 [2192];
+  undefined1 auStack_890 [2160];
   
   iVar5 = KeTlsGetValue(lbl_8323B4A0);
   puVar12 = *(undefined4 **)(iVar5 + 4);

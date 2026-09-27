@@ -50,7 +50,7 @@ fn_83018DD8(int param_1,ulonglong param_2,int param_3,int param_4,int param_5,un
   undefined4 in_stack_00000054;
   undefined4 in_stack_0000005c;
   int *piStack_80;
-  undefined1 auStack_7c [124];
+  undefined1 auStack_7c [1];
   
   iVar3 = param_1 + 0x720;
   RtlEnterCriticalSection(iVar3);

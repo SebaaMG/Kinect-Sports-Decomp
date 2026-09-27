@@ -32,10 +32,10 @@ extern int fn_82F6D120();
 undefined4 fn_82F6D428(void)
 
 {
-  undefined4 auStack_10 [4];
+  undefined4 auStack_10;
   
-  auStack_10[0] = 0;
-  fn_82F6D120(auStack_10,0x40);
-  return auStack_10[0];
+  auStack_10 = 0;
+  fn_82F6D120(&auStack_10,0x40);
+  return auStack_10;
 }
 

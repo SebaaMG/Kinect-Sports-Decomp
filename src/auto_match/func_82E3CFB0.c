@@ -49,9 +49,9 @@ longlong fn_82E3CFB0(int param_1,int *param_2)
   int *piStack0000001c;
   int *piStack_240;
   int *piStack_23c;
-  uint auStack_238 [2];
-  undefined4 uStack_230;
-  undefined4 uStack_22c;
+  uint auStack_238;
+  struct { undefined4 first; undefined4 second; } stack_pair_230;
+
   uint auStack_228 [2];
   undefined1 auStack_220 [8];
   undefined8 uStack_218;
@@ -68,7 +68,7 @@ longlong fn_82E3CFB0(int param_1,int *param_2)
     piStack_240 = (int *)0x0;
     *(longlong *)(param_1 + 0x70) = *(longlong *)(param_1 + 0x70) + 1;
     auStack_228[0] = 0;
-    uStack_22c = 0;
+    stack_pair_230.second = 0;
     piStack0000001c = param_2;
     lVar1 = (**(code **)(*param_2 + 0x9c))(param_2,auStack_228);
     piVar2 = piStack_23c;
@@ -84,15 +84,15 @@ longlong fn_82E3CFB0(int param_1,int *param_2)
           if ((lVar1 < 0) ||
              (lVar1 = fn_82E65CB8(piStack_23c,&piStack_240), piVar2 = piStack_23c,
              piVar3 = piStack_240, lVar1 < 0)) goto LAB_82e3d508;
-          auStack_238[0] = 0;
-          lVar1 = (**(code **)(*piStack_240 + 0x14))(piStack_240,0,auStack_238);
+          auStack_238 = 0;
+          lVar1 = (**(code **)(*piStack_240 + 0x14))(piStack_240,0,&auStack_238);
           piVar2 = piStack_23c;
           piVar3 = piStack_240;
           if (lVar1 < 0) goto LAB_82e3d508;
-          uStack_230 = 0;
+          stack_pair_230.first = 0;
           lVar1 = (**(code **)(**(int **)(param_1 + 0x4c) + 0x24))
-                            (*(int **)(param_1 + 0x4c),piStack_240,0,auStack_238[0],uVar4,
-                             &uStack_230);
+                            (*(int **)(param_1 + 0x4c),piStack_240,0,auStack_238,uVar4,
+                             &stack_pair_230.first);
           piVar2 = piStack_23c;
           piVar3 = piStack_240;
           if (lVar1 < 0) goto LAB_82e3d508;
@@ -108,7 +108,7 @@ longlong fn_82E3CFB0(int param_1,int *param_2)
           }
           piVar3 = (int *)0x0;
           uVar5 = uVar5 + 1;
-          uVar4 = auStack_238[0] + uVar4;
+          uVar4 = auStack_238 + uVar4;
         } while ((uVar5 & 0xffffffff) < (ulonglong)auStack_228[0]);
       }
       if (((int)lVar1 == 0) && ((uVar4 & 0xffffffff) == (ulonglong)*(uint *)(param_1 + 0x54))) {

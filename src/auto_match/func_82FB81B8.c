@@ -36,21 +36,21 @@ undefined8 fn_82FB81B8(longlong param_1)
 {
   int iVar1;
   int *piVar2;
-  int iStack_20;
-  undefined4 uStack_1c;
+  struct { int first; undefined4 second; } stack_pair_20;
+
   int *piStack_18;
   
   piStack_18 = (int *)0x0;
-  uStack_1c = ((((U64)(uStack_1c)) & (~(((U64)0xFFFF) << 16))) | ((((U64)((((U64)(uStack_1c) >> 16) & 0xFFFF) & 0x3fff)) & ((U64)0xFFFF)) << 16));
-  uStack_1c = (uint)(((U64)(uStack_1c) >> 16) & 0xFFFF);
-  iVar1 = fn_82FB7AC0(&iStack_20);
+  stack_pair_20.second = ((((U64)(stack_pair_20.second)) & (~(((U64)0xFFFF) << 16))) | ((((U64)((((U64)(stack_pair_20.second) >> 16) & 0xFFFF) & 0x3fff)) & ((U64)0xFFFF)) << 16));
+  stack_pair_20.second = (uint)(((U64)(stack_pair_20.second) >> 16) & 0xFFFF);
+  iVar1 = fn_82FB7AC0(&stack_pair_20.first);
   if ((iVar1 == 1) && (piVar2 = (int *)fn_82FB9630(param_1 + 4), piVar2 != (int *)0x0)) {
-    *piVar2 = iStack_20;
-    piVar2[1] = uStack_1c;
+    *piVar2 = stack_pair_20.first;
+    piVar2[1] = stack_pair_20.second;
     piVar2[2] = (int)piStack_18;
     return 1;
   }
-  if ((*(int *)(iStack_20 + 0x1c) == 0) || (*(int *)(iStack_20 + 0x1c) == 2)) {
+  if ((*(int *)(stack_pair_20.first + 0x1c) == 0) || (*(int *)(stack_pair_20.first + 0x1c) == 2)) {
     if (piStack_18 != (int *)0x0) {
       (**(code **)(*piStack_18 + 4))();
     }

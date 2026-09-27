@@ -43,7 +43,7 @@ longlong fn_82E76830(int param_1,ulonglong param_2)
   int *piStack_3c;
   int *piStack_38;
   int iStack_34;
-  int aiStack_30 [12];
+  int aiStack_30 [2];
   
   if ((param_2 & 0xffffffff) == 0) {
     lVar2 = -0x7ff8ffa9;

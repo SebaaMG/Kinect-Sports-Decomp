@@ -38,10 +38,10 @@ undefined8 fn_82C28A68(int param_1,ulonglong param_2)
   undefined8 uVar4;
   ulonglong uVar5;
   longlong lVar6;
-  undefined4 auStack_30 [12];
+  undefined4 auStack_30;
   
   iVar1 = *(int *)(param_1 + 0x2c);
-  auStack_30[0] = 0;
+  auStack_30 = 0;
   while( true ) {
     lVar6 = 0;
     uVar5 = 0;
@@ -54,11 +54,11 @@ undefined8 fn_82C28A68(int param_1,ulonglong param_2)
     if (*(longlong *)(iVar1 + 0x40) + (param_2 & 0xffffffff) <= uVar5 + lVar6) {
       return 0;
     }
-    uVar4 = (**(code **)(*(int *)(iVar1 + 0x4c) + 4))(*(int *)(iVar1 + 0x4c),auStack_30);
+    uVar4 = (**(code **)(*(int *)(iVar1 + 0x4c) + 4))(*(int *)(iVar1 + 0x4c),&auStack_30);
     if ((int)uVar4 < 0) {
       return uVar4;
     }
-    uVar4 = fn_82C27F48(param_1,auStack_30[0]);
+    uVar4 = fn_82C27F48(param_1,auStack_30);
     if ((int)uVar4 < 0) break;
     *(int *)(iVar1 + 0x90) = *(int *)(iVar1 + 0x8c) + *(int *)(iVar1 + 0x90);
     if (*(longlong *)(iVar1 + 0x40) + (param_2 & 0xffffffff) <= uVar5 + lVar6) {

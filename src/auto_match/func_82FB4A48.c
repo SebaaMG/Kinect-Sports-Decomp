@@ -40,8 +40,8 @@ void fn_82FB4A48(int param_1,int param_2,char param_3)
 
 {
   int iVar1;
-  int iStack_30;
-  undefined4 uStack_2c;
+  struct { int first; undefined4 second; } stack_pair_30;
+
   undefined4 uStack_28;
   
   if (param_3 != '\0') {
@@ -53,7 +53,7 @@ void fn_82FB4A48(int param_1,int param_2,char param_3)
       uStack_28 = 0;
       _iStack_30 = CONCAT44((int)((double)(longlong)iVar1 * lbl_8216CC20),
                             *(undefined4 *)(param_1 + 0x3c));
-      fn_82FA8948(*(undefined4 *)(param_1 + 0x40),&iStack_30,0);
+      fn_82FA8948(*(undefined4 *)(param_1 + 0x40),&stack_pair_30.first,0);
     }
     (**(code **)(**(int **)(param_1 + 0x40) + 0x2c))(*(int **)(param_1 + 0x40),param_1);
   }

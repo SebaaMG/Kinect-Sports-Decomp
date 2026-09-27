@@ -25,9 +25,9 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F6CBB0();
+extern int _initterm();
 extern int fn_82F6CD94();
-extern int fn_82F71CD0();
+extern int _lock();
 extern int iRam832633b0;
 extern int iRam832633b4;
 extern unsigned int iStack0000001c;
@@ -36,7 +36,7 @@ extern unsigned int lbl_8329F724;
 extern unsigned int lbl_8329F728;
 
 
-void fn_82F6CC10(int param_1,int param_2)
+void doexit(int param_1,int param_2)
 
 {
   code *pcVar1;
@@ -48,7 +48,7 @@ void fn_82F6CC10(int param_1,int param_2)
   int iStack0000001c;
   
   iStack0000001c = param_2;
-  fn_82F71CD0(8);
+  _lock(8);
   if (iRam832633b4 != 1) {
     iVar2 = -0x7cda0000;
     if (iRam832633b0 == 1) {
@@ -78,9 +78,9 @@ void fn_82F6CC10(int param_1,int param_2)
           }
         }
       }
-      fn_82F6CBB0(0xffffffff83153548,0xffffffff83153554);
+      _initterm(0xffffffff83153548,0xffffffff83153554);
     }
-    fn_82F6CBB0(0xffffffff83153558,0xffffffff8315355c);
+    _initterm(0xffffffff83153558,0xffffffff8315355c);
   }
   fn_82F6CD94();
   if (iStack0000001c == 0) {

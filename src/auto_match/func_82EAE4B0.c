@@ -200,7 +200,7 @@ void fn_82EAE4B0(int param_1,undefined4 param_2,uint param_3,int param_4,int par
   undefined1 auStack_410 [208];
   undefined1 auStack_340 [208];
   undefined1 auStack_270 [176];
-  undefined1 auStack_1c0 [448];
+  undefined1 auStack_1c0 [368];
   
   puStack_6e4 = auStack_1c0;
   iStack_71c = 0;

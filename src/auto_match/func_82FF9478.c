@@ -39,21 +39,21 @@ undefined8 fn_82FF9478(int param_1,int *param_2)
   undefined8 uVar1;
   ulonglong uVar3;
   int iVar4;
-  uint auStack_40 [2];
-  int iStack_38;
-  uint uStack_34;
+  uint auStack_40;
+  struct { int first; uint second; } stack_pair_38;
+
   
   iVar4 = param_1 + 4;
-  iVar2 = fn_82FF8938(iVar4,&iStack_38,8);
-  if ((iVar2 == 1) && (iStack_38 == 0x424b4844)) {
+  iVar2 = fn_82FF8938(iVar4,&stack_pair_38.first,8);
+  if ((iVar2 == 1) && (stack_pair_38.first == 0x424b4844)) {
     uVar1 = fn_82FF8938(iVar4,param_2,0x10);
-    uVar3 = (ulonglong)uStack_34 - 0x10;
+    uVar3 = (ulonglong)stack_pair_38.second - 0x10;
     if ((int)uVar1 == 1) {
       if ((uVar3 & 0xffffffff) != 0) {
-        auStack_40[0] = 0;
-        uVar1 = fn_82FF8988(iVar4,uVar3,auStack_40);
+        auStack_40 = 0;
+        uVar1 = fn_82FF8988(iVar4,uVar3,&auStack_40);
         if ((int)uVar1 != 1) goto LAB_82ff9530;
-        if ((ulonglong)auStack_40[0] != (uVar3 & 0xffffffff)) {
+        if ((ulonglong)auStack_40 != (uVar3 & 0xffffffff)) {
           uVar1 = 0x38;
           goto LAB_82ff9530;
         }

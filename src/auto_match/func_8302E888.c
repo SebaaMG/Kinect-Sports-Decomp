@@ -48,8 +48,8 @@ undefined8 fn_8302E888(int param_1,int *param_2)
   undefined8 uVar3;
   undefined4 uStack_40;
   undefined4 uStack_3c;
-  undefined4 uStack_30;
-  undefined4 uStack_2c;
+  struct { undefined4 first; undefined4 second; } stack_pair_30;
+
   undefined4 *puStack_28;
   undefined1 uStack_24;
   undefined1 uStack_23;
@@ -66,8 +66,8 @@ undefined8 fn_8302E888(int param_1,int *param_2)
     *param_2 = 1;
     uStack_40 = 0;
     uStack_3c = 0;
-    uStack_30 = 0;
-    uStack_2c = 0;
+    stack_pair_30.first = 0;
+    stack_pair_30.second = 0;
     uStack_24 = 0;
     uStack_23 = 0;
     iStack_20 = 0;
@@ -83,7 +83,7 @@ undefined8 fn_8302E888(int param_1,int *param_2)
       uVar3 = 2;
     }
     else {
-      param_2[0x1e] = (int)&uStack_30;
+      param_2[0x1e] = (int)&stack_pair_30.first;
       uVar3 = fn_8302E350(param_1,param_2);
       if (iStack_20 != 0) {
         fn_83032D88(iStack_20);

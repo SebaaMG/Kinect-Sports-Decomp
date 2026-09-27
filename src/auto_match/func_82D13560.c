@@ -48,8 +48,8 @@ void fn_82D13560(int param_1,int param_2,int *param_3,int *param_4)
   uint uStack_4c;
   uint uStack_48;
   uint uStack_44;
-  uint uStack_40;
-  uint uStack_3c;
+  struct { uint first; uint second; } stack_pair_40;
+
   
   iVar4 = *param_3;
   if ((iVar4 != 0) && (*(int *)(iVar4 + 0x40) != *(int *)(param_1 + 0x1ac))) {
@@ -77,10 +77,10 @@ void fn_82D13560(int param_1,int param_2,int *param_3,int *param_4)
       else {
         iVar4 = param_3[1] + -1;
       }
-      uStack_40 = *(uint *)((iVar4 + 5) * 4 + *param_3);
-      uStack_3c = uStack_40 & 3;
-      uStack_40 = uStack_40 & 0xfffffffc;
-      fn_82D13560(param_1,param_2,&uStack_40,param_4);
+      stack_pair_40.first = *(uint *)((iVar4 + 5) * 4 + *param_3);
+      stack_pair_40.second = stack_pair_40.first & 3;
+      stack_pair_40.first = stack_pair_40.first & 0xfffffffc;
+      fn_82D13560(param_1,param_2,&stack_pair_40.first,param_4);
       uVar3 = *(uint *)((param_3[1] + 5) * 4 + *param_3);
       if ((uVar3 & 0xfffffffc) != 0) {
         *(undefined4 *)(((uVar3 & 3) + 5) * 4 + (uVar3 & 0xfffffffc)) = 0;

@@ -62,7 +62,7 @@ undefined4 * fn_82D43378(undefined4 *param_1,int param_2)
   undefined4 in_register_000100d4;
   undefined4 in_register_000100d8;
   undefined4 in_vr13;
-  undefined4 auStack_60 [24];
+  undefined4 auStack_60;
   
   fn_82D48E38(param_1,0xe,1);
   *param_1 = &lbl_821385EC;
@@ -112,10 +112,10 @@ undefined4 * fn_82D43378(undefined4 *param_1,int param_2)
     if ((param_1[0x35] & 0x80000000) == 0) {
       (**(code **)(*piVar1 + 0x10))(piVar1,*puVar16,uVar2,2);
     }
-    auStack_60[0] = *(undefined4 *)(param_2 + 0x44);
-    uVar9 = (**(code **)(*piVar1 + 0xc))(piVar1,auStack_60,2);
+    auStack_60 = *(undefined4 *)(param_2 + 0x44);
+    uVar9 = (**(code **)(*piVar1 + 0xc))(piVar1,&auStack_60,2);
     *puVar16 = uVar9;
-    param_1[0x35] = auStack_60[0];
+    param_1[0x35] = auStack_60;
   }
   uVar2 = *(uint *)(param_2 + 0x44);
   uVar10 = (ulonglong)uVar2;

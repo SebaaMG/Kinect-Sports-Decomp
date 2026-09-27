@@ -48,7 +48,7 @@ undefined8 fn_82F14A70(int param_1,uint *param_2)
   int iStack_48;
   int iStack_44;
   int iStack_40;
-  uint auStack_3c [15];
+  uint auStack_3c;
   
   uVar1 = *param_2;
   puVar2 = *(uint **)(*(int *)(param_1 + 0x48) + 0x58);
@@ -59,13 +59,13 @@ undefined8 fn_82F14A70(int param_1,uint *param_2)
     if ((((iVar4 <= iVar6) && (-iVar6 <= iVar4)) &&
         (iVar5 = (int)(uVar1 << 0x10) >> 0x14, iVar5 <= iVar6)) && (-iVar6 <= iVar5)) {
       fn_82F147C8(iVar4,&iStack_48,&iStack_44,&iStack_40);
-      fn_82F147C8(iVar5,&iStack_4c,auStack_3c,&uStack_50);
+      fn_82F147C8(iVar5,&iStack_4c,&auStack_3c,&uStack_50);
       iStack_48 = iStack_4c * 6 + iStack_48;
       if (uVar3 != 0) {
         uStack_50 = uStack_50 - (iStack_4c == 5);
       }
       *puVar2 = (uStack_50 + iStack_40 & 0x3f) << 0x12 |
-                ((iStack_44 << (uStack_50 & 0x3f) | auStack_3c[0]) & 0x1ffff) << 1 |
+                ((iStack_44 << (uStack_50 & 0x3f) | auStack_3c) & 0x1ffff) << 1 |
                 *puVar2 & 0xff000001;
       goto LAB_82f14b8c;
     }

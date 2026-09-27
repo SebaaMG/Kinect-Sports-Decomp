@@ -35,7 +35,7 @@ undefined8 fn_82E40EC8(int param_1,int *param_2)
   undefined8 uVar1;
   ulonglong uVar2;
   ulonglong uStack_40;
-  longlong alStack_38 [7];
+  longlong alStack_38;
   
   uStack_40 = 0;
   uVar2 = 0;
@@ -46,12 +46,12 @@ undefined8 fn_82E40EC8(int param_1,int *param_2)
     uVar1 = (**(code **)(*param_2 + 0x10))(param_2,&uStack_40);
     if ((-1 < (int)uVar1) && (uStack_40 != 0)) {
       do {
-        alStack_38[0] = 0;
-        uVar1 = fn_82E406B8(param_1,param_2,uVar2,alStack_38);
+        alStack_38 = 0;
+        uVar1 = fn_82E406B8(param_1,param_2,uVar2,&alStack_38);
         if ((int)uVar1 < 0) {
           return 0;
         }
-        uVar2 = alStack_38[0] + uVar2;
+        uVar2 = alStack_38 + uVar2;
       } while (uVar2 < uStack_40);
     }
   }

@@ -38,14 +38,14 @@ undefined8 fn_82EE1C28(int param_1,short *param_2,short *param_3,short param_4)
   undefined8 uVar3;
   short sVar4;
   ulonglong uVar5;
-  uint auStack_50 [20];
+  uint auStack_50;
   
   sVar4 = 0;
   uVar5 = 0;
   if (*(int *)(param_1 + 0x254) != 0) {
     do {
-      uVar2 = fn_82EE1048(param_1 + 0x48,uVar5,auStack_50);
-      uVar2 = ((uVar2 & 0xffffffff) >> 0x1f) - 1 & (ulonglong)auStack_50[0];
+      uVar2 = fn_82EE1048(param_1 + 0x48,uVar5,&auStack_50);
+      uVar2 = ((uVar2 & 0xffffffff) >> 0x1f) - 1 & (ulonglong)auStack_50;
       if (uVar2 == 0) {
         return 0xffffffffc00d36bb;
       }

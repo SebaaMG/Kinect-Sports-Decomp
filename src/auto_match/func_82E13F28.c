@@ -69,7 +69,7 @@ fn_82E13F28(undefined8 param_1,undefined4 *param_2,undefined8 param_3,undefined8
   undefined2 uStack_7a;
   undefined4 uStack_78;
   undefined1 auStack_74 [20];
-  undefined **appuStack_60 [2];
+  undefined ** appuStack_60;
   undefined1 auStack_58 [16];
   int *piStack_48;
   
@@ -81,7 +81,7 @@ fn_82E13F28(undefined8 param_1,undefined4 *param_2,undefined8 param_3,undefined8
   fn_82D00388(auStack_a0,0);
   piVar3 = (int *)fn_82E13B70(param_1,param_3);
   piVar4 = (int *)fn_82E13B70(param_1,param_4);
-  fn_82E12770(appuStack_60,0,piVar4);
+  fn_82E12770(&appuStack_60,0,piVar4);
   uStack_78 = 0;
   uStack_7a = 1;
   ppuStack_80 = &lbl_8214A5D0;
@@ -91,7 +91,7 @@ fn_82E13F28(undefined8 param_1,undefined4 *param_2,undefined8 param_3,undefined8
     if (puVar1[2] != 0) {
       fn_82E09B50(&ppuStack_80);
     }
-    fn_82E12520(appuStack_60,*puVar1);
+    fn_82E12520(&appuStack_60,*puVar1);
   }
   (**(code **)(*piVar3 + 0x30))(piVar3,auStack_58);
   (**(code **)(*piVar4 + 0x24))(piVar4,&ppuStack_80);
@@ -132,12 +132,12 @@ fn_82E13F28(undefined8 param_1,undefined4 *param_2,undefined8 param_3,undefined8
   *piVar3 = (int)param_2;
   fn_82D003F0(auStack_74);
   ppuStack_80 = &lbl_8212FC60;
-  appuStack_60[0] = &lbl_8214AF58;
+  appuStack_60 = &lbl_8214AF58;
   if (piStack_48 != (int *)0x0) {
     fn_82CE4118();
   }
   fn_82D003F0(auStack_58);
-  appuStack_60[0] = &lbl_8212FC60;
+  appuStack_60 = &lbl_8212FC60;
   fn_82D003F0(auStack_a0);
   fn_82D003F0(auStack_90);
   iVar5 = fn_82CE5410();

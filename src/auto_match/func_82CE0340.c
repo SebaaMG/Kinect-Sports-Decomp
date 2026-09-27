@@ -35,14 +35,14 @@ uint fn_82CE0340(undefined4 param_1,undefined4 param_2,undefined4 param_3)
 {
   uint uVar1;
   uint uVar2;
-  undefined4 uStack_20;
-  undefined4 uStack_1c;
+  struct { undefined4 first; undefined4 second; } stack_pair_20;
+
   undefined4 uStack_18;
   
-  uStack_20 = param_1;
-  uStack_1c = param_2;
+  stack_pair_20.first = param_1;
+  stack_pair_20.second = param_2;
   uStack_18 = param_3;
-  uVar1 = XMsgInProcessCall(0xfa,0x7001b,&uStack_20,0);
+  uVar1 = XMsgInProcessCall(0xfa,0x7001b,&stack_pair_20.first,0);
   if ((int)uVar1 < 0) {
     uVar2 = uVar1 & 0xffff;
     if ((uVar1 & 0x1fff0000) != 0x70000) {

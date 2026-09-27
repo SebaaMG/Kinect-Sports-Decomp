@@ -43,7 +43,7 @@ undefined8 fn_830B9E98(int param_1)
   undefined8 uVar1;
   int iVar2;
   int iVar3;
-  undefined1 auStack_630 [1584];
+  undefined1 auStack_630 [1536];
   
   fn_830C0798(lbl_8329F084,param_1 + 0x57a0);
   iVar2 = param_1 + 0x43f0;

@@ -105,8 +105,8 @@ ulonglong fn_82C4C448(int param_1,int param_2,ushort param_3,uint param_4,int pa
   undefined2 uStack_4e2;
   undefined4 uStack_4e0;
   int iStack_4dc;
-  undefined4 uStack_4c0;
-  uint uStack_4bc;
+  struct { undefined4 first; uint second; } stack_pair_4c0;
+
   int iStack_4b8;
   undefined2 uStack_4b4;
   ushort uStack_4b2;
@@ -170,11 +170,11 @@ LAB_82c4ce8c:
         uVar11 = *(uint *)(iVar1 + 0x9c);
         iVar12 = *(int *)(iVar1 + 0xa0);
       }
-      uStack_4bc = param_4;
+      stack_pair_4c0.second = param_4;
       if (param_4 == 0) {
-        uStack_4bc = uVar11;
+        stack_pair_4c0.second = uVar11;
       }
-      *(uint *)(iVar1 + 0x3cc8) = uStack_4bc;
+      *(uint *)(iVar1 + 0x3cc8) = stack_pair_4c0.second;
       iStack_4e8 = aiStack_4fc[0];
       if (*(int *)(iVar1 + 0x3c04) == 0) {
         uVar13 = uVar11 + 0xf;
@@ -219,7 +219,7 @@ LAB_82c4ce8c:
           uStack_490 = 0xff;
         }
       }
-      uStack_4c0 = 0x28;
+      stack_pair_4c0.first = 0x28;
       iStack_4b8 = iVar12;
       if (*(int *)(iVar1 + 0x5618) == 0) {
         iStack_4b8 = *(int *)(iVar1 + 0x5668);
@@ -229,7 +229,7 @@ LAB_82c4ce8c:
       uStack_4a4 = 0;
       uStack_4a0 = 0;
       uStack_49c = 0;
-      uStack_4ac = param_3 * uStack_4bc * iVar12 >> 3;
+      uStack_4ac = param_3 * stack_pair_4c0.second * iVar12 >> 3;
       if (*(int *)(iVar1 + 0x3cd0) == 2) {
         iStack_4b8 = -iStack_4b8;
       }
@@ -249,7 +249,7 @@ LAB_82c4ce8c:
         }
         uVar11 = iStack_4e8 * iStack_4ec * 3;
         iStack_4dc = ((int)uVar11 >> 1) + (uint)((int)uVar11 < 0 && (uVar11 & 1) != 0);
-        uVar5 = fn_82CA2900(&uStack_500,&uStack_4f0,&uStack_4c0,uVar7,uVar8,0,0);
+        uVar5 = fn_82CA2900(&uStack_500,&uStack_4f0,&stack_pair_4c0.first,uVar7,uVar8,0,0);
         uVar10 = (ulonglong)uStack_500;
         *(undefined4 *)(iVar1 + 0x5498) = uVar5;
       }
@@ -262,7 +262,7 @@ LAB_82c4ce8c:
         }
         uVar11 = iStack_4e8 * iStack_4ec * 3;
         iStack_4dc = ((int)uVar11 >> 1) + (uint)((int)uVar11 < 0 && (uVar11 & 1) != 0);
-        uVar10 = fn_82CA2488(*(int *)(iVar1 + 0x5498),&uStack_4f0,&uStack_4c0,uVar7,uVar8,0,0);
+        uVar10 = fn_82CA2488(*(int *)(iVar1 + 0x5498),&uStack_4f0,&stack_pair_4c0.first,uVar7,uVar8,0,0);
         uStack_500 = (uint)uVar10;
       }
       if (uStack_500 != 0) {

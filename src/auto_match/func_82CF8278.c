@@ -45,10 +45,10 @@ void fn_82CF8278(int param_1)
   int *piVar5;
   int *piVar6;
   int iVar7;
-  undefined4 uStack_140;
-  undefined4 uStack_13c;
+  struct { undefined4 first; undefined4 second; } stack_pair_140;
+
   undefined4 uStack_138;
-  undefined1 auStack_130 [304];
+  undefined1 auStack_130 [272];
   
   if ((*(uint *)(*(int *)(param_1 + 0x44) + 4) & 0x7fffffff) != 0) {
     (**(code **)(param_1 + 0x3c))(0xffffffff82133868,*(undefined4 *)(param_1 + 0x40));
@@ -66,11 +66,11 @@ void fn_82CF8278(int param_1)
       do {
         iVar1 = *piVar5;
         iVar4 = iVar1 + iVar7 * 0x10;
-        uStack_140 = *(undefined4 *)(iVar4 + 4);
-        uStack_13c = *(undefined4 *)(iVar4 + 8);
+        stack_pair_140.first = *(undefined4 *)(iVar4 + 4);
+        stack_pair_140.second = *(undefined4 *)(iVar4 + 8);
         uStack_138 = *(undefined4 *)(iVar4 + 0xc);
-        fn_82CF7C08(param_1,0xffffffff82133854,*(undefined4 *)(iVar1 + iVar7 * 0x10),&uStack_140,
-                      uStack_140,iVar1);
+        fn_82CF7C08(param_1,0xffffffff82133854,*(undefined4 *)(iVar1 + iVar7 * 0x10),&stack_pair_140.first,
+                      stack_pair_140.first,iVar1);
         piVar5 = *(int **)(param_1 + 0x44);
         iVar7 = iVar7 + 1;
         if (iVar7 <= piVar5[2]) {

@@ -34,16 +34,16 @@ longlong fn_82E41B70(int param_1,int *param_2)
 {
   longlong lVar1;
   int iVar2;
-  undefined8 auStack_40 [8];
+  undefined8 auStack_40;
   
   if (param_2 == (int *)0x0) {
     lVar1 = -0x7ff8ffa9;
   }
   else {
-    auStack_40[0] = 0;
-    lVar1 = (**(code **)(*param_2 + 0x8c))(param_2,auStack_40);
+    auStack_40 = 0;
+    lVar1 = (**(code **)(*param_2 + 0x8c))(param_2,&auStack_40);
     if (-1 < lVar1) {
-      *(undefined8 *)(param_1 + 0x5b0) = auStack_40[0];
+      *(undefined8 *)(param_1 + 0x5b0) = auStack_40;
       lVar1 = (**(code **)(*param_2 + 0x94))(param_2,(undefined8 *)(param_1 + 0x5b8));
       if ((int)lVar1 == -0x3ff2c937) {
         lVar1 = 0;

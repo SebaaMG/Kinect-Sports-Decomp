@@ -47,7 +47,7 @@ undefined8 fn_830C0200(int param_1)
   undefined4 uVar4;
   int iVar5;
   int iVar6;
-  undefined1 auStack_630 [1584];
+  undefined1 auStack_630 [1536];
   
   iVar3 = *(int *)(param_1 + 0x54c8) * 0x8a0 + param_1;
   iVar6 = iVar3 + 0x3e70;

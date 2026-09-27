@@ -50,7 +50,7 @@ longlong fn_82E7DDC8(int param_1,int *param_2)
   undefined4 uStack_70;
   int *piStack_6c;
   int aiStack_68 [2];
-  uint auStack_60 [24];
+  uint auStack_60 [4];
   
   uVar1 = auStack_60[0];
   auStack_60[0] = auStack_60[0] & 0x81ffffff | 0x4000000;

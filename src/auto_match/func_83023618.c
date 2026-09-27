@@ -38,12 +38,12 @@ undefined8 fn_83023618(int param_1)
   uint uVar3;
   undefined4 *puVar4;
   longlong lVar5;
-  undefined4 uStack_40;
-  int iStack_3c;
+  struct { undefined4 first; int second; } stack_pair_40;
+
   undefined4 uStack_38;
   
-  puVar4 = &uStack_40;
-  uStack_40 = 0;
+  puVar4 = &stack_pair_40.first;
+  stack_pair_40.first = 0;
   lVar5 = 8;
   do {
     puVar4 = puVar4 + 1;
@@ -51,14 +51,14 @@ undefined8 fn_83023618(int param_1)
     lVar5 = lVar5 + -1;
   } while (lVar5 != 0);
   uVar3 = *(ushort *)(param_1 + 0x3e) + 1;
-  iStack_3c = (uint)*(ushort *)(param_1 + 0x4a) << 10;
+  stack_pair_40.second = (uint)*(ushort *)(param_1 + 0x4a) << 10;
   uStack_38 = *(undefined4 *)((*(ushort *)(param_1 + 0x3e) + 0x10) * 4 + param_1);
   *(short *)(param_1 + 0x3e) = (short)uVar3;
   if ((uVar3 & 0xffff) == 2) {
     *(undefined2 *)(param_1 + 0x3e) = 0;
   }
   *(short *)(param_1 + 0x48) = *(short *)(param_1 + 0x48) + -1;
-  iVar2 = (**(code **)(**(int **)(param_1 + 0x34) + 0x54))(*(int **)(param_1 + 0x34),&uStack_40,0);
+  iVar2 = (**(code **)(**(int **)(param_1 + 0x34) + 0x54))(*(int **)(param_1 + 0x34),&stack_pair_40.first,0);
   uVar1 = 2;
   if (-1 < iVar2) {
     uVar1 = 1;

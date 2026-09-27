@@ -36,10 +36,10 @@ longlong fn_82E24AA8(int param_1,ulonglong param_2,undefined8 param_3)
   longlong lVar2;
   int iVar3;
   int *piStack_30;
-  undefined4 auStack_2c [11];
+  undefined4 auStack_2c;
   
   piVar1 = *(int **)(param_1 + 0x10c);
-  auStack_2c[0] = 0;
+  auStack_2c = 0;
   piStack_30 = (int *)0x0;
   if ((param_2 & 0xffffffff) == 0) {
     lVar2 = (**(code **)(*piVar1 + 0x20))(piVar1,param_3);
@@ -49,7 +49,7 @@ longlong fn_82E24AA8(int param_1,ulonglong param_2,undefined8 param_3)
   }
   if (-1 < lVar2) {
     while (iVar3 = (**(code **)(**(int **)(param_1 + 0x10c) + 0x1c))
-                             (*(int **)(param_1 + 0x10c),auStack_2c,&piStack_30), -1 < iVar3) {
+                             (*(int **)(param_1 + 0x10c),&auStack_2c,&piStack_30), -1 < iVar3) {
       if (piStack_30 == (int *)0x0) {
         return lVar2;
       }

@@ -39,7 +39,7 @@ void fn_830EAB60(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefi
   uint in_r10;
   undefined1 in_vs32 [16];
   int in_stack_00000054;
-  undefined1 auStack_330 [816];
+  undefined1 auStack_330 [736];
   
   iVar1 = 4 << (in_r10 & 0x3f);
   iVar2 = 1 << (in_stack_00000054 == 0 & in_r10) + 2;

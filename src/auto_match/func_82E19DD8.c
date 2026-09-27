@@ -46,7 +46,7 @@ longlong fn_82E19DD8(int param_1,byte *param_2,undefined4 param_3)
   int iVar3;
   longlong lVar4;
   undefined1 auStack_230 [16];
-  undefined1 auStack_220 [520];
+  undefined1 auStack_220 [504];
   
   lVar4 = 0;
   switch(param_3) {

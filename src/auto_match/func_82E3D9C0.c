@@ -70,8 +70,8 @@ longlong fn_82E3D9C0(longlong param_1,int *param_2)
   undefined4 uStack_68;
   undefined4 uStack_64;
   undefined1 auStack_60 [16];
-  undefined4 uStack_50;
-  undefined4 uStack_4c;
+  struct { undefined4 first; undefined4 second; } stack_pair_50;
+
   undefined4 uStack_48;
   undefined4 uStack_44;
   undefined2 uStack_40;
@@ -108,13 +108,13 @@ longlong fn_82E3D9C0(longlong param_1,int *param_2)
                 lVar1 = (**(code **)(*param_2 + 0x34))(param_2,uVar4,&uStack_9e,auStack_8c);
                 if (lVar1 < 0) break;
                 puVar2 = (undefined4 *)fn_82E3ADF0(auStack_60,param_1,&uStack_70);
-                uStack_50 = *puVar2;
+                stack_pair_50.first = *puVar2;
                 piStack_90 = (int *)0x0;
-                uStack_4c = puVar2[1];
+                stack_pair_50.second = puVar2[1];
                 uStack_48 = puVar2[2];
                 uStack_44 = puVar2[3];
                 uStack_40 = uStack_9e;
-                iVar3 = fn_82E3BF28(param_1 + 0x1ac,&uStack_50,&piStack_90,auStack_80);
+                iVar3 = fn_82E3BF28(param_1 + 0x1ac,&stack_pair_50.first,&piStack_90,auStack_80);
                 if (((iVar3 != 0) &&
                     (lVar1 = (**(code **)(*piStack_90 + 0x18))(piStack_90,lStack_88), lVar1 < 0)) ||
                    (uVar4 = uVar4 + 1, uStack_a0 <= uVar4)) break;

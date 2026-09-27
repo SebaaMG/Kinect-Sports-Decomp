@@ -38,10 +38,10 @@ longlong fn_82F411D0(int *param_1,undefined8 param_2,undefined8 param_3,undefine
   longlong lVar1;
   longlong lVar2;
   ushort uStack_40;
-  undefined2 auStack_3e [31];
+  undefined2 auStack_3e;
   
   lVar2 = 0;
-  auStack_3e[0] = (undefined2)param_3;
+  auStack_3e = (undefined2)param_3;
   uStack_40 = 0;
   if (param_5 == 0) {
     lVar2 = (**(code **)(*param_1 + 0x20))(param_1,param_3,param_2,0,&uStack_40);
@@ -53,9 +53,9 @@ longlong fn_82F411D0(int *param_1,undefined8 param_2,undefined8 param_3,undefine
       else {
         lVar2 = (**(code **)(*param_1 + 0x20))(param_1,param_3,param_2,lVar1,&uStack_40);
         if ((-1 < lVar2) &&
-           (lVar2 = (**(code **)(*param_1 + 0x1c))(param_1,param_3,param_2,auStack_3e), -1 < lVar2))
+           (lVar2 = (**(code **)(*param_1 + 0x1c))(param_1,param_3,param_2,&auStack_3e), -1 < lVar2))
         {
-          lVar2 = (**(code **)(*param_1 + 0x24))(param_1,lVar1,auStack_3e[0],param_4,0);
+          lVar2 = (**(code **)(*param_1 + 0x24))(param_1,lVar1,auStack_3e,param_4,0);
         }
         fn_82E4FE40(lVar1);
       }

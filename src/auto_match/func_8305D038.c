@@ -50,7 +50,7 @@ void fn_8305D038(undefined8 param_1,undefined8 param_2,undefined8 param_3)
   undefined8 uVar2;
   undefined1 auStack_70 [16];
   undefined1 auStack_60 [16];
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [48];
   
   fn_83061508(auStack_50);
   fn_83060380(auStack_70,param_3);

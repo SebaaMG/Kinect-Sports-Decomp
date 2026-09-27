@@ -68,8 +68,8 @@ void fn_82D85E48(int param_1,int *param_2,uint param_3)
   uint uStack_5c;
   uint uStack_58;
   int iStack_54;
-  int iStack_50;
-  uint uStack_4c;
+  struct { int first; uint second; } stack_pair_50;
+
   uint uStack_48;
   int iStack_44;
   
@@ -118,17 +118,17 @@ void fn_82D85E48(int param_1,int *param_2,uint param_3)
           puVar1[1] = (int)uVar2;
           *(undefined4 **)(iVar4 + 4) = puVar1 + 3;
         }
-        iStack_50 = 0;
-        uStack_4c = 0;
+        stack_pair_50.first = 0;
+        stack_pair_50.second = 0;
         uStack_48 = 0x80000000;
         uVar6 = *(uint *)(param_1 + 0x338);
         piVar5 = (int *)fn_82CE5410();
         uStack_48 = uVar6 | 0x80000000;
-        iStack_50 = *piVar5;
-        *piVar5 = (uVar6 * 8 + 0x7f & 0xffffff80) + iStack_50;
-        iStack_44 = iStack_50;
+        stack_pair_50.first = *piVar5;
+        *piVar5 = (uVar6 * 8 + 0x7f & 0xffffff80) + stack_pair_50.first;
+        iStack_44 = stack_pair_50.first;
         (**(code **)(**(int **)(param_1 + 0x58) + 0x20))
-                  (*(int **)(param_1 + 0x58),&iStack_60,&iStack_50);
+                  (*(int **)(param_1 + 0x58),&iStack_60,&stack_pair_50.first);
         iVar4 = KeTlsGetValue(lbl_8323B4A0);
         puVar1 = *(undefined4 **)(iVar4 + 4);
         if (puVar1 < *(undefined4 **)(iVar4 + 0xc)) {
@@ -137,18 +137,18 @@ void fn_82D85E48(int param_1,int *param_2,uint param_3)
           puVar1[1] = (int)uVar2;
           *(undefined4 **)(iVar4 + 4) = puVar1 + 3;
         }
-        fn_830885D0(*(undefined4 *)(param_1 + 100),iStack_50,uStack_4c);
+        fn_830885D0(*(undefined4 *)(param_1 + 100),stack_pair_50.first,stack_pair_50.second);
         iVar4 = iStack_44;
-        uStack_4c = -(uint)(iStack_50 != iStack_44) & uStack_4c;
+        stack_pair_50.second = -(uint)(stack_pair_50.first != iStack_44) & stack_pair_50.second;
         piVar5 = (int *)fn_82CE5410();
         *piVar5 = iVar4;
         iVar4 = fn_82CE5410();
-        uStack_4c = 0;
+        stack_pair_50.second = 0;
         if ((uStack_48 & 0x80000000) == 0) {
           (**(code **)(**(int **)(iVar4 + 0x10) + 0x10))
-                    (*(int **)(iVar4 + 0x10),iStack_50,uStack_48 & 0x3fffffff,8);
+                    (*(int **)(iVar4 + 0x10),stack_pair_50.first,uStack_48 & 0x3fffffff,8);
         }
-        iStack_50 = 0;
+        stack_pair_50.first = 0;
         uStack_48 = 0x80000000;
       }
       iVar4 = iStack_54;

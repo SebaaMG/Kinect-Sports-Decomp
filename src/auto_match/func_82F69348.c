@@ -25,15 +25,15 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F6FA38();
+extern int _getptd();
 
 
-undefined4 fn_82F69348(void)
+undefined4 _GetUnwindContext(void)
 
 {
   int iVar1;
   
-  iVar1 = fn_82F6FA38();
+  iVar1 = _getptd();
   return *(undefined4 *)(iVar1 + 0x90);
 }
 

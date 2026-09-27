@@ -52,7 +52,7 @@ undefined8 fn_82DF6F28(char *param_1,int param_2,undefined8 param_3,int param_4)
   longlong lVar12;
   undefined4 uStack_50;
   int iStack_4c;
-  undefined1 auStack_48 [72];
+  undefined1 auStack_48 [8];
   
   iVar3 = (**(code **)(**(int **)(param_2 + 8) + 0x34))();
   if ((iVar3 == 0) && (*(short *)(*(int *)(*(int *)(param_2 + 8) + 0x3c) + 4) != 0)) {

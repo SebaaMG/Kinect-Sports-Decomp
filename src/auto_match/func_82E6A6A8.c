@@ -126,7 +126,7 @@ void fn_82E6A6A8(void)
   double dVar61;
   double dVar62;
   undefined8 uStack_1b0;
-  float afStack_1a0 [104];
+  float afStack_1a0 [36];
   
   lVar18 = fn_82F6A510();
   uVar17 = lbl_8209A9F8;

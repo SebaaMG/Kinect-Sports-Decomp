@@ -57,8 +57,8 @@ longlong fn_82E3B1A8(int param_1,int *param_2,undefined8 param_3,uint param_4,ul
   byte *pbVar7;
   byte *pbVar8;
   uint auStack_70 [4];
-  undefined4 uStack_60;
-  undefined4 uStack_5c;
+  struct { undefined4 first; undefined4 second; } stack_pair_60;
+
   undefined4 uStack_58;
   undefined4 uStack_54;
   
@@ -66,13 +66,13 @@ longlong fn_82E3B1A8(int param_1,int *param_2,undefined8 param_3,uint param_4,ul
     return -0x7fffbffd;
   }
   *param_7 = 0;
-  uStack_60 = lbl_8202E618;
-  uStack_5c = lbl_8202E61C;
+  stack_pair_60.first = lbl_8202E618;
+  stack_pair_60.second = lbl_8202E61C;
   uStack_58 = lbl_8202E620;
   uStack_54 = lbl_8202E624;
-  lVar4 = (**(code **)(*param_2 + 0xc))(param_2,&uStack_60);
+  lVar4 = (**(code **)(*param_2 + 0xc))(param_2,&stack_pair_60.first);
   if (lVar4 < 0) goto LAB_82e3b42c;
-  pbVar7 = (byte *)&uStack_60;
+  pbVar7 = (byte *)&stack_pair_60.first;
   pbVar8 = &lbl_82154AD8;
   do {
     bVar1 = *pbVar8;
@@ -104,7 +104,7 @@ LAB_82e3b3b4:
     goto LAB_82e3b42c;
   }
   else {
-    pbVar7 = (byte *)&uStack_60;
+    pbVar7 = (byte *)&stack_pair_60.first;
     pbVar8 = (byte *)&lbl_82154AE8;
     do {
       bVar1 = *pbVar8;
@@ -121,7 +121,7 @@ LAB_82e3b3b4:
                                        );
       goto LAB_82e3b3b4;
     }
-    pbVar7 = (byte *)&uStack_60;
+    pbVar7 = (byte *)&stack_pair_60.first;
     pbVar8 = (byte *)&lbl_82154AF8;
     do {
       bVar1 = *pbVar8;

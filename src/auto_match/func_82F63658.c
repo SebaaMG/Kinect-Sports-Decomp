@@ -39,7 +39,7 @@ ulonglong fn_82F63658(byte *param_1,undefined4 *param_2,undefined8 param_3,undef
   undefined4 *puVar3;
   byte bVar4;
   byte *pbVar5;
-  undefined4 auStack_40 [16];
+  undefined4 auStack_40 [1];
   
   if (param_2 == (undefined4 *)0x0) {
     param_2 = auStack_40;

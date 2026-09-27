@@ -43,7 +43,7 @@ void fn_82EE8F80(int param_1,int *param_2)
   uint *puVar7;
   uint *puVar8;
   uint *puVar9;
-  int *apiStack_60 [24];
+  int *apiStack_60 [4];
   
   apiStack_60[0] = (int *)0x0;
   if (param_2 != (int *)0x0) {

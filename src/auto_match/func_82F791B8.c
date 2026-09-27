@@ -25,9 +25,9 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F68240();
+extern int _errno();
 extern int fn_82F79028();
-extern int fn_82F79400();
+extern int _ctrlfp();
 extern unsigned int lbl_831BC2A4;
 
 
@@ -43,9 +43,9 @@ double fn_82F791B8(double param_1,double param_2,undefined8 param_3,undefined8 p
     dVar2 = (double)fn_82F79028(param_1,param_2,dVar2,1);
   }
   else {
-    puVar1 = (undefined4 *)fn_82F68240(param_3,param_3);
+    puVar1 = (undefined4 *)_errno(param_3,param_3);
     *puVar1 = 0x21;
-    fn_82F79400(param_6,0xffffffffc007feff);
+    _ctrlfp(param_6,0xffffffffc007feff);
   }
   return dVar2;
 }

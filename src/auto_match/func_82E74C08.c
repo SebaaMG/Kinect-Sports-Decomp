@@ -33,13 +33,13 @@ undefined8 fn_82E74C08(int param_1)
 
 {
   int iVar1;
-  undefined8 auStack_10 [2];
+  undefined8 auStack_10;
   
-  auStack_10[0] = 0;
+  auStack_10 = 0;
   if ((*(int *)(param_1 + 0x5c) != 0) &&
-     (iVar1 = fn_82EEADB0(*(int *)(param_1 + 0x5c),auStack_10), iVar1 < 0)) {
+     (iVar1 = fn_82EEADB0(*(int *)(param_1 + 0x5c),&auStack_10), iVar1 < 0)) {
     return 0;
   }
-  return auStack_10[0];
+  return auStack_10;
 }
 

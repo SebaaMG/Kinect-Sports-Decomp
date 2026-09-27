@@ -52,8 +52,8 @@ undefined8 fn_83030318(int param_1,int param_2,ulonglong param_3)
   undefined4 *puVar9;
   int *piVar10;
   int *piVar11;
-  int iStack_90;
-  int iStack_8c;
+  struct { int first; int second; } stack_pair_90;
+
   int aiStack_88 [2];
   undefined4 uStack_80;
   undefined4 uStack_7c;
@@ -89,20 +89,20 @@ joined_r0x83030390:
 LAB_830303ec:
       uVar6 = fn_8302FD88(param_1,puVar9,piVar10,param_3);
       fn_8301AF50(lbl_832642EC,*(undefined4 *)(param_1 + 0xc),param_3);
-      iStack_8c = 0;
-      iStack_90 = 0;
+      stack_pair_90.second = 0;
+      stack_pair_90.first = 0;
       puVar1 = *(undefined4 **)(param_1 + 0x104);
       do {
         if (puVar1 == (undefined4 *)0x0) {
-          fn_8301AEF8(lbl_832642EC,param_3,*(undefined4 *)(param_1 + 0xc),&iStack_90);
+          fn_8301AEF8(lbl_832642EC,param_3,*(undefined4 *)(param_1 + 0xc),&stack_pair_90.first);
           return uVar6;
         }
-        if (iStack_90 == param_2) {
-          iStack_8c = iStack_8c + 1;
+        if (stack_pair_90.first == param_2) {
+          stack_pair_90.second = stack_pair_90.second + 1;
         }
         else {
-          iStack_8c = 1;
-          iStack_90 = param_2;
+          stack_pair_90.second = 1;
+          stack_pair_90.first = param_2;
         }
         if ((((ulonglong)(uint)puVar1[8] == (param_3 & 0xffffffff)) && (piVar10 != (int *)0x0)) &&
            (piVar11 = (int *)*piVar10, piVar11 != (int *)piVar10[1])) {

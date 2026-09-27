@@ -43,9 +43,9 @@ ulonglong fn_82E447C8(int param_1,int *param_2)
   int *piVar4;
   int *piVar5;
   ulonglong uVar6;
-  undefined2 auStack_40 [2];
+  undefined2 auStack_40;
   int *piStack_3c;
-  uint auStack_38 [14];
+  uint auStack_38 [1];
   
   if (param_2 == (int *)0x0) {
     uVar1 = 0xffffffff80070057;
@@ -71,12 +71,12 @@ ulonglong fn_82E447C8(int param_1,int *param_2)
         piVar4 = piStack_3c;
         if ((-1 < (longlong)uVar1) && (uVar6 = 0, auStack_38[0] != 0)) {
           do {
-            auStack_40[0] = 0;
-            uVar1 = (**(code **)(*piVar5 + 0x88))(piVar5,uVar6,auStack_40,0);
+            auStack_40 = 0;
+            uVar1 = (**(code **)(*piVar5 + 0x88))(piVar5,uVar6,&auStack_40,0);
             piVar4 = piStack_3c;
             if ((longlong)uVar1 < 0) break;
             uVar2 = (**(code **)(**(int **)(param_1 + 0x78) + 0x8c))
-                              (*(int **)(param_1 + 0x78),auStack_40[0],&piStack_3c);
+                              (*(int **)(param_1 + 0x78),auStack_40,&piStack_3c);
             uVar1 = ((uVar2 & 0xffffffff) >> 0x1f) - 1 & uVar1;
             if (piStack_3c != (int *)0x0) {
               (**(code **)(*piStack_3c + 8))(piStack_3c);

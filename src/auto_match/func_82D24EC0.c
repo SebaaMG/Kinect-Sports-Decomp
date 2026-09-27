@@ -65,7 +65,7 @@ uint * fn_82D24EC0(uint *param_1,longlong param_2,ulonglong param_3,int param_4,
   undefined4 uVar19;
   uint uStack00000020;
   int iStack00000024;
-  undefined1 auStack_b0 [64];
+  undefined1 auStack_b0 [48];
   undefined4 uStack_70;
   undefined4 uStack_6c;
   

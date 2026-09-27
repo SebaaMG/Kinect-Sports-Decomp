@@ -58,7 +58,7 @@ void fn_8301DA20(int param_1,uint *param_2)
   uint uVar10;
   longlong lVar11;
   undefined1 auStack_110 [64];
-  undefined1 auStack_d0 [208];
+  undefined1 auStack_d0 [112];
   
   if (param_2[6] != 0xffffffff) {
     fn_83013E80(lbl_83264308,

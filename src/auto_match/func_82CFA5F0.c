@@ -37,7 +37,7 @@ bool fn_82CFA5F0(int param_1)
   bool bVar3;
   int iVar4;
   longlong lVar5;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [1];
   
   pcVar1 = (char *)(**(code **)(**(int **)(param_1 + 8) + 0xc))(auStack_30);
   if (*pcVar1 == '\0') {

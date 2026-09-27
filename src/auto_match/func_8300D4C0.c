@@ -42,7 +42,7 @@ void fn_8300D4C0(int *param_1)
   uint uVar7;
   int iVar8;
   int iStack_60;
-  int aiStack_5c [23];
+  int aiStack_5c;
   
   uVar2 = 0;
   if (*(char *)((int)param_1 + 0x4d) != '\0') {
@@ -61,11 +61,11 @@ void fn_8300D4C0(int *param_1)
               iVar8 = 0;
               do {
                 fn_83036648(*(undefined4 *)(iVar1 + 4),uVar2,*(undefined4 *)(iVar5 + *piVar6),
-                                &iStack_60,aiStack_5c);
+                                &iStack_60,&aiStack_5c);
                 if ((iStack_60 != 0) && (*(short *)(iStack_60 + 0xe) != 0)) {
                   (**(code **)(**(int **)(iVar4 + 4) + 0x18))();
                 }
-                if ((aiStack_5c[0] != 0) && (*(short *)(aiStack_5c[0] + 0xe) != 0)) {
+                if ((aiStack_5c != 0) && (*(short *)(aiStack_5c + 0xe) != 0)) {
                   (**(code **)(**(int **)(iVar4 + 4) + 0x1c))();
                 }
                 uVar7 = uVar7 + 1;

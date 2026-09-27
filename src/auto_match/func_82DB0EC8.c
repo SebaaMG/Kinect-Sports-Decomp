@@ -41,7 +41,7 @@ bool fn_82DB0EC8(int param_1,int *param_2)
   int iVar7;
   ulonglong uVar8;
   longlong lVar9;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [1];
   
   if (*(char *)(param_1 + 0x5c) == '\0') {
     iVar4 = *(int *)(param_1 + 0x48) + -1;

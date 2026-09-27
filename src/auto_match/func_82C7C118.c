@@ -33,7 +33,7 @@ extern int fn_82C4E1D0();
 extern int fn_82C52CF8();
 extern int fn_82C7BE90();
 extern int fn_82C7BFB8();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int iStack_a0;
 extern unsigned int stack0x0000001c;
 extern unsigned int stack0x00000024;
@@ -95,7 +95,7 @@ fn_82C7C118(int param_1,ushort *param_2,byte *param_3,int *param_4,uint *param_5
   else {
     pbVar18 = (byte *)0x0;
     if (pbStack00000024 < (byte *)0x4) {
-      fn_82F68CC0(puVar15,puStack0000001c,pbStack00000024);
+      memcpy(puVar15,puStack0000001c,pbStack00000024);
       pbVar18 = pbStack00000024;
     }
     if (*(byte **)(param_1 + 0x560c) < pbVar18 + (int)pbStack00000024) {
@@ -119,7 +119,7 @@ fn_82C7C118(int param_1,ushort *param_2,byte *param_3,int *param_4,uint *param_5
         puVar15 = *(ushort **)(param_1 + 0x5608);
         iVar13 = *(int *)(param_1 + 0x5604);
       }
-      fn_82F68CC0(pbVar18 + (int)puVar15,puStack0000001c,pbStack00000024);
+      memcpy(pbVar18 + (int)puVar15,puStack0000001c,pbStack00000024);
       pbVar18 = pbVar18 + (int)pbStack00000024;
       puStack0000001c = puVar15;
       pbStack00000024 = pbVar18;
@@ -212,7 +212,7 @@ LAB_82c7c3dc:
         }
         if (((!bVar3) || (bVar4)) || (iStack_a0 != 1)) goto LAB_82c7c4b4;
         iVar8 = (int)puVar16 - (int)puStack0000001c;
-        fn_82F68CC0(puVar15,puStack0000001c,iVar8);
+        memcpy(puVar15,puStack0000001c,iVar8);
         fn_82A9FA30(*(undefined4 *)(param_1 + 0xd30),0,&stack0x0000001c,4,&stack0x00000024,
                      &iStack_a0);
         *(int *)(*(int *)(param_1 + 0x50) + 0x18) = iStack_a0;
@@ -224,7 +224,7 @@ LAB_82c7c3dc:
           puVar15 = *(ushort **)(param_1 + 0x5608);
           iVar13 = *(int *)(param_1 + 0x5604);
         }
-        fn_82F68CC0((byte *)(iVar8 + (int)puVar15),puStack0000001c,pbStack00000024);
+        memcpy((byte *)(iVar8 + (int)puVar15),puStack0000001c,pbStack00000024);
         pbStack00000024 = pbStack00000024 + iVar8;
         puStack0000001c = puVar15;
       } while( true );
@@ -335,7 +335,7 @@ LAB_82c7c4b4:
       }
     }
     if (uVar14 < *(uint *)(param_1 + 0x560c)) {
-      fn_82F68CC0(iVar13 + uVar14,puVar17,uVar9);
+      memcpy(iVar13 + uVar14,puVar17,uVar9);
     }
     uVar14 = uVar9 + uVar14;
     goto LAB_82c7c8c0;

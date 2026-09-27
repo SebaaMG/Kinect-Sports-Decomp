@@ -48,19 +48,19 @@ longlong fn_82EEE8D8(int *param_1,undefined8 param_2,undefined8 param_3,undefine
   int in_stack_0000005c;
   undefined4 in_stack_00000064;
   undefined4 *puStack_60;
-  int aiStack_5c [23];
+  int aiStack_5c;
   
   puStack_60 = (undefined4 *)0x0;
-  aiStack_5c[0] = 0;
+  aiStack_5c = 0;
   if (param_1[0x1d] == 0) {
     lVar4 = -0x7fff0001;
   }
   else {
-    lVar4 = fn_82EEDD60(param_1,param_2,param_3,&puStack_60,0,aiStack_5c,in_stack_0000005c);
+    lVar4 = fn_82EEDD60(param_1,param_2,param_3,&puStack_60,0,&aiStack_5c,in_stack_0000005c);
     puVar1 = puStack_60;
     if (-1 < lVar4) {
       if ((param_5 & 0xffffffff) != 0) {
-        if (aiStack_5c[0] == 0) {
+        if (aiStack_5c == 0) {
           if ((in_stack_0000005c != 0) || (iVar2 = puStack_60[8], iVar2 == 0)) {
             iVar2 = puStack_60[6];
           }

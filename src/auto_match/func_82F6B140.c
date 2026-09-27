@@ -26,8 +26,8 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_50;
-extern int fn_82F63BA0();
-extern int fn_82F68240();
+extern int _invalid_parameter_noinfo();
+extern int _errno();
 extern int fn_82F704C8();
 extern int fn_82F81918();
 extern unsigned int lbl_82005710;
@@ -46,7 +46,7 @@ double fn_82F6B140(byte *param_1,undefined4 *param_2)
   undefined *puVar4;
   byte *pbVar5;
   double dVar6;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [16];
   
   if (param_2 != (undefined4 *)0x0) {
     *param_2 = param_1;
@@ -54,9 +54,9 @@ double fn_82F6B140(byte *param_1,undefined4 *param_2)
   puVar4 = lbl_831BBCA8;
   pbVar5 = param_1;
   if (param_1 == (byte *)0x0) {
-    puVar1 = (undefined4 *)fn_82F68240();
+    puVar1 = (undefined4 *)_errno();
     *puVar1 = 0x16;
-    fn_82F63BA0();
+    _invalid_parameter_noinfo();
     dVar6 = lbl_82005710;
   }
   else {
@@ -89,7 +89,7 @@ double fn_82F6B140(byte *param_1,undefined4 *param_2)
           dVar6 = -lbl_8216AA90;
         }
       }
-      puVar1 = (undefined4 *)fn_82F68240();
+      puVar1 = (undefined4 *)_errno();
       *puVar1 = 0x22;
     }
     else if (param_2 != (undefined4 *)0x0) {

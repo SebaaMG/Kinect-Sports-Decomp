@@ -25,16 +25,16 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F6FA38();
+extern int _getptd();
 
 
-undefined8 fn_82F69860(int param_1)
+undefined8 _IsExceptionObjectToBeDestroyed(int param_1)
 
 {
   int *piVar1;
   int iVar2;
   
-  iVar2 = fn_82F6FA38();
+  iVar2 = _getptd();
   piVar1 = *(int **)(iVar2 + 0x94);
   while( true ) {
     if (piVar1 == (int *)0x0) {

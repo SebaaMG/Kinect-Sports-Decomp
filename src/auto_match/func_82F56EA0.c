@@ -35,15 +35,15 @@ void fn_82F56EA0(undefined4 *param_1)
 
 {
   int iVar1;
-  undefined4 uStack_20;
-  undefined4 uStack_1c;
+  struct { undefined4 first; undefined4 second; } stack_pair_20;
+
   
-  uStack_20 = 0;
-  uStack_1c = 0;
-  fn_82F56AB8(&uStack_20);
+  stack_pair_20.first = 0;
+  stack_pair_20.second = 0;
+  fn_82F56AB8(&stack_pair_20.first);
   iVar1 = param_1[1];
-  param_1[1] = uStack_1c;
-  *param_1 = uStack_20;
+  param_1[1] = stack_pair_20.second;
+  *param_1 = stack_pair_20.first;
   if (iVar1 != 0) {
     fn_822315A0();
   }

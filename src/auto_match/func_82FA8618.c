@@ -35,13 +35,13 @@ undefined8 fn_82FA8618(int param_1)
 {
   char cVar1;
   undefined4 uStack_20;
-  undefined4 auStack_1c [3];
+  undefined4 auStack_1c;
   
-  cVar1 = fn_82FAC688(*(undefined4 *)(param_1 + 400),param_1,&uStack_20,auStack_1c);
+  cVar1 = fn_82FAC688(*(undefined4 *)(param_1 + 400),param_1,&uStack_20,&auStack_1c);
   if (cVar1 != '\0') {
     *(byte *)(param_1 + 0xdb) = *(byte *)(param_1 + 0xdb) | 0x80;
     *(undefined4 *)(param_1 + 0x134) = uStack_20;
-    *(undefined4 *)(param_1 + 0xd0) = auStack_1c[0];
+    *(undefined4 *)(param_1 + 0xd0) = auStack_1c;
     return 1;
   }
   return 2;

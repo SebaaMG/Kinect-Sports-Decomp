@@ -35,22 +35,22 @@ void fn_82D6DD08(int param_1,int *param_2,undefined8 param_3,undefined8 param_4,
 
 {
   int iVar1;
-  undefined4 uStack_40;
-  undefined4 uStack_3c;
+  struct { undefined4 first; undefined4 second; } stack_pair_40;
+
   int iStack_38;
   int *piStack_34;
   
   iStack_38 = param_2[2];
   iVar1 = *param_2;
-  uStack_40 = *(undefined4 *)(iVar1 + 0x10);
-  uStack_3c = 0xffffffff;
+  stack_pair_40.first = *(undefined4 *)(iVar1 + 0x10);
+  stack_pair_40.second = 0xffffffff;
   piStack_34 = param_2;
-  (**(code **)(**(int **)(param_1 + 0xc) + 0x20))(*(int **)(param_1 + 0xc),&uStack_40);
+  (**(code **)(**(int **)(param_1 + 0xc) + 0x20))(*(int **)(param_1 + 0xc),&stack_pair_40.first);
   if (*(int *)(param_1 + 0x10) != 0) {
-    uStack_40 = *(undefined4 *)(iVar1 + 0x18);
-    uStack_3c = 0;
+    stack_pair_40.first = *(undefined4 *)(iVar1 + 0x18);
+    stack_pair_40.second = 0;
     (**(code **)(**(int **)(param_1 + 0x10) + 0x20))
-              (*(int **)(param_1 + 0x10),&uStack_40,param_3,param_4,param_5);
+              (*(int **)(param_1 + 0x10),&stack_pair_40.first,param_3,param_4,param_5);
   }
   return;
 }

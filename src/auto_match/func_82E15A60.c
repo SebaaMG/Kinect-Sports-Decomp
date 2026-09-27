@@ -55,7 +55,7 @@ int * fn_82E15A60(int param_1,ulonglong param_2,ulonglong param_3,int param_4)
   undefined1 auStack_290 [8];
   undefined1 auStack_288 [24];
   undefined1 auStack_270 [48];
-  undefined1 auStack_240 [576];
+  undefined1 auStack_240 [480];
   
   iVar9 = 0;
   iVar8 = 0;

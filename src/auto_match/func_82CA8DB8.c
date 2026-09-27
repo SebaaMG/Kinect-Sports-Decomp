@@ -28,8 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 extern int fn_82CA8A18();
 
 
-void fn_82CA8DB8(int param_1,int param_2,int param_3,int param_4,int param_5,int param_6,
-                  longlong param_7,longlong param_8)
+void fn_82CA8DB8(int param_1, int param_2, int param_3, int param_4, int param_5, int param_6, longlong param_7, longlong param_8, uint in_stack_00000054, uint in_stack_0000005c, int in_stack_00000064, int in_stack_0000006c, int in_stack_00000074)
 
 {
   byte *pbVar1;
@@ -42,11 +41,11 @@ void fn_82CA8DB8(int param_1,int param_2,int param_3,int param_4,int param_5,int
   ulonglong uVar8;
   longlong lVar9;
   ulonglong uVar10;
-  uint in_stack_00000054;
-  uint in_stack_0000005c;
-  int in_stack_00000064;
-  int in_stack_0000006c;
-  int in_stack_00000074;
+
+
+
+
+
   
   if (0 < (int)param_8) {
     param_4 = param_4 - param_1;

@@ -46,7 +46,7 @@ undefined8 fn_82C7A0F8(int param_1)
   undefined4 uVar3;
   int iVar4;
   int iVar5;
-  undefined1 auStack_630 [1584];
+  undefined1 auStack_630 [1536];
   
   fn_830C1A80();
   uVar1 = *(ushort *)(param_1 + 0x3ea4) >> 1;

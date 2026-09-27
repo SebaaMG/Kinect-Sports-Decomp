@@ -41,7 +41,7 @@ void fn_82FFBA00(longlong param_1,undefined8 param_2)
   int iVar1;
   undefined1 auStack_40 [8];
   uint uStack_38;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
   
   fn_8302B530();
   RtlEnterCriticalSection(param_1 + 0x50);

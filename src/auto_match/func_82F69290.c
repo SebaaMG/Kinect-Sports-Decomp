@@ -25,8 +25,8 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82A2AA10();
-extern int fn_82F68CC0();
+extern int RaiseException();
+extern int memcpy();
 extern unsigned int uStack_28;
 extern unsigned int uStack_2c;
 extern unsigned int uStack_30;
@@ -34,23 +34,23 @@ extern unsigned int uStack_3c;
 extern unsigned int uStack_40;
 
 
-void fn_82F69290(undefined4 param_1,uint *param_2)
+void _CxxThrowException(undefined4 param_1,uint *param_2)
 
 {
   undefined4 uStack_40;
   undefined4 uStack_3c;
   undefined4 uStack_30;
-  undefined4 uStack_2c;
-  undefined4 uStack_28;
+  struct { undefined4 first; undefined4 second; } stack_pair_2c;
+
   uint *puStack_24;
   
-  fn_82F68CC0(&uStack_40,0xffffffff8216836c,0x20);
+  memcpy(&uStack_40,0xffffffff8216836c,0x20);
   if ((param_2 != (uint *)0x0) && ((*param_2 & 8) != 0)) {
-    uStack_2c = 0x1994000;
+    stack_pair_2c.first = 0x1994000;
   }
-  uStack_28 = param_1;
+  stack_pair_2c.second = param_1;
   puStack_24 = param_2;
-  fn_82A2AA10(uStack_40,uStack_3c,uStack_30,&uStack_2c);
+  RaiseException(uStack_40,uStack_3c,uStack_30,&stack_pair_2c.first);
   return;
 }
 

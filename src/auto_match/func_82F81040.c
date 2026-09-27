@@ -25,18 +25,18 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F69348();
-extern int fn_82F69390();
+extern int _GetUnwindContext();
+extern int _MoveContext();
 extern int fn_82F69420();
-extern int fn_82F69860();
-extern int fn_82F698B8();
-extern int fn_82F6FA38();
+extern int _IsExceptionObjectToBeDestroyed();
+extern int _FindAndUnlinkFrame();
+extern int _getptd();
 extern int fn_82F80D88();
 extern int fn_82F812C0();
 
 
 undefined8
-fn_82F81040(int *param_1,undefined8 param_2,undefined8 param_3,uint *param_4,int param_5,
+__InternalCxxFrameHandler(int *param_1,undefined8 param_2,undefined8 param_3,uint *param_4,int param_5,
              undefined8 param_6,undefined8 param_7,ulonglong param_8)
 
 {
@@ -58,12 +58,12 @@ fn_82F81040(int *param_1,undefined8 param_2,undefined8 param_3,uint *param_4,int
     }
   }
   else if ((*(int *)(param_5 + 4) != 0) && ((int)param_6 == 0)) {
-    if (((param_1[1] & 0x20U) == 0) || (iVar4 = fn_82F69348(), iVar4 == 0)) {
+    if (((param_1[1] & 0x20U) == 0) || (iVar4 = _GetUnwindContext(), iVar4 == 0)) {
       fn_82F69420(param_2,param_4,param_5);
       if (((*(int *)(param_5 + 0xc) != 0) && (iVar4 = *(int *)(param_4[2] + 4), iVar4 != 0)) &&
          (puVar2 = *(undefined4 **)(iVar4 + 8), puVar2 != (undefined4 *)0x0)) {
-        fn_82F698B8(puVar2);
-        iVar5 = fn_82F69860(*puVar2);
+        _FindAndUnlinkFrame(puVar2);
+        iVar5 = _IsExceptionObjectToBeDestroyed(*puVar2);
         if ((iVar5 != 0) && ((code *)puVar2[1] != (code *)0x0)) {
           (*(code *)puVar2[1])(*puVar2);
           *puVar2 = 0;
@@ -72,23 +72,23 @@ fn_82F81040(int *param_1,undefined8 param_2,undefined8 param_3,uint *param_4,int
       }
     }
     else {
-      iVar4 = fn_82F6FA38();
+      iVar4 = _getptd();
       if (*(int *)(iVar4 + 0x8c) == 0) {
         fn_82F812C0();
       }
-      iVar4 = fn_82F6FA38();
-      fn_82F69390(*(undefined4 *)(iVar4 + 0x8c),param_3);
+      iVar4 = _getptd();
+      _MoveContext(*(undefined4 *)(iVar4 + 0x8c),param_3);
       uVar1 = *param_4;
-      iVar4 = fn_82F6FA38();
+      iVar4 = _getptd();
       *(ulonglong *)(*(int *)(iVar4 + 0x8c) + 0x30) = (ulonglong)uVar1;
       uVar1 = param_4[1];
-      iVar4 = fn_82F6FA38();
+      iVar4 = _getptd();
       *(ulonglong *)(*(int *)(iVar4 + 0x8c) + 0x38) = (ulonglong)uVar1;
       uVar1 = param_4[2];
-      iVar4 = fn_82F6FA38();
+      iVar4 = _getptd();
       *(ulonglong *)(*(int *)(iVar4 + 0x8c) + 0x40) = (ulonglong)uVar1;
-      uVar3 = fn_82F69348();
-      fn_82F69390(param_3,uVar3);
+      uVar3 = _GetUnwindContext();
+      _MoveContext(param_3,uVar3);
     }
   }
   return 1;

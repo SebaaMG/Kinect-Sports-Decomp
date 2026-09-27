@@ -37,7 +37,7 @@ char fn_83095E98(int *param_1)
   byte bVar4;
   char cVar5;
   byte bVar6;
-  undefined1 auStack_220 [544];
+  undefined1 auStack_220 [512];
   
   piVar2 = (int *)(**(code **)(*param_1 + 0x10))();
   if (piVar2 == (int *)0x0) {

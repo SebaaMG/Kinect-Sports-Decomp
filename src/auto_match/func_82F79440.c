@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 
 
-ulonglong fn_82F79440(void)
+ulonglong _FPreset(void)
 
 {
   byte in_fp_ni;

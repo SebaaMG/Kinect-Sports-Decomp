@@ -62,7 +62,7 @@ longlong fn_82F3F698(int *param_1,uint *param_2)
   ushort uStack_8e;
   ushort uStack_8c;
   ushort uStack_8a;
-  ushort auStack_88 [68];
+  ushort auStack_88;
   
   if (param_1[3] == 0) {
     return -0x3ff2c94a;
@@ -82,7 +82,7 @@ LAB_82f3f6e8:
   uStack_8e = 0;
   uStack_8c = 0;
   uStack_8a = 0;
-  auStack_88[0] = 0;
+  auStack_88 = 0;
   fn_82E57620(param_1 + 4,piVar17);
   fn_82E576A8(param_1 + 8,piVar17);
   lVar7 = fn_82E57738(&uStack_90,piVar17);
@@ -111,12 +111,12 @@ LAB_82f3f6e8:
   uVar13 = (ulonglong)uStack_8a;
   if ((uStack_8a & 1) != 0) goto LAB_82f3fac8;
   *(ushort *)((int)param_1 + 0x62) = uStack_8a >> 1;
-  lVar7 = fn_82E57738(auStack_88,piVar17);
-  uVar6 = auStack_88[0];
+  lVar7 = fn_82E57738(&auStack_88,piVar17);
+  uVar6 = auStack_88;
   if (lVar7 < 0) goto LAB_82f3fab8;
-  uVar9 = (ulonglong)auStack_88[0];
-  if ((auStack_88[0] & 1) != 0) goto LAB_82f3fac8;
-  *(ushort *)(param_1 + 0x19) = auStack_88[0] >> 1;
+  uVar9 = (ulonglong)auStack_88;
+  if ((auStack_88 & 1) != 0) goto LAB_82f3fac8;
+  *(ushort *)(param_1 + 0x19) = auStack_88 >> 1;
   uVar14 = uVar9 + uVar13 + uVar12 + uVar11 + uVar10 + 0x22;
   uVar15 = (uint)uVar14;
   if (uVar1 < uVar14) goto LAB_82f3f6e8;

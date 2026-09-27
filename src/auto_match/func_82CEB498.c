@@ -40,19 +40,19 @@ undefined8 fn_82CEB498(undefined8 param_1,undefined8 param_2,undefined4 *param_3
   undefined4 uVar2;
   undefined4 uVar3;
   undefined4 uStack_30;
-  int aiStack_2c [11];
+  int aiStack_2c;
   
-  uVar1 = fn_82CEB1F0(param_1,param_2,&uStack_30,aiStack_2c);
+  uVar1 = fn_82CEB1F0(param_1,param_2,&uStack_30,&aiStack_2c);
   if ((int)uVar1 == 0) {
-    if (*(char *)(aiStack_2c[0] + 0xc) == '\x14') {
-      uVar2 = fn_82CFD5B0(aiStack_2c[0]);
+    if (*(char *)(aiStack_2c + 0xc) == '\x14') {
+      uVar2 = fn_82CFD5B0(aiStack_2c);
       param_3[5] = uVar2;
       *param_3 = 0x14;
       param_3[4] = uStack_30;
     }
-    else if (*(char *)(aiStack_2c[0] + 0xc) == '\x18') {
-      uVar2 = fn_82CFD5B8(aiStack_2c[0]);
-      uVar3 = fn_82CFD8C0(aiStack_2c[0],uStack_30);
+    else if (*(char *)(aiStack_2c + 0xc) == '\x18') {
+      uVar2 = fn_82CFD5B8(aiStack_2c);
+      uVar3 = fn_82CFD8C0(aiStack_2c,uStack_30);
       param_3[4] = uVar3;
       param_3[5] = uVar2;
       *param_3 = 0x18;

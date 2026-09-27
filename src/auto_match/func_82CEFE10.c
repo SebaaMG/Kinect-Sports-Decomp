@@ -39,7 +39,7 @@ void fn_82CEFE10(int *param_1,int param_2)
   undefined4 uVar4;
   undefined4 uVar5;
   undefined1 auStack_50 [48];
-  undefined1 auStack_20 [16];
+  undefined1 auStack_20 [1];
   
   (**(code **)(*param_1 + 0xc))(param_1,auStack_50);
   puVar1 = (undefined4 *)((uint)(auStack_20 + in_r0) & 0xfffffff0);

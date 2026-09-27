@@ -39,19 +39,19 @@ void fn_82E09390(longlong param_1,longlong param_2)
   undefined8 uVar1;
   undefined8 uVar2;
   undefined8 uVar3;
-  char acStack_30 [48];
+  char acStack_30;
   
   param_2 = param_2 + 8;
   uVar1 = fn_82CFFFC8(param_2);
-  fn_82D002F0(acStack_30,param_2,uVar1);
-  if (acStack_30[0] != '\0') {
+  fn_82D002F0(&acStack_30,param_2,uVar1);
+  if (acStack_30 != '\0') {
     do {
       uVar2 = fn_82D00020(param_2,uVar1);
       uVar3 = fn_82D00000(param_2,uVar1);
       fn_82D000A0(param_1 + 8,uVar3,uVar2);
       uVar1 = fn_82D00060(param_2,uVar1);
-      fn_82D002F0(acStack_30,param_2,uVar1);
-    } while (acStack_30[0] != '\0');
+      fn_82D002F0(&acStack_30,param_2,uVar1);
+    } while (acStack_30 != '\0');
   }
   return;
 }

@@ -26,7 +26,7 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_40;
-extern int fn_82F68CC0();
+extern int memcpy();
 extern int fn_8305C458();
 extern int fn_83066F98();
 extern int fn_83066FC8();
@@ -48,7 +48,7 @@ void fn_8305CAA8(undefined1 *param_1,undefined1 *param_2,undefined4 *param_3)
   undefined **ppuStack_50;
   int iStack_4c;
   int iStack_48;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [16];
   
   fn_8305C458();
   if (param_3 == (undefined4 *)0x0) {
@@ -67,7 +67,7 @@ void fn_8305CAA8(undefined1 *param_1,undefined1 *param_2,undefined4 *param_3)
   *(undefined4 *)(param_1 + 0x50) = *(undefined4 *)(param_2 + 0x50);
   *(undefined4 *)(param_1 + 0x54) = *(undefined4 *)(param_2 + 0x54);
   *(undefined4 *)(param_1 + 0x58) = *(undefined4 *)(param_2 + 0x58);
-  fn_82F68CC0(param_1 + 0xc,param_2 + 0xc,0x28);
+  memcpy(param_1 + 0xc,param_2 + 0xc,0x28);
   uVar1 = *(uint *)(param_1 + 0x20);
   uVar2 = (**(code **)*param_3)(param_3,(ulonglong)uVar1 * 0x30);
   fn_83067080(auStack_40,uVar2,(ulonglong)uVar1 * 0x30);
@@ -112,7 +112,7 @@ void fn_8305CAA8(undefined1 *param_1,undefined1 *param_2,undefined4 *param_3)
       iVar4 = *(int *)(*(int *)(iStack_48 + 0x24) + 0x28) * 0x30 + *(int *)(param_1 + 4);
     }
     *(int *)(iVar3 + 0x24) = iVar4;
-    fn_82F68CC0(iVar3,iStack_48,0x1c);
+    memcpy(iVar3,iStack_48,0x1c);
     iVar3 = iVar3 + 0x30;
   }
   iStack_4c = *(int *)(param_2 + 4);

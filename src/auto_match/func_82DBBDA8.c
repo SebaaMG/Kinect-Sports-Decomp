@@ -48,19 +48,19 @@ void fn_82DBBDA8(int param_1)
   int *piVar9;
   int iVar10;
   longlong lVar11;
-  uint uStack_40;
-  uint uStack_3c;
+  struct { uint first; uint second; } stack_pair_40;
+
   uint uStack_38;
   uint uStack_34;
   
   iVar2 = *(int *)(param_1 + 8);
   piVar9 = *(int **)(param_1 + 0x30);
   *(byte *)(iVar2 + 0x25) = *(byte *)(iVar2 + 0x25) & 0x3f | 0x40;
-  uStack_40 = (uint)*(ushort *)(piVar9 + 5);
+  stack_pair_40.first = (uint)*(ushort *)(piVar9 + 5);
   uStack_38 = (uint)*(ushort *)((int)piVar9 + 0x16);
   uStack_34 = (uint)*(ushort *)(piVar9 + 6);
-  uStack_3c = uStack_40;
-  fn_82D8E878(*(undefined4 *)(param_1 + 8),param_1,&uStack_40);
+  stack_pair_40.second = stack_pair_40.first;
+  fn_82D8E878(*(undefined4 *)(param_1 + 8),param_1,&stack_pair_40.first);
   iVar10 = 0;
   *(int *)(iVar2 + 0x1c) = *(int *)(iVar2 + 0x1c) + -1;
   *(undefined4 *)(param_1 + 8) = 0;

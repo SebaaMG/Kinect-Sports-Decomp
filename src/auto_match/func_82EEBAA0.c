@@ -31,11 +31,11 @@ extern unsigned int *auStack_10;
 undefined4 fn_82EEBAA0(int param_1)
 
 {
-  undefined4 auStack_10 [4];
+  undefined4 auStack_10;
   
-  auStack_10[0] = 0;
+  auStack_10 = 0;
   (**(code **)(**(int **)(param_1 + 0x3c) + 0x10))
-            (*(int **)(param_1 + 0x3c),0xffffffff821549a8,0,auStack_10);
-  return auStack_10[0];
+            (*(int **)(param_1 + 0x3c),0xffffffff821549a8,0,&auStack_10);
+  return auStack_10;
 }
 

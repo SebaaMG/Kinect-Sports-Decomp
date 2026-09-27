@@ -38,7 +38,7 @@ void fn_82DEAF60(double param_1,undefined8 param_2,int param_3,undefined8 param_
   char cVar2;
   ulonglong uVar3;
   char acStack_40 [4];
-  float afStack_3c [15];
+  float afStack_3c;
   
   uVar3 = (ulonglong)*(uint *)(param_3 + 0x98);
   if (uVar3 == 0) {
@@ -47,8 +47,8 @@ void fn_82DEAF60(double param_1,undefined8 param_2,int param_3,undefined8 param_
     *(undefined2 *)(iVar1 + 4) = 0x30;
     uVar3 = fn_82DEAEB8(iVar1,param_2,param_3);
   }
-  afStack_3c[0] = (float)param_1;
-  fn_82CE5458(acStack_40,afStack_3c);
+  afStack_3c = (float)param_1;
+  fn_82CE5458(acStack_40,&afStack_3c);
   cVar2 = acStack_40[0];
   if (acStack_40[0] == '\0') {
     cVar2 = '\x01';

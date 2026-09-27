@@ -55,7 +55,7 @@ int fn_82F8DBA0(undefined4 param_1,undefined4 param_2,undefined4 param_3,undefin
   undefined4 uStack0000001c;
   undefined4 uStack00000024;
   undefined4 uStack0000002c;
-  undefined1 auStack_70 [68];
+  undefined1 auStack_70 [52];
   undefined4 uStack_2c;
   
   uVar1 = lbl_831BB8F0;

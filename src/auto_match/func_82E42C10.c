@@ -33,13 +33,13 @@ void fn_82E42C10(int param_1)
 
 {
   ulonglong uVar1;
-  ushort *apuStack_30 [12];
+  ushort * apuStack_30;
   
   uVar1 = 0;
   if (*(int *)(param_1 + 0x2ac) != 0) {
     do {
-      fn_82E3C5F8(param_1 + 0x26c,uVar1,apuStack_30);
-      (**(code **)(**(int **)((*apuStack_30[0] + 0x1b) * 4 + param_1) + 0x2c))();
+      fn_82E3C5F8(param_1 + 0x26c,uVar1,&apuStack_30);
+      (**(code **)(**(int **)((*apuStack_30 + 0x1b) * 4 + param_1) + 0x2c))();
       uVar1 = uVar1 + 1;
     } while ((uVar1 & 0xffffffff) < (ulonglong)*(uint *)(param_1 + 0x2ac));
   }

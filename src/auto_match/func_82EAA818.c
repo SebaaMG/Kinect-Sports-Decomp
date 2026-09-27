@@ -159,7 +159,7 @@ void fn_82EAA818(int param_1,undefined4 param_2,uint param_3,int param_4,int par
   undefined1 auStack_410 [208];
   undefined1 auStack_340 [208];
   undefined1 auStack_270 [176];
-  undefined1 auStack_1c0 [448];
+  undefined1 auStack_1c0 [368];
   uint uVar5;
   
   iVar13 = (*(int *)(param_1 + 0x2d4) * param_6 + param_5) * 0x114 + *(int *)(param_1 + 0x1e54);

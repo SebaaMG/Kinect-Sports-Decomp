@@ -55,7 +55,7 @@ fn_830158F8(longlong param_1,undefined8 param_2,undefined8 param_3,undefined8 pa
   undefined1 in_vs32 [16];
   undefined1 in_vs40 [16];
   undefined4 in_register_000103f0;
-  undefined1 auStack_80 [8];
+  undefined1 auStack_80 [1];
   int iStack_78;
   undefined4 uStack_74;
   undefined1 auStack_70 [16];

@@ -55,7 +55,7 @@ undefined8 fn_82E17878(int param_1,undefined8 param_2,undefined8 param_3)
   longlong lVar8;
   int *piVar9;
   undefined1 auStack_250 [16];
-  undefined1 auStack_240 [576];
+  undefined1 auStack_240 [496];
   
   lVar8 = 0;
   iVar4 = fn_82CEAE80(param_2);

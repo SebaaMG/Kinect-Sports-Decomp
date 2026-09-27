@@ -48,17 +48,17 @@ int * fn_82D888D0(int param_1,int *param_2)
   longlong lVar4;
   int iVar5;
   int iVar6;
-  undefined1 auStack_70 [4];
+  undefined1 auStack_70;
   int *piStack_6c;
   int *piStack_60;
   int iStack_5c;
   uint uStack_58;
-  int aiStack_54 [21];
+  int aiStack_54 [13];
   
   if (*(int *)(param_1 + 0x94) != 0) {
-    auStack_70[0] = 10;
+    auStack_70 = 10;
     piStack_6c = param_2;
-    fn_82DA6530(*(undefined4 *)(param_1 + 0x88),auStack_70);
+    fn_82DA6530(*(undefined4 *)(param_1 + 0x88),&auStack_70);
     return (int *)0x0;
   }
   fn_82CE4040(param_2);

@@ -52,11 +52,11 @@ fn_82D5B9C0(int param_1,int *param_2,int *param_3,undefined8 param_4,undefined8 
   uint uStack_27c;
   int iStack_278;
   int *piStack_274;
-  int iStack_270;
-  uint uStack_26c;
+  struct { int first; uint second; } stack_pair_270;
+
   int iStack_268;
   int *piStack_264;
-  undefined1 auStack_260 [608];
+  undefined1 auStack_260 [560];
   
   iVar3 = *param_2;
   piVar8 = param_2;
@@ -71,10 +71,10 @@ fn_82D5B9C0(int param_1,int *param_2,int *param_3,undefined8 param_4,undefined8 
         pbVar6 = pbVar6 + 2;
       } while (iVar5 < (int)(uint)param_6[8]);
     }
-    iStack_270 = (**(code **)(*(int *)(iVar3 + 0x14) + 0x14))(iVar3 + 0x14,bVar1,auStack_260);
+    stack_pair_270.first = (**(code **)(*(int *)(iVar3 + 0x14) + 0x14))(iVar3 + 0x14,bVar1,auStack_260);
     iStack_268 = param_2[2];
-    piVar8 = &iStack_270;
-    uStack_26c = (uint)bVar1;
+    piVar8 = &stack_pair_270.first;
+    stack_pair_270.second = (uint)bVar1;
     piStack_264 = param_2;
   }
   iVar3 = *param_3;

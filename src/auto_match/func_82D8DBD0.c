@@ -34,7 +34,7 @@ void fn_82D8DBD0(int param_1,int param_2)
 
 {
   uint uVar1;
-  undefined1 auStack_10 [16];
+  undefined1 auStack_10 [1];
   
   uVar1 = *(uint *)(param_1 + 0x30);
   if ((uVar1 == 0) || (uVar1 == 1)) {

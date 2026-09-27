@@ -44,7 +44,7 @@ undefined8 fn_82C29D30(undefined8 param_1,longlong *param_2)
   longlong lVar3;
   int iStack_40;
   int iStack_3c;
-  int aiStack_38 [14];
+  int aiStack_38 [3];
   
   iStack_40 = 0;
   aiStack_38[0] = 0;

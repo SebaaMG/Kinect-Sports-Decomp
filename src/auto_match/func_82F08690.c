@@ -28,13 +28,12 @@ typedef struct { U64 lo, hi; } V16;
 extern int fn_82ED3520();
 
 
-void fn_82F08690(int param_1,uint param_2,undefined8 param_3,undefined8 param_4,undefined8 param_5
-                  ,int param_6,undefined4 *param_7)
+void fn_82F08690(int param_1, uint param_2, undefined8 param_3, undefined8 param_4, undefined8 param_5, int param_6, undefined4 *param_7, undefined8 unused_arg_8, undefined8 unused_arg_9, undefined8 unused_arg_10, undefined8 unused_arg_11, int in_stack_0000006c, int in_stack_00000074)
 
 {
   int iVar1;
-  int in_stack_0000006c;
-  int in_stack_00000074;
+
+
   
   *param_7 = 0;
   if (in_stack_00000074 == 0) {

@@ -39,7 +39,7 @@ void fn_82D27BB0(undefined8 param_1,undefined8 param_2)
   undefined4 uVar3;
   undefined4 uVar4;
   undefined4 uVar5;
-  undefined1 auStack_20 [32];
+  undefined1 auStack_20 [1];
   
   puVar1 = (undefined4 *)((uint)(&lbl_821CE8A0 + in_r0) & 0xfffffff0);
   uVar3 = puVar1[1];

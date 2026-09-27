@@ -38,15 +38,15 @@ longlong fn_830629F0(undefined4 *param_1)
   int *piVar1;
   int iVar2;
   uint uVar3;
-  undefined4 uStack_30;
-  undefined4 uStack_2c;
+  struct { undefined4 first; undefined4 second; } stack_pair_30;
+
   int iStack_28;
-  undefined1 auStack_20 [32];
+  undefined1 auStack_20 [16];
   
-  uStack_30 = *param_1;
+  stack_pair_30.first = *param_1;
   iStack_28 = param_1[4] + param_1[3];
-  uStack_2c = 0;
-  piVar1 = (int *)fn_83062940(auStack_20,&uStack_30,1);
+  stack_pair_30.second = 0;
+  piVar1 = (int *)fn_83062940(auStack_20,&stack_pair_30.first,1);
   iVar2 = 0;
   if ((int *)*piVar1 != (int *)0x0) {
     iVar2 = *(int *)*piVar1;

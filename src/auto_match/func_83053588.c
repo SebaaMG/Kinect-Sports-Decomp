@@ -38,7 +38,7 @@ ulonglong fn_83053588(int param_1,undefined8 param_2,int *param_3)
   ulonglong uVar4;
   int iVar5;
   char acStack_30 [4];
-  int aiStack_2c [11];
+  int aiStack_2c;
   
   iVar5 = param_1 + 0x38;
   *param_3 = param_1 + 0x18;
@@ -60,10 +60,10 @@ ulonglong fn_83053588(int param_1,undefined8 param_2,int *param_3)
     uVar2 = fn_83053F30(param_1,param_2,
                           ((longlong)*(int *)(param_1 + 0x6c) * (longlong)*(int *)(param_1 + 0x20) &
                           0xffffffffU) + *(longlong *)(param_1 + 0x88) +
-                          (ulonglong)*(uint *)(param_1 + 0xb0),uVar2,uVar1 >> 0x1d & 1,aiStack_2c,
+                          (ulonglong)*(uint *)(param_1 + 0xb0),uVar2,uVar1 >> 0x1d & 1,&aiStack_2c,
                           acStack_30);
     if ((uVar2 & 0xffffffff) != 0) {
-      *(int *)(param_1 + 0xb0) = *(int *)(param_1 + 0xb0) + aiStack_2c[0];
+      *(int *)(param_1 + 0xb0) = *(int *)(param_1 + 0xb0) + aiStack_2c;
       if ((acStack_30[0] != '\0') || (uVar3 <= uVar4)) {
         fn_83050528(param_1,0);
       }

@@ -34,7 +34,7 @@ double fn_83089B00(int param_1,int param_2)
   int iVar1;
   char *pcVar2;
   int iVar3;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
   
   iVar3 = *(char *)(param_2 + 5) + param_2;
   iVar1 = *(int *)(*(char *)(param_2 + 5) + param_2);

@@ -39,7 +39,7 @@ void fn_82D9D1A8(int param_1,int param_2)
   int iVar5;
   int iVar6;
   int iVar7;
-  int aiStack_40 [16];
+  int aiStack_40 [4];
   
   uVar1 = *(undefined4 *)(param_1 + 8);
   iVar6 = 0x7f;

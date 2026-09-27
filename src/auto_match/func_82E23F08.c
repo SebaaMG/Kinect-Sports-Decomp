@@ -41,13 +41,13 @@ longlong fn_82E23F08(undefined8 param_1,undefined4 *param_2,undefined8 param_3,u
   int *piStack_5c;
   int *piStack_58;
   int *piStack_54;
-  int *apiStack_50 [20];
+  int * apiStack_50;
   
   piStack_60 = (int *)0x0;
   piStack_5c = (int *)0x0;
   piStack_58 = (int *)0x0;
   piStack_54 = (int *)0x0;
-  apiStack_50[0] = (int *)0x0;
+  apiStack_50 = (int *)0x0;
   lVar2 = fn_82E32028(&piStack_60);
   if ((((((-1 < lVar2) && (lVar2 = fn_82E2D068(&piStack_5c), -1 < lVar2)) &&
         (lVar2 = fn_82E275D0(piStack_5c,param_3,param_4), -1 < lVar2)) &&
@@ -56,9 +56,9 @@ longlong fn_82E23F08(undefined8 param_1,undefined4 *param_2,undefined8 param_3,u
       ((lVar2 = (**(code **)(*piStack_60 + 0x90))(piStack_60,piStack_58), -1 < lVar2 &&
        ((lVar2 = fn_82E2D068(&piStack_54), -1 < lVar2 &&
         (lVar2 = fn_82E28460(piStack_54,param_5,param_6,0), -1 < lVar2)))))) &&
-     ((lVar2 = (**(code **)(*piStack_60 + 0x98))(piStack_60,piStack_54,apiStack_50), -1 < lVar2 &&
-      ((lVar2 = (**(code **)(*apiStack_50[0] + 0x8c))(apiStack_50[0],2), -1 < lVar2 &&
-       (lVar2 = (**(code **)(*piStack_60 + 0x90))(piStack_60,apiStack_50[0]), piVar1 = piStack_60,
+     ((lVar2 = (**(code **)(*piStack_60 + 0x98))(piStack_60,piStack_54,&apiStack_50), -1 < lVar2 &&
+      ((lVar2 = (**(code **)(*apiStack_50 + 0x8c))(apiStack_50,2), -1 < lVar2 &&
+       (lVar2 = (**(code **)(*piStack_60 + 0x90))(piStack_60,apiStack_50), piVar1 = piStack_60,
        -1 < lVar2)))))) {
     piStack_60 = (int *)0x0;
     *param_2 = piVar1;
@@ -79,8 +79,8 @@ longlong fn_82E23F08(undefined8 param_1,undefined4 *param_2,undefined8 param_3,u
     (**(code **)(*piStack_54 + 8))();
     piStack_54 = (int *)0x0;
   }
-  if (apiStack_50[0] != (int *)0x0) {
-    (**(code **)(*apiStack_50[0] + 8))();
+  if (apiStack_50 != (int *)0x0) {
+    (**(code **)(*apiStack_50 + 8))();
   }
   return lVar2;
 }

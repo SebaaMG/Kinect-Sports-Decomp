@@ -41,7 +41,7 @@ undefined8 fn_82E1E918(int param_1)
 {
   char cVar1;
   int iVar2;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
   
   cVar1 = *(char *)(param_1 + 0x15);
   while (cVar1 == '\0') {

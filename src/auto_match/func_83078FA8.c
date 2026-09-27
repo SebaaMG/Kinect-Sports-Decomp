@@ -40,7 +40,7 @@ undefined8 fn_83078FA8(undefined8 param_1)
   undefined4 in_register_000103f4;
   undefined4 in_register_000103f8;
   undefined4 in_vr63;
-  undefined1 auStack_50 [64];
+  undefined1 auStack_50 [16];
   
   fn_83078598(auStack_50);
   altv207_13(in_vs35,in_vs43);

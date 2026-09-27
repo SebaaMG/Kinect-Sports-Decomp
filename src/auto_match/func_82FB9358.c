@@ -25,7 +25,7 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F69148();
+extern int _blkmov();
 
 
 void fn_82FB9358(uint *param_1,ulonglong param_2)
@@ -35,7 +35,7 @@ void fn_82FB9358(uint *param_1,ulonglong param_2)
   
   uVar1 = (param_2 & 0x7fffffff) * 2 + (ulonglong)*param_1;
   if ((uVar1 & 0xffffffff) < ((ulonglong)param_1[1] - 2 & 0xffffffff)) {
-    fn_82F69148(uVar1,uVar1 + 2,
+    _blkmov(uVar1,uVar1 + 2,
                  ((((((ulonglong)param_1[1] - 2) - uVar1) - 1 & 0xffffffff) >> 1) + 1) * 2 &
                  0xfffffffe);
   }

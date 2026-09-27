@@ -42,9 +42,9 @@ undefined8 fn_82F36668(int *param_1,int param_2,longlong *param_3)
   undefined4 *puStack_64;
   undefined4 *puStack_60;
   undefined4 *puStack_5c;
-  undefined4 *apuStack_58 [2];
+  undefined4 * apuStack_58;
   longlong lStack_50;
-  longlong alStack_48 [9];
+  longlong alStack_48 [1];
   
   if (param_1[3] == 0) {
     uVar2 = 0xffffffffc00d36b6;
@@ -78,8 +78,8 @@ undefined8 fn_82F36668(int *param_1,int param_2,longlong *param_3)
             if (-1 < iVar3) {
               lStack_50 = alStack_48[0] + lStack_50;
             }
-            fn_82F35400(param_1,uVar4,apuStack_58);
-            (**(code **)(*(int *)*apuStack_58[0] + 0xc))((int *)*apuStack_58[0],uStack_70);
+            fn_82F35400(param_1,uVar4,&apuStack_58);
+            (**(code **)(*(int *)*apuStack_58 + 0xc))((int *)*apuStack_58,uStack_70);
           }
           uVar4 = uVar4 + 1;
         } while ((uVar4 & 0xffffffff) < (ulonglong)uVar1);

@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_82CE5410();
 extern int fn_82CE6310();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 int * fn_82CFC990(int *param_1,char *param_2)
@@ -56,7 +56,7 @@ int * fn_82CFC990(int *param_1,char *param_2)
     fn_82CE6310(*(undefined4 *)(iVar3 + 0x10),param_1,iVar6,1);
   }
   param_1[1] = iVar5;
-  fn_82F68CC0(*param_1 + iVar2 + -1,param_2,(int)pcVar4 - (int)param_2);
+  memcpy(*param_1 + iVar2 + -1,param_2,(int)pcVar4 - (int)param_2);
   return param_1;
 }
 

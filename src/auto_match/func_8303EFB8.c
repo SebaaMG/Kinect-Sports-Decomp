@@ -43,8 +43,8 @@ undefined8 fn_8303EFB8(int param_1,undefined4 param_2,undefined4 param_3)
 {
   int *piVar2;
   undefined8 uVar1;
-  undefined4 uStack_50;
-  undefined4 uStack_4c;
+  struct { undefined4 first; undefined4 second; } stack_pair_50;
+
   undefined4 uStack_48;
   undefined4 uStack_44;
   uint uStack_40;
@@ -62,10 +62,10 @@ undefined8 fn_8303EFB8(int param_1,undefined4 param_2,undefined4 param_3)
     uStack_3c = 0;
     uStack_3b = 0;
     uStack_48 = 0;
-    uStack_50 = param_2;
-    uStack_4c = param_3;
+    stack_pair_50.first = param_2;
+    stack_pair_50.second = param_3;
     uStack_44 = fn_8302BBA8(param_1);
-    uVar1 = (**(code **)(*piVar2 + 0x1c))(piVar2,&uStack_50);
+    uVar1 = (**(code **)(*piVar2 + 0x1c))(piVar2,&stack_pair_50.first);
     (**(code **)(*piVar2 + 8))(piVar2);
   }
   return uVar1;

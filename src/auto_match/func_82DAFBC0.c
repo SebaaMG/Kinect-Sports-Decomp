@@ -46,7 +46,7 @@ bool fn_82DAFBC0(int param_1,undefined4 *param_2)
   int *piStack_80;
   int iStack_7c;
   uint uStack_78;
-  int aiStack_74 [29];
+  int aiStack_74 [9];
   
   iVar1 = *(int *)(param_1 + 0x4c);
   lVar6 = 0;

@@ -27,14 +27,13 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 
 
-ulonglong fn_82CAB2D8(longlong param_1,longlong param_2,longlong param_3,longlong param_4,
-                       longlong param_5,longlong param_6,longlong param_7,longlong param_8)
+ulonglong fn_82CAB2D8(longlong param_1, longlong param_2, longlong param_3, longlong param_4, longlong param_5, longlong param_6, longlong param_7, longlong param_8, uint in_stack_00000054)
 
 {
   longlong lVar1;
   longlong lVar2;
   longlong lVar3;
-  uint in_stack_00000054;
+
   
   lVar1 = param_8;
   if ((int)param_8 <= (int)param_1) {

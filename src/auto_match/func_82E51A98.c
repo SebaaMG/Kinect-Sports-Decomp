@@ -50,8 +50,8 @@ longlong fn_82E51A98(int *param_1)
   ushort *puStack_60;
   ushort *puStack_5c;
   uint auStack_58 [2];
-  undefined4 uStack_50;
-  undefined4 uStack_4c;
+  struct { undefined4 first; undefined4 second; } stack_pair_50;
+
   undefined4 uStack_48;
   undefined4 uStack_44;
   
@@ -63,17 +63,17 @@ longlong fn_82E51A98(int *param_1)
     (**(code **)(*param_1 + 0xa4))(param_1);
     puStack_60 = puStack_5c;
     for (uVar4 = auStack_58[0]; (uVar4 != 0 && (0x15 < uVar4)); uVar4 = (uVar4 - 0x16) - uVar5) {
-      uStack_50 = lbl_8202E618;
-      uStack_4c = lbl_8202E61C;
+      stack_pair_50.first = lbl_8202E618;
+      stack_pair_50.second = lbl_8202E61C;
       uStack_48 = lbl_8202E620;
       uStack_44 = lbl_8202E624;
-      fn_82E39C50(&uStack_50,&puStack_60);
+      fn_82E39C50(&stack_pair_50.first,&puStack_60);
       puVar3 = puStack_60 + 3;
       uVar5 = (uint)*(byte *)((int)puStack_60 + 5) << 0x18 | (uint)*(byte *)(puStack_60 + 2) << 0x10
               | (uint)*(byte *)((int)puStack_60 + 3) << 8 | (uint)*(byte *)(puStack_60 + 1);
       uVar5 = -(uint)(uVar5 <= uVar4 - 0x16) & uVar5;
       lVar2 = (**(code **)(*param_1 + 0xa0))
-                        (param_1,CONCAT44(uStack_50,uStack_4c),CONCAT44(uStack_48,uStack_44),
+                        (param_1,CONCAT44(stack_pair_50.first,stack_pair_50.second),CONCAT44(uStack_48,uStack_44),
                          *puStack_60 << 8 | *puStack_60 >> 8,puVar3,uVar5);
       if (lVar2 < 0) break;
       puStack_60 = (ushort *)(uVar5 + (int)puVar3);

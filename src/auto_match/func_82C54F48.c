@@ -30,7 +30,7 @@ extern int fn_82C53970();
 extern int fn_82C563B0();
 extern int fn_82CBBD70();
 extern int fn_82F641F8();
-extern int fn_82F691F0();
+extern int memset();
 
 
 void fn_82C54F48(int *param_1)
@@ -69,7 +69,7 @@ void fn_82C54F48(int *param_1)
       while (iVar3 != 0) {
         if ((uVar2 & 1) != 0) {
                     /* WARNING: Subroutine does not return */
-          fn_82F691F0(iVar3,0,0xb330);
+          memset(iVar3,0,0xb330);
         }
         fn_82C563B0((ulonglong)(uint)param_1[9] + 8,iVar3);
         if (param_1[3] == 0) {

@@ -41,7 +41,7 @@ void fn_830821E0(undefined4 *param_1,int *param_2,int *param_3)
   int iVar6;
   uint uVar7;
   ulonglong uVar8;
-  uint auStack_40 [16];
+  uint auStack_40;
   
   iVar4 = param_1[1];
   iVar3 = fn_82CE5410();
@@ -56,11 +56,11 @@ void fn_830821E0(undefined4 *param_1,int *param_2,int *param_3)
   uVar1 = param_2[1];
   uVar8 = (ulonglong)uVar1;
   if (0 < (int)uVar1) {
-    auStack_40[0] = uVar1;
+    auStack_40 = uVar1;
     iVar4 = fn_82CE5410();
-    iVar4 = (**(code **)(**(int **)(iVar4 + 0xc) + 0xc))(*(int **)(iVar4 + 0xc),auStack_40,4);
-    uVar7 = auStack_40[0];
-    if (auStack_40[0] == 0) {
+    iVar4 = (**(code **)(**(int **)(iVar4 + 0xc) + 0xc))(*(int **)(iVar4 + 0xc),&auStack_40,4);
+    uVar7 = auStack_40;
+    if (auStack_40 == 0) {
       uVar7 = 0x80000000;
     }
     iVar3 = 0;

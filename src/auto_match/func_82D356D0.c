@@ -75,7 +75,7 @@ undefined8 fn_82D356D0(int param_1,undefined8 param_2,undefined4 param_3)
   undefined4 in_register_00010024;
   undefined4 in_register_00010028;
   undefined4 in_vr2;
-  undefined2 auStack_a0 [4];
+  undefined2 auStack_a0;
   longlong lStack_98;
   longlong lStack_90;
   longlong lStack_88;
@@ -133,8 +133,8 @@ undefined8 fn_82D356D0(int param_1,undefined8 param_2,undefined4 param_3)
     *puVar6 = (short)uVar3;
   }
   else {
-    fn_82D351D8(piVar4,piVar5,puVar6,auStack_a0);
-    fn_82D34280(param_1,*puVar6,uVar3,auStack_a0[0]);
+    fn_82D351D8(piVar4,piVar5,puVar6,&auStack_a0);
+    fn_82D34280(param_1,*puVar6,uVar3,auStack_a0);
   }
   *(int *)(param_1 + 0x18) = *(int *)(param_1 + 0x18) + 1;
   return uVar3;

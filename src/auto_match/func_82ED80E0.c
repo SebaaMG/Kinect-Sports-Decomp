@@ -60,8 +60,8 @@ void fn_82ED80E0(int param_1,ulonglong param_2,uint param_3,longlong param_4,lon
   int *in_stack_000000bc;
   int iStack_d0;
   int iStack_cc;
-  int iStack_c8;
-  int iStack_c4;
+  struct { int first; int second; } stack_pair_c8;
+
   int iStack_c0;
   int iStack_bc;
   ulonglong uStack_b8;
@@ -83,26 +83,26 @@ void fn_82ED80E0(int param_1,ulonglong param_2,uint param_3,longlong param_4,lon
           iVar2 = *(int *)(iVar6 + 8);
           piStack_ac = &iStack_cc;
           iVar3 = *(int *)(iVar6 + 0xc);
-          piStack_a8 = &iStack_c4;
+          piStack_a8 = &stack_pair_c8.second;
           iVar4 = *(int *)(iVar6 + 0x10);
           iVar5 = *(int *)(iVar6 + 0x18);
           iVar6 = *(int *)(iVar6 + 0x14);
           iStack_d0 = (int)uStack_b8;
           iStack_cc = iStack_d0;
-          iStack_c8 = iStack_d0;
-          iStack_c4 = iStack_d0;
+          stack_pair_c8.first = iStack_d0;
+          stack_pair_c8.second = iStack_d0;
           iStack_c0 = iStack_d0;
           iStack_bc = iStack_d0;
           iStack_b0 = iVar6;
-          fn_82F2AF38(param_1,uVar10,param_2,lStack_a0,param_5,param_6,&iStack_d0,&iStack_c8);
+          fn_82F2AF38(param_1,uVar10,param_2,lStack_a0,param_5,param_6,&iStack_d0,&stack_pair_c8.first);
           *param_7 = *param_7 + iStack_d0;
           uVar7 = iStack_cc + iStack_d0;
-          *param_8 = *param_8 + iStack_c8;
-          uVar8 = iStack_c0 + iStack_c8;
-          *in_stack_00000054 = *in_stack_00000054 + iStack_c4;
+          *param_8 = *param_8 + stack_pair_c8.first;
+          uVar8 = iStack_c0 + stack_pair_c8.first;
+          *in_stack_00000054 = *in_stack_00000054 + stack_pair_c8.second;
           *in_stack_0000005c = iStack_cc + *in_stack_0000005c;
           *in_stack_00000064 = *in_stack_00000064 + iStack_c0;
-          uVar9 = iStack_bc + iStack_c4;
+          uVar9 = iStack_bc + stack_pair_c8.second;
           *in_stack_0000006c = *in_stack_0000006c + iStack_bc;
           puVar11 = (uint *)lStack_a0;
           if (((((iVar1 == 0 && iVar2 == 0) && iVar3 == 0) && iVar4 == 0) && iVar5 == 0) &&

@@ -65,7 +65,7 @@ undefined8 fn_82C60938(int param_1,undefined8 param_2)
   ulonglong uVar16;
   ulonglong *puVar17;
   undefined4 auStack_b0 [4];
-  undefined1 auStack_a0 [160];
+  undefined1 auStack_a0 [48];
   
   iVar15 = 0;
   auStack_b0[0] = 0;

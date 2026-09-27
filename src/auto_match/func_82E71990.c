@@ -44,7 +44,7 @@ longlong fn_82E71990(int *param_1,ulonglong param_2,int param_3,undefined8 param
   uint uStack_6c;
   int *piStack_68;
   undefined4 uStack_64;
-  longlong alStack_60 [12];
+  longlong alStack_60;
   
   if (param_5 == (longlong *)0x0) {
     lVar2 = -0x7fffbffd;
@@ -67,21 +67,21 @@ longlong fn_82E71990(int *param_1,ulonglong param_2,int param_3,undefined8 param
           lVar2 = -0x3ff2c945;
         }
         else {
-          alStack_60[0] = 0;
+          alStack_60 = 0;
           param_2 = param_2 / uStack_6c;
           trapDoubleWordImmediate(6,(ulonglong)uStack_6c,0);
-          lVar2 = fn_82E71308(param_1,param_2,param_4,alStack_60,&piStack_68,&uStack_64);
+          lVar2 = fn_82E71308(param_1,param_2,param_4,&alStack_60,&piStack_68,&uStack_64);
           piVar1 = piStack_68;
           if (-1 < lVar2) {
             uStack_70 = 0;
-            lVar2 = fn_82E6F498(param_1,alStack_60[0],&uStack_70);
+            lVar2 = fn_82E6F498(param_1,alStack_60,&uStack_70);
             if (-1 < lVar2) {
               if ((param_3 == 0) || ((int)param_4 != 3)) {
-                alStack_60[0] = 0;
+                alStack_60 = 0;
                 lVar2 = (**(code **)(*piVar1 + 0x20))
-                                  (piVar1,*(undefined2 *)(param_1 + 2),param_4,alStack_60);
+                                  (piVar1,*(undefined2 *)(param_1 + 2),param_4,&alStack_60);
                 if (-1 < lVar2) {
-                  *param_5 = (ulonglong)uStack_70 + alStack_60[0];
+                  *param_5 = (ulonglong)uStack_70 + alStack_60;
                   if (param_6 != (undefined8 *)0x0) {
                     lVar2 = fn_82E70AB8(param_1,param_2,(ulonglong)uStack_70,uStack_6c * 10000,
                                           param_6);

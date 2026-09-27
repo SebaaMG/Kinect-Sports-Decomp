@@ -104,8 +104,8 @@ fn_82E54148(undefined4 *param_1,int *param_2,ulonglong param_3,int param_4,int *
   int *piStack_e8;
   undefined4 uStack_e4;
   int aiStack_e0 [4];
-  int iStack_d0;
-  int iStack_cc;
+  struct { int first; int second; } stack_pair_d0;
+
   undefined4 uStack_c8;
   undefined1 *puStack_c4;
   undefined4 uStack_c0;
@@ -114,7 +114,7 @@ fn_82E54148(undefined4 *param_1,int *param_2,ulonglong param_3,int param_4,int *
   undefined4 uStack_ac;
   undefined4 uStack_a8;
   undefined4 uStack_a4;
-  undefined1 auStack_a0 [160];
+  undefined1 auStack_a0 [80];
   
   fn_82E52B50(param_1,0);
   param_1[0x15] = 0;
@@ -209,9 +209,9 @@ fn_82E54148(undefined4 *param_1,int *param_2,ulonglong param_3,int param_4,int *
             uStack_c8 = CONCAT22(0x30,(((U64)(uStack_c8) >> 16) & 0xFFFF));
             piStack_bc = aiStack_e0;
             uStack_c0 = 4;
-            iVar6 = fn_82EE17C8(piVar5,uVar10,&iStack_d0);
+            iVar6 = fn_82EE17C8(piVar5,uVar10,&stack_pair_d0.first);
             *param_5 = iVar6;
-            if (((-1 < iVar6) && (iStack_cc == 3)) && (puStack_c4 != (undefined1 *)0x0)) {
+            if (((-1 < iVar6) && (stack_pair_d0.second == 3)) && (puStack_c4 != (undefined1 *)0x0)) {
               iVar6 = fn_82F6ADA8(puStack_c4,0xffffffff82154714);
               if (iVar6 == 0) {
                 bVar3 = true;
@@ -267,16 +267,16 @@ LAB_82e545b4:
   iVar6 = fn_82E53BF8(param_1,param_2,param_3,iStack_10c,param_1 + 0x18);
   *param_5 = iVar6;
   if (-1 < iVar6) {
-    iStack_d0 = iStack_108;
-    iStack_cc = iStack_104;
+    stack_pair_d0.first = iStack_108;
+    stack_pair_d0.second = iStack_104;
     uStack_c8 = uStack_100;
-    iVar6 = fn_82E2F348(param_1,0xffffffff8214c290,&iStack_d0,0xc);
+    iVar6 = fn_82E2F348(param_1,0xffffffff8214c290,&stack_pair_d0.first,0xc);
     *param_5 = iVar6;
     if (-1 < iVar6) {
-      iStack_d0 = iStack_10c;
-      iStack_cc = iStack_fc;
+      stack_pair_d0.first = iStack_10c;
+      stack_pair_d0.second = iStack_fc;
       uStack_c8 = uStack_f8;
-      iVar6 = fn_82E2F348(param_1,0xffffffff8214c2a0,&iStack_d0,0xc);
+      iVar6 = fn_82E2F348(param_1,0xffffffff8214c2a0,&stack_pair_d0.first,0xc);
       *param_5 = iVar6;
       if ((-1 < iVar6) && ((param_3 & 0xffffffff) != 0)) {
         iVar6 = fn_82E51BF8(param_1,param_3);

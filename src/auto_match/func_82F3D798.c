@@ -28,7 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 #define CONCAT22(h,l) ((U32)((((U16)(h)) << 16) | ((U16)(l))))
 #define CONCAT44(h,l) ((U64)((((U32)(h)) << 32) | ((U32)(l))))
 extern unsigned int *auStack_30;
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int uStack_38;
 extern unsigned int uStack_40;
 
@@ -64,7 +64,7 @@ undefined8 fn_82F3D798(int *param_1,int param_2,uint param_3,uint *param_4)
                              CONCAT22(*(ushort *)(param_1 + 5) << 8 | *(ushort *)(param_1 + 5) >> 8,
                                       *(ushort *)((int)param_1 + 0x16) << 8 |
                                       *(ushort *)((int)param_1 + 0x16) >> 8));
-        fn_82F68CC0(param_2,&uStack_40,0x10);
+        memcpy(param_2,&uStack_40,0x10);
         uVar2 = *(ulonglong *)(param_1 + 8);
         uStack_40 = ((((U64)(uStack_40)) & (~(((U64)0xFFFFFFFF) << 32))) | ((((U64)((uint)uVar2)) & ((U64)0xFFFFFFFF)) << 32));
         uStack_40 = ((((U64)(uStack_40)) & (~(((U64)0xFFFFFFFF) << 0))) | ((((U64)((uint)(uVar2 >> 0x20))) & ((U64)0xFFFFFFFF)) << 0));
@@ -78,7 +78,7 @@ undefined8 fn_82F3D798(int *param_1,int param_2,uint param_3,uint *param_4)
                     (ulonglong)((((U64)(uStack_40) >> 0) & 0xFFFFFFFF) >> 0x18);
         if (param_1[0x13] != 0) {
           uStack_40 = uVar2;
-          fn_82F68CC0(param_2 + 0x18,param_1[0x13],param_1[0x12]);
+          memcpy(param_2 + 0x18,param_1[0x13],param_1[0x12]);
         }
         uVar1 = 0;
       }

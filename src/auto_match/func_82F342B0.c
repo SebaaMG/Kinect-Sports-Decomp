@@ -30,7 +30,7 @@ extern int fn_82F33CC8();
 extern int fn_82F33DD0();
 extern int fn_82F33F20();
 extern int fn_82F33FE0();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 longlong fn_82F342B0(ushort *param_1,undefined4 *param_2)
@@ -40,9 +40,9 @@ longlong fn_82F342B0(ushort *param_1,undefined4 *param_2)
   int iVar2;
   longlong lVar3;
   ushort *puVar4;
-  ushort *apuStack_30 [12];
+  ushort * apuStack_30;
   
-  apuStack_30[0] = (ushort *)0x0;
+  apuStack_30 = (ushort *)0x0;
   if (param_2 == (undefined4 *)0x0) {
     return -0x7ff8ffa9;
   }
@@ -52,36 +52,36 @@ longlong fn_82F342B0(ushort *param_1,undefined4 *param_2)
   }
   uVar1 = param_1[1];
   if ((uVar1 & 0xe0) == 0) {
-    lVar3 = fn_82F33C28(*param_1,apuStack_30);
+    lVar3 = fn_82F33C28(*param_1,&apuStack_30);
   }
   else {
     if ((uVar1 & 0x20) != 0) {
-      lVar3 = fn_82F33CC8(0x24,*param_1,apuStack_30);
-      puVar4 = apuStack_30[0];
+      lVar3 = fn_82F33CC8(0x24,*param_1,&apuStack_30);
+      puVar4 = apuStack_30;
       if ((int)lVar3 < 0) {
         return lVar3;
       }
       iVar2 = *(int *)(param_1 + -2);
-      *(int *)(apuStack_30[0] + -2) = iVar2;
+      *(int *)(apuStack_30 + -2) = iVar2;
       if (iVar2 != 0) {
-        (**(code **)(**(int **)(apuStack_30[0] + -2) + 4))();
+        (**(code **)(**(int **)(apuStack_30 + -2) + 4))();
       }
       goto LAB_82f343ac;
     }
     if ((uVar1 & 0x40) != 0) {
-      lVar3 = fn_82F33CC8(0xd,*param_1,apuStack_30);
-      puVar4 = apuStack_30[0];
+      lVar3 = fn_82F33CC8(0xd,*param_1,&apuStack_30);
+      puVar4 = apuStack_30;
       if ((int)lVar3 < 0) {
         return lVar3;
       }
-      fn_82F68CC0(apuStack_30[0] + -8,param_1 + -8,0x10);
+      memcpy(apuStack_30 + -8,param_1 + -8,0x10);
       goto LAB_82f343ac;
     }
     puVar4 = (ushort *)0x0;
     if ((uVar1 & 0x80) == 0) goto LAB_82f343ac;
-    lVar3 = fn_82F33CC8(*(uint *)(param_1 + -2) & 0xffff,*param_1,apuStack_30);
+    lVar3 = fn_82F33CC8(*(uint *)(param_1 + -2) & 0xffff,*param_1,&apuStack_30);
   }
-  puVar4 = apuStack_30[0];
+  puVar4 = apuStack_30;
   if ((int)lVar3 < 0) {
     return lVar3;
   }
@@ -91,7 +91,7 @@ LAB_82f343ac:
   *puVar4 = *param_1;
   puVar4[1] = param_1[1] & 0xefe8;
   *(undefined4 *)(puVar4 + 2) = *(undefined4 *)(param_1 + 2);
-  fn_82F68CC0(puVar4 + 8,param_1 + 8,(ulonglong)*param_1 << 3);
+  memcpy(puVar4 + 8,param_1 + 8,(ulonglong)*param_1 << 3);
   lVar3 = fn_82F33DD0(puVar4);
   if ((-1 < lVar3) && (lVar3 = fn_82F33FE0(param_1,puVar4), -1 < lVar3)) {
     *param_2 = puVar4;

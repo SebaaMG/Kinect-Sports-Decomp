@@ -35,7 +35,7 @@ uint fn_82D78208(int param_1,undefined8 param_2,undefined8 param_3,undefined2 *p
   byte bVar1;
   char *pcVar2;
   uint uVar3;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
   
   bVar1 = *(byte *)(param_1 + 0x21);
   uVar3 = (uint)bVar1;

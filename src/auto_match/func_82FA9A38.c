@@ -41,7 +41,7 @@ fn_82FA9A38(int *param_1,undefined8 param_2,undefined4 param_3,ulonglong param_4
   undefined8 uVar4;
   undefined4 uStack00000024;
   int *in_stack_00000054;
-  int aiStack_30 [12];
+  int aiStack_30;
   
   piVar1 = in_stack_00000054;
   iVar2 = param_1[0x10];
@@ -75,13 +75,13 @@ fn_82FA9A38(int *param_1,undefined8 param_2,undefined4 param_3,ulonglong param_4
   }
   *piVar1 = *piVar1 - param_1[0x11];
   if (((int)uVar4 == 1) &&
-     (iVar2 = (**(code **)(*param_1 + 0xc))(param_1,param_2,&stack0x00000024,aiStack_30), iVar2 != 0
+     (iVar2 = (**(code **)(*param_1 + 0xc))(param_1,param_2,&stack0x00000024,&aiStack_30), iVar2 != 0
      )) {
     iVar2 = *piVar1;
     if (param_1[3] < 0) {
       iVar2 = param_1[3] + iVar2;
     }
-    if (aiStack_30[0] < iVar2) {
+    if (aiStack_30 < iVar2) {
       return 2;
     }
   }

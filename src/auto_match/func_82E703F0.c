@@ -40,7 +40,7 @@ longlong fn_82E703F0(int *param_1,undefined8 param_2,undefined8 param_3,longlong
   int *piStack_40;
   uint uStack_3c;
   undefined8 uStack_38;
-  longlong alStack_30 [6];
+  longlong alStack_30;
   
   piStack_40 = (int *)0x0;
   if (param_4 == (longlong *)0x0) {
@@ -56,13 +56,13 @@ longlong fn_82E703F0(int *param_1,undefined8 param_2,undefined8 param_3,longlong
     if (-1 < lVar3) {
       lVar3 = fn_82E6F498(param_1,uStack_38,&uStack_3c);
       if (-1 < lVar3) {
-        alStack_30[0] = 0;
+        alStack_30 = 0;
         iVar1 = *piStack_40;
         uVar2 = (**(code **)(*param_1 + 0x34))(param_1);
         lVar3 = (**(code **)(iVar1 + 0x20))
-                          (piStack_40,*(undefined2 *)(param_1 + 2),uVar2,alStack_30);
+                          (piStack_40,*(undefined2 *)(param_1 + 2),uVar2,&alStack_30);
         if (-1 < lVar3) {
-          *param_4 = (ulonglong)uStack_3c + alStack_30[0];
+          *param_4 = (ulonglong)uStack_3c + alStack_30;
         }
       }
     }

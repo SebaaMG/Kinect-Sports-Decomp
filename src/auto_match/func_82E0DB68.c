@@ -62,7 +62,7 @@ void fn_82E0DB68(int *param_1,longlong param_2,undefined8 param_3,longlong param
   undefined1 auStack_78 [8];
   undefined1 auStack_70 [8];
   undefined1 auStack_68 [8];
-  undefined1 auStack_60 [96];
+  undefined1 auStack_60 [1];
   
   lVar13 = 0;
   iVar8 = fn_82CEAE80(param_3);

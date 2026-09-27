@@ -45,8 +45,8 @@ ulonglong fn_82CE1A58(undefined4 param_1,undefined4 param_2,int param_3,undefine
   uint uVar3;
   undefined4 *in_stack_00000054;
   int in_stack_0000005c;
-  undefined4 uStack_50;
-  undefined4 uStack_4c;
+  struct { undefined4 first; undefined4 second; } stack_pair_50;
+
   int iStack_48;
   undefined2 uStack_44;
   undefined2 uStack_42;
@@ -61,14 +61,14 @@ ulonglong fn_82CE1A58(undefined4 param_1,undefined4 param_2,int param_3,undefine
     *in_stack_00000054 = 0;
     in_stack_00000054[1] = 0;
     uStack_38 = *param_8;
-    uStack_50 = param_1;
-    uStack_4c = param_2;
+    stack_pair_50.first = param_1;
+    stack_pair_50.second = param_2;
     iStack_48 = param_3;
     uStack_44 = param_4;
     uStack_42 = param_5;
     uStack_40 = param_6;
     uStack_3c = param_7;
-    iVar2 = XMsgStartIORequest(0xfb,0xb0016,in_stack_0000005c,&uStack_50,0x20);
+    iVar2 = XMsgStartIORequest(0xfb,0xb0016,in_stack_0000005c,&stack_pair_50.first,0x20);
     if (-1 < iVar2) {
       if (in_stack_0000005c == 0) {
         lVar1 = fn_82A2B798();

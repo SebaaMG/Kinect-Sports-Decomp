@@ -35,7 +35,7 @@ ulonglong fn_82EEB540(int param_1,int param_2,int param_3,uint param_4,int param
 {
   uint uVar1;
   ulonglong uVar2;
-  int aiStack_40 [16];
+  int aiStack_40;
   
   if (((param_2 == 0) || (param_3 == 0)) || (param_4 == 0)) {
     uVar2 = 0xffffffff80070057;
@@ -59,12 +59,12 @@ ulonglong fn_82EEB540(int param_1,int param_2,int param_3,uint param_4,int param
     *(undefined4 *)(param_1 + 0x24) = 1;
     while (param_4 != 0) {
       param_4 = param_4 - 1;
-      aiStack_40[0] = fn_82EEB288(param_1);
-      if (aiStack_40[0] == 0) {
+      aiStack_40 = fn_82EEB288(param_1);
+      if (aiStack_40 == 0) {
         fn_82EEB4D8(param_1);
         break;
       }
-      fn_82EEB480(param_1,param_1,aiStack_40);
+      fn_82EEB480(param_1,param_1,&aiStack_40);
     }
     uVar2 = -(ulonglong)(*(int *)(param_1 + 0x24) == 0) & 0xffffffff8007000e;
   }

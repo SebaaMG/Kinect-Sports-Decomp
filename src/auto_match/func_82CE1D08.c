@@ -45,8 +45,8 @@ uint fn_82CE1D08(undefined8 param_1,undefined4 param_2,undefined4 param_3,ulongl
   uint uStack_60;
   int iStack_5c;
   int aiStack_58 [2];
-  int iStack_50;
-  undefined4 uStack_4c;
+  struct { int first; undefined4 second; } stack_pair_50;
+
   undefined4 uStack_48;
   undefined4 uStack_44;
   undefined4 uStack_40;
@@ -63,11 +63,11 @@ uint fn_82CE1D08(undefined8 param_1,undefined4 param_2,undefined4 param_3,ulongl
     if (uStack_60 == 0) {
       uStack_44 = 0;
       uStack_40 = 0;
-      iStack_50 = iStack_5c;
+      stack_pair_50.first = iStack_5c;
       uStack_3c = 0;
-      uStack_4c = param_3;
+      stack_pair_50.second = param_3;
       uStack_48 = param_2;
-      aiStack_58[0] = XMsgStartIORequest(0xfb,0xb001e,param_4,&iStack_50,0x18);
+      aiStack_58[0] = XMsgStartIORequest(0xfb,0xb001e,param_4,&stack_pair_50.first,0x18);
       if (aiStack_58[0] < 0) {
         uStack_60 = 0x65b;
       }

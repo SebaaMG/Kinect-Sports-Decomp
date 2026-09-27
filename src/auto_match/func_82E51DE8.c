@@ -36,7 +36,7 @@ undefined8 fn_82E51DE8(undefined8 param_1,undefined4 *param_2,int *param_3,undef
   int iVar1;
   undefined8 uVar2;
   int *piStack_50;
-  int *apiStack_4c [3];
+  int * apiStack_4c;
   undefined1 auStack_40 [8];
   undefined8 uStack_38;
   
@@ -49,12 +49,12 @@ undefined8 fn_82E51DE8(undefined8 param_1,undefined4 *param_2,int *param_3,undef
   piStack_50 = (int *)0x0;
   uVar2 = 0;
   uStack_38 = 0;
-  apiStack_4c[0] = (int *)0x0;
+  apiStack_4c = (int *)0x0;
   iVar1 = (**(code **)*param_2)(param_2,0xffffffff821531c8,&piStack_50);
   if (iVar1 < 0) {
-    iVar1 = (**(code **)*param_2)(param_2,0xffffffff821531d8,apiStack_4c);
+    iVar1 = (**(code **)*param_2)(param_2,0xffffffff821531d8,&apiStack_4c);
     if (iVar1 < 0) goto LAB_82e51ee4;
-    iVar1 = (**(code **)(*apiStack_4c[0] + 0x98))();
+    iVar1 = (**(code **)(*apiStack_4c + 0x98))();
     iVar1 = (int)*(undefined8 *)(iVar1 + 0x88);
   }
   else {
@@ -71,9 +71,9 @@ LAB_82e51ee4:
     (**(code **)(*piStack_50 + 8))();
     piStack_50 = (int *)0x0;
   }
-  if (apiStack_4c[0] != (int *)0x0) {
-    (**(code **)(*apiStack_4c[0] + 8))();
-    apiStack_4c[0] = (int *)0x0;
+  if (apiStack_4c != (int *)0x0) {
+    (**(code **)(*apiStack_4c + 8))();
+    apiStack_4c = (int *)0x0;
   }
   fn_82E50330(auStack_40);
   return uVar2;

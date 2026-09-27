@@ -47,7 +47,7 @@ void fn_830242F0(int param_1,int param_2,undefined8 param_3,undefined8 param_4)
   undefined1 in_vs40 [16];
   undefined4 in_register_000103d0;
   undefined4 in_register_000103f0;
-  float afStack_30 [12];
+  float afStack_30;
   
   iVar6 = (int)in_r0;
   if (*(int *)(param_1 + 0x70) == 1) {
@@ -85,9 +85,9 @@ void fn_830242F0(int param_1,int param_2,undefined8 param_3,undefined8 param_4)
   puVar3[1] = in_register_000103f0;
   puVar3[2] = in_register_000103f0;
   puVar3[3] = in_register_000103f0;
-  afStack_30[0] = fVar5;
+  afStack_30 = fVar5;
   if (*(float *)(param_1 + 8) - fVar5 < 0.0) {
-    afStack_30[0] = *(float *)(param_1 + 8);
+    afStack_30 = *(float *)(param_1 + 8);
   }
   altv300_21(in_vs32,in_vs39);
   puVar3 = (undefined4 *)(param_1 + 0x140U & 0xfffffff0);
@@ -110,7 +110,7 @@ void fn_830242F0(int param_1,int param_2,undefined8 param_3,undefined8 param_4)
   }
   *(float *)(param_1 + 0x144) = fVar5;
   if (*(int *)(param_1 + 0x104) == 3) {
-    fn_83023170(param_1 + 0x80,param_1 + 0x100,param_2,param_4,afStack_30,afStack_30);
+    fn_83023170(param_1 + 0x80,param_1 + 0x100,param_2,param_4,&afStack_30,&afStack_30);
   }
   else if (*(int *)(param_1 + 0x104) == 0x3f) {
     fn_83023178(param_1 + 0x80,param_1 + 0x100,param_2);

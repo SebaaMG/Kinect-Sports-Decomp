@@ -44,7 +44,7 @@ longlong fn_82E31708(int param_1,undefined4 *param_2)
   int *piStack_50;
   int *piStack_4c;
   int aiStack_48 [2];
-  longlong alStack_40 [8];
+  longlong alStack_40;
   
   piStack_4c = (int *)0x0;
   piStack_50 = (int *)0x0;
@@ -75,15 +75,15 @@ longlong fn_82E31708(int param_1,undefined4 *param_2)
           lVar2 = fn_82E625B0(piStack_50,puVar4);
           piVar3 = piStack_50;
           if (-1 < lVar2) {
-            alStack_40[0] = 0;
-            lVar2 = fn_82E62630(piVar1,alStack_40);
+            alStack_40 = 0;
+            lVar2 = fn_82E62630(piVar1,&alStack_40);
             piVar3 = piStack_50;
             if (-1 < lVar2) {
-              if (*puVar4 < (ulonglong)(alStack_40[0] * 10000)) {
+              if (*puVar4 < (ulonglong)(alStack_40 * 10000)) {
                 *puVar4 = 0;
               }
               else {
-                *puVar4 = *puVar4 + alStack_40[0] * -10000;
+                *puVar4 = *puVar4 + alStack_40 * -10000;
               }
             }
           }

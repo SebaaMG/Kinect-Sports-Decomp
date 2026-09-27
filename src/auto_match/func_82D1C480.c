@@ -54,7 +54,7 @@ void fn_82D1C480(int *param_1,undefined4 param_2,int *param_3,int *param_4)
   undefined4 uVar8;
   undefined4 uVar9;
   undefined4 uVar10;
-  undefined1 auStack_b0 [16];
+  undefined1 auStack_b0 [1];
   undefined1 auStack_a0 [160];
   
   iVar4 = 0;

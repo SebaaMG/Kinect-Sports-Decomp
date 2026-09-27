@@ -25,18 +25,18 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F69860();
-extern int fn_82F698B8();
-extern int fn_82F6FA38();
+extern int _IsExceptionObjectToBeDestroyed();
+extern int _FindAndUnlinkFrame();
+extern int _getptd();
 extern int fn_82F80590();
-extern int fn_82F86930();
+extern int _CallSettingFrame();
 extern unsigned int uStack_54;
 extern unsigned int uStack_5c;
 extern unsigned int uStack_60;
 
 
 undefined8
-fn_82F80638(undefined8 param_1,undefined8 param_2,undefined4 param_3,undefined8 param_4,
+CallCatchBlock(undefined8 param_1,undefined8 param_2,undefined4 param_3,undefined8 param_4,
              undefined8 param_5,undefined4 *param_6,int *param_7)
 
 {
@@ -44,30 +44,30 @@ fn_82F80638(undefined8 param_1,undefined8 param_2,undefined4 param_3,undefined8 
   undefined4 uVar2;
   int iVar4;
   undefined8 uVar3;
-  undefined4 uStack_60;
-  undefined4 uStack_5c;
+  struct { undefined4 first; undefined4 second; } stack_pair_60;
+
   int *piStack_58;
   undefined4 uStack_54;
   
-  iVar4 = fn_82F6FA38();
+  iVar4 = _getptd();
   uVar1 = *(undefined4 *)(iVar4 + 0x7c);
-  iVar4 = fn_82F6FA38();
+  iVar4 = _getptd();
   uVar2 = *(undefined4 *)(iVar4 + 0x80);
-  iVar4 = fn_82F6FA38();
+  iVar4 = _getptd();
   *(int *)(iVar4 + 0x7c) = (int)param_1;
-  iVar4 = fn_82F6FA38();
+  iVar4 = _getptd();
   *(undefined4 *)(iVar4 + 0x80) = param_3;
   uStack_54 = *param_6;
-  uStack_5c = (undefined4)param_2;
-  uStack_60 = 0xfffffffe;
+  stack_pair_60.second = (undefined4)param_2;
+  stack_pair_60.first = 0xfffffffe;
   piStack_58 = param_7;
-  uVar3 = fn_82F86930(param_5,param_2,0x100,&uStack_60);
-  fn_82F698B8(param_7);
-  iVar4 = fn_82F6FA38();
+  uVar3 = _CallSettingFrame(param_5,param_2,0x100,&stack_pair_60.first);
+  _FindAndUnlinkFrame(param_7);
+  iVar4 = _getptd();
   *(undefined4 *)(iVar4 + 0x7c) = uVar1;
-  iVar4 = fn_82F6FA38();
+  iVar4 = _getptd();
   *(undefined4 *)(iVar4 + 0x80) = uVar2;
-  if ((*param_7 != 0) && (iVar4 = fn_82F69860(), iVar4 != 0)) {
+  if ((*param_7 != 0) && (iVar4 = _IsExceptionObjectToBeDestroyed(), iVar4 != 0)) {
     fn_82F80590(param_1,1);
     *param_7 = 0;
   }

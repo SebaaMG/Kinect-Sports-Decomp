@@ -39,15 +39,15 @@ undefined8 fn_82FF2E78(undefined8 param_1)
 {
   ulonglong uVar1;
   undefined8 uVar2;
-  undefined4 auStack_20 [8];
+  undefined4 auStack_20;
   
   uVar1 = fn_82FF2778((double)lbl_8326431C,lbl_831BC768);
   if ((uVar1 & 0xff) == 0) {
     uVar1 = fn_82FF2778((double)lbl_832643D0,lbl_831BC770);
   }
   if ((uVar1 & 0xff) != 0) {
-    auStack_20[0] = 0;
-    uVar2 = fn_82FF2D40(param_1,uVar1,0,0,1,auStack_20);
+    auStack_20 = 0;
+    uVar2 = fn_82FF2D40(param_1,uVar1,0,0,1,&auStack_20);
     return uVar2;
   }
   return 1;

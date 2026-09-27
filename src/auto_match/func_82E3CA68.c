@@ -29,7 +29,7 @@ extern unsigned int *auStack_48;
 extern int fn_82E3BF28();
 extern int fn_82E50CB8();
 extern int fn_82E50F10();
-extern int fn_82F691F0();
+extern int memset();
 extern unsigned int uStack_4c;
 
 
@@ -42,7 +42,7 @@ fn_82E3CA68(longlong param_1,ulonglong param_2,undefined4 *param_3,ulonglong par
   longlong lVar2;
   undefined8 uVar3;
   undefined4 uStack_4c;
-  undefined1 auStack_48 [72];
+  undefined1 auStack_48 [1];
   
   lVar2 = param_1 + 8;
   fn_82E50CB8(lVar2);
@@ -65,7 +65,7 @@ fn_82E3CA68(longlong param_1,ulonglong param_2,undefined4 *param_3,ulonglong par
         *param_3 = 1;
         if (0x5b < *param_5) {
                     /* WARNING: Subroutine does not return */
-          fn_82F691F0(param_4,0);
+          memset(param_4,0);
         }
         *param_5 = 0x5c;
         uVar3 = 0xffffffffc00d36b1;

@@ -26,9 +26,9 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_82D7EA10();
-extern int fn_82F640B0();
-extern int fn_82F68240();
-extern int fn_82F6DF30();
+extern int memchr();
+extern int _errno();
+extern int tolower();
 extern int fn_82F70480();
 extern int fn_82F70500();
 extern unsigned int lbl_8216803C;
@@ -104,8 +104,8 @@ LAB_82f638a8:
   }
   uVar9 = 0;
   cVar5 = '\0';
-  uVar1 = fn_82F6DF30();
-  iVar2 = fn_82F640B0(0xffffffff82168014,uVar1,param_3);
+  uVar1 = tolower();
+  iVar2 = memchr(0xffffffff82168014,uVar1,param_3);
   uVar12 = uVar11;
   if (iVar2 != 0) {
     do {
@@ -113,8 +113,8 @@ LAB_82f638a8:
       cVar5 = (char)iVar2 + -0x14;
       uVar12 = uVar12 + 1;
       uVar9 = (longlong)param_3 * uVar8 + (longlong)cVar5;
-      uVar1 = fn_82F6DF30(*(undefined1 *)uVar12);
-      iVar2 = fn_82F640B0(0xffffffff82168014,uVar1,param_3);
+      uVar1 = tolower(*(undefined1 *)uVar12);
+      iVar2 = memchr(0xffffffff82168014,uVar1,param_3);
     } while (iVar2 != 0);
   }
   if ((uVar10 & 0xffffffff) != (uVar12 & 0xffffffff)) {
@@ -123,7 +123,7 @@ LAB_82f638a8:
        (((0 < (int)lVar6 || (uVar9 < uVar9 - (longlong)cVar5)) ||
         (trapDoubleWordImmediate(6,(longlong)param_3,0),
         (uVar9 - (longlong)cVar5) / (ulonglong)(longlong)param_3 != uVar8)))) {
-      puVar4 = (undefined4 *)fn_82F68240();
+      puVar4 = (undefined4 *)_errno();
       *puVar4 = 0x22;
       if (param_4 != (undefined4 *)0x0) {
         *param_4 = 1;

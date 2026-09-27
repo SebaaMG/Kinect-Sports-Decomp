@@ -25,11 +25,10 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
-void fn_82ED9160(int param_1,undefined1 *param_2,undefined1 *param_3,undefined1 *param_4,
-                  int param_5,int param_6,int param_7,int param_8)
+void fn_82ED9160(int param_1, undefined1 *param_2, undefined1 *param_3, undefined1 *param_4, int param_5, int param_6, int param_7, int param_8, int in_stack_00000054, int in_stack_0000005c)
 
 {
   undefined1 uVar1;
@@ -51,8 +50,8 @@ void fn_82ED9160(int param_1,undefined1 *param_2,undefined1 *param_3,undefined1 
   int iVar17;
   int iVar19;
   longlong lVar18;
-  int in_stack_00000054;
-  int in_stack_0000005c;
+
+
   
   iVar6 = *(int *)(param_1 + 0x31c);
   iVar5 = iVar6 - *(int *)(param_1 + 0x548);
@@ -166,7 +165,7 @@ void fn_82ED9160(int param_1,undefined1 *param_2,undefined1 *param_3,undefined1 
       if (iVar3 < 0x10) {
         iVar3 = 0x10 - iVar3;
         do {
-          fn_82F68CC0(param_2,puVar13,0x10);
+          memcpy(param_2,puVar13,0x10);
           iVar3 = iVar3 + -1;
           param_2 = param_2 + 0x10;
         } while (iVar3 != 0);

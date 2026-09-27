@@ -47,13 +47,13 @@ void fn_82F079D8(int param_1,int param_2,short *param_3,int *param_4,int param_5
   longlong lVar11;
   int iVar12;
   undefined4 uStack_70;
-  undefined4 auStack_6c [27];
+  undefined4 auStack_6c;
   
   if (param_8 != 0) {
     sVar1 = *param_3;
     iVar12 = *param_4;
     piVar8 = (int *)(*(int *)(param_1 + 0x6d24) + param_7 * 0x34);
-    auStack_6c[0] = 0;
+    auStack_6c = 0;
     iVar6 = 0;
     uStack_70 = 0;
     uVar5 = (longlong)sVar1 - 2;
@@ -73,7 +73,7 @@ void fn_82F079D8(int param_1,int param_2,short *param_3,int *param_4,int param_5
       iVar2 = fn_82F2A9C8(param_1,iVar3,
                                 *(undefined2 *)((int)((uVar5 & 0xffffffff) << 1) + param_2),
                                 *(undefined4 *)((*(int *)(param_1 + 0x4e44) + 0x1385) * 4 + param_1)
-                                ,auStack_6c,&uStack_70);
+                                ,&auStack_6c,&uStack_70);
       sVar1 = *(short *)(*(int *)((iVar3 + iVar6) * 4 + param_6) * 2 + param_5);
       iVar6 = (int)*(short *)((*param_3 + -2) * 2 + param_2);
       if (sVar1 < 0) {

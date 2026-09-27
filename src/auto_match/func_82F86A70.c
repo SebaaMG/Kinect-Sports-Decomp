@@ -27,25 +27,25 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_14a0;
 extern unsigned int *auStack_a60;
-extern int fn_82F68CC0();
-extern int fn_82F69318();
+extern int memcpy();
+extern int _SaveUnwindContext();
 extern unsigned int uStack_a58;
 
 
-void fn_82F86A70(undefined8 param_1,int param_2,undefined8 param_3)
+void _UnwindNestedFrames(undefined8 param_1,int param_2,undefined8 param_3)
 
 {
   undefined1 auStack_14a0 [2624];
   undefined1 auStack_a60 [8];
   undefined4 uStack_a58;
   
-  fn_82F68CC0(auStack_14a0,param_3,0xa40);
+  memcpy(auStack_14a0,param_3,0xa40);
   RtlCaptureContext(auStack_a60);
   uStack_a58 = 0x82f86ad4;
-  fn_82F69318();
+  _SaveUnwindContext();
   RtlUnwind(param_1,0xffffffff82f86ad4,param_2,0);
-  fn_82F68CC0(param_3,auStack_14a0,0xa40);
-  fn_82F69318(0);
+  memcpy(param_3,auStack_14a0,0xa40);
+  _SaveUnwindContext(0);
   *(uint *)(param_2 + 4) = *(uint *)(param_2 + 4) & 0xfffffffd;
   return;
 }

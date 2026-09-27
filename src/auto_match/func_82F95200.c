@@ -46,7 +46,7 @@ undefined8 * fn_82F95200(undefined8 *param_1,undefined4 param_2,undefined4 param
   undefined8 *puStack00000014;
   undefined4 uStack0000001c;
   undefined4 uStack00000024;
-  undefined8 auStack_30 [2];
+  undefined8 auStack_30 [1];
   undefined1 auStack_20 [8];
   undefined1 auStack_18 [8];
   undefined8 *puStack_10;

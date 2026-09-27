@@ -36,7 +36,7 @@ extern int fn_82CBBD68();
 extern int fn_82CBBD70();
 extern int fn_82F641F8();
 extern int fn_82F68BF0();
-extern int fn_82F691F0();
+extern int memset();
 
 
 int * fn_82C55CC0(longlong param_1,int param_2,int param_3)
@@ -70,7 +70,7 @@ int * fn_82C55CC0(longlong param_1,int param_2,int param_3)
         uVar1 = fn_82C53960(0x1c,0);
         if ((uVar1 & 0xffffffff) != 0) {
                     /* WARNING: Subroutine does not return */
-          fn_82F691F0(uVar1,0,0x1c);
+          memset(uVar1,0,0x1c);
         }
         *piVar2 = (int)uVar1;
         if (((uVar1 & 0xffffffff) != 0) && (RtlInitializeCriticalSection(uVar1), *piVar2 != 0)) {

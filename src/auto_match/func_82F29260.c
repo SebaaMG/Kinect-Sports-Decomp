@@ -28,8 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_4c0;
 
 
-void fn_82F29260(longlong param_1,ulonglong param_2,int param_3,int param_4,uint param_5,
-                  uint param_6,undefined8 param_7,int param_8)
+void fn_82F29260(longlong param_1, ulonglong param_2, int param_3, int param_4, uint param_5, uint param_6, undefined8 param_7, int param_8, uint in_stack_00000054)
 
 {
   short sVar1;
@@ -58,9 +57,9 @@ void fn_82F29260(longlong param_1,ulonglong param_2,int param_3,int param_4,uint
   int iVar24;
   longlong lVar25;
   longlong lVar26;
-  uint in_stack_00000054;
+
   undefined1 auStack_4c0 [4];
-  short asStack_4bc [606];
+  short asStack_4bc [510];
   
   param_5 = param_5 & 3;
   param_6 = param_6 & 3;

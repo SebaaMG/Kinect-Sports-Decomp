@@ -34,9 +34,9 @@ longlong fn_82E4A0D0(int *param_1,undefined4 *param_2)
 
 {
   longlong lVar1;
-  ulonglong auStack_40 [8];
+  ulonglong auStack_40;
   
-  auStack_40[0] = 0;
+  auStack_40 = 0;
   fn_82E50CB8(param_1 + 0x16);
   if (param_2 == (undefined4 *)0x0) {
     lVar1 = -0x7ff8ffa9;
@@ -45,9 +45,9 @@ longlong fn_82E4A0D0(int *param_1,undefined4 *param_2)
     lVar1 = -0x3ff2c94e;
   }
   else {
-    lVar1 = (**(code **)(*param_1 + 0x10))(param_1,auStack_40);
+    lVar1 = (**(code **)(*param_1 + 0x10))(param_1,&auStack_40);
     if (-1 < lVar1) {
-      if (*(ulonglong *)(param_1 + 0x32) < auStack_40[0]) {
+      if (*(ulonglong *)(param_1 + 0x32) < auStack_40) {
         *param_2 = 0;
       }
       else {

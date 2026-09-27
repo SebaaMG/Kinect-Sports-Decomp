@@ -25,18 +25,18 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F6CE08();
-extern int fn_82F6F960();
+extern int _amsg_exit();
+extern int _getptd_noexit();
 
 
-longlong fn_82F6FA38(void)
+longlong _getptd(void)
 
 {
   longlong lVar1;
   
-  lVar1 = fn_82F6F960();
+  lVar1 = _getptd_noexit();
   if (lVar1 == 0) {
-    fn_82F6CE08(0x10);
+    _amsg_exit(0x10);
   }
   return lVar1;
 }

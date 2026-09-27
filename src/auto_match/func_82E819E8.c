@@ -28,12 +28,12 @@ typedef struct { U64 lo, hi; } V16;
 extern unsigned int iStack00000020;
 
 
-void fn_82E819E8(int *param_1,undefined8 param_2)
+void fn_82E819E8(int *param_1, undefined8 param_2, undefined8 unused_arg_3, undefined8 unused_arg_4, undefined8 unused_arg_5, undefined8 unused_arg_6, undefined8 unused_arg_7, undefined8 unused_arg_8, undefined8 unused_arg_9, undefined8 unused_arg_10, int in_stack_00000064, undefined8 unused_arg_12, undefined8 unused_arg_13, undefined8 unused_arg_14, undefined8 unused_arg_15, uint in_stack_0000008c)
 
 {
   int iStack00000020;
-  int in_stack_00000064;
-  uint in_stack_0000008c;
+
+
   
   param_1[0x213] = 0;
   param_1[0x7a8] = 0;

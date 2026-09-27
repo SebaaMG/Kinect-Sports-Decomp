@@ -32,7 +32,7 @@ extern int fn_82A2A288();
 undefined8 fn_82FA4ED0(undefined8 param_1,undefined8 param_2)
 
 {
-  undefined1 auStack_210 [528];
+  undefined1 auStack_210 [512];
   
   fn_82A2A288(0,0,param_2,0xffffffffffffffff,auStack_210,0x104);
   return 1;

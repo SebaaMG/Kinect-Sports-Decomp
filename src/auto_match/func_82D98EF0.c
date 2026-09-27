@@ -38,7 +38,7 @@ undefined1 * fn_82D98EF0(undefined1 *param_1,longlong param_2)
   undefined1 uVar2;
   double dVar3;
   undefined1 uStack_30;
-  undefined1 auStack_2f [23];
+  undefined1 auStack_2f [1];
   
   dVar3 = (double)lbl_82006848;
   pcVar1 = (char *)fn_82CE6150(dVar3,&uStack_30,param_2 + 0x20);

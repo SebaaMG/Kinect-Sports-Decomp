@@ -37,18 +37,18 @@ longlong fn_82FF1A28(int param_1,undefined8 *param_2,uint param_3)
   int iVar1;
   longlong lVar2;
   int aiStack_30 [2];
-  longlong alStack_28 [2];
+  longlong alStack_28;
   
   if ((param_3 & 0xff) == 0xff) {
     fn_82FF2248(aiStack_30,param_1 + 0x1c,*param_2);
     if (aiStack_30[0] != *(int *)(param_1 + 0x20)) {
-      fn_82FF22B8(alStack_28,param_1 + 0x1c,aiStack_30);
+      fn_82FF22B8(&alStack_28,param_1 + 0x1c,aiStack_30);
     }
     lVar2 = 1;
   }
   else {
-    alStack_28[0] = (longlong)(int)(param_3 & 0xff);
-    iVar1 = fn_82FF2510((double)alStack_28[0],param_1 + 0x1c,*param_2);
+    alStack_28 = (longlong)(int)(param_3 & 0xff);
+    iVar1 = fn_82FF2510((double)alStack_28,param_1 + 0x1c,*param_2);
     lVar2 = (ulonglong)(iVar1 == 0) + 1;
   }
   fn_82FF0250(param_1);

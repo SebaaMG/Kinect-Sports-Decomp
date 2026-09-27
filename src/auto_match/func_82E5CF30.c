@@ -53,8 +53,8 @@ undefined8 fn_82E5CF30(int *param_1,undefined8 param_2)
   undefined8 uVar6;
   int *piStack_138;
   int *piStack_134;
-  undefined4 uStack_110;
-  undefined4 uStack_10c;
+  struct { undefined4 first; undefined4 second; } stack_pair_110;
+
   undefined4 uStack_108;
   undefined4 uStack_104;
   undefined1 auStack_100 [256];
@@ -65,13 +65,13 @@ undefined8 fn_82E5CF30(int *param_1,undefined8 param_2)
   if (param_1 != (int *)0x0) {
     iVar3 = (**(code **)(*param_1 + 0xa0))(param_1,param_2,&piStack_138);
     if (-1 < iVar3) {
-      uStack_110 = lbl_8202E618;
-      uStack_10c = lbl_8202E61C;
+      stack_pair_110.first = lbl_8202E618;
+      stack_pair_110.second = lbl_8202E61C;
       uStack_108 = lbl_8202E620;
       uStack_104 = lbl_8202E624;
-      iVar3 = (**(code **)(*piStack_138 + 0xc))(piStack_138,&uStack_110);
+      iVar3 = (**(code **)(*piStack_138 + 0xc))(piStack_138,&stack_pair_110.first);
       if (-1 < iVar3) {
-        pbVar4 = (byte *)&uStack_110;
+        pbVar4 = (byte *)&stack_pair_110.first;
         pbVar5 = &lbl_8214C300;
         do {
           bVar1 = *pbVar5;

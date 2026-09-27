@@ -54,8 +54,8 @@ longlong fn_82F37278(int *param_1)
   int *piStack_4c;
   uint auStack_48 [2];
   longlong alStack_40 [2];
-  undefined4 uStack_30;
-  undefined4 uStack_2c;
+  struct { undefined4 first; undefined4 second; } stack_pair_30;
+
   undefined4 uStack_28;
   undefined4 uStack_24;
   
@@ -68,13 +68,13 @@ longlong fn_82F37278(int *param_1)
     lVar3 = (**(code **)(*(int *)param_1[0x1d] + 0x14))((int *)param_1[0x1d],0,alStack_40);
     if (-1 < lVar3) {
       *(longlong *)(param_1 + 0x20) = *(longlong *)(param_1 + 0x20) + alStack_40[0];
-      uStack_30 = lbl_8202E618;
-      uStack_2c = lbl_8202E61C;
+      stack_pair_30.first = lbl_8202E618;
+      stack_pair_30.second = lbl_8202E61C;
       uStack_28 = lbl_8202E620;
       uStack_24 = lbl_8202E624;
-      (**(code **)(*(int *)param_1[0x1d] + 0xc))((int *)param_1[0x1d],&uStack_30);
+      (**(code **)(*(int *)param_1[0x1d] + 0xc))((int *)param_1[0x1d],&stack_pair_30.first);
       pbVar6 = &lbl_820F8F08;
-      pbVar5 = (byte *)&uStack_30;
+      pbVar5 = (byte *)&stack_pair_30.first;
       do {
         bVar1 = *pbVar6;
         bVar2 = *pbVar5;

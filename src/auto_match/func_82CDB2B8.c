@@ -30,8 +30,7 @@ extern unsigned int lbl_82111130;
 extern unsigned int lbl_82111132;
 
 
-void fn_82CDB2B8(undefined8 param_1,int param_2,int param_3,int param_4,int param_5,uint param_6,
-                  uint param_7)
+void fn_82CDB2B8(undefined8 param_1, int param_2, int param_3, int param_4, int param_5, uint param_6, uint param_7, undefined8 unused_arg_8, int in_stack_00000054, uint in_stack_0000005c)
 
 {
   byte bVar1;
@@ -47,8 +46,8 @@ void fn_82CDB2B8(undefined8 param_1,int param_2,int param_3,int param_4,int para
   longlong lVar11;
   ulonglong uVar12;
   ulonglong uVar13;
-  int in_stack_00000054;
-  uint in_stack_0000005c;
+
+
   int iStack_d4;
   int aiStack_d0 [52];
   

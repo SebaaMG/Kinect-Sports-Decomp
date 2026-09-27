@@ -56,7 +56,7 @@ void fn_82D49350(int param_1,int param_2,int param_3,undefined8 param_4)
   undefined4 uStack_24c;
   undefined4 uStack_248;
   int iStack_244;
-  undefined1 auStack_240 [576];
+  undefined1 auStack_240 [528];
   
   iVar4 = KeTlsGetValue(lbl_8323B4A0);
   puVar1 = *(undefined4 **)(iVar4 + 4);

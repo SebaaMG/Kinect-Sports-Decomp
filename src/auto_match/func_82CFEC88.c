@@ -32,11 +32,11 @@ undefined1 fn_82CFEC88(int *param_1)
 
 {
   int iVar1;
-  undefined1 auStack_10 [16];
+  undefined1 auStack_10;
   
-  iVar1 = (**(code **)(*param_1 + 0x10))(param_1,auStack_10,1);
+  iVar1 = (**(code **)(*param_1 + 0x10))(param_1,&auStack_10,1);
   if (iVar1 != 0) {
-    return auStack_10[0];
+    return auStack_10;
   }
   return 0xff;
 }

@@ -54,8 +54,8 @@ ulonglong fn_82E31218(int *param_1,undefined4 *param_2)
   int *piStack_6c;
   int *piStack_68;
   int *piStack_64;
-  uint uStack_60;
-  uint auStack_5c [23];
+  struct { uint first; uint second; } stack_pair_60;
+
   
   piStack_7c = (int *)0x0;
   piStack_78 = (int *)0x0;
@@ -86,11 +86,11 @@ ulonglong fn_82E31218(int *param_1,undefined4 *param_2)
   else {
     if ((-1 < (int)uVar6) &&
        (uVar6 = (**(code **)(*param_1 + 0x80))(param_1,piVar4), -1 < (longlong)uVar6)) {
-      uStack_60 = 0;
-      uVar6 = (**(code **)(*param_1 + 0x84))(param_1,&uStack_60);
+      stack_pair_60.first = 0;
+      uVar6 = (**(code **)(*param_1 + 0x84))(param_1,&stack_pair_60.first);
       if (-1 < (longlong)uVar6) {
         uVar3 = 0;
-        if (uStack_60 != 0) {
+        if (stack_pair_60.first != 0) {
           do {
             uStack_80 = uStack_80 & 0xffff;
             uVar6 = (**(code **)(*param_1 + 0x88))(param_1,uVar3,&uStack_80,&piStack_7c);
@@ -108,13 +108,13 @@ ulonglong fn_82E31218(int *param_1,undefined4 *param_2)
               piStack_78 = (int *)0x0;
             }
             uVar3 = uVar3 + 1;
-          } while ((uVar3 & 0xffffffff) < (ulonglong)uStack_60);
+          } while ((uVar3 & 0xffffffff) < (ulonglong)stack_pair_60.first);
         }
-        auStack_5c[0] = 0;
-        uVar6 = (**(code **)(*param_1 + 0x9c))(param_1,auStack_5c);
+        stack_pair_60.second = 0;
+        uVar6 = (**(code **)(*param_1 + 0x9c))(param_1,&stack_pair_60.second);
         if (-1 < (longlong)uVar6) {
           uVar3 = 0;
-          if (auStack_5c[0] != 0) {
+          if (stack_pair_60.second != 0) {
             do {
               uVar6 = (**(code **)(*param_1 + 0xa0))(param_1,uVar3,&piStack_74);
               if ((((longlong)uVar6 < 0) ||
@@ -131,7 +131,7 @@ ulonglong fn_82E31218(int *param_1,undefined4 *param_2)
                 piStack_70 = (int *)0x0;
               }
               uVar3 = uVar3 + 1;
-            } while ((uVar3 & 0xffffffff) < (ulonglong)auStack_5c[0]);
+            } while ((uVar3 & 0xffffffff) < (ulonglong)stack_pair_60.second);
           }
           uStack_80 = 0;
           uVar6 = fn_82E2DE78(param_1,&uStack_80);

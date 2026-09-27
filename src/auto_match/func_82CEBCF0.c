@@ -38,7 +38,7 @@ undefined1 * fn_82CEBCF0(undefined1 *param_1,longlong param_2)
   undefined1 uVar2;
   undefined1 uStack_20;
   undefined1 uStack_1f;
-  undefined1 auStack_1e [6];
+  undefined1 auStack_1e [1];
   
   pcVar1 = (char *)fn_82CE4EC0(&uStack_20);
   if ((*pcVar1 != '\0') &&

@@ -30,7 +30,7 @@ typedef struct { U64 lo, hi; } V16;
 bool fn_83025288(int *param_1)
 
 {
-  int aiStack_20 [8];
+  int aiStack_20 [4];
   
   param_1 = (int *)*param_1;
   if (param_1 == (int *)0x0) {

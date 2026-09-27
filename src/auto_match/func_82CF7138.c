@@ -41,7 +41,7 @@ void fn_82CF7138(int param_1,int param_2)
   uint uVar7;
   ulonglong uVar8;
   int iStack_44;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [1];
   
   iVar4 = param_2 * 8 + param_1;
   uVar7 = *(uint *)(iVar4 + 0x10);

@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_82A812C8();
 extern int fn_82C2B580();
-extern int fn_82F691F0();
+extern int memset();
 
 
 undefined8 fn_82C449E8(double param_1,float *param_2,undefined8 param_3,ulonglong param_4)
@@ -49,7 +49,7 @@ undefined8 fn_82C449E8(double param_1,float *param_2,undefined8 param_3,ulonglon
     param_2[2] = (float)uVar1;
     if ((uVar1 & 0xffffffff) != 0) {
                     /* WARNING: Subroutine does not return */
-      fn_82F691F0(uVar1,0,(int)param_2[1] << 2);
+      memset(uVar1,0,(int)param_2[1] << 2);
     }
     uVar2 = 0xffffffff8007000e;
   }

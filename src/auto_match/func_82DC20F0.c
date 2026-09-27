@@ -32,7 +32,7 @@ extern int fn_82CE5088();
 void fn_82DC20F0(undefined8 param_1,longlong param_2,undefined8 param_3,undefined8 param_4)
 
 {
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [48];
   
                     /* WARNING: Subroutine does not return */
   fn_82CE5088(auStack_40,param_2 + 0xf0,param_4);

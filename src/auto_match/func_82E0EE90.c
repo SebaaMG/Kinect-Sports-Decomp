@@ -58,7 +58,7 @@ void fn_82E0EE90(longlong param_1,undefined8 param_2,undefined8 param_3,longlong
   undefined1 auStack_80 [8];
   undefined1 auStack_78 [8];
   undefined1 auStack_70 [8];
-  undefined1 auStack_68 [104];
+  undefined1 auStack_68 [8];
   
   lVar12 = 0;
   iVar8 = fn_82CEAE80(param_2);

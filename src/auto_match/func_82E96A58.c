@@ -83,7 +83,7 @@ void fn_82E96A58(int param_1,longlong param_2,longlong param_3,int *param_4,int 
   uint uStack_1e8;
   int *piStack_1e0;
   uint uStack_1d4;
-  undefined1 auStack_1c0 [448];
+  undefined1 auStack_1c0 [256];
   
   uVar1 = param_6[2];
   uVar2 = param_6[3];

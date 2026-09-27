@@ -36,21 +36,21 @@ extern unsigned int uStack_30;
 void fn_82CF89A8(int *param_1)
 
 {
-  undefined4 uStack_30;
-  int iStack_2c;
+  struct { undefined4 first; int second; } stack_pair_30;
+
   undefined4 uStack_28;
   undefined4 uStack_24;
   undefined4 uStack_20;
   undefined4 uStack_1c;
   
-  uStack_30 = 0;
-  iStack_2c = 0;
+  stack_pair_30.first = 0;
+  stack_pair_30.second = 0;
   uStack_28 = 0;
   uStack_24 = 0;
   uStack_20 = 0;
   uStack_1c = 0;
-  (**(code **)(*param_1 + 0x28))(param_1,&uStack_30);
-  param_1[9] = iStack_2c;
+  (**(code **)(*param_1 + 0x28))(param_1,&stack_pair_30.first);
+  param_1[9] = stack_pair_30.second;
   return;
 }
 

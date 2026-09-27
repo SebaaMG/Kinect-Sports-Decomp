@@ -39,15 +39,15 @@ void fn_82F3AA00(undefined4 *param_1)
 
 {
   uint uVar1;
-  undefined4 auStack_30 [12];
+  undefined4 auStack_30;
   
   *param_1 = &lbl_82162C2C;
   param_1[1] = &lbl_8215FDD0;
   if (param_1[0x49a] != 0) {
     uVar1 = 0;
     do {
-      fn_82F39E50(param_1 + 0x12,uVar1,auStack_30);
-      fn_82F3A250(param_1,auStack_30[0]);
+      fn_82F39E50(param_1 + 0x12,uVar1,&auStack_30);
+      fn_82F3A250(param_1,auStack_30);
       uVar1 = uVar1 + 1 & 0xffff;
     } while (uVar1 < (uint)param_1[0x49a]);
   }

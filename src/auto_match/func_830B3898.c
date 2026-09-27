@@ -46,18 +46,18 @@ fn_830B3898(undefined8 param_1,undefined4 *param_2,undefined8 param_3,undefined8
   uint uVar2;
   undefined4 uStack_260;
   undefined4 uStack_25c;
-  undefined4 uStack_250;
-  undefined4 uStack_24c;
+  struct { undefined4 first; undefined4 second; } stack_pair_250;
+
   undefined4 uStack_140;
   undefined4 uStack_13c;
   
-  uStack_24c = *param_2;
+  stack_pair_250.second = *param_2;
   uStack_260 = 0;
-  uStack_250 = 1;
+  stack_pair_250.first = 1;
   uStack_25c = 0;
   uStack_140 = 1;
-  uStack_13c = uStack_24c;
-  iVar1 = fn_82CE09D0(0,0,&uStack_250,&uStack_140,&uStack_260);
+  uStack_13c = stack_pair_250.second;
+  iVar1 = fn_82CE09D0(0,0,&stack_pair_250.first,&uStack_140,&uStack_260);
   if (iVar1 == -1) {
     return 0;
   }
@@ -65,7 +65,7 @@ fn_830B3898(undefined8 param_1,undefined4 *param_2,undefined8 param_3,undefined8
     if ((iVar1 < 1) || (2 < iVar1)) {
       return 0;
     }
-    iVar1 = fn_82CE0BE8(*param_2,&uStack_250);
+    iVar1 = fn_82CE0BE8(*param_2,&stack_pair_250.first);
     if (iVar1 == 0) {
       *param_5 = 0;
       return 1;

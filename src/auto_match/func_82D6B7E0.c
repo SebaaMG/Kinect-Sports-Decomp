@@ -43,11 +43,11 @@ void fn_82D6B7E0(int param_1,undefined8 param_2,int *param_3,undefined8 param_4,
   undefined **ppuStack_90;
   undefined4 uStack_8c;
   undefined4 uStack_88;
-  undefined4 uStack_80;
-  undefined4 uStack_7c;
+  struct { undefined4 first; undefined4 second; } stack_pair_80;
+
   undefined1 *puStack_78;
   int *piStack_74;
-  undefined1 auStack_70 [112];
+  undefined1 auStack_70 [80];
   
   iVar1 = *param_3;
   ppuStack_90 = &lbl_82138A4C;
@@ -55,11 +55,11 @@ void fn_82D6B7E0(int param_1,undefined8 param_2,int *param_3,undefined8 param_4,
   uStack_88 = param_5;
   fn_82CE6768(auStack_70,param_3[2],iVar1 + 0x30);
   puStack_78 = auStack_70;
-  uStack_80 = *(undefined4 *)(iVar1 + 0x14);
-  uStack_7c = 0;
+  stack_pair_80.first = *(undefined4 *)(iVar1 + 0x14);
+  stack_pair_80.second = 0;
   piStack_74 = param_3;
   (**(code **)(**(int **)(param_1 + 0xc) + 0x10))
-            (*(int **)(param_1 + 0xc),&uStack_80,param_2,param_4,&ppuStack_90);
+            (*(int **)(param_1 + 0xc),&stack_pair_80.first,param_2,param_4,&ppuStack_90);
   return;
 }
 

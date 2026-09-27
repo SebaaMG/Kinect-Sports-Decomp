@@ -34,8 +34,7 @@ extern unsigned int iStack00000024;
 extern unsigned int iStack0000002c;
 
 
-void fn_82F1B470(int param_1,uint *param_2,int param_3,int param_4,int param_5,short *param_6,
-                  int param_7,int param_8)
+void fn_82F1B470(int param_1, uint *param_2, int param_3, int param_4, int param_5, short *param_6, int param_7, int param_8, int in_stack_00000054, int in_stack_0000005c, int in_stack_00000064, int in_stack_0000006c, int in_stack_00000074, int in_stack_0000007c, int in_stack_00000084)
 
 {
   char cVar1;
@@ -57,13 +56,13 @@ void fn_82F1B470(int param_1,uint *param_2,int param_3,int param_4,int param_5,s
   int iVar17;
   int iStack00000024;
   int iStack0000002c;
-  int in_stack_00000054;
-  int in_stack_0000005c;
-  int in_stack_00000064;
-  int in_stack_0000006c;
-  int in_stack_00000074;
-  int in_stack_0000007c;
-  int in_stack_00000084;
+
+
+
+
+
+
+
   short *in_stack_0000008c;
   
   param_7 = param_7 - in_stack_00000054;

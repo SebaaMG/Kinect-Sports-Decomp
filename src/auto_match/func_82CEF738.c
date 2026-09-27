@@ -39,7 +39,7 @@ void fn_82CEF738(undefined4 *param_1,undefined4 *param_2)
 
 {
   int iVar1;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [32];
   
   fn_82D00388(auStack_30,0);
   for (; param_2 != (undefined4 *)0x0; param_2 = (undefined4 *)param_2[2]) {

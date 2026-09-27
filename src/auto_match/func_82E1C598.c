@@ -32,7 +32,7 @@ extern int fn_82A1EFC0();
 undefined8 fn_82E1C598(int param_1)
 
 {
-  undefined1 auStack_160 [352];
+  undefined1 auStack_160 [336];
   
   if (*(int *)(param_1 + 0x14) == 0) {
     return 0xffffffff80070057;

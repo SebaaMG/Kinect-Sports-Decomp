@@ -42,7 +42,7 @@ undefined8 fn_82FF99C0(longlong param_1,int param_2,ulonglong param_3,char param
   undefined8 uVar3;
   ulonglong uVar4;
   ulonglong uVar5;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [16];
   
   uVar3 = 1;
   if (*(int *)(param_2 + 0x20) == 0) {

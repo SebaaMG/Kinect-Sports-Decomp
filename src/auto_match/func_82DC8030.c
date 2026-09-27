@@ -48,7 +48,7 @@ void fn_82DC8030(undefined8 param_1,int param_2,undefined8 param_3)
   undefined1 *puStack_a0;
   uint uStack_9c;
   uint uStack_98;
-  undefined1 auStack_94 [148];
+  undefined1 auStack_94 [100];
   
   if (*(int *)(*(int *)(param_2 + 0x24) + 0x10) != 0) {
     puStack_a0 = auStack_94;

@@ -29,8 +29,8 @@ extern unsigned int *auStack_125;
 extern unsigned int *auStack_140;
 extern unsigned int *auStack_150;
 extern int fn_82F674A8();
-extern int fn_82F68CC0();
-extern int fn_82F691F0();
+extern int memcpy();
+extern int memset();
 
 
 undefined8 fn_82E1E288(char *param_1,undefined8 param_2)
@@ -39,7 +39,7 @@ undefined8 fn_82E1E288(char *param_1,undefined8 param_2)
   longlong lVar1;
   uint auStack_150 [4];
   undefined1 auStack_140 [27];
-  undefined1 auStack_125 [293];
+  undefined1 auStack_125 [277];
   
   if (*param_1 != '\0') {
     return 1;
@@ -47,8 +47,8 @@ undefined8 fn_82E1E288(char *param_1,undefined8 param_2)
   auStack_150[0] = 0;
   lVar1 = fn_82F674A8(auStack_150,param_2,0xffffffff821c550c);
   auStack_150[0] = -(uint)(lVar1 == 0) & auStack_150[0];
-  fn_82F68CC0(auStack_140,0xffffffff8214b9e8,0x1b);
+  memcpy(auStack_140,0xffffffff8214b9e8,0x1b);
                     /* WARNING: Subroutine does not return */
-  fn_82F691F0(auStack_125,0,0xe5);
+  memset(auStack_125,0,0xe5);
 }
 

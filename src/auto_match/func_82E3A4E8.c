@@ -40,13 +40,13 @@ longlong fn_82E3A4E8(undefined8 param_1,int *param_2,longlong param_3,int *param
   longlong lVar1;
   int *piStack_50;
   int *piStack_4c;
-  undefined4 uStack_48;
-  undefined4 uStack_44;
-  uint auStack_40 [16];
+  struct { undefined4 first; undefined4 second; } stack_pair_48;
+
+  uint auStack_40 [4];
   
   piStack_50 = (int *)0x0;
   piStack_4c = (int *)0x0;
-  uStack_44 = 0;
+  stack_pair_48.second = 0;
   lVar1 = fn_82E65EE8(0x200,&piStack_50);
   if (-1 < lVar1) {
     lVar1 = fn_82E65CB8(piStack_50,&piStack_4c);
@@ -54,16 +54,16 @@ longlong fn_82E3A4E8(undefined8 param_1,int *param_2,longlong param_3,int *param
       lVar1 = (**(code **)(*param_2 + 0x1c))(param_2,param_3);
       if (-1 < lVar1) {
         while( true ) {
-          uStack_48 = 0;
+          stack_pair_48.first = 0;
           auStack_40[1] = 0;
           lVar1 = (**(code **)(*param_2 + 0x1c))(param_2,param_3);
           if (lVar1 < 0) break;
-          lVar1 = (**(code **)(*piStack_50 + 0xc))(piStack_50,&uStack_48,0,auStack_40 + 1);
+          lVar1 = (**(code **)(*piStack_50 + 0xc))(piStack_50,&stack_pair_48.first,0,auStack_40 + 1);
           if (lVar1 < 0) break;
-          lVar1 = (**(code **)(*param_2 + 0x24))(param_2,uStack_48,0x200,&uStack_44);
+          lVar1 = (**(code **)(*param_2 + 0x24))(param_2,stack_pair_48.first,0x200,&stack_pair_48.second);
           (**(code **)(*piStack_50 + 0x10))(piStack_50);
           if ((int)lVar1 < 0) break;
-          lVar1 = (**(code **)(*piStack_50 + 0x18))(piStack_50,uStack_44);
+          lVar1 = (**(code **)(*piStack_50 + 0x18))(piStack_50,stack_pair_48.second);
           if (lVar1 < 0) break;
           auStack_40[0] = 0;
           lVar1 = (**(code **)(*param_4 + 0x18))(param_4,piStack_4c,auStack_40);

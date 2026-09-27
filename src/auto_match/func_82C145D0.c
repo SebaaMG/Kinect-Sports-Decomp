@@ -42,7 +42,7 @@ undefined8 fn_82C145D0(ulonglong *param_1,ulonglong param_2)
   undefined8 uVar6;
   ulonglong uVar7;
   uint uVar8;
-  byte *apbStack_90 [36];
+  byte *apbStack_90 [16];
   
   uVar7 = *param_1;
   apbStack_90[0] = (byte *)0x0;

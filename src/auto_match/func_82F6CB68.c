@@ -28,7 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 extern unsigned int uRam831bb980;
 
 
-void fn_82F6CB68(void)
+void _unlockexit(void)
 
 {
   RtlLeaveCriticalSection(uRam831bb980);

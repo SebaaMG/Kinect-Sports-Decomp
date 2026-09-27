@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_82EEFD30();
 extern int fn_82F64CE0();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 undefined8 fn_82EF0770(int param_1,uint param_2,undefined2 *param_3,ushort *param_4)
@@ -37,13 +37,13 @@ undefined8 fn_82EF0770(int param_1,uint param_2,undefined2 *param_3,ushort *para
   undefined8 uVar2;
   longlong lVar3;
   ulonglong uVar4;
-  int aiStack_30 [12];
+  int aiStack_30;
   
   if ((((param_2 & 0xffff) < *(uint *)(param_1 + 0x26c)) && (param_4 != (ushort *)0x0)) &&
      ((*param_4 == 0 || (param_3 != (undefined2 *)0x0)))) {
-    fn_82EEFD30(param_1 + 0x1b0,param_2 & 0xffff,aiStack_30);
+    fn_82EEFD30(param_1 + 0x1b0,param_2 & 0xffff,&aiStack_30);
     uVar4 = 0;
-    iVar1 = *(int *)(aiStack_30[0] + 4);
+    iVar1 = *(int *)(aiStack_30 + 4);
     if (iVar1 != 0) {
       lVar3 = fn_82F64CE0(iVar1);
       uVar4 = lVar3 + 1U & 0xffff;
@@ -60,7 +60,7 @@ undefined8 fn_82EF0770(int param_1,uint param_2,undefined2 *param_3,ushort *para
         }
       }
       else if (param_3 != (undefined2 *)0x0) {
-        fn_82F68CC0(param_3,iVar1,uVar4 << 1);
+        memcpy(param_3,iVar1,uVar4 << 1);
       }
       uVar2 = 0;
     }

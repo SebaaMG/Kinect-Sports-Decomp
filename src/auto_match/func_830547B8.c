@@ -37,9 +37,9 @@ void fn_830547B8(int param_1,int param_2,undefined8 param_3,char param_4)
   int iVar1;
   int iVar2;
   int iVar3;
-  int iStack_40;
-  int iStack_3c;
-  undefined1 auStack_38 [56];
+  struct { int first; int second; } stack_pair_40;
+
+  undefined1 auStack_38 [8];
   
   if ((*(uint *)(param_2 + 0x30) & 0xe0000000) == 0x40000000) {
     iVar3 = *(int *)(param_1 + 0xac);
@@ -62,19 +62,19 @@ void fn_830547B8(int param_1,int param_2,undefined8 param_3,char param_4)
     if (param_4 == '\0') {
       iVar1 = *(int *)(param_1 + 0xa0);
       if (iVar1 != param_2) {
-        iStack_3c = 0;
-        iStack_40 = iVar1;
+        stack_pair_40.second = 0;
+        stack_pair_40.first = iVar1;
         if (iVar1 != 0) {
           do {
-            iStack_40 = iVar1;
-            if (iStack_40 == param_2) {
-              fn_83054288(auStack_38,param_1 + 0xa0,&iStack_40);
+            stack_pair_40.first = iVar1;
+            if (stack_pair_40.first == param_2) {
+              fn_83054288(auStack_38,param_1 + 0xa0,&stack_pair_40.first);
               goto LAB_830548d4;
             }
-            iVar1 = *(int *)(iStack_40 + 0xc);
-            iStack_3c = iStack_40;
-          } while (*(int *)(iStack_40 + 0xc) != 0);
-          iStack_40 = 0;
+            iVar1 = *(int *)(stack_pair_40.first + 0xc);
+            stack_pair_40.second = stack_pair_40.first;
+          } while (*(int *)(stack_pair_40.first + 0xc) != 0);
+          stack_pair_40.first = 0;
         }
         goto LAB_830548d4;
       }

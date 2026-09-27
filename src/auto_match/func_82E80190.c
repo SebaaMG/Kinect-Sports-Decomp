@@ -29,7 +29,7 @@ extern int fn_82E4FE08();
 extern int fn_82E7E7E0();
 extern int fn_82E7E900();
 extern int fn_82E7ECB8();
-extern int fn_82F691F0();
+extern int memset();
 extern unsigned int uStack_28;
 extern unsigned int uStack_30;
 extern unsigned int uStack_3c;
@@ -42,14 +42,14 @@ longlong fn_82E80190(ushort *param_1)
   undefined4 uVar1;
   ulonglong uVar2;
   longlong lVar3;
-  undefined4 uStack_40;
-  undefined4 uStack_3c;
+  struct { undefined4 first; undefined4 second; } stack_pair_40;
+
   undefined8 uStack_30;
   undefined8 uStack_28;
   
-  uStack_40 = 0;
+  stack_pair_40.first = 0;
   uStack_30 = 0;
-  uStack_3c = 0;
+  stack_pair_40.second = 0;
   uStack_28 = 0;
   if ((*param_1 & 0x1000) == 0) {
     if (*param_1 == 0) {
@@ -63,14 +63,14 @@ longlong fn_82E80190(ushort *param_1)
           param_1[4] = 0;
           param_1[5] = 1;
           *param_1 = (((U64)(uStack_30) >> 0) & 0xFFFF) & 0xfff | 0x1000;
-          lVar3 = fn_82E7ECB8(param_1,&uStack_40);
-          uVar1 = uStack_40;
+          lVar3 = fn_82E7ECB8(param_1,&stack_pair_40.first);
+          uVar1 = stack_pair_40.first;
           if (-1 < lVar3) {
-            uVar2 = fn_82E4FE08(uStack_40);
+            uVar2 = fn_82E4FE08(stack_pair_40.first);
             *(int *)(param_1 + 6) = (int)uVar2;
             if ((uVar2 & 0xffffffff) != 0) {
                     /* WARNING: Subroutine does not return */
-              fn_82F691F0(uVar2,0,uVar1);
+              memset(uVar2,0,uVar1);
             }
             lVar3 = -0x7ff8fff2;
           }

@@ -45,18 +45,18 @@ longlong fn_82E28538(int *param_1)
   longlong lVar7;
   uint uVar8;
   uint uStack_c0;
-  uint auStack_bc [3];
+  uint auStack_bc;
   undefined1 auStack_b0 [16];
   byte abStack_a0 [16];
-  byte abStack_90 [144];
+  byte abStack_90 [128];
   
   uStack_c0 = 0;
   lVar3 = (**(code **)(*param_1 + 0x28))(param_1,0xffffffff82153478,abStack_a0);
   if (-1 < lVar3) {
     lVar3 = (**(code **)(*param_1 + 0x28))(param_1,0xffffffff82153488,auStack_b0);
     if (-1 < lVar3) {
-      iVar4 = (**(code **)(*param_1 + 0x1c))(param_1,0xffffffff82153568,auStack_bc);
-      if ((-(iVar4 >> 0x1f) - 1U & auStack_bc[0]) != 0) {
+      iVar4 = (**(code **)(*param_1 + 0x1c))(param_1,0xffffffff82153568,&auStack_bc);
+      if ((-(iVar4 >> 0x1f) - 1U & auStack_bc) != 0) {
         (**(code **)(*param_1 + 0xc))(param_1,0xffffffff82153548,0);
       }
       pbVar6 = abStack_a0;

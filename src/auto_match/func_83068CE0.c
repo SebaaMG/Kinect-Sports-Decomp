@@ -62,8 +62,8 @@ bool fn_83068CE0(int *param_1,undefined8 param_2,float *param_3,undefined8 param
   double dVar11;
   double dVar12;
   char acStack_120 [16];
-  float fStack_110;
-  float fStack_10c;
+  struct { float first; float second; } stack_pair_110;
+
   float fStack_108;
   float fStack_104;
   float fStack_100;
@@ -75,18 +75,18 @@ bool fn_83068CE0(int *param_1,undefined8 param_2,float *param_3,undefined8 param
   float afStack_d0 [4];
   undefined1 auStack_c0 [28];
   undefined1 auStack_a4 [28];
-  undefined1 auStack_88 [136];
+  undefined1 auStack_88 [56];
   
-  fn_83067128(&fStack_110);
+  fn_83067128(&stack_pair_110.first);
   for (iVar5 = *param_1; iVar5 != 0; iVar5 = *(int *)(iVar5 + 4)) {
-    fn_83067488(&fStack_110,iVar5 + 0x10);
+    fn_83067488(&stack_pair_110.first,iVar5 + 0x10);
   }
   dVar12 = (double)lbl_821AAD20;
   dVar10 = (double)lbl_82002AE0;
   dVar11 = (double)lbl_8200533C;
-  fn_83066690(dVar10,dVar12,dVar12,(double)(float)((double)(fStack_104 + fStack_110) * dVar11),
+  fn_83066690(dVar10,dVar12,dVar12,(double)(float)((double)(fStack_104 + stack_pair_110.first) * dVar11),
                auStack_c0);
-  fn_83066690(dVar12,dVar10,dVar12,(double)(float)((double)(fStack_100 + fStack_10c) * dVar11),
+  fn_83066690(dVar12,dVar10,dVar12,(double)(float)((double)(fStack_100 + stack_pair_110.second) * dVar11),
                auStack_a4);
   fn_83066690(dVar12,dVar12,dVar10,(double)(float)((double)(fStack_fc + fStack_108) * dVar11),
                auStack_88);

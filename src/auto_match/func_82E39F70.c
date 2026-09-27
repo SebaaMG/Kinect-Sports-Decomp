@@ -39,7 +39,7 @@ longlong fn_82E39F70(int param_1,undefined4 *param_2,longlong *param_3)
   int *piStack_54;
   int *apiStack_50 [2];
   longlong lStack_48;
-  longlong alStack_40 [8];
+  longlong alStack_40;
   
   fn_82E50CB8(param_1 + 8);
   piStack_5c = (int *)0x0;
@@ -57,7 +57,7 @@ longlong fn_82E39F70(int param_1,undefined4 *param_2,longlong *param_3)
     }
     else {
       lStack_48 = 0;
-      alStack_40[0] = 0;
+      alStack_40 = 0;
       lVar1 = (**(code **)*param_2)(param_2,0xffffffff8215ed68,&piStack_5c);
       if (-1 < lVar1) {
         lVar1 = (**(code **)(*piStack_5c + 0x28))(piStack_5c,&piStack_58);
@@ -71,9 +71,9 @@ longlong fn_82E39F70(int param_1,undefined4 *param_2,longlong *param_3)
               if (-1 < lVar1) {
                 lVar1 = (**(code **)(*apiStack_50[0] + 0x14))(apiStack_50[0],0,&lStack_48);
                 if ((-1 < lVar1) &&
-                   (lVar1 = (**(code **)(*piStack_54 + 0x14))(piStack_54,0,alStack_40), -1 < lVar1))
+                   (lVar1 = (**(code **)(*piStack_54 + 0x14))(piStack_54,0,&alStack_40), -1 < lVar1))
                 {
-                  *param_3 = alStack_40[0] + lStack_48;
+                  *param_3 = alStack_40 + lStack_48;
                 }
               }
             }

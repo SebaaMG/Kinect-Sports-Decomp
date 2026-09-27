@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 
 
-longlong fn_82F6A080(ulonglong *param_1,ulonglong *param_2,ulonglong param_3)
+longlong memcmp(ulonglong *param_1,ulonglong *param_2,ulonglong param_3)
 
 {
   byte bVar1;

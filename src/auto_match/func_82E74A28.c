@@ -38,7 +38,7 @@ undefined8 fn_82E74A28(int param_1,int *param_2,uint param_3)
   int iVar2;
   uint uVar3;
   int aiStack_40 [2];
-  ulonglong auStack_38 [7];
+  ulonglong auStack_38;
   
   if (param_3 == 0) {
     uVar1 = 1;
@@ -51,11 +51,11 @@ undefined8 fn_82E74A28(int param_1,int *param_2,uint param_3)
     if (param_3 != 0) {
       do {
         aiStack_40[0] = *param_2;
-        auStack_38[0] = *(ulonglong *)(aiStack_40[0] + 0x18);
-        if (*(ulonglong *)(param_1 + 0x1d0) < auStack_38[0]) {
-          *(ulonglong *)(param_1 + 0x1d0) = auStack_38[0];
+        auStack_38 = *(ulonglong *)(aiStack_40[0] + 0x18);
+        if (*(ulonglong *)(param_1 + 0x1d0) < auStack_38) {
+          *(ulonglong *)(param_1 + 0x1d0) = auStack_38;
         }
-        iVar2 = fn_82E74598(param_1 + 0x10,auStack_38,aiStack_40);
+        iVar2 = fn_82E74598(param_1 + 0x10,&auStack_38,aiStack_40);
         if (iVar2 == 0) {
           return 0xffffffff8000ffff;
         }

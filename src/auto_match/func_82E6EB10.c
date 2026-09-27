@@ -33,16 +33,16 @@ void fn_82E6EB10(int param_1,undefined8 param_2,undefined8 param_3,undefined8 pa
 
 {
   int iVar1;
-  undefined8 auStack_40 [8];
+  undefined8 auStack_40;
   
-  auStack_40[0] = 0;
-  iVar1 = (**(code **)(**(int **)(param_1 + 8) + 0x18))(*(int **)(param_1 + 8),auStack_40);
+  auStack_40 = 0;
+  iVar1 = (**(code **)(**(int **)(param_1 + 8) + 0x18))(*(int **)(param_1 + 8),&auStack_40);
   if (((-1 < iVar1) &&
       (iVar1 = (**(code **)(**(int **)(param_1 + 8) + 0x1c))(*(int **)(param_1 + 8),param_2),
       -1 < iVar1)) &&
      (iVar1 = (**(code **)(**(int **)(param_1 + 8) + 0x24))
                         (*(int **)(param_1 + 8),param_3,param_4,param_5), -1 < iVar1)) {
-    (**(code **)(**(int **)(param_1 + 8) + 0x1c))(*(int **)(param_1 + 8),auStack_40[0]);
+    (**(code **)(**(int **)(param_1 + 8) + 0x1c))(*(int **)(param_1 + 8),auStack_40);
   }
   return;
 }

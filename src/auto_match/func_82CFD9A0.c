@@ -40,7 +40,7 @@ longlong fn_82CFD9A0(longlong param_1)
   longlong lVar1;
   ulonglong uVar2;
   undefined4 *puVar4;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [48];
   
   iVar3 = thunk_FUN_82f65390(param_1,0xffffffff82133c4c,5);
   if (iVar3 == 0) {

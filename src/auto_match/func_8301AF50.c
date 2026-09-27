@@ -25,7 +25,7 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F69148();
+extern int _blkmov();
 extern int fn_83016C90();
 extern int fn_8301B2D0();
 extern unsigned int iStack_50;
@@ -38,12 +38,12 @@ undefined8 fn_8301AF50(longlong param_1,int param_2,ulonglong param_3)
   int iVar1;
   int *piVar2;
   int *piVar3;
-  int iStack_50;
-  uint uStack_4c;
+  struct { int first; uint second; } stack_pair_50;
+
   int *piStack_48;
   
   if ((param_3 & 0xffffffff) == 0) {
-    fn_83016C90(&iStack_50,param_1 + 0x24);
+    fn_83016C90(&stack_pair_50.first,param_1 + 0x24);
     if (piStack_48 != (int *)0x0) {
       do {
         do {
@@ -57,7 +57,7 @@ undefined8 fn_8301AF50(longlong param_1,int param_2,ulonglong param_3)
             } while (piVar3 != piVar2);
             if (piVar3 != piVar2) {
               if (piVar3 < piVar2 + -3) {
-                fn_82F69148(piVar3,piVar3 + 3,
+                _blkmov(piVar3,piVar3 + 3,
                              ((uint)((int)piVar2 + (-0xd - (int)piVar3)) / 0xc + 1) * 0xc);
               }
               *(int *)(iVar1 + 0x38) = *(int *)(iVar1 + 0x38) + -0xc;
@@ -66,14 +66,14 @@ undefined8 fn_8301AF50(longlong param_1,int param_2,ulonglong param_3)
           piStack_48 = (int *)*piStack_48;
         } while (piStack_48 != (int *)0x0);
         do {
-          uStack_4c = uStack_4c + 1;
-          if (0xc0 < uStack_4c) {
+          stack_pair_50.second = stack_pair_50.second + 1;
+          if (0xc0 < stack_pair_50.second) {
             if (piStack_48 == (int *)0x0) {
               return 1;
             }
             break;
           }
-          piStack_48 = *(int **)(uStack_4c * 4 + iStack_50);
+          piStack_48 = *(int **)(stack_pair_50.second * 4 + stack_pair_50.first);
         } while (piStack_48 == (int *)0x0);
       } while( true );
     }

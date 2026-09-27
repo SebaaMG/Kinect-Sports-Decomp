@@ -25,7 +25,7 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F63EC8();
+extern int atexit();
 extern unsigned int lbl_832643A4;
 
 
@@ -41,7 +41,7 @@ ulonglong fn_82FE88A0(char *param_1)
   pcVar1 = param_1;
   if ((lbl_832643A4 & 1) == 0) {
     lbl_832643A4 = lbl_832643A4 | 1;
-    fn_82F63EC8(0xffffffff83141d60);
+    atexit(0xffffffff83141d60);
   }
   do {
     pcVar4 = pcVar1;

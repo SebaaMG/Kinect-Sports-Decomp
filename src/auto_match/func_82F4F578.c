@@ -70,7 +70,7 @@ void fn_82F4F578(ulonglong param_1)
   undefined1 auStack_a0 [4];
   float fStack_9c;
   undefined1 auStack_90 [16];
-  undefined1 auStack_80 [128];
+  undefined1 auStack_80 [64];
   
   if ((param_1 & 0xffffffff) != 0) {
     fn_82F538A0(auStack_a0,param_1,3);

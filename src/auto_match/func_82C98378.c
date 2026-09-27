@@ -90,10 +90,10 @@ fn_82C98378(int param_1,uint *param_2,longlong param_3,undefined8 param_4,undefi
   int iStack_dc;
   uint uStack_d8;
   undefined4 uStack_d4;
-  undefined4 uStack_d0;
-  uint uStack_cc;
+  struct { undefined4 first; uint second; } stack_pair_d0;
+
   undefined *puStack_c8;
-  undefined1 auStack_c0 [192];
+  undefined1 auStack_c0 [48];
   
   uStack00000044 = (uint)param_7;
   uStack0000002c = (undefined4)param_4;
@@ -114,8 +114,8 @@ fn_82C98378(int param_1,uint *param_2,longlong param_3,undefined8 param_4,undefi
     iStack_dc = (uVar27 + 0x2df) * 4 + param_1;
     iVar16 = (uVar27 + 0x2e2) * 4 + param_1;
   }
-  uStack_cc = **(uint **)(param_1 + 0x164) >> 2 & 1;
-  if (((param_6 == 0) && (uStack00000044 == 0)) && (uStack_cc == 0)) {
+  stack_pair_d0.second = **(uint **)(param_1 + 0x164) >> 2 & 1;
+  if (((param_6 == 0) && (uStack00000044 == 0)) && (stack_pair_d0.second == 0)) {
     uStack_d8 = 1;
   }
   else {
@@ -134,7 +134,7 @@ fn_82C98378(int param_1,uint *param_2,longlong param_3,undefined8 param_4,undefi
     iVar14 = iVar25 + (uVar26 & 1);
     uStack_d8 = (uint)LZCOUNT((uint)bVar6) >> 5 & uStack_d8;
     lVar17 = ((ulonglong)(uint)((int)uVar26 >> 1) & 1) + uVar29 * 2;
-    if (uStack_cc == 0) {
+    if (stack_pair_d0.second == 0) {
       if (bVar6 == 0) {
         *(undefined1 *)((int)puStack0000001c + uVar26 + 8) = 0;
       }
@@ -248,11 +248,11 @@ LAB_82c9888c:
                *(int *)(param_1 + 0x1d0);
       puVar28 = (undefined1 *)0x0;
       iVar13 = fn_82C94500(param_1,puStack0000001c,iVar30,uVar26,iVar14,lVar17,&uStack_d4,
-                             &uStack_d0);
+                             &stack_pair_d0.first);
       if (iVar13 != 0) {
         puVar28 = auStack_c0;
       }
-      uVar12 = fn_82CB2190(param_1,iVar16,uVar26,bVar6,puVar28,uStack_d0,uStack_d4,iVar30);
+      uVar12 = fn_82CB2190(param_1,iVar16,uVar26,bVar6,puVar28,stack_pair_d0.first,uStack_d4,iVar30);
       if ((int)uVar12 != 0) {
         return uVar12;
       }
@@ -352,7 +352,7 @@ LAB_82c9888c:
     uVar27 = uVar26 + 1;
     param_3 = uVar21 + param_3;
   } while ((int)uVar27 < 4);
-  if (uStack_cc == 0) {
+  if (stack_pair_d0.second == 0) {
     if (*(char *)((int)param_2 + 0x12) == '\0') {
       *(undefined1 *)(puStack0000001c + 3) = 0;
       goto LAB_82c99bcc;
@@ -465,7 +465,7 @@ LAB_82c992e0:
   else {
     iVar16 = (*(int *)(param_1 + 0x88) * (int)param_7 + param_6) * 0x20 + *(int *)(param_1 + 0x1d4);
     puVar28 = (undefined1 *)0x0;
-    iVar15 = fn_82C948D8(param_1,puStack0000001c,iVar16,param_6,param_7,&uStack_d4,&uStack_d0,
+    iVar15 = fn_82C948D8(param_1,puStack0000001c,iVar16,param_6,param_7,&uStack_d4,&stack_pair_d0.first,
                            auStack_c0);
     if (iVar15 != 0) {
       puVar28 = auStack_c0;
@@ -473,7 +473,7 @@ LAB_82c992e0:
     iVar15 = *(int *)(param_1 + 0x6ec);
     uStack_d8 = 0;
     uVar12 = fn_82CB2190(param_1,iStack_dc,uVar27,*(undefined1 *)((int)param_2 + 0x12),puVar28
-                               ,uStack_d0,uStack_d4,iVar16);
+                               ,stack_pair_d0.first,uStack_d4,iVar16);
     if ((int)uVar12 != 0) {
       return uVar12;
     }
@@ -562,7 +562,7 @@ LAB_82c992e0:
 LAB_82c99bcc:
     uVar27 = uStack0000003c;
     puVar11 = puStack0000001c;
-    if (uStack_cc == 0) {
+    if (stack_pair_d0.second == 0) {
       if (*(char *)((int)param_2 + 0x13) == '\0') {
         *(undefined1 *)((int)puStack0000001c + 0xd) = 0;
       }
@@ -674,14 +674,14 @@ LAB_82c99f78:
                (ulonglong)*(uint *)(param_1 + 0x1d8);
       puVar28 = (undefined1 *)0x0;
       iVar15 = fn_82C948D8(param_1,puStack0000001c,lVar17,(ulonglong)uStack0000003c,uStack00000044
-                             ,&uStack_d4,&uStack_d0,auStack_c0);
+                             ,&uStack_d4,&stack_pair_d0.first,auStack_c0);
       if (iVar15 != 0) {
         puVar28 = auStack_c0;
       }
       iVar15 = *(int *)(param_1 + 0x6ec);
       uStack_d8 = 0;
       uVar12 = fn_82CB2190(param_1,iStack_dc,uVar26 + 2,*(undefined1 *)((int)param_2 + 0x13),
-                                 puVar28,uStack_d0,uStack_d4,lVar17);
+                                 puVar28,stack_pair_d0.first,uStack_d4,lVar17);
       if ((int)uVar12 != 0) {
         return uVar12;
       }

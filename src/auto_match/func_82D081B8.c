@@ -39,7 +39,7 @@ void fn_82D081B8(undefined8 param_1,undefined8 param_2)
 {
   int iVar1;
   undefined1 auStack_50 [16];
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [32];
   
   fn_82D0D6E8(auStack_40);
   fn_82D0B0C0(auStack_50);

@@ -26,15 +26,15 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_6f;
-extern int fn_82F691F0();
+extern int memset();
 
 
 void fn_82C4B368(void)
 
 {
-  undefined1 auStack_6f [111];
+  undefined1 auStack_6f [95];
   
                     /* WARNING: Subroutine does not return */
-  fn_82F691F0(auStack_6f,0,0x1f);
+  memset(auStack_6f,0,0x1f);
 }
 

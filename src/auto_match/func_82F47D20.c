@@ -47,7 +47,7 @@ undefined8 fn_82F47D20(int *param_1,int *param_2,ulonglong param_3,int *param_4)
   ulonglong uVar9;
   int *piVar10;
   uint auStack_50 [2];
-  ulonglong auStack_48 [9];
+  ulonglong auStack_48;
   
   if (param_1[4] == 0) {
     return 0xffffffffc00d36b6;
@@ -99,18 +99,18 @@ undefined8 fn_82F47D20(int *param_1,int *param_2,ulonglong param_3,int *param_4)
         param_1[3] = 1;
       }
       iVar4 = 0;
-      auStack_48[0] = 0;
+      auStack_48 = 0;
       uVar5 = 0;
       if (param_1[3] != 0) {
-        uVar3 = (**(code **)(*param_1 + 0x18))(param_1,auStack_48);
+        uVar3 = (**(code **)(*param_1 + 0x18))(param_1,&auStack_48);
         if ((int)uVar3 < 0) {
           return uVar3;
         }
-        if (auStack_48[0] <= *(ulonglong *)(param_1 + 0x14)) {
+        if (auStack_48 <= *(ulonglong *)(param_1 + 0x14)) {
           return 0xffffffffc00d36b5;
         }
-        iVar4 = (int)auStack_48[0] - (int)*(ulonglong *)(param_1 + 0x14);
-        uVar5 = auStack_48[0];
+        iVar4 = (int)auStack_48 - (int)*(ulonglong *)(param_1 + 0x14);
+        uVar5 = auStack_48;
       }
       uVar7 = (uVar9 & 0xffffffff) + *(longlong *)(param_1 + 0x14);
       *(ulonglong *)(param_1 + 0x14) = uVar7;

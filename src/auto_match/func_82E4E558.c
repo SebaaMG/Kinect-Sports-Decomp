@@ -25,11 +25,10 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
-void fn_82E4E558(longlong param_1,longlong param_2,longlong param_3,longlong param_4,
-                  longlong param_5,longlong param_6,uint param_7,uint param_8)
+void fn_82E4E558(longlong param_1, longlong param_2, longlong param_3, longlong param_4, longlong param_5, longlong param_6, uint param_7, uint param_8, int in_stack_00000054)
 
 {
   longlong lVar1;
@@ -38,7 +37,7 @@ void fn_82E4E558(longlong param_1,longlong param_2,longlong param_3,longlong par
   longlong lVar4;
   longlong lVar5;
   ulonglong uVar6;
-  int in_stack_00000054;
+
   
   uVar6 = (longlong)(int)param_7 * (longlong)*(int *)(in_stack_00000054 + 0x388c);
   uVar2 = (longlong)*(int *)(in_stack_00000054 + 0x38b0) * (longlong)(int)param_7;
@@ -55,14 +54,14 @@ void fn_82E4E558(longlong param_1,longlong param_2,longlong param_3,longlong par
   if ((int)lVar1 < (int)lVar4) {
     lVar4 = lVar4 - lVar1;
     do {
-      fn_82F68CC0(param_4,param_1,*(undefined4 *)(in_stack_00000054 + 0x388c));
+      memcpy(param_4,param_1,*(undefined4 *)(in_stack_00000054 + 0x388c));
       param_4 = (ulonglong)*(uint *)(in_stack_00000054 + 0x388c) + param_4;
       param_1 = (ulonglong)*(uint *)(in_stack_00000054 + 0x38b0) + param_1;
-      fn_82F68CC0(param_4,param_1);
+      memcpy(param_4,param_1);
       param_1 = (ulonglong)*(uint *)(in_stack_00000054 + 0x38b0) + param_1;
       param_4 = param_4 + (ulonglong)*(uint *)(in_stack_00000054 + 0x388c);
-      fn_82F68CC0(param_5,param_2,*(undefined4 *)(in_stack_00000054 + 0x3894));
-      fn_82F68CC0(lVar5,lVar3,*(undefined4 *)(in_stack_00000054 + 0x3894));
+      memcpy(param_5,param_2,*(undefined4 *)(in_stack_00000054 + 0x3894));
+      memcpy(lVar5,lVar3,*(undefined4 *)(in_stack_00000054 + 0x3894));
       lVar4 = lVar4 + -1;
       param_2 = (ulonglong)*(uint *)(in_stack_00000054 + 0x38b8) + param_2;
       lVar3 = (ulonglong)*(uint *)(in_stack_00000054 + 0x38b8) + lVar3;

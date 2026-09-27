@@ -40,7 +40,7 @@ void fn_82D99EA0(double param_1,int param_2,int param_3,undefined8 param_4)
   undefined4 uVar4;
   undefined4 uVar5;
   undefined4 uVar6;
-  undefined1 auStack_30 [32];
+  undefined1 auStack_30 [16];
   
   iVar1 = *(int *)(param_2 + 8);
   puVar2 = (undefined4 *)(in_r0 + param_3 & 0xfffffff0);

@@ -25,11 +25,10 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
-void fn_82CD3948(longlong param_1,int param_2,int param_3,longlong param_4,int param_5,int param_6
-                  ,longlong param_7,longlong param_8)
+void fn_82CD3948(longlong param_1, int param_2, int param_3, longlong param_4, int param_5, int param_6, longlong param_7, longlong param_8, int in_stack_00000054)
 
 {
   undefined1 uVar1;
@@ -38,7 +37,7 @@ void fn_82CD3948(longlong param_1,int param_2,int param_3,longlong param_4,int p
   int iVar4;
   int iVar5;
   longlong lVar6;
-  int in_stack_00000054;
+
   
   param_8 = param_8 - param_7;
   uVar3 = (longlong)*(int *)(in_stack_00000054 + 0x38fc) * (longlong)(int)param_7;
@@ -54,7 +53,7 @@ void fn_82CD3948(longlong param_1,int param_2,int param_3,longlong param_4,int p
   lVar6 = param_8;
   if (0 < param_8) {
     do {
-      fn_82F68CC0(param_4,param_1,*(undefined4 *)(in_stack_00000054 + 0x3890));
+      memcpy(param_4,param_1,*(undefined4 *)(in_stack_00000054 + 0x3890));
       lVar6 = lVar6 + -1;
       param_4 = (ulonglong)*(uint *)(in_stack_00000054 + 0x3904) + param_4;
       param_1 = (ulonglong)*(uint *)(in_stack_00000054 + 0x38fc) + param_1;

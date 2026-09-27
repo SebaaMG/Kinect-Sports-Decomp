@@ -38,7 +38,7 @@ ulonglong fn_830536D0(int *param_1,undefined8 param_2,undefined4 *param_3)
   int *piVar3;
   uint uVar4;
   undefined1 auStack_30 [4];
-  int aiStack_2c [11];
+  int aiStack_2c;
   
   piVar3 = param_1 + 0xe;
   *param_3 = param_1 + 6;
@@ -54,9 +54,9 @@ ulonglong fn_830536D0(int *param_1,undefined8 param_2,undefined4 *param_3)
        (uint)param_1[0x24] + uVar1 <= uVar2)) {
       uVar2 = (uint)param_1[0x23] + uVar1;
     }
-    uVar2 = fn_830540C0(param_1,param_2,uVar2,uVar4,0,aiStack_2c,auStack_30);
+    uVar2 = fn_830540C0(param_1,param_2,uVar2,uVar4,0,&aiStack_2c,auStack_30);
     if ((uVar2 & 0xffffffff) != 0) {
-      param_1[0x26] = param_1[0x26] + aiStack_2c[0];
+      param_1[0x26] = param_1[0x26] + aiStack_2c;
       fn_830514A8(param_1);
       *(undefined8 *)(param_1 + 0x16) = *(undefined8 *)(param_1[0x18] + 0x50);
     }

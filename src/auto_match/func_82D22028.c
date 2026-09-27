@@ -157,8 +157,8 @@ void fn_82D22028(undefined8 param_1,int param_2,undefined8 param_3,undefined8 pa
   float fVar37;
   int iStack_1d4;
   float fStack_1bc;
-  float fStack_1b0;
-  float fStack_1ac;
+  struct { float first; float second; } stack_pair_1b0;
+
   undefined8 uStack_1a8;
   float fStack_1a0;
   float fStack_19c;
@@ -201,7 +201,7 @@ void fn_82D22028(undefined8 param_1,int param_2,undefined8 param_3,undefined8 pa
   float fStack_f4;
   undefined1 auStack_d0 [12];
   float fStack_c4;
-  undefined1 auStack_c0 [192];
+  undefined1 auStack_c0 [1];
   
   uVar8 = ZEXT48(&stack0x00000000);
   uVar9 = fn_82F6A538();
@@ -254,7 +254,7 @@ void fn_82D22028(undefined8 param_1,int param_2,undefined8 param_3,undefined8 pa
       fVar27 = pfVar4[1];
       fVar28 = pfVar4[2];
       fVar29 = pfVar4[3];
-      pfVar6 = (float *)((int)&fStack_1b0 + iVar3 & 0xfffffff0);
+      pfVar6 = (float *)((int)&stack_pair_1b0.first + iVar3 & 0xfffffff0);
       fVar31 = *pfVar6;
       fVar32 = pfVar6[1];
       fVar33 = pfVar6[2];
@@ -280,10 +280,10 @@ void fn_82D22028(undefined8 param_1,int param_2,undefined8 param_3,undefined8 pa
           uVar13 = 0;
           dVar19 = (double)fStack_1a0;
           dVar18 = (double)(((U64)(uStack_1a8) >> 0) & 0xFFFFFFFF);
-          fStack_1ac = (float)uVar10;
-          dVar17 = (double)fStack_1ac;
-          fStack_1b0 = (float)((ulonglong)uVar10 >> 0x20);
-          dVar15 = (double)fStack_1b0;
+          stack_pair_1b0.second = (float)uVar10;
+          dVar17 = (double)stack_pair_1b0.second;
+          stack_pair_1b0.first = (float)((ulonglong)uVar10 >> 0x20);
+          dVar15 = (double)stack_pair_1b0.first;
           do {
             iVar11 = fn_82CE5410();
             if (iStack_1d4 == 0) {

@@ -49,7 +49,7 @@ undefined8 fn_82FE6BC0(undefined4 param_1,int *param_2,ulonglong param_3)
   undefined2 uStack_3e;
   undefined4 uStack_3c;
   undefined4 uStack_38;
-  undefined1 auStack_34 [36];
+  undefined1 auStack_34 [20];
   
   if (4 < (param_3 & 0xffffffff)) {
     return 0x1f;

@@ -30,7 +30,7 @@ extern int fn_82E50BE8();
 extern int fn_82E50CB8();
 extern int fn_82E50F10();
 extern int fn_82E561A8();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 ulonglong fn_82E56228(int param_1,undefined4 *param_2)
@@ -41,10 +41,10 @@ ulonglong fn_82E56228(int param_1,undefined4 *param_2)
   longlong lVar2;
   undefined8 in_r8;
   ulonglong uVar4;
-  uint auStack_40 [16];
+  uint auStack_40;
   
   uVar4 = 0;
-  auStack_40[0] = 0;
+  auStack_40 = 0;
   if (param_2 == (undefined4 *)0x0) {
     return 0xffffffff80070057;
   }
@@ -55,8 +55,8 @@ ulonglong fn_82E56228(int param_1,undefined4 *param_2)
     piVar3 = (int *)0x0;
   }
   else {
-    piVar3 = (int *)fn_82E561A8(uVar1,auStack_40);
-    uVar4 = (ulonglong)auStack_40[0];
+    piVar3 = (int *)fn_82E561A8(uVar1,&auStack_40);
+    uVar4 = (ulonglong)auStack_40;
   }
   if (piVar3 == (int *)0x0) {
     uVar4 = 0xffffffff8007000e;
@@ -81,7 +81,7 @@ ulonglong fn_82E56228(int param_1,undefined4 *param_2)
         uVar4 = 0xffffffff8007000e;
       }
       else {
-        fn_82F68CC0(uVar4,*(undefined4 *)(param_1 + 100),*(int *)(param_1 + 0x5c) << 1);
+        memcpy(uVar4,*(undefined4 *)(param_1 + 100),*(int *)(param_1 + 0x5c) << 1);
         uVar4 = (**(code **)*piVar3)(piVar3,0xffffffff8215ed78,param_2);
         if (-1 < (longlong)uVar4) goto LAB_82e5639c;
       }

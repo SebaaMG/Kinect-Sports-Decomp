@@ -34,7 +34,7 @@ undefined8 fn_82EE3930(int param_1,longlong *param_2,longlong *param_3)
   undefined8 uVar1;
   longlong lVar2;
   ulonglong uVar3;
-  int *apiStack_40 [16];
+  int * apiStack_40;
   
   if (*(int *)(param_1 + 0xc) == 0) {
     uVar1 = 0xffffffffc00d36b6;
@@ -44,8 +44,8 @@ undefined8 fn_82EE3930(int param_1,longlong *param_2,longlong *param_3)
     uVar3 = 0;
     if (*(int *)(param_1 + 0xb0) != 0) {
       do {
-        fn_82EE3630(param_1 + 0x48,uVar3,apiStack_40);
-        if (*(int *)(*apiStack_40[0] + 0x40) != 0) {
+        fn_82EE3630(param_1 + 0x48,uVar3,&apiStack_40);
+        if (*(int *)(*apiStack_40 + 0x40) != 0) {
           lVar2 = lVar2 + 2;
         }
         uVar3 = uVar3 + 1;

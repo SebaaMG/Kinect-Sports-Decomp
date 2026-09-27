@@ -33,7 +33,7 @@ extern int fn_82CEC730();
 void fn_82CECC38(undefined8 param_1,undefined8 param_2)
 
 {
-  undefined1 auStack_40 [48];
+  undefined1 auStack_40 [32];
   
   fn_82CEC730(auStack_40,param_1,param_2,param_1);
   fn_82CEC6E0(param_1,param_2,auStack_40);

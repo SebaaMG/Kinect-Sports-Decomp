@@ -36,7 +36,7 @@ extern unsigned int uStack_60;
 void fn_82D4CC40(int *param_1,undefined8 param_2,int param_3,undefined4 *param_4)
 
 {
-  char acStack_80 [16];
+  char acStack_80;
   undefined1 auStack_70 [16];
   undefined4 uStack_60;
   undefined4 uStack_5c;
@@ -47,8 +47,8 @@ void fn_82D4CC40(int *param_1,undefined8 param_2,int param_3,undefined4 *param_4
   uStack_5c = 0xffffffff;
   uStack_30 = 0;
   uStack_50 = 0xffffffff;
-  (**(code **)(*param_1 + 0x20))(acStack_80,param_1,param_2,auStack_70);
-  if (acStack_80[0] != '\0') {
+  (**(code **)(*param_1 + 0x20))(&acStack_80,param_1,param_2,auStack_70);
+  if (acStack_80 != '\0') {
     fn_82CE5110(auStack_70,*(undefined4 *)(param_3 + 8),auStack_70);
     (**(code **)*param_4)(param_4,param_3,auStack_70);
   }

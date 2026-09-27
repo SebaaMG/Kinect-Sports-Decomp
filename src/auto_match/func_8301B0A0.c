@@ -39,11 +39,11 @@ undefined8 fn_8301B0A0(longlong param_1,int *param_2)
   uint uVar3;
   char cVar5;
   undefined8 uVar4;
-  int iStack_50;
-  uint uStack_4c;
+  struct { int first; uint second; } stack_pair_50;
+
   undefined4 *puStack_48;
   
-  fn_83016CE8(&iStack_50,param_1 + 0x24);
+  fn_83016CE8(&stack_pair_50.first,param_1 + 0x24);
 joined_r0x8301b0c4:
   if (puStack_48 == (undefined4 *)0x0) {
     uVar4 = 1;
@@ -53,9 +53,9 @@ joined_r0x8301b0c4:
 LAB_8301b13c:
       puStack_48 = (undefined4 *)*puStack_48;
       while (puStack_48 == (undefined4 *)0x0) {
-        uStack_4c = uStack_4c + 1;
-        if (0xc0 < uStack_4c) goto joined_r0x8301b0c4;
-        puStack_48 = *(undefined4 **)(uStack_4c * 4 + iStack_50);
+        stack_pair_50.second = stack_pair_50.second + 1;
+        if (0xc0 < stack_pair_50.second) goto joined_r0x8301b0c4;
+        puStack_48 = *(undefined4 **)(stack_pair_50.second * 4 + stack_pair_50.first);
       }
     }
     uVar1 = puStack_48[1];

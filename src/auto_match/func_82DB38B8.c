@@ -109,7 +109,7 @@ void fn_82DB38B8(int param_1,int *param_2,undefined4 *param_3,undefined8 param_4
   undefined4 uStack_b0;
   undefined1 uStack_ab;
   undefined1 auStack_a0 [16];
-  undefined1 auStack_90 [144];
+  undefined1 auStack_90 [112];
   
   iVar9 = *param_2;
   if (iVar9 != 0) {

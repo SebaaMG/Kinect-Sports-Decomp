@@ -36,13 +36,13 @@ void fn_82E74290(int param_1)
 {
   int iVar1;
   int aiStack_30 [2];
-  undefined8 auStack_28 [5];
+  undefined8 auStack_28;
   
-  auStack_28[0] = 0;
+  auStack_28 = 0;
   do {
     aiStack_30[0] = 0;
     do {
-      iVar1 = fn_82E740C0(param_1 + 0x10,0,auStack_28,aiStack_30);
+      iVar1 = fn_82E740C0(param_1 + 0x10,0,&auStack_28,aiStack_30);
       if (iVar1 == 0) {
         if (*(int **)(param_1 + 0x1d8) != (int *)0x0) {
           (**(code **)(**(int **)(param_1 + 0x1d8) + 8))();

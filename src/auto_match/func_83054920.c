@@ -40,7 +40,7 @@ void fn_83054920(int param_1,undefined8 *param_2,undefined8 param_3,char param_4
   int iVar5;
   undefined8 *puStack_40;
   undefined8 *puStack_3c;
-  undefined1 auStack_38 [56];
+  undefined1 auStack_38 [8];
   
   if ((*(uint *)(param_2 + 6) & 0xe0000000) == 0x40000000) {
     puVar4 = *(undefined8 **)(param_1 + 0xbc);

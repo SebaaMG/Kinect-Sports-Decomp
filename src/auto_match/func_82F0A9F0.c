@@ -60,7 +60,7 @@ void fn_82F0A9F0(int param_1,int param_2,int param_3)
   ushort uStack_2a2;
   undefined1 auStack_2a0 [126];
   short sStack_222;
-  undefined1 auStack_220 [544];
+  undefined1 auStack_220 [512];
   
   puVar18 = &uStack_2a2;
   pbVar20 = (byte *)(param_1 + 2);

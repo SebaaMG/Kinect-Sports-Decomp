@@ -47,7 +47,7 @@ void fn_83011A38(int param_1,undefined8 param_2)
   longlong *plVar4;
   undefined8 uStack_a0;
   undefined1 auStack_98 [8];
-  undefined4 auStack_90 [36];
+  undefined4 auStack_90 [20];
   
   uStack_a0 = ZEXT48(*(uint **)(param_1 + 0x50)) << 0x20;
   puVar3 = *(uint **)(param_1 + 0x50);

@@ -58,16 +58,16 @@ void fn_82C23380(int param_1)
   byte *pbVar7;
   char cVar9;
   longlong lVar8;
-  undefined1 auStack_a0 [4];
+  undefined1 auStack_a0;
   char *pcStack_9c;
   undefined4 uStack_98;
   undefined4 *puStack_94;
   undefined4 uStack_90;
   undefined4 uStack_8c;
-  undefined4 auStack_88 [2];
+  undefined4 auStack_88 [1];
   ulonglong auStack_80 [2];
-  int iStack_70;
-  int iStack_6c;
+  struct { int first; int second; } stack_pair_70;
+
   int iStack_68;
   int iStack_64;
   
@@ -77,7 +77,7 @@ void fn_82C23380(int param_1)
   uStack_98 = 0;
   pcStack_9c = (char *)0x0;
   puStack_94 = (undefined4 *)0x0;
-  auStack_a0[0] = 0;
+  auStack_a0 = 0;
   do {
     while( true ) {
       while (iVar5 = piVar3[0x14], iVar5 == 0xe) {
@@ -89,12 +89,12 @@ void fn_82C23380(int param_1)
       }
       if (iVar5 == 0xf) break;
       if (iVar5 == 0x10) {
-        iStack_70 = piVar3[0x15];
-        iStack_6c = piVar3[0x16];
+        stack_pair_70.first = piVar3[0x15];
+        stack_pair_70.second = piVar3[0x16];
         iStack_68 = piVar3[0x17];
         iStack_64 = piVar3[0x18];
         cVar9 = '\0';
-        pbVar6 = (byte *)&iStack_70;
+        pbVar6 = (byte *)&stack_pair_70.first;
         uVar4 = *(ulonglong *)(piVar3 + 0x1a) & 0xffffffff;
         pbVar7 = (byte *)&lbl_82154AC8;
         do {
@@ -105,7 +105,7 @@ void fn_82C23380(int param_1)
           pbVar6 = pbVar6 + 1;
         } while (pbVar7 != &lbl_82154AD8);
         if ((int)((ulonglong)bVar1 - (ulonglong)bVar2) == 0) {
-          iVar5 = fn_82C10F68(piVar3[0x25],&uStack_98,&pcStack_9c,auStack_a0);
+          iVar5 = fn_82C10F68(piVar3[0x25],&uStack_98,&pcStack_9c,&auStack_a0);
           if (iVar5 != -0x7fafffea) {
             if (iVar5 < 0) goto LAB_82c236dc;
             do {
@@ -115,7 +115,7 @@ void fn_82C23380(int param_1)
                 cVar9 = *pcStack_9c;
                 break;
               }
-              iVar5 = fn_82C10FD0(piVar3[0x25],uStack_98,&pcStack_9c,auStack_a0);
+              iVar5 = fn_82C10FD0(piVar3[0x25],uStack_98,&pcStack_9c,&auStack_a0);
             } while (iVar5 != -0x7fafffea);
           }
           fn_82C11038(piVar3[0x25],uStack_98);
@@ -153,12 +153,12 @@ void fn_82C23380(int param_1)
     uStack_90 = 0x18;
     iVar5 = (**(code **)(*piVar3 + 0xc))(*piVar3,0x18);
     if (((iVar5 < 0) ||
-        (iVar5 = fn_82C1EE20(param_1,&iStack_70,auStack_88,&uStack_8c,&uStack_90), iVar5 < 0)) ||
+        (iVar5 = fn_82C1EE20(param_1,&stack_pair_70.first,auStack_88,&uStack_8c,&uStack_90), iVar5 < 0)) ||
        (iVar5 = fn_82C1EC50(param_1,auStack_80,auStack_88,&uStack_8c,&uStack_90), iVar5 < 0))
     goto LAB_82c236dc;
     *(ulonglong *)(piVar3 + 0x1a) = auStack_80[0];
-    piVar3[0x15] = iStack_70;
-    piVar3[0x16] = iStack_6c;
+    piVar3[0x15] = stack_pair_70.first;
+    piVar3[0x16] = stack_pair_70.second;
     piVar3[0x17] = iStack_68;
     piVar3[0x18] = iStack_64;
     if (auStack_80[0] < 0x18) {

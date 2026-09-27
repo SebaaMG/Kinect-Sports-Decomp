@@ -42,7 +42,7 @@ ulonglong fn_82CEEB70(undefined8 param_1,undefined8 param_2)
   int iVar3;
   uint *puVar4;
   longlong lVar5;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [16];
   
   iVar1 = fn_82CEAF18(param_2);
   lVar5 = 0;

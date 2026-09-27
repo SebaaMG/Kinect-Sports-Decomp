@@ -42,10 +42,10 @@ void fn_82F1B020(int param_1,undefined2 *param_2,short *param_3,undefined8 param
   int iVar4;
   undefined2 *puVar5;
   undefined4 uStack_50;
-  undefined4 auStack_4c [19];
+  undefined4 auStack_4c;
   
   iVar3 = 0;
-  auStack_4c[0] = 0;
+  auStack_4c = 0;
   uStack_50 = 0;
   if (param_6 == 0) {
     iVar4 = 0;
@@ -57,14 +57,14 @@ void fn_82F1B020(int param_1,undefined2 *param_2,short *param_3,undefined8 param
         puVar5 = puVar5 + 2;
         iVar2 = fn_82F2A8A8(param_1,*puVar1,*puVar5,
                              *(undefined4 *)((*(int *)(param_1 + 0x4e44) + 0x1385) * 4 + param_1),
-                             auStack_4c,&uStack_50);
+                             &auStack_4c,&uStack_50);
         iVar3 = iVar3 + 2;
         iVar4 = iVar2 + iVar4;
       } while (iVar3 < *param_3 + -2);
     }
     iVar3 = fn_82F2A9C8(param_1,(param_2 + iVar3)[1],param_2[iVar3],
                               *(undefined4 *)((*(int *)(param_1 + 0x4e44) + 5000) * 4 + param_1),
-                              auStack_4c,&uStack_50);
+                              &auStack_4c,&uStack_50);
     if (param_5 < 4) {
       *(int *)(param_1 + 0x6f9c) = *(int *)(param_1 + 0x6f9c) + iVar3 + iVar4;
     }
@@ -81,7 +81,7 @@ void fn_82F1B020(int param_1,undefined2 *param_2,short *param_3,undefined8 param
         do {
           iVar2 = fn_82F2A8A8(param_1,puVar5[3],puVar5[2],
                                *(undefined4 *)((*(int *)(param_1 + 0x4e48) + 0x138b) * 4 + param_1),
-                               auStack_4c,&uStack_50);
+                               &auStack_4c,&uStack_50);
           iVar4 = iVar4 + 2;
           iVar3 = iVar2 + iVar3;
           puVar5 = puVar5 + 2;
@@ -89,7 +89,7 @@ void fn_82F1B020(int param_1,undefined2 *param_2,short *param_3,undefined8 param
       }
       iVar4 = fn_82F2A8A8(param_1,(param_2 + iVar4)[1],param_2[iVar4],
                            *(undefined4 *)((*(int *)(param_1 + 0x4e48) + 0x138e) * 4 + param_1),
-                           auStack_4c,&uStack_50);
+                           &auStack_4c,&uStack_50);
       iVar3 = iVar4 + iVar3;
     }
     *(int *)(param_1 + 0x6fa4) = iVar3 + *(int *)(param_1 + 0x6fa4);
@@ -103,7 +103,7 @@ void fn_82F1B020(int param_1,undefined2 *param_2,short *param_3,undefined8 param
         do {
           iVar2 = fn_82F2A8A8(param_1,puVar5[3],puVar5[2],
                                *(undefined4 *)((*(int *)(param_1 + 0x4e44) + 0x1385) * 4 + param_1),
-                               auStack_4c,&uStack_50);
+                               &auStack_4c,&uStack_50);
           iVar4 = iVar4 + 2;
           iVar3 = iVar2 + iVar3;
           puVar5 = puVar5 + 2;
@@ -111,7 +111,7 @@ void fn_82F1B020(int param_1,undefined2 *param_2,short *param_3,undefined8 param
       }
       iVar4 = fn_82F2A8A8(param_1,(param_2 + iVar4)[1],param_2[iVar4],
                            *(undefined4 *)((*(int *)(param_1 + 0x4e44) + 5000) * 4 + param_1),
-                           auStack_4c,&uStack_50);
+                           &auStack_4c,&uStack_50);
       iVar3 = iVar4 + iVar3;
     }
     *(int *)(param_1 + 0x6fa8) = *(int *)(param_1 + 0x6fa8) + iVar3;

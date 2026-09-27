@@ -71,7 +71,7 @@ ulonglong fn_82C25F70(int param_1)
   uint uVar13;
   ulonglong uVar14;
   ulonglong uVar15;
-  byte abStack_f0 [4];
+  byte abStack_f0;
   int iStack_ec;
   int aiStack_e8 [2];
   undefined8 uStack_e0;
@@ -96,7 +96,7 @@ ulonglong fn_82C25F70(int param_1)
   iStack_ec = 0;
   uVar8 = 0;
   uStack_d4 = 0;
-  abStack_f0[0] = 0;
+  abStack_f0 = 0;
 LAB_82c25fd0:
   do {
     while( true ) {
@@ -176,9 +176,9 @@ LAB_82c25fd0:
           if ((int)uVar5 < 0) goto LAB_82c270bc;
           uStack_e0 = CONCAT44(1,(((U64)(uStack_e0) >> 32) & 0xFFFFFFFF));
           uVar14 = 1;
-          uVar5 = fn_82C1E828(param_1,abStack_f0,auStack_d0,&uStack_d4,&uStack_e0);
+          uVar5 = fn_82C1E828(param_1,&abStack_f0,auStack_d0,&uStack_d4,&uStack_e0);
           if ((int)uVar5 < 0) goto LAB_82c270bc;
-          uVar12 = (ulonglong)abStack_f0[0];
+          uVar12 = (ulonglong)abStack_f0;
           uVar5 = (ulonglong)*(ushort *)(piVar2[0xd] + 0x1e);
           if ((uVar5 < uVar12) || (uVar12 == 0)) {
 LAB_82c262b0:
@@ -306,10 +306,10 @@ LAB_82c27000:
                 goto LAB_82c27004;
                 uStack_e0 = CONCAT44(1,(((U64)(uStack_e0) >> 32) & 0xFFFFFFFF));
                 uVar14 = uVar14 + 1;
-                uVar5 = fn_82C1E828(param_1,abStack_f0,auStack_d0,&uStack_d4,&uStack_e0);
+                uVar5 = fn_82C1E828(param_1,&abStack_f0,auStack_d0,&uStack_d4,&uStack_e0);
                 if ((int)uVar5 < 0) goto LAB_82c270bc;
                 iVar4 = piVar2[0xd];
-                uVar12 = (ulonglong)abStack_f0[0];
+                uVar12 = (ulonglong)abStack_f0;
                 if ((*(ushort *)(iVar4 + 0x1e) < uVar12) || (uVar12 == 0)) goto LAB_82c27000;
                 iVar6 = *(int *)(iVar4 + 0x20);
                 uVar11 = uVar12 + uVar11 + 1;

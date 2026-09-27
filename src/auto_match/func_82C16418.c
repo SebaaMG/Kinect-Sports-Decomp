@@ -47,7 +47,7 @@ undefined8 fn_82C16418(longlong *param_1)
   uint uVar14;
   short sVar15;
   uint uVar16;
-  byte *apbStack_50 [20];
+  byte *apbStack_50 [8];
   
   apbStack_50[0] = (byte *)0x0;
   sVar15 = 0;

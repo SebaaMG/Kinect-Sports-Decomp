@@ -88,8 +88,8 @@ undefined8 fn_830C7BD0(int *param_1,int param_2,int param_3,int param_4,uint *pa
   short sStack_ba;
   short sStack_b8;
   short sStack_b6;
-  undefined4 uStack_b0;
-  undefined4 uStack_ac;
+  struct { undefined4 first; undefined4 second; } stack_pair_b0;
+
   undefined4 uStack_a8;
   
   uVar7 = *(ushort *)((int)param_1 + 0x32);
@@ -166,10 +166,10 @@ LAB_830c7d34:
   if ((uVar45 & 8) != 0) {
     uVar34 = fn_830C6D68(param_1,param_1[0x54]);
   }
-  uStack_b0 = 0;
+  stack_pair_b0.first = 0;
   lVar36 = 0;
   uStack_a8 = 0;
-  uStack_ac = 0;
+  stack_pair_b0.second = 0;
   if (param_3 != 0) {
     uVar42 = uVar43 - 1;
     if ((*(uint *)(param_2 + -0x18) & 0x20000) != 0) {
@@ -187,7 +187,7 @@ LAB_830c7d34:
                              (short)((int)sStack_ba + (int)sStack_b6 + 1 >> 1));
       }
       lVar36 = 1;
-      uStack_b0 = uStack_c0;
+      stack_pair_b0.first = uStack_c0;
     }
   }
   if (!bVar32) {
@@ -209,7 +209,7 @@ LAB_830c7d34:
       }
       lVar20 = lVar36 << 2;
       lVar36 = lVar36 + 1;
-      *(uint *)((int)&uStack_b0 + (int)lVar20) = uStack_c0;
+      *(uint *)((int)&stack_pair_b0.first + (int)lVar20) = uStack_c0;
     }
     if (iVar41 != 1) {
       if (param_3 == iVar41 + -1) {
@@ -236,30 +236,30 @@ LAB_830c7d34:
         }
         lVar20 = lVar36 << 2;
         lVar36 = lVar36 + 1;
-        *(uint *)((int)&uStack_b0 + (int)lVar20) = uStack_c0;
+        *(uint *)((int)&stack_pair_b0.first + (int)lVar20) = uStack_c0;
       }
     }
   }
   if ((uint)lVar36 < 2) {
-    uStack_c0 = -(uint)(lVar36 == 1) & uStack_b0;
+    uStack_c0 = -(uint)(lVar36 == 1) & stack_pair_b0.first;
   }
   else {
-    uVar25 = (ushort)((uint)((int)(short)(((U64)(uStack_ac) >> 16) & 0xFFFF) - (int)(short)(((U64)(uStack_b0) >> 16) & 0xFFFF)) >> 0x10);
-    uVar24 = (ushort)((uint)((int)(short)(((U64)(uStack_ac) >> 16) & 0xFFFF) - (int)(short)(((U64)(uStack_a8) >> 16) & 0xFFFF)) >> 0x10) ^
+    uVar25 = (ushort)((uint)((int)(short)(((U64)(stack_pair_b0.second) >> 16) & 0xFFFF) - (int)(short)(((U64)(stack_pair_b0.first) >> 16) & 0xFFFF)) >> 0x10);
+    uVar24 = (ushort)((uint)((int)(short)(((U64)(stack_pair_b0.second) >> 16) & 0xFFFF) - (int)(short)(((U64)(uStack_a8) >> 16) & 0xFFFF)) >> 0x10) ^
              uVar25;
-    uVar25 = (ushort)((uint)((int)(short)(((U64)(uStack_a8) >> 16) & 0xFFFF) - (int)(short)(((U64)(uStack_b0) >> 16) & 0xFFFF)) >> 0x10) ^
+    uVar25 = (ushort)((uint)((int)(short)(((U64)(uStack_a8) >> 16) & 0xFFFF) - (int)(short)(((U64)(stack_pair_b0.first) >> 16) & 0xFFFF)) >> 0x10) ^
              uVar25;
-    uVar27 = (ushort)((uint)((int)(short)(((U64)(uStack_ac) >> 0) & 0xFFFF) - (int)(short)(((U64)(uStack_b0) >> 0) & 0xFFFF)) >> 0x10);
-    uVar26 = (ushort)((uint)((int)(short)(((U64)(uStack_ac) >> 0) & 0xFFFF) - (int)(short)(((U64)(uStack_a8) >> 0) & 0xFFFF)) >> 0x10) ^
+    uVar27 = (ushort)((uint)((int)(short)(((U64)(stack_pair_b0.second) >> 0) & 0xFFFF) - (int)(short)(((U64)(stack_pair_b0.first) >> 0) & 0xFFFF)) >> 0x10);
+    uVar26 = (ushort)((uint)((int)(short)(((U64)(stack_pair_b0.second) >> 0) & 0xFFFF) - (int)(short)(((U64)(uStack_a8) >> 0) & 0xFFFF)) >> 0x10) ^
              uVar27;
-    uVar27 = (ushort)((uint)((int)(short)(((U64)(uStack_a8) >> 0) & 0xFFFF) - (int)(short)(((U64)(uStack_b0) >> 0) & 0xFFFF)) >> 0x10) ^
+    uVar27 = (ushort)((uint)((int)(short)(((U64)(uStack_a8) >> 0) & 0xFFFF) - (int)(short)(((U64)(stack_pair_b0.first) >> 0) & 0xFFFF)) >> 0x10) ^
              uVar27;
     uStack_c0 = CONCAT22((((U64)(uStack_a8) >> 0) & 0xFFFF) & ~((short)(uVar26 | uVar27) >> 0xf) |
-                         (short)uVar27 >> 0xf & (((U64)(uStack_b0) >> 0) & 0xFFFF) |
-                         (short)uVar26 >> 0xf & (((U64)(uStack_ac) >> 0) & 0xFFFF),
+                         (short)uVar27 >> 0xf & (((U64)(stack_pair_b0.first) >> 0) & 0xFFFF) |
+                         (short)uVar26 >> 0xf & (((U64)(stack_pair_b0.second) >> 0) & 0xFFFF),
                          (((U64)(uStack_a8) >> 16) & 0xFFFF) & ~((short)(uVar24 | uVar25) >> 0xf) |
-                         (short)uVar25 >> 0xf & (((U64)(uStack_b0) >> 16) & 0xFFFF) |
-                         (short)uVar24 >> 0xf & (((U64)(uStack_ac) >> 16) & 0xFFFF));
+                         (short)uVar25 >> 0xf & (((U64)(stack_pair_b0.first) >> 16) & 0xFFFF) |
+                         (short)uVar24 >> 0xf & (((U64)(stack_pair_b0.second) >> 16) & 0xFFFF));
   }
   puVar40 = (uint *)(uVar14 * 4 + iVar16);
   *(ushort *)((int)puVar40 + 2) = ((((U64)(uStack_c0) >> 16) & 0xFFFF) + (short)uVar34 + sVar8 & uVar9) - sVar8;
@@ -269,10 +269,10 @@ LAB_830c7d34:
   if ((uVar45 & 4) != 0) {
     uVar35 = fn_830C6D68(param_1,param_1[0x54]);
   }
-  uStack_b0 = *puVar40;
+  stack_pair_b0.first = *puVar40;
   uVar38 = 1;
   uStack_a8 = 0;
-  uStack_ac = 0;
+  stack_pair_b0.second = 0;
   if (!bVar32) {
     lVar36 = uVar43 - uVar44;
     uVar42 = lVar36 + 1;
@@ -292,7 +292,7 @@ LAB_830c7d34:
                              (short)((int)sStack_ba + (int)sStack_b6 + 1 >> 1));
       }
       uVar38 = 2;
-      uStack_ac = uStack_c0;
+      stack_pair_b0.second = uStack_c0;
     }
     uVar39 = uVar38;
     if (iVar41 != 1) {
@@ -319,31 +319,31 @@ LAB_830c7d34:
                                (short)((int)sStack_ba + (int)sStack_b6 + 1 >> 1));
         }
         uVar39 = uVar38 + 1;
-        (&uStack_b0)[uVar38] = uStack_c0;
+        (&stack_pair_b0.first)[uVar38] = uStack_c0;
       }
     }
     if (1 < uVar39) {
-      uVar25 = (ushort)((uint)((int)(short)(((U64)(uStack_ac) >> 16) & 0xFFFF) - (int)(short)(((U64)(uStack_b0) >> 16) & 0xFFFF)) >> 0x10);
-      uVar24 = (ushort)((uint)((int)(short)(((U64)(uStack_ac) >> 16) & 0xFFFF) - (int)(short)(((U64)(uStack_a8) >> 16) & 0xFFFF)) >> 0x10) ^
+      uVar25 = (ushort)((uint)((int)(short)(((U64)(stack_pair_b0.second) >> 16) & 0xFFFF) - (int)(short)(((U64)(stack_pair_b0.first) >> 16) & 0xFFFF)) >> 0x10);
+      uVar24 = (ushort)((uint)((int)(short)(((U64)(stack_pair_b0.second) >> 16) & 0xFFFF) - (int)(short)(((U64)(uStack_a8) >> 16) & 0xFFFF)) >> 0x10) ^
                uVar25;
-      uVar25 = (ushort)((uint)((int)(short)(((U64)(uStack_a8) >> 16) & 0xFFFF) - (int)(short)(((U64)(uStack_b0) >> 16) & 0xFFFF)) >> 0x10) ^
+      uVar25 = (ushort)((uint)((int)(short)(((U64)(uStack_a8) >> 16) & 0xFFFF) - (int)(short)(((U64)(stack_pair_b0.first) >> 16) & 0xFFFF)) >> 0x10) ^
                uVar25;
-      uVar27 = (ushort)((uint)((int)(short)(((U64)(uStack_ac) >> 0) & 0xFFFF) - (int)(short)(((U64)(uStack_b0) >> 0) & 0xFFFF)) >> 0x10);
-      uVar26 = (ushort)((uint)((int)(short)(((U64)(uStack_ac) >> 0) & 0xFFFF) - (int)(short)(((U64)(uStack_a8) >> 0) & 0xFFFF)) >> 0x10) ^
+      uVar27 = (ushort)((uint)((int)(short)(((U64)(stack_pair_b0.second) >> 0) & 0xFFFF) - (int)(short)(((U64)(stack_pair_b0.first) >> 0) & 0xFFFF)) >> 0x10);
+      uVar26 = (ushort)((uint)((int)(short)(((U64)(stack_pair_b0.second) >> 0) & 0xFFFF) - (int)(short)(((U64)(uStack_a8) >> 0) & 0xFFFF)) >> 0x10) ^
                uVar27;
-      uVar27 = (ushort)((uint)((int)(short)(((U64)(uStack_a8) >> 0) & 0xFFFF) - (int)(short)(((U64)(uStack_b0) >> 0) & 0xFFFF)) >> 0x10) ^
+      uVar27 = (ushort)((uint)((int)(short)(((U64)(uStack_a8) >> 0) & 0xFFFF) - (int)(short)(((U64)(stack_pair_b0.first) >> 0) & 0xFFFF)) >> 0x10) ^
                uVar27;
       uStack_c0 = CONCAT22((((U64)(uStack_a8) >> 0) & 0xFFFF) & ~((short)(uVar26 | uVar27) >> 0xf) |
-                           (short)uVar27 >> 0xf & (((U64)(uStack_b0) >> 0) & 0xFFFF) |
-                           (short)uVar26 >> 0xf & (((U64)(uStack_ac) >> 0) & 0xFFFF),
+                           (short)uVar27 >> 0xf & (((U64)(stack_pair_b0.first) >> 0) & 0xFFFF) |
+                           (short)uVar26 >> 0xf & (((U64)(stack_pair_b0.second) >> 0) & 0xFFFF),
                            (((U64)(uStack_a8) >> 16) & 0xFFFF) & ~((short)(uVar24 | uVar25) >> 0xf) |
-                           (short)uVar25 >> 0xf & (((U64)(uStack_b0) >> 16) & 0xFFFF) |
-                           (short)uVar24 >> 0xf & (((U64)(uStack_ac) >> 16) & 0xFFFF));
+                           (short)uVar25 >> 0xf & (((U64)(stack_pair_b0.first) >> 16) & 0xFFFF) |
+                           (short)uVar24 >> 0xf & (((U64)(stack_pair_b0.second) >> 16) & 0xFFFF));
       goto LAB_830c8350;
     }
     if (uVar39 != 1) goto LAB_830c8350;
   }
-  uStack_c0 = uStack_b0;
+  uStack_c0 = stack_pair_b0.first;
 LAB_830c8350:
   *(ushort *)((int)puVar40 + 6) = ((((U64)(uStack_c0) >> 16) & 0xFFFF) + (short)uVar35 + sVar8 & uVar9) - sVar8;
   uVar34 = 0;
@@ -358,7 +358,7 @@ LAB_830c8350:
     uVar43 = (uVar43 + uVar44) - 1;
     if ((*(uint *)(param_2 + -0x18) & 0x20000) != 0) {
       if ((*(uint *)(param_2 + -0x18) & 0x700) < 0x200) {
-        uStack_b0 = *(uint *)((int)((uVar43 & 0xffffffff) << 2) + iVar16);
+        stack_pair_b0.first = *(uint *)((int)((uVar43 & 0xffffffff) << 2) + iVar16);
       }
       else {
         uVar35 = *(undefined4 *)((int)((uVar43 & 0xffffffff) << 2) + iVar16);
@@ -367,33 +367,33 @@ LAB_830c8350:
         sStack_b6 = (short)uVar19;
         sStack_bc = (short)((uint)uVar35 >> 0x10);
         sStack_b8 = (short)((uint)uVar19 >> 0x10);
-        uStack_b0 = CONCAT22((short)((int)sStack_bc + (int)sStack_b8 + 1 >> 1),
+        stack_pair_b0.first = CONCAT22((short)((int)sStack_bc + (int)sStack_b8 + 1 >> 1),
                              (short)((int)sStack_ba + (int)sStack_b6 + 1 >> 1));
       }
       iVar41 = 1;
     }
   }
   uVar38 = puVar40[1];
-  (&uStack_b0)[iVar41] = *puVar40;
-  (&uStack_ac)[iVar41] = uVar38;
+  (&stack_pair_b0.first)[iVar41] = *puVar40;
+  (&stack_pair_b0.second)[iVar41] = uVar38;
   puVar22 = (ushort *)((uVar14 + uVar7) * 4 + iVar16);
-  uVar25 = (ushort)((uint)((int)(short)(((U64)(uStack_ac) >> 16) & 0xFFFF) - (int)(short)(((U64)(uStack_b0) >> 16) & 0xFFFF)) >> 0x10);
-  uVar24 = (ushort)((uint)((int)(short)(((U64)(uStack_ac) >> 16) & 0xFFFF) - (int)(short)(((U64)(uStack_a8) >> 16) & 0xFFFF)) >> 0x10) ^
+  uVar25 = (ushort)((uint)((int)(short)(((U64)(stack_pair_b0.second) >> 16) & 0xFFFF) - (int)(short)(((U64)(stack_pair_b0.first) >> 16) & 0xFFFF)) >> 0x10);
+  uVar24 = (ushort)((uint)((int)(short)(((U64)(stack_pair_b0.second) >> 16) & 0xFFFF) - (int)(short)(((U64)(uStack_a8) >> 16) & 0xFFFF)) >> 0x10) ^
            uVar25;
-  uVar25 = (ushort)((uint)((int)(short)(((U64)(uStack_a8) >> 16) & 0xFFFF) - (int)(short)(((U64)(uStack_b0) >> 16) & 0xFFFF)) >> 0x10) ^
+  uVar25 = (ushort)((uint)((int)(short)(((U64)(uStack_a8) >> 16) & 0xFFFF) - (int)(short)(((U64)(stack_pair_b0.first) >> 16) & 0xFFFF)) >> 0x10) ^
            uVar25;
-  uVar27 = (ushort)((uint)((int)(short)(((U64)(uStack_ac) >> 0) & 0xFFFF) - (int)(short)(((U64)(uStack_b0) >> 0) & 0xFFFF)) >> 0x10);
-  uVar26 = (ushort)((uint)((int)(short)(((U64)(uStack_ac) >> 0) & 0xFFFF) - (int)(short)(((U64)(uStack_a8) >> 0) & 0xFFFF)) >> 0x10) ^
+  uVar27 = (ushort)((uint)((int)(short)(((U64)(stack_pair_b0.second) >> 0) & 0xFFFF) - (int)(short)(((U64)(stack_pair_b0.first) >> 0) & 0xFFFF)) >> 0x10);
+  uVar26 = (ushort)((uint)((int)(short)(((U64)(stack_pair_b0.second) >> 0) & 0xFFFF) - (int)(short)(((U64)(uStack_a8) >> 0) & 0xFFFF)) >> 0x10) ^
            uVar27;
-  uVar27 = (ushort)((uint)((int)(short)(((U64)(uStack_a8) >> 0) & 0xFFFF) - (int)(short)(((U64)(uStack_b0) >> 0) & 0xFFFF)) >> 0x10) ^
+  uVar27 = (ushort)((uint)((int)(short)(((U64)(uStack_a8) >> 0) & 0xFFFF) - (int)(short)(((U64)(stack_pair_b0.first) >> 0) & 0xFFFF)) >> 0x10) ^
            uVar27;
   puVar22[1] = (((((U64)(uStack_a8) >> 16) & 0xFFFF) & ~((short)(uVar24 | uVar25) >> 0xf) |
-                 (short)uVar25 >> 0xf & (((U64)(uStack_b0) >> 16) & 0xFFFF) | (short)uVar24 >> 0xf & (((U64)(uStack_ac) >> 16) & 0xFFFF)) +
+                 (short)uVar25 >> 0xf & (((U64)(stack_pair_b0.first) >> 16) & 0xFFFF) | (short)uVar24 >> 0xf & (((U64)(stack_pair_b0.second) >> 16) & 0xFFFF)) +
                 (short)uVar34 + sVar8 & uVar9) - sVar8;
   uVar35 = 0;
   *puVar22 = ((short)((uint)uVar34 >> 0x10) +
               ((((U64)(uStack_a8) >> 0) & 0xFFFF) & ~((short)(uVar26 | uVar27) >> 0xf) |
-               (short)uVar27 >> 0xf & (((U64)(uStack_b0) >> 0) & 0xFFFF) | (short)uVar26 >> 0xf & (((U64)(uStack_ac) >> 0) & 0xFFFF)) +
+               (short)uVar27 >> 0xf & (((U64)(stack_pair_b0.first) >> 0) & 0xFFFF) | (short)uVar26 >> 0xf & (((U64)(stack_pair_b0.second) >> 0) & 0xFFFF)) +
               sVar10 & uVar11) - sVar10;
   if ((uVar45 & 1) != 0) {
     uVar35 = fn_830C6D68(param_1,param_1[0x54]);

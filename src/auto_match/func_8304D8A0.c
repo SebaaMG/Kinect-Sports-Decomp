@@ -26,7 +26,7 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_82A1DDC0();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern int fn_8304D840();
 extern int fn_8304E960();
 extern int fn_8304EA78();
@@ -137,7 +137,7 @@ fn_8304D8A0(ulonglong param_1,ulonglong param_2,undefined4 param_3,ulonglong par
                 uVar13 = 4;
               }
               else if ((((U64)(uStack_a0) >> 0) & 0xFFFFFFFF) == 0x584d4163) {
-                fn_82F68CC0(in_stack_0000005c + 1,lVar14,0xc);
+                memcpy(in_stack_0000005c + 1,lVar14,0xc);
               }
             }
             else if ((((U64)(uStack_a0) >> 0) & 0xFFFFFFFF) == 0x64617461) {
@@ -179,7 +179,7 @@ fn_8304D8A0(ulonglong param_1,ulonglong param_2,undefined4 param_3,ulonglong par
             }
           }
           else if (((((U64)(uStack_a0) >> 0) & 0xFFFFFFFF) == 0x766f7262) && (!bVar1)) {
-            fn_82F68CC0(in_stack_0000005c,lVar14,0x34);
+            memcpy(in_stack_0000005c,lVar14,0x34);
             bVar1 = true;
           }
           uVar9 = uVar13 + lVar14;

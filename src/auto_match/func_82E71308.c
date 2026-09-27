@@ -43,7 +43,7 @@ longlong fn_82E71308(int *param_1,ulonglong param_2,undefined8 param_3,longlong 
   undefined4 uStack_64;
   ulonglong uStack_60;
   longlong lStack_58;
-  longlong alStack_50 [10];
+  longlong alStack_50;
   
   if (param_4 == (longlong *)0x0) {
     lVar1 = -0x7fffbffd;
@@ -62,9 +62,9 @@ longlong fn_82E71308(int *param_1,ulonglong param_2,undefined8 param_3,longlong 
          (lVar1 = (**(code **)(*(int *)param_1[0x16] + 0x48))
                             ((int *)param_1[0x16],uStack_6c * param_2,&piStack_70,&uStack_64),
          -1 < lVar1)) {
-        alStack_50[0] = 0;
+        alStack_50 = 0;
         lVar1 = (**(code **)(*(int *)param_1[0x16] + 0x4c))
-                          ((int *)param_1[0x16],piStack_70,alStack_50);
+                          ((int *)param_1[0x16],piStack_70,&alStack_50);
         if (-1 < lVar1) {
           uStack_68 = 0;
           lVar1 = (**(code **)(*(int *)param_1[0x16] + 0x44))((int *)param_1[0x16],&uStack_68);
@@ -80,7 +80,7 @@ longlong fn_82E71308(int *param_1,ulonglong param_2,undefined8 param_3,longlong 
                                    *(undefined2 *)(param_1 + 2),param_3,&lStack_58);
                 if (-1 < lVar1) {
                   *param_4 = *(longlong *)(param_1 + 0xc) + (ulonglong)uStack_68 + lStack_58 +
-                             alStack_50[0];
+                             alStack_50;
                   lVar1 = fn_82E6FC88(param_1);
                   if (-1 < lVar1) {
                     if (param_5 != (undefined4 *)0x0) {

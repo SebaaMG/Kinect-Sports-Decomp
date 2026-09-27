@@ -25,10 +25,10 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F63BA0();
-extern int fn_82F63CA0();
-extern int fn_82F68240();
-extern int fn_82F691F0();
+extern int _invalid_parameter_noinfo();
+extern int memmove();
+extern int _errno();
+extern int memset();
 extern unsigned int lbl_831BBCA8;
 
 
@@ -46,9 +46,9 @@ undefined8 fn_82F7FC58(char *param_1,int param_2,int param_3,int *param_4,char p
   
   iVar2 = param_4[1];
   if ((param_1 == (char *)0x0) || (param_2 == 0)) {
-    puVar5 = (undefined4 *)fn_82F68240();
+    puVar5 = (undefined4 *)_errno();
     *puVar5 = 0x16;
-    fn_82F63BA0();
+    _invalid_parameter_noinfo();
     uVar4 = 0x16;
   }
   else {
@@ -69,7 +69,7 @@ undefined8 fn_82F7FC58(char *param_1,int param_2,int param_3,int *param_4,char p
         pcVar6 = pcVar6 + 1;
       } while (cVar1 != '\0');
       pcVar8 = pcVar7 + 1;
-      fn_82F63CA0(pcVar8,pcVar7,(int)pcVar6 - (int)pcVar7);
+      memmove(pcVar8,pcVar7,(int)pcVar6 - (int)pcVar7);
       *pcVar7 = '0';
     }
     else {
@@ -82,7 +82,7 @@ undefined8 fn_82F7FC58(char *param_1,int param_2,int param_3,int *param_4,char p
         pcVar7 = pcVar7 + 1;
       } while (cVar1 != '\0');
       pcVar6 = pcVar8 + 1;
-      fn_82F63CA0(pcVar6,pcVar8,(int)pcVar7 - (int)pcVar8);
+      memmove(pcVar6,pcVar8,(int)pcVar7 - (int)pcVar8);
       *pcVar8 = *(char *)**(undefined4 **)(lbl_831BBCA8 + 0xbc);
       iVar2 = param_4[1];
       if (iVar2 < 0) {
@@ -100,10 +100,10 @@ undefined8 fn_82F7FC58(char *param_1,int param_2,int param_3,int *param_4,char p
             cVar1 = *pcVar7;
             pcVar7 = pcVar7 + 1;
           } while (cVar1 != '\0');
-          fn_82F63CA0(pcVar6 + param_3,pcVar6,(int)pcVar7 - (int)pcVar6);
+          memmove(pcVar6 + param_3,pcVar6,(int)pcVar7 - (int)pcVar6);
         }
                     /* WARNING: Subroutine does not return */
-        fn_82F691F0(pcVar6,0x30,param_3);
+        memset(pcVar6,0x30,param_3);
       }
     }
     uVar4 = 0;

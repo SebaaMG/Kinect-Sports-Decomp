@@ -43,7 +43,7 @@ int fn_82FB4740(int param_1,undefined4 *param_2,int *param_3,int *param_4,uint *
   int iVar7;
   undefined4 uVar8;
   ulonglong uVar9;
-  char acStack_40 [64];
+  char acStack_40;
   
   uVar1 = *param_5;
   *param_5 = uVar1 + 1;
@@ -79,8 +79,8 @@ int fn_82FB4740(int param_1,undefined4 *param_2,int *param_3,int *param_4,uint *
       uVar5 = *(undefined4 *)(*(int *)(iVar7 + 0x60) + 0xc);
     }
     iVar2 = fn_82FB64A8(*(undefined4 *)(param_1 + 0x44),*(undefined4 *)(param_1 + 0x44),uVar8,
-                              uVar9,uVar5,uVar6,acStack_40);
-    if (acStack_40[0] != '\0') {
+                              uVar9,uVar5,uVar6,&acStack_40);
+    if (acStack_40 != '\0') {
       iVar7 = *(int *)(iVar7 + 0xc);
       *(int *)(iVar7 + 0x2c) = *(int *)(iVar7 + 0x2c) + 1;
       iVar4 = fn_82FB75A8(iVar7,*(undefined4 *)(iVar2 + 0x28));

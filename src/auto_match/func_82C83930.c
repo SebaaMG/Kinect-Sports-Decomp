@@ -49,7 +49,7 @@ void fn_82C83930(longlong param_1,undefined8 param_2,undefined8 param_3,ulonglon
   longlong lVar6;
   uint auStack_a0 [4];
   undefined1 auStack_90 [4];
-  undefined1 auStack_8c [12];
+  undefined1 auStack_8c [1];
   undefined4 auStack_80 [4];
   undefined4 uStack_70;
   undefined4 auStack_6c [27];

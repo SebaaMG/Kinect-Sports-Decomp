@@ -49,7 +49,7 @@ fn_82C94500(int param_1,uint *param_2,longlong param_3,undefined8 param_4,ulongl
   undefined4 in_stack_00000054;
   int iStack_70;
   int iStack_6c;
-  int aiStack_68 [26];
+  int aiStack_68;
   
   uVar1 = *(uint *)(param_1 + 0x88);
   uVar3 = (uint)param_6;
@@ -90,13 +90,13 @@ fn_82C94500(int param_1,uint *param_2,longlong param_3,undefined8 param_4,ulongl
               == 0x4000)))) {
         iStack_70 = (int)*(short *)((*(int *)(param_1 + 0x784) + -0x10) * 2 + (int)uVar9);
       }
-      aiStack_68[0] = (int)*(short *)(*(int *)(param_1 + 0x784) * 2 + (int)uVar9);
+      aiStack_68 = (int)*(short *)(*(int *)(param_1 + 0x784) * 2 + (int)uVar9);
       iStack_6c = (int)*(short *)(*(int *)(param_1 + 0x780) * 2 + (int)uVar6);
-      fn_82C942F0(param_1,param_4,param_2,aiStack_68,&iStack_6c,&iStack_70);
+      fn_82C942F0(param_1,param_4,param_2,&aiStack_68,&iStack_6c,&iStack_70);
       uVar1 = iStack_70 - iStack_6c >> 0x1f;
-      uVar3 = iStack_70 - aiStack_68[0] >> 0x1f;
+      uVar3 = iStack_70 - aiStack_68 >> 0x1f;
       if ((int)((iStack_70 - iStack_6c ^ uVar1) - uVar1) <
-          (int)((iStack_70 - aiStack_68[0] ^ uVar3) - uVar3)) {
+          (int)((iStack_70 - aiStack_68 ^ uVar3) - uVar3)) {
         iVar8 = *(int *)(param_1 + 0x78c);
         uVar6 = uVar9;
       }

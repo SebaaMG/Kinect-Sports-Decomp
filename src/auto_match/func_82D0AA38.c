@@ -100,8 +100,8 @@ void fn_82D0AA38(undefined8 param_1,int param_2,int param_3,int param_4)
   int iStack_164;
   undefined1 auStack_160 [16];
   int aiStack_150 [8];
-  float fStack_130;
-  float fStack_12c;
+  struct { float first; float second; } stack_pair_130;
+
   float fStack_128;
   float fStack_120;
   float fStack_11c;
@@ -114,7 +114,7 @@ void fn_82D0AA38(undefined8 param_1,int param_2,int param_3,int param_4)
   undefined1 auStack_c0 [16];
   undefined1 auStack_b0 [16];
   undefined1 auStack_a0 [16];
-  undefined1 auStack_90 [144];
+  undefined1 auStack_90 [1];
   
   aiStack_150[0] = 0;
   aiStack_150[1] = 0;
@@ -217,15 +217,15 @@ void fn_82D0AA38(undefined8 param_1,int param_2,int param_3,int param_4)
     puVar1[1] = uVar20;
     puVar1[2] = uVar21;
     puVar1[3] = uVar22;
-    fn_82D08318(iStack_170,uStack_16c,0x10,&fStack_130,auStack_c0,auStack_100);
-    dVar15 = (double)(fStack_128 * fStack_12c * fStack_130);
+    fn_82D08318(iStack_170,uStack_16c,0x10,&stack_pair_130.first,auStack_c0,auStack_100);
+    dVar15 = (double)(fStack_128 * stack_pair_130.second * stack_pair_130.first);
     fn_82D09998(iVar4,uVar13,0x10,auStack_90,auStack_110,0);
     fn_82D09248(auStack_160,auStack_90,auStack_f0,auStack_e0,auStack_d0);
     fn_82D08318(iVar4,uVar13,0x10,&fStack_120,auStack_f0,auStack_110);
     dVar14 = (double)(fStack_118 * fStack_11c * fStack_120);
     if (param_4 == 2) {
       dVar15 = (double)fn_82D08C48(iVar4,uVar13,0x10,auStack_c0,auStack_c0,0x14);
-      fn_82D08318(iVar4,uVar13,0x10,&fStack_130,auStack_c0,auStack_100);
+      fn_82D08318(iVar4,uVar13,0x10,&stack_pair_130.first,auStack_c0,auStack_100);
       fn_82D08C48(iVar4,uVar13,0x10,auStack_f0,auStack_f0,0x14);
       dVar14 = (double)fn_82D08318(iVar4,uVar13,0x10,&fStack_120,auStack_f0,auStack_110);
     }
@@ -235,7 +235,7 @@ void fn_82D0AA38(undefined8 param_1,int param_2,int param_3,int param_4)
       puVar11 = auStack_f0;
     }
     else {
-      pfVar8 = &fStack_130;
+      pfVar8 = &stack_pair_130.first;
       puVar6 = auStack_100;
       puVar11 = auStack_c0;
     }

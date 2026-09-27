@@ -79,8 +79,8 @@ void fn_82D36438(int param_1,undefined8 param_2,undefined4 *param_3,ulonglong pa
   int iStack_b8;
   int iStack_b4;
   uint uStack_b0;
-  float fStack_a0;
-  float fStack_9c;
+  struct { float first; float second; } stack_pair_a0;
+
   float fStack_98;
   float fStack_90;
   float fStack_8c;
@@ -129,18 +129,18 @@ void fn_82D36438(int param_1,undefined8 param_2,undefined4 *param_3,ulonglong pa
         puVar1[1] = in_register_00010014;
         puVar1[2] = in_register_00010018;
         puVar1[3] = in_vr1;
-        puVar1 = (undefined4 *)((int)&fStack_a0 + in_r0 & 0xfffffff0);
+        puVar1 = (undefined4 *)((int)&stack_pair_a0.first + in_r0 & 0xfffffff0);
         *puVar1 = in_register_00010020;
         puVar1[1] = in_register_00010024;
         puVar1[2] = in_register_00010028;
         puVar1[3] = in_vr2;
-        *(short *)(iVar2 + iStack_b8) = (short)((uint)(int)fStack_a0 >> 0xf);
+        *(short *)(iVar2 + iStack_b8) = (short)((uint)(int)stack_pair_a0.first >> 0xf);
         *(short *)(iVar4 + 8) = (short)((uint)(int)fStack_8c >> 0xf);
         *(short *)(iVar4 + 6) = (short)((uint)(int)fStack_90 >> 0xf);
         *(short *)(iVar4 + 10) = (short)((uint)(int)fStack_88 >> 0xf);
         iVar2 = iVar2 + 0xc;
         *(short *)(iVar4 + 4) = (short)((uint)(int)fStack_98 >> 0xf);
-        *(short *)(iVar4 + 2) = (short)((uint)(int)fStack_9c >> 0xf);
+        *(short *)(iVar4 + 2) = (short)((uint)(int)stack_pair_a0.second >> 0xf);
         uVar7 = uVar7 - 1;
       } while (uVar7 != 0);
     }

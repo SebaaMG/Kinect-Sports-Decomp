@@ -61,7 +61,7 @@ undefined4 * fn_82D4D370(undefined4 *param_1,undefined8 param_2,int *param_3,int
   undefined4 in_vr10;
   undefined1 auStack_2a0 [16];
   undefined1 auStack_290 [48];
-  undefined1 auStack_260 [608];
+  undefined1 auStack_260 [400];
   
   iVar5 = 1;
   *(undefined2 *)((int)param_1 + 6) = 1;

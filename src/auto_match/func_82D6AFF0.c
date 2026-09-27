@@ -36,7 +36,7 @@ void fn_82D6AFF0(int *param_1,int *param_2,int *param_3,undefined8 param_4,undef
   int aiStack_90 [2];
   undefined1 *puStack_88;
   int *piStack_84;
-  undefined1 auStack_80 [128];
+  undefined1 auStack_80 [80];
   
   iVar1 = *param_1;
   fn_82CE6768(auStack_80,param_1[2],iVar1 + 0x30);

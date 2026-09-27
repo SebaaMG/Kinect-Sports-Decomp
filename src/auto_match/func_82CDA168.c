@@ -60,7 +60,7 @@ void fn_82CDA168(undefined8 param_1,longlong param_2,ulonglong param_3,int param
   longlong lVar23;
   int in_stack_00000054;
   uint in_stack_0000005c;
-  short asStack_4c0 [608];
+  short asStack_4c0 [520];
   
   param_6 = param_6 & 3;
   param_7 = param_7 & 3;

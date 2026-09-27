@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 
 
-void fn_82F6E8D0(int param_1)
+void _RtlCheckStack(int param_1)
 
 {
   longlong lVar1;

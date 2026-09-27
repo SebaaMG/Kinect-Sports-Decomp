@@ -34,7 +34,7 @@ undefined8 fn_830537F0(int param_1)
 
 {
   int iVar1;
-  undefined1 auStack_10 [16];
+  undefined1 auStack_10;
   
   if (*(int *)(param_1 + 0xb8) == 0) {
     return 0;
@@ -60,9 +60,9 @@ undefined8 fn_830537F0(int param_1)
       *(int *)(iVar1 + 0xc) = *(int *)(param_1 + 0xbc);
       *(int *)(param_1 + 0xbc) = iVar1;
     }
-    auStack_10[0] = 0;
+    auStack_10 = 0;
     fn_83053048(iVar1,param_1 + 0x18,*(undefined4 *)(*(int *)(param_1 + 0x60) + 0x80),1,
-                      auStack_10);
+                      &auStack_10);
     return 1;
   }
   fn_830541F8(param_1,iVar1);

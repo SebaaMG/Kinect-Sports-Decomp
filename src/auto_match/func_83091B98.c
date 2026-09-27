@@ -65,7 +65,7 @@ void fn_83091B98(int param_1,int param_2,int *param_3,char param_4)
   undefined1 *puStack_290;
   uint uStack_28c;
   uint uStack_288;
-  undefined1 auStack_284 [644];
+  undefined1 auStack_284 [500];
   
   iVar8 = *(int *)(param_1 + 0xb0);
   puVar2 = *(ushort **)(param_1 + 0xac);

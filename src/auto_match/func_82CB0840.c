@@ -26,7 +26,7 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_82C4E5E8();
-extern int fn_82F691F0();
+extern int memset();
 extern unsigned int uStack00000034;
 
 
@@ -120,11 +120,11 @@ LAB_82cb09e8:
     }
     if (uVar9 == 1) {
                     /* WARNING: Subroutine does not return */
-      fn_82F691F0(*(undefined4 *)(param_1 + 0x6e8),0,0x100);
+      memset(*(undefined4 *)(param_1 + 0x6e8),0,0x100);
     }
     if (uVar9 == 2) {
                     /* WARNING: Subroutine does not return */
-      fn_82F691F0(*(undefined4 *)(param_1 + 0x6e8),0,0x100);
+      memset(*(undefined4 *)(param_1 + 0x6e8),0,0x100);
     }
     (**(code **)(param_1 + 0xc2c))
               (param_1,param_3,uVar12,lVar13,*(undefined4 *)(param_1 + 0xcc),uVar2,uVar3,
@@ -175,11 +175,11 @@ LAB_82cb0d54:
     }
     if (uVar9 == 1) {
                     /* WARNING: Subroutine does not return */
-      fn_82F691F0(*(undefined4 *)(param_1 + 0x6e8),0,0x100);
+      memset(*(undefined4 *)(param_1 + 0x6e8),0,0x100);
     }
     if (uVar9 == 2) {
                     /* WARNING: Subroutine does not return */
-      fn_82F691F0(*(undefined4 *)(param_1 + 0x6e8),0,0x100);
+      memset(*(undefined4 *)(param_1 + 0x6e8),0,0x100);
     }
     (**(code **)(param_1 + 0xc2c))
               (param_1,param_3,uVar12,lVar13,*(undefined4 *)(param_1 + 0xcc),uVar2,uVar3,
@@ -230,11 +230,11 @@ LAB_82cb10c8:
     }
     if (uVar9 == 1) {
                     /* WARNING: Subroutine does not return */
-      fn_82F691F0(*(undefined4 *)(param_1 + 0x6e8),0,0x100);
+      memset(*(undefined4 *)(param_1 + 0x6e8),0,0x100);
     }
     if (uVar9 == 2) {
                     /* WARNING: Subroutine does not return */
-      fn_82F691F0(*(undefined4 *)(param_1 + 0x6e8),0,0x100);
+      memset(*(undefined4 *)(param_1 + 0x6e8),0,0x100);
     }
     (**(code **)(param_1 + 0xc2c))
               (param_1,param_3,uVar12,lVar13,*(undefined4 *)(param_1 + 0xcc),uVar2,uVar3,
@@ -283,11 +283,11 @@ LAB_82cb1438:
     }
     if (uVar9 == 1) {
                     /* WARNING: Subroutine does not return */
-      fn_82F691F0(*(undefined4 *)(param_1 + 0x6e8),0,0x100);
+      memset(*(undefined4 *)(param_1 + 0x6e8),0,0x100);
     }
     if (uVar9 == 2) {
                     /* WARNING: Subroutine does not return */
-      fn_82F691F0(*(undefined4 *)(param_1 + 0x6e8),0,0x100);
+      memset(*(undefined4 *)(param_1 + 0x6e8),0,0x100);
     }
     (**(code **)(param_1 + 0xc2c))
               (param_1,param_3 + 8,uVar12,lVar13 + 8,*(undefined4 *)(param_1 + 0xcc),uVar2,uVar3,
@@ -336,11 +336,11 @@ LAB_82cb17a0:
     }
     if (uVar9 == 1) {
                     /* WARNING: Subroutine does not return */
-      fn_82F691F0(*(undefined4 *)(param_1 + 0x6e8),0,0x100);
+      memset(*(undefined4 *)(param_1 + 0x6e8),0,0x100);
     }
     if (uVar9 == 2) {
                     /* WARNING: Subroutine does not return */
-      fn_82F691F0(*(undefined4 *)(param_1 + 0x6e8),0,0x100);
+      memset(*(undefined4 *)(param_1 + 0x6e8),0,0x100);
     }
     (**(code **)(param_1 + 0xc48))
               (param_1,param_4,uVar12,lVar8,*(undefined4 *)(param_1 + 0xd0),uVar4,uVar5,
@@ -387,7 +387,7 @@ LAB_82cb17a0:
 LAB_82cb1b50:
   if (uVar9 == 1) {
                     /* WARNING: Subroutine does not return */
-    fn_82F691F0(*(undefined4 *)(param_1 + 0x6e8),0,0x100);
+    memset(*(undefined4 *)(param_1 + 0x6e8),0,0x100);
   }
   if (uVar9 != 2) {
     (**(code **)(param_1 + 0xc48))
@@ -396,6 +396,6 @@ LAB_82cb1b50:
     return 0;
   }
                     /* WARNING: Subroutine does not return */
-  fn_82F691F0(*(undefined4 *)(param_1 + 0x6e8),0,0x100);
+  memset(*(undefined4 *)(param_1 + 0x6e8),0,0x100);
 }
 

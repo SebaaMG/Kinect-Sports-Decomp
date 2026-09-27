@@ -45,7 +45,7 @@ undefined4 * fn_82D449E0(undefined4 *param_1,int *param_2)
   undefined4 *puVar5;
   int iVar6;
   int *piVar7;
-  int aiStack_40 [16];
+  int aiStack_40 [4];
   
   fn_82D41870();
   *param_1 = &lbl_82134F20;

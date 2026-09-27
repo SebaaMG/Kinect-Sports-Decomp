@@ -34,8 +34,7 @@ extern unsigned int uStack00000044;
 extern unsigned int uStack0000004c;
 
 
-void fn_82CA1EF8(int param_1,longlong param_2,longlong param_3,longlong param_4,undefined8 param_5
-                  ,ulonglong param_6,ulonglong param_7,ulonglong param_8)
+void fn_82CA1EF8(int param_1, longlong param_2, longlong param_3, longlong param_4, undefined8 param_5, ulonglong param_6, ulonglong param_7, ulonglong param_8, undefined4 in_stack_00000054, undefined4 in_stack_0000005c, undefined4 in_stack_00000064, undefined4 in_stack_0000006c, undefined4 in_stack_00000074, undefined4 in_stack_0000007c, undefined4 in_stack_00000084, undefined4 in_stack_0000008c, uint in_stack_00000094, uint in_stack_0000009c, uint in_stack_000000a4)
 
 {
   uint uVar1;
@@ -55,17 +54,17 @@ void fn_82CA1EF8(int param_1,longlong param_2,longlong param_3,longlong param_4,
   uint uStack0000003c;
   uint uStack00000044;
   uint uStack0000004c;
-  undefined4 in_stack_00000054;
-  undefined4 in_stack_0000005c;
-  undefined4 in_stack_00000064;
-  undefined4 in_stack_0000006c;
-  undefined4 in_stack_00000074;
-  undefined4 in_stack_0000007c;
-  undefined4 in_stack_00000084;
-  undefined4 in_stack_0000008c;
-  uint in_stack_00000094;
-  uint in_stack_0000009c;
-  uint in_stack_000000a4;
+
+
+
+
+
+
+
+
+
+
+
   
   uStack0000003c = (uint)param_6;
   uStack00000044 = (uint)param_7;

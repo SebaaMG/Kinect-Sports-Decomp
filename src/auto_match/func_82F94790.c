@@ -67,7 +67,7 @@ undefined4 fn_82F94790(undefined4 param_1,int param_2,undefined4 param_3)
   char cStack_70;
   undefined4 uStack_6c;
   undefined4 uStack_68;
-  undefined1 auStack_60 [24];
+  undefined1 auStack_60 [1];
   undefined1 auStack_48 [8];
   undefined1 auStack_40 [8];
   undefined1 auStack_38 [8];

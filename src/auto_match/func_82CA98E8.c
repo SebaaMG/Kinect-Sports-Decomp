@@ -27,8 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 
 
-void fn_82CA98E8(int param_1,int param_2,int param_3,int param_4,ulonglong param_5,int param_6,
-                  longlong param_7,int param_8)
+void fn_82CA98E8(int param_1, int param_2, int param_3, int param_4, ulonglong param_5, int param_6, longlong param_7, int param_8, int in_stack_00000054, int in_stack_0000005c, int in_stack_00000064)
 
 {
   byte *pbVar1;
@@ -43,9 +42,9 @@ void fn_82CA98E8(int param_1,int param_2,int param_3,int param_4,ulonglong param
   int iVar10;
   longlong lVar11;
   ulonglong uVar12;
-  int in_stack_00000054;
-  int in_stack_0000005c;
-  int in_stack_00000064;
+
+
+
   
   iVar7 = (int)param_7;
   iVar10 = 0;

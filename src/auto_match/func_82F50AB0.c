@@ -55,7 +55,7 @@ void fn_82F50AB0(int param_1)
   undefined4 uVar7;
   undefined4 uVar8;
   undefined4 uVar9;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [1];
   
   fn_824B4288(param_1 + 0x20,0x1c0);
   fn_824B4288(param_1 + 0x1e0,0xab0);

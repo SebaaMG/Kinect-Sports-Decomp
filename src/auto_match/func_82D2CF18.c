@@ -51,7 +51,7 @@ undefined4 * fn_82D2CF18(undefined4 *param_1)
   undefined4 in_register_000100d8;
   undefined4 in_vr13;
   undefined1 auStack_220 [16];
-  undefined1 auStack_210 [512];
+  undefined1 auStack_210 [464];
   
   fn_82CEE578(auStack_220,auStack_210,0x200);
   fn_82CEDB38(auStack_220,0xffffffff82134a80);

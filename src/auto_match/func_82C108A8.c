@@ -41,19 +41,19 @@ fn_82C108A8(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefined8 
   undefined4 uStack_70;
   undefined4 uStack_6c;
   undefined4 uStack_68;
-  undefined4 uStack_60;
-  undefined4 uStack_5c;
+  struct { undefined4 first; undefined4 second; } stack_pair_60;
+
   
   uStack_70 = 0;
-  uStack_60 = 0;
-  uStack_5c = 0;
-  uStack_6c = fn_82C10710(param_1,param_2,param_7,param_3,param_4,&uStack_70,&uStack_60,1);
+  stack_pair_60.first = 0;
+  stack_pair_60.second = 0;
+  uStack_6c = fn_82C10710(param_1,param_2,param_7,param_3,param_4,&uStack_70,&stack_pair_60.first,1);
   if (param_6 != 0) {
     uStack_70 = 1;
-    uStack_60 = 0;
-    uStack_5c = 0;
+    stack_pair_60.first = 0;
+    stack_pair_60.second = 0;
     uStack_68 = param_5;
-    fn_82C10710(param_1,param_7,param_2,param_3,param_4,&uStack_70,&uStack_60,1);
+    fn_82C10710(param_1,param_7,param_2,param_3,param_4,&uStack_70,&stack_pair_60.first,1);
   }
   return 0;
 }

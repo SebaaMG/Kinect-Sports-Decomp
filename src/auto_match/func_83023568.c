@@ -33,17 +33,17 @@ byte fn_83023568(int param_1)
 
 {
   undefined1 uVar1;
-  int iStack_20;
-  uint uStack_1c;
+  struct { int first; uint second; } stack_pair_20;
+
   
-  (**(code **)(**(int **)(param_1 + 0x34) + 100))(*(int **)(param_1 + 0x34),&iStack_20);
-  if ((*(char *)(param_1 + 0x4c) == '\0') && ((iStack_20 != 0 || (uStack_1c != 0)))) {
+  (**(code **)(**(int **)(param_1 + 0x34) + 100))(*(int **)(param_1 + 0x34),&stack_pair_20.first);
+  if ((*(char *)(param_1 + 0x4c) == '\0') && ((stack_pair_20.first != 0 || (stack_pair_20.second != 0)))) {
     uVar1 = 0;
   }
   else {
     uVar1 = 1;
   }
   *(undefined1 *)(param_1 + 0x4c) = uVar1;
-  return -(uStack_1c < 2) & 1;
+  return -(stack_pair_20.second < 2) & 1;
 }
 

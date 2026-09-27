@@ -69,7 +69,7 @@ int fn_83001810(undefined8 param_1,int param_2)
   bool bVar12;
   double dVar13;
   undefined2 auStack_70 [4];
-  longlong alStack_68 [13];
+  longlong alStack_68;
   
   puVar10 = (uint *)(param_2 + 0x28);
   iVar7 = 2;
@@ -92,7 +92,7 @@ int fn_83001810(undefined8 param_1,int param_2)
       iVar5 = *(int *)(iVar6 + 8);
       puVar11 = (undefined4 *)(iVar5 + -0x14);
       if (*(int *)(iVar5 + -8) == 0) {
-        piVar4 = (int *)fn_8302DD08(*puVar11,*(undefined4 *)(param_2 + 8),auStack_70,alStack_68,
+        piVar4 = (int *)fn_8302DD08(*puVar11,*(undefined4 *)(param_2 + 8),auStack_70,&alStack_68,
                                       iVar5 + -0x10,iVar5 + -0xc);
         uVar9 = *puVar10;
         if (piVar4 != (int *)0x0) {
@@ -125,7 +125,7 @@ int fn_83001810(undefined8 param_1,int param_2)
                 fn_830337B0(piVar4,*(undefined4 *)(*(int *)(param_2 + 0x78) + 8));
                 if (iVar5 == 3) {
                   iVar7 = (int)(dVar13 * (double)lbl_8201FBB8);
-                  alStack_68[0] = (longlong)iVar7;
+                  alStack_68 = (longlong)iVar7;
                 }
                 else {
                   iVar7 = 0x2800;

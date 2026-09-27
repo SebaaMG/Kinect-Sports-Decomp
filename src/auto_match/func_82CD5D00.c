@@ -27,8 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 
 
-void fn_82CD5D00(int param_1,int param_2,int param_3,int param_4,int param_5,int param_6,
-                  uint param_7,uint param_8)
+void fn_82CD5D00(int param_1, int param_2, int param_3, int param_4, int param_5, int param_6, uint param_7, uint param_8, uint in_stack_00000054)
 
 {
   int iVar1;
@@ -41,7 +40,7 @@ void fn_82CD5D00(int param_1,int param_2,int param_3,int param_4,int param_5,int
   int iVar8;
   int iVar9;
   uint *puVar10;
-  uint in_stack_00000054;
+
   
   iVar7 = param_6 * 0x10000 + ((int)param_8 >> 4) + (uint)((int)param_8 < 0 && (param_8 & 0xf) != 0)
           + -0x8000;

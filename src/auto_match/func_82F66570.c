@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 
 
-byte * fn_82F66570(byte *param_1,uint param_2)
+byte * strchr(byte *param_1,uint param_2)
 
 {
   uint uVar1;

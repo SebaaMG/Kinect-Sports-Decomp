@@ -29,7 +29,7 @@ extern int fn_82A2B528();
 extern int fn_82F70678();
 
 
-void fn_82F706F0(void)
+void _FF_MSGBANNER(void)
 
 {
   int iVar1;

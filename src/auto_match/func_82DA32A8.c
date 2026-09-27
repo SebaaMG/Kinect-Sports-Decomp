@@ -45,27 +45,27 @@ int fn_82DA32A8(int *param_1)
   undefined4 *puVar1;
   undefined8 uVar2;
   int iVar3;
-  float fStack_30;
-  float fStack_2c;
+  struct { float first; float second; } stack_pair_30;
+
   float fStack_28;
   float fStack_24;
   
   fn_82D88440(param_1[3],0,1);
   if (param_1[10] == 3) {
-    fStack_30 = (float)param_1[5];
-    fStack_2c = (float)param_1[6];
-    fStack_28 = fStack_2c - fStack_30;
+    stack_pair_30.first = (float)param_1[5];
+    stack_pair_30.second = (float)param_1[6];
+    fStack_28 = stack_pair_30.second - stack_pair_30.first;
   }
   else {
-    fStack_30 = (float)param_1[6];
-    fStack_2c = (float)param_1[7] + fStack_30;
-    fStack_28 = fStack_2c - fStack_30;
+    stack_pair_30.first = (float)param_1[6];
+    stack_pair_30.second = (float)param_1[7] + stack_pair_30.first;
+    fStack_28 = stack_pair_30.second - stack_pair_30.first;
   }
   fStack_24 = lbl_821AAD20;
   if (fStack_28 != lbl_821AAD20) {
     fStack_24 = lbl_82002AE0 / fStack_28;
   }
-  (**(code **)(*param_1 + 0x34))(param_1,&fStack_30);
+  (**(code **)(*param_1 + 0x34))(param_1,&stack_pair_30.first);
   if (lbl_8323B520 == 1) {
     iVar3 = KeTlsGetValue(lbl_8323B4A0);
     puVar1 = *(undefined4 **)(iVar3 + 4);
@@ -89,7 +89,7 @@ int fn_82DA32A8(int *param_1)
           puVar1[1] = (int)uVar2;
           *(undefined4 **)(iVar3 + 4) = puVar1 + 3;
         }
-        fn_82DAEB78(param_1[3],&fStack_30);
+        fn_82DAEB78(param_1[3],&stack_pair_30.first);
         iVar3 = KeTlsGetValue(lbl_8323B4A0);
         puVar1 = *(undefined4 **)(iVar3 + 4);
         if (puVar1 < *(undefined4 **)(iVar3 + 0xc)) {

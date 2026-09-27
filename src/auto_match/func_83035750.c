@@ -41,19 +41,19 @@ fn_83035750(double param_1,undefined8 param_2,undefined8 param_3,undefined4 para
 
 {
   double dVar1;
-  undefined4 uStack_40;
-  undefined4 uStack_3c;
+  struct { undefined4 first; undefined4 second; } stack_pair_40;
+
   undefined1 uStack_38;
   undefined4 uStack_34;
   float fStack_30;
   
-  uStack_3c = (undefined4)param_7;
+  stack_pair_40.second = (undefined4)param_7;
   uStack_38 = 0;
-  uStack_40 = param_4;
+  stack_pair_40.first = param_4;
   dVar1 = (double)fn_830176A0(lbl_832642FC,param_3,param_7);
   fStack_30 = (float)(param_1 - dVar1);
   uStack_34 = param_8;
-  fn_83035078(param_2,&uStack_40);
+  fn_83035078(param_2,&stack_pair_40.first);
   return 1;
 }
 

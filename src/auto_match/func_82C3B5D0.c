@@ -36,7 +36,7 @@ void fn_82C3B5D0(uint *param_1,int param_2,undefined8 param_3,undefined8 param_4
 {
   uint uVar1;
   int iVar2;
-  uint auStack_50 [20];
+  uint auStack_50 [8];
   
   while( true ) {
     do {

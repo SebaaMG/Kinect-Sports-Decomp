@@ -27,8 +27,8 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_82F641F8();
 extern int fn_82F68BF0();
-extern int fn_82F68CC0();
-extern int fn_82F691F0();
+extern int memcpy();
+extern int memset();
 
 
 void fn_82ED24C0(int param_1,byte *param_2)
@@ -78,14 +78,14 @@ void fn_82ED24C0(int param_1,byte *param_2)
         param_2 = param_2 + *(int *)(param_1 + 0x4020);
       } while (uVar9 != 0);
     }
-    fn_82F68CC0(puVar10,param_2,iVar8);
-    fn_82F68CC0(puVar10 + iVar8,param_2 + iVar8,iVar8);
+    memcpy(puVar10,param_2,iVar8);
+    memcpy(puVar10 + iVar8,param_2 + iVar8,iVar8);
     uVar2 = *(int *)(param_1 + 0x4024) + 1U >> 1;
     uVar6 = *(int *)(param_1 + 0x4020) + 1U >> 1;
     iVar8 = fn_82F68BF0(((longlong)(int)uVar6 * (longlong)(int)uVar2 & 0x3fffffffU) << 2);
     if (iVar8 != 0) {
                     /* WARNING: Subroutine does not return */
-      fn_82F691F0(*(undefined4 *)(param_1 + 0xc),0,((int)uVar2 >> 3) * ((int)uVar6 >> 3) * 4);
+      memset(*(undefined4 *)(param_1 + 0xc),0,((int)uVar2 >> 3) * ((int)uVar6 >> 3) * 4);
     }
     fn_82F641F8(puVar7);
   }

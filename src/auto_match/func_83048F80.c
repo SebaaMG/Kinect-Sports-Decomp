@@ -35,11 +35,11 @@ fn_83048F80(undefined8 param_1,undefined8 param_2,uint *param_3,int *param_4,uin
   int iVar2;
   undefined8 uVar1;
   uint uVar3;
-  int aiStack_30 [12];
+  int aiStack_30;
   
-  iVar2 = fn_83048E78(param_1,param_2,0,*param_3 >> 9,aiStack_30);
+  iVar2 = fn_83048E78(param_1,param_2,0,*param_3 >> 9,&aiStack_30);
   *param_4 = iVar2;
-  uVar3 = *param_3 + aiStack_30[0] * -0x200;
+  uVar3 = *param_3 + aiStack_30 * -0x200;
   *param_3 = uVar3;
   if (*param_4 == 0) {
     uVar1 = 2;

@@ -39,7 +39,7 @@ longlong fn_82E5FEE8(int *param_1,ulonglong param_2,int *param_3)
   int *piVar3;
   int *piStack_50;
   int *piStack_4c;
-  uint auStack_48 [18];
+  uint auStack_48 [2];
   
   if (((param_1 == (int *)0x0) || ((param_2 & 0xffffffff) == 0)) || (param_3 == (int *)0x0)) {
     lVar1 = -0x7ff8ffa9;

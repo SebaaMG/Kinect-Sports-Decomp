@@ -46,7 +46,7 @@ void fn_82F50188(int param_1,undefined8 param_2)
   longlong lVar2;
   double dVar3;
   undefined1 auStack_40 [16];
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [1];
   
   fn_82F53970((ulonglong)*(uint *)(param_1 + 0xcf0) + 0x1040,0);
   fn_82F4FBE8(param_1,param_2);

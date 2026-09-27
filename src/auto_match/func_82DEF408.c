@@ -43,7 +43,7 @@ void fn_82DEF408(undefined4 *param_1)
   int iVar5;
   longlong lVar6;
   ulonglong uVar7;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [16];
   
   *param_1 = &lbl_82145644;
   iVar5 = *(int *)(param_1[0x14] + 0x10);

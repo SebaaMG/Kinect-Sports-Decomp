@@ -26,7 +26,7 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_82EEB368();
-extern int fn_82F691F0();
+extern int memset();
 
 
 void fn_82EEB4D8(int *param_1)
@@ -48,6 +48,6 @@ void fn_82EEB4D8(int *param_1)
     piVar3 = piVar3 + 1;
   } while (lVar2 != 0);
                     /* WARNING: Subroutine does not return */
-  fn_82F691F0(param_1,0,0x34);
+  memset(param_1,0,0x34);
 }
 

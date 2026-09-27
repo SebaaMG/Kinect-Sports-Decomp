@@ -41,7 +41,7 @@ void fn_82E05480(int param_1,int param_2,uint param_3)
   int iVar7;
   int iVar8;
   int *piVar9;
-  int aiStack_70 [28];
+  int aiStack_70 [4];
   
   iVar4 = param_2 * 0xc + param_1;
   if (*(int *)(iVar4 + -0xc) != 0) {

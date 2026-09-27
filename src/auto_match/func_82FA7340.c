@@ -38,7 +38,7 @@ void fn_82FA7340(void)
   int iVar2;
   int *piVar3;
   int iVar4;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [32];
   
   piVar3 = lbl_83264234;
   while (piVar3 != (int *)0x0) {

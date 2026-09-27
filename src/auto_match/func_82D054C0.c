@@ -52,20 +52,20 @@ undefined8 fn_82D054C0(uint *param_1,undefined8 param_2,int param_3,int param_4)
   uint uVar11;
   longlong lVar12;
   int iVar13;
-  uint uStack_90;
-  uint uStack_8c;
+  struct { uint first; uint second; } stack_pair_90;
+
   
   lVar2 = fn_82CFBE40(param_2);
   lVar3 = fn_82CFBE40(param_3);
   uVar9 = 0;
   if ((int)lVar2 < (int)lVar3) {
-    fn_82D05388(&uStack_90,param_1);
+    fn_82D05388(&stack_pair_90.first,param_1);
     fn_82D04B20(param_1);
     lVar12 = 0;
     do {
-      pcVar4 = strstr((char *)(uStack_90 + (int)lVar12),(char *)param_2);
+      pcVar4 = strstr((char *)(stack_pair_90.first + (int)lVar12),(char *)param_2);
       if (pcVar4 == (char *)0x0) break;
-      uVar6 = (ulonglong)uStack_90;
+      uVar6 = (ulonglong)stack_pair_90.first;
       lVar10 = (longlong)(int)pcVar4 - uVar6;
       if (lVar10 < 0) goto LAB_82d05570;
       uVar9 = 1;
@@ -73,10 +73,10 @@ undefined8 fn_82D054C0(uint *param_1,undefined8 param_2,int param_3,int param_4)
       fn_82D04F70(param_1,param_3,lVar3);
       lVar12 = lVar10 + lVar2;
     } while (param_4 != 0);
-    uVar6 = (ulonglong)uStack_90;
+    uVar6 = (ulonglong)stack_pair_90.first;
 LAB_82d05570:
-    fn_82D04F70(param_1,uVar6 + lVar12,((ulonglong)uStack_8c - lVar12) + -1);
-    fn_82CE7E68(&uStack_90);
+    fn_82D04F70(param_1,uVar6 + lVar12,((ulonglong)stack_pair_90.second - lVar12) + -1);
+    fn_82CE7E68(&stack_pair_90.first);
   }
   else {
     uVar11 = *param_1;

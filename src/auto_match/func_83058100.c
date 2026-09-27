@@ -25,7 +25,7 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F69148();
+extern int _blkmov();
 extern int fn_8305B988();
 extern int fn_8305BB28();
 extern unsigned int lbl_82002AE0;
@@ -53,7 +53,7 @@ void fn_83058100(uint *param_1)
   pfVar3 = (float *)(uVar1 + 0xe44);
   if (0 < iVar2) {
     *pfVar3 = lbl_82002AE0 / (float)(longlong)iVar2;
-    fn_82F69148(uVar1 + 0xe48,pfVar3,iVar2 * 4 + -4);
+    _blkmov(uVar1 + 0xe48,pfVar3,iVar2 * 4 + -4);
   }
   return;
 }

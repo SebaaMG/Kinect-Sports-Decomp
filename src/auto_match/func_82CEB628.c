@@ -63,8 +63,8 @@ void fn_82CEB628(int param_1,undefined8 param_2)
   int iVar13;
   undefined1 uStack_90;
   undefined1 auStack_80 [12];
-  undefined4 uStack_74;
-  undefined4 uStack_70;
+  struct { undefined4 first; undefined4 second; } stack_pair_74;
+
   int iStack_6c;
   int iStack_68;
   char cStack_64;
@@ -90,7 +90,7 @@ void fn_82CEB628(int param_1,undefined8 param_2)
     do {
       cVar2 = cStack_64;
       iVar11 = *(int *)(param_1 + 0x18) + iVar8;
-      puVar6 = &uStack_74;
+      puVar6 = &stack_pair_74.first;
       puVar7 = (undefined4 *)(iVar11 + -4);
       lVar12 = 6;
       do {
@@ -127,8 +127,8 @@ void fn_82CEB628(int param_1,undefined8 param_2)
         uVar4 = fn_82CFD5B8(iVar11);
         fn_82CFE8F8(uVar4,param_2);
       }
-      uVar1 = uStack_70;
-      uVar4 = fn_82CFBE40(uStack_70);
+      uVar1 = stack_pair_74.second;
+      uVar4 = fn_82CFBE40(stack_pair_74.second);
       fn_82CFE180(auStack_80,uVar1,uVar4);
       fn_82CFE3B8(auStack_80,cVar9);
       fn_82CFE3B8(auStack_80,cVar2);

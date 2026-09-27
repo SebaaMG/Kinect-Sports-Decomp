@@ -38,7 +38,7 @@ void fn_8305D740(int param_1,undefined8 param_2)
   undefined4 uVar2;
   int iVar3;
   int iVar4;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [16];
   
   iVar3 = 0;
   if (0 < *(int *)(param_1 + 0x30)) {

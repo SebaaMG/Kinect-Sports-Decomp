@@ -45,7 +45,7 @@ void fn_82E0EC10(undefined8 param_1,undefined8 param_2,undefined8 param_3)
   undefined4 *puVar3;
   longlong lVar4;
   undefined1 uStack_60;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [32];
   
   lVar4 = 0;
   uVar1 = fn_82CEB1A8(param_3);

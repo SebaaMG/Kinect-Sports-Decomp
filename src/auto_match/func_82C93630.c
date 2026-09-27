@@ -47,7 +47,7 @@ bool fn_82C93630(int param_1,ulonglong param_2,ulonglong param_3,uint *param_4,u
   undefined4 uVar11;
   short *psVar12;
   undefined4 uStack_50;
-  uint auStack_4c [19];
+  uint auStack_4c [11];
   
   iVar2 = *(int *)(param_1 + 0x6f4);
   iVar3 = *(int *)(param_1 + 0x6f0);

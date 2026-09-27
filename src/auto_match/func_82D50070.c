@@ -47,7 +47,7 @@ undefined4 * fn_82D50070(undefined4 *param_1,int param_2)
   undefined4 *puVar9;
   undefined4 uVar10;
   undefined4 uVar11;
-  undefined4 auStack_40 [16];
+  undefined4 auStack_40 [4];
   
   fn_82D4B040((double)*(float *)(param_2 + 0x50),param_1,param_2,
                     *(undefined4 *)(param_2 + 0x30));

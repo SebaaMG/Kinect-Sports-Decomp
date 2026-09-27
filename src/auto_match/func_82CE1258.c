@@ -28,7 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_90;
 extern int fn_82A1E658();
 extern int fn_82A2B798();
-extern int fn_8314346C();
+extern int XamSessionCreateHandle();
 extern unsigned int iStack_68;
 extern unsigned int iStack_6c;
 extern unsigned int uStack_70;
@@ -45,9 +45,9 @@ ulonglong fn_82CE1258(uint param_1,uint param_2,undefined4 param_3,undefined4 pa
   ulonglong uVar1;
   int iVar3;
   longlong lVar2;
-  undefined4 auStack_90 [4];
-  undefined4 uStack_80;
-  uint uStack_7c;
+  undefined4 auStack_90;
+  struct { undefined4 first; uint second; } stack_pair_80;
+
   undefined4 uStack_78;
   undefined4 uStack_74;
   uint uStack_70;
@@ -67,23 +67,23 @@ ulonglong fn_82CE1258(uint param_1,uint param_2,undefined4 param_3,undefined4 pa
          || (((param_1 & 0x200) != 0 && ((param_1 & 0x800) != 0)))))))))))) {
     return 0x57;
   }
-  uVar1 = fn_8314346C(param_8);
+  uVar1 = XamSessionCreateHandle(param_8);
   if (uVar1 != 0) {
     return uVar1;
   }
-  auStack_90[0] = 0;
-  uVar1 = XamSessionRefObjByHandle(*param_8,auStack_90);
+  auStack_90 = 0;
+  uVar1 = XamSessionRefObjByHandle(*param_8,&auStack_90);
   if (uVar1 != 0) {
     return uVar1;
   }
-  uStack_80 = auStack_90[0];
-  uStack_7c = param_1;
+  stack_pair_80.first = auStack_90;
+  stack_pair_80.second = param_1;
   uStack_78 = param_3;
   uStack_74 = param_4;
   uStack_70 = param_2;
   iStack_6c = param_6;
   iStack_68 = param_5;
-  iVar3 = XMsgStartIORequest(0xfb,0xb0010,param_7,&uStack_80,0x1c);
+  iVar3 = XMsgStartIORequest(0xfb,0xb0010,param_7,&stack_pair_80.first,0x1c);
   if (iVar3 < 0) {
     uVar1 = 0x65b;
   }

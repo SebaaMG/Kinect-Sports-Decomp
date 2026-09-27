@@ -28,7 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 extern int fn_82CA0CC8();
 extern int fn_82CA0E40();
 extern int fn_82CA8198();
-extern int fn_82F691F0();
+extern int memset();
 
 
 void fn_82C52ED0(int param_1)
@@ -141,7 +141,7 @@ void fn_82C52ED0(int param_1)
   *(int *)(param_1 + 0x55dc) = iVar11;
   if ((int)uVar2 < iVar11) {
                     /* WARNING: Subroutine does not return */
-    fn_82F691F0((ulonglong)*(uint *)(param_1 + 0x55b8) + ((ulonglong)uVar2 & 0x3fffffff) * 4,0,
+    memset((ulonglong)*(uint *)(param_1 + 0x55b8) + ((ulonglong)uVar2 & 0x3fffffff) * 4,0,
                  (lVar8 - (ulonglong)uVar2 & 0x3fffffff) << 2);
   }
   return;

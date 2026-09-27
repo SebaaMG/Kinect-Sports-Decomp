@@ -27,8 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 
 
-void fn_82F215D8(int param_1,longlong param_2,int param_3,char param_4,char *param_5,int param_6,
-                  int param_7,int *param_8)
+void fn_82F215D8(int param_1, longlong param_2, int param_3, char param_4, char *param_5, int param_6, int param_7, int *param_8, int in_stack_00000054, int in_stack_0000005c, int in_stack_00000064, int in_stack_0000006c)
 
 {
   char cVar1;
@@ -44,10 +43,10 @@ void fn_82F215D8(int param_1,longlong param_2,int param_3,char param_4,char *par
   int *piVar11;
   ulonglong uVar12;
   longlong lVar13;
-  int in_stack_00000054;
-  int in_stack_0000005c;
-  int in_stack_00000064;
-  int in_stack_0000006c;
+
+
+
+
   
   uVar12 = (longlong)(int)*(uint *)(param_1 + 0x2d0) * (longlong)param_3;
   uVar7 = uVar12 + param_2;

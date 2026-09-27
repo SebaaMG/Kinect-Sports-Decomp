@@ -41,7 +41,7 @@ longlong fn_82E3D8B0(longlong param_1,int *param_2)
   int *piStack_60;
   int *piStack_5c;
   undefined1 auStack_58 [8];
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [16];
   
   param_1 = param_1 + 0x1ac;
   piStack_60 = (int *)0x0;

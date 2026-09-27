@@ -50,12 +50,12 @@ undefined4 * fn_8304C998(undefined4 *param_1,undefined8 param_2)
   int iVar7;
   longlong lVar8;
   bool bVar9;
-  undefined4 auStack_50 [2];
+  undefined4 auStack_50;
   undefined1 auStack_48 [5];
   char cStack_43;
   
   fn_8303A7D8();
-  auStack_50[0] = 0;
+  auStack_50 = 0;
   *param_1 = &lbl_8217DB90;
   param_1[5] = 0;
   *(undefined2 *)(param_1 + 9) = 0;
@@ -63,9 +63,9 @@ undefined4 * fn_8304C998(undefined4 *param_1,undefined8 param_2)
   param_1[4] = 0;
   param_1[0xf] = 0;
   iVar7 = param_1[2];
-  iVar6 = fn_830137C8(0xffffffff831bc7fc,*(undefined4 *)(iVar7 + 0x128),auStack_50);
+  iVar6 = fn_830137C8(0xffffffff831bc7fc,*(undefined4 *)(iVar7 + 0x128),&auStack_50);
   if (iVar6 != 1) goto LAB_8304cb98;
-  param_1[4] = auStack_50[0];
+  param_1[4] = auStack_50;
   uVar5 = fn_82FA5060(lbl_831BC770,0x10);
   if ((uVar5 & 0xffffffff) == 0) {
     iVar6 = 0;

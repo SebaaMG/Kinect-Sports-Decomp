@@ -40,7 +40,7 @@ fn_82E70780(undefined8 param_1,uint param_2,int *param_3,longlong param_4,uint *
   uint uVar3;
   uint uStack_40;
   uint uStack_3c;
-  uint auStack_38 [14];
+  uint auStack_38;
   
   if ((param_3 == (int *)0x0) || (param_5 == (uint *)0x0)) {
     uVar1 = 0xffffffff80070057;
@@ -49,7 +49,7 @@ fn_82E70780(undefined8 param_1,uint param_2,int *param_3,longlong param_4,uint *
     *param_5 = 0xffffffff;
     uVar1 = (**(code **)(*param_3 + 0x24))(param_3,&uStack_40);
     if ((-1 < (int)uVar1) &&
-       (uVar1 = (**(code **)(*param_3 + 0x1c))(param_3,auStack_38), -1 < (int)uVar1)) {
+       (uVar1 = (**(code **)(*param_3 + 0x1c))(param_3,&auStack_38), -1 < (int)uVar1)) {
       uVar3 = 0;
       uVar2 = 0;
       if (uStack_40 != 0) {
@@ -65,7 +65,7 @@ fn_82E70780(undefined8 param_1,uint param_2,int *param_3,longlong param_4,uint *
           uVar2 = uStack_40;
           if (param_2 < uStack_3c) break;
           uVar3 = uVar3 + 1;
-          param_4 = (ulonglong)auStack_38[0] + param_4;
+          param_4 = (ulonglong)auStack_38 + param_4;
         } while (uVar3 < uStack_40);
       }
       if (uVar3 == uVar2) {

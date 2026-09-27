@@ -78,8 +78,8 @@ ulonglong fn_82EF5D60(int param_1,ulonglong param_2,ulonglong param_3,longlong p
   int in_stack_0000006c;
   undefined4 *in_stack_00000074;
   int *in_stack_0000007c;
-  undefined4 uStack_f0;
-  undefined4 uStack_ec;
+  struct { undefined4 first; undefined4 second; } stack_pair_f0;
+
   undefined4 uStack_e8;
   undefined4 uStack_e4;
   int iStack_e0;
@@ -88,16 +88,16 @@ ulonglong fn_82EF5D60(int param_1,ulonglong param_2,ulonglong param_3,longlong p
   int iStack_d4;
   int iStack_d0;
   int iStack_cc;
-  undefined1 auStack_c0 [20];
+  undefined1 auStack_c0 [1];
   int aiStack_ac [43];
   
   uVar1 = *(uint *)(param_1 + 0x6dd0);
   uStack0000001c = (uint)param_2;
   uStack00000024 = (uint)param_3;
-  (**(code **)(param_1 + 0x6f3c))(param_2,param_3,param_4,param_5,&uStack_f0);
+  (**(code **)(param_1 + 0x6f3c))(param_2,param_3,param_4,param_5,&stack_pair_f0.first);
   uVar23 = ZEXT48(in_stack_00000074);
   uVar18 = ZEXT48(in_stack_0000007c);
-  *in_stack_00000074 = uStack_f0;
+  *in_stack_00000074 = stack_pair_f0.first;
   *in_stack_0000007c = iStack_dc;
   in_stack_00000074[0x40] = 0;
   in_stack_00000074[0x20] = 0;
@@ -109,7 +109,7 @@ ulonglong fn_82EF5D60(int param_1,ulonglong param_2,ulonglong param_3,longlong p
     in_stack_0000007c[*(int *)(param_1 + 0x6dd0) + 0x40] = 0;
     in_stack_0000007c[*(int *)(param_1 + 0x6dd0) + 0x20] = 0;
   }
-  in_stack_00000074[0x60] = uStack_ec;
+  in_stack_00000074[0x60] = stack_pair_f0.second;
   in_stack_0000007c[0x60] = iStack_d8;
   in_stack_00000074[0xa0] = 0;
   in_stack_00000074[0x80] = 0;

@@ -42,7 +42,7 @@ longlong fn_82D0B378(int param_1,ulonglong param_2)
   undefined8 uVar2;
   int iVar3;
   undefined1 auStack_230 [16];
-  undefined1 auStack_220 [544];
+  undefined1 auStack_220 [512];
   
   iVar3 = *(int *)(param_1 + 8);
   if (*(char *)(iVar3 + 0x1b5) == '\0') {

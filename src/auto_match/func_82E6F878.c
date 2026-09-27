@@ -36,10 +36,10 @@ undefined8 fn_82E6F878(int *param_1,ulonglong param_2)
 {
   ulonglong uVar1;
   undefined8 uVar2;
-  ushort auStack_40 [2];
+  ushort auStack_40;
   undefined4 uStack_3c;
   uint auStack_38 [2];
-  undefined8 auStack_30 [6];
+  undefined8 auStack_30 [2];
   
   if (*(ulonglong *)(param_1 + 0x12) < param_2) {
     uVar2 = 0xffffffffc00d36b2;
@@ -62,9 +62,9 @@ undefined8 fn_82E6F878(int *param_1,ulonglong param_2)
           uVar2 = (**(code **)(*(int *)param_1[0xb] + 0x30))
                             ((int *)param_1[0xb],auStack_38,4,&uStack_3c);
           if (-1 < (int)uVar2) {
-            auStack_40[0] = *(ushort *)(param_1 + 0x18) << 8 | *(ushort *)(param_1 + 0x18) >> 8;
+            auStack_40 = *(ushort *)(param_1 + 0x18) << 8 | *(ushort *)(param_1 + 0x18) >> 8;
             uVar2 = (**(code **)(*(int *)param_1[0xb] + 0x30))
-                              ((int *)param_1[0xb],auStack_40,2,&uStack_3c);
+                              ((int *)param_1[0xb],&auStack_40,2,&uStack_3c);
           }
         }
       }

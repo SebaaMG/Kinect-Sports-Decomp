@@ -37,7 +37,7 @@ undefined8 fn_82FF8988(int *param_1,ulonglong param_2,uint *param_3)
   undefined8 uVar4;
   uint *puVar5;
   uint uVar6;
-  char acStack_40 [8];
+  char acStack_40;
   ulonglong auStack_38 [7];
   
   *param_3 = 0;
@@ -72,8 +72,8 @@ undefined8 fn_82FF8988(int *param_1,ulonglong param_2,uint *param_3)
           if (iVar2 != 1) {
             return uVar4;
           }
-          (**(code **)(*(int *)param_1[7] + 0x1c))((int *)param_1[7],acStack_40);
-          if ((acStack_40[0] != '\0') && ((ulonglong)*puVar5 < (param_2 & 0xffffffff))) {
+          (**(code **)(*(int *)param_1[7] + 0x1c))((int *)param_1[7],&acStack_40);
+          if ((acStack_40 != '\0') && ((ulonglong)*puVar5 < (param_2 & 0xffffffff))) {
             return 2;
           }
           iVar2 = (int)param_2;

@@ -45,7 +45,7 @@ void fn_82E45568(undefined4 *param_1)
   longlong lVar1;
   int *piVar2;
   ulonglong uVar3;
-  uint auStack_40 [16];
+  uint auStack_40;
   
   *param_1 = &lbl_82153124;
   param_1[1] = &lbl_82153114;
@@ -75,8 +75,8 @@ void fn_82E45568(undefined4 *param_1)
   uVar3 = 0;
   if (param_1[0x3b] != 0) {
     do {
-      lVar1 = fn_82E44F90(param_1 + 0x21,uVar3,auStack_40);
-      piVar2 = (int *)(-(uint)(lVar1 != 0) & auStack_40[0]);
+      lVar1 = fn_82E44F90(param_1 + 0x21,uVar3,&auStack_40);
+      piVar2 = (int *)(-(uint)(lVar1 != 0) & auStack_40);
       if (piVar2 != (int *)0x0) {
         (**(code **)(*piVar2 + 8))();
       }

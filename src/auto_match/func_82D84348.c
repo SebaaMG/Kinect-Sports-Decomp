@@ -42,7 +42,7 @@ void fn_82D84348(undefined8 param_1,int *param_2)
   int iVar1;
   char *pcVar2;
   int iVar3;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [1];
   
   iVar1 = fn_82CE5410();
   iVar1 = (**(code **)(**(int **)(iVar1 + 0x10) + 4))(*(int **)(iVar1 + 0x10),0x44);

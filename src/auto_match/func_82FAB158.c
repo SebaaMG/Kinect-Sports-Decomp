@@ -37,7 +37,7 @@ fn_82FAB158(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefined8 
 {
   ulonglong uVar1;
   undefined8 uVar2;
-  int aiStack_40 [16];
+  int aiStack_40 [4];
   
   uVar1 = fn_82FAAA98(param_1,param_4,param_3,param_6,param_7);
   if ((uVar1 & 0xffffffff) != 0) {

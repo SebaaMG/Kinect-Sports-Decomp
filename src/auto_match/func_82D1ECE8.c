@@ -39,7 +39,7 @@ undefined8 fn_82D1ECE8(undefined8 param_1,int param_2)
   undefined4 uVar4;
   undefined4 uVar5;
   undefined4 uVar6;
-  undefined1 auStack_20 [16];
+  undefined1 auStack_20 [1];
   
   cVar3 = fn_82D1EB20(param_1,(ulonglong)*(uint *)(param_2 + 8) + 0x10,
                        (ulonglong)*(uint *)(param_2 + 0xc) + 0x10,

@@ -38,7 +38,7 @@ longlong fn_82F356B0(int *param_1,int *param_2,undefined4 *param_3)
   longlong lVar3;
   int iVar4;
   uint uStack_50;
-  uint auStack_4c [19];
+  uint auStack_4c;
   
   if ((param_2 == (int *)0x0) || (param_3 == (undefined4 *)0x0)) {
     return -0x7ff8ffa9;
@@ -61,12 +61,12 @@ longlong fn_82F356B0(int *param_1,int *param_2,undefined4 *param_3)
   else {
 LAB_82f35734:
     if ((param_1[0x13] & 1U) == 0) goto LAB_82f35830;
-    auStack_4c[0] = 0;
-    lVar3 = (**(code **)(*param_2 + 0x14))(param_2,0,auStack_4c);
+    auStack_4c = 0;
+    lVar3 = (**(code **)(*param_2 + 0x14))(param_2,0,&auStack_4c);
     if (lVar3 < 0) {
       return lVar3;
     }
-    if (uVar1 < auStack_4c[0]) {
+    if (uVar1 < auStack_4c) {
       do {
         if ((uint)param_1[0x4f] <= (uint)param_1[0x15]) break;
         piVar2 = param_1 + 0x16;
@@ -85,7 +85,7 @@ LAB_82f35734:
           *piVar2 = 0;
         }
         param_1[0x15] = param_1[0x15] + 1;
-      } while ((uVar1 & 0xffffffff) < (ulonglong)auStack_4c[0]);
+      } while ((uVar1 & 0xffffffff) < (ulonglong)auStack_4c);
     }
     iVar4 = (int)lVar3;
   }

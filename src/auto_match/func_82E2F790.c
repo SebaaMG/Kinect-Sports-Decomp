@@ -39,16 +39,16 @@ undefined8 fn_82E2F790(int param_1,short param_2)
   short sVar3;
   undefined8 uVar4;
   ulonglong uVar5;
-  int *apiStack_50 [20];
+  int * apiStack_50;
   
-  apiStack_50[0] = (int *)0x0;
+  apiStack_50 = (int *)0x0;
   uVar4 = 0;
   fn_82E50CB8(param_1 + 0x54);
   uVar5 = 0;
   if (*(int *)(param_1 + 0xfc) != 0) {
-    while ((iVar2 = fn_82E2F3F8(param_1 + 0x94,uVar5,apiStack_50), piVar1 = apiStack_50[0],
-           iVar2 != 0 && (apiStack_50[0] != (int *)0x0))) {
-      sVar3 = (**(code **)(*apiStack_50[0] + 0x88))(apiStack_50[0]);
+    while ((iVar2 = fn_82E2F3F8(param_1 + 0x94,uVar5,&apiStack_50), piVar1 = apiStack_50,
+           iVar2 != 0 && (apiStack_50 != (int *)0x0))) {
+      sVar3 = (**(code **)(*apiStack_50 + 0x88))(apiStack_50);
       if ((sVar3 == param_2) ||
          (uVar5 = uVar5 + 1, (ulonglong)*(uint *)(param_1 + 0xfc) <= (uVar5 & 0xffffffff)))
       goto LAB_82e2f834;

@@ -48,7 +48,7 @@ undefined8 fn_82DED480(int param_1,int param_2,int param_3)
   undefined4 uVar9;
   undefined4 uVar10;
   undefined4 uVar11;
-  undefined1 auStack_230 [16];
+  undefined1 auStack_230 [1];
   undefined1 auStack_220 [544];
   
   piVar2 = *(int **)(param_1 + 0xc);

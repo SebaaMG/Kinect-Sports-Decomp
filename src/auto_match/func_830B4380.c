@@ -44,7 +44,7 @@ undefined8 fn_830B4380(int *param_1)
   char *pcVar7;
   int *piVar8;
   uint auStack_70 [4];
-  undefined1 auStack_60 [96];
+  undefined1 auStack_60 [48];
   
   if ((((param_1[0x15] == 0) || (param_1[7] == 0)) || (param_1[0xe] == 0)) ||
      ((param_1[0x1c] == 0 || (param_1[0x23] == 0)))) {

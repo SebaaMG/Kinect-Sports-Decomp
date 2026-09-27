@@ -34,7 +34,7 @@ int fn_82D25C48(longlong param_1,longlong param_2,longlong param_3,longlong para
 
 {
   int iVar1;
-  undefined1 auStack_80 [128];
+  undefined1 auStack_80 [80];
   
   iVar1 = fn_82D2D400(param_1 + 0x20,auStack_80);
   *(undefined4 *)(iVar1 + 0x30) = 0xffffffff;

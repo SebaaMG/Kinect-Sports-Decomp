@@ -27,8 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 
 
-void fn_82EDF600(byte *param_1,int param_2,byte *param_3,int param_4,int param_5,int param_6,
-                  int param_7,int param_8)
+void fn_82EDF600(byte *param_1, int param_2, byte *param_3, int param_4, int param_5, int param_6, int param_7, int param_8, uint in_stack_00000054, uint in_stack_0000005c, int in_stack_00000064, int in_stack_0000006c)
 
 {
   int iVar1;
@@ -45,10 +44,10 @@ void fn_82EDF600(byte *param_1,int param_2,byte *param_3,int param_4,int param_5
   int iVar12;
   byte *pbVar13;
   ulonglong uVar14;
-  uint in_stack_00000054;
-  uint in_stack_0000005c;
-  int in_stack_00000064;
-  int in_stack_0000006c;
+
+
+
+
   
   iVar8 = 0;
   iVar11 = 0;

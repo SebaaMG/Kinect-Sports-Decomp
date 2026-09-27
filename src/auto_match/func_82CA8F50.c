@@ -28,8 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 extern int fn_82CA8848();
 
 
-void fn_82CA8F50(byte *param_1,longlong param_2,longlong param_3,int param_4,longlong param_5,
-                  longlong param_6,longlong param_7,uint param_8)
+void fn_82CA8F50(byte *param_1, longlong param_2, longlong param_3, int param_4, longlong param_5, longlong param_6, longlong param_7, uint param_8, uint in_stack_00000054, undefined4 in_stack_0000005c, int in_stack_00000064)
 
 {
   byte bVar1;
@@ -45,9 +44,9 @@ void fn_82CA8F50(byte *param_1,longlong param_2,longlong param_3,int param_4,lon
   ulonglong uVar11;
   int *piVar13;
   ulonglong uVar12;
-  uint in_stack_00000054;
-  undefined4 in_stack_0000005c;
-  int in_stack_00000064;
+
+
+
   int *in_stack_00000074;
   
   if (0 < (int)param_7) {

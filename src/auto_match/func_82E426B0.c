@@ -60,7 +60,7 @@ longlong fn_82E426B0(int param_1,int *param_2)
   int *piVar6;
   ulonglong uVar7;
   longlong lVar8;
-  ushort auStack_90 [2];
+  ushort auStack_90;
   int *piStack_8c;
   int *piStack_88;
   int *piStack_84;
@@ -123,21 +123,21 @@ LAB_82e42af8:
     uVar7 = 0;
     if (auStack_6c[0] != 0) {
       do {
-        auStack_90[0] = 0;
-        lVar8 = (**(code **)(*piStack_88 + 0x88))(piStack_88,uVar7,auStack_90,&piStack_84);
+        auStack_90 = 0;
+        lVar8 = (**(code **)(*piStack_88 + 0x88))(piStack_88,uVar7,&auStack_90,&piStack_84);
         if (lVar8 < 0) goto LAB_82e42af8;
-        iVar4 = fn_82E3C590(param_1 + 0x26c,auStack_90[0],0);
+        iVar4 = fn_82E3C590(param_1 + 0x26c,auStack_90,0);
         if (iVar4 == 0) goto LAB_82e42af0;
-        uVar3 = fn_82E42120(param_1,auStack_90[0],param_2);
+        uVar3 = fn_82E42120(param_1,auStack_90,param_2);
         lVar8 = fn_82E41C58(param_1,0,piStack_84,uVar3);
         if (lVar8 < 0) goto LAB_82e42af8;
         uVar5 = fn_82E50BE8(8,0,0,0,0);
-        *(undefined4 *)((auStack_90[0] + 0xac) * 4 + param_1) = uVar5;
-        if (*(int *)((auStack_90[0] + 0x1b) * 4 + param_1) == 0) {
+        *(undefined4 *)((auStack_90 + 0xac) * 4 + param_1) = uVar5;
+        if (*(int *)((auStack_90 + 0x1b) * 4 + param_1) == 0) {
           lVar8 = -0x7ff8fff2;
           break;
         }
-        puVar1 = *(undefined4 **)((auStack_90[0] + 0xac) * 4 + param_1);
+        puVar1 = *(undefined4 **)((auStack_90 + 0xac) * 4 + param_1);
         *puVar1 = 0;
         puVar1[1] = 0;
         if (piStack_84 != (int *)0x0) {

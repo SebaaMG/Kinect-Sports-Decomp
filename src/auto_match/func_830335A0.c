@@ -26,7 +26,7 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_b8;
-extern int fn_82F68CC0();
+extern int memcpy();
 extern int fn_82FAB9C0();
 extern int fn_82FF0BA8();
 extern int fn_8301B7B8();
@@ -62,8 +62,8 @@ undefined8 fn_830335A0(int param_1,int param_2)
   int *piVar4;
   undefined8 uVar3;
   int *piVar5;
-  undefined4 uStack_110;
-  undefined4 uStack_10c;
+  struct { undefined4 first; undefined4 second; } stack_pair_110;
+
   undefined4 uStack_100;
   undefined4 uStack_fc;
   int *piStack_f8;
@@ -86,14 +86,14 @@ undefined8 fn_830335A0(int param_1,int param_2)
   undefined1 uStack_60;
   undefined1 uStack_5f;
   
-  uStack_110 = *(undefined4 *)(param_1 + 0x84);
+  stack_pair_110.first = *(undefined4 *)(param_1 + 0x84);
   iVar2 = *(int *)(param_1 + 0x80);
-  uStack_10c = 4;
+  stack_pair_110.second = 4;
   if (iVar2 != 0) {
     if ((*(uint *)(iVar2 + 0x1e0) & 0xf0000000) == 0x20000000) {
-      uStack_10c = 1;
+      stack_pair_110.second = 1;
     }
-    fn_82FF0BA8(iVar2,&uStack_110);
+    fn_82FF0BA8(iVar2,&stack_pair_110.first);
   }
   piVar4 = (int *)fn_82FAB9C0((ulonglong)lbl_832642E0 + 4,*(undefined4 *)(param_1 + 0x10));
   if (piVar4 == (int *)0x0) {
@@ -118,13 +118,13 @@ undefined8 fn_830335A0(int param_1,int param_2)
       fn_83032D88();
     }
     uStack_60 = 0;
-    fn_82F68CC0(auStack_b8,param_1 + 0x38,0x48);
+    memcpy(auStack_b8,param_1 + 0x38,0x48);
     uStack_d8 = *(undefined4 *)(param_2 + 0x34);
     uStack_d0 = *(undefined8 *)(param_2 + 0x18);
     uStack_c8 = *(undefined8 *)(param_2 + 0x20);
     puStack_68 = &uStack_100;
     uStack_c0 = *(undefined8 *)(param_2 + 0x28);
-    puStack_d4 = &uStack_110;
+    puStack_d4 = &stack_pair_110.first;
     uStack_6c = *(undefined4 *)(param_2 + 0x10);
     uStack_dc = *(undefined4 *)(param_1 + 0x98);
     uStack_70 = *(undefined4 *)(param_1 + 0x88);

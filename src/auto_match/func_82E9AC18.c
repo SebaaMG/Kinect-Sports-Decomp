@@ -64,7 +64,7 @@ void fn_82E9AC18(int param_1,undefined8 param_2,undefined8 param_3,undefined8 pa
   undefined1 auStack_670 [240];
   undefined1 auStack_580 [16];
   undefined1 auStack_570 [304];
-  undefined1 auStack_440 [1088];
+  undefined1 auStack_440 [1040];
   
   iVar7 = 0;
   uStack_9a8 = 0;

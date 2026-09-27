@@ -39,7 +39,7 @@ longlong fn_82E71868(int *param_1,undefined8 param_2,longlong *param_3,undefined
   longlong lVar4;
   int *apiStack_60 [2];
   longlong lStack_58;
-  longlong alStack_50 [10];
+  longlong alStack_50 [2];
   
   apiStack_60[0] = (int *)0x0;
   if (param_3 == (longlong *)0x0) {

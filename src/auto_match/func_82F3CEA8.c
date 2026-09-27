@@ -40,24 +40,24 @@ longlong fn_82F3CEA8(int param_1,int *param_2,undefined4 *param_3)
   int *piStack_50;
   byte *pbStack_4c;
   byte *pbStack_48;
-  byte *apbStack_44 [17];
+  byte * apbStack_44;
   
   if (*(int *)(param_1 + 0xc) == 0) {
     return -0x3ff2c94a;
   }
   if (param_2 != (int *)0x0) {
     pbStack_48 = (byte *)0x0;
-    apbStack_44[0] = (byte *)0x0;
-    lVar2 = (**(code **)(*param_2 + 0x14))(param_2,&pbStack_48,apbStack_44);
+    apbStack_44 = (byte *)0x0;
+    lVar2 = (**(code **)(*param_2 + 0x14))(param_2,&pbStack_48,&apbStack_44);
     if (lVar2 < 0) {
       return lVar2;
     }
     if ((param_3 != (undefined4 *)0x0) &&
-       ((apbStack_44[0] == (byte *)0x0 || (pbStack_48 != (byte *)0x0)))) {
+       ((apbStack_44 == (byte *)0x0 || (pbStack_48 != (byte *)0x0)))) {
       *param_3 = 0;
       pbVar4 = (byte *)0x0;
       if (*(int *)(param_1 + 0x160) == 0) {
-        if (apbStack_44[0] < (byte *)0x1e) {
+        if (apbStack_44 < (byte *)0x1e) {
           *param_3 = 0x1e;
           return -0x3ff2c94f;
         }
@@ -89,7 +89,7 @@ longlong fn_82F3CEA8(int param_1,int *param_2,undefined4 *param_3)
         }
       }
       piStack_50 = (int *)0x0;
-      if (pbVar4 < apbStack_44[0]) {
+      if (pbVar4 < apbStack_44) {
         pbStack_4c = (byte *)0x0;
         if (pbVar4 == (byte *)0x0) {
           piStack_50 = param_2;

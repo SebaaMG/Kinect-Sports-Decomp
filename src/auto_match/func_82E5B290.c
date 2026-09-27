@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_30;
 extern int fn_82E5AF48();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 undefined8
@@ -38,14 +38,14 @@ fn_82E5B290(int param_1,uint param_2,undefined4 *param_3,undefined2 *param_4,uin
   longlong lVar1;
   undefined8 uVar2;
   undefined4 *puVar3;
-  uint auStack_30 [12];
+  uint auStack_30;
   
   if (((param_3 == (undefined4 *)0x0) || (param_4 == (undefined2 *)0x0)) ||
      (*(uint *)(param_1 + 0xf4) <= (param_2 & 0xffff))) {
     return 0xffffffff80070057;
   }
-  lVar1 = fn_82E5AF48(param_1 + 0x8c,param_2 & 0xffff,auStack_30);
-  puVar3 = (undefined4 *)(-(uint)(lVar1 != 0) & auStack_30[0]);
+  lVar1 = fn_82E5AF48(param_1 + 0x8c,param_2 & 0xffff,&auStack_30);
+  puVar3 = (undefined4 *)(-(uint)(lVar1 != 0) & auStack_30);
   *param_3 = *puVar3;
   param_3[1] = puVar3[1];
   param_3[2] = puVar3[2];
@@ -63,7 +63,7 @@ LAB_82e5b360:
     }
     else if ((uint)puVar3[5] <= *param_5) {
       *param_5 = puVar3[5];
-      fn_82F68CC0(param_6,puVar3[6],puVar3[5]);
+      memcpy(param_6,puVar3[6],puVar3[5]);
       goto LAB_82e5b360;
     }
     uVar2 = 0xffffffffc00d36b1;

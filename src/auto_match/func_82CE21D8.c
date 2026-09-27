@@ -34,16 +34,16 @@ extern unsigned int uStack_20;
 void fn_82CE21D8(undefined4 param_1,undefined4 param_2,undefined4 param_3)
 
 {
-  undefined4 uStack_20;
-  undefined4 uStack_1c;
+  struct { undefined4 first; undefined4 second; } stack_pair_20;
+
   undefined4 uStack_18;
   undefined4 uStack_14;
   
   uStack_14 = 0;
-  uStack_20 = param_1;
-  uStack_1c = param_2;
+  stack_pair_20.first = param_1;
+  stack_pair_20.second = param_2;
   uStack_18 = param_3;
-  XMsgInProcessCall(0xfb,0xb003d,&uStack_20,0);
+  XMsgInProcessCall(0xfb,0xb003d,&stack_pair_20.first,0);
   return;
 }
 

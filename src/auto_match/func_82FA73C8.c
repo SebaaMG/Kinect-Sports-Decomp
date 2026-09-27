@@ -38,16 +38,16 @@ longlong fn_82FA73C8(undefined8 param_1,int *param_2,undefined4 *param_3,undefin
   longlong lVar2;
   longlong lVar3;
   undefined4 uStack_40;
-  undefined4 auStack_3c [15];
+  undefined4 auStack_3c;
   
   lVar3 = 0;
   *param_2 = 0;
   for (iVar1 = lbl_83264234; iVar1 != 0; iVar1 = *(int *)(iVar1 + 0x3c)) {
     if (((*(byte *)(iVar1 + 0x34) & 0x80) != 0) &&
-       ((lVar2 = fn_82FAAF98(*(undefined4 *)(iVar1 + 0x38),param_1,auStack_3c,&uStack_40),
+       ((lVar2 = fn_82FAAF98(*(undefined4 *)(iVar1 + 0x38),param_1,&auStack_3c,&uStack_40),
         *param_2 == 0 || ((int)lVar2 < (int)lVar3)))) {
       *param_3 = uStack_40;
-      *param_4 = auStack_3c[0];
+      *param_4 = auStack_3c;
       *param_2 = iVar1;
       lVar3 = lVar2;
     }

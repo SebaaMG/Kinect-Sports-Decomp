@@ -48,13 +48,13 @@ longlong fn_82E61220(int *param_1,int *param_2,undefined4 *param_3,uint *param_4
   undefined4 uVar4;
   int *piVar5;
   ulonglong uVar6;
-  ushort auStack_b0 [2];
+  ushort auStack_b0;
   int *piStack_ac;
   int iStack_a8;
   uint uStack_a4;
   int *apiStack_a0 [2];
   ulonglong uStack_98;
-  uint auStack_90 [36];
+  uint auStack_90 [4];
   
   if ((((param_1 == (int *)0x0) || (param_2 == (int *)0x0)) || (param_5 == 0)) ||
      ((param_6 == 0 || (param_7 == 0)))) {
@@ -87,10 +87,10 @@ longlong fn_82E61220(int *param_1,int *param_2,undefined4 *param_3,uint *param_4
             uVar6 = 0;
             if (auStack_90[0] != 0) {
               do {
-                auStack_b0[0] = 0;
-                lVar3 = (**(code **)(*param_1 + 0x88))(param_1,uVar6,auStack_b0,&piStack_ac);
+                auStack_b0 = 0;
+                lVar3 = (**(code **)(*param_1 + 0x88))(param_1,uVar6,&auStack_b0,&piStack_ac);
                 if (lVar3 < 0) goto LAB_82e614cc;
-                if (param_8 < auStack_b0[0]) {
+                if (param_8 < auStack_b0) {
                   lVar3 = -0x7fff0001;
                   break;
                 }
@@ -107,15 +107,15 @@ longlong fn_82E61220(int *param_1,int *param_2,undefined4 *param_3,uint *param_4
                   uStack_98 = uStack_98 & 0xffffffff;
                   lVar3 = 0;
                 }
-                *(uint *)((uint)auStack_b0[0] * 4 + param_7) = (((U64)(uStack_98) >> 0) & 0xFFFFFFFF) & 0x80000000;
+                *(uint *)((uint)auStack_b0 * 4 + param_7) = (((U64)(uStack_98) >> 0) & 0xFFFFFFFF) & 0x80000000;
                 uVar4 = fn_82E604D0(piStack_ac,iVar1,uStack_a4);
                 if (piStack_ac != (int *)0x0) {
                   (**(code **)(*piStack_ac + 8))(piStack_ac);
                   piStack_ac = (int *)0x0;
                 }
                 uVar6 = uVar6 + 1;
-                *(int *)((uint)auStack_b0[0] * 4 + param_5) = iVar1;
-                *(undefined4 *)((uint)auStack_b0[0] * 4 + param_6) = uVar4;
+                *(int *)((uint)auStack_b0 * 4 + param_5) = iVar1;
+                *(undefined4 *)((uint)auStack_b0 * 4 + param_6) = uVar4;
                 *param_4 = *param_4 + iVar1;
               } while ((uVar6 & 0xffffffff) < (ulonglong)auStack_90[0]);
             }

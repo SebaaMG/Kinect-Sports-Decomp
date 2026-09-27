@@ -39,7 +39,7 @@ undefined4 * fn_83097440(undefined4 *param_1,int param_2,int param_3)
   int iVar3;
   int iVar4;
   int aiStack_60 [4];
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [32];
   
   param_1[2] = param_2;
   *(undefined2 *)((int)param_1 + 6) = 1;

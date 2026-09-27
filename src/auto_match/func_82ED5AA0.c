@@ -25,11 +25,10 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
-void fn_82ED5AA0(undefined8 param_1,int param_2,int param_3,int param_4,int param_5,int param_6,
-                  int param_7,int param_8)
+void fn_82ED5AA0(undefined8 param_1, int param_2, int param_3, int param_4, int param_5, int param_6, int param_7, int param_8, undefined8 unused_arg_9, int in_stack_0000005c, undefined8 unused_arg_11, int in_stack_0000006c, uint in_stack_00000074, int in_stack_0000007c, uint in_stack_00000084, int in_stack_0000008c)
 
 {
   int iVar1;
@@ -38,18 +37,18 @@ void fn_82ED5AA0(undefined8 param_1,int param_2,int param_3,int param_4,int para
   ulonglong uVar4;
   ulonglong uVar5;
   int iVar6;
-  int in_stack_0000005c;
-  int in_stack_0000006c;
-  uint in_stack_00000074;
-  int in_stack_0000007c;
-  uint in_stack_00000084;
-  int in_stack_0000008c;
+
+
+
+
+
+
   
   if (in_stack_0000008c == 0) {
     uVar4 = (ulonglong)in_stack_00000074;
     if (0 < (int)in_stack_00000074) {
       do {
-        fn_82F68CC0(param_2,param_5,param_8);
+        memcpy(param_2,param_5,param_8);
         uVar4 = uVar4 - 1;
         param_5 = param_5 + in_stack_0000006c;
         param_2 = param_2 + param_8;
@@ -59,7 +58,7 @@ void fn_82ED5AA0(undefined8 param_1,int param_2,int param_3,int param_4,int para
     uVar4 = uVar5;
     if (0 < (int)in_stack_00000084) {
       do {
-        fn_82F68CC0(param_3,param_6,in_stack_0000005c);
+        memcpy(param_3,param_6,in_stack_0000005c);
         uVar4 = uVar4 - 1;
         param_6 = param_6 + in_stack_0000007c;
         param_3 = param_3 + in_stack_0000005c;
@@ -67,7 +66,7 @@ void fn_82ED5AA0(undefined8 param_1,int param_2,int param_3,int param_4,int para
     }
     if (0 < (int)in_stack_00000084) {
       do {
-        fn_82F68CC0(param_4,param_7,in_stack_0000005c);
+        memcpy(param_4,param_7,in_stack_0000005c);
         uVar5 = uVar5 - 1;
         param_7 = param_7 + in_stack_0000007c;
         param_4 = param_4 + in_stack_0000005c;

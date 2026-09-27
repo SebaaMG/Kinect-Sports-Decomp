@@ -34,15 +34,15 @@ void fn_82F38430(int param_1)
 {
   uint uVar1;
   ulonglong uVar2;
-  int *apiStack_40 [16];
+  int * apiStack_40;
   
   uVar1 = *(uint *)(param_1 + 0xf4);
   uVar2 = 0;
   if (uVar1 != 0) {
     do {
-      fn_82F37C28(param_1 + 0x8c,uVar2,apiStack_40);
-      if ((int *)*apiStack_40[0] != (int *)0x0) {
-        (**(code **)(*(int *)*apiStack_40[0] + 8))();
+      fn_82F37C28(param_1 + 0x8c,uVar2,&apiStack_40);
+      if ((int *)*apiStack_40 != (int *)0x0) {
+        (**(code **)(*(int *)*apiStack_40 + 8))();
       }
       uVar2 = uVar2 + 1;
     } while ((uVar2 & 0xffffffff) < (ulonglong)uVar1);

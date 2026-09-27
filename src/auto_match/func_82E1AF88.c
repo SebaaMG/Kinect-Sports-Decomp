@@ -51,7 +51,7 @@ void fn_82E1AF88(undefined8 param_1,undefined8 param_2,undefined8 param_3)
   undefined1 auStack_48 [8];
   undefined1 auStack_40 [8];
   undefined1 auStack_38 [8];
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
   
   fn_82CFFF50(auStack_50,param_2,0xffffffff8323ae68);
   fn_82CFFC80(auStack_48,auStack_50,0xffffffff8213078c);

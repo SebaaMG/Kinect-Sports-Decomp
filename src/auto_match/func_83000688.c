@@ -39,7 +39,7 @@ void fn_83000688(int param_1,uint param_2,undefined8 param_3,ushort *param_4)
   uint uVar2;
   uint uVar3;
   double dVar4;
-  undefined4 auStack_50 [20];
+  undefined4 auStack_50;
   
   uVar3 = param_2 & 0xffff;
   if ((uVar3 != 0) && (uVar3 < *param_4)) {
@@ -52,9 +52,9 @@ void fn_83000688(int param_1,uint param_2,undefined8 param_3,ushort *param_4)
       dVar4 = (double)lbl_8217BB40;
       iVar1 = param_1;
       do {
-        auStack_50[0] = 0;
+        auStack_50 = 0;
         iVar1 = fn_82FF2D40(dVar4,iVar1,param_3,*(undefined4 *)(param_1 + 0xc),
-                                  *(byte *)(param_1 + 0x3d) >> 7,auStack_50);
+                                  *(byte *)(param_1 + 0x3d) >> 7,&auStack_50);
         uVar3 = uVar3 + 1 & 0xffff;
       } while (uVar3 < (uVar2 & 0xffff));
     }

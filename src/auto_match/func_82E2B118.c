@@ -27,8 +27,8 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_82E4FE40();
 extern int fn_82E50BE8();
-extern int fn_82F68CC0();
-extern int fn_82F691F0();
+extern int memcpy();
+extern int memset();
 
 
 undefined8 fn_82E2B118(int param_1,ulonglong param_2)
@@ -46,14 +46,14 @@ undefined8 fn_82E2B118(int param_1,ulonglong param_2)
     }
     lVar1 = fn_82E50BE8(lVar1,0,0,0,0);
     if (lVar1 != 0) {
-      fn_82F68CC0(lVar1,*(undefined4 *)(param_1 + 0x24),*(int *)(param_1 + 0x2c) << 5);
+      memcpy(lVar1,*(undefined4 *)(param_1 + 0x24),*(int *)(param_1 + 0x2c) << 5);
       if (*(int *)(param_1 + 0x24) != 0) {
         fn_82E4FE40();
       }
       *(int *)(param_1 + 0x24) = (int)lVar1;
       *(int *)(param_1 + 0x28) = (int)param_2;
                     /* WARNING: Subroutine does not return */
-      fn_82F691F0(((ulonglong)*(uint *)(param_1 + 0x2c) & 0x7ffffff) * 0x20 + lVar1,0,
+      memset(((ulonglong)*(uint *)(param_1 + 0x2c) & 0x7ffffff) * 0x20 + lVar1,0,
                    (param_2 - *(uint *)(param_1 + 0x2c) & 0x7ffffff) << 5);
     }
     uVar2 = 0xffffffff8007000e;

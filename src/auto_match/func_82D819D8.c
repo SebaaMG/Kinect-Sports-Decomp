@@ -41,7 +41,7 @@ void fn_82D819D8(int param_1,int param_2)
   undefined4 uVar6;
   undefined4 uVar7;
   undefined4 uVar8;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
   
   puVar2 = (undefined4 *)(param_1 + 0x10U & 0xfffffff0);
   uVar6 = puVar2[1];

@@ -25,7 +25,7 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F63CA0();
+extern int memmove();
 
 
 undefined8 fn_82E67238(undefined8 param_1,uint *param_2,int param_3)
@@ -41,14 +41,14 @@ undefined8 fn_82E67238(undefined8 param_1,uint *param_2,int param_3)
   else {
     if (param_3 != 0) {
       uVar3 = param_2[0x12] + 7;
-      fn_82F63CA0((ulonglong)*param_2,(ulonglong)param_2[3],
+      memmove((ulonglong)*param_2,(ulonglong)param_2[3],
                    (((longlong)((int)uVar3 >> 3) + (ulonglong)((int)uVar3 < 0 && (uVar3 & 7) != 0))
                    - (ulonglong)param_2[3]) + (ulonglong)param_2[9]);
       uVar3 = param_2[4];
       if (uVar3 <= param_2[0x1e]) {
-        fn_82F63CA0(param_2[1],uVar3,
+        memmove(param_2[1],uVar3,
                      ((longlong)((int)(param_2[0x1e] - uVar3) >> 2) + 1U & 0x3fffffff) << 2);
-        fn_82F63CA0(param_2[2],param_2[5],
+        memmove(param_2[2],param_2[5],
                      ((longlong)((int)(param_2[0x1f] - param_2[5]) >> 2) + 1U & 0x3fffffff) << 2);
       }
     }

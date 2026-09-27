@@ -54,8 +54,8 @@ void fn_8309A540(undefined8 param_1,int param_2)
   int iVar3;
   undefined4 *puVar4;
   int iVar5;
-  int iStack_f0;
-  uint uStack_ec;
+  struct { int first; uint second; } stack_pair_f0;
+
   uint uStack_e8;
   undefined1 auStack_e0 [16];
   undefined4 uStack_d0;
@@ -65,7 +65,7 @@ void fn_8309A540(undefined8 param_1,int param_2)
   undefined4 uStack_c0;
   undefined4 uStack_bc;
   undefined4 uStack_b8;
-  undefined1 auStack_a0 [160];
+  undefined1 auStack_a0 [144];
   
   iVar2 = KeTlsGetValue(lbl_8323B4A0);
   puVar4 = *(undefined4 **)(iVar2 + 4);
@@ -88,27 +88,27 @@ void fn_8309A540(undefined8 param_1,int param_2)
     iVar5 = 0;
     do {
       iVar3 = iVar5 + *(int *)(param_2 + 0x38);
-      iStack_f0 = *(int *)(iVar3 + 0x20);
-      uStack_ec = 0;
+      stack_pair_f0.first = *(int *)(iVar3 + 0x20);
+      stack_pair_f0.second = 0;
       uStack_e8 = 0x80001000;
-      fn_82DCB000(auStack_a0,auStack_e0,iVar3,&iStack_f0);
+      fn_82DCB000(auStack_a0,auStack_e0,iVar3,&stack_pair_f0.first);
       iVar3 = fn_82CE5410();
-      if (uStack_ec == (uStack_e8 & 0x3fffffff)) {
-        fn_82CE63B0(*(undefined4 *)(iVar3 + 0x10),&iStack_f0,4);
+      if (stack_pair_f0.second == (uStack_e8 & 0x3fffffff)) {
+        fn_82CE63B0(*(undefined4 *)(iVar3 + 0x10),&stack_pair_f0.first,4);
       }
-      puVar4 = (undefined4 *)(uStack_ec * 4 + iStack_f0);
+      puVar4 = (undefined4 *)(stack_pair_f0.second * 4 + stack_pair_f0.first);
       if (puVar4 != (undefined4 *)0x0) {
         *puVar4 = 0xffffffff;
       }
-      uStack_ec = uStack_ec + 1;
+      stack_pair_f0.second = stack_pair_f0.second + 1;
       iVar3 = fn_82CE5410();
-      uStack_ec = 0;
+      stack_pair_f0.second = 0;
       if ((uStack_e8 & 0x80000000) == 0) {
         (**(code **)(**(int **)(iVar3 + 0x10) + 0x10))
-                  (*(int **)(iVar3 + 0x10),iStack_f0,uStack_e8 & 0x3fffffff,4);
+                  (*(int **)(iVar3 + 0x10),stack_pair_f0.first,uStack_e8 & 0x3fffffff,4);
       }
       iVar2 = iVar2 + 1;
-      iStack_f0 = 0;
+      stack_pair_f0.first = 0;
       iVar5 = iVar5 + 0x30;
       uStack_e8 = 0x80000000;
     } while (iVar2 < *(int *)(param_2 + 0x3c));

@@ -35,7 +35,7 @@ longlong fn_82F3C920(int param_1)
   int iVar3;
   int *piStack_30;
   int *piStack_2c;
-  int aiStack_28 [10];
+  int aiStack_28;
   
   piVar1 = *(int **)(param_1 + 0x54);
   *(undefined4 *)(param_1 + 0x50) = 0;
@@ -53,10 +53,10 @@ longlong fn_82F3C920(int param_1)
       lVar2 = (**(code **)(*piStack_2c + 0x14))();
       if (-1 < lVar2) {
         while (iVar3 = (**(code **)(*piStack_2c + 0xc))(piStack_2c,1,&piStack_30,0), iVar3 == 0) {
-          aiStack_28[0] = 0;
-          lVar2 = (**(code **)(*piStack_30 + 0x20))(piStack_30,aiStack_28);
+          aiStack_28 = 0;
+          lVar2 = (**(code **)(*piStack_30 + 0x20))(piStack_30,&aiStack_28);
           if (lVar2 < 0) break;
-          if (aiStack_28[0] == 0) {
+          if (aiStack_28 == 0) {
             *(int *)(param_1 + 0x50) = *(int *)(param_1 + 0x50) + 1;
           }
           if (piStack_30 != (int *)0x0) {

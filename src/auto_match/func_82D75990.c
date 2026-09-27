@@ -42,8 +42,8 @@ void fn_82D75990(int param_1,int param_2,int param_3,undefined4 param_4,undefine
 {
   undefined1 auStack_c0 [8];
   undefined1 auStack_b8 [24];
-  int iStack_a0;
-  int iStack_9c;
+  struct { int first; int second; } stack_pair_a0;
+
   undefined4 uStack_98;
   undefined4 uStack_94;
   undefined4 uStack_90;
@@ -51,11 +51,11 @@ void fn_82D75990(int param_1,int param_2,int param_3,undefined4 param_4,undefine
   
   uStack_90 = *(undefined4 *)(param_1 + 8);
   uStack_98 = 0;
-  iStack_a0 = param_2;
-  iStack_9c = param_3;
+  stack_pair_a0.first = param_2;
+  stack_pair_a0.second = param_3;
   uStack_94 = param_4;
   fn_82CE6820(auStack_80,*(undefined4 *)(param_2 + 8),*(undefined4 *)(param_3 + 8));
-  fn_82DD9BD0(&iStack_a0,auStack_c0,auStack_b8,param_1 + 0xc,param_1 + 0x30,param_1 + 0x20,
+  fn_82DD9BD0(&stack_pair_a0.first,auStack_c0,auStack_b8,param_1 + 0xc,param_1 + 0x30,param_1 + 0x20,
                     param_5);
   return;
 }

@@ -33,8 +33,7 @@ extern unsigned int iStack00000014;
 
 
 undefined8
-fn_82C818C8(int param_1,int param_2,int *param_3,undefined8 param_4,undefined8 param_5,
-             undefined8 param_6,undefined8 param_7,undefined8 param_8)
+fn_82C818C8(int param_1, int param_2, int *param_3, undefined8 param_4, undefined8 param_5, undefined8 param_6, undefined8 param_7, undefined8 param_8, int in_stack_00000054, int in_stack_0000005c, int in_stack_00000064, int in_stack_0000006c, int in_stack_00000074, undefined4 in_stack_0000007c, undefined4 in_stack_00000084)
 
 {
   bool bVar1;
@@ -48,13 +47,13 @@ fn_82C818C8(int param_1,int param_2,int *param_3,undefined8 param_4,undefined8 p
   uint uVar9;
   undefined4 uVar10;
   int iStack00000014;
-  int in_stack_00000054;
-  int in_stack_0000005c;
-  int in_stack_00000064;
-  int in_stack_0000006c;
-  int in_stack_00000074;
-  undefined4 in_stack_0000007c;
-  undefined4 in_stack_00000084;
+
+
+
+
+
+
+
   
   uVar9 = *(uint *)(param_2 + 0x10);
   uVar6 = (ulonglong)uVar9;

@@ -25,8 +25,8 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F6FA38();
-extern int fn_82F81040();
+extern int _getptd();
+extern int __InternalCxxFrameHandler();
 
 
 undefined8
@@ -36,10 +36,10 @@ fn_82F69510(undefined4 *param_1,undefined4 param_2,undefined8 param_3,undefined8
 {
   int iVar1;
   
-  iVar1 = fn_82F6FA38();
+  iVar1 = _getptd();
   *(undefined4 *)(iVar1 + 0xb0) = param_2;
-  fn_82F81040(*param_1,param_3,param_4,param_5,param_6,0,0,1);
-  iVar1 = fn_82F6FA38();
+  __InternalCxxFrameHandler(*param_1,param_3,param_4,param_5,param_6,0,0,1);
+  iVar1 = _getptd();
   *(undefined4 *)(iVar1 + 0xb0) = 0;
   *param_7 = 1;
   return 1;

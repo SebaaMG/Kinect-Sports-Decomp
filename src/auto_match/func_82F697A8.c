@@ -25,10 +25,10 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F6FA38();
+extern int _getptd();
 
 
-int * fn_82F697A8(int *param_1,int *param_2)
+int * _CreateFrameInfo(int *param_1,int *param_2)
 
 {
   int iVar1;
@@ -45,9 +45,9 @@ int * fn_82F697A8(int *param_1,int *param_2)
   *param_1 = 0;
 code_r0x82f6982c:
   param_1[1] = iVar1;
-  iVar1 = fn_82F6FA38();
+  iVar1 = _getptd();
   param_1[2] = *(int *)(iVar1 + 0x94);
-  iVar1 = fn_82F6FA38();
+  iVar1 = _getptd();
   *(int **)(iVar1 + 0x94) = param_1;
   return param_1;
 }

@@ -38,7 +38,7 @@ void fn_82E661E8(int param_1,undefined4 param_2)
   int *piVar1;
   int iVar2;
   undefined4 uStack_20;
-  undefined4 auStack_1c [3];
+  undefined4 auStack_1c;
   
   piVar1 = *(int **)(param_1 + 0x18);
   *(undefined4 *)(param_1 + 0x1c) = param_2;
@@ -49,9 +49,9 @@ void fn_82E661E8(int param_1,undefined4 param_2)
     }
   }
   else {
-    auStack_1c[0] = 0;
+    auStack_1c = 0;
     uStack_20 = 0;
-    iVar2 = (**(code **)(*piVar1 + 0xc))(piVar1,auStack_1c,&uStack_20);
+    iVar2 = (**(code **)(*piVar1 + 0xc))(piVar1,&auStack_1c,&uStack_20);
     if (iVar2 < 0) {
       uStack_20 = 1;
     }

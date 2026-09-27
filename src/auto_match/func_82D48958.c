@@ -44,7 +44,7 @@ char * fn_82D48958(char *param_1,int param_2,undefined8 param_3,int param_4)
   longlong lVar7;
   int *piVar8;
   char acStack_260 [16];
-  undefined1 auStack_250 [592];
+  undefined1 auStack_250 [512];
   
   iVar5 = KeTlsGetValue(lbl_8323B4A0);
   puVar1 = *(undefined4 **)(iVar5 + 4);

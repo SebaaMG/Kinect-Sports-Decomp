@@ -45,7 +45,7 @@ undefined8 fn_82EF3818(int param_1)
   int iStack_38;
   int iStack_34;
   int iStack_30;
-  int aiStack_2c [11];
+  int aiStack_2c;
   
   uVar2 = 0;
   if (*(int *)(param_1 + 0x264) != 0) {
@@ -67,9 +67,9 @@ undefined8 fn_82EF3818(int param_1)
       if (*(int *)(iStack_30 + 0x10) != 0) {
         fn_82E4FE40();
       }
-      fn_82EF2CB8(iVar1,uVar2,aiStack_2c);
+      fn_82EF2CB8(iVar1,uVar2,&aiStack_2c);
       uVar2 = uVar2 + 1;
-      *(undefined4 *)(aiStack_2c[0] + 0x10) = 0;
+      *(undefined4 *)(aiStack_2c + 0x10) = 0;
     } while ((uVar2 & 0xffffffff) < (ulonglong)*(uint *)(param_1 + 0x264));
   }
   fn_82EE0A68(param_1 + 0x58,0);

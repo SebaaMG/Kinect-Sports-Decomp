@@ -50,23 +50,23 @@ void fn_82CE75A8(undefined8 param_1,undefined8 param_2,undefined4 *param_3)
   int iVar7;
   longlong lVar8;
   double dVar9;
-  uint uStack_80;
-  int iStack_7c;
+  struct { uint first; int second; } stack_pair_80;
+
   uint uStack_78;
   undefined4 uStack_74;
   undefined4 uStack_70;
   undefined4 uStack_6c;
   
   lVar8 = 0;
-  uStack_80 = 0;
-  iStack_7c = 0;
+  stack_pair_80.first = 0;
+  stack_pair_80.second = 0;
   uStack_78 = 0;
   uStack_74 = 0;
   uStack_70 = 0;
   uStack_6c = 0;
-  (**(code **)(*(int *)*param_3 + 0x28))((int *)*param_3,&uStack_80);
-  iVar2 = iStack_7c;
-  fn_82CE7340(0xffffffff82132b78,param_2,&uStack_80,param_3[8]);
+  (**(code **)(*(int *)*param_3 + 0x28))((int *)*param_3,&stack_pair_80.first);
+  iVar2 = stack_pair_80.second;
+  fn_82CE7340(0xffffffff82132b78,param_2,&stack_pair_80.first,param_3[8]);
   fn_82CEDE90(param_2,0xffffffff82132b54);
   lVar5 = 0;
   lVar6 = 0;
@@ -107,18 +107,18 @@ void fn_82CE75A8(undefined8 param_1,undefined8 param_2,undefined4 *param_3)
   }
   fn_82CEDE90(param_2,0xffffffff82132b14,uVar3);
   iVar4 = fn_82CE5410();
-  (**(code **)(**(int **)(iVar4 + 0x18) + 0x28))(*(int **)(iVar4 + 0x18),&uStack_80);
+  (**(code **)(**(int **)(iVar4 + 0x18) + 0x28))(*(int **)(iVar4 + 0x18),&stack_pair_80.first);
   fn_82CEDE90(param_2,0xffffffff82132a90,0xffffffff82132abc);
-  fn_82CEDE90(param_2,0xffffffff82132a70,uStack_80);
+  fn_82CEDE90(param_2,0xffffffff82132a70,stack_pair_80.first);
   fn_82CEDE90(param_2,0xffffffff82132954,uStack_78,
-                    (double)((float)((double)uStack_78 * dVar9) / (float)uStack_80));
+                    (double)((float)((double)uStack_78 * dVar9) / (float)stack_pair_80.first));
   iVar4 = fn_82CE5410();
-  (**(code **)(**(int **)(iVar4 + 0x14) + 0x28))(*(int **)(iVar4 + 0x14),&uStack_80);
-  if (iVar2 == iStack_7c) {
+  (**(code **)(**(int **)(iVar4 + 0x14) + 0x28))(*(int **)(iVar4 + 0x14),&stack_pair_80.first);
+  if (iVar2 == stack_pair_80.second) {
     fn_82CEDE90(param_2,0xffffffff82132aa4);
   }
   else {
-    fn_82CE7340(0xffffffff82132a98,param_2,&uStack_80,0x7fffffff);
+    fn_82CE7340(0xffffffff82132a98,param_2,&stack_pair_80.first,0x7fffffff);
   }
   return;
 }

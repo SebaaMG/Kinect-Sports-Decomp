@@ -32,8 +32,8 @@ typedef struct { U64 lo, hi; } V16;
 extern int fn_82E57888();
 extern int fn_82EF1D58();
 extern int fn_82F64CE0();
-extern int fn_82F68CC0();
-extern int fn_82F691F0();
+extern int memcpy();
+extern int memset();
 extern unsigned int lbl_82154BB8;
 extern unsigned int lbl_82154BBC;
 extern unsigned int lbl_82154BBE;
@@ -99,7 +99,7 @@ undefined8 fn_82EF24C0(int *param_1,int param_2,uint param_3,uint *param_4)
                              CONCAT22(*(ushort *)(param_1 + 5) << 8 | *(ushort *)(param_1 + 5) >> 8,
                                       *(ushort *)((int)param_1 + 0x16) << 8 |
                                       *(ushort *)((int)param_1 + 0x16) >> 8));
-        fn_82F68CC0(param_2,&uStack_90,0x10);
+        memcpy(param_2,&uStack_90,0x10);
         uVar4 = *(ulonglong *)(param_1 + 8);
         uStack_90 = ((((U64)(uStack_90)) & (~(((U64)0xFFFFFFFF) << 32))) | ((((U64)((uint)uVar4)) & ((U64)0xFFFFFFFF)) << 32));
         uStack_90 = ((((U64)(uStack_90)) & (~(((U64)0xFFFFFFFF) << 0))) | ((((U64)((uint)(uVar4 >> 0x20))) & ((U64)0xFFFFFFFF)) << 0));
@@ -117,7 +117,7 @@ undefined8 fn_82EF24C0(int *param_1,int param_2,uint param_3,uint *param_4)
                                       lbl_82154BB8 >> 8 & 0xff00 | lbl_82154BB8 >> 0x18,
                                       lbl_82154BBC << 8 | lbl_82154BBC >> 8),
                              lbl_82154BBE << 8 | lbl_82154BBE >> 8);
-        fn_82F68CC0(param_2 + 0x18,&uStack_90,0x10);
+        memcpy(param_2 + 0x18,&uStack_90,0x10);
         lVar5 = 0;
         *(uint *)(param_2 + 0x28) =
              (uint)*(byte *)((int)param_1 + 0x3bb) << 0x18 |
@@ -171,7 +171,7 @@ undefined8 fn_82EF24C0(int *param_1,int param_2,uint param_3,uint *param_4)
             fn_82E57888(apuStack_a0,uStack_58,uStack_54 << 1);
           }
                     /* WARNING: Subroutine does not return */
-          fn_82F691F0(apuStack_a0[0],0,(ulonglong)uStack_50);
+          memset(apuStack_a0[0],0,(ulonglong)uStack_50);
         }
         uVar2 = 0;
       }

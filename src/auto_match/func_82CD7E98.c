@@ -28,8 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 extern int fn_82CD7760();
 
 
-void fn_82CD7E98(undefined8 param_1,undefined8 param_2,int param_3,int param_4,undefined8 param_5,
-                  undefined8 param_6,undefined8 param_7,int param_8)
+void fn_82CD7E98(undefined8 param_1, undefined8 param_2, int param_3, int param_4, undefined8 param_5, undefined8 param_6, undefined8 param_7, int param_8, undefined8 unused_arg_9, undefined8 unused_arg_10, undefined8 unused_arg_11, uint in_stack_0000006c, undefined8 unused_arg_13, int in_stack_0000007c, int in_stack_00000084)
 
 {
   undefined1 uVar1;
@@ -44,9 +43,9 @@ void fn_82CD7E98(undefined8 param_1,undefined8 param_2,int param_3,int param_4,u
   uint uVar10;
   longlong lVar11;
   longlong lVar12;
-  uint in_stack_0000006c;
-  int in_stack_0000007c;
-  int in_stack_00000084;
+
+
+
   
   uVar10 = in_stack_0000006c;
   if ((in_stack_0000006c ^ (int)in_stack_0000006c >> 0x1f) - ((int)in_stack_0000006c >> 0x1f) != 1)

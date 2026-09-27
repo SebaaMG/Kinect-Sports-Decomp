@@ -40,10 +40,10 @@ void fn_82C2AEC0(int param_1,ulonglong param_2,ulonglong param_3,undefined4 *par
   ulonglong uVar4;
   longlong lVar5;
   ulonglong *puVar6;
-  ulonglong *apuStack_40 [16];
+  ulonglong * apuStack_40;
   
   iVar1 = *(int *)(param_1 + 0x2c);
-  apuStack_40[0] = (ulonglong *)0x0;
+  apuStack_40 = (ulonglong *)0x0;
   if (param_2 < *(ulonglong *)(iVar1 + 0x28)) {
     iVar3 = -0x7faffff8;
   }
@@ -60,26 +60,26 @@ void fn_82C2AEC0(int param_1,ulonglong param_2,ulonglong param_3,undefined4 *par
       iVar3 = -0x7fafff2c;
     }
     else {
-      iVar3 = fn_82C10AD0(*(undefined4 *)(iVar1 + 0x30),0x1f,0x30,apuStack_40);
+      iVar3 = fn_82C10AD0(*(undefined4 *)(iVar1 + 0x30),0x1f,0x30,&apuStack_40);
       if (iVar3 < 0) goto LAB_82c2b004;
-      puVar6 = apuStack_40[0] + -1;
+      puVar6 = apuStack_40 + -1;
       lVar5 = 6;
       do {
         puVar6 = puVar6 + 1;
         *puVar6 = 0;
         lVar5 = lVar5 + -1;
       } while (lVar5 != 0);
-      *apuStack_40[0] = param_2;
-      *(int *)((int)apuStack_40[0] + 0x1c) = (int)param_3;
-      *(undefined4 *)(apuStack_40[0] + 4) = *(undefined4 *)((int)apuStack_40[0] + 0x1c);
-      *(undefined4 *)(apuStack_40[0] + 3) = 0;
+      *apuStack_40 = param_2;
+      *(int *)((int)apuStack_40 + 0x1c) = (int)param_3;
+      *(undefined4 *)(apuStack_40 + 4) = *(undefined4 *)((int)apuStack_40 + 0x1c);
+      *(undefined4 *)(apuStack_40 + 3) = 0;
       iVar3 = fn_82C10AD0(*(undefined4 *)(iVar1 + 0x30),0x1f,
-                                *(undefined4 *)((int)apuStack_40[0] + 0x1c),
-                                (int)apuStack_40[0] + 0x2c);
-      if (((iVar3 < 0) || (iVar3 = fn_82C2A470(param_1,apuStack_40[0]), iVar3 < 0)) ||
-         (iVar3 = fn_82C2AA40(param_1,param_2,param_3,apuStack_40[0]), iVar3 < 0))
+                                *(undefined4 *)((int)apuStack_40 + 0x1c),
+                                (int)apuStack_40 + 0x2c);
+      if (((iVar3 < 0) || (iVar3 = fn_82C2A470(param_1,apuStack_40), iVar3 < 0)) ||
+         (iVar3 = fn_82C2AA40(param_1,param_2,param_3,apuStack_40), iVar3 < 0))
       goto LAB_82c2b004;
-      *param_4 = apuStack_40[0];
+      *param_4 = apuStack_40;
     }
   }
   if (-1 < iVar3) {
@@ -87,7 +87,7 @@ void fn_82C2AEC0(int param_1,ulonglong param_2,ulonglong param_3,undefined4 *par
   }
 LAB_82c2b004:
   do {
-    iVar3 = fn_82C10B28(*(undefined4 *)(iVar1 + 0x30),0x1f,apuStack_40);
+    iVar3 = fn_82C10B28(*(undefined4 *)(iVar1 + 0x30),0x1f,&apuStack_40);
   } while (iVar3 < 0);
   return;
 }

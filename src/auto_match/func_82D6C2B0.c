@@ -45,11 +45,11 @@ void fn_82D6C2B0(int param_1,undefined4 *param_2,undefined8 param_3,undefined8 p
   int *piVar4;
   ulonglong uVar5;
   undefined4 *puVar6;
-  undefined4 uStack_260;
-  undefined4 uStack_25c;
+  struct { undefined4 first; undefined4 second; } stack_pair_260;
+
   undefined4 uStack_258;
   undefined4 *puStack_254;
-  undefined1 auStack_250 [592];
+  undefined1 auStack_250 [512];
   
   iVar3 = KeTlsGetValue(lbl_8323B4A0);
   puVar6 = *(undefined4 **)(iVar3 + 4);
@@ -66,9 +66,9 @@ void fn_82D6C2B0(int param_1,undefined4 *param_2,undefined8 param_3,undefined8 p
   puStack_254 = param_2;
   while (uVar5 = uVar5 - 1, -1 < (longlong)uVar5) {
     uVar1 = *puVar6;
-    uStack_260 = (**(code **)(*piVar4 + 0x14))(piVar4,uVar1,auStack_250);
-    uStack_25c = uVar1;
-    (**(code **)(*(int *)puVar6[1] + 0xc))((int *)puVar6[1],&uStack_260,param_3,param_4,param_5);
+    stack_pair_260.first = (**(code **)(*piVar4 + 0x14))(piVar4,uVar1,auStack_250);
+    stack_pair_260.second = uVar1;
+    (**(code **)(*(int *)puVar6[1] + 0xc))((int *)puVar6[1],&stack_pair_260.first,param_3,param_4,param_5);
     if (*(char *)(param_5 + 4) != '\0') break;
     puVar6 = puVar6 + 2;
   }

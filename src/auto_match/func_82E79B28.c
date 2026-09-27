@@ -40,7 +40,7 @@ undefined8 fn_82E79B28(int param_1)
   uint uVar3;
   ulonglong uVar4;
   uint uStack_30;
-  uint auStack_2c [11];
+  uint auStack_2c;
   
   iVar2 = fn_82E76C40();
   uVar4 = 0;
@@ -49,9 +49,9 @@ undefined8 fn_82E79B28(int param_1)
     do {
       lVar1 = fn_82E78690(param_1 + 0x178,uVar4,&uStack_30);
       *(int *)((-(uint)(lVar1 != 0) & uStack_30) + 0x13) = iVar2;
-      lVar1 = fn_82E78690(param_1 + 0x178,uVar4,auStack_2c);
+      lVar1 = fn_82E78690(param_1 + 0x178,uVar4,&auStack_2c);
       uVar4 = uVar4 + 1;
-      iVar2 = *(int *)((-(uint)(lVar1 != 0) & auStack_2c[0]) + 0x17) + iVar2;
+      iVar2 = *(int *)((-(uint)(lVar1 != 0) & auStack_2c) + 0x17) + iVar2;
     } while ((uVar4 & 0xffffffff) < (ulonglong)*(uint *)(param_1 + 0x1e0));
   }
   uVar3 = fn_82E798F8(param_1);

@@ -79,8 +79,8 @@ void fn_82D87B28(int param_1,undefined8 param_2,undefined8 param_3,int param_4)
   undefined4 in_vr12;
   uint uStack_90;
   int iStack_8c;
-  int iStack_88;
-  uint uStack_84;
+  struct { int first; uint second; } stack_pair_88;
+
   uint uStack_80;
   undefined4 uStack_78;
   undefined4 uStack_74;
@@ -155,8 +155,8 @@ void fn_82D87B28(int param_1,undefined8 param_2,undefined8 param_3,int param_4)
   }
   if (param_4 != 0) goto LAB_82d87ee0;
   iVar4 = *(int *)(param_1 + 0x20);
-  iStack_88 = 0;
-  uStack_84 = 0;
+  stack_pair_88.first = 0;
+  stack_pair_88.second = 0;
   lVar9 = (ulonglong)*(uint *)(param_1 + 0x38) + (ulonglong)*(uint *)(param_1 + 0x2c) + 1;
   uStack_80 = 0x80000000;
   uStack_90 = (uint)lVar9;
@@ -210,11 +210,11 @@ LAB_82d87d20:
           iVar2 = *(int *)(iVar4 + 0x48);
           if (*(int *)(*(int *)(iVar2 + iVar14) + 0x10) != 0) {
             iVar8 = fn_82CE5410();
-            if (uStack_84 == (uStack_80 & 0x3fffffff)) {
-              fn_82CE63B0(*(undefined4 *)(iVar8 + 0x10),&iStack_88,4);
+            if (stack_pair_88.second == (uStack_80 & 0x3fffffff)) {
+              fn_82CE63B0(*(undefined4 *)(iVar8 + 0x10),&stack_pair_88.first,4);
             }
-            *(undefined4 *)(uStack_84 * 4 + iStack_88) = *(undefined4 *)(iVar2 + iVar14);
-            uStack_84 = uStack_84 + 1;
+            *(undefined4 *)(stack_pair_88.second * 4 + stack_pair_88.first) = *(undefined4 *)(iVar2 + iVar14);
+            stack_pair_88.second = stack_pair_88.second + 1;
           }
           iVar6 = iVar6 + 1;
           iVar14 = iVar14 + 4;
@@ -224,19 +224,19 @@ LAB_82d87d20:
       piVar12 = piVar12 + 1;
     } while (uVar11 != 0);
   }
-  fn_82DBA1E0(*(undefined4 *)(param_1 + 0x78),iStack_88,uStack_84);
+  fn_82DBA1E0(*(undefined4 *)(param_1 + 0x78),stack_pair_88.first,stack_pair_88.second);
   iVar4 = fn_82CE5410();
   if ((uVar13 & 0x80000000) == 0) {
     (**(code **)(**(int **)(iVar4 + 0x10) + 0x10))
               (*(int **)(iVar4 + 0x10),piVar7,uVar13 & 0x3fffffff,4);
   }
   iVar4 = fn_82CE5410();
-  uStack_84 = 0;
+  stack_pair_88.second = 0;
   if ((uStack_80 & 0x80000000) == 0) {
     (**(code **)(**(int **)(iVar4 + 0x10) + 0x10))
-              (*(int **)(iVar4 + 0x10),iStack_88,uStack_80 & 0x3fffffff,4);
+              (*(int **)(iVar4 + 0x10),stack_pair_88.first,uStack_80 & 0x3fffffff,4);
   }
-  iStack_88 = 0;
+  stack_pair_88.first = 0;
   uStack_80 = 0x80000000;
 LAB_82d87ee0:
   lVar9 = (ulonglong)*(uint *)(param_1 + 0x94) - 1;

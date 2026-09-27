@@ -26,18 +26,18 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_82311AB8();
-extern int fn_82F69290();
+extern int _CxxThrowException();
 extern unsigned int lbl_82167E64;
 
 
 void fn_82F622E0(undefined8 param_1)
 
 {
-  undefined **appuStack_20 [8];
+  undefined **appuStack_20 [4];
   
   fn_82311AB8(appuStack_20,param_1);
   appuStack_20[0] = &lbl_82167E64;
                     /* WARNING: Subroutine does not return */
-  fn_82F69290(appuStack_20,0xffffffff821dda18);
+  _CxxThrowException(appuStack_20,0xffffffff821dda18);
 }
 

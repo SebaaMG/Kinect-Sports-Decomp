@@ -42,7 +42,7 @@ void fn_82DF8E40(undefined8 param_1,int *param_2)
   int iVar8;
   int *piVar9;
   undefined1 auStack_70 [4];
-  int aiStack_6c [27];
+  int aiStack_6c;
   
   if (param_2[4] == 0) {
     iVar4 = -1;
@@ -64,7 +64,7 @@ void fn_82DF8E40(undefined8 param_1,int *param_2)
         iVar6 = iVar4 << 2;
         iVar7 = iVar4 + 1;
         do {
-          aiStack_6c[0] = 0;
+          aiStack_6c = 0;
           if ((iVar8 != 0) &&
              ((*(int *)(iVar8 + 0x18) != iVar2 ||
               (*(int *)(iVar8 + 0x1c) < (int)piVar9 + (-0x10 - (int)piVar1))))) {
@@ -79,8 +79,8 @@ void fn_82DF8E40(undefined8 param_1,int *param_2)
               iVar8 = 0;
             }
           }
-          fn_82DF8C10(param_1,piVar9,iVar8,0,aiStack_6c,auStack_70);
-          piVar9 = (int *)(aiStack_6c[0] + (int)piVar9);
+          fn_82DF8C10(param_1,piVar9,iVar8,0,&aiStack_6c,auStack_70);
+          piVar9 = (int *)(aiStack_6c + (int)piVar9);
         } while (piVar9 < piVar5);
       }
       iVar2 = iVar2 + 1;

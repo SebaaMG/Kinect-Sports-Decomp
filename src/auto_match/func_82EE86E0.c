@@ -38,11 +38,11 @@ longlong fn_82EE86E0(int param_1)
   longlong lVar2;
   int iVar3;
   int iVar4;
-  int *apiStack_40 [16];
+  int * apiStack_40;
   
   iVar4 = 0;
-  apiStack_40[0] = (int *)0x0;
-  lVar2 = fn_82E66280(param_1,param_1 + 8,0,apiStack_40);
+  apiStack_40 = (int *)0x0;
+  lVar2 = fn_82E66280(param_1,param_1 + 8,0,&apiStack_40);
   if (-1 < lVar2) {
     iVar3 = param_1 + 0x5c;
     fn_82E50CB8(iVar3);
@@ -50,7 +50,7 @@ longlong fn_82EE86E0(int param_1)
     if (0 < iVar1) {
       do {
         lVar2 = (**(code **)(**(int **)(param_1 + 0xa0) + 0x14))
-                          (*(int **)(param_1 + 0xa0),apiStack_40[0]);
+                          (*(int **)(param_1 + 0xa0),apiStack_40);
         if (lVar2 < 0) {
           fn_82E50F10(iVar3);
           goto LAB_82ee876c;
@@ -62,8 +62,8 @@ longlong fn_82EE86E0(int param_1)
     fn_82A1E650(*(undefined4 *)(*(int *)(param_1 + 0xa0) + 0x40),0x28);
   }
 LAB_82ee876c:
-  if (apiStack_40[0] != (int *)0x0) {
-    (**(code **)(*apiStack_40[0] + 8))();
+  if (apiStack_40 != (int *)0x0) {
+    (**(code **)(*apiStack_40 + 8))();
   }
   return lVar2;
 }

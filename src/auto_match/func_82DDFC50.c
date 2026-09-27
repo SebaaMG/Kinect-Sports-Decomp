@@ -65,7 +65,7 @@ void fn_82DDFC50(undefined8 param_1,ulonglong param_2,longlong param_3)
   double dVar18;
   double dVar19;
   undefined1 uStack_2c0;
-  uint auStack_28c [163];
+  uint auStack_28c [139];
   
   uVar14 = ZEXT48(&stack0x00000000);
   iVar8 = fn_82F6A548();

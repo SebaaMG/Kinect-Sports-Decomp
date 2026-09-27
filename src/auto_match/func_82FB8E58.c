@@ -42,7 +42,7 @@ void fn_82FB8E58(int param_1)
   uint uVar4;
   char cVar6;
   int iVar5;
-  char acStack_30 [48];
+  char acStack_30;
   
   sVar1 = *(short *)(param_1 + 0x2a);
   if (sVar1 < 2) {
@@ -54,7 +54,7 @@ void fn_82FB8E58(int param_1)
         *(undefined1 *)(param_1 + 0x18) = 1;
         *(undefined4 *)(param_1 + 0x10) = 0;
         if (*(int *)(param_1 + 8) != *(int *)(param_1 + 4)) {
-          acStack_30[0] = '\x01';
+          acStack_30 = '\x01';
           piVar3 = (int *)fn_82FB7CC8(param_1,*(undefined4 *)(*(int *)(param_1 + 8) + -0xc));
           do {
             if (piVar3 == (int *)0x0) {
@@ -65,14 +65,14 @@ void fn_82FB8E58(int param_1)
             uVar2 = *(uint *)(*(int *)(*(int *)(param_1 + 8) + -0xc) + 0x1c);
             if (uVar2 < 4) {
               if ((uVar2 == 0) || (uVar2 == 1)) {
-                uVar4 = fn_82FB8420(param_1,iVar5,acStack_30);
+                uVar4 = fn_82FB8420(param_1,iVar5,&acStack_30);
               }
               else {
-                uVar4 = fn_82FB8808(param_1,iVar5,acStack_30);
+                uVar4 = fn_82FB8808(param_1,iVar5,&acStack_30);
               }
             }
-            cVar6 = acStack_30[0];
-            if (acStack_30[0] == '\0') {
+            cVar6 = acStack_30;
+            if (acStack_30 == '\0') {
               piVar3 = *(int **)((uVar4 & 0xffff) * 4 + piVar3[4]);
               cVar6 = (**(code **)(*piVar3 + 4))(piVar3);
               if (cVar6 != '\0') break;
@@ -88,7 +88,7 @@ void fn_82FB8E58(int param_1)
                 }
               }
               cVar6 = '\x01';
-              acStack_30[0] = '\x01';
+              acStack_30 = '\x01';
             }
             else {
               iVar5 = piVar3[1];

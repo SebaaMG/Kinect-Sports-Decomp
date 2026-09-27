@@ -44,7 +44,7 @@ fn_83066C10(double param_1,longlong param_2,undefined8 param_3,undefined8 param_
   int iVar2;
   double dVar3;
   double dVar4;
-  undefined1 auStack_60 [16];
+  undefined1 auStack_60 [1];
   undefined1 auStack_50 [80];
   
   fn_82810328(param_4,param_3,auStack_60);

@@ -47,7 +47,7 @@ void fn_830545B0(int param_1,ulonglong param_2)
   int iStack_78;
   ulonglong *puStack_74;
   undefined8 uStack_70;
-  ulonglong auStack_68 [13];
+  ulonglong auStack_68 [5];
   
   acStack_80[0] = '\x01';
   puVar5 = *(ulonglong **)(param_1 + 0xb0);

@@ -37,7 +37,7 @@ undefined8 fn_8304E098(int *param_1)
   int iVar2;
   undefined8 uVar1;
   uint *puVar3;
-  uint auStack_30 [12];
+  uint auStack_30;
   
   puVar3 = (uint *)(param_1 + 0xf);
   iVar2 = (**(code **)(*(int *)param_1[10] + 0x2c))((int *)param_1[10],param_1 + 0xd,puVar3,0);
@@ -51,11 +51,11 @@ undefined8 fn_8304E098(int *param_1)
     }
     *(undefined1 *)((int)param_1 + 0x41) = 0;
     if ((*(byte *)(param_1[2] + 0xdb) & 0x80) != 0) {
-      uVar1 = fn_8304DD90(param_1,auStack_30);
+      uVar1 = fn_8304DD90(param_1,&auStack_30);
       if ((int)uVar1 != 1) {
         return uVar1;
       }
-      if (*puVar3 <= auStack_30[0]) {
+      if (*puVar3 <= auStack_30) {
         iVar2 = fn_8304DE60(param_1);
         if (iVar2 == 1) {
           (**(code **)(*(int *)param_1[10] + 0x30))();
@@ -64,7 +64,7 @@ undefined8 fn_8304E098(int *param_1)
         }
         goto LAB_8304e100;
       }
-      param_1[0x15] = auStack_30[0];
+      param_1[0x15] = auStack_30;
     }
     fn_8304DF58(param_1);
     uVar1 = 1;

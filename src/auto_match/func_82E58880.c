@@ -34,13 +34,13 @@ undefined8 fn_82E58880(int param_1)
 
 {
   uint uVar1;
-  int *apiStack_30 [12];
+  int * apiStack_30;
   
   if (*(int *)(param_1 + 0xb0) != 0) {
     uVar1 = 0;
     do {
-      fn_82E57B08(param_1 + 0x48,uVar1,apiStack_30);
-      if (*apiStack_30[0] != 0) {
+      fn_82E57B08(param_1 + 0x48,uVar1,&apiStack_30);
+      if (*apiStack_30 != 0) {
         fn_82E4FE40();
       }
       uVar1 = uVar1 + 1 & 0xffff;

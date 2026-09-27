@@ -40,8 +40,8 @@ undefined8 fn_82C490D8(int param_1)
 
 {
   undefined8 uVar1;
-  undefined4 uStack_90;
-  int iStack_8c;
+  struct { undefined4 first; int second; } stack_pair_90;
+
   undefined4 uStack_88;
   undefined4 uStack_84;
   undefined4 uStack_80;
@@ -57,14 +57,14 @@ undefined8 fn_82C490D8(int param_1)
           ((*(uint *)(param_1 + 0x5614) & 1) != 0)) {
     uStack_70 = *(undefined4 *)(param_1 + 0xe84);
     iStack_74 = (int)*(double *)(param_1 + 0x5438);
-    uStack_90 = *(undefined4 *)(param_1 + 0x5610);
+    stack_pair_90.first = *(undefined4 *)(param_1 + 0x5610);
     uStack_80 = *(undefined4 *)(param_1 + 0xf7c);
     uStack_7c = *(undefined4 *)(param_1 + 0x55ac);
     uStack_78 = *(undefined4 *)(param_1 + 0x5568);
     uStack_88 = *(undefined4 *)(param_1 + 0xb148);
     uStack_84 = 0;
-    iStack_8c = param_1;
-    uVar1 = (**(code **)(*(int *)(param_1 + 0x6070) + 0xc0))(&uStack_90);
+    stack_pair_90.second = param_1;
+    uVar1 = (**(code **)(*(int *)(param_1 + 0x6070) + 0xc0))(&stack_pair_90.first);
   }
   else {
     uVar1 = 0;

@@ -30,7 +30,7 @@ extern int fn_82CE5410();
 extern int fn_82CE6310();
 extern int fn_82DFEA50();
 extern int fn_82DFEB38();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 int fn_82DFEC58(int param_1,int param_2)
@@ -96,14 +96,14 @@ int fn_82DFEC58(int param_1,int param_2)
     lVar11 = (uVar7 * 0xe0 + (ulonglong)*(uint *)(param_2 + 0x48)) - uVar9;
     do {
       if ((uVar9 & 0xffffffff) != 0) {
-        fn_82F68CC0(uVar9,lVar11 + uVar9,0xe0);
+        memcpy(uVar9,lVar11 + uVar9,0xe0);
       }
       lVar10 = lVar10 + -1;
       uVar9 = uVar9 + 0xe0;
     } while (lVar10 != 0);
   }
   *(uint *)(param_1 + 0x4c) = uVar6;
-  fn_82F68CC0(param_1 + 0x54,param_2 + 0x54,0x48);
+  memcpy(param_1 + 0x54,param_2 + 0x54,0x48);
   puVar14 = (undefined4 *)(param_1 + 0xa0);
   *(undefined4 *)(param_1 + 0x9c) = *(undefined4 *)(param_2 + 0x9c);
   iVar4 = fn_82CE5410();

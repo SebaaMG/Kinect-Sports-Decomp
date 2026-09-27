@@ -51,7 +51,7 @@ undefined8 fn_82E10AF8(undefined8 param_1,ulonglong param_2,int *param_3,ulonglo
   uint *puVar3;
   undefined8 uVar2;
   int iVar4;
-  char acStack_9f [15];
+  char acStack_9f;
   undefined1 auStack_90 [16];
   undefined4 uStack_80;
   undefined4 uStack_7c;
@@ -79,8 +79,8 @@ undefined8 fn_82E10AF8(undefined8 param_1,ulonglong param_2,int *param_3,ulonglo
       if (iVar4 == 0) break;
       uVar1 = fn_82CEAC20(iVar4);
       uVar1 = fn_82D001D8(auStack_90,uVar1);
-      fn_82D002F0(acStack_9f,auStack_90,uVar1);
-      if (acStack_9f[0] == '\0') {
+      fn_82D002F0(&acStack_9f,auStack_90,uVar1);
+      if (acStack_9f == '\0') {
         uVar1 = fn_82CEAC20(iVar4);
         fn_82D000A0(auStack_90,uVar1,1);
         puVar3 = (uint *)fn_82CEB3C8(iVar4);

@@ -43,30 +43,30 @@ undefined8 fn_82C23C10(int param_1,longlong param_2)
   longlong lVar2;
   undefined8 uVar3;
   ulonglong uVar4;
-  ushort auStack_b0 [2];
+  ushort auStack_b0;
   undefined4 uStack_ac;
   ushort *puStack_a8;
   uint uStack_a4;
   undefined4 uStack_a0;
-  undefined4 uStack_9c;
-  undefined4 uStack_98;
+  struct { undefined4 first; undefined4 second; } stack_pair_9c;
+
   
   piVar1 = *(int **)(param_1 + 0x1c);
   uVar4 = param_2 - 0x18;
-  uStack_9c = 0;
+  stack_pair_9c.first = 0;
   uStack_a4 = 0;
   puStack_a8 = (ushort *)0x0;
   uStack_ac = 0;
-  uStack_98 = 0;
+  stack_pair_9c.second = 0;
   uStack_a0 = (undefined4)uVar4;
-  auStack_b0[0] = 0;
+  auStack_b0 = 0;
   uVar3 = (**(code **)(*piVar1 + 0xc))(*piVar1,uVar4);
   if (-1 < (int)uVar3) {
     if ((uVar4 & 0xffffffff) < 2) {
       uVar3 = 0xffffffff8050000c;
     }
     else {
-      uVar3 = fn_82C1E938(param_1,auStack_b0,&uStack_9c,&uStack_a4,&uStack_a0);
+      uVar3 = fn_82C1E938(param_1,&auStack_b0,&stack_pair_9c.first,&uStack_a4,&uStack_a0);
       if ((-1 < (int)uVar3) &&
          (uVar3 = fn_82C10AD0(piVar1[0x38],0xb,8,&puStack_a8), -1 < (int)uVar3)) {
         puStack_a8[0] = 0;
@@ -75,8 +75,8 @@ undefined8 fn_82C23C10(int param_1,longlong param_2)
         puStack_a8[3] = 0;
         *(ushort **)((*(short *)(piVar1[1] + 0x48) + 0x21) * 4 + piVar1[1]) = puStack_a8;
         *(short *)(piVar1[1] + 0x48) = *(short *)(piVar1[1] + 0x48) + 1;
-        *puStack_a8 = auStack_b0[0];
-        if ((ulonglong)auStack_b0[0] == 0) {
+        *puStack_a8 = auStack_b0;
+        if ((ulonglong)auStack_b0 == 0) {
           uVar4 = (uVar4 - uStack_a4) - 2;
           if ((uVar4 != 0) &&
              (uVar3 = (**(code **)(*piVar1 + 0x14))(*piVar1,uVar4), -1 < (int)uVar3)) {
@@ -84,7 +84,7 @@ undefined8 fn_82C23C10(int param_1,longlong param_2)
           }
         }
         else {
-          lVar2 = (ulonglong)auStack_b0[0] << 3;
+          lVar2 = (ulonglong)auStack_b0 << 3;
           uVar3 = fn_82C10AD0(piVar1[0x38],0xb,lVar2,puStack_a8 + 2);
           if (-1 < (int)uVar3) {
                     /* WARNING: Subroutine does not return */

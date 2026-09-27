@@ -66,7 +66,7 @@ undefined8 fn_83097E18(undefined8 param_1,int param_2)
   undefined4 uVar8;
   undefined4 uStack_1c0;
   undefined4 uStack_1bc;
-  undefined4 auStack_1b8 [2];
+  undefined4 auStack_1b8;
   undefined4 uStack_1b0;
   undefined4 uStack_1ac;
   undefined4 *puStack_1a0;
@@ -115,8 +115,8 @@ undefined8 fn_83097E18(undefined8 param_1,int param_2)
   uStack_1bc = *(undefined4 *)(param_2 + 0x58);
   uStack_1c0 = *(undefined4 *)(param_2 + 0x20);
   puStack_170 = auStack_150;
-  auStack_1b8[0] = 1;
-  iVar5 = fn_83086A30(&puStack_1a0,&uStack_1c0,*(undefined4 *)(param_2 + 0x24),auStack_1b8,
+  auStack_1b8 = 1;
+  iVar5 = fn_83086A30(&puStack_1a0,&uStack_1c0,*(undefined4 *)(param_2 + 0x24),&auStack_1b8,
                             &uStack_1bc);
   **(int **)(param_2 + 0x50) = iVar5 + 2;
   uVar4 = fn_82CE8E78(param_1,param_2,param_2,0);

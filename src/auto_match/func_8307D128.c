@@ -86,15 +86,15 @@ void fn_8307D128(undefined8 param_1,int param_2,undefined8 param_3,undefined8 pa
   undefined4 uStack_b0;
   undefined4 uStack_ac;
   undefined4 uStack_a8;
-  float fStack_a0;
-  float fStack_9c;
+  struct { float first; float second; } stack_pair_a0;
+
   float fStack_98;
   float fStack_94;
   undefined1 auStack_90 [4];
   float fStack_8c;
   undefined1 auStack_80 [4];
   float fStack_7c;
-  undefined1 auStack_70 [112];
+  undefined1 auStack_70 [16];
   
   fn_8306D698(auStack_90,*(undefined4 *)(param_2 + 0xb0),0xe);
   fn_8306D698(auStack_80,*(undefined4 *)(param_2 + 0xb0),0x12);
@@ -119,14 +119,14 @@ void fn_8307D128(undefined8 param_1,int param_2,undefined8 param_3,undefined8 pa
   dVar5 = (double)lbl_82002C5C;
   fStack_94 = lbl_82002C5C;
   fStack_98 = lbl_82002C5C;
-  fStack_9c = lbl_82002C5C;
-  fStack_a0 = lbl_82002C5C;
+  stack_pair_a0.second = lbl_82002C5C;
+  stack_pair_a0.first = lbl_82002C5C;
   altv207_13(in_vs32,in_vs40);
   fn_8306D698(&uStack_b0,*(undefined4 *)(param_2 + 0xb0),0x11);
   fStack_94 = (float)dVar5;
   fStack_98 = (float)dVar5;
-  fStack_9c = (float)dVar5;
-  fStack_a0 = (float)dVar5;
+  stack_pair_a0.second = (float)dVar5;
+  stack_pair_a0.first = (float)dVar5;
   fn_8306D698(auStack_70,*(undefined4 *)(param_2 + 0xb0),0xd);
   altv207_13(in_vs32,in_vs35);
   altv207_13(in_vs32,in_vs43);
@@ -139,7 +139,7 @@ void fn_8307D128(undefined8 param_1,int param_2,undefined8 param_3,undefined8 pa
   fn_8307BE10(uVar3,param_1,&uStack_b0,param_2,1);
   fn_83079670(param_1,dVar5,param_2 + 0x88,&uStack_b0);
   fn_83078890(*(undefined4 *)(*(int *)(param_2 + 0xb4) + 0x70b0),1);
-  puVar1 = (undefined4 *)fn_8307BE10(uVar3,param_1,&fStack_a0,param_2,0);
+  puVar1 = (undefined4 *)fn_8307BE10(uVar3,param_1,&stack_pair_a0.first,param_2,0);
   uStack_b0 = *puVar1;
   uStack_ac = puVar1[1];
   uStack_a8 = puVar1[2];

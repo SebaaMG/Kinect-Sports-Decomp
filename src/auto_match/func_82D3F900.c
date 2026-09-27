@@ -45,7 +45,7 @@ undefined4 * fn_82D3F900(double param_1,undefined4 *param_2,undefined4 *param_3,
   undefined4 uVar9;
   undefined4 uVar10;
   undefined4 uVar11;
-  int aiStack_40 [16];
+  int aiStack_40;
   
   param_2[4] = (float)param_1;
   param_2[2] = 0;
@@ -68,10 +68,10 @@ undefined4 * fn_82D3F900(double param_1,undefined4 *param_2,undefined4 *param_3,
     if ((param_2[0x17] & 0x80000000) == 0) {
       (**(code **)(*piVar1 + 0x10))(piVar1,*piVar8,uVar2,0x10);
     }
-    aiStack_40[0] = param_4[1];
-    iVar5 = (**(code **)(*piVar1 + 0xc))(piVar1,aiStack_40,0x10);
+    aiStack_40 = param_4[1];
+    iVar5 = (**(code **)(*piVar1 + 0xc))(piVar1,&aiStack_40,0x10);
     *piVar8 = iVar5;
-    param_2[0x17] = aiStack_40[0];
+    param_2[0x17] = aiStack_40;
   }
   uVar2 = param_4[1];
   uVar6 = (ulonglong)uVar2;

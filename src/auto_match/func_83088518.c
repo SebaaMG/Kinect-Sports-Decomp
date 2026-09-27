@@ -33,7 +33,7 @@ void fn_83088518(int param_1,int *param_2,longlong param_3,int *param_4)
 {
   int *piVar1;
   char *pcVar2;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [1];
   
   while (param_3 = param_3 + -1, -1 < param_3) {
     pcVar2 = (char *)(**(code **)(*param_4 + 4))

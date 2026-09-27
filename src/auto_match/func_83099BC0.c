@@ -34,7 +34,7 @@ double fn_83099BC0(int param_1,int *param_2)
   float fVar1;
   int iVar2;
   char *pcVar3;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
   
   iVar2 = *param_2;
   if ((iVar2 != 0) && (*(int **)(param_1 + 0x20) != param_2)) {

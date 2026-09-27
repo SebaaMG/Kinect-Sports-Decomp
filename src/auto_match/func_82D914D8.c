@@ -46,7 +46,7 @@ void fn_82D914D8(int param_1,int param_2,int *param_3)
   int *piStack_a0;
   int iStack_9c;
   uint uStack_98;
-  int aiStack_94 [37];
+  int aiStack_94 [17];
   
   iVar4 = *(int *)(param_2 + 0xcc);
   piStack_a0 = aiStack_94;

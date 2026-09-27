@@ -51,7 +51,7 @@ void fn_82F58770(int param_1,int *param_2,int param_3,undefined8 param_4)
   longlong lVar3;
   int *piStack0000001c;
   int *piStack_b40;
-  int aiStack_b3c [3];
+  int aiStack_b3c;
   undefined **ppuStack_b30;
   int iStack_b2c;
   undefined ***pppuStack_b20;
@@ -66,8 +66,8 @@ void fn_82F58770(int param_1,int *param_2,int param_3,undefined8 param_4)
   piStack0000001c = param_2;
   piStack_b40 = piVar1;
   if (piVar1 != (int *)0x0) {
-    fn_82F56D40(aiStack_b3c,param_1,&piStack_b40);
-    if (aiStack_b3c[0] == *(int *)(param_1 + 4)) {
+    fn_82F56D40(&aiStack_b3c,param_1,&piStack_b40);
+    if (aiStack_b3c == *(int *)(param_1 + 4)) {
       pppuStack_b20 = &ppuStack_b30;
       ppuStack_b30 = &lbl_82165F1C;
       iStack_b2c = param_1;

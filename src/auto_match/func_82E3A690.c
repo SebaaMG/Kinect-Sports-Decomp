@@ -49,7 +49,7 @@ undefined8 fn_82E3A690(undefined8 param_1,int *param_2,int *param_3,longlong par
   undefined4 uStack_4c;
   undefined4 uStack_48;
   undefined4 uStack_44;
-  longlong alStack_40 [8];
+  longlong alStack_40;
   
   if ((param_2 == (int *)0x0) || (param_3 == (int *)0x0)) {
     uVar1 = 0xffffffff80004003;
@@ -70,15 +70,15 @@ undefined8 fn_82E3A690(undefined8 param_1,int *param_2,int *param_3,longlong par
       if ((-1 < iVar2) && (uVar4 = 0, uStack_50 != 0)) {
         while (iVar2 = (**(code **)(*param_2 + 0x40))(param_2,uVar4,&piStack_60),
               piVar3 = piStack_60, -1 < iVar2) {
-          alStack_40[0] = 0;
-          iVar2 = (**(code **)(*param_2 + 0x4c))(param_2,piStack_60,alStack_40);
+          alStack_40 = 0;
+          iVar2 = (**(code **)(*param_2 + 0x4c))(param_2,piStack_60,&alStack_40);
           piVar3 = piStack_60;
           if (iVar2 < 0) break;
           uStack_4c = 0;
           iVar2 = (**(code **)(*piStack_5c + 0xc))(piStack_5c,&uStack_4c,0,0);
           piVar3 = piStack_60;
           if ((iVar2 < 0) ||
-             (iVar2 = (**(code **)(*param_3 + 0x1c))(param_3,alStack_40[0] + param_4),
+             (iVar2 = (**(code **)(*param_3 + 0x1c))(param_3,alStack_40 + param_4),
              piVar3 = piStack_60, iVar2 < 0)) break;
           uStack_48 = 0;
           iVar2 = (**(code **)(*param_3 + 0x24))(param_3,uStack_4c,uStack_54,&uStack_48);

@@ -25,7 +25,7 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F68CC0();
+extern int memcpy();
 extern int fn_82FA5060();
 extern int fn_82FA5190();
 extern int fn_82FFE0F0();
@@ -50,7 +50,7 @@ void fn_82FFA510(longlong param_1,undefined8 param_2,char *param_3)
     } while (*pcVar3 != '\0');
     iVar1 = fn_82FA5060(lbl_831BC768,pcVar4 + (4 - (int)param_3));
     if (iVar1 != 0) {
-      fn_82F68CC0(iVar1,param_3,pcVar4 + (-1 - (int)param_3));
+      memcpy(iVar1,param_3,pcVar4 + (-1 - (int)param_3));
       builtin_strncpy(pcVar3 + iVar1 + (-1 - (int)param_3) + 1,".bnk",5);
       piVar2 = (int *)fn_82FFE158(param_1 + 0x41c,param_2);
       if (piVar2 == (int *)0x0) {

@@ -36,20 +36,20 @@ void fn_82D6AF68(int param_1,int *param_2,undefined8 param_3,undefined8 param_4,
 
 {
   int iVar1;
-  undefined4 uStack_90;
-  undefined4 uStack_8c;
+  struct { undefined4 first; undefined4 second; } stack_pair_90;
+
   undefined1 *puStack_88;
   int *piStack_84;
-  undefined1 auStack_80 [128];
+  undefined1 auStack_80 [64];
   
   iVar1 = *param_2;
   fn_82CE6768(auStack_80,param_2[2],iVar1 + 0x30);
   puStack_88 = auStack_80;
-  uStack_90 = *(undefined4 *)(iVar1 + 0x14);
-  uStack_8c = 0;
+  stack_pair_90.first = *(undefined4 *)(iVar1 + 0x14);
+  stack_pair_90.second = 0;
   piStack_84 = param_2;
   (**(code **)(**(int **)(param_1 + 0xc) + 0x14))
-            (*(int **)(param_1 + 0xc),&uStack_90,param_3,param_4,param_5,param_6);
+            (*(int **)(param_1 + 0xc),&stack_pair_90.first,param_3,param_4,param_5,param_6);
   return;
 }
 

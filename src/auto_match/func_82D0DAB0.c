@@ -53,8 +53,8 @@ undefined8 fn_82D0DAB0(int param_1,undefined4 *param_2,int param_3,undefined4 *p
   undefined4 uVar8;
   undefined4 uVar9;
   undefined4 uVar10;
-  uint uStack_60;
-  int iStack_5c;
+  struct { uint first; int second; } stack_pair_60;
+
   uint uStack_58;
   undefined4 uStack_50;
   undefined4 uStack_4c;
@@ -67,8 +67,8 @@ undefined8 fn_82D0DAB0(int param_1,undefined4 *param_2,int param_3,undefined4 *p
   else {
     puVar7 = (undefined4 *)*param_2;
     iVar5 = param_2[1];
-    uStack_60 = 0;
-    iStack_5c = 0;
+    stack_pair_60.first = 0;
+    stack_pair_60.second = 0;
     uStack_58 = 0x80000000;
     iVar4 = fn_82CE5410();
     if ((int)(uStack_58 & 0x3fffffff) < iVar5) {
@@ -76,7 +76,7 @@ undefined8 fn_82D0DAB0(int param_1,undefined4 *param_2,int param_3,undefined4 *p
       if (iVar6 <= iVar5) {
         iVar6 = iVar5;
       }
-      fn_82CE6310(*(undefined4 *)(iVar4 + 0x10),&uStack_60,iVar6,0x10);
+      fn_82CE6310(*(undefined4 *)(iVar4 + 0x10),&stack_pair_60.first,iVar6,0x10);
     }
     iVar4 = 0;
     if (0 < (int)param_2[1]) {
@@ -91,7 +91,7 @@ undefined8 fn_82D0DAB0(int param_1,undefined4 *param_2,int param_3,undefined4 *p
         uVar8 = puVar1[1];
         uVar9 = puVar1[2];
         uVar10 = puVar1[3];
-        puVar2 = (undefined4 *)(iVar6 + uStack_60 & 0xfffffff0);
+        puVar2 = (undefined4 *)(iVar6 + stack_pair_60.first & 0xfffffff0);
         *puVar2 = *puVar1;
         puVar2[1] = uVar8;
         puVar2[2] = uVar9;
@@ -114,14 +114,14 @@ undefined8 fn_82D0DAB0(int param_1,undefined4 *param_2,int param_3,undefined4 *p
     puVar1[1] = uVar8;
     puVar1[2] = uVar9;
     puVar1[3] = uVar10;
-    iStack_5c = iVar5;
-    uVar3 = fn_82D18590(*(undefined4 *)(param_1 + 8),-(uint)(iVar5 != 0) & uStack_60,iVar5,1,0
+    stack_pair_60.second = iVar5;
+    uVar3 = fn_82D18590(*(undefined4 *)(param_1 + 8),-(uint)(iVar5 != 0) & stack_pair_60.first,iVar5,1,0
                              );
     iVar5 = fn_82CE5410();
-    iStack_5c = 0;
+    stack_pair_60.second = 0;
     if ((uStack_58 & 0x80000000) == 0) {
       (**(code **)(**(int **)(iVar5 + 0x10) + 0x10))
-                (*(int **)(iVar5 + 0x10),uStack_60,uStack_58 & 0x3fffffff,0x10);
+                (*(int **)(iVar5 + 0x10),stack_pair_60.first,uStack_58 & 0x3fffffff,0x10);
     }
   }
   return uVar3;

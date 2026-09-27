@@ -117,7 +117,7 @@ void fn_82DEF548(undefined8 param_1,longlong param_2,int param_3)
   undefined4 uStack_90;
   undefined1 uStack_8c;
   undefined1 uStack_89;
-  undefined1 auStack_80 [128];
+  undefined1 auStack_80 [1];
   
   iVar6 = (int)in_r0;
   pfVar2 = (float *)(iVar6 + param_3 & 0xfffffff0);

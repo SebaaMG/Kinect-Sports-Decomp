@@ -39,11 +39,11 @@ longlong fn_82F1B2D8(int param_1,undefined2 *param_2,short *param_3,int param_4)
   int iVar4;
   longlong lVar5;
   undefined4 uStack_40;
-  undefined4 auStack_3c [15];
+  undefined4 auStack_3c;
   
   sVar1 = *param_3;
   lVar5 = 0;
-  auStack_3c[0] = 0;
+  auStack_3c = 0;
   uStack_40 = 0;
   if (param_4 < 4) {
     if (2 < sVar1) {
@@ -53,7 +53,7 @@ longlong fn_82F1B2D8(int param_1,undefined2 *param_2,short *param_3,int param_4)
         do {
           lVar2 = fn_82F2A8A8(param_1,puVar3[3],puVar3[2],
                                *(undefined4 *)((*(int *)(param_1 + 0x4e48) + 0x138b) * 4 + param_1),
-                               auStack_3c,&uStack_40);
+                               &auStack_3c,&uStack_40);
           iVar4 = iVar4 + 2;
           lVar5 = lVar2 + lVar5;
           puVar3 = puVar3 + 2;
@@ -61,7 +61,7 @@ longlong fn_82F1B2D8(int param_1,undefined2 *param_2,short *param_3,int param_4)
       }
       lVar2 = fn_82F2A8A8(param_1,(param_2 + iVar4)[1],param_2[iVar4],
                            *(undefined4 *)((*(int *)(param_1 + 0x4e48) + 0x138e) * 4 + param_1),
-                           auStack_3c,&uStack_40);
+                           &auStack_3c,&uStack_40);
       return lVar2 + lVar5;
     }
   }
@@ -72,7 +72,7 @@ longlong fn_82F1B2D8(int param_1,undefined2 *param_2,short *param_3,int param_4)
       do {
         lVar2 = fn_82F2A8A8(param_1,puVar3[3],puVar3[2],
                              *(undefined4 *)((*(int *)(param_1 + 0x4e44) + 0x1385) * 4 + param_1),
-                             auStack_3c,&uStack_40);
+                             &auStack_3c,&uStack_40);
         iVar4 = iVar4 + 2;
         lVar5 = lVar2 + lVar5;
         puVar3 = puVar3 + 2;
@@ -80,7 +80,7 @@ longlong fn_82F1B2D8(int param_1,undefined2 *param_2,short *param_3,int param_4)
     }
     lVar2 = fn_82F2A8A8(param_1,(param_2 + iVar4)[1],param_2[iVar4],
                          *(undefined4 *)((*(int *)(param_1 + 0x4e44) + 5000) * 4 + param_1),
-                         auStack_3c,&uStack_40);
+                         &auStack_3c,&uStack_40);
     return lVar2 + lVar5;
   }
   return 0;

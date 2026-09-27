@@ -41,7 +41,7 @@ fn_82D48058(double param_1,double param_2,undefined4 *param_3,undefined8 param_4
   ulonglong uVar5;
   undefined2 *puVar6;
   undefined4 *puVar7;
-  int aiStack_40 [16];
+  int aiStack_40;
   
   fn_82D465A8(param_3,param_4,1);
   *param_3 = &lbl_821354F4;
@@ -57,10 +57,10 @@ fn_82D48058(double param_1,double param_2,undefined4 *param_3,undefined8 param_4
     if ((param_3[0x1a] & 0x80000000) == 0) {
       (**(code **)(*piVar1 + 0x10))(piVar1,*puVar7,uVar2,2);
     }
-    aiStack_40[0] = param_5[1];
-    uVar4 = (**(code **)(*piVar1 + 0xc))(piVar1,aiStack_40,2);
+    aiStack_40 = param_5[1];
+    uVar4 = (**(code **)(*piVar1 + 0xc))(piVar1,&aiStack_40,2);
     *puVar7 = uVar4;
-    param_3[0x1a] = aiStack_40[0];
+    param_3[0x1a] = aiStack_40;
   }
   uVar2 = param_5[1];
   uVar5 = (ulonglong)uVar2;

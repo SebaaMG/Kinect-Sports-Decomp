@@ -73,8 +73,8 @@ void fn_82C89170(int param_1)
   int iStack_a4;
   int iStack_a0;
   int iStack_9c;
-  int iStack_90;
-  int iStack_8c;
+  struct { int first; int second; } stack_pair_90;
+
   int iStack_88;
   int iStack_84;
   int iStack_80;
@@ -129,14 +129,14 @@ void fn_82C89170(int param_1)
   iStack_88 = *(int *)(puVar6 + 2) * 0x10 + (iStack_80 >> 1);
   lVar13 = 2;
   iStack_74 = *(int *)(puVar6 + 0x14) * 8 + *(int *)(puVar6 + 0x12) * 0x10;
-  iStack_90 = *(int *)puVar6 * 0x10 + (iStack_88 >> 1);
+  stack_pair_90.first = *(int *)puVar6 * 0x10 + (iStack_88 >> 1);
   iStack_a0 = *(int *)(puVar6 + 6) * 0x10 + (iStack_a8 >> 1);
   iStack_9c = *(int *)(puVar6 + 0x12) * 0x10 + (iStack_a4 >> 1);
-  iStack_8c = *(int *)(puVar6 + 0xc) * 0x10 + (iStack_84 >> 1);
+  stack_pair_90.second = *(int *)(puVar6 + 0xc) * 0x10 + (iStack_84 >> 1);
   iStack_6c = (*(int *)(puVar6 + 0x14) * 2 + *(int *)(puVar6 + 0x16)) * 8;
   psVar12 = asStack_c0;
   iStack_d0 = *(int *)(param_1 + 0x2c) + -2;
-  piVar11 = &iStack_90;
+  piVar11 = &stack_pair_90.first;
   aiStack_cc[0] = *(int *)(param_1 + 0x28) + -2;
   bVar9 = false;
   do {

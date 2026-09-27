@@ -42,7 +42,7 @@ fn_82F7F760(undefined8 *param_1,ulonglong param_2,ulonglong param_3,ulonglong pa
   undefined8 uVar1;
   longlong lVar3;
   int aiStack_50 [4];
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [16];
   
   fn_82F86888(*param_1,aiStack_50,auStack_40,0x16);
   if (((param_2 & 0xffffffff) == 0) || ((param_3 & 0xffffffff) == 0)) {

@@ -44,13 +44,13 @@ undefined8 fn_83015318(int param_1)
   int *piVar6;
   int iVar7;
   undefined4 *puVar8;
-  int iStack_50;
-  uint uStack_4c;
+  struct { int first; uint second; } stack_pair_50;
+
   int *piStack_48;
   
   piVar3 = (int *)(param_1 + 4);
-  fn_82FF4618(&iStack_50,piVar3);
-  uVar4 = uStack_4c;
+  fn_82FF4618(&stack_pair_50.first,piVar3);
+  uVar4 = stack_pair_50.second;
   piVar6 = piStack_48;
 joined_r0x83015340:
   if (piVar6 == (int *)0x0) {
@@ -106,7 +106,7 @@ joined_r0x83015340:
     do {
       uVar4 = uVar4 + 1;
       if (0x1e < uVar4) goto joined_r0x83015340;
-      piVar6 = *(int **)(uVar4 * 4 + iStack_50);
+      piVar6 = *(int **)(uVar4 * 4 + stack_pair_50.first);
     } while (piVar6 == (int *)0x0);
   } while( true );
 }

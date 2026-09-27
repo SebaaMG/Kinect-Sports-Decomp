@@ -51,7 +51,7 @@ void fn_8306AE10(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefi
   double dVar8;
   double dVar9;
   double dVar10;
-  undefined1 auStack_80 [16];
+  undefined1 auStack_80 [1];
   undefined1 auStack_70 [16];
   undefined1 auStack_60 [96];
   

@@ -26,7 +26,7 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_82CE52E0();
-extern int fn_82F672D8();
+extern int strncpy();
 
 
 int fn_82CFBF38(char *param_1,char *param_2,undefined8 param_3)
@@ -48,7 +48,7 @@ int fn_82CFBF38(char *param_1,char *param_2,undefined8 param_3)
   }
   iVar2 = fn_82CE52E0(param_3,pcVar4 + 1);
   if (pcVar4 != (char *)0x0) {
-    fn_82F672D8(iVar2,param_1,pcVar4);
+    strncpy(iVar2,param_1,pcVar4);
   }
   pcVar4[iVar2] = '\0';
   return iVar2;

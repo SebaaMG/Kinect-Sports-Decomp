@@ -28,7 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_210;
 extern int fn_82C41CA0();
 extern int fn_82C41E28();
-extern int fn_82F69148();
+extern int _blkmov();
 extern unsigned int lbl_820F9000;
 extern unsigned int lbl_820F9040;
 extern unsigned int uStack_200;
@@ -47,13 +47,13 @@ void fn_82C41F90(undefined8 param_1,int param_2,longlong param_3,int *param_4,ui
   int iVar4;
   int iVar5;
   undefined4 auStack_210 [2];
-  undefined4 uStack_208;
-  undefined4 uStack_204;
+  struct { undefined4 first; undefined4 second; } stack_pair_208;
+
   undefined4 uStack_200;
-  int aiStack_1f4 [125];
+  int aiStack_1f4 [105];
   
   uStack_200 = 0x40000000;
-  uStack_208 = 0x40000000;
+  stack_pair_208.first = 0x40000000;
   aiStack_1f4[2] = 0x8000000;
   auStack_210[0] = 2;
   aiStack_1f4[1] = 0x8000000;
@@ -61,8 +61,8 @@ void fn_82C41F90(undefined8 param_1,int param_2,longlong param_3,int *param_4,ui
   if (0 < (int)param_5) {
     iVar4 = 0;
     do {
-      uStack_204 = *(undefined4 *)(&lbl_820F9000 + ((uint)*(byte *)(iVar5 + param_2) + iVar4) * 4);
-      fn_82C41E28(param_1,&uStack_208,3,aiStack_1f4 + 1,auStack_210[0],aiStack_1f4 + 1,auStack_210
+      stack_pair_208.second = *(undefined4 *)(&lbl_820F9000 + ((uint)*(byte *)(iVar5 + param_2) + iVar4) * 4);
+      fn_82C41E28(param_1,&stack_pair_208.first,3,aiStack_1f4 + 1,auStack_210[0],aiStack_1f4 + 1,auStack_210
                    );
       iVar5 = iVar5 + 2;
       iVar4 = iVar4 + 0x20;
@@ -70,7 +70,7 @@ void fn_82C41F90(undefined8 param_1,int param_2,longlong param_3,int *param_4,ui
   }
   uVar3 = (longlong)((int)param_5 >> 1) + (ulonglong)((int)param_5 < 0 && (param_5 & 1) != 0);
   if (0 < (int)uVar3) {
-    fn_82F69148(param_3 + 4,aiStack_1f4 + 2,(uVar3 & 0x3fffffff) << 2);
+    _blkmov(param_3 + 4,aiStack_1f4 + 2,(uVar3 & 0x3fffffff) << 2);
   }
   iVar5 = 3;
   aiStack_1f4[1] = 0x8000000;
@@ -80,8 +80,8 @@ void fn_82C41F90(undefined8 param_1,int param_2,longlong param_3,int *param_4,ui
   if (3 < (int)param_5) {
     iVar4 = 0x30;
     do {
-      uStack_204 = *(undefined4 *)(&lbl_820F9000 + ((uint)*(byte *)(iVar5 + param_2) + iVar4) * 4);
-      fn_82C41CA0(param_1,&uStack_208,3,aiStack_1f4 + 1,auStack_210[0],aiStack_1f4 + 1,auStack_210
+      stack_pair_208.second = *(undefined4 *)(&lbl_820F9000 + ((uint)*(byte *)(iVar5 + param_2) + iVar4) * 4);
+      fn_82C41CA0(param_1,&stack_pair_208.first,3,aiStack_1f4 + 1,auStack_210[0],aiStack_1f4 + 1,auStack_210
                    );
       iVar5 = iVar5 + 2;
       iVar4 = iVar4 + 0x20;

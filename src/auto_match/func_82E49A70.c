@@ -41,30 +41,30 @@ extern unsigned int uStack_48;
 undefined8 fn_82E49A70(int param_1)
 
 {
-  undefined2 auStack_50 [4];
+  undefined2 auStack_50;
   undefined4 uStack_48;
-  undefined4 uStack_40;
-  undefined4 uStack_3c;
+  struct { undefined4 first; undefined4 second; } stack_pair_40;
+
   undefined4 uStack_38;
   undefined4 uStack_34;
   undefined4 uStack_30;
   
   uStack_48 = 5;
-  uStack_40 = lbl_8214C010;
-  auStack_50[0] = 3;
-  uStack_3c = lbl_8214C014;
+  stack_pair_40.first = lbl_8214C010;
+  auStack_50 = 3;
+  stack_pair_40.second = lbl_8214C014;
   uStack_38 = lbl_8214C018;
   uStack_34 = lbl_8214C01C;
   uStack_30 = 10;
-  (**(code **)(**(int **)(param_1 + 0xbc) + 0x18))(*(int **)(param_1 + 0xbc),&uStack_40,auStack_50);
+  (**(code **)(**(int **)(param_1 + 0xbc) + 0x18))(*(int **)(param_1 + 0xbc),&stack_pair_40.first,&auStack_50);
   uStack_48 = 100;
-  auStack_50[0] = 3;
+  auStack_50 = 3;
   uStack_30 = 0x11;
-  (**(code **)(**(int **)(param_1 + 0xbc) + 0x18))(*(int **)(param_1 + 0xbc),&uStack_40,auStack_50);
+  (**(code **)(**(int **)(param_1 + 0xbc) + 0x18))(*(int **)(param_1 + 0xbc),&stack_pair_40.first,&auStack_50);
   uStack_30 = 0x1c;
-  (**(code **)(**(int **)(param_1 + 0xbc) + 0x18))(*(int **)(param_1 + 0xbc),&uStack_40,auStack_50);
+  (**(code **)(**(int **)(param_1 + 0xbc) + 0x18))(*(int **)(param_1 + 0xbc),&stack_pair_40.first,&auStack_50);
   uStack_30 = 0x19;
-  (**(code **)(**(int **)(param_1 + 0xbc) + 0x18))(*(int **)(param_1 + 0xbc),&uStack_40,auStack_50);
+  (**(code **)(**(int **)(param_1 + 0xbc) + 0x18))(*(int **)(param_1 + 0xbc),&stack_pair_40.first,&auStack_50);
   return 0;
 }
 

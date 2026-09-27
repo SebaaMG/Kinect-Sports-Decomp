@@ -71,7 +71,7 @@ undefined8 fn_82C306A8(int *param_1,int param_2,longlong param_3)
   int *piStack00000014;
   uint uStack_b0;
   int iStack_ac;
-  uint auStack_a8 [42];
+  uint auStack_a8;
   
   iVar4 = *param_1;
   uVar9 = 0;
@@ -256,7 +256,7 @@ LAB_82c30a20:
           uVar11 = 0;
           uVar32 = uVar28;
           while (iVar29 != 0) {
-            uVar9 = fn_82C30370(piVar26,uVar31,auStack_a8);
+            uVar9 = fn_82C30370(piVar26,uVar31,&auStack_a8);
             if ((int)uVar9 < 0) {
               return uVar9;
             }
@@ -266,7 +266,7 @@ LAB_82c30a20:
             if (iVar29 < 0x19) {
               uVar31 = uVar32;
             }
-            uVar11 = (auStack_a8[0] | uVar11) << ((longlong)(int)uVar31 & 0x7fU);
+            uVar11 = (auStack_a8 | uVar11) << ((longlong)(int)uVar31 & 0x7fU);
           }
         }
         if (!bVar1) {

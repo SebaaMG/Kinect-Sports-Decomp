@@ -43,8 +43,8 @@ void fn_82DC4C80(undefined8 param_1,undefined8 param_2,int param_3)
   uint uVar2;
   undefined8 uVar3;
   int iVar4;
-  undefined4 uStack_40;
-  undefined4 uStack_3c;
+  struct { undefined4 first; undefined4 second; } stack_pair_40;
+
   undefined4 uStack_38;
   
   iVar4 = KeTlsGetValue(lbl_8323B4A0);
@@ -58,11 +58,11 @@ void fn_82DC4C80(undefined8 param_1,undefined8 param_2,int param_3)
   iVar4 = *(int *)(param_3 + 0x14);
   uVar2 = *(uint *)(param_3 + 0x18);
   *(byte *)(iVar4 + 0x25) = *(byte *)(iVar4 + 0x25) & 0x3f;
-  uStack_40 = 0;
-  uStack_3c = 0;
+  stack_pair_40.first = 0;
+  stack_pair_40.second = 0;
   uStack_38 = 0x80000000;
   fn_82DAF6C8(iVar4);
-  fn_82D91828(iVar4,*(undefined4 *)(iVar4 + 0x18),(ulonglong)uVar2 + 0x5c,&uStack_40);
+  fn_82D91828(iVar4,*(undefined4 *)(iVar4 + 0x18),(ulonglong)uVar2 + 0x5c,&stack_pair_40.first);
   iVar4 = KeTlsGetValue(lbl_8323B4A0);
   puVar1 = *(undefined4 **)(iVar4 + 4);
   if (puVar1 < *(undefined4 **)(iVar4 + 0xc)) {

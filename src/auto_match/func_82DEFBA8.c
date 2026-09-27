@@ -41,7 +41,7 @@ undefined1 * fn_82DEFBA8(undefined1 *param_1,int param_2,int param_3,int param_4
   int iVar6;
   int iVar7;
   longlong lVar8;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [16];
   
   if (*(char *)(param_3 + 0x18) == '\x01') {
     param_3 = *(char *)(param_3 + 0x10) + param_3;

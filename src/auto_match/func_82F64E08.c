@@ -25,9 +25,9 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F63BA0();
+extern int _invalid_parameter_noinfo();
 extern int fn_82F64D58();
-extern int fn_82F68240();
+extern int _errno();
 
 
 undefined4
@@ -60,7 +60,7 @@ fn_82F64E08(uint *param_1,undefined2 *param_2,uint param_3,undefined8 param_4,ui
       if (param_2 != (undefined2 *)0x0) {
         *param_2 = 0;
       }
-      puVar1 = (undefined4 *)fn_82F68240();
+      puVar1 = (undefined4 *)_errno();
       return *puVar1;
     }
     uVar3 = iVar2 + 1;
@@ -68,9 +68,9 @@ fn_82F64E08(uint *param_1,undefined2 *param_2,uint param_3,undefined8 param_4,ui
       if (param_3 < uVar3) {
         if (param_5 != 0xffffffff) {
           *param_2 = 0;
-          puVar1 = (undefined4 *)fn_82F68240();
+          puVar1 = (undefined4 *)_errno();
           *puVar1 = 0x22;
-          fn_82F63BA0();
+          _invalid_parameter_noinfo();
           return 0x22;
         }
         uVar4 = 0x50;
@@ -85,9 +85,9 @@ fn_82F64E08(uint *param_1,undefined2 *param_2,uint param_3,undefined8 param_4,ui
     return uVar4;
   }
 LAB_82f64e4c:
-  puVar1 = (undefined4 *)fn_82F68240();
+  puVar1 = (undefined4 *)_errno();
   *puVar1 = 0x16;
-  fn_82F63BA0();
+  _invalid_parameter_noinfo();
   return 0x16;
 }
 

@@ -33,7 +33,7 @@ double fn_83078FE8(undefined8 param_1)
 
 {
   int iVar1;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [64];
   
   iVar1 = fn_83078598(auStack_50,param_1);
   return (double)*(float *)(iVar1 + 0x34);

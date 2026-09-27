@@ -45,7 +45,7 @@ void fn_8300FB78(int param_1)
   int iVar5;
   char cVar6;
   int *piVar7;
-  undefined4 auStack_90 [36];
+  undefined4 auStack_90 [20];
   
   piVar7 = (int *)(param_1 + 0x50);
   piVar1 = *(int **)(param_1 + 0x50);

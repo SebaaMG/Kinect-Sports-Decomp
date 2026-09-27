@@ -35,11 +35,11 @@ void fn_82CE03A8(undefined4 *param_1)
   int iVar1;
   undefined4 uVar2;
   int iStack_20;
-  int aiStack_1c [3];
+  int aiStack_1c;
   
-  iVar1 = fn_82CE0340(2,&iStack_20,aiStack_1c);
+  iVar1 = fn_82CE0340(2,&iStack_20,&aiStack_1c);
   if (iVar1 == 0) {
-    if ((iStack_20 != 0) || (uVar2 = 1, aiStack_1c[0] != 0)) {
+    if ((iStack_20 != 0) || (uVar2 = 1, aiStack_1c != 0)) {
       uVar2 = 0;
     }
     *param_1 = uVar2;

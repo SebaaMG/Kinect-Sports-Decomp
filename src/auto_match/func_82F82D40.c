@@ -30,7 +30,7 @@ extern unsigned int lbl_831BBFD8;
 extern unsigned int lbl_831BBFDC;
 
 
-void fn_82F82D40(undefined4 param_1,undefined4 param_2,undefined4 param_3)
+void _NLG_Notify(undefined4 param_1,undefined4 param_2,undefined4 param_3)
 
 {
   lbl_831BBFD4 = param_1;

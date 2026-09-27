@@ -35,17 +35,17 @@ void fn_82EEA798(int param_1)
 {
   undefined4 *puVar1;
   int iVar2;
-  int *apiStack_30 [12];
+  int * apiStack_30;
   
   if (*(int *)(param_1 + 0x4c) == 0) {
     RtlEnterCriticalSection(param_1 + 0x54);
     iVar2 = *(int *)(param_1 + 0x50);
     if (iVar2 != 0) {
-      apiStack_30[0] = (int *)0x0;
-      while (iVar2 = fn_82EEA6E8(iVar2,apiStack_30), iVar2 != 0) {
-        if (apiStack_30[0] != (int *)0x0) {
-          (**(code **)(*apiStack_30[0] + 8))();
-          apiStack_30[0] = (int *)0x0;
+      apiStack_30 = (int *)0x0;
+      while (iVar2 = fn_82EEA6E8(iVar2,&apiStack_30), iVar2 != 0) {
+        if (apiStack_30 != (int *)0x0) {
+          (**(code **)(*apiStack_30 + 8))();
+          apiStack_30 = (int *)0x0;
         }
         iVar2 = *(int *)(param_1 + 0x50);
       }

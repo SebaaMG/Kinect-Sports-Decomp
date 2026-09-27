@@ -36,7 +36,7 @@ undefined8 fn_82EEE588(int param_1,short param_2,short *param_3,int param_4)
   undefined8 uVar3;
   int iVar4;
   ulonglong uVar5;
-  int aiStack_50 [20];
+  int aiStack_50;
   
   uVar2 = *(uint *)(param_1 + 0x70);
   uVar3 = 0;
@@ -48,25 +48,25 @@ undefined8 fn_82EEE588(int param_1,short param_2,short *param_3,int param_4)
     *param_3 = 0;
     if (uVar2 != 0) {
       do {
-        aiStack_50[0] = 0;
-        uVar3 = fn_82EEDD00(param_1,uVar5,aiStack_50);
+        aiStack_50 = 0;
+        uVar3 = fn_82EEDD00(param_1,uVar5,&aiStack_50);
         if ((int)uVar3 < 0) {
           return uVar3;
         }
-        if (aiStack_50[0] == 0) {
+        if (aiStack_50 == 0) {
           return 0xffffffffc00d36bb;
         }
-        if ((param_2 == -1) || (param_2 == *(short *)(aiStack_50[0] + 0x14))) {
+        if ((param_2 == -1) || (param_2 == *(short *)(aiStack_50 + 0x14))) {
           if (param_4 == 0) {
-            iVar4 = *(int *)(aiStack_50[0] + 8);
+            iVar4 = *(int *)(aiStack_50 + 8);
           }
           else {
-            iVar4 = *(int *)(aiStack_50[0] + 0xc);
+            iVar4 = *(int *)(aiStack_50 + 0xc);
           }
           if (iVar4 == 0) {
             sVar1 = *param_3;
             *param_3 = sVar1 + 1;
-            if (*(int *)(aiStack_50[0] + 0x38) != 0) {
+            if (*(int *)(aiStack_50 + 0x38) != 0) {
               *param_3 = sVar1 + 2;
             }
           }

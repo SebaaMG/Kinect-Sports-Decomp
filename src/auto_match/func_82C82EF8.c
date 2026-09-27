@@ -32,8 +32,7 @@ extern unsigned int iStack0000003c;
 extern unsigned int iStack_9c;
 
 
-void fn_82C82EF8(int param_1,byte *param_2,undefined8 param_3,undefined8 param_4,int param_5,
-                  int param_6)
+void fn_82C82EF8(int param_1, byte *param_2, undefined8 param_3, undefined8 param_4, int param_5, int param_6, undefined8 unused_arg_7, undefined8 unused_arg_8, int in_stack_00000054, int in_stack_0000005c, int in_stack_00000064)
 
 {
   byte bVar1;
@@ -76,9 +75,9 @@ void fn_82C82EF8(int param_1,byte *param_2,undefined8 param_3,undefined8 param_4
   byte *pbStack0000001c;
   int iStack00000034;
   int iStack0000003c;
-  int in_stack_00000054;
-  int in_stack_0000005c;
-  int in_stack_00000064;
+
+
+
   int iStack_9c;
   
   iStack00000014 = param_1;

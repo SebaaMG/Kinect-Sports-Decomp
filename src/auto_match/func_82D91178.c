@@ -42,43 +42,43 @@ void fn_82D91178(int param_1,int *param_2)
   int *piVar2;
   int iVar3;
   longlong lVar4;
-  int iStack_60;
-  uint uStack_5c;
+  struct { int first; uint second; } stack_pair_60;
+
   uint uStack_58;
   int iStack_54;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [32];
   
   uVar1 = *(uint *)(param_1 + 0x338);
-  iStack_60 = 0;
-  uStack_5c = 0;
+  stack_pair_60.first = 0;
+  stack_pair_60.second = 0;
   uStack_58 = 0x80000000;
   piVar2 = (int *)fn_82CE5410();
   uStack_58 = uVar1 | 0x80000000;
-  iStack_60 = *piVar2;
-  *piVar2 = (uVar1 * 8 + 0x7f & 0xffffff80) + iStack_60;
-  iStack_54 = iStack_60;
+  stack_pair_60.first = *piVar2;
+  *piVar2 = (uVar1 * 8 + 0x7f & 0xffffff80) + stack_pair_60.first;
+  iStack_54 = stack_pair_60.first;
   (**(code **)(*param_2 + 0x18))(param_2,auStack_50);
   (**(code **)(**(int **)(param_1 + 0x58) + 0x10))
-            (*(int **)(param_1 + 0x58),param_2 + 9,auStack_50,&iStack_60);
+            (*(int **)(param_1 + 0x58),param_2 + 9,auStack_50,&stack_pair_60.first);
   fn_82D9A040(param_2,auStack_50);
   uVar1 = 0;
-  if (uStack_5c != 0) {
+  if (stack_pair_60.second != 0) {
     lVar4 = (ulonglong)*(uint *)(param_1 + 0x7c) + 8;
     if ((ulonglong)*(uint *)(param_1 + 0x7c) == 0) {
       lVar4 = 0;
     }
-    fn_83088518(*(undefined4 *)(param_1 + 100),iStack_60,uStack_5c,lVar4);
-    uVar1 = uStack_5c;
+    fn_83088518(*(undefined4 *)(param_1 + 100),stack_pair_60.first,stack_pair_60.second,lVar4);
+    uVar1 = stack_pair_60.second;
   }
   iVar3 = iStack_54;
-  uStack_5c = -(uint)(iStack_60 != iStack_54) & uVar1;
+  stack_pair_60.second = -(uint)(stack_pair_60.first != iStack_54) & uVar1;
   piVar2 = (int *)fn_82CE5410();
   *piVar2 = iVar3;
   iVar3 = fn_82CE5410();
-  uStack_5c = 0;
+  stack_pair_60.second = 0;
   if ((uStack_58 & 0x80000000) == 0) {
     (**(code **)(**(int **)(iVar3 + 0x10) + 0x10))
-              (*(int **)(iVar3 + 0x10),iStack_60,uStack_58 & 0x3fffffff,8);
+              (*(int **)(iVar3 + 0x10),stack_pair_60.first,uStack_58 & 0x3fffffff,8);
   }
   return;
 }

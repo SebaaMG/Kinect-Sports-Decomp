@@ -26,7 +26,7 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_82F65350();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 undefined8 fn_82E9A160(int param_1,undefined1 *param_2,char *param_3,byte param_4,int *param_5)
@@ -81,7 +81,7 @@ LAB_82e9a298:
         *param_2 = 0;
         param_2[1] = 0;
         param_2[2] = 1;
-        fn_82F68CC0(param_2 + 4,pcVar5,*param_5);
+        memcpy(param_2 + 4,pcVar5,*param_5);
         param_2[*param_5 + 4] = 0x80;
         *param_5 = *param_5 + 5;
         goto LAB_82e9a298;

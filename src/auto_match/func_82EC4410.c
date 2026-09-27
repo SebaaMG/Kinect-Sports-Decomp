@@ -42,8 +42,7 @@ extern unsigned int uStack_cc;
 extern unsigned int uStack_d0;
 
 
-void fn_82EC4410(int param_1,undefined4 param_2,undefined4 param_3,undefined4 param_4,uint param_5
-                  ,undefined4 param_6,undefined4 param_7,undefined4 param_8)
+void fn_82EC4410(int param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4, uint param_5, undefined4 param_6, undefined4 param_7, undefined4 param_8, undefined4 in_stack_00000054, undefined4 in_stack_0000005c, undefined8 unused_arg_11, int in_stack_0000006c, int in_stack_00000074, int in_stack_0000007c, int in_stack_00000084, int in_stack_0000008c, undefined4 in_stack_00000094, int in_stack_0000009c, int in_stack_000000a4)
 
 {
   code *pcVar1;
@@ -69,17 +68,17 @@ void fn_82EC4410(int param_1,undefined4 param_2,undefined4 param_3,undefined4 pa
   undefined4 uStack0000003c;
   undefined4 uStack00000044;
   undefined4 uStack0000004c;
-  undefined4 in_stack_00000054;
-  undefined4 in_stack_0000005c;
+
+
   int *in_stack_00000064;
-  int in_stack_0000006c;
-  int in_stack_00000074;
-  int in_stack_0000007c;
-  int in_stack_00000084;
-  int in_stack_0000008c;
-  undefined4 in_stack_00000094;
-  int in_stack_0000009c;
-  int in_stack_000000a4;
+
+
+
+
+
+
+
+
   undefined4 *in_stack_000000ac;
   int *in_stack_000000b4;
   int *in_stack_000000bc;
@@ -88,7 +87,7 @@ void fn_82EC4410(int param_1,undefined4 param_2,undefined4 param_3,undefined4 pa
   undefined4 uStack_cc;
   code *pcStack_c8;
   uint auStack_c0 [4];
-  uint auStack_b0 [44];
+  uint auStack_b0 [8];
   
   iVar13 = 0;
   iVar12 = 0;

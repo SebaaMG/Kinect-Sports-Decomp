@@ -31,8 +31,7 @@ extern unsigned int lbl_820FD8F8;
 
 
 undefined8
-fn_82C88C08(int param_1,int param_2,ulonglong param_3,int param_4,int param_5,longlong param_6,
-             int *param_7,undefined4 *param_8)
+fn_82C88C08(int param_1, int param_2, ulonglong param_3, int param_4, int param_5, longlong param_6, int *param_7, undefined4 *param_8, int in_stack_00000054, int in_stack_0000005c)
 
 {
   byte bVar1;
@@ -62,8 +61,8 @@ fn_82C88C08(int param_1,int param_2,ulonglong param_3,int param_4,int param_5,lo
   uint uVar25;
   uint uVar26;
   longlong lVar27;
-  int in_stack_00000054;
-  int in_stack_0000005c;
+
+
   
   *(undefined4 *)(param_1 + 0x20) = 0;
   *(undefined4 *)(param_1 + 0xc) = 0;

@@ -44,7 +44,7 @@ longlong fn_82E3A938(int param_1,undefined8 param_2,undefined8 param_3,int *para
   int *piStack_3c;
   int *piStack_38;
   int *piStack_34;
-  undefined4 auStack_30 [12];
+  undefined4 auStack_30;
   
   if (param_4 == (int *)0x0) {
     return -0x7fffbffd;
@@ -68,8 +68,8 @@ longlong fn_82E3A938(int param_1,undefined8 param_2,undefined8 param_3,int *para
       lVar2 = (**(code **)**(undefined4 **)(param_1 + 0x48))
                         (*(undefined4 **)(param_1 + 0x48),0xffffffff82154c18,&piStack_38);
       if (-1 < lVar2) {
-        auStack_30[0] = 0;
-        lVar2 = (**(code **)(*piStack_38 + 0x14))(piStack_38,*param_4,auStack_30);
+        auStack_30 = 0;
+        lVar2 = (**(code **)(*piStack_38 + 0x14))(piStack_38,*param_4,&auStack_30);
         if (-1 < lVar2) {
           uStack_40 = 0;
           iVar3 = (*(code *)**(undefined4 **)*param_4)

@@ -47,7 +47,7 @@ void fn_82F93A68(uint param_1,undefined4 param_2,undefined4 param_3,int *param_4
   undefined4 uStack0000001c;
   undefined4 uStack00000024;
   int *piStack0000002c;
-  undefined1 auStack_220 [512];
+  undefined1 auStack_220 [496];
   undefined4 uStack_20;
   
   uStack_20 = lbl_831BB8F0;

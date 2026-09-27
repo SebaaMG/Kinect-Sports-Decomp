@@ -126,7 +126,7 @@ fn_82C902D0(int param_1,undefined8 param_2,undefined8 param_3,uint *param_4,int 
   undefined1 auStack_3e0 [64];
   undefined1 auStack_3a0 [256];
   undefined1 auStack_2a0 [256];
-  undefined1 auStack_1a0 [416];
+  undefined1 auStack_1a0 [272];
   
   bVar46 = *(int *)(param_1 + 0x14c) != 0;
   uVar18 = *param_4;

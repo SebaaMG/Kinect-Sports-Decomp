@@ -25,7 +25,7 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F69148();
+extern int _blkmov();
 extern int fn_82FA5190();
 extern int fn_83019FD0();
 extern unsigned int lbl_831BC768;
@@ -75,7 +75,7 @@ LAB_8301836c:
         piVar6[3] = 0;
         piVar6[4] = 0;
         if (piVar6 < (int *)(puVar2[6] - 0x14)) {
-          fn_82F69148(piVar6,piVar6 + 5,(((puVar2[6] - (int)piVar6) - 0x15U) / 0x14 + 1) * 0x14);
+          _blkmov(piVar6,piVar6 + 5,(((puVar2[6] - (int)piVar6) - 0x15U) / 0x14 + 1) * 0x14);
         }
         iVar1 = puVar2[6];
         puVar2[6] = iVar1 + -0x14;

@@ -37,10 +37,10 @@ undefined8 fn_82C245B0(int param_1,undefined8 param_2,int param_3)
   uint uVar2;
   undefined8 uVar3;
   int iStack_40;
-  int aiStack_3c [15];
+  int aiStack_3c;
   
   iStack_40 = 0;
-  aiStack_3c[0] = 0;
+  aiStack_3c = 0;
   if (param_1 == 0) {
     uVar3 = 0xffffffff80070057;
   }
@@ -70,16 +70,16 @@ undefined8 fn_82C245B0(int param_1,undefined8 param_2,int param_3)
             return 0xffffffff805000a1;
           }
           uVar3 = fn_82C10F40(*(undefined4 *)(iVar1 + 0x94),*(undefined1 *)(iStack_40 + 0x20),
-                               aiStack_3c);
+                               &aiStack_3c);
           if ((int)uVar3 < 0) {
             return uVar3;
           }
           if (param_3 == 0) {
             *(undefined4 *)(iStack_40 + 4) = 0;
-            *(undefined4 *)(aiStack_3c[0] + 4) = 0;
-            *(undefined4 *)(aiStack_3c[0] + 0x1c) = 0;
-            *(undefined1 *)(aiStack_3c[0] + 0x20) = 0;
-            *(undefined4 *)(aiStack_3c[0] + 0x24) = 0;
+            *(undefined4 *)(aiStack_3c + 4) = 0;
+            *(undefined4 *)(aiStack_3c + 0x1c) = 0;
+            *(undefined1 *)(aiStack_3c + 0x20) = 0;
+            *(undefined4 *)(aiStack_3c + 0x24) = 0;
             *(undefined4 *)(iStack_40 + 0x1c) = 0;
             *(undefined1 *)(iStack_40 + 0x20) = 0;
             *(undefined4 *)(iStack_40 + 0x24) = 0;

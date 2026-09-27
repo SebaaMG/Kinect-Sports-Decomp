@@ -30,8 +30,7 @@ extern unsigned char bRam00000001;
 extern unsigned int uStack_b4;
 
 
-void fn_82C9F760(int param_1,byte *param_2,int param_3,int param_4,byte *param_5,byte *param_6,
-                  byte *param_7,byte *param_8)
+void fn_82C9F760(int param_1, byte *param_2, int param_3, int param_4, byte *param_5, byte *param_6, byte *param_7, byte *param_8, int in_stack_00000054, int in_stack_0000005c, int in_stack_00000064)
 
 {
   byte bVar1;
@@ -70,9 +69,9 @@ void fn_82C9F760(int param_1,byte *param_2,int param_3,int param_4,byte *param_5
   byte *pbStack0000002c;
   byte *pbStack0000003c;
   byte *pbStack00000044;
-  int in_stack_00000054;
-  int in_stack_0000005c;
-  int in_stack_00000064;
+
+
+
   byte *pbStack_dc;
   uint uStack_b4;
   

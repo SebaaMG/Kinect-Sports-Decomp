@@ -84,7 +84,7 @@ void fn_8305ED48(int param_1,undefined8 param_2,float *param_3,float *param_4)
   float fStack_78;
   undefined1 auStack_70 [16];
   undefined1 auStack_60 [16];
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [48];
   
   fn_8305EB60(param_1,4);
   pfVar12 = (float *)(param_1 + 0x34);

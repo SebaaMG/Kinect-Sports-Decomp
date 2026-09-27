@@ -49,7 +49,7 @@ undefined8 fn_82C39C10(int *param_1)
   int iVar11;
   int iStack_60;
   undefined4 uStack_5c;
-  int aiStack_58 [22];
+  int aiStack_58;
   
   iVar1 = *param_1;
   uVar6 = 0;
@@ -130,7 +130,7 @@ undefined8 fn_82C39C10(int *param_1)
           }
           if (*(short *)(param_1 + 0x26) < (short)(ushort)*pbVar4) {
             do {
-              uVar6 = fn_82A75DF8(0xffffffff820ef740,param_1 + 0x38,&uStack_5c,aiStack_58,0);
+              uVar6 = fn_82A75DF8(0xffffffff820ef740,param_1 + 0x38,&uStack_5c,&aiStack_58,0);
               if ((int)uVar6 < 0) {
                 return uVar6;
               }
@@ -139,7 +139,7 @@ undefined8 fn_82C39C10(int *param_1)
                 return uVar6;
               }
               piVar5 = piVar8 + *(short *)(param_1 + 0x26);
-              *piVar5 = piVar5[-1] + aiStack_58[0] + -0x12;
+              *piVar5 = piVar5[-1] + aiStack_58 + -0x12;
               sVar7 = *(short *)(param_1 + 0x26);
               *(short *)(param_1 + 0x26) = sVar7 + 1;
             } while ((short)(sVar7 + 1) < (short)(ushort)*pbVar4);

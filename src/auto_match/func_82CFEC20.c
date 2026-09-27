@@ -33,7 +33,7 @@ longlong fn_82CFEC20(int *param_1,longlong param_2)
 {
   longlong lVar1;
   longlong lVar2;
-  undefined1 auStack_220 [544];
+  undefined1 auStack_220 [512];
   
   lVar2 = param_2;
   if ((int)param_2 != 0) {

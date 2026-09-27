@@ -43,7 +43,7 @@ undefined8 fn_82CF7F50(int param_1,longlong param_2,undefined8 param_3)
   undefined8 uVar2;
   undefined4 uStack_c0;
   uint uStack_b8;
-  undefined1 auStack_b0 [176];
+  undefined1 auStack_b0 [128];
   
   RtlEnterCriticalSection(param_1 + 0x18);
   uVar1 = (**(code **)(**(int **)(param_1 + 0x34) + 4))(*(int **)(param_1 + 0x34),param_3);

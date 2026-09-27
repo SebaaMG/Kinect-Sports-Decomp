@@ -2,7 +2,7 @@
 # Refresh the public objdiff report from a local build with the original game.
 set -euo pipefail
 cd "$(dirname "$0")/.."
-ninja build/4D5308C9/report.json
+ninja -j "${NINJA_JOBS:-26}" build/4D5308C9/report.json
 python3 - <<'PY'
 import json
 from pathlib import Path

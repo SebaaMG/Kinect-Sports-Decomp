@@ -32,35 +32,35 @@ undefined8 fn_82F3C310(int param_1,undefined8 *param_2,longlong *param_3)
 {
   undefined8 uVar1;
   int aiStack_30 [2];
-  longlong alStack_28 [5];
+  longlong alStack_28;
   
   if (*(int *)(param_1 + 0xc) == 0) {
     uVar1 = 0xffffffffc00d36b6;
   }
   else {
-    alStack_28[0] = 0;
+    alStack_28 = 0;
     aiStack_30[0] = 0;
     uVar1 = (**(code **)(**(int **)(param_1 + 0x54) + 0xc))
                       (*(int **)(param_1 + 0x54),0xffffffff8202e618,aiStack_30);
     if (-1 < (int)uVar1) {
       if (aiStack_30[0] == 0) {
-        alStack_28[0] = *(longlong *)(param_1 + 0x20);
+        alStack_28 = *(longlong *)(param_1 + 0x20);
       }
       else {
         uVar1 = (**(code **)(**(int **)(param_1 + 0x54) + 0x2c))
-                          (*(int **)(param_1 + 0x54),alStack_28);
+                          (*(int **)(param_1 + 0x54),&alStack_28);
         if ((int)uVar1 < 0) {
           return uVar1;
         }
-        alStack_28[0] = alStack_28[0] + 0x1e;
+        alStack_28 = alStack_28 + 0x1e;
       }
       if (param_2 != (undefined8 *)0x0) {
         *param_2 = 0x1e;
       }
       if (param_3 != (longlong *)0x0) {
-        *param_3 = alStack_28[0];
+        *param_3 = alStack_28;
       }
-      *(longlong *)(param_1 + 0x20) = alStack_28[0];
+      *(longlong *)(param_1 + 0x20) = alStack_28;
     }
   }
   return uVar1;

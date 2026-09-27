@@ -47,8 +47,8 @@ bool fn_82CEC048(undefined4 *param_1)
 {
   char *pcVar1;
   undefined1 auStack_50 [16];
-  undefined4 uStack_40;
-  undefined4 uStack_3c;
+  struct { undefined4 first; undefined4 second; } stack_pair_40;
+
   undefined4 uStack_38;
   undefined4 uStack_34;
   undefined4 uStack_30;
@@ -60,10 +60,10 @@ bool fn_82CEC048(undefined4 *param_1)
   undefined4 uStack_18;
   undefined4 uStack_14;
   
-  uStack_40 = *param_1;
+  stack_pair_40.first = *param_1;
   uStack_2c = param_1[5];
   uStack_18 = param_1[10];
-  uStack_3c = param_1[4];
+  stack_pair_40.second = param_1[4];
   uStack_30 = param_1[1];
   uStack_38 = param_1[8];
   uStack_20 = param_1[2];
@@ -72,7 +72,7 @@ bool fn_82CEC048(undefined4 *param_1)
   uStack_34 = lbl_821AAD20;
   uStack_24 = lbl_821AAD20;
   uStack_14 = lbl_821AAD20;
-  pcVar1 = (char *)fn_82CEBF80(auStack_50,param_1,&uStack_40);
+  pcVar1 = (char *)fn_82CEBF80(auStack_50,param_1,&stack_pair_40.first);
   return *pcVar1 != '\0';
 }
 

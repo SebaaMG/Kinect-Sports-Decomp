@@ -43,8 +43,8 @@ void fn_82FF4F40(int param_1,undefined8 param_2,ulonglong param_3,uint *param_4)
   code *pcVar1;
   int iVar2;
   int iVar3;
-  undefined4 uStack_50;
-  undefined4 uStack_4c;
+  struct { undefined4 first; undefined4 second; } stack_pair_50;
+
   undefined4 uStack_48;
   undefined4 uStack_44;
   float fStack_40;
@@ -58,15 +58,15 @@ void fn_82FF4F40(int param_1,undefined8 param_2,ulonglong param_3,uint *param_4)
     RtlLeaveCriticalSection(iVar3);
   }
   else {
-    uStack_50 = *(undefined4 *)(iVar2 + 0x24);
-    uStack_4c = *(undefined4 *)(iVar2 + 0xc);
+    stack_pair_50.first = *(undefined4 *)(iVar2 + 0x24);
+    stack_pair_50.second = *(undefined4 *)(iVar2 + 0xc);
     uStack_48 = (undefined4)param_2;
     uStack_44 = (undefined4)param_3;
     fStack_3c = (float)param_4[1] * lbl_8208ED44;
     fStack_40 = (float)*param_4 * lbl_8208ED44;
     fn_82A1E7D8(*(undefined4 *)(param_1 + 0xa4));
     RtlLeaveCriticalSection(iVar3);
-    (*pcVar1)(param_3,&uStack_50);
+    (*pcVar1)(param_3,&stack_pair_50.first);
     fn_82A1E810(*(undefined4 *)(param_1 + 0xa4));
   }
   return;

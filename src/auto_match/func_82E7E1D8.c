@@ -55,7 +55,7 @@ longlong fn_82E7E1D8(int *param_1,int *param_2,undefined8 param_3)
   int *piStack_60;
   int *piStack_5c;
   uint uStack_58;
-  uint auStack_54 [21];
+  uint auStack_54 [2];
   
   uStack_58 = 0;
   auStack_54[1] = 0;

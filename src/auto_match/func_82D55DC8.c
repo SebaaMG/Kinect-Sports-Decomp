@@ -46,22 +46,22 @@ void fn_82D55DC8(int param_1,int *param_2,undefined4 *param_3,int *param_4,undef
   int iVar8;
   int iVar9;
   undefined1 auStack_270 [16];
-  int iStack_260;
-  undefined4 uStack_25c;
+  struct { int first; undefined4 second; } stack_pair_260;
+
   undefined4 uStack_258;
   undefined4 *puStack_254;
-  undefined1 auStack_250 [592];
+  undefined1 auStack_250 [512];
   
   piVar2 = (int *)(**(code **)(*(int *)*param_3 + 0x10))();
   iVar7 = 0;
   if (0 < *(int *)(param_1 + 0x10)) {
     iVar9 = 0;
     do {
-      iStack_260 = (**(code **)(*piVar2 + 0x14))
+      stack_pair_260.first = (**(code **)(*piVar2 + 0x14))
                              (piVar2,*(undefined4 *)(iVar9 + *(int *)(param_1 + 0xc)),auStack_250);
       uStack_258 = param_3[2];
       puVar6 = (undefined4 *)(iVar9 + *(int *)(param_1 + 0xc));
-      uStack_25c = *puVar6;
+      stack_pair_260.second = *puVar6;
       puStack_254 = param_3;
       pcVar3 = (char *)(**(code **)(*(int *)(param_4[3] + 0xc) + 4))
                                  (auStack_270,param_4[3] + 0xc,param_4,param_2,param_3,piVar2,
@@ -86,13 +86,13 @@ void fn_82D55DC8(int param_1,int *param_2,undefined4 *param_3,int *param_4,undef
             iVar4 = iVar8 + 0x1a0;
           }
           uVar5 = (**(code **)((uint)*(byte *)(*(int *)(*param_2 + 0xc) * 0x20 + iVar4 +
-                                              *(int *)(iStack_260 + 0xc)) * 0x14 + iVar8 + 0x9a0))
-                            (param_2,&iStack_260,param_4,*(undefined4 *)(param_1 + 8));
+                                              *(int *)(stack_pair_260.first + 0xc)) * 0x14 + iVar8 + 0x9a0))
+                            (param_2,&stack_pair_260.first,param_4,*(undefined4 *)(param_1 + 8));
           *(undefined4 *)(iVar9 + *(int *)(param_1 + 0xc) + 8) = uVar5;
         }
         else {
           piVar1 = *(int **)(iVar9 + *(int *)(param_1 + 0xc) + 8);
-          (**(code **)(*piVar1 + 0x20))(piVar1,param_2,&iStack_260,param_4,param_5);
+          (**(code **)(*piVar1 + 0x20))(piVar1,param_2,&stack_pair_260.first,param_4,param_5);
         }
       }
       iVar7 = iVar7 + 1;

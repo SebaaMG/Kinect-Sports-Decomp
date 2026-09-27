@@ -58,7 +58,7 @@ void fn_83088640(int *param_1,int *param_2)
   uint uVar13;
   int iVar14;
   longlong lVar15;
-  uint auStack_80 [2];
+  uint auStack_80;
   undefined8 uStack_78;
   int aiStack_70 [2];
   int iStack_68;
@@ -127,15 +127,15 @@ void fn_83088640(int *param_1,int *param_2)
     return;
   }
   uVar3 = fn_82CEA0F8();
-  auStack_80[0] = (uint)uVar3;
-  if (auStack_80[0] == 0) {
+  auStack_80 = (uint)uVar3;
+  if (auStack_80 == 0) {
     uVar4 = 0;
   }
   else {
     iVar5 = fn_82CE5410();
-    uVar4 = (**(code **)(**(int **)(iVar5 + 0xc) + 0xc))(*(int **)(iVar5 + 0xc),auStack_80,1);
-    uVar13 = auStack_80[0];
-    if (auStack_80[0] != 0) goto LAB_83088824;
+    uVar4 = (**(code **)(**(int **)(iVar5 + 0xc) + 0xc))(*(int **)(iVar5 + 0xc),&auStack_80,1);
+    uVar13 = auStack_80;
+    if (auStack_80 != 0) goto LAB_83088824;
   }
   uVar13 = 0x80000000;
 LAB_83088824:

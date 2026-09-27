@@ -39,7 +39,7 @@ void fn_82D94630(int param_1,int param_2)
   ulonglong uVar4;
   undefined4 *puVar5;
   int *piVar6;
-  undefined4 auStack_40 [16];
+  undefined4 auStack_40 [8];
   
   piVar6 = (int *)(param_1 + 8);
   iVar3 = fn_82CE5410();

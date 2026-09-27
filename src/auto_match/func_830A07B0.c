@@ -38,18 +38,18 @@ void fn_830A07B0(int param_1,int param_2,int param_3,int *param_4)
 {
   undefined1 uVar1;
   int iVar2;
-  int iStack_20;
-  undefined4 uStack_1c;
+  struct { int first; undefined4 second; } stack_pair_20;
+
   float fStack_18;
   uint uStack_14;
   
   if (*(char *)(param_1 + 2) != '\0') {
     fStack_18 = *(float *)(param_1 + 8);
     if (fStack_18 != lbl_821AAD20) {
-      uStack_1c = *(undefined4 *)(param_2 + 0x4c);
-      iStack_20 = (uint)*(byte *)(param_1 + 3) * 0x10 + param_3;
+      stack_pair_20.second = *(undefined4 *)(param_2 + 0x4c);
+      stack_pair_20.first = (uint)*(byte *)(param_1 + 3) * 0x10 + param_3;
       uStack_14 = (uint)*(byte *)(param_1 + 4);
-      fn_830A5EA8(&iStack_20,param_2,param_4);
+      fn_830A5EA8(&stack_pair_20.first,param_2,param_4);
       return;
     }
   }

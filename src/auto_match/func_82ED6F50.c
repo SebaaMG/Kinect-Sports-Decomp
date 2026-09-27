@@ -32,8 +32,7 @@ extern int fn_82F0AB90();
 extern int fn_82F1C568();
 
 
-void fn_82ED6F50(int param_1,int param_2,longlong param_3,undefined8 param_4,undefined8 param_5,
-                  int param_6,int param_7,int param_8)
+void fn_82ED6F50(int param_1, int param_2, longlong param_3, undefined8 param_4, undefined8 param_5, int param_6, int param_7, int param_8, undefined8 unused_arg_9, undefined8 unused_arg_10, undefined8 unused_arg_11, int in_stack_0000006c, uint in_stack_00000074)
 
 {
   short sVar1;
@@ -51,13 +50,13 @@ void fn_82ED6F50(int param_1,int param_2,longlong param_3,undefined8 param_4,und
   short *psVar13;
   short *psVar14;
   short *in_stack_00000054;
-  int in_stack_0000006c;
-  uint in_stack_00000074;
+
+
   short asStack_180 [5];
   short sStack_176;
   short sStack_174;
   short asStack_170 [64];
-  short asStack_f0 [120];
+  short asStack_f0 [56];
   
   uVar12 = 1;
   uVar2 = (ulonglong)in_stack_00000074;

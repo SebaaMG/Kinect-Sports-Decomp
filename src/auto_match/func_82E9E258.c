@@ -30,8 +30,7 @@ extern unsigned int lbl_831898B8;
 extern unsigned int uStack00000024;
 
 
-void fn_82E9E258(int param_1,undefined8 param_2,uint param_3,undefined8 param_4,int *param_5,
-                  int param_6,int param_7,int param_8)
+void fn_82E9E258(int param_1, undefined8 param_2, uint param_3, undefined8 param_4, int *param_5, int param_6, int param_7, int param_8, int in_stack_00000054, int in_stack_0000005c, undefined4 in_stack_00000064, int in_stack_0000006c, int in_stack_00000074, int in_stack_0000007c)
 
 {
   code *pcVar1;
@@ -49,12 +48,12 @@ void fn_82E9E258(int param_1,undefined8 param_2,uint param_3,undefined8 param_4,
   uint uVar13;
   uint uVar14;
   uint uStack00000024;
-  int in_stack_00000054;
-  int in_stack_0000005c;
-  undefined4 in_stack_00000064;
-  int in_stack_0000006c;
-  int in_stack_00000074;
-  int in_stack_0000007c;
+
+
+
+
+
+
   int *in_stack_00000084;
   int *in_stack_0000008c;
   int *in_stack_00000094;

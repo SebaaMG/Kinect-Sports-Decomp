@@ -59,7 +59,7 @@ longlong fn_82E7B2A8(int param_1,int param_2,int *param_3,int param_4)
   int *piStack_c0;
   int iStack_bc;
   undefined8 uStack_b8;
-  undefined1 auStack_b0 [176];
+  undefined1 auStack_b0 [80];
   
   if ((param_2 == 0) || (param_3 == (int *)0x0)) {
     return -0x7ff8ffa9;

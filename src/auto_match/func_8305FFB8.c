@@ -38,7 +38,7 @@ void fn_8305FFB8(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefi
 
 {
   undefined1 auStack_40 [16];
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
   
   fn_82810328(param_4,param_3,auStack_30);
   fn_82810240(auStack_30,param_2,auStack_40);

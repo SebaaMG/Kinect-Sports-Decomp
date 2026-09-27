@@ -172,7 +172,7 @@ void fn_82EB1548(int param_1,undefined4 param_2,uint param_3,int param_4,int par
   undefined1 auStack_410 [208];
   undefined1 auStack_340 [208];
   undefined1 auStack_270 [176];
-  undefined1 auStack_1c0 [448];
+  undefined1 auStack_1c0 [416];
   
   puStack_45c = auStack_1c0;
   if ((*(uint *)(param_1 + 0x6db8) & 1) == 0) {

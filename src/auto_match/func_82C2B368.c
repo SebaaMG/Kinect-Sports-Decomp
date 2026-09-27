@@ -46,12 +46,12 @@ undefined8 fn_82C2B368(undefined8 param_1,undefined8 param_2,int *param_3,undefi
 
 {
   undefined8 uVar1;
-  int aiStack_40 [16];
+  int aiStack_40;
   
-  uVar1 = fn_82C10BA8(param_1,lbl_83175B68,aiStack_40);
+  uVar1 = fn_82C10BA8(param_1,lbl_83175B68,&aiStack_40);
   if (-1 < (int)uVar1) {
-    if ((aiStack_40[0] == 0) ||
-       (uVar1 = fn_82C10968(aiStack_40[0],lbl_83175B70), (int)uVar1 != 0)) {
+    if ((aiStack_40 == 0) ||
+       (uVar1 = fn_82C10968(aiStack_40,lbl_83175B70), (int)uVar1 != 0)) {
       uVar1 = 0xffffffff80500003;
     }
     else {

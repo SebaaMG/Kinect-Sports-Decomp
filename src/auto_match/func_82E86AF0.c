@@ -39,8 +39,8 @@ void fn_82E86AF0(int param_1)
   int iVar3;
   ulonglong uVar4;
   int iVar5;
-  uint uStack_30;
-  undefined4 auStack_2c [11];
+  struct { uint first; undefined4 second; } stack_pair_30;
+
   
   iVar1 = *(int *)(param_1 + 0xaf0);
   uVar2 = *(undefined4 *)(param_1 + 0x84c);
@@ -73,10 +73,10 @@ void fn_82E86AF0(int param_1)
   if ((0 < *(int *)(param_1 + 0x84c)) &&
      ((*(int *)(param_1 + 0xaf0) == 2 || (*(int *)(param_1 + 0xaf0) == 4)))) {
     if (iVar1 != 4) {
-      uStack_30 = 0;
-      auStack_2c[0] = 0;
-      fn_82E85268(param_1,&uStack_30,auStack_2c,*(undefined4 *)(param_1 + 0x1acc));
-      fn_82F02410(*(undefined4 *)(param_1 + 0x1ebc),uStack_30 & 0x7f,auStack_2c[0]);
+      stack_pair_30.first = 0;
+      stack_pair_30.second = 0;
+      fn_82E85268(param_1,&stack_pair_30.first,&stack_pair_30.second,*(undefined4 *)(param_1 + 0x1acc));
+      fn_82F02410(*(undefined4 *)(param_1 + 0x1ebc),stack_pair_30.first & 0x7f,stack_pair_30.second);
       *(undefined4 *)(param_1 + 0x84c) = uVar2;
       return;
     }

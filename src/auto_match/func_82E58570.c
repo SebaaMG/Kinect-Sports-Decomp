@@ -36,7 +36,7 @@ undefined8 fn_82E58570(int param_1,longlong *param_2,longlong *param_3)
   undefined8 uVar2;
   longlong lVar3;
   uint uVar4;
-  undefined4 *apuStack_50 [20];
+  undefined4 * apuStack_50;
   
   uVar2 = 0;
   if (*(int *)(param_1 + 0xc) == 0) {
@@ -47,8 +47,8 @@ undefined8 fn_82E58570(int param_1,longlong *param_2,longlong *param_3)
     if (*(int *)(param_1 + 0xb0) != 0) {
       uVar4 = 0;
       do {
-        fn_82E57B08(param_1 + 0x48,uVar4,apuStack_50);
-        uVar1 = fn_82F64CE0(*apuStack_50[0]);
+        fn_82E57B08(param_1 + 0x48,uVar4,&apuStack_50);
+        uVar1 = fn_82F64CE0(*apuStack_50);
         uVar4 = uVar4 + 1 & 0xffff;
         lVar3 = ((uVar1 & 0x7fffffff) * 2 + 3 & 0xffffffff) + lVar3;
       } while (uVar4 < *(uint *)(param_1 + 0xb0));

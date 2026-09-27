@@ -35,7 +35,7 @@ bool fn_82E161D8(undefined8 param_1,undefined8 param_2,int *param_3)
   undefined8 uVar1;
   undefined8 uVar2;
   char *pcVar3;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
   
   uVar1 = (**(code **)(*param_3 + 0x10))(param_3);
   uVar2 = (**(code **)(*param_3 + 0x10))(param_3,param_1);

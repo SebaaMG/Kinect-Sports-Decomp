@@ -49,7 +49,7 @@ void fn_82F90EF8(int param_1)
   char cVar4;
   undefined4 *puVar3;
   int iStack00000014;
-  undefined1 auStack_40 [16];
+  undefined1 auStack_40 [1];
   undefined1 auStack_30 [8];
   undefined1 auStack_28 [8];
   undefined1 auStack_20 [16];

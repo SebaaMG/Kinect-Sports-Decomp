@@ -61,7 +61,7 @@ void fn_82D94248(int param_1,undefined8 param_2)
   undefined4 uVar20;
   undefined4 uVar21;
   undefined4 uVar22;
-  undefined1 auStack_80 [16];
+  undefined1 auStack_80 [1];
   undefined1 auStack_70 [16];
   undefined1 auStack_60 [16];
   undefined1 auStack_50 [80];

@@ -28,7 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 extern unsigned int lbl_831BBC98;
 
 
-ushort fn_82F66A80(int param_1)
+ushort isdigit(int param_1)
 
 {
   return *(ushort *)(param_1 * 2 + lbl_831BBC98) & 4;

@@ -39,7 +39,7 @@ char * fn_82DA1D30(char *param_1,int param_2)
   char *pcVar1;
   char cVar2;
   double dVar3;
-  undefined1 auStack_30 [24];
+  undefined1 auStack_30 [1];
   
   *param_1 = '\x01';
   dVar3 = (double)lbl_82006848;

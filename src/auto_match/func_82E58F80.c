@@ -34,7 +34,7 @@ undefined4 * fn_82E58F80(undefined4 *param_1,int *param_2,undefined4 param_3,int
 {
   int iVar1;
   int iVar2;
-  uint auStack_30 [12];
+  uint auStack_30;
   
   param_1[4] = param_2;
   param_1[5] = param_3;
@@ -43,17 +43,17 @@ undefined4 * fn_82E58F80(undefined4 *param_1,int *param_2,undefined4 param_3,int
   param_1[1] = 1;
   param_1[3] = 0;
   (**(code **)(*param_2 + 4))(param_2);
-  auStack_30[0] = 0;
-  iVar1 = (**(code **)(*(int *)param_1[4] + 0x14))((int *)param_1[4],0,auStack_30);
-  if ((iVar1 < 0) || (auStack_30[0] < (uint)param_1[5])) {
+  auStack_30 = 0;
+  iVar1 = (**(code **)(*(int *)param_1[4] + 0x14))((int *)param_1[4],0,&auStack_30);
+  if ((iVar1 < 0) || (auStack_30 < (uint)param_1[5])) {
     param_1[3] = 0;
     param_1[2] = 0;
-    if (auStack_30[0] < (uint)param_1[5]) {
+    if (auStack_30 < (uint)param_1[5]) {
       iVar1 = -0x7ff8ffa9;
     }
   }
   else {
-    iVar2 = auStack_30[0] - param_1[5];
+    iVar2 = auStack_30 - param_1[5];
     param_1[3] = iVar2;
     param_1[2] = iVar2;
   }

@@ -52,7 +52,7 @@ undefined8 fn_8301BEA0(undefined4 *param_1,int param_2)
   int *piVar10;
   ulonglong uVar11;
   undefined8 uStack_a0;
-  int aiStack_94 [37];
+  int aiStack_94 [9];
   
   aiStack_94[1] = *(int *)(param_2 + 0xfc);
   puVar7 = param_1 + 0x58;

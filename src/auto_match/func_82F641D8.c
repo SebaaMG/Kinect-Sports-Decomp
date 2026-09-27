@@ -28,7 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 extern unsigned int lbl_831BB230;
 
 
-void fn_82F641D8(uint param_1,uint param_2)
+void _set_abort_behavior(uint param_1,uint param_2)
 
 {
   lbl_831BB230 = lbl_831BB230 & ~param_2 | param_1 & param_2;

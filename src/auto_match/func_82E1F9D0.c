@@ -39,7 +39,7 @@ undefined8 fn_82E1F9D0(undefined4 *param_1,ulonglong param_2)
 {
   undefined8 uVar1;
   int iVar2;
-  undefined1 auStack_50 [16];
+  undefined1 auStack_50 [1];
   undefined4 uStack_40;
   undefined1 auStack_3c [36];
   

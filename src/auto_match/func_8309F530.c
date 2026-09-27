@@ -42,7 +42,7 @@ void fn_8309F530(ushort *param_1,int param_2,int *param_3)
   ushort *puVar5;
   longlong lVar6;
   undefined8 uStack_88;
-  undefined1 auStack_80 [128];
+  undefined1 auStack_80 [80];
   
   puVar3 = &uStack_88;
   *param_3 = *param_3 + -0x10;

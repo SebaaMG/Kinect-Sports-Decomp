@@ -56,7 +56,7 @@ void fn_82E90418(int param_1)
   ulonglong uVar7;
   int iStack_50;
   undefined4 uStack_4c;
-  undefined1 auStack_48 [72];
+  undefined1 auStack_48 [24];
   
   uVar1 = *(undefined4 *)(param_1 + 0x2a4);
   uVar2 = *(undefined4 *)(param_1 + 0x590);

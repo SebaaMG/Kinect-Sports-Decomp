@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_82CC1AA8();
 extern int fn_82F65D50();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern int fn_82F6A538();
 extern int fn_82F6A584();
 extern unsigned int lbl_82005710;
@@ -37,8 +37,7 @@ extern unsigned int lbl_82110F70;
 extern unsigned int lbl_82110F78;
 
 
-void fn_82CC2510(undefined8 param_1,int param_2,ulonglong param_3,uint param_4,longlong param_5,
-                  longlong param_6,uint param_7,ulonglong param_8)
+void fn_82CC2510(undefined8 param_1, int param_2, ulonglong param_3, uint param_4, longlong param_5, longlong param_6, uint param_7, ulonglong param_8, uint in_stack_00000054, uint in_stack_0000005c, uint in_stack_00000064, int in_stack_0000006c, int in_stack_00000074)
 
 {
   uint uVar1;
@@ -78,11 +77,11 @@ void fn_82CC2510(undefined8 param_1,int param_2,ulonglong param_3,uint param_4,l
   double dVar35;
   double dVar36;
   double dVar37;
-  uint in_stack_00000054;
-  uint in_stack_0000005c;
-  uint in_stack_00000064;
-  int in_stack_0000006c;
-  int in_stack_00000074;
+
+
+
+
+
   
   lVar9 = fn_82F6A538();
   iVar4 = (int)lVar9;
@@ -114,7 +113,7 @@ void fn_82CC2510(undefined8 param_1,int param_2,ulonglong param_3,uint param_4,l
         lVar14 = lVar9;
       }
       if (0 < (int)lVar14) {
-        fn_82F68CC0(uVar25,(param_3 - uVar22) + uVar25,lVar14);
+        memcpy(uVar25,(param_3 - uVar22) + uVar25,lVar14);
       }
       lVar14 = lVar9;
       if ((int)lVar23 <= iVar4) {
@@ -124,7 +123,7 @@ void fn_82CC2510(undefined8 param_1,int param_2,ulonglong param_3,uint param_4,l
         uVar15 = lVar28 + uVar19;
         lVar14 = ((((uVar15 & 0xffffffff) >> 0x1f) - 1) + (ulonglong)(uVar15 == 0) & uVar15) +
                  lVar27;
-        fn_82F68CC0(lVar14 + uVar22,lVar14 + param_6);
+        memcpy(lVar14 + uVar22,lVar14 + param_6);
       }
       lVar28 = lVar28 + 1;
       lVar23 = lVar23 + -1;
@@ -144,8 +143,8 @@ void fn_82CC2510(undefined8 param_1,int param_2,ulonglong param_3,uint param_4,l
       }
       if (0 < (int)lVar28) {
         lVar23 = (longlong)(iVar26 >> 1) * (longlong)iVar3;
-        fn_82F68CC0(lVar23 + uVar22,lVar23 + (ulonglong)param_4,lVar28);
-        fn_82F68CC0(lVar23 + (ulonglong)in_stack_00000064,lVar23 + param_5,lVar28);
+        memcpy(lVar23 + uVar22,lVar23 + (ulonglong)param_4,lVar28);
+        memcpy(lVar23 + (ulonglong)in_stack_00000064,lVar23 + param_5,lVar28);
       }
       uVar11 = (int)uVar25 >> 1;
       uVar15 = (ulonglong)(int)uVar11;
@@ -156,8 +155,8 @@ void fn_82CC2510(undefined8 param_1,int param_2,ulonglong param_3,uint param_4,l
       if (0 < (int)lVar28) {
         lVar23 = (longlong)(iVar26 >> 1) * (longlong)iVar3 +
                  (((ulonglong)(uVar11 >> 0x1f) - 1) + (ulonglong)(uVar15 == 0) & uVar15);
-        fn_82F68CC0(lVar23 + uVar22,lVar23 + (ulonglong)param_7,lVar28);
-        fn_82F68CC0(lVar23 + (ulonglong)in_stack_00000064,lVar23 + param_8,lVar28);
+        memcpy(lVar23 + uVar22,lVar23 + (ulonglong)param_7,lVar28);
+        memcpy(lVar23 + (ulonglong)in_stack_00000064,lVar23 + param_8,lVar28);
       }
       iVar26 = iVar26 + 2;
       uVar25 = uVar25 + 2;

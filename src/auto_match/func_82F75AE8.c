@@ -49,7 +49,7 @@ ulonglong * fn_82F75AE8(ulonglong *param_1)
   int iVar7;
   undefined8 uStack_40;
   undefined8 uStack_38;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
   int iVar5;
   
   uVar4 = (~(ulonglong)lbl_832635D0 & 0xffffffff) >> 0xf & 1;

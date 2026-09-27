@@ -62,8 +62,8 @@ undefined8 fn_8304E470(int *param_1)
   byte bStack_60;
   undefined1 uStack_5e;
   undefined1 uStack_5d;
-  undefined4 uStack_50;
-  undefined4 uStack_4c;
+  struct { undefined4 first; undefined4 second; } stack_pair_50;
+
   undefined4 uStack_48;
   undefined4 uStack_44;
   undefined1 uStack_40;
@@ -75,9 +75,9 @@ undefined8 fn_8304E470(int *param_1)
       uVar2 = *(undefined2 *)(iVar3 + 0xd4);
       uStack_44 = 0;
       bVar5 = false;
-      uStack_4c = 0;
+      stack_pair_50.second = 0;
       uStack_48 = 0;
-      uStack_50 = lbl_82002AE0;
+      stack_pair_50.first = lbl_82002AE0;
       fVar1 = *(float *)(iVar3 + 0xdc);
       uStack_80 = ((((U64)(uStack_80)) & (~(((U64)0xFF) << 56))) | ((((U64)((undefined1)(int)fVar1)) & ((U64)0xFF)) << 56));
       uStack_40 = (undefined1)uStack_80;
@@ -101,7 +101,7 @@ undefined8 fn_8304E470(int *param_1)
       uStack_5d = 0;
       uStack_80 = (longlong)(int)fVar1;
       uVar6 = (**(code **)(*lbl_83265044 + 0x10))
-                        (lbl_83265044,*(undefined4 *)(iVar7 + 8),&uStack_70,&uStack_50,0,piVar8,0);
+                        (lbl_83265044,*(undefined4 *)(iVar7 + 8),&uStack_70,&stack_pair_50.first,0,piVar8,0);
       if ((int)uVar6 != 1) {
         return uVar6;
       }

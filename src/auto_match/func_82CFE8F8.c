@@ -44,7 +44,7 @@ void fn_82CFE8F8(undefined4 *param_1,undefined8 param_2)
   int iVar5;
   ulonglong uVar6;
   undefined1 uStack_60;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [16];
   
   fn_82CFE240(auStack_50,param_2,uStack_60);
   uVar1 = *param_1;

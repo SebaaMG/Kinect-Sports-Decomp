@@ -48,7 +48,7 @@ void fn_82DA6A58(int param_1)
   int *piVar9;
   ulonglong uVar10;
   undefined4 *puVar11;
-  undefined1 auStack_60 [96];
+  undefined1 auStack_60;
   
   if (*(int *)(param_1 + 0x20) != 0) {
     piVar9 = (int *)(param_1 + 0x1c);
@@ -76,10 +76,10 @@ void fn_82DA6A58(int param_1)
         puVar11 = (undefined4 *)(iVar1 + -0x10);
         uVar10 = uVar8;
         do {
-          auStack_60[0] = 0;
+          auStack_60 = 0;
           puVar5 = puVar11 + 5;
           puVar11 = puVar11 + 4;
-          (**(code **)(*(int *)*puVar5 + 0xc))((int *)*puVar5,*puVar11,auStack_60);
+          (**(code **)(*(int *)*puVar5 + 0xc))((int *)*puVar5,*puVar11,&auStack_60);
           uVar10 = uVar10 - 1;
         } while (uVar10 != 0);
       }

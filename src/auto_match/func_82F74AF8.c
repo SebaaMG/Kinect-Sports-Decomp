@@ -42,7 +42,7 @@ undefined8 * fn_82F74AF8(undefined8 *param_1,int *param_2,int param_3)
   undefined8 *puVar2;
   undefined8 uVar3;
   undefined8 uStack_30;
-  undefined1 auStack_28 [16];
+  undefined1 auStack_28 [1];
   
   cVar1 = *lbl_832635C0;
   if (cVar1 == '\0') {

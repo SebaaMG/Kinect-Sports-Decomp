@@ -37,7 +37,7 @@ undefined1 fn_8305E6F8(undefined8 param_1,int param_2)
 
 {
   undefined1 uStack_60;
-  undefined1 auStack_58 [24];
+  undefined1 auStack_58 [1];
   undefined1 auStack_40 [48];
   
   fn_8305F778(*(undefined4 *)(param_2 + 0x28),**(undefined4 **)(param_2 + 0x2c),auStack_58);

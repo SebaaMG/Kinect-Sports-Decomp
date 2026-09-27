@@ -45,8 +45,8 @@ void fn_82DB4098(undefined8 param_1,int param_2)
   undefined4 uVar3;
   undefined8 uVar4;
   int iVar5;
-  undefined4 uStack_30;
-  int iStack_2c;
+  struct { undefined4 first; int second; } stack_pair_30;
+
   undefined4 uStack_28;
   undefined4 uStack_24;
   
@@ -64,14 +64,14 @@ void fn_82DB4098(undefined8 param_1,int param_2)
     uStack_24 = fn_82DC7820(piVar2);
     iVar5 = *(int *)(param_2 + 0x14);
     uVar3 = *(undefined4 *)(param_2 + 0x18);
-    uStack_30 = 2;
-    iStack_2c = iVar5;
+    stack_pair_30.first = 2;
+    stack_pair_30.second = iVar5;
     uStack_28 = uVar3;
-    fn_82DAE1F0(*(undefined4 *)(iVar5 + 8),&uStack_30);
-    uStack_30 = 0;
-    fn_82DAD0D8(iVar5,&uStack_30);
-    uStack_30 = 1;
-    fn_82DAD0D8(uVar3,&uStack_30);
+    fn_82DAE1F0(*(undefined4 *)(iVar5 + 8),&stack_pair_30.first);
+    stack_pair_30.first = 0;
+    fn_82DAD0D8(iVar5,&stack_pair_30.first);
+    stack_pair_30.first = 1;
+    fn_82DAD0D8(uVar3,&stack_pair_30.first);
   }
   iVar5 = KeTlsGetValue(lbl_8323B4A0);
   puVar1 = *(undefined4 **)(iVar5 + 4);

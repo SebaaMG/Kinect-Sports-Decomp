@@ -61,7 +61,7 @@ void fn_82D656C0(int *param_1,int *param_2,undefined8 param_3,int *param_4)
   undefined4 in_register_00010028;
   undefined4 in_vr2;
   undefined1 auStack_90 [16];
-  undefined1 auStack_80 [16];
+  undefined1 auStack_80 [1];
   undefined1 auStack_70 [16];
   float fStack_60;
   

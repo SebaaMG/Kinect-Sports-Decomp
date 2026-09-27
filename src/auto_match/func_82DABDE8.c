@@ -47,18 +47,18 @@ longlong fn_82DABDE8(int param_1,undefined8 param_2,uint param_3)
   ulonglong uVar7;
   int iVar8;
   longlong lVar9;
-  char acStack_60 [16];
-  undefined4 uStack_50;
-  int iStack_4c;
+  char acStack_60;
+  struct { undefined4 first; int second; } stack_pair_50;
+
   int iStack_48;
   int iStack_44;
   
   iVar6 = *(int *)(param_1 + 0x28);
   iVar8 = 0;
-  uStack_50 = 0;
+  stack_pair_50.first = 0;
   bVar2 = *(byte *)((param_3 & 0xffff) + *(int *)(param_1 + 0xc));
   *(undefined1 *)((param_3 & 0xffff) + *(int *)(param_1 + 0xc)) = 0xff;
-  acStack_60[0] = '\0';
+  acStack_60 = '\0';
   uVar4 = *(ushort *)(iVar6 + 4);
   bVar1 = uVar4 == 2;
   uVar5 = *(undefined4 *)(param_1 + 0x28);
@@ -66,16 +66,16 @@ longlong fn_82DABDE8(int param_1,undefined8 param_2,uint param_3)
     iVar8 = 0x20;
   }
   iStack_48 = bVar1 + 1;
-  iStack_4c = iVar8 + 0x30;
+  stack_pair_50.second = iVar8 + 0x30;
   if ((uVar4 & 1) == 0) {
-    iStack_4c = iVar8 + 0x40;
+    stack_pair_50.second = iVar8 + 0x40;
   }
   iStack_44 = bVar1 + 1;
   fn_82DAC678(iVar6,bVar2);
   iVar6 = (uint)*(byte *)(iVar6 + 10) * (int)(short)(ushort)bVar2 +
           (uint)*(ushort *)(iVar6 + 6) * 0x20 + iVar6;
   *(byte *)(iVar6 + 0x3f) = *(byte *)(iVar6 + 0x3f) & 0xfd;
-  iVar6 = fn_82DC7748(*(undefined4 *)(param_1 + 0x28),1,acStack_60);
+  iVar6 = fn_82DC7748(*(undefined4 *)(param_1 + 0x28),1,&acStack_60);
   *(int *)(param_1 + 0x28) = iVar6;
   uVar7 = (ulonglong)*(uint *)(param_1 + 0x10);
   lVar9 = uVar7 - 1;
@@ -89,8 +89,8 @@ longlong fn_82DABDE8(int param_1,undefined8 param_2,uint param_3)
       uVar7 = uVar7 - 1;
     } while (uVar7 != 0);
   }
-  fn_82D8E878(param_2,*(undefined4 *)(param_1 + 0x24),&uStack_50);
-  if (acStack_60[0] != '\0') {
+  fn_82D8E878(param_2,*(undefined4 *)(param_1 + 0x24),&stack_pair_50.first);
+  if (acStack_60 != '\0') {
     fn_82DBBA90(*(undefined4 *)(param_1 + 0x24),uVar5,*(int *)(param_1 + 0x28),
                  *(undefined2 *)(*(int *)(param_1 + 0x28) + 2));
     *(uint *)(param_1 + 0x2c) = (uint)*(ushort *)(*(int *)(param_1 + 0x28) + 2);

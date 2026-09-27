@@ -38,7 +38,7 @@ void fn_82DB1180(int param_1,int param_2)
   int iVar2;
   int iVar3;
   int iVar4;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [16];
   
   if (*(char *)(param_1 + 8) != '\0') {
     iVar3 = 0;

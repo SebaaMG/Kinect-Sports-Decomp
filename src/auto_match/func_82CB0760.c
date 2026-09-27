@@ -28,16 +28,15 @@ typedef struct { U64 lo, hi; } V16;
 
 
 undefined4
-fn_82CB0760(int param_1,longlong param_2,int param_3,int param_4,int param_5,undefined8 param_6,
-             int param_7,int param_8)
+fn_82CB0760(int param_1, longlong param_2, int param_3, int param_4, int param_5, undefined8 param_6, int param_7, int param_8, undefined8 unused_arg_9, undefined8 unused_arg_10, uint in_stack_00000064, undefined4 in_stack_0000006c)
 
 {
   undefined2 *puVar1;
   undefined2 uVar3;
   undefined4 uVar2;
   int *in_stack_0000005c;
-  uint in_stack_00000064;
-  undefined4 in_stack_0000006c;
+
+
   
   if (*in_stack_0000005c == 0) {
     if (param_7 == 0) {

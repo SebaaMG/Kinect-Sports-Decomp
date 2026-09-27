@@ -28,17 +28,16 @@ typedef struct { U64 lo, hi; } V16;
 extern int fn_82EA37F0();
 
 
-void fn_82EC4F40(int param_1,int param_2,undefined4 param_3,undefined4 param_4,uint param_5,
-                  uint param_6,uint param_7,longlong param_8)
+void fn_82EC4F40(int param_1, int param_2, undefined4 param_3, undefined4 param_4, uint param_5, uint param_6, uint param_7, longlong param_8, int in_stack_00000054, uint in_stack_0000005c, int in_stack_00000064, undefined8 unused_arg_12, undefined8 unused_arg_13, undefined8 unused_arg_14, undefined8 unused_arg_15, uint in_stack_0000008c, undefined8 unused_arg_17, undefined8 unused_arg_18, undefined8 unused_arg_19, undefined4 in_stack_000000ac)
 
 {
   ulonglong uVar1;
   longlong lVar2;
-  int in_stack_00000054;
-  uint in_stack_0000005c;
-  int in_stack_00000064;
-  uint in_stack_0000008c;
-  undefined4 in_stack_000000ac;
+
+
+
+
+
   int *in_stack_000000ec;
   int *in_stack_000000f4;
   undefined4 *in_stack_000000fc;

@@ -35,10 +35,10 @@ float * fn_82FF2510(double param_1,int param_2,undefined8 param_3)
 {
   undefined8 *puVar1;
   float *pfVar2;
-  uint auStack_30 [12];
+  uint auStack_30;
   
-  fn_82FF2248(auStack_30,param_2,param_3);
-  pfVar2 = (float *)(-(uint)(*(uint *)(param_2 + 4) != auStack_30[0]) & auStack_30[0] + 8);
+  fn_82FF2248(&auStack_30,param_2,param_3);
+  pfVar2 = (float *)(-(uint)(*(uint *)(param_2 + 4) != auStack_30) & auStack_30 + 8);
   if (pfVar2 == (float *)0x0) {
     puVar1 = (undefined8 *)fn_8301B248(param_2);
     if (puVar1 != (undefined8 *)0x0) {

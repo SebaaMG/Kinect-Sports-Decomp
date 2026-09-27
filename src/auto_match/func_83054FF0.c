@@ -44,7 +44,7 @@ void fn_83054FF0(double param_1,int param_2,int *param_3,undefined8 param_4)
   undefined8 uVar5;
   undefined4 uVar6;
   undefined8 uVar7;
-  undefined4 auStack_50 [2];
+  undefined4 auStack_50;
   float fStack_48;
   undefined1 uStack_44;
   undefined8 uStack_40;
@@ -54,7 +54,7 @@ void fn_83054FF0(double param_1,int param_2,int *param_3,undefined8 param_4)
   iVar3 = fn_83050008(param_3);
   iVar1 = *param_3;
   if (iVar3 == 1) {
-    cVar4 = (**(code **)(iVar1 + 0x18))(param_3,auStack_50,&uStack_40,auStack_38);
+    cVar4 = (**(code **)(iVar1 + 0x18))(param_3,&auStack_50,&uStack_40,auStack_38);
     if (cVar4 == '\0') {
       uVar7 = 0x35;
       uStack_40 = 0;
@@ -73,7 +73,7 @@ void fn_83054FF0(double param_1,int param_2,int *param_3,undefined8 param_4)
       else {
         pcVar2 = *(code **)(iVar1 + 0x14);
       }
-      uVar7 = (*pcVar2)(*(int **)(param_2 + 0x80),auStack_50[0],&fStack_48,param_4,&uStack_40);
+      uVar7 = (*pcVar2)(*(int **)(param_2 + 0x80),auStack_50,&fStack_48,param_4,&uStack_40);
       uVar5 = 1;
       uVar6 = uStack_34;
     }

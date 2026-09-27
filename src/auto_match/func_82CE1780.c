@@ -40,21 +40,21 @@ ulonglong fn_82CE1780(undefined8 param_1,undefined4 param_2,undefined4 param_3,u
   ulonglong uVar1;
   int iVar3;
   longlong lVar2;
-  undefined4 auStack_50 [4];
-  undefined4 uStack_40;
-  undefined4 uStack_3c;
+  undefined4 auStack_50;
+  struct { undefined4 first; undefined4 second; } stack_pair_40;
+
   undefined4 uStack_38;
   undefined4 uStack_34;
   undefined4 uStack_30;
   
-  uVar1 = XamSessionRefObjByHandle(param_1,auStack_50);
+  uVar1 = XamSessionRefObjByHandle(param_1,&auStack_50);
   if (uVar1 == 0) {
     uStack_34 = 0;
     uStack_30 = 0;
-    uStack_40 = auStack_50[0];
-    uStack_3c = param_2;
+    stack_pair_40.first = auStack_50;
+    stack_pair_40.second = param_2;
     uStack_38 = param_3;
-    iVar3 = XMsgStartIORequest(0xfb,0xb0013,param_4,&uStack_40,0x14);
+    iVar3 = XMsgStartIORequest(0xfb,0xb0013,param_4,&stack_pair_40.first,0x14);
     if (iVar3 < 0) {
       uVar1 = 0x65b;
     }
@@ -65,7 +65,7 @@ ulonglong fn_82CE1780(undefined8 param_1,undefined4 param_2,undefined4 param_3,u
     else {
       uVar1 = 0x3e5;
     }
-    ObDereferenceObject(auStack_50[0]);
+    ObDereferenceObject(auStack_50);
   }
   return uVar1;
 }

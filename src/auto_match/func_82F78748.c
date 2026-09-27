@@ -44,8 +44,8 @@ undefined8 fn_82F78748(undefined8 param_1)
   char cVar1;
   undefined8 *puVar2;
   undefined8 uStack_30;
-  undefined4 uStack_28;
-  uint uStack_24;
+  struct { undefined4 first; uint second; } stack_pair_28;
+
   undefined1 auStack_20 [16];
   
   fn_82F72808(&uStack_30);
@@ -56,10 +56,10 @@ undefined8 fn_82F78748(undefined8 param_1)
   else {
     if (cVar1 == '?') {
       lbl_832635C0 = lbl_832635C0 + 1;
-      uStack_24 = uStack_24 & 0xffff;
-      uStack_28 = 0;
+      stack_pair_28.second = stack_pair_28.second & 0xffff;
+      stack_pair_28.first = 0;
       puVar2 = (undefined8 *)
-               fn_82F775F0(auStack_20,&uStack_30,0xffffffff82196582,&uStack_28,0);
+               fn_82F775F0(auStack_20,&uStack_30,0xffffffff82196582,&stack_pair_28.first,0);
       uStack_30 = *puVar2;
     }
     else if (cVar1 == 'X') {

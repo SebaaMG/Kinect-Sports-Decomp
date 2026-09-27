@@ -43,12 +43,12 @@ longlong fn_82E30E88(int param_1,int *param_2)
   ulonglong uVar4;
   int *piStack_60;
   uint uStack_5c;
-  ulonglong auStack_58 [11];
+  ulonglong auStack_58;
   
   if (param_2 == (int *)0x0) {
     return -0x7fffbffd;
   }
-  auStack_58[0] = 0;
+  auStack_58 = 0;
   lVar2 = 0;
   piStack_60 = (int *)0x0;
   uVar4 = 0;
@@ -65,11 +65,11 @@ longlong fn_82E30E88(int param_1,int *param_2)
       lVar2 = fn_82E5D7B8(uVar3,*(undefined4 *)(param_1 + 0x90),&piStack_60);
       piVar1 = piStack_60;
       if ((lVar2 < 0) ||
-         (lVar2 = (**(code **)(*piStack_60 + 0x14))(piStack_60,0,auStack_58), piVar1 = piStack_60,
+         (lVar2 = (**(code **)(*piStack_60 + 0x14))(piStack_60,0,&auStack_58), piVar1 = piStack_60,
          lVar2 < 0)) goto LAB_82e310fc;
-      if (0xffffffff < auStack_58[0]) goto LAB_82e310cc;
+      if (0xffffffff < auStack_58) goto LAB_82e310cc;
       uVar4 = uVar4 + 1;
-      *param_2 = (int)auStack_58[0] + *param_2;
+      *param_2 = (int)auStack_58 + *param_2;
     } while ((uVar4 & 0xffffffff) < (ulonglong)*(uint *)(param_1 + 0x168));
   }
   uVar4 = 0;
@@ -86,11 +86,11 @@ longlong fn_82E30E88(int param_1,int *param_2)
       lVar2 = fn_82E5DCA8(uVar3,*(undefined4 *)(param_1 + 0x90),&piStack_60);
       piVar1 = piStack_60;
       if ((lVar2 < 0) ||
-         (lVar2 = (**(code **)(*piStack_60 + 0x14))(piStack_60,0,auStack_58), piVar1 = piStack_60,
+         (lVar2 = (**(code **)(*piStack_60 + 0x14))(piStack_60,0,&auStack_58), piVar1 = piStack_60,
          lVar2 < 0)) goto LAB_82e310fc;
-      if (0xffffffff < auStack_58[0]) goto LAB_82e310cc;
+      if (0xffffffff < auStack_58) goto LAB_82e310cc;
       uVar4 = uVar4 + 1;
-      *param_2 = (int)auStack_58[0] + *param_2;
+      *param_2 = (int)auStack_58 + *param_2;
     } while ((uVar4 & 0xffffffff) < (ulonglong)*(uint *)(param_1 + 0x1d4));
   }
   piVar1 = piStack_60;
@@ -103,10 +103,10 @@ longlong fn_82E30E88(int param_1,int *param_2)
                               &piStack_60);
     piVar1 = piStack_60;
     if ((-1 < lVar2) &&
-       (lVar2 = (**(code **)(*piStack_60 + 0x14))(piStack_60,0,auStack_58), piVar1 = piStack_60,
+       (lVar2 = (**(code **)(*piStack_60 + 0x14))(piStack_60,0,&auStack_58), piVar1 = piStack_60,
        -1 < lVar2)) {
-      if (auStack_58[0] < 0x100000000) {
-        *param_2 = (int)auStack_58[0] + *param_2;
+      if (auStack_58 < 0x100000000) {
+        *param_2 = (int)auStack_58 + *param_2;
       }
       else {
 LAB_82e310cc:

@@ -39,7 +39,7 @@ void fn_82DEAB48(int param_1,int *param_2)
   int iVar3;
   uint uVar4;
   byte abStack_30 [4];
-  float afStack_2c [11];
+  float afStack_2c;
   
   iVar1 = *param_2;
   iVar2 = iVar1;
@@ -72,12 +72,12 @@ void fn_82DEAB48(int param_1,int *param_2)
   }
   if (uVar4 != 0) {
     iVar1 = param_2[9];
-    afStack_2c[0] =
+    afStack_2c =
          *(float *)((*(uint *)(iVar1 + 0x5c) ^ *(uint *)(iVar1 + 0x58) ^ *(uint *)(param_1 + 8)) +
                    0x9c);
-    if (afStack_2c[0] != lbl_82002AE0) {
-      afStack_2c[0] = *(float *)(&lbl_82131F88 + uVar4 * 4) / afStack_2c[0];
-      fn_82CE5458(abStack_30,afStack_2c);
+    if (afStack_2c != lbl_82002AE0) {
+      afStack_2c = *(float *)(&lbl_82131F88 + uVar4 * 4) / afStack_2c;
+      fn_82CE5458(abStack_30,&afStack_2c);
       uVar4 = (uint)abStack_30[0];
       if (uVar4 == 0) {
         uVar4 = 1;

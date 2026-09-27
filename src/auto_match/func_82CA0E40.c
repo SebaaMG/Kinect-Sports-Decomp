@@ -31,8 +31,7 @@ extern unsigned int uRam8329f138;
 extern unsigned int uStack_a0;
 
 
-void fn_82CA0E40(undefined8 param_1,longlong param_2,longlong param_3,longlong param_4,
-                  ulonglong param_5,longlong param_6,int param_7,int param_8)
+void fn_82CA0E40(undefined8 param_1, longlong param_2, longlong param_3, longlong param_4, ulonglong param_5, longlong param_6, int param_7, int param_8, uint in_stack_00000054, int in_stack_0000005c, uint in_stack_00000064)
 
 {
   undefined1 uVar1;
@@ -58,9 +57,9 @@ void fn_82CA0E40(undefined8 param_1,longlong param_2,longlong param_3,longlong p
   longlong lVar21;
   longlong lVar22;
   ulonglong uVar23;
-  uint in_stack_00000054;
-  int in_stack_0000005c;
-  uint in_stack_00000064;
+
+
+
   undefined4 uStack_a0;
   
   iVar12 = (int)param_3;

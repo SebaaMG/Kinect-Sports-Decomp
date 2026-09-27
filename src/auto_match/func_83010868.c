@@ -40,7 +40,7 @@ undefined8 fn_83010868(int param_1,int param_2)
   undefined4 *puVar5;
   int iVar6;
   int iVar7;
-  int aiStack_40 [16];
+  int aiStack_40 [4];
   
   if (param_2 != 0) {
     puVar5 = *(undefined4 **)(param_1 + 0x50);

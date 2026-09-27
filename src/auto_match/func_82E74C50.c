@@ -37,7 +37,7 @@ undefined8 fn_82E74C50(int param_1,uint param_2,int param_3)
   int iVar3;
   ulonglong uVar4;
   ulonglong uVar5;
-  uint auStack_40 [16];
+  uint auStack_40;
   
   if (param_3 == 0) {
     uVar2 = 0xffffffff80004003;
@@ -47,13 +47,13 @@ undefined8 fn_82E74C50(int param_1,uint param_2,int param_3)
     uVar5 = *(ulonglong *)(param_3 + 0x18);
     uVar4 = *(longlong *)(param_3 + 0x10) * 10000;
     if (*(int *)(param_1 + 0x5c) != 0) {
-      auStack_40[0] = 0;
-      iVar3 = fn_82EEAF58(*(int *)(param_1 + 0x5c),auStack_40);
+      auStack_40 = 0;
+      iVar3 = fn_82EEAF58(*(int *)(param_1 + 0x5c),&auStack_40);
       if (iVar3 < 0) {
-        auStack_40[0] = *(uint *)(param_1 + 0x18);
+        auStack_40 = *(uint *)(param_1 + 0x18);
       }
-      trapDoubleWordImmediate(6,(ulonglong)auStack_40[0],0);
-      uVar5 = ((ulonglong)(param_2 - uVar1) * 80000000) / (ulonglong)auStack_40[0] + uVar5;
+      trapDoubleWordImmediate(6,(ulonglong)auStack_40,0);
+      uVar5 = ((ulonglong)(param_2 - uVar1) * 80000000) / (ulonglong)auStack_40 + uVar5;
     }
     if (uVar4 < uVar5) {
       *(ulonglong *)(param_3 + 0x18) = uVar4;

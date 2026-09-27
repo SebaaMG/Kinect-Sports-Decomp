@@ -58,8 +58,8 @@ undefined8 fn_82FFC080(int param_1,int param_2,ulonglong param_3)
   longlong lVar11;
   uint uVar12;
   ulonglong uVar13;
-  uint uStack_c0;
-  uint uStack_bc;
+  struct { uint first; uint second; } stack_pair_c0;
+
   uint auStack_b8 [2];
   int iStack_b0;
   uint uStack_ac;
@@ -84,7 +84,7 @@ undefined8 fn_82FFC080(int param_1,int param_2,ulonglong param_3)
         lVar4 = (ulonglong)*(uint *)(iVar5 + 4) - lVar11;
         uVar10 = lVar4 + uVar10;
         lVar11 = lVar4 + lVar11;
-        uStack_c0 = uVar12;
+        stack_pair_c0.first = uVar12;
         RtlEnterCriticalSection(iVar8);
         uVar1 = *(uint *)(iVar9 + *(int *)(param_2 + 0x28));
         for (puVar2 = *(undefined4 **)((uVar1 % 0xc1 + 0x25) * 4 + param_1);
@@ -114,7 +114,7 @@ LAB_82ffc158:
 LAB_82ffc1dc:
           piVar3[6] = uVar1;
 LAB_82ffc1e0:
-          uStack_bc = 0;
+          stack_pair_c0.second = 0;
           if ((piVar3[3] - piVar3[2]) / 0xc == 0) {
             uVar7 = 0x800;
             if ((uVar12 & 0x7ff) != 0) {
@@ -124,9 +124,9 @@ LAB_82ffc1e0:
             if ((uVar13 & 0xffffffff) != 0) {
               RtlLeaveCriticalSection(iVar8);
               if ((uVar10 & 0xffffffff) != 0) {
-                uStack_bc = 0;
-                fn_82FF8988(param_1 + 4,uVar10,&uStack_bc);
-                uVar10 = -(ulonglong)(uStack_bc != uVar10) & uVar10;
+                stack_pair_c0.second = 0;
+                fn_82FF8988(param_1 + 4,uVar10,&stack_pair_c0.second);
+                uVar10 = -(ulonglong)(stack_pair_c0.second != uVar10) & uVar10;
               }
               auStack_b8[0] = 0;
               uVar7 = fn_82FF86F0(param_1 + 4,uVar13,uVar12,auStack_b8);
@@ -142,9 +142,9 @@ LAB_82ffc1e0:
             uVar7 = 0x34;
           }
           else {
-            uVar7 = fn_82FF9F20(piVar3,&uStack_bc,&uStack_c0,0);
-            uVar13 = (ulonglong)uStack_bc;
-            uVar12 = uStack_c0;
+            uVar7 = fn_82FF9F20(piVar3,&stack_pair_c0.second,&stack_pair_c0.first,0);
+            uVar13 = (ulonglong)stack_pair_c0.second;
+            uVar12 = stack_pair_c0.first;
 LAB_82ffc2c4:
             if ((int)uVar7 == 1) {
               piVar3[1] = uVar12;

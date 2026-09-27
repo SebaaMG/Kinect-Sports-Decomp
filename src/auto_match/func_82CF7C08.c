@@ -37,7 +37,7 @@ void fn_82CF7C08(int param_1,undefined8 param_2,undefined8 param_3,undefined4 *p
 {
   undefined8 uVar1;
   undefined1 auStack_1a0 [128];
-  undefined1 auStack_120 [288];
+  undefined1 auStack_120 [256];
   
   fn_82CFBB60(auStack_120,0x100,0xffffffff821336b8,param_3,param_4[1]);
   (**(code **)(param_1 + 0x3c))(param_2,*(undefined4 *)(param_1 + 0x40));

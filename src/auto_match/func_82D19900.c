@@ -142,8 +142,8 @@ undefined8 fn_82D19900(int param_1,longlong param_2,char param_3)
   ulonglong uStack_500;
   float fStack_4d4;
   float fStack_4d0;
-  float fStack_440;
-  float fStack_43c;
+  struct { float first; float second; } stack_pair_440;
+
   float fStack_438;
   float fStack_434;
   float fStack_430;
@@ -187,7 +187,7 @@ undefined8 fn_82D19900(int param_1,longlong param_2,char param_3)
   undefined1 auStack_310 [16];
   undefined1 auStack_300 [16];
   undefined1 auStack_2f0 [16];
-  undefined1 auStack_2e0 [736];
+  undefined1 auStack_2e0 [496];
   
   uVar12 = ZEXT48(&stack0x00000000);
   if ((int)param_2 < 4) {
@@ -284,10 +284,10 @@ undefined8 fn_82D19900(int param_1,longlong param_2,char param_3)
                 lStack_3a0 = (longlong)*(int *)(iVar15 + 0x24);
                 lStack_3b0 = (longlong)*(int *)(iVar15 + 0x28);
                 fStack_438 = (float)lStack_3b0;
-                fStack_440 = (float)lStack_390;
-                fStack_43c = (float)lStack_3a0;
+                stack_pair_440.first = (float)lStack_390;
+                stack_pair_440.second = (float)lStack_3a0;
                 iVar15 = (int)in_r0;
-                puVar9 = (undefined4 *)((int)&fStack_440 + iVar15 & 0xfffffff0);
+                puVar9 = (undefined4 *)((int)&stack_pair_440.first + iVar15 & 0xfffffff0);
                 uVar34 = *puVar9;
                 uVar35 = puVar9[1];
                 uVar36 = puVar9[2];

@@ -134,7 +134,7 @@ void fn_82F1FD80(int param_1,ulonglong param_2,uint param_3,int param_4)
   undefined1 auStack_2a0 [64];
   undefined1 auStack_260 [64];
   undefined1 auStack_220 [128];
-  undefined1 auStack_1a0 [416];
+  undefined1 auStack_1a0 [336];
   
   uStack0000001c = (uint)param_2;
   *in_stack_00000144 = 0;

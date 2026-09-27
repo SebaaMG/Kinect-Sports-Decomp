@@ -46,8 +46,8 @@ void fn_82D07F70(byte *param_1,int *param_2)
   int iVar5;
   int iVar6;
   int iVar7;
-  int iStack_50;
-  uint uStack_4c;
+  struct { int first; uint second; } stack_pair_50;
+
   uint uStack_48;
   int iStack_44;
   
@@ -58,21 +58,21 @@ void fn_82D07F70(byte *param_1,int *param_2)
   else if (bVar1 == 1) {
     if ((2 < *param_1) && (*param_1 < 5)) {
       uVar3 = *(uint *)(param_1 + 8);
-      iStack_50 = 0;
-      uStack_4c = 0;
+      stack_pair_50.first = 0;
+      stack_pair_50.second = 0;
       uStack_48 = 0x80000000;
       piVar4 = (int *)fn_82CE5410();
       uStack_48 = uVar3 | 0x80000000;
-      iStack_50 = *piVar4;
-      *piVar4 = (uVar3 * 2 + 0x7f & 0xffffff80) + iStack_50;
-      iStack_44 = iStack_50;
+      stack_pair_50.first = *piVar4;
+      *piVar4 = (uVar3 * 2 + 0x7f & 0xffffff80) + stack_pair_50.first;
+      iStack_44 = stack_pair_50.first;
       fn_82D07CB0(*param_1,*(undefined4 *)(param_1 + 0x18),*(undefined4 *)(param_1 + 8),0,
-                    &iStack_50);
+                    &stack_pair_50.first);
       iVar6 = 0;
       if (0 < *(int *)(param_1 + 8)) {
         iVar7 = 0;
         do {
-          uVar2 = *(ushort *)(iVar7 + iStack_50);
+          uVar2 = *(ushort *)(iVar7 + stack_pair_50.first);
           iVar5 = fn_82CE5410();
           if (param_2[1] == (param_2[2] & 0x3fffffffU)) {
                     /* WARNING: Subroutine does not return */
@@ -85,14 +85,14 @@ void fn_82D07F70(byte *param_1,int *param_2)
         } while (iVar6 < *(int *)(param_1 + 8));
       }
       iVar6 = iStack_44;
-      uStack_4c = -(uint)(iStack_50 != iStack_44) & uStack_4c;
+      stack_pair_50.second = -(uint)(stack_pair_50.first != iStack_44) & stack_pair_50.second;
       piVar4 = (int *)fn_82CE5410();
       *piVar4 = iVar6;
       iVar6 = fn_82CE5410();
-      uStack_4c = 0;
+      stack_pair_50.second = 0;
       if ((uStack_48 & 0x80000000) == 0) {
         (**(code **)(**(int **)(iVar6 + 0x10) + 0x10))
-                  (*(int **)(iVar6 + 0x10),iStack_50,uStack_48 & 0x3fffffff,2);
+                  (*(int **)(iVar6 + 0x10),stack_pair_50.first,uStack_48 & 0x3fffffff,2);
       }
     }
   }

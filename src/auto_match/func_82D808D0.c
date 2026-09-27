@@ -38,7 +38,7 @@ void fn_82D808D0(int *param_1,int param_2,int param_3)
   char cStack_30;
   char cStack_2f;
   char cStack_2e;
-  undefined1 auStack_2d [45];
+  undefined1 auStack_2d [1];
   
   (**(code **)(*param_1 + 0x20))(&cStack_30,param_1,param_2);
   piVar4 = param_1 + 4;

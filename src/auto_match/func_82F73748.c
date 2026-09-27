@@ -47,8 +47,8 @@ undefined4 * fn_82F73748(undefined4 *param_1)
   char *pcVar3;
   undefined8 uVar4;
   longlong lVar5;
-  undefined4 uStack_50;
-  uint uStack_4c;
+  struct { undefined4 first; uint second; } stack_pair_50;
+
   undefined1 auStack_48 [8];
   undefined1 auStack_40 [64];
   
@@ -77,9 +77,9 @@ undefined4 * fn_82F73748(undefined4 *param_1)
     if ((longlong)*lbl_832635C0 == 0) break;
     lVar5 = (longlong)*lbl_832635C0 + -0x30;
     if ((lVar5 < 0) || (9 < (int)lVar5)) {
-      uStack_50 = 0;
-      uStack_4c = uStack_4c & 0xffff;
-      fn_82F78540(auStack_48,&uStack_50);
+      stack_pair_50.first = 0;
+      stack_pair_50.second = stack_pair_50.second & 0xffff;
+      fn_82F78540(auStack_48,&stack_pair_50.first);
       if ((1 < (int)lbl_832635C0 - (int)pcVar3) && (*lbl_832635B4 != 9)) {
         fn_82F72B00(lbl_832635B4,auStack_48);
       }

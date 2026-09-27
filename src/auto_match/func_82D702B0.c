@@ -107,7 +107,7 @@ void fn_82D702B0(undefined8 param_1,undefined8 param_2,ulonglong param_3)
   float fStack_900;
   float fStack_8f8;
   float fStack_8f0;
-  ushort auStack_8d0 [256];
+  ushort auStack_8d0 [88];
   short asStack_6d0 [872];
   
   uVar12 = ZEXT48(&stack0x00000000);

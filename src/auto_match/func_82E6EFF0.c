@@ -38,17 +38,17 @@ longlong fn_82E6EFF0(int param_1,int *param_2)
   longlong lVar2;
   longlong lVar3;
   uint auStack_50 [2];
-  ulonglong auStack_48 [9];
+  ulonglong auStack_48;
   
   if (param_2 == (int *)0x0) {
     lVar2 = -0x7fffbffd;
   }
   else {
-    auStack_48[0] = 0;
-    lVar2 = (**(code **)(*param_2 + 0x14))(param_2,auStack_48,0);
+    auStack_48 = 0;
+    lVar2 = (**(code **)(*param_2 + 0x14))(param_2,&auStack_48,0);
     if (-1 < lVar2) {
-      if (auStack_48[0] < 0x100000000) {
-        uVar1 = auStack_48[0] & 0xffffffff;
+      if (auStack_48 < 0x100000000) {
+        uVar1 = auStack_48 & 0xffffffff;
         lVar3 = fn_82E50BE8(uVar1,0,0,0,0);
         if (lVar3 == 0) {
           lVar2 = -0x7ff8fff2;

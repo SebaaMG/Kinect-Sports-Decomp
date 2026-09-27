@@ -28,7 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 extern int fn_82F68B68();
 
 
-void fn_82F6CDF8(void)
+void _cexit(void)
 
 {
   fn_82F68B68(0,1);

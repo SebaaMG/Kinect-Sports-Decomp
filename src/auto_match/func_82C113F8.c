@@ -33,14 +33,14 @@ undefined8 fn_82C113F8(int param_1,longlong *param_2,longlong *param_3)
 
 {
   undefined8 uVar1;
-  int aiStack_30 [12];
+  int aiStack_30;
   
-  aiStack_30[0] = 0;
+  aiStack_30 = 0;
   *param_3 = 0;
   *param_2 = 0;
-  uVar1 = fn_82C10F40(*(undefined4 *)(param_1 + 0x48),*(undefined1 *)(param_1 + 0x10),aiStack_30);
+  uVar1 = fn_82C10F40(*(undefined4 *)(param_1 + 0x48),*(undefined1 *)(param_1 + 0x10),&aiStack_30);
   if (-1 < (int)uVar1) {
-    if (*(int *)(aiStack_30[0] + 0x18) == 0) {
+    if (*(int *)(aiStack_30 + 0x18) == 0) {
       uVar1 = 0xffffffff8050000b;
     }
     else {

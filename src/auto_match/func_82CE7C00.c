@@ -44,7 +44,7 @@ void fn_82CE7C00(void)
   undefined1 *puStack_230;
   uint uStack_22c;
   uint uStack_228;
-  undefined1 auStack_224 [548];
+  undefined1 auStack_224 [500];
   
   puStack_230 = auStack_224;
   uStack_22c = 0;

@@ -45,7 +45,7 @@ void fn_83099580(undefined8 param_1,int param_2)
   int iVar5;
   ulonglong uVar6;
   ulonglong uVar7;
-  undefined4 auStack_50 [20];
+  undefined4 auStack_50;
   
   iVar4 = KeTlsGetValue(lbl_8323B4A0);
   puVar1 = *(undefined4 **)(iVar4 + 4);
@@ -59,21 +59,21 @@ void fn_83099580(undefined8 param_1,int param_2)
   iVar4 = *(int *)(param_2 + 0x2c);
   if (0 < (int)*(uint *)(param_2 + 0x30)) {
     do {
-      auStack_50[0] = *(undefined4 *)(iVar4 + 0x24);
+      auStack_50 = *(undefined4 *)(iVar4 + 0x24);
       *(undefined4 *)(iVar4 + 0x28) = 0;
       uVar7 = (ulonglong)*(uint *)(iVar4 + 0x20);
       if (*(int *)(param_2 + 0x20) != 0) {
-        lVar3 = fn_82D38828(*(int *)(param_2 + 0x20),iVar4,auStack_50,uVar7);
+        lVar3 = fn_82D38828(*(int *)(param_2 + 0x20),iVar4,&auStack_50,uVar7);
         uVar7 = uVar7 - lVar3;
         *(int *)(iVar4 + 0x28) = *(int *)(iVar4 + 0x28) + (int)lVar3;
       }
       if (*(int *)(param_2 + 0x24) != 0) {
-        lVar3 = fn_82D38850(*(int *)(param_2 + 0x24),iVar4,auStack_50,uVar7);
+        lVar3 = fn_82D38850(*(int *)(param_2 + 0x24),iVar4,&auStack_50,uVar7);
         uVar7 = uVar7 - lVar3;
         *(int *)(iVar4 + 0x28) = *(int *)(iVar4 + 0x28) + (int)lVar3;
       }
       if (*(int *)(param_2 + 0x28) != 0) {
-        iVar5 = fn_830B6200(*(int *)(param_2 + 0x28),iVar4,auStack_50,uVar7);
+        iVar5 = fn_830B6200(*(int *)(param_2 + 0x28),iVar4,&auStack_50,uVar7);
         *(int *)(iVar4 + 0x28) = *(int *)(iVar4 + 0x28) + iVar5;
       }
       uVar6 = uVar6 - 1;

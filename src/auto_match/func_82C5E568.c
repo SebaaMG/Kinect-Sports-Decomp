@@ -97,8 +97,8 @@ undefined8 fn_82C5E568(int param_1)
   int iStack_14c;
   int iStack_148;
   uint *puStack_144;
-  uint uStack_140;
-  uint uStack_13c;
+  struct { uint first; uint second; } stack_pair_140;
+
   uint uStack_138;
   undefined4 uStack_134;
   uint *puStack_130;
@@ -133,16 +133,16 @@ undefined8 fn_82C5E568(int param_1)
   undefined4 uStack_ac;
   undefined4 uStack_a8;
   
-  puStack_130 = &uStack_13c;
+  puStack_130 = &stack_pair_140.second;
   iVar14 = *(int *)(param_1 + 0x50d0);
   uStack_124 = *(undefined4 *)(param_1 + 0xe4);
   uStack_110 = *(undefined4 *)(param_1 + 0xe8);
   uStack_128 = 0;
   iVar10 = (*(int *)(param_1 + 0xd0) >> 1) * iVar14;
-  uStack_13c = (*(int *)(param_1 + 0xcc) >> 1) * iVar14 + *(int *)(param_1 + 0xec0) +
+  stack_pair_140.second = (*(int *)(param_1 + 0xcc) >> 1) * iVar14 + *(int *)(param_1 + 0xec0) +
                *(int *)(param_1 + 0xdc);
-  uStack_140 = *(int *)(param_1 + 0xe0) + iVar10 + *(int *)(param_1 + 0xec4);
-  puStack_11c = &uStack_140;
+  stack_pair_140.first = *(int *)(param_1 + 0xe0) + iVar10 + *(int *)(param_1 + 0xec4);
+  puStack_11c = &stack_pair_140.first;
   uStack_138 = *(int *)(param_1 + 0xe0) + iVar10 + *(int *)(param_1 + 0xec8);
   uStack_114 = 0;
   puStack_108 = &uStack_138;
@@ -216,8 +216,8 @@ undefined8 fn_82C5E568(int param_1)
     *(undefined4 *)(param_1 + 0xb64) = *(undefined4 *)(param_1 + 0xb84);
     *(undefined4 *)(param_1 + 0xb70) = *(undefined4 *)(param_1 + 0xb90);
   }
-  uStack_12c = uStack_13c;
-  uStack_118 = uStack_140;
+  uStack_12c = stack_pair_140.second;
+  uStack_118 = stack_pair_140.first;
   uStack_104 = uStack_138;
   uStack_fc = uStack_110;
   puStack_f0 = puStack_144;
@@ -228,8 +228,8 @@ undefined8 fn_82C5E568(int param_1)
   uStack_150 = 0;
   if (*(int *)(param_1 + 0x8c) != 0) {
     do {
-      uVar17 = (ulonglong)uStack_13c;
-      uVar18 = (ulonglong)uStack_140;
+      uVar17 = (ulonglong)stack_pair_140.second;
+      uVar18 = (ulonglong)stack_pair_140.first;
       uVar19 = (ulonglong)uStack_138;
       uVar16 = (uint)LZCOUNT((*(int *)(param_1 + 0x8c) + -1) - uStack_150) >> 5;
       if ((uStack_150 & 1) == 0) {
@@ -325,16 +325,16 @@ LAB_82c5ee04:
           } while ((uVar11 & 0xffffffff) < (ulonglong)*(uint *)(param_1 + 0x88));
         }
         if ((*(uint *)(param_1 + 0xbbc) & 1) != 0) {
-          fn_82CBB638(param_1,uStack_150,uStack_13c,uStack_140,uStack_138,uStack_134,0);
+          fn_82CBB638(param_1,uStack_150,stack_pair_140.second,stack_pair_140.first,uStack_138,uStack_134,0);
         }
         uStack_134 = 0;
         if ((uStack_150 < *(int *)(param_1 + 0x8c) - 1U) &&
            (*(int *)((uStack_150 + 1) * 4 + *(int *)(param_1 + 0x55d0)) != 0)) {
           uVar16 = 1;
         }
-        uStack_140 = *(int *)(param_1 + 0xe8) + uStack_140;
+        stack_pair_140.first = *(int *)(param_1 + 0xe8) + stack_pair_140.first;
         uStack_138 = *(int *)(param_1 + 0xe8) + uStack_138;
-        uStack_13c = *(int *)(param_1 + 0xe4) + uStack_13c;
+        stack_pair_140.second = *(int *)(param_1 + 0xe4) + stack_pair_140.second;
         if ((uVar16 != 0) && ((*(uint *)(param_1 + 0xbbc) & 1) != 0)) {
           fn_82CBB638(param_1);
         }

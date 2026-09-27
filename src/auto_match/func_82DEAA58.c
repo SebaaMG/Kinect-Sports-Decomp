@@ -41,7 +41,7 @@ void fn_82DEAA58(int param_1,int *param_2)
   uint uVar4;
   ulonglong uVar5;
   undefined4 *puVar6;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [32];
   
   iVar1 = *(int *)(param_1 + 0x10);
   iVar2 = *(int *)(param_1 + 0x54);

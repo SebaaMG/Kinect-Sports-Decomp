@@ -48,7 +48,7 @@ void fn_82DB61C8(int param_1,int param_2,int param_3)
   undefined4 uVar8;
   undefined4 uVar9;
   undefined4 uVar10;
-  undefined1 auStack_220 [16];
+  undefined1 auStack_220 [1];
   undefined1 auStack_210 [512];
   
   if (*(uint *)(param_1 + 0x34) == (*(uint *)(param_1 + 0x38) & 0x3fffffff)) {

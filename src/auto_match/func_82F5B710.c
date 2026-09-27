@@ -48,7 +48,7 @@ undefined8 fn_82F5B710(int param_1,undefined8 param_2,int param_3)
   int *piStack_4c;
   int *piStack_48;
   int *piStack_44;
-  int *apiStack_40 [16];
+  int *apiStack_40 [8];
   
   if (*(int *)(param_1 + 0x24) == 0) {
     *(int *)(param_1 + 0x38) = (int)param_2;

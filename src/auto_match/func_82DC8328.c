@@ -54,8 +54,8 @@ void fn_82DC8328(int *param_1,undefined4 *param_2,undefined4 param_3)
   int iVar8;
   longlong lVar9;
   int iVar10;
-  undefined4 uStack_b0;
-  undefined4 uStack_ac;
+  struct { undefined4 first; undefined4 second; } stack_pair_b0;
+
   undefined4 uStack_a8;
   int *piStack_a4;
   undefined4 uStack_a0;
@@ -94,14 +94,14 @@ void fn_82DC8328(int *param_1,undefined4 *param_2,undefined4 param_3)
         uStack_8c = 0;
         uStack_84 = 0;
         uStack_80 = 0;
-        uStack_b0 = param_3;
-        uStack_ac = uVar3;
+        stack_pair_b0.first = param_3;
+        stack_pair_b0.second = uVar3;
         uStack_a8 = uVar4;
         piStack_a4 = param_1;
         iStack_9c = iVar8;
         iStack_98 = iVar10;
         uStack_94 = bVar5;
-        (**(code **)*param_2)(param_2,&uStack_b0);
+        (**(code **)*param_2)(param_2,&stack_pair_b0.first);
       }
       lVar9 = lVar9 + -1;
       iVar8 = iVar8 + 0x20;

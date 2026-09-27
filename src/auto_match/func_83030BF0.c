@@ -58,8 +58,8 @@ void fn_83030BF0(int param_1,int param_2,undefined4 param_3)
   ulonglong uVar14;
   uint *puStack0000001c;
   undefined4 uStack00000024;
-  undefined4 uStack_50;
-  undefined4 uStack_4c;
+  struct { undefined4 first; undefined4 second; } stack_pair_50;
+
   byte bStack_48;
   
   puStack0000001c = (uint *)(param_2 + 4);
@@ -119,13 +119,13 @@ void fn_83030BF0(int param_1,int param_2,undefined4 param_3)
           puVar2 = puStack0000001c + 1;
           pcVar3 = (char *)((int)puStack0000001c + 5);
           puVar4 = (uint *)((int)puStack0000001c + 6);
-          uStack_50 = *(undefined4 *)((int)puStack0000001c + 10);
-          uStack_4c = *(undefined4 *)((int)puStack0000001c + 0xe);
+          stack_pair_50.first = *(undefined4 *)((int)puStack0000001c + 10);
+          stack_pair_50.second = *(undefined4 *)((int)puStack0000001c + 0xe);
           puStack0000001c = (uint *)((int)puStack0000001c + 0x12);
           uVar14 = (((ulonglong)*puVar4 & 7) << 2 | (ulonglong)(*pcVar3 != '\0')) << 3 |
                    (ulonglong)(*(char *)puVar2 != '\0') << 4 | uVar14 & 7;
           bStack_48 = (byte)uVar14;
-          iVar12 = fn_830308E8(param_1,uVar7,&uStack_50);
+          iVar12 = fn_830308E8(param_1,uVar7,&stack_pair_50.first);
           if (iVar12 != 1) {
             return;
           }

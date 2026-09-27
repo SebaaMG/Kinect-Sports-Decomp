@@ -52,7 +52,7 @@ void fn_82C39F90(int *param_1)
   ulonglong uVar16;
   double dVar17;
   double dVar18;
-  float afStack_d4 [53];
+  float afStack_d4 [21];
   
   iVar2 = *param_1;
   iVar12 = 0;

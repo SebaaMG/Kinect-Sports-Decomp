@@ -36,17 +36,17 @@ extern unsigned int uStack_20;
 double fn_82FF13D8(int param_1)
 
 {
-  undefined4 uStack_20;
-  undefined4 uStack_1c;
+  struct { undefined4 first; undefined4 second; } stack_pair_20;
+
   undefined4 uStack_18;
   undefined4 uStack_14;
   
   if ((*(byte *)(param_1 + 0xd8) & 1) == 0) {
-    uStack_1c = lbl_821AAD20;
-    uStack_20 = lbl_821AAD20;
+    stack_pair_20.second = lbl_821AAD20;
+    stack_pair_20.first = lbl_821AAD20;
     uStack_18 = lbl_821AAD20;
     uStack_14 = lbl_821AAD20;
-    fn_82FF11B8(param_1,&uStack_20);
+    fn_82FF11B8(param_1,&stack_pair_20.first);
   }
   return (double)*(float *)(param_1 + 0x84);
 }

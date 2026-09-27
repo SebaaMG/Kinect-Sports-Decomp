@@ -55,8 +55,8 @@ void fn_82D84E70(int param_1,int *param_2,int param_3)
   undefined1 auStack_70 [4];
   int *piStack_6c;
   undefined1 uStack_68;
-  int iStack_60;
-  uint uStack_5c;
+  struct { int first; uint second; } stack_pair_60;
+
   uint uStack_58;
   int iStack_54;
   
@@ -72,16 +72,16 @@ void fn_82D84E70(int param_1,int *param_2,int param_3)
       *(undefined4 **)(iVar4 + 4) = puVar1 + 4;
     }
     uVar2 = *(uint *)(param_1 + 0x338);
-    iStack_60 = 0;
-    uStack_5c = 0;
+    stack_pair_60.first = 0;
+    stack_pair_60.second = 0;
     uStack_58 = 0x80000000;
     piVar5 = (int *)fn_82CE5410();
     uStack_58 = uVar2 | 0x80000000;
-    iStack_60 = *piVar5;
-    *piVar5 = (uVar2 * 8 + 0x7f & 0xffffff80) + iStack_60;
-    iStack_54 = iStack_60;
+    stack_pair_60.first = *piVar5;
+    *piVar5 = (uVar2 * 8 + 0x7f & 0xffffff80) + stack_pair_60.first;
+    iStack_54 = stack_pair_60.first;
     (**(code **)(**(int **)(param_1 + 0x58) + 0x48))
-              (*(int **)(param_1 + 0x58),param_2 + 9,&iStack_60);
+              (*(int **)(param_1 + 0x58),param_2 + 9,&stack_pair_60.first);
     iVar4 = KeTlsGetValue(lbl_8323B4A0);
     puVar1 = *(undefined4 **)(iVar4 + 4);
     if (puVar1 < *(undefined4 **)(iVar4 + 0xc)) {
@@ -91,9 +91,9 @@ void fn_82D84E70(int param_1,int *param_2,int param_3)
       *(undefined4 **)(iVar4 + 4) = puVar1 + 3;
     }
     iVar4 = 0;
-    if (0 < (int)uStack_5c) {
+    if (0 < (int)stack_pair_60.second) {
       iVar8 = 0;
-      iVar6 = iStack_60;
+      iVar6 = stack_pair_60.first;
       do {
         piVar5 = *(int **)(iVar6 + 4);
         if (piVar5 != param_2 + 9) {
@@ -102,8 +102,8 @@ void fn_82D84E70(int param_1,int *param_2,int param_3)
         }
         iVar4 = iVar4 + 1;
         iVar8 = iVar8 + 8;
-        iVar6 = iVar8 + iStack_60;
-      } while (iVar4 < (int)uStack_5c);
+        iVar6 = iVar8 + stack_pair_60.first;
+      } while (iVar4 < (int)stack_pair_60.second);
     }
     if (param_3 != 0) {
       iVar4 = KeTlsGetValue(lbl_8323B4A0);
@@ -137,14 +137,14 @@ void fn_82D84E70(int param_1,int *param_2,int param_3)
       puVar1[1] = (int)uVar3;
       *(undefined4 **)(iVar6 + 4) = puVar1 + 3;
     }
-    uStack_5c = -(uint)(iStack_60 != iStack_54) & uStack_5c;
+    stack_pair_60.second = -(uint)(stack_pair_60.first != iStack_54) & stack_pair_60.second;
     piVar5 = (int *)fn_82CE5410();
     *piVar5 = iVar4;
     iVar4 = fn_82CE5410();
-    uStack_5c = 0;
+    stack_pair_60.second = 0;
     if ((uStack_58 & 0x80000000) == 0) {
       (**(code **)(**(int **)(iVar4 + 0x10) + 0x10))
-                (*(int **)(iVar4 + 0x10),iStack_60,uStack_58 & 0x3fffffff,8);
+                (*(int **)(iVar4 + 0x10),stack_pair_60.first,uStack_58 & 0x3fffffff,8);
     }
   }
   else {

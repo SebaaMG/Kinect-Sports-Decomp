@@ -34,7 +34,7 @@ longlong fn_82F48150(int *param_1,uint param_2,undefined8 param_3,undefined8 par
 {
   longlong lVar1;
   int iVar2;
-  ushort auStack_30 [24];
+  ushort auStack_30;
   
   if (param_5 == (ulonglong *)0x0) {
     lVar1 = -0x7ff8ffa9;
@@ -42,12 +42,12 @@ longlong fn_82F48150(int *param_1,uint param_2,undefined8 param_3,undefined8 par
   else {
     *param_5 = 0;
     if (param_2 < (uint)param_1[9]) {
-      auStack_30[0] = 0;
-      lVar1 = (**(code **)(*(int *)param_1[5] + 0x38))((int *)param_1[5],param_3,param_4,auStack_30)
+      auStack_30 = 0;
+      lVar1 = (**(code **)(*(int *)param_1[5] + 0x38))((int *)param_1[5],param_3,param_4,&auStack_30)
       ;
       if (-1 < lVar1) {
-        if ((ulonglong)auStack_30[0] < (ulonglong)*(ushort *)(param_1 + 6)) {
-          *param_5 = (longlong)param_1[7] * (longlong)(int)param_2 + (ulonglong)auStack_30[0] * 4 &
+        if ((ulonglong)auStack_30 < (ulonglong)*(ushort *)(param_1 + 6)) {
+          *param_5 = (longlong)param_1[7] * (longlong)(int)param_2 + (ulonglong)auStack_30 * 4 &
                      0xffffffff;
           iVar2 = (**(code **)(*param_1 + 0x50))(param_1);
           if (iVar2 != 0) {

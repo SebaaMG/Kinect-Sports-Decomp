@@ -25,7 +25,7 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F68CC0();
+extern int memcpy();
 extern int fn_82FA5060();
 extern int fn_82FB6710();
 extern int fn_82FB6C88();
@@ -55,8 +55,8 @@ undefined8 fn_82FB6808(int param_1,uint param_2,int param_3)
   ushort uVar6;
   uint uVar7;
   byte *pbVar8;
-  undefined4 uStack_a0;
-  undefined4 uStack_9c;
+  struct { undefined4 first; undefined4 second; } stack_pair_a0;
+
   undefined4 uStack_98;
   undefined4 uStack_94;
   int iStack_90;
@@ -76,8 +76,8 @@ undefined8 fn_82FB6808(int param_1,uint param_2,int param_3)
     uVar6 = uStack_74;
     uVar7 = uStack_8c;
     do {
-      uStack_a0 = *(undefined4 *)(pbVar8 + -0x18);
-      uStack_9c = *(undefined4 *)(pbVar8 + -0x14);
+      stack_pair_a0.first = *(undefined4 *)(pbVar8 + -0x18);
+      stack_pair_a0.second = *(undefined4 *)(pbVar8 + -0x14);
       uVar6 = uVar6 & 0xfff;
       uStack_74 = (*(short *)(pbVar8 + 0x18) << 1 | pbVar8[0x1a] & 1) << 0xc | uVar6;
       uStack_98 = *(undefined4 *)(pbVar8 + -0x10);
@@ -121,7 +121,7 @@ undefined8 fn_82FB6808(int param_1,uint param_2,int param_3)
       if (iVar2 == 0) {
         return 2;
       }
-      fn_82F68CC0(iVar2,&uStack_a0,0x34);
+      memcpy(iVar2,&stack_pair_a0.first,0x34);
       uVar5 = uVar5 + 1;
       pbVar8 = pbVar8 + 0x54;
     } while (uVar5 < param_2);

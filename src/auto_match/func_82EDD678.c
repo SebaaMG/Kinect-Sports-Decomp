@@ -34,8 +34,7 @@ extern unsigned int iStack00000044;
 extern unsigned int iStack0000004c;
 
 
-ulonglong fn_82EDD678(int param_1,int *param_2,undefined8 param_3,ulonglong param_4,
-                       undefined8 param_5,int param_6,int param_7,int param_8)
+ulonglong fn_82EDD678(int param_1, int *param_2, undefined8 param_3, ulonglong param_4, undefined8 param_5, int param_6, int param_7, int param_8, int in_stack_00000054, int in_stack_0000005c, int in_stack_00000064, int in_stack_0000006c, undefined4 in_stack_00000074, undefined4 in_stack_0000007c)
 
 {
   bool bVar1;
@@ -53,12 +52,12 @@ ulonglong fn_82EDD678(int param_1,int *param_2,undefined8 param_3,ulonglong para
   int iStack0000003c;
   int iStack00000044;
   int iStack0000004c;
-  int in_stack_00000054;
-  int in_stack_0000005c;
-  int in_stack_00000064;
-  int in_stack_0000006c;
-  undefined4 in_stack_00000074;
-  undefined4 in_stack_0000007c;
+
+
+
+
+
+
   
   uVar11 = *(uint *)(param_1 + 0x10);
   uVar5 = (ulonglong)uVar11;

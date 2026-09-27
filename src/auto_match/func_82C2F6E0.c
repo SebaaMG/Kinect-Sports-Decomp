@@ -25,7 +25,7 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int iStack_d0;
 extern unsigned int iStack_d4;
 extern unsigned int iStack_d8;
@@ -135,8 +135,8 @@ void fn_82C2F6E0(undefined8 param_1,int *param_2,int param_3,ulonglong param_4)
       if (iStack_dc == 0) {
         iVar10 = iVar2 * 2;
         piStack00000024 = piVar17;
-        fn_82F68CC0(iVar10 + iVar5,iVar5,iVar10);
-        fn_82F68CC0(iVar10 + iVar4,iVar4,iVar10);
+        memcpy(iVar10 + iVar5,iVar5,iVar10);
+        memcpy(iVar10 + iVar4,iVar4,iVar10);
         iStack_dc = iVar2;
       }
       iStack_dc = iStack_dc + -1;

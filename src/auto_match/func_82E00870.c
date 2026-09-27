@@ -36,7 +36,7 @@ void fn_82E00870(int param_1,undefined8 param_2)
 {
   int iVar1;
   uint uVar2;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [32];
   
   iVar1 = *(int *)(param_1 + 0x14);
   uVar2 = 0;

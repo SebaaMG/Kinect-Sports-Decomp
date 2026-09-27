@@ -93,8 +93,8 @@ void fn_8308E8A0(int param_1,undefined4 *param_2,int param_3,int param_4,int *pa
   undefined4 in_register_000101d8;
   undefined4 in_vr29;
   int iStack00000024;
-  uint uStack_e0;
-  uint uStack_dc;
+  struct { uint first; uint second; } stack_pair_e0;
+
   uint uStack_d8;
   uint uStack_d0;
   uint uStack_cc;
@@ -121,7 +121,7 @@ void fn_8308E8A0(int param_1,undefined4 *param_2,int param_3,int param_4,int *pa
     vectorMinimumFloatingPoint(in_vs35,in_vs32);
     vectorAddFloatingPoint(in_vs63,in_vs44);
     vectorAddFloatingPoint(in_vs62,in_vs44);
-    puVar26 = (undefined4 *)((int)&uStack_e0 + (int)in_r0 & 0xfffffff0);
+    puVar26 = (undefined4 *)((int)&stack_pair_e0.first + (int)in_r0 & 0xfffffff0);
     *puVar26 = in_register_000101d0;
     puVar26[1] = in_register_000101d4;
     puVar26[2] = in_register_000101d8;
@@ -137,8 +137,8 @@ void fn_8308E8A0(int param_1,undefined4 *param_2,int param_3,int param_4,int *pa
     uStack_bc = (undefined2)(uStack_c8 >> 7);
     uVar15 = uStack_cc >> 7 & 0xfffe;
     uVar16 = uStack_c8 >> 7 & 0xfffe;
-    uVar20 = uStack_e0 >> 7 & 0xffff | 1;
-    uVar18 = uStack_dc >> 7 & 0xffff | 1;
+    uVar20 = stack_pair_e0.first >> 7 & 0xffff | 1;
+    uVar18 = stack_pair_e0.second >> 7 & 0xffff | 1;
     uVar17 = uStack_d8 >> 7 & 0xffff | 1;
     puVar26 = puVar25;
     while (uVar24 = (ushort)uVar23, uVar14 < uVar1) {

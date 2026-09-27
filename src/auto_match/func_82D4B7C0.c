@@ -45,7 +45,7 @@ fn_82D4B7C0(undefined1 *param_1,longlong param_2,int *param_3,int *param_4,int p
   undefined1 *puVar7;
   int *piVar8;
   int *piVar9;
-  undefined1 auStack_240 [576];
+  undefined1 auStack_240 [512];
   int *piVar2;
   
   uVar5 = (**(code **)(*param_6 + 0x10))(param_6,param_7);

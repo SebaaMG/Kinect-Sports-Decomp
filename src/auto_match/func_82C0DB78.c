@@ -41,7 +41,7 @@ void fn_82C0DB78(int *param_1)
   int iVar5;
   int *piStack_40;
   int *piStack_3c;
-  int aiStack_38 [14];
+  int aiStack_38;
   
   uVar1 = (**(code **)(*param_1 + 0x100))();
   while ((uVar1 & 4) == 0) {
@@ -58,7 +58,7 @@ void fn_82C0DB78(int *param_1)
           (**(code **)(*piStack_40 + 0x48))(piStack_40,piVar4);
           iVar5 = *piStack_40;
           lVar2 = (**(code **)(*piVar4 + 0x54))(piVar4);
-          iVar5 = (**(code **)(iVar5 + 0x78))(piStack_40,lVar2 + -8,aiStack_38);
+          iVar5 = (**(code **)(iVar5 + 0x78))(piStack_40,lVar2 + -8,&aiStack_38);
           if (iVar5 < 0) {
             (**(code **)(*piVar4 + 8))(piVar4);
             (**(code **)(*piStack_40 + 0x14))();
@@ -69,7 +69,7 @@ void fn_82C0DB78(int *param_1)
           fn_82C0BEA8(piStack_3c);
           (**(code **)(*piStack_40 + 0x14))();
           (**(code **)(*param_1 + 0xcc))(param_1);
-          if (aiStack_38[0] == 0) break;
+          if (aiStack_38 == 0) break;
         }
         else {
           (**(code **)(*piStack_40 + 0x14))();

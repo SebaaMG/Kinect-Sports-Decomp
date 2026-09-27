@@ -43,7 +43,7 @@ undefined8 fn_83037768(int param_1)
   int iVar2;
   uint uVar3;
   int iStack_40;
-  int aiStack_3c [15];
+  int aiStack_3c;
   
   uVar1 = fn_82F6E380(0);
   fn_82F65320(uVar1);
@@ -53,10 +53,10 @@ undefined8 fn_83037768(int param_1)
     if (uVar3 < 3) {
       if (uVar3 == 0) {
         iStack_40 = 0;
-        aiStack_3c[0] = 0;
-        iVar2 = XNotifyGetNext(*(undefined4 *)(param_1 + 4),0xa000003,&iStack_40,aiStack_3c);
+        aiStack_3c = 0;
+        iVar2 = XNotifyGetNext(*(undefined4 *)(param_1 + 4),0xa000003,&iStack_40,&aiStack_3c);
         if (iVar2 != 0) {
-          if (iStack_40 == 0xa000003 && aiStack_3c[0] != 0) {
+          if (iStack_40 == 0xa000003 && aiStack_3c != 0) {
             fn_83009FC0();
           }
           else {

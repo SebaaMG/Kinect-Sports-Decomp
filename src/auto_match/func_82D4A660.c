@@ -37,7 +37,7 @@ undefined8 fn_82D4A660(int *param_1)
   longlong lVar1;
   char *pcVar3;
   undefined8 uVar2;
-  undefined1 auStack_220 [16];
+  undefined1 auStack_220 [1];
   undefined1 auStack_210 [512];
   
   if (param_1[10] == 0) {

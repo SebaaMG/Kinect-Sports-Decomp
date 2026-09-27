@@ -26,7 +26,7 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_28;
-extern int fn_82F6FA38();
+extern int _getptd();
 extern unsigned int uStack0000001c;
 extern unsigned int uStack00000024;
 extern unsigned int uStack0000002c;
@@ -34,7 +34,7 @@ extern unsigned int uStack00000034;
 
 
 undefined4
-fn_82F69590(undefined4 *param_1,undefined4 param_2,undefined4 param_3,undefined4 param_4,
+_CallSETranslator(undefined4 *param_1,undefined4 param_2,undefined4 param_3,undefined4 param_4,
              undefined4 param_5)
 
 {
@@ -44,14 +44,14 @@ fn_82F69590(undefined4 *param_1,undefined4 param_2,undefined4 param_3,undefined4
   undefined4 uStack00000024;
   undefined4 uStack0000002c;
   undefined4 uStack00000034;
-  undefined1 auStack_28 [40];
+  undefined1 auStack_28 [24];
   
   puStack00000014 = param_1;
   uStack0000001c = param_2;
   uStack00000024 = param_3;
   uStack0000002c = param_4;
   uStack00000034 = param_5;
-  iVar1 = fn_82F6FA38();
+  iVar1 = _getptd();
   (**(code **)(iVar1 + 0x74))(*param_1,auStack_28);
   return 0;
 }

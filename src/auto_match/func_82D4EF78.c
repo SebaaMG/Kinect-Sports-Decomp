@@ -49,7 +49,7 @@ undefined4 * fn_82D4EF78(undefined4 *param_1,int param_2)
   undefined4 *puVar9;
   undefined4 uVar10;
   undefined4 uVar11;
-  undefined4 auStack_40 [16];
+  undefined4 auStack_40;
   
   fn_82D43238((double)*(float *)(param_2 + 0xe4),param_1,param_2,
                     *(undefined4 *)(param_2 + 0xb0));
@@ -98,10 +98,10 @@ undefined4 * fn_82D4EF78(undefined4 *param_1,int param_2)
     if ((param_1[0x35] & 0x80000000) == 0) {
       (**(code **)(*piVar1 + 0x10))(piVar1,*puVar9,uVar2,2);
     }
-    auStack_40[0] = *(undefined4 *)(param_2 + 0xd0);
-    uVar5 = (**(code **)(*piVar1 + 0xc))(piVar1,auStack_40,2);
+    auStack_40 = *(undefined4 *)(param_2 + 0xd0);
+    uVar5 = (**(code **)(*piVar1 + 0xc))(piVar1,&auStack_40,2);
     *puVar9 = uVar5;
-    param_1[0x35] = auStack_40[0];
+    param_1[0x35] = auStack_40;
   }
   uVar2 = *(uint *)(param_2 + 0xd0);
   uVar6 = (ulonglong)uVar2;

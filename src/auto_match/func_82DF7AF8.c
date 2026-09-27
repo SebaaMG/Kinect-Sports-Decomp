@@ -31,7 +31,7 @@ extern int fn_82CE6310();
 extern int fn_82CE63B0();
 extern int fn_82DF4EF8();
 extern int fn_82DF6CD0();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int iStack_7c;
 extern unsigned int iStack_80;
 
@@ -48,7 +48,7 @@ undefined8 fn_82DF7AF8(int *param_1,undefined8 param_2,int *param_3)
   int *piVar7;
   int iStack_80;
   int iStack_7c;
-  undefined1 auStack_78 [120];
+  undefined1 auStack_78 [8];
   
   iVar6 = param_1[1];
   iVar2 = fn_82CE5410();
@@ -126,7 +126,7 @@ undefined8 fn_82DF7AF8(int *param_1,undefined8 param_2,int *param_3)
         *puVar4 = 0;
       }
       *(undefined4 **)(iVar2 + *param_3) = puVar4;
-      fn_82F68CC0(*(undefined4 *)(iVar2 + *param_3),piVar1,0x200);
+      memcpy(*(undefined4 *)(iVar2 + *param_3),piVar1,0x200);
       iVar6 = iVar6 + 1;
       iVar2 = iVar2 + 4;
     } while (iVar6 < param_1[1]);

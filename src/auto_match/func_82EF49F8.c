@@ -39,7 +39,7 @@ undefined8 fn_82EF49F8(undefined4 param_1,undefined8 param_2)
   int iVar1;
   int iVar2;
   undefined4 uStack00000014;
-  undefined1 auStack_10 [3];
+  undefined1 auStack_10 [1];
   undefined1 uStack_d;
   
   uStack00000014 = param_1;

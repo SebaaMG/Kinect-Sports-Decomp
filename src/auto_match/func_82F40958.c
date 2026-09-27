@@ -38,7 +38,7 @@ undefined8 fn_82F40958(int param_1,ulonglong param_2,int param_3)
   uint uVar3;
   uint *puStack_40;
   undefined4 uStack_3c;
-  int aiStack_38 [14];
+  int aiStack_38 [2];
   
   puStack_40 = (uint *)(aiStack_38 + 1);
   uStack_3c = 0;

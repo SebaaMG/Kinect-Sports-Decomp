@@ -39,13 +39,13 @@ void fn_82E09740(longlong param_1,int *param_2)
   undefined8 uVar1;
   undefined4 uVar2;
   int iVar3;
-  char acStack_30 [48];
+  char acStack_30;
   
   param_1 = param_1 + 0xc;
   uVar1 = fn_82CFFFC8(param_1);
-  fn_82D002F0(acStack_30,param_1,uVar1);
+  fn_82D002F0(&acStack_30,param_1,uVar1);
   while( true ) {
-    if (acStack_30[0] == '\0') {
+    if (acStack_30 == '\0') {
       return;
     }
     uVar2 = fn_82D00020(param_1,uVar1);
@@ -55,7 +55,7 @@ void fn_82E09740(longlong param_1,int *param_2)
     param_2[1] = iVar3 + 1;
     *(undefined4 *)(iVar3 * 4 + *param_2) = uVar2;
     uVar1 = fn_82D00060(param_1,uVar1);
-    fn_82D002F0(acStack_30,param_1,uVar1);
+    fn_82D002F0(&acStack_30,param_1,uVar1);
   }
                     /* WARNING: Subroutine does not return */
   fn_82CE63B0(*(undefined4 *)(iVar3 + 0x10),param_2,4);

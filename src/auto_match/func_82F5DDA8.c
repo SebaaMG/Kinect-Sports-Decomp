@@ -31,7 +31,7 @@ extern int fn_82F5D418();
 extern int fn_82F5DD50();
 extern int fn_82F5DEE0();
 extern int fn_82F5E4D8();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 void fn_82F5DDA8(int param_1,int *param_2)
@@ -51,7 +51,7 @@ void fn_82F5DDA8(int param_1,int *param_2)
         uVar1 = fn_82F5D418((double)*(uint *)(param_1 + 0x13c),
                                   (double)*(uint *)(param_1 + 0x140),
                                   (double)*(uint *)(param_1 + 0x144),auStack_50);
-        fn_82F68CC0(auStack_80,uVar1,0x2c);
+        memcpy(auStack_80,uVar1,0x2c);
         fn_82F5DEE0(param_2,auStack_80);
         uVar3 = 3;
       }

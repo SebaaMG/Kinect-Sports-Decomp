@@ -56,7 +56,7 @@ void fn_82DB34D0(int param_1,int *param_2,undefined8 param_3)
   undefined8 uVar4;
   int iVar7;
   ulonglong uVar5;
-  undefined4 auStack_70 [2];
+  undefined4 auStack_70;
   undefined1 auStack_68 [24];
   undefined4 uStack_50;
   undefined1 uStack_4b;
@@ -93,10 +93,10 @@ void fn_82DB34D0(int param_1,int *param_2,undefined8 param_3)
     puVar2[1] = (int)uVar3;
     *(undefined4 **)(iVar7 + 4) = puVar2 + 3;
   }
-  fn_83085238(auStack_70,uVar4);
-  fn_830855B0(auStack_68,0,uVar4,auStack_70[0]);
-  fn_83085650(auStack_70,*param_2);
-  fn_830852B0(auStack_70,uVar4);
+  fn_83085238(&auStack_70,uVar4);
+  fn_830855B0(auStack_68,0,uVar4,auStack_70);
+  fn_83085650(&auStack_70,*param_2);
+  fn_830852B0(&auStack_70,uVar4);
   iVar7 = KeTlsGetValue(lbl_8323B4A0);
   puVar2 = *(undefined4 **)(iVar7 + 4);
   if (puVar2 < *(undefined4 **)(iVar7 + 0xc)) {

@@ -93,7 +93,7 @@ byte * fn_82DE1D50(byte *param_1,int param_2,int *param_3,byte *param_4,int para
   int iStack_280;
   uint auStack_27c [3];
   undefined1 auStack_270 [16];
-  undefined1 auStack_260 [608];
+  undefined1 auStack_260 [560];
   
 LAB_82de1d84:
   bVar1 = *param_4;

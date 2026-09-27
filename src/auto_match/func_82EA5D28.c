@@ -28,8 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 extern unsigned int lbl_831898B8;
 
 
-void fn_82EA5D28(int param_1,undefined8 param_2,longlong param_3,longlong param_4,
-                  ulonglong param_5,int param_6,int param_7,int param_8)
+void fn_82EA5D28(int param_1, undefined8 param_2, longlong param_3, longlong param_4, ulonglong param_5, int param_6, int param_7, int param_8, uint in_stack_00000054, uint in_stack_0000005c, int in_stack_00000064, undefined4 in_stack_0000006c, undefined8 unused_arg_13, undefined8 unused_arg_14, uint in_stack_00000084, uint in_stack_0000008c, int in_stack_00000094)
 
 {
   code *pcVar1;
@@ -50,13 +49,13 @@ void fn_82EA5D28(int param_1,undefined8 param_2,longlong param_3,longlong param_
   longlong lVar16;
   int iVar18;
   ulonglong uVar17;
-  uint in_stack_00000054;
-  uint in_stack_0000005c;
-  int in_stack_00000064;
-  undefined4 in_stack_0000006c;
-  uint in_stack_00000084;
-  uint in_stack_0000008c;
-  int in_stack_00000094;
+
+
+
+
+
+
+
   undefined4 *in_stack_0000009c;
   undefined4 *in_stack_000000a4;
   undefined4 *in_stack_000000ac;

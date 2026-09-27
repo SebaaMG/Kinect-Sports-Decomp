@@ -26,7 +26,7 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_82F68918();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern int fn_82F6B2A8();
 extern unsigned int lbl_82005710;
 extern unsigned int lbl_820D8088;
@@ -240,7 +240,7 @@ undefined8 fn_82C696B8(double param_1,double param_2,int param_3)
         if (0 < iVar38) {
           if ((uVar27 & 0x7f) == 0) {
             if ((uVar25 & 0x7f) == 0) {
-              fn_82F68CC0(pbVar31,pbVar48,iVar38);
+              memcpy(pbVar31,pbVar48,iVar38);
               pbVar31 = pbVar31 + iVar38;
             }
             else {
@@ -321,8 +321,8 @@ undefined8 fn_82C696B8(double param_1,double param_2,int param_3)
         if (uVar19 == 0) {
           if (uVar20 == 0) {
             if (0 < iVar30) {
-              fn_82F68CC0(puVar34,pbVar48,iVar30);
-              fn_82F68CC0(puVar43,pbVar31,iVar30);
+              memcpy(puVar34,pbVar48,iVar30);
+              memcpy(puVar43,pbVar31,iVar30);
               puVar34 = puVar34 + iVar30;
               puVar43 = puVar43 + iVar30;
             }
@@ -434,7 +434,7 @@ undefined8 fn_82C696B8(double param_1,double param_2,int param_3)
         if ((uVar27 & 0x7f) == 0) {
           if ((uVar25 & 0x7f) == 0) {
             if (0 < iVar38) {
-              fn_82F68CC0(pbVar31,pbVar48,iVar38);
+              memcpy(pbVar31,pbVar48,iVar38);
               pbVar31 = pbVar31 + iVar38;
             }
           }

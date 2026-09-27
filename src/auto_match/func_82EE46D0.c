@@ -39,7 +39,7 @@ undefined8 fn_82EE46D0(int param_1,uint param_2,short param_3)
   ulonglong uVar4;
   int *piStack_40;
   undefined4 *puStack_3c;
-  int *apiStack_38 [14];
+  int *apiStack_38 [2];
   
   if (*(int *)(param_1 + 0xc) == 0) {
     uVar2 = 0xffffffffc00d36b6;

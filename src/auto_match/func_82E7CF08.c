@@ -34,13 +34,13 @@ longlong fn_82E7CF08(int param_1,short param_2,undefined4 *param_3)
 {
   ulonglong uVar1;
   longlong lVar2;
-  short asStack_50 [2];
+  short asStack_50;
   int *piStack_4c;
-  uint auStack_48 [18];
+  uint auStack_48 [2];
   
   auStack_48[0] = 0;
   piStack_4c = (int *)0x0;
-  asStack_50[0] = 0;
+  asStack_50 = 0;
   if (param_3 == (undefined4 *)0x0) {
     lVar2 = -0x7fffbffd;
   }
@@ -60,9 +60,9 @@ longlong fn_82E7CF08(int param_1,short param_2,undefined4 *param_3)
           }
           lVar2 = (**(code **)(**(int **)(param_1 + 4) + 0x10))
                             (*(int **)(param_1 + 4),0xffffffff820f8f08,uVar1,&piStack_4c);
-          if ((lVar2 < 0) || (lVar2 = fn_82E5A018(piStack_4c,asStack_50), lVar2 < 0))
+          if ((lVar2 < 0) || (lVar2 = fn_82E5A018(piStack_4c,&asStack_50), lVar2 < 0))
           goto LAB_82e7d01c;
-          if (asStack_50[0] == param_2) {
+          if (asStack_50 == param_2) {
             *param_3 = piStack_4c;
             if (piStack_4c == (int *)0x0) {
               return lVar2;

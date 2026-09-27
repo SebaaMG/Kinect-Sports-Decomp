@@ -46,7 +46,7 @@ void fn_83061070(undefined8 param_1,ulonglong param_2)
   double dVar7;
   double dVar8;
   double dVar9;
-  undefined1 auStack_70 [112];
+  undefined1 auStack_70 [16];
   
   puVar1 = (uint *)fn_82F6A548();
   uVar2 = puVar1[1];

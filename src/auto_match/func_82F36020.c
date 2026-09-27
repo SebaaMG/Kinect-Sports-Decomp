@@ -34,7 +34,7 @@ undefined8 fn_82F36020(int param_1,short param_2,uint param_3,undefined2 *param_
   undefined8 uVar1;
   ulonglong uVar2;
   short *psStack_40;
-  int aiStack_3c [15];
+  int aiStack_3c;
   
   if (param_4 == (undefined2 *)0x0) {
     uVar1 = 0xffffffff80070057;
@@ -46,7 +46,7 @@ undefined8 fn_82F36020(int param_1,short param_2,uint param_3,undefined2 *param_
       do {
         fn_82F35618(param_1 + 200,uVar2,&psStack_40);
         if ((*psStack_40 == param_2) &&
-           (fn_82F35618(param_1 + 200,uVar2,aiStack_3c), *(ushort *)(aiStack_3c[0] + 2) == param_3)
+           (fn_82F35618(param_1 + 200,uVar2,&aiStack_3c), *(ushort *)(aiStack_3c + 2) == param_3)
            ) {
           *param_4 = (short)uVar2;
           return 0;

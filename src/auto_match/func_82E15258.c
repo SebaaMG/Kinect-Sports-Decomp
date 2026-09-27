@@ -50,7 +50,7 @@ undefined8 fn_82E15258(int *param_1,int *param_2)
   int iVar7;
   int iVar8;
   undefined1 auStack_250 [16];
-  undefined1 auStack_240 [576];
+  undefined1 auStack_240 [512];
   
   for (piVar2 = param_2; piVar2 != (int *)0x0; piVar2 = (int *)(**(code **)(*piVar2 + 0x24))()) {
     if (piVar2 == param_1) {

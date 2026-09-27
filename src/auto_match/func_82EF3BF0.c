@@ -41,7 +41,7 @@ longlong fn_82EF3BF0(int *param_1,uint *param_2)
   ulonglong uVar4;
   int *piVar5;
   int *piVar6;
-  int aiStack_50 [20];
+  int aiStack_50;
   
   if (param_1[3] == 0) {
     return -0x3ff2c94a;
@@ -74,33 +74,33 @@ LAB_82ef3cb8:
       goto LAB_82ef3e18;
     }
 LAB_82ef3cd8:
-    aiStack_50[0] = 0;
-    lVar3 = fn_82E59EC8(aiStack_50,piVar6);
-    iVar2 = aiStack_50[0];
+    aiStack_50 = 0;
+    lVar3 = fn_82E59EC8(&aiStack_50,piVar6);
+    iVar2 = aiStack_50;
     if (-1 < lVar3) {
-      if (aiStack_50[0] != 0) {
-        uVar4 = fn_82E50BE8(aiStack_50[0],0,0,0,0);
+      if (aiStack_50 != 0) {
+        uVar4 = fn_82E50BE8(aiStack_50,0,0,0,0);
         param_1[0x12] = (int)uVar4;
         if ((uVar4 & 0xffffffff) == 0) goto LAB_82ef3cb8;
         lVar3 = fn_82E57820(uVar4,piVar6,iVar2);
         if (lVar3 < 0) goto LAB_82ef3e08;
         *(undefined1 *)(param_1[0x12] + iVar2 + -1) = 0;
       }
-      lVar3 = fn_82E59EC8(aiStack_50,piVar6);
-      iVar2 = aiStack_50[0];
+      lVar3 = fn_82E59EC8(&aiStack_50,piVar6);
+      iVar2 = aiStack_50;
       if (-1 < lVar3) {
-        if (aiStack_50[0] != 0) {
-          uVar4 = fn_82E50BE8(aiStack_50[0],0,0,0,0);
+        if (aiStack_50 != 0) {
+          uVar4 = fn_82E50BE8(aiStack_50,0,0,0,0);
           param_1[0x13] = (int)uVar4;
           if ((uVar4 & 0xffffffff) == 0) goto LAB_82ef3cb8;
           lVar3 = fn_82E57820(uVar4,piVar6,iVar2);
           if (lVar3 < 0) goto LAB_82ef3e08;
           *(undefined1 *)(param_1[0x13] + iVar2 + -1) = 0;
         }
-        lVar3 = fn_82E59EC8(aiStack_50,piVar6);
-        iVar2 = aiStack_50[0];
-        if ((-1 < lVar3) && (aiStack_50[0] != 0)) {
-          uVar4 = fn_82E50BE8(aiStack_50[0],0,0,0,0);
+        lVar3 = fn_82E59EC8(&aiStack_50,piVar6);
+        iVar2 = aiStack_50;
+        if ((-1 < lVar3) && (aiStack_50 != 0)) {
+          uVar4 = fn_82E50BE8(aiStack_50,0,0,0,0);
           param_1[0x16] = (int)uVar4;
           if ((uVar4 & 0xffffffff) == 0) goto LAB_82ef3cb8;
           lVar3 = fn_82E57820(uVar4,piVar6,iVar2);

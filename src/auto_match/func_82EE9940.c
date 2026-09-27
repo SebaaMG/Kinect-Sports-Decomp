@@ -46,7 +46,7 @@ undefined8 fn_82EE9940(int *param_1,int param_2)
   uint *puVar9;
   uint *puVar10;
   uint *puStack_50;
-  int *apiStack_4c [19];
+  int * apiStack_4c;
   
   iVar5 = param_1[0x1d];
   lVar4 = fn_82EE80A8(iVar5);
@@ -87,14 +87,14 @@ undefined8 fn_82EE9940(int *param_1,int param_2)
   }
   RtlEnterCriticalSection(piVar8);
   while( true ) {
-    iVar5 = fn_82EEA360(param_1 + 0x1e,lVar4 - lVar6,apiStack_4c);
+    iVar5 = fn_82EEA360(param_1 + 0x1e,lVar4 - lVar6,&apiStack_4c);
     RtlLeaveCriticalSection(piVar8);
     if (iVar5 != 0) break;
-    if (apiStack_4c[0][6] != 0) {
+    if (apiStack_4c[6] != 0) {
       (**(code **)(*param_1 + 0x18))(param_1);
     }
-    (**(code **)(*apiStack_4c[0] + 8))(apiStack_4c[0]);
-    apiStack_4c[0] = (int *)0x0;
+    (**(code **)(*apiStack_4c + 8))(apiStack_4c);
+    apiStack_4c = (int *)0x0;
     RtlEnterCriticalSection(piVar8);
   }
   RtlEnterCriticalSection(piVar8);

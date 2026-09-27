@@ -28,12 +28,11 @@ typedef struct { U64 lo, hi; } V16;
 #define CONCAT11(h,l) ((U16)((((U8)(h)) << 8) | ((U8)(l))))
 
 
-ulonglong fn_82E22910(undefined8 param_1,int param_2,int param_3,int param_4,int param_5,
-                       int param_6,int param_7,int param_8)
+ulonglong fn_82E22910(undefined8 param_1, int param_2, int param_3, int param_4, int param_5, int param_6, int param_7, int param_8, int in_stack_00000054, int in_stack_0000005c)
 
 {
-  int in_stack_00000054;
-  int in_stack_0000005c;
+
+
   
   return (((ulonglong)
            CONCAT11(*(byte *)(param_2 + in_stack_00000054) ^ *(byte *)(param_2 + in_stack_0000005c),

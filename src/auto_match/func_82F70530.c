@@ -29,13 +29,13 @@ extern int fn_82A29158();
 extern int fn_82A2A360();
 extern int fn_82F641F8();
 extern int fn_82F681D0();
-extern int fn_82F68240();
+extern int _errno();
 extern int fn_82F68BF0();
 extern int fn_82F800C8();
 extern int iRam83263614;
 
 
-longlong fn_82F70530(ulonglong param_1,ulonglong param_2)
+longlong realloc(ulonglong param_1,ulonglong param_2)
 
 {
   longlong lVar1;
@@ -55,7 +55,7 @@ longlong fn_82F70530(ulonglong param_1,ulonglong param_2)
       do {
         if (0xfffff000 < (param_2 & 0xffffffff)) {
           fn_82F800C8(param_2);
-          puVar4 = (undefined4 *)fn_82F68240();
+          puVar4 = (undefined4 *)_errno();
           *puVar4 = 0xc;
           goto LAB_82f705e0;
         }
@@ -68,7 +68,7 @@ longlong fn_82F70530(ulonglong param_1,ulonglong param_2)
           return lVar1;
         }
         if (iRam83263614 == 0) {
-          puVar4 = (undefined4 *)fn_82F68240();
+          puVar4 = (undefined4 *)_errno();
           thunk_FUN_82a2b798();
           uVar5 = fn_82F681D0();
           *puVar4 = uVar5;
@@ -76,7 +76,7 @@ longlong fn_82F70530(ulonglong param_1,ulonglong param_2)
         }
         iVar3 = fn_82F800C8(param_2);
       } while (iVar3 != 0);
-      puVar4 = (undefined4 *)fn_82F68240();
+      puVar4 = (undefined4 *)_errno();
       thunk_FUN_82a2b798();
       uVar5 = fn_82F681D0();
       *puVar4 = uVar5;

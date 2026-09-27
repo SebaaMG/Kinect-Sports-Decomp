@@ -133,8 +133,8 @@ void fn_82DA6BA8(int *param_1)
   uint uStack_dc;
   uint uStack_d8;
   float fStack_d4;
-  uint uStack_d0;
-  uint uStack_cc;
+  struct { uint first; uint second; } stack_pair_d0;
+
   uint uStack_c8;
   float fStack_c4;
   undefined1 auStack_c0 [4];
@@ -404,12 +404,12 @@ void fn_82DA6BA8(int *param_1)
         fn_822E83E0(uVar13,auStack_a0);
         break;
       case 0x1a:
-        uStack_d0 = puVar18[1];
-        uStack_cc = puVar18[2];
+        stack_pair_d0.first = puVar18[1];
+        stack_pair_d0.second = puVar18[2];
         uVar13 = *puVar18;
         fStack_c4 = (float)dVar20;
         uStack_c8 = puVar18[3];
-        puVar17 = (undefined4 *)((int)&uStack_d0 + iVar8 & 0xfffffff0);
+        puVar17 = (undefined4 *)((int)&stack_pair_d0.first + iVar8 & 0xfffffff0);
         uVar21 = puVar17[1];
         uVar22 = puVar17[2];
         uVar23 = puVar17[3];

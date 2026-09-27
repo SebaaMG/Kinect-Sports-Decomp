@@ -26,7 +26,7 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_40;
-extern int fn_82F68CC0();
+extern int memcpy();
 extern int fn_8305C458();
 extern int fn_83060EC8();
 extern int fn_83060FF8();
@@ -53,7 +53,7 @@ void fn_8305C848(undefined1 *param_1,int param_2,int param_3)
   undefined *puStack_50;
   int iStack_4c;
   int iStack_48;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [16];
   
   fn_8305C458();
   if (param_3 == 0) {
@@ -113,7 +113,7 @@ void fn_8305C848(undefined1 *param_1,int param_2,int param_3)
         iVar3 = *(int *)(*(int *)(iStack_48 + 0x34) + 0x38) * 0x30 + *(int *)(param_1 + 4);
       }
       piVar5[1] = iVar3;
-      fn_82F68CC0(piVar5 + -8,iStack_48 + 0x10,0x1c);
+      memcpy(piVar5 + -8,iStack_48 + 0x10,0x1c);
       piVar5 = piVar5 + 0xc;
       iStack_48 = (**(code **)(puStack_50 + 4))(&puStack_50,iStack_48);
     } while (iStack_48 != 0);

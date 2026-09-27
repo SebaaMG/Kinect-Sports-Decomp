@@ -49,7 +49,7 @@ undefined8 fn_82D36728(int param_1,int param_2,undefined4 param_3)
   undefined4 uVar8;
   undefined4 uVar9;
   undefined4 uVar10;
-  undefined4 auStack_70 [4];
+  undefined4 auStack_70;
   undefined1 auStack_60 [16];
   undefined1 auStack_50 [16];
   undefined4 uStack_40;
@@ -87,8 +87,8 @@ undefined8 fn_82D36728(int param_1,int param_2,undefined4 param_3)
     *piVar7 = (int)uVar4;
   }
   else {
-    fn_82D363A0(piVar5,piVar6,piVar7,auStack_70);
-    fn_82D33BC0(param_1,*piVar7,uVar4,auStack_70[0]);
+    fn_82D363A0(piVar5,piVar6,piVar7,&auStack_70);
+    fn_82D33BC0(param_1,*piVar7,uVar4,auStack_70);
   }
   *(int *)(param_1 + 0x18) = *(int *)(param_1 + 0x18) + 1;
   return uVar4;

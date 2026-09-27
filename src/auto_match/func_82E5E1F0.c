@@ -33,19 +33,19 @@ undefined8 fn_82E5E1F0(int *param_1,undefined8 param_2,undefined4 *param_3,undef
 
 {
   undefined8 uVar1;
-  int aiStack_30 [2];
-  undefined4 uStack_28;
-  undefined4 uStack_24;
+  int aiStack_30;
+  struct { undefined4 first; undefined4 second; } stack_pair_28;
+
   
-  aiStack_30[0] = 0;
-  uVar1 = (**(code **)(*param_1 + 0x3c))(param_1,param_2,&uStack_28,0xc,aiStack_30);
+  aiStack_30 = 0;
+  uVar1 = (**(code **)(*param_1 + 0x3c))(param_1,param_2,&stack_pair_28.first,0xc,&aiStack_30);
   if (-1 < (int)uVar1) {
-    if (aiStack_30[0] == 0xc) {
+    if (aiStack_30 == 0xc) {
       if (param_3 != (undefined4 *)0x0) {
-        *param_3 = uStack_28;
+        *param_3 = stack_pair_28.first;
       }
       if (param_4 != (undefined4 *)0x0) {
-        *param_4 = uStack_24;
+        *param_4 = stack_pair_28.second;
       }
     }
     else {

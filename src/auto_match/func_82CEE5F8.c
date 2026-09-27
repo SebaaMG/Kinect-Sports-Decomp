@@ -43,7 +43,7 @@ void fn_82CEE5F8(int param_1,undefined8 param_2)
   undefined8 uVar2;
   int iVar3;
   undefined1 auStack_230 [16];
-  undefined1 auStack_220 [544];
+  undefined1 auStack_220 [512];
   
   fn_82CEE578(auStack_230,auStack_220,0x200);
   uVar1 = *(undefined2 *)(param_1 + 6);

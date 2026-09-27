@@ -36,10 +36,10 @@ ulonglong fn_82E53480(undefined8 param_1,ulonglong param_2)
   ulonglong uVar1;
   int *piVar2;
   ulonglong uVar3;
-  uint auStack_30 [12];
+  uint auStack_30;
   
   uVar3 = 0;
-  auStack_30[0] = 0;
+  auStack_30 = 0;
   if ((param_2 & 0xffffffff) == 0) {
     uVar3 = 0xffffffff80070057;
   }
@@ -49,8 +49,8 @@ ulonglong fn_82E53480(undefined8 param_1,ulonglong param_2)
       piVar2 = (int *)0x0;
     }
     else {
-      piVar2 = (int *)fn_82E53288(uVar1,param_1,auStack_30);
-      uVar3 = (ulonglong)auStack_30[0];
+      piVar2 = (int *)fn_82E53288(uVar1,param_1,&auStack_30);
+      uVar3 = (ulonglong)auStack_30;
     }
     if (piVar2 == (int *)0x0) {
       uVar3 = 0xffffffff8007000e;

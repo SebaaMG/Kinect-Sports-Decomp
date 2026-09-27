@@ -53,14 +53,14 @@ fn_82E3D760(longlong param_1,undefined8 param_2,undefined8 param_3,undefined4 *p
   undefined8 uVar7;
   undefined8 uStack00000020;
   undefined8 uStack00000028;
-  int *apiStack_80 [2];
+  int * apiStack_80;
   undefined1 auStack_78 [8];
   byte abStack_70 [4];
   int iStack_6c;
   int iStack_68;
   int iStack_64;
   byte abStack_60 [16];
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [32];
   
   uVar7 = 1;
   if (param_4 != (undefined4 *)0x0) {
@@ -73,18 +73,18 @@ fn_82E3D760(longlong param_1,undefined8 param_2,undefined8 param_3,undefined4 *p
   uStack00000028 = param_3;
   fn_82E3ACD8(abStack_60,param_1,&stack0x00000020);
   param_1 = param_1 + 0x1ac;
-  apiStack_80[0] = (int *)0x0;
+  apiStack_80 = (int *)0x0;
   fn_82E3BDF8(param_1,auStack_78);
-  iVar4 = fn_82E3C690(param_1,auStack_78,auStack_50,apiStack_80);
+  iVar4 = fn_82E3C690(param_1,auStack_78,auStack_50,&apiStack_80);
   if (iVar4 != 0) {
     uVar7 = 0;
     do {
-      piVar3 = apiStack_80[0];
+      piVar3 = apiStack_80;
       pbVar6 = abStack_70;
       pbVar5 = abStack_60;
-      iStack_6c = apiStack_80[0][8];
-      iStack_68 = apiStack_80[0][9];
-      iStack_64 = apiStack_80[0][10];
+      iStack_6c = apiStack_80[8];
+      iStack_68 = apiStack_80[9];
+      iStack_64 = apiStack_80[10];
       do {
         bVar1 = *pbVar6;
         bVar2 = *pbVar5;
@@ -94,7 +94,7 @@ fn_82E3D760(longlong param_1,undefined8 param_2,undefined8 param_3,undefined4 *p
       } while (pbVar6 != abStack_60);
       if ((int)((ulonglong)bVar1 - (ulonglong)bVar2) == 0) {
         if (param_4 != (undefined4 *)0x0) {
-          (**(code **)(*apiStack_80[0] + 0xc))(apiStack_80[0],param_4);
+          (**(code **)(*apiStack_80 + 0xc))(apiStack_80,param_4);
         }
         if (param_5 == (undefined4 *)0x0) {
           return 0;
@@ -102,7 +102,7 @@ fn_82E3D760(longlong param_1,undefined8 param_2,undefined8 param_3,undefined4 *p
         fn_82E6EEC0(piVar3,param_5,0);
         return 0;
       }
-      iVar4 = fn_82E3C690(param_1,auStack_78,auStack_50,apiStack_80);
+      iVar4 = fn_82E3C690(param_1,auStack_78,auStack_50,&apiStack_80);
     } while (iVar4 != 0);
   }
   return uVar7;

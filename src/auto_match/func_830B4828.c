@@ -36,7 +36,7 @@ undefined8 fn_830B4828(int *param_1,undefined4 *param_2,int *param_3)
   int iVar3;
   int iVar4;
   int *piVar5;
-  int aiStack_30 [12];
+  int aiStack_30;
   
   if ((param_2 == (undefined4 *)0x0) || (param_3 == (int *)0x0)) {
     return 0xffffffff80004003;
@@ -73,12 +73,12 @@ undefined8 fn_830B4828(int *param_1,undefined4 *param_2,int *param_3)
       if ((int)uVar2 < 0) {
         return uVar2;
       }
-      aiStack_30[0] = 0;
-      uVar2 = (**(code **)(*param_1 + 0x14))(param_1,aiStack_30);
+      aiStack_30 = 0;
+      uVar2 = (**(code **)(*param_1 + 0x14))(param_1,&aiStack_30);
       if ((int)uVar2 < 0) {
         return uVar2;
       }
-      if (aiStack_30[0] != 0) {
+      if (aiStack_30 != 0) {
         return uVar2;
       }
       iVar4 = 3;

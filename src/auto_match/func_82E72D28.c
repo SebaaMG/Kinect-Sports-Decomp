@@ -26,14 +26,14 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_40;
-extern int fn_82F691F0();
+extern int memset();
 
 
 undefined8 fn_82E72D28(int *param_1,ulonglong param_2,ulonglong param_3,undefined4 *param_4)
 
 {
   undefined8 uVar1;
-  ulonglong auStack_40 [8];
+  ulonglong auStack_40 [2];
   
   if (param_1[3] == 0) {
     uVar1 = 0xffffffffc00d36b6;
@@ -48,7 +48,7 @@ undefined8 fn_82E72D28(int *param_1,ulonglong param_2,ulonglong param_3,undefine
       *param_4 = (int)auStack_40[0];
       if ((auStack_40[0] & 0xffffffff) <= (param_3 & 0xffffffff)) {
                     /* WARNING: Subroutine does not return */
-        fn_82F691F0(param_2,0,param_3);
+        memset(param_2,0,param_3);
       }
       uVar1 = 0xffffffffc00d36b1;
     }

@@ -39,10 +39,10 @@ undefined8 fn_82E3C990(int param_1,int *param_2)
 {
   int iVar1;
   undefined8 uVar2;
-  int *apiStack_50 [2];
-  undefined4 uStack_48;
-  undefined4 uStack_44;
-  undefined1 auStack_40 [64];
+  int * apiStack_50;
+  struct { undefined4 first; undefined4 second; } stack_pair_48;
+
+  undefined1 auStack_40 [16];
   
   fn_82E50CB8(param_1 + 8);
   if (param_2 == (int *)0x0) {
@@ -55,13 +55,13 @@ undefined8 fn_82E3C990(int param_1,int *param_2)
     }
     else {
       *param_2 = 0;
-      apiStack_50[0] = (int *)0x0;
-      uStack_48 = 0;
-      uStack_44 = 0;
-      fn_82E3BDF8(param_1 + 0x1ac,&uStack_48);
-      while (iVar1 = fn_82E3C690(param_1 + 0x1ac,&uStack_48,auStack_40,apiStack_50), iVar1 != 0) {
+      apiStack_50 = (int *)0x0;
+      stack_pair_48.first = 0;
+      stack_pair_48.second = 0;
+      fn_82E3BDF8(param_1 + 0x1ac,&stack_pair_48.first);
+      while (iVar1 = fn_82E3C690(param_1 + 0x1ac,&stack_pair_48.first,auStack_40,&apiStack_50), iVar1 != 0) {
         *param_2 = *param_2 + 1;
-        iVar1 = (**(code **)(*apiStack_50[0] + 0x20))();
+        iVar1 = (**(code **)(*apiStack_50 + 0x20))();
         if (iVar1 != 0) {
           *param_2 = *param_2 + 1;
         }

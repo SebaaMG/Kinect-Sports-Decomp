@@ -33,18 +33,18 @@ undefined8 fn_82CE2BA0(int param_1,uint param_2,uint *param_3,uint *param_4)
 {
   undefined8 uVar1;
   uint uVar2;
-  byte abStack_30 [48];
+  byte abStack_30;
   
   if (param_2 < 2) {
-    uVar1 = fn_82CE23E0(param_1 + 0x1c,abStack_30);
+    uVar1 = fn_82CE23E0(param_1 + 0x1c,&abStack_30);
     if ((int)uVar1 < 0) {
       return uVar1;
     }
     if (param_4 != (uint *)0x0) {
-      *param_4 = abStack_30[0] >> 5 & 1;
+      *param_4 = abStack_30 >> 5 & 1;
     }
-    uVar2 = -(uint)((abStack_30[0] & 0x1f) < *(uint *)(*(int *)(param_1 + 4) + 0x200)) &
-            (abStack_30[0] & 0x1f) * 0x10 + *(int *)(param_1 + 4);
+    uVar2 = -(uint)((abStack_30 & 0x1f) < *(uint *)(*(int *)(param_1 + 4) + 0x200)) &
+            (abStack_30 & 0x1f) * 0x10 + *(int *)(param_1 + 4);
     *param_3 = uVar2;
     if (uVar2 != 0) {
       return uVar1;

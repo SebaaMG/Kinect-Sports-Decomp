@@ -44,7 +44,7 @@ void fn_82D40058(int param_1,int *param_2)
   undefined4 uVar9;
   undefined4 uVar10;
   undefined4 uVar11;
-  int aiStack_30 [12];
+  int aiStack_30;
   
   piVar8 = (int *)(param_1 + 0x54);
   iVar5 = fn_82CE5410();
@@ -54,10 +54,10 @@ void fn_82D40058(int param_1,int *param_2)
     if ((*(uint *)(param_1 + 0x5c) & 0x80000000) == 0) {
       (**(code **)(*piVar1 + 0x10))(piVar1,*piVar8,uVar2,0x10);
     }
-    aiStack_30[0] = param_2[1];
-    iVar5 = (**(code **)(*piVar1 + 0xc))(piVar1,aiStack_30,0x10);
+    aiStack_30 = param_2[1];
+    iVar5 = (**(code **)(*piVar1 + 0xc))(piVar1,&aiStack_30,0x10);
     *piVar8 = iVar5;
-    *(int *)(param_1 + 0x5c) = aiStack_30[0];
+    *(int *)(param_1 + 0x5c) = aiStack_30;
   }
   uVar2 = param_2[1];
   uVar6 = (ulonglong)uVar2;

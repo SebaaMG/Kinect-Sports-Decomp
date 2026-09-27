@@ -51,7 +51,7 @@ undefined8 fn_82DF5EB0(int param_1,int param_2,longlong param_3)
   undefined4 uVar8;
   undefined4 uVar9;
   undefined4 uVar10;
-  undefined1 auStack_70 [16];
+  undefined1 auStack_70 [1];
   undefined1 auStack_60 [16];
   undefined1 auStack_50 [16];
   undefined1 auStack_40 [64];

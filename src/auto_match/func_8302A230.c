@@ -42,8 +42,8 @@ void fn_8302A230(int param_1)
   bool bVar4;
   int iVar5;
   int iVar6;
-  float fStack_28;
-  float fStack_24;
+  struct { float first; float second; } stack_pair_28;
+
   float fStack_20;
   
   uVar1 = *(ushort *)(param_1 + 0x18);
@@ -69,19 +69,19 @@ void fn_8302A230(int param_1)
   }
   if (bVar4) {
     iVar5 = (uint)*(ushort *)(param_1 + 0x18) * 0x10 + **(int **)(param_1 + 0x10);
-    fStack_28 = *(float *)((uint)*(ushort *)(param_1 + 0x18) * 0x10 + **(int **)(param_1 + 0x10));
-    fStack_24 = *(float *)(iVar5 + 4);
+    stack_pair_28.first = *(float *)((uint)*(ushort *)(param_1 + 0x18) * 0x10 + **(int **)(param_1 + 0x10));
+    stack_pair_28.second = *(float *)(iVar5 + 4);
     fStack_20 = *(float *)(iVar5 + 8);
-    fn_83029A58(param_1,&fStack_28);
+    fn_83029A58(param_1,&stack_pair_28.first);
     fVar3 = lbl_82002AE0;
     uVar2 = *(uint *)(param_1 + 0x38);
-    *(float *)(param_1 + 0x58) = fStack_28 - *(float *)(param_1 + 0x4c);
+    *(float *)(param_1 + 0x58) = stack_pair_28.first - *(float *)(param_1 + 0x4c);
     *(float *)(param_1 + 0x60) = fStack_20 - *(float *)(param_1 + 0x54);
     *(uint *)(param_1 + 0x38) = *(uint *)(param_1 + 0x3c) + uVar2;
     *(uint *)(param_1 + 0x34) = uVar2;
     fVar3 = fVar3 / (float)*(uint *)(param_1 + 0x3c);
     *(float *)(param_1 + 0x40) = fVar3;
-    *(float *)(param_1 + 0x5c) = fStack_24 - *(float *)(param_1 + 0x50);
+    *(float *)(param_1 + 0x5c) = stack_pair_28.second - *(float *)(param_1 + 0x50);
     *(float *)(param_1 + 0x44) = -((float)uVar2 * fVar3);
   }
   return;

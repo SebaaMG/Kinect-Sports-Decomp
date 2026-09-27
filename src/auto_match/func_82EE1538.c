@@ -37,7 +37,7 @@ undefined8 fn_82EE1538(int *param_1,longlong *param_2,longlong *param_3)
   longlong lVar3;
   longlong lVar4;
   ulonglong uVar5;
-  uint auStack_40 [16];
+  uint auStack_40;
   
   if (param_1[3] == 0) {
     uVar1 = 0xffffffffc00d36b6;
@@ -47,9 +47,9 @@ undefined8 fn_82EE1538(int *param_1,longlong *param_2,longlong *param_3)
     uVar5 = 0;
     if (param_1[0x95] != 0) {
       do {
-        uVar2 = fn_82EE1048(param_1 + 0x12,uVar5,auStack_40);
+        uVar2 = fn_82EE1048(param_1 + 0x12,uVar5,&auStack_40);
         lVar3 = (**(code **)(*param_1 + 0x30))
-                          (param_1,((uVar2 & 0xffffffff) >> 0x1f) - 1 & (ulonglong)auStack_40[0]);
+                          (param_1,((uVar2 & 0xffffffff) >> 0x1f) - 1 & (ulonglong)auStack_40);
         uVar5 = uVar5 + 1;
         lVar4 = lVar3 + lVar4;
       } while ((uVar5 & 0xffffffff) < (ulonglong)(uint)param_1[0x95]);

@@ -37,17 +37,17 @@ longlong fn_82E30388(undefined8 param_1,int *param_2)
   int iVar1;
   longlong lVar2;
   undefined4 uStack_30;
-  undefined4 auStack_2c [11];
+  undefined4 auStack_2c;
   
   lVar2 = 0;
   uStack_30 = 0;
-  auStack_2c[0] = 0;
+  auStack_2c = 0;
   if (param_2 == (int *)0x0) {
     lVar2 = -0x7fffbffd;
   }
   else {
-    iVar1 = (**(code **)(*param_2 + 0x40))(param_2,0xffffffff8214c710,&uStack_30,auStack_2c);
-    if ((iVar1 != 0) || (lVar2 = fn_82E2EBE8(param_1,uStack_30,auStack_2c[0]), -1 < lVar2)) {
+    iVar1 = (**(code **)(*param_2 + 0x40))(param_2,0xffffffff8214c710,&uStack_30,&auStack_2c);
+    if ((iVar1 != 0) || (lVar2 = fn_82E2EBE8(param_1,uStack_30,auStack_2c), -1 < lVar2)) {
       (**(code **)(*param_2 + 0x80))(param_2,param_1);
     }
   }

@@ -43,7 +43,7 @@ void fn_82D844A8(int param_1,undefined8 param_2)
   undefined8 uVar1;
   int iVar3;
   int iVar4;
-  undefined1 auStack_40 [4];
+  undefined1 auStack_40;
   undefined4 uStack_3c;
   int iStack_38;
   int iStack_34;
@@ -76,12 +76,12 @@ void fn_82D844A8(int param_1,undefined8 param_2)
     }
   }
   else {
-    auStack_40[0] = 0x20;
+    auStack_40 = 0x20;
     iVar2 = fn_82CE5410();
     uVar1 = (**(code **)(**(int **)(iVar2 + 0x10) + 4))(*(int **)(iVar2 + 0x10),0x20);
     uStack_3c = (undefined4)uVar1;
     fn_82CFC050(uVar1,param_2,0x20);
-    fn_82DA6530(*(undefined4 *)(param_1 + 0x88),auStack_40);
+    fn_82DA6530(*(undefined4 *)(param_1 + 0x88),&auStack_40);
   }
   return;
 }

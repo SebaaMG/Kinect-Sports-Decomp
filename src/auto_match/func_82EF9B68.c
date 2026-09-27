@@ -81,7 +81,7 @@ void fn_82EF9B68(int param_1,int param_2,int param_3,int param_4,int param_5,int
   byte *pbStack_8fc;
   undefined2 auStack_8e2 [3];
   undefined1 auStack_8dc [4];
-  short asStack_8d8 [1132];
+  short asStack_8d8 [1020];
   
   iVar25 = param_1 + -2 >> 2;
   iVar40 = 8 - param_6;

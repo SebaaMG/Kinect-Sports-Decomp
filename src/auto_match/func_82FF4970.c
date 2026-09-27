@@ -41,8 +41,8 @@ void fn_82FF4970(int param_1,undefined8 param_2,int *param_3)
 {
   code *pcVar1;
   uint uVar2;
-  int iStack_30;
-  int iStack_2c;
+  struct { int first; int second; } stack_pair_30;
+
   undefined4 uStack_28;
   int iStack_24;
   
@@ -50,8 +50,8 @@ void fn_82FF4970(int param_1,undefined8 param_2,int *param_3)
     if ((param_3[10] & 0x10000U) != 0) {
       fn_830140E8(lbl_83264308);
     }
-    iStack_30 = param_3[9];
-    iStack_2c = param_3[3];
+    stack_pair_30.first = param_3[9];
+    stack_pair_30.second = param_3[3];
     iStack_24 = param_3[2];
     uStack_28 = (undefined4)param_2;
     pcVar1 = (code *)param_3[8];
@@ -60,7 +60,7 @@ void fn_82FF4970(int param_1,undefined8 param_2,int *param_3)
     if ((uVar2 & 1) != 0) {
       fn_82A1E7D8(*(undefined4 *)(param_1 + 0xa4));
       RtlLeaveCriticalSection(param_1 + 0x88);
-      (*pcVar1)(1,&iStack_30);
+      (*pcVar1)(1,&stack_pair_30.first);
       fn_82A1E810(*(undefined4 *)(param_1 + 0xa4));
       return;
     }

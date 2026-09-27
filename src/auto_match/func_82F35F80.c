@@ -33,7 +33,7 @@ undefined8 fn_82F35F80(int param_1,uint param_2,undefined2 *param_3,uint *param_
 {
   undefined8 uVar1;
   undefined2 *puStack_30;
-  int aiStack_2c [11];
+  int aiStack_2c;
   
   if (*(int *)(param_1 + 0xc) == 0) {
     uVar1 = 0xffffffffc00d36b6;
@@ -45,9 +45,9 @@ undefined8 fn_82F35F80(int param_1,uint param_2,undefined2 *param_3,uint *param_
   else {
     fn_82F35618(param_1 + 200,param_2,&puStack_30);
     *param_3 = *puStack_30;
-    fn_82F35618(param_1 + 200,param_2,aiStack_2c);
+    fn_82F35618(param_1 + 200,param_2,&aiStack_2c);
     uVar1 = 0;
-    *param_4 = (uint)*(ushort *)(aiStack_2c[0] + 2);
+    *param_4 = (uint)*(ushort *)(aiStack_2c + 2);
   }
   return uVar1;
 }

@@ -44,7 +44,7 @@ undefined4 * fn_82D6B358(int *param_1,int *param_2,int *param_3,undefined8 param
   int aiStack_110 [2];
   undefined1 *puStack_108;
   int *piStack_104;
-  undefined1 auStack_100 [256];
+  undefined1 auStack_100 [192];
   
   iVar2 = fn_82CE5410();
   puVar3 = (undefined4 *)(**(code **)(**(int **)(iVar2 + 0x10) + 4))(*(int **)(iVar2 + 0x10),0x10);

@@ -37,7 +37,7 @@ undefined8 fn_82FB3D48(int param_1,undefined8 param_2)
   int *piVar1;
   int *piVar2;
   undefined8 uVar3;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
   
   *(int *)(param_1 + 0x2c) = *(int *)(param_1 + 0x2c) + 1;
   piVar2 = *(int **)(param_1 + 0x28);

@@ -37,16 +37,16 @@ longlong fn_82E71B58(int *param_1)
   int *piVar2;
   ulonglong uVar3;
   int *piStack_30;
-  uint auStack_2c [11];
+  uint auStack_2c;
   
   piStack_30 = (int *)0x0;
   lVar1 = fn_82E6EFF0(param_1,param_1[0x16]);
   if (-1 < lVar1) {
-    auStack_2c[0] = 0;
-    lVar1 = (**(code **)(*(int *)param_1[0x16] + 0x3c))((int *)param_1[0x16],auStack_2c);
+    auStack_2c = 0;
+    lVar1 = (**(code **)(*(int *)param_1[0x16] + 0x3c))((int *)param_1[0x16],&auStack_2c);
     if (-1 < lVar1) {
       uVar3 = 0;
-      if (auStack_2c[0] != 0) {
+      if (auStack_2c != 0) {
         do {
           lVar1 = (**(code **)(*(int *)param_1[0x16] + 0x40))
                             ((int *)param_1[0x16],uVar3,&piStack_30);
@@ -58,7 +58,7 @@ longlong fn_82E71B58(int *param_1)
             piStack_30 = (int *)0x0;
           }
           uVar3 = uVar3 + 1;
-        } while ((uVar3 & 0xffffffff) < (ulonglong)auStack_2c[0]);
+        } while ((uVar3 & 0xffffffff) < (ulonglong)auStack_2c);
       }
       piVar2 = (int *)(**(code **)(*param_1 + 0x20))(param_1);
       if (piVar2 != (int *)0x0) {

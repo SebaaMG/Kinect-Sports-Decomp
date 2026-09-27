@@ -33,17 +33,17 @@ byte fn_82E731F8(int param_1,int param_2)
 {
   int iVar1;
   byte bVar2;
-  uint auStack_10 [4];
+  uint auStack_10;
   
-  auStack_10[0] = 0;
+  auStack_10 = 0;
   iVar1 = (**(code **)(**(int **)(param_1 + 0x1d8) + 0x10))
                     (*(int **)(param_1 + 0x1d8),*(undefined2 *)(param_2 + 0x20),
-                     *(undefined1 *)(param_2 + 0x22),*(undefined4 *)(param_2 + 0x34),auStack_10);
+                     *(undefined1 *)(param_2 + 0x22),*(undefined4 *)(param_2 + 0x34),&auStack_10);
   if (iVar1 < 0) {
     bVar2 = 1;
   }
   else {
-    bVar2 = -(auStack_10[0] < 0x11) & 1;
+    bVar2 = -(auStack_10 < 0x11) & 1;
   }
   return bVar2;
 }

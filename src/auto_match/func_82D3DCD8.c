@@ -44,7 +44,7 @@ char * fn_82D3DCD8(char *param_1,int param_2,int param_3,int param_4)
   ulonglong uVar8;
   char cStack_60;
   char cStack_5f;
-  undefined1 auStack_5e [94];
+  undefined1 auStack_5e [1];
   
   iVar4 = KeTlsGetValue(lbl_8323B4A0);
   puVar1 = *(undefined4 **)(iVar4 + 4);

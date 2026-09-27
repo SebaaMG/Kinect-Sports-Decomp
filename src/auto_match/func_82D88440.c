@@ -70,12 +70,12 @@ void fn_82D88440(int param_1,int param_2,undefined8 param_3)
   undefined1 uStack_13f;
   undefined1 uStack_13e;
   undefined1 auStack_13d [5];
-  int iStack_138;
-  int iStack_134;
+  struct { int first; int second; } stack_pair_138;
+
   undefined1 *puStack_130;
   uint uStack_12c;
   uint uStack_128;
-  undefined1 auStack_124 [292];
+  undefined1 auStack_124 [132];
   
   if (*(int *)(param_1 + 0x94) == 0) {
     *(undefined1 *)(param_1 + 0x9c) = 1;
@@ -135,9 +135,9 @@ void fn_82D88440(int param_1,int param_2,undefined8 param_3)
       }
     }
     else {
-      iStack_138 = param_1 + 0x28;
-      iStack_134 = param_1 + 0x34;
-      piVar10 = &iStack_138;
+      stack_pair_138.first = param_1 + 0x28;
+      stack_pair_138.second = param_1 + 0x34;
+      piVar10 = &stack_pair_138.first;
       *(int *)(param_1 + 0x94) = *(int *)(param_1 + 0x94) + 1;
       lVar9 = 2;
       do {

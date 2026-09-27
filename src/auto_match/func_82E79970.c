@@ -36,14 +36,14 @@ short fn_82E79970(int param_1)
   uint uVar2;
   short sVar3;
   ulonglong uVar4;
-  uint auStack_30 [12];
+  uint auStack_30;
   
   sVar3 = 0;
   uVar4 = 0;
   if (*(int *)(param_1 + 0x1e0) != 0) {
     do {
-      lVar1 = fn_82E78690(param_1 + 0x178,uVar4,auStack_30);
-      uVar2 = -(uint)(lVar1 != 0) & auStack_30[0];
+      lVar1 = fn_82E78690(param_1 + 0x178,uVar4,&auStack_30);
+      uVar2 = -(uint)(lVar1 != 0) & auStack_30;
       if (uVar2 == 0) {
         return sVar3;
       }

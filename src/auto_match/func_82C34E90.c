@@ -52,7 +52,7 @@ undefined8 fn_82C34E90(int *param_1)
   int iVar13;
   int iVar14;
   uint uVar15;
-  uint auStack_a0 [40];
+  uint auStack_a0 [16];
   
   iVar3 = *param_1;
   uVar5 = 0;

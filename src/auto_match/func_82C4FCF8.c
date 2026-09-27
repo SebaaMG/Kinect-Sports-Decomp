@@ -38,7 +38,7 @@ void fn_82C4FCF8(int param_1)
 {
   int iVar1;
   longlong lVar2;
-  int aiStack_40 [16];
+  int aiStack_40;
   
   lVar2 = (ulonglong)*(uint *)(param_1 + 0x6070) + 8;
   if (*(int *)(param_1 + 0x5700) != 0) {
@@ -95,10 +95,10 @@ void fn_82C4FCF8(int param_1)
       fn_82C563B0(lVar2,iVar1);
     }
     if (*(int *)(param_1 + 0x5710) != 0) {
-      aiStack_40[0] = 0;
-      fn_82CAAF00(*(undefined4 *)(param_1 + 0x3ba4),aiStack_40,0xffffffffffffffff);
-      fn_82C4ED60(lVar2,aiStack_40[0]);
-      if (aiStack_40[0] != 0) {
+      aiStack_40 = 0;
+      fn_82CAAF00(*(undefined4 *)(param_1 + 0x3ba4),&aiStack_40,0xffffffffffffffff);
+      fn_82C4ED60(lVar2,aiStack_40);
+      if (aiStack_40 != 0) {
         fn_82C563B8(lVar2);
       }
     }

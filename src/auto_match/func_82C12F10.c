@@ -34,34 +34,34 @@ byte fn_82C12F10(longlong *param_1,int *param_2,uint *param_3)
   int iVar1;
   byte bVar2;
   uint uVar3;
-  byte *apbStack_30 [12];
+  byte * apbStack_30;
   
-  apbStack_30[0] = (byte *)0x0;
+  apbStack_30 = (byte *)0x0;
   if (param_1 == (longlong *)0x0) {
     bVar2 = 2;
   }
   else {
-    iVar1 = fn_82C038C8(param_1,*param_1,0x18,apbStack_30);
+    iVar1 = fn_82C038C8(param_1,*param_1,0x18,&apbStack_30);
     if (iVar1 == 0x18) {
       *param_1 = *param_1 + 0x18;
-      *param_2 = (((uint)apbStack_30[0][3] * 0x100 + (uint)apbStack_30[0][2]) * 0x100 +
-                 (uint)apbStack_30[0][1]) * 0x100 + (uint)*apbStack_30[0];
-      *(ushort *)(param_2 + 1) = (ushort)apbStack_30[0][5] * 0x100 + (ushort)apbStack_30[0][4];
-      *(ushort *)((int)param_2 + 6) = (ushort)apbStack_30[0][7] * 0x100 + (ushort)apbStack_30[0][6];
-      *(byte *)(param_2 + 2) = apbStack_30[0][8];
-      *(byte *)((int)param_2 + 9) = apbStack_30[0][9];
-      *(byte *)((int)param_2 + 10) = apbStack_30[0][10];
-      *(byte *)((int)param_2 + 0xb) = apbStack_30[0][0xb];
-      *(byte *)(param_2 + 3) = apbStack_30[0][0xc];
-      *(byte *)((int)param_2 + 0xd) = apbStack_30[0][0xd];
-      *(byte *)((int)param_2 + 0xe) = apbStack_30[0][0xe];
-      *(byte *)((int)param_2 + 0xf) = apbStack_30[0][0xf];
-      uVar3 = (((uint)apbStack_30[0][0x13] * 0x100 + (uint)apbStack_30[0][0x12]) * 0x100 +
-              (uint)apbStack_30[0][0x11]) * 0x100 + (uint)apbStack_30[0][0x10];
+      *param_2 = (((uint)apbStack_30[3] * 0x100 + (uint)apbStack_30[2]) * 0x100 +
+                 (uint)apbStack_30[1]) * 0x100 + (uint)*apbStack_30;
+      *(ushort *)(param_2 + 1) = (ushort)apbStack_30[5] * 0x100 + (ushort)apbStack_30[4];
+      *(ushort *)((int)param_2 + 6) = (ushort)apbStack_30[7] * 0x100 + (ushort)apbStack_30[6];
+      *(byte *)(param_2 + 2) = apbStack_30[8];
+      *(byte *)((int)param_2 + 9) = apbStack_30[9];
+      *(byte *)((int)param_2 + 10) = apbStack_30[10];
+      *(byte *)((int)param_2 + 0xb) = apbStack_30[0xb];
+      *(byte *)(param_2 + 3) = apbStack_30[0xc];
+      *(byte *)((int)param_2 + 0xd) = apbStack_30[0xd];
+      *(byte *)((int)param_2 + 0xe) = apbStack_30[0xe];
+      *(byte *)((int)param_2 + 0xf) = apbStack_30[0xf];
+      uVar3 = (((uint)apbStack_30[0x13] * 0x100 + (uint)apbStack_30[0x12]) * 0x100 +
+              (uint)apbStack_30[0x11]) * 0x100 + (uint)apbStack_30[0x10];
       *param_3 = uVar3;
       bVar2 = -(uVar3 < 0x18) & 4;
-      param_3[1] = (((uint)apbStack_30[0][0x17] * 0x100 + (uint)apbStack_30[0][0x16]) * 0x100 +
-                   (uint)apbStack_30[0][0x15]) * 0x100 + (uint)apbStack_30[0][0x14];
+      param_3[1] = (((uint)apbStack_30[0x17] * 0x100 + (uint)apbStack_30[0x16]) * 0x100 +
+                   (uint)apbStack_30[0x15]) * 0x100 + (uint)apbStack_30[0x14];
     }
     else {
       bVar2 = 3;

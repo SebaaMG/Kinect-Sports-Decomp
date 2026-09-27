@@ -100,8 +100,8 @@ undefined8 fn_82E0D0A8(int *param_1)
   int iStack_100;
   uint uStack_fc;
   uint uStack_f8;
-  int iStack_f0;
-  uint uStack_ec;
+  struct { int first; uint second; } stack_pair_f0;
+
   uint uStack_e8;
   undefined4 uStack_e0;
   undefined4 uStack_dc;
@@ -162,12 +162,12 @@ undefined8 fn_82E0D0A8(int *param_1)
     }
     param_1[0x1f] = iVar6;
     fn_82CE4118(iVar6);
-    iStack_f0 = 0;
-    uStack_ec = 0;
+    stack_pair_f0.first = 0;
+    stack_pair_f0.second = 0;
     uStack_e8 = 0x80000000;
-    fn_82E0ADB8(param_1,&iStack_f0);
-    uVar20 = (ulonglong)uStack_ec;
-    if (0 < (int)uStack_ec) {
+    fn_82E0ADB8(param_1,&stack_pair_f0.first);
+    uVar20 = (ulonglong)stack_pair_f0.second;
+    if (0 < (int)stack_pair_f0.second) {
       iStack_100 = 0;
       uStack_fc = 0;
       uStack_f8 = 0x80000000;
@@ -192,7 +192,7 @@ undefined8 fn_82E0D0A8(int *param_1)
         puVar21 = (undefined4 *)(uVar11 * 8 + iStack_100 + -4);
         do {
           iVar6 = iVar6 + 1;
-          puVar3 = (undefined4 *)(iVar7 + iStack_f0);
+          puVar3 = (undefined4 *)(iVar7 + stack_pair_f0.first);
           iVar7 = iVar7 + 0xc;
           puVar21[1] = *puVar3;
           puVar21 = puVar21 + 2;
@@ -272,7 +272,7 @@ undefined8 fn_82E0D0A8(int *param_1)
         iVar8 = 0;
         do {
           uVar5 = *(undefined4 *)(iVar8 + iStack_100);
-          uVar2 = *(undefined4 *)(iVar7 + iStack_f0);
+          uVar2 = *(undefined4 *)(iVar7 + stack_pair_f0.first);
           iVar9 = fn_82CE5410();
           fn_82CEA160(&uStack_e0,*(undefined4 *)(iVar9 + 0x10),uVar2,lVar12);
           uVar4 = (**(code **)(*param_1 + 0x28))(param_1);
@@ -343,10 +343,10 @@ undefined8 fn_82E0D0A8(int *param_1)
       uStack_f8 = 0x80000000;
     }
     iVar6 = fn_82CE5410();
-    uStack_ec = 0;
+    stack_pair_f0.second = 0;
     if ((uStack_e8 & 0x80000000) == 0) {
       (**(code **)(**(int **)(iVar6 + 0x10) + 0x10))
-                (*(int **)(iVar6 + 0x10),iStack_f0,uStack_e8 & 0x3fffffff,0xc);
+                (*(int **)(iVar6 + 0x10),stack_pair_f0.first,uStack_e8 & 0x3fffffff,0xc);
     }
   }
   return 0;

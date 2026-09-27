@@ -47,8 +47,8 @@ void fn_82DEDF08(undefined2 param_1,int param_2)
   int iVar4;
   undefined2 uStack00000016;
   int iStack0000001c;
-  undefined4 uStack_330;
-  int iStack_32c;
+  struct { undefined4 first; int second; } stack_pair_330;
+
   uint uStack_328;
   undefined4 uStack_300;
   undefined4 uStack_2fc;
@@ -73,8 +73,8 @@ void fn_82DEDF08(undefined2 param_1,int param_2)
   uStack_300 = 0;
   uStack_2fc = 0;
   uStack_2f8 = 0x80000000;
-  uStack_330 = 0;
-  iStack_32c = 0;
+  stack_pair_330.first = 0;
+  stack_pair_330.second = 0;
   uStack_328 = 0x80000000;
   iVar1 = *(int *)(param_2 + 4);
   iVar3 = fn_82CE5410();
@@ -83,10 +83,10 @@ void fn_82DEDF08(undefined2 param_1,int param_2)
     if (iVar4 <= iVar1) {
       iVar4 = iVar1;
     }
-    fn_82CE6310(*(undefined4 *)(iVar3 + 0x10),&uStack_330,iVar4,4);
+    fn_82CE6310(*(undefined4 *)(iVar3 + 0x10),&stack_pair_330.first,iVar4,4);
   }
-  iStack_32c = iVar1;
+  stack_pair_330.second = iVar1;
                     /* WARNING: Subroutine does not return */
-  thunk_FUN_82f691f0(uStack_330,0,iVar1 << 2);
+  thunk_FUN_82f691f0(stack_pair_330.first,0,iVar1 << 2);
 }
 

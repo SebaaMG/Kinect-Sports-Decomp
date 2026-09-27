@@ -65,7 +65,7 @@ longlong fn_82D26480(int param_1,undefined4 param_2)
   uint uStack_2ec;
   uint uStack_2e8;
   undefined1 auStack_2e4 [132];
-  undefined1 auStack_260 [608];
+  undefined1 auStack_260 [512];
   
   lVar9 = 0;
   for (puVar1 = *(undefined4 **)(param_1 + 0x14); puVar1 != (undefined4 *)0x0;

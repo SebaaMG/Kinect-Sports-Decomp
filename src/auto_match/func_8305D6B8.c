@@ -38,7 +38,7 @@ void fn_8305D6B8(int param_1,undefined8 param_2)
   int iVar2;
   int iVar3;
   int iVar4;
-  longlong alStack_40 [8];
+  longlong alStack_40 [2];
   
   fn_828106A0(param_2);
   iVar2 = *(int *)(param_1 + 0x30);

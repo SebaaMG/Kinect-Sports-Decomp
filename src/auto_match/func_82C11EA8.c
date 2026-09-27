@@ -33,38 +33,38 @@ undefined8 fn_82C11EA8(undefined4 *param_1,int param_2)
 {
   uint uVar1;
   undefined8 uVar2;
-  undefined4 *apuStack_40 [16];
+  undefined4 * apuStack_40;
   
   uVar2 = 0;
   uVar1 = 0;
   if (*(int *)(param_2 + 0x24) != 2) {
-    apuStack_40[0] = *(undefined4 **)(param_2 + 0x18);
+    apuStack_40 = *(undefined4 **)(param_2 + 0x18);
     *(undefined4 *)(param_2 + 0x20) = 0;
     *(undefined4 *)(param_2 + 0x24) = 2;
-    if (apuStack_40[0] != (undefined4 *)0x0) {
+    if (apuStack_40 != (undefined4 *)0x0) {
       while( true ) {
-        if ((((apuStack_40[0][0xc] == 0) && (apuStack_40[0][3] == 0)) &&
-            (uVar1 = uVar1 + 1, 1 < uVar1)) && (apuStack_40[0][1] != 0)) {
+        if ((((apuStack_40[0xc] == 0) && (apuStack_40[3] == 0)) &&
+            (uVar1 = uVar1 + 1, 1 < uVar1)) && (apuStack_40[1] != 0)) {
           *(undefined4 *)(param_2 + 0x24) = 1;
           return uVar2;
         }
-        if (apuStack_40[0][0xf] == 0) {
+        if (apuStack_40[0xf] == 0) {
           *(undefined4 *)(param_2 + 0x1c) = 0;
         }
         else {
-          *(undefined4 *)(apuStack_40[0][0xf] + 0x38) = 0;
+          *(undefined4 *)(apuStack_40[0xf] + 0x38) = 0;
         }
-        *(undefined4 *)(param_2 + 0x18) = apuStack_40[0][0xf];
-        uVar2 = (**(code **)(param_1[6] + 0x24))(param_1[6],*apuStack_40[0]);
+        *(undefined4 *)(param_2 + 0x18) = apuStack_40[0xf];
+        uVar2 = (**(code **)(param_1[6] + 0x24))(param_1[6],*apuStack_40);
         if ((int)uVar2 < 0) break;
-        if (apuStack_40[0][0xb] != 0) {
-          fn_82C10B28(*param_1,0x20,apuStack_40[0][0xb]);
-          fn_82C10B28(*param_1,0x20,apuStack_40[0] + 0xb);
+        if (apuStack_40[0xb] != 0) {
+          fn_82C10B28(*param_1,0x20,apuStack_40[0xb]);
+          fn_82C10B28(*param_1,0x20,apuStack_40 + 0xb);
         }
-        fn_82C10B28(*param_1,0x20,apuStack_40);
-        apuStack_40[0] = *(undefined4 **)(param_2 + 0x18);
+        fn_82C10B28(*param_1,0x20,&apuStack_40);
+        apuStack_40 = *(undefined4 **)(param_2 + 0x18);
         *(int *)(param_2 + 0x14) = *(int *)(param_2 + 0x14) + -1;
-        if (apuStack_40[0] == (undefined4 *)0x0) {
+        if (apuStack_40 == (undefined4 *)0x0) {
           return uVar2;
         }
       }

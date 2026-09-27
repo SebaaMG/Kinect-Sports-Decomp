@@ -31,11 +31,10 @@ extern int fn_82F31CF8();
 extern unsigned int lbl_832617F0;
 
 
-void fn_82F338B8(int param_1,undefined4 param_2,undefined4 param_3,undefined4 param_4,
-                  undefined4 param_5,undefined4 param_6,undefined4 param_7)
+void fn_82F338B8(int param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4, undefined4 param_5, undefined4 param_6, undefined4 param_7, undefined8 unused_arg_8, undefined8 unused_arg_9, undefined8 unused_arg_10, undefined8 unused_arg_11, int in_stack_0000006c)
 
 {
-  int in_stack_0000006c;
+
   
   lbl_832617F0 = in_stack_0000006c == 0x31313450;
   *(undefined4 *)(param_1 + 0x70) = param_5;

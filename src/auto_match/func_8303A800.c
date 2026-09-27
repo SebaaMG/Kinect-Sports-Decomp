@@ -35,19 +35,19 @@ extern unsigned int uStack_70;
 undefined4 fn_8303A800(int *param_1,uint *param_2)
 
 {
-  int aiStack_3b0 [3];
+  int aiStack_3b0;
   undefined2 uStack_3a4;
   ushort uStack_3a2;
   undefined2 uStack_3a0;
   undefined4 uStack_39c;
   undefined4 uStack_70;
   
-  aiStack_3b0[0] = 0;
+  aiStack_3b0 = 0;
   uStack_3a0 = 0;
   uStack_39c = 0;
   uStack_3a4 = (undefined2)*param_2;
-  (**(code **)(*param_1 + 0x28))(param_1,aiStack_3b0);
-  if (aiStack_3b0[0] == 0) {
+  (**(code **)(*param_1 + 0x28))(param_1,&aiStack_3b0);
+  if (aiStack_3b0 == 0) {
     *param_2 = 0;
   }
   else {

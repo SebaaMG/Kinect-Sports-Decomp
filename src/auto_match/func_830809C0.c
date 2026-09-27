@@ -53,7 +53,7 @@ void fn_830809C0(int param_1,undefined8 param_2,char *param_3,undefined8 param_4
   undefined8 uStack00000038;
   undefined8 uStack00000040;
   undefined8 uStack00000048;
-  undefined1 auStack_430 [1072];
+  undefined1 auStack_430 [1040];
   
   iVar3 = 0;
   uStack00000028 = param_4;

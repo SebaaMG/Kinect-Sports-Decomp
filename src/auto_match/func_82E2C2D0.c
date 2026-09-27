@@ -41,13 +41,13 @@ undefined8 fn_82E2C2D0(undefined8 param_1,undefined8 param_2,undefined8 param_3)
   uint uStack_30;
   uint uStack_2c;
   uint uStack_28;
-  uint auStack_24 [3];
+  uint auStack_24;
   
-  iVar3 = fn_82E27D58(param_1,param_3,&uStack_2c,auStack_24);
+  iVar3 = fn_82E27D58(param_1,param_3,&uStack_2c,&auStack_24);
   if ((-1 < iVar3) && (iVar3 = fn_82E27D58(param_2,param_3,&uStack_28,&uStack_30), -1 < iVar3)
      ) {
     lVar1 = (ulonglong)uStack_30 * (ulonglong)uStack_2c;
-    lVar2 = (ulonglong)uStack_28 * (ulonglong)auStack_24[0];
+    lVar2 = (ulonglong)uStack_28 * (ulonglong)auStack_24;
     if (((lVar1 * 1000 < lVar2 * 999) || (lVar2 < lVar1)) &&
        ((lVar2 * 1000 < lVar1 * 999 || (lVar1 < lVar2)))) {
       return 0;

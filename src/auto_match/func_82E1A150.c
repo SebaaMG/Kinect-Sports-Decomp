@@ -63,7 +63,7 @@ void fn_82E1A150(ulonglong param_1,byte *param_2,int param_3,undefined8 param_4)
   longlong lVar12;
   ulonglong uVar13;
   ulonglong uVar14;
-  undefined4 auStack_70 [2];
+  undefined4 auStack_70;
   int iStack_68;
   int iStack_64;
   uint uStack_60;
@@ -92,9 +92,9 @@ void fn_82E1A150(ulonglong param_1,byte *param_2,int param_3,undefined8 param_4)
   iStack_64 = 0;
   uStack_60 = 0x80000000;
   for (; (param_1 & 0xffffffff) != 0; param_1 = fn_82CEAC28(param_1)) {
-    auStack_70[0] = (undefined4)param_1;
+    auStack_70 = (undefined4)param_1;
     iVar5 = fn_82CE5410();
-    fn_82DB9F80(&iStack_68,*(undefined4 *)(iVar5 + 0xc),0,0,auStack_70,1);
+    fn_82DB9F80(&iStack_68,*(undefined4 *)(iVar5 + 0xc),0,0,&auStack_70,1);
   }
   uVar14 = 0;
   bVar1 = *param_2;

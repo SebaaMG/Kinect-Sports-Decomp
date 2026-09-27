@@ -45,7 +45,7 @@ void fn_82C0DE58(int *param_1)
   int *piStack_3c;
   undefined4 uStack_38;
   undefined4 uStack_34;
-  int aiStack_30 [12];
+  int aiStack_30;
   
   uVar1 = (**(code **)(*param_1 + 0x104))();
   while ((uVar1 & 4) == 0) {
@@ -64,7 +64,7 @@ void fn_82C0DE58(int *param_1)
           (**(code **)(*piStack_40 + 0x48))(piStack_40,piVar4);
           iVar5 = *piStack_40;
           lVar2 = (**(code **)(*piVar4 + 0x54))(piVar4);
-          iVar5 = (**(code **)(iVar5 + 0x78))(piStack_40,lVar2 + -8,aiStack_30);
+          iVar5 = (**(code **)(iVar5 + 0x78))(piStack_40,lVar2 + -8,&aiStack_30);
           if (iVar5 < 0) {
             (**(code **)(*piVar4 + 8))(piVar4);
             (**(code **)(*piStack_40 + 0x14))();
@@ -75,7 +75,7 @@ void fn_82C0DE58(int *param_1)
           fn_82C0BEA8(piStack_3c);
           (**(code **)(*piStack_40 + 0x14))();
           (**(code **)(*param_1 + 0xd0))(param_1);
-          if (aiStack_30[0] == 0) break;
+          if (aiStack_30 == 0) break;
         }
         else {
           (**(code **)(*piStack_40 + 0x14))();

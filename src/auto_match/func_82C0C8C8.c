@@ -43,17 +43,17 @@ undefined8 fn_82C0C8C8(int *param_1,ulonglong param_2,uint *param_3)
   uint uStack_44;
   int *piStack_40;
   int *piStack_3c;
-  int *apiStack_38 [14];
+  int * apiStack_38;
   
   uStack_44 = 0;
-  apiStack_38[0] = (int *)0x0;
+  apiStack_38 = (int *)0x0;
   piStack_3c = (int *)0x0;
   piStack_50 = (int *)0x0;
   piStack_48 = (int *)0x0;
   piStack_40 = (int *)0x0;
   piStack_4c = (int *)0x0;
   (**(code **)(*param_1 + 0xc))();
-  (**(code **)(*(int *)param_1[0xb] + 0x44))((int *)param_1[0xb],apiStack_38,&piStack_3c,0);
+  (**(code **)(*(int *)param_1[0xb] + 0x44))((int *)param_1[0xb],&apiStack_38,&piStack_3c,0);
   (**(code **)(*(int *)param_1[0xb] + 0x3c))((int *)param_1[0xb],&piStack_50,&piStack_48,0);
   uVar1 = (**(code **)(*(int *)param_1[0xb] + 0x40))((int *)param_1[0xb],&piStack_40,&piStack_4c,0);
   piVar4 = (int *)0x0;
@@ -134,9 +134,9 @@ undefined8 fn_82C0C8C8(int *param_1,ulonglong param_2,uint *param_3)
     (**(code **)(*piStack_48 + 8))();
     piStack_48 = (int *)0x0;
   }
-  if (apiStack_38[0] != (int *)0x0) {
-    (**(code **)(*apiStack_38[0] + 8))();
-    apiStack_38[0] = (int *)0x0;
+  if (apiStack_38 != (int *)0x0) {
+    (**(code **)(*apiStack_38 + 8))();
+    apiStack_38 = (int *)0x0;
   }
   if (piStack_3c != (int *)0x0) {
     (**(code **)(*piStack_3c + 8))();

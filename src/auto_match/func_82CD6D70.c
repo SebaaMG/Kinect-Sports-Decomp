@@ -30,8 +30,7 @@ extern unsigned int iStack0000001c;
 extern unsigned int iStack00000044;
 
 
-void fn_82CD6D70(int param_1,int param_2,int param_3,int param_4,ulonglong param_5,
-                  ulonglong param_6,int param_7,int param_8)
+void fn_82CD6D70(int param_1, int param_2, int param_3, int param_4, ulonglong param_5, ulonglong param_6, int param_7, int param_8, uint in_stack_00000054, uint in_stack_0000005c, uint in_stack_00000064, uint in_stack_0000006c, undefined8 unused_arg_13, int in_stack_0000007c)
 
 {
   uint uVar1;
@@ -55,11 +54,11 @@ void fn_82CD6D70(int param_1,int param_2,int param_3,int param_4,ulonglong param
   int iVar19;
   int iStack0000001c;
   int iStack00000044;
-  uint in_stack_00000054;
-  uint in_stack_0000005c;
-  uint in_stack_00000064;
-  uint in_stack_0000006c;
-  int in_stack_0000007c;
+
+
+
+
+
   
   uVar14 = in_stack_00000064;
   if ((in_stack_00000064 ^ (int)in_stack_00000064 >> 0x1f) - ((int)in_stack_00000064 >> 0x1f) != 1)

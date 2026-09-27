@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_82E50BE8();
 extern int fn_82E5FD40();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 longlong fn_82E753C0(int param_1,int *param_2)
@@ -39,13 +39,13 @@ longlong fn_82E753C0(int param_1,int *param_2)
   int iVar5;
   ulonglong uVar2;
   int *piStack_30;
-  int *apiStack_2c [11];
+  int * apiStack_2c;
   
   if (param_2 == (int *)0x0) {
     return -0x7ff8ffa9;
   }
   piStack_30 = (int *)0x0;
-  apiStack_2c[0] = (int *)0x0;
+  apiStack_2c = (int *)0x0;
   lVar1 = (**(code **)(*param_2 + 0x90))(param_2,&piStack_30);
   if (-1 < lVar1) {
     if (piStack_30 == (int *)0x0) {
@@ -54,9 +54,9 @@ longlong fn_82E753C0(int param_1,int *param_2)
     }
     uVar3 = fn_82E5FD40(piStack_30,param_1 + 0x6c);
     *(undefined4 *)(param_1 + 0x68) = uVar3;
-    lVar1 = (**(code **)*piStack_30)(piStack_30,0xffffffff821531c8,apiStack_2c);
+    lVar1 = (**(code **)*piStack_30)(piStack_30,0xffffffff821531c8,&apiStack_2c);
     if (-1 < lVar1) {
-      iVar4 = (**(code **)(*apiStack_2c[0] + 0x98))();
+      iVar4 = (**(code **)(*apiStack_2c + 0x98))();
       iVar5 = *(ushort *)(iVar4 + 0x10) + 0x12;
       *(int *)(param_1 + 0x74) = iVar5;
       uVar2 = fn_82E50BE8(iVar5,0,0,0,0);
@@ -65,7 +65,7 @@ longlong fn_82E753C0(int param_1,int *param_2)
         lVar1 = -0x7ff8fff2;
       }
       else {
-        fn_82F68CC0(uVar2,iVar4,*(undefined4 *)(param_1 + 0x74));
+        memcpy(uVar2,iVar4,*(undefined4 *)(param_1 + 0x74));
       }
     }
   }
@@ -74,8 +74,8 @@ longlong fn_82E753C0(int param_1,int *param_2)
     piStack_30 = (int *)0x0;
   }
 LAB_82e754dc:
-  if (apiStack_2c[0] != (int *)0x0) {
-    (**(code **)(*apiStack_2c[0] + 8))();
+  if (apiStack_2c != (int *)0x0) {
+    (**(code **)(*apiStack_2c + 8))();
   }
   return lVar1;
 }

@@ -74,7 +74,7 @@ void fn_82CEF0B8(int param_1,undefined8 param_2,int *param_3)
   undefined1 auStack_88 [8];
   undefined8 uStack_80;
   undefined1 auStack_78 [8];
-  undefined1 auStack_70 [112];
+  undefined1 auStack_70 [16];
   
   if (param_1 != 0) {
     iVar10 = fn_82CEAF18(param_2);

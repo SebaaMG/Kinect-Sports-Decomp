@@ -40,7 +40,7 @@ longlong fn_82D42730(int param_1,int param_2,int param_3)
   longlong lVar3;
   ulonglong uVar4;
   undefined1 auStack_250 [16];
-  undefined1 auStack_240 [576];
+  undefined1 auStack_240 [496];
   
   lVar3 = 0;
   uVar4 = 0;

@@ -48,15 +48,15 @@ int fn_82CE93F8(int param_1,int param_2)
   uint uVar4;
   undefined4 *puVar5;
   longlong lVar6;
-  undefined4 auStack_40 [16];
+  undefined4 auStack_40;
   
   fn_82CEFBD0(param_1,0);
   *(undefined4 *)(param_1 + 100) = 0;
   *(undefined4 *)(param_1 + 0x68) = 0;
   *(undefined4 *)(param_1 + 0x6c) = 0x80000000;
   *(undefined4 *)(param_1 + 0x5c) = 1;
-  fn_82CE7870(auStack_40);
-  *(undefined4 *)(param_1 + 0x60) = auStack_40[0];
+  fn_82CE7870(&auStack_40);
+  *(undefined4 *)(param_1 + 0x60) = auStack_40;
   *(undefined4 *)(param_1 + 0x188) = 0;
   *(undefined4 *)(param_1 + 0x18c) = 0;
   *(undefined4 *)(param_1 + 400) = 0x80000000;

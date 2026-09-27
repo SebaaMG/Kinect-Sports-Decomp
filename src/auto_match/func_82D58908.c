@@ -51,7 +51,7 @@ void fn_82D58908(int param_1,int param_2,ulonglong param_3,int param_4,int param
   uint uStack00000024;
   uint uStack00000044;
   int in_stack_00000054;
-  undefined1 auStack_4a0 [1184];
+  undefined1 auStack_4a0 [1024];
   
   uStack00000024 = (uint)param_3;
   *(undefined1 *)(param_1 + 0x1e20) = 1;

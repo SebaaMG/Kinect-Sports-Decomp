@@ -51,18 +51,18 @@ uint * fn_82D2CCA0(uint *param_1,undefined8 param_2,undefined8 param_3,undefined
   int iStack_48;
   int iStack_44;
   int iStack_40;
-  int iStack_38;
-  int iStack_34;
+  struct { int first; int second; } stack_pair_38;
+
   int iStack_30;
   
   fn_82D2C3F8(&iStack_48);
-  fn_82D2C3F8(&iStack_38,param_2,param_5,param_6);
+  fn_82D2C3F8(&stack_pair_38.first,param_2,param_5,param_6);
   uVar1 = uRam8323b6c8;
-  if ((iStack_48 == 2) && (iStack_38 == 2)) {
+  if ((iStack_48 == 2) && (stack_pair_38.first == 2)) {
     iStack_50 = iStack_44;
     iStack_4c = iStack_40;
     fn_82D2C878(param_1,param_2,&iStack_50,*(undefined4 *)((iStack_40 + 2) * 4 + iStack_44),
-                  *(undefined4 *)((iStack_30 + 2) * 4 + iStack_34));
+                  *(undefined4 *)((iStack_30 + 2) * 4 + stack_pair_38.second));
   }
   else {
     uVar2 = uRam8323b6d0 & 1;

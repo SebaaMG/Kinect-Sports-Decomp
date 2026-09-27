@@ -49,8 +49,8 @@ void fn_8303EE40(int param_1,undefined8 param_2,undefined8 param_3)
   int iVar4;
   uint uVar5;
   int iVar6;
-  undefined4 uStack_70;
-  int iStack_6c;
+  struct { undefined4 first; int second; } stack_pair_70;
+
   undefined4 uStack_68;
   undefined4 uStack_64;
   uint uStack_60;
@@ -89,15 +89,15 @@ joined_r0x8303eea8:
       uStack_5a = *(undefined1 *)(param_1 + 0x28);
       uStack_60 = *(uint *)(param_1 + 0x14) >> 3 & 0x1f;
       uStack_5c = 0;
-      uStack_70 = (undefined4)param_2;
-      iStack_6c = (int)param_3;
+      stack_pair_70.first = (undefined4)param_2;
+      stack_pair_70.second = (int)param_3;
       uStack_68 = 0;
       uStack_64 = fn_8302BBA8(param_1);
-      uStack_5b = iStack_6c == 0;
-      (**(code **)(*piVar1 + 0x1c))(piVar1,&uStack_70);
+      uStack_5b = stack_pair_70.second == 0;
+      (**(code **)(*piVar1 + 0x1c))(piVar1,&stack_pair_70.first);
       piVar2 = (int *)fn_83032738();
       if (piVar2 != (int *)0x0) {
-        (**(code **)(*piVar2 + 0x1c))(piVar2,&uStack_70);
+        (**(code **)(*piVar2 + 0x1c))(piVar2,&stack_pair_70.first);
         (**(code **)(*piVar2 + 8))(piVar2);
       }
       (**(code **)(*piVar1 + 8))(piVar1);

@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_20;
 extern int fn_82A1C098();
-extern int fn_831430DC();
+extern int XMsgStartIORequestEx();
 extern unsigned int iStack_18;
 extern unsigned int uStack_10;
 extern unsigned int uStack_14;
@@ -40,8 +40,8 @@ uint fn_82CE0298(int param_1,undefined4 param_2,undefined4 param_3)
   uint uVar2;
   undefined1 *puVar3;
   undefined1 auStack_20 [8];
-  int iStack_18;
-  undefined4 uStack_14;
+  struct { int first; undefined4 second; } stack_pair_18;
+
   undefined4 uStack_10;
   
   if (param_1 == 0) {
@@ -50,10 +50,10 @@ uint fn_82CE0298(int param_1,undefined4 param_2,undefined4 param_3)
   else {
     puVar3 = (undefined1 *)0x0;
   }
-  iStack_18 = param_1;
-  uStack_14 = param_2;
+  stack_pair_18.first = param_1;
+  stack_pair_18.second = param_2;
   uStack_10 = param_3;
-  uVar1 = fn_831430DC(0xfa,0x7001a,0,&iStack_18,0xc,puVar3);
+  uVar1 = XMsgStartIORequestEx(0xfa,0x7001a,0,&stack_pair_18.first,0xc,puVar3);
   if (((int)uVar1 < 0) || (uVar1 = fn_82A1C098(0), (int)uVar1 < 0)) {
     uVar2 = uVar1 & 0xffff;
     if ((uVar1 & 0x1fff0000) != 0x70000) {

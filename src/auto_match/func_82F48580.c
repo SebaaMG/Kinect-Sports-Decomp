@@ -35,10 +35,10 @@ undefined8 fn_82F48580(int *param_1,int param_2,uint *param_3)
   undefined8 uVar1;
   longlong lVar3;
   uint uVar4;
-  int aiStack_40 [16];
+  int aiStack_40;
   
   lVar3 = 0;
-  aiStack_40[0] = 0;
+  aiStack_40 = 0;
   iVar2 = (**(code **)(*param_1 + 0x50))();
   if (iVar2 == 0) {
     uVar1 = 0xffffffff80004001;
@@ -56,9 +56,9 @@ undefined8 fn_82F48580(int *param_1,int param_2,uint *param_3)
     uVar4 = 0;
     if (param_1[9] != 0) {
       do {
-        uVar1 = fn_82EE6048(param_1 + 0xc,lVar3,aiStack_40,4);
+        uVar1 = fn_82EE6048(param_1 + 0xc,lVar3,&aiStack_40,4);
         if ((int)uVar1 < 0) break;
-        if (aiStack_40[0] == param_2) {
+        if (aiStack_40 == param_2) {
           *param_3 = uVar4;
           return uVar1;
         }

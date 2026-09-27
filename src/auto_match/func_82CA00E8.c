@@ -30,8 +30,7 @@ extern unsigned char bRam00000001;
 extern unsigned int uStack_c8;
 
 
-void fn_82CA00E8(int param_1,byte *param_2,int param_3,int param_4,byte *param_5,byte *param_6,
-                  byte *param_7,byte *param_8)
+void fn_82CA00E8(int param_1, byte *param_2, int param_3, int param_4, byte *param_5, byte *param_6, byte *param_7, byte *param_8, uint in_stack_00000054)
 
 {
   byte bVar1;
@@ -74,7 +73,7 @@ void fn_82CA00E8(int param_1,byte *param_2,int param_3,int param_4,byte *param_5
   byte *pbStack0000002c;
   byte *pbStack0000003c;
   byte *pbStack00000044;
-  uint in_stack_00000054;
+
   uint uStack_c8;
   
   iVar12 = (int)(in_stack_00000054 + 1) >> 1;

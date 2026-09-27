@@ -38,7 +38,7 @@ undefined4 * fn_82F5D8C0(undefined4 *param_1,undefined8 param_2,int *param_3)
   int iVar1;
   undefined4 auStack_40 [2];
   undefined8 uStack_38;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
   
   *param_1 = 0;
   param_1[1] = 0;

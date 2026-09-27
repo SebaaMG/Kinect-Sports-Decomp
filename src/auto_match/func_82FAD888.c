@@ -43,12 +43,12 @@ undefined8 fn_82FAD888(int *param_1,int param_2,undefined8 param_3,undefined4 *p
   undefined4 uVar5;
   undefined8 uVar6;
   int iStack_40;
-  int aiStack_3c [15];
+  int aiStack_3c;
   
   iVar1 = param_1[1];
   iStack_40 = 0;
   uVar5 = 0;
-  aiStack_3c[0] = iVar1;
+  aiStack_3c = iVar1;
   if (*(int *)(iVar1 + 0x40) != 0) {
     uVar5 = *(undefined4 *)(*(int *)(iVar1 + 0x40) + 0x60);
     iVar2 = fn_82FAE648(uVar5,param_2,param_3,&iStack_40);
@@ -63,10 +63,10 @@ undefined8 fn_82FAD888(int *param_1,int param_2,undefined8 param_3,undefined4 *p
   }
   uVar3 = fn_82FA9920(iVar1,iStack_40,param_2,uVar6);
   *param_4 = uVar3;
-  (**(code **)(*param_1 + 4))(param_1,aiStack_3c,iStack_40);
-  iVar2 = *(int *)(aiStack_3c[0] + 4);
+  (**(code **)(*param_1 + 4))(param_1,&aiStack_3c,iStack_40);
+  iVar2 = *(int *)(aiStack_3c + 4);
   if (iVar2 != 0) {
-    aiStack_3c[0] = iVar2;
+    aiStack_3c = iVar2;
     iVar4 = fn_82FAE168(uVar5);
     *(int *)(iVar2 + 0xc) = iVar4 - iStack_40;
     fn_82FA9530(iVar1);

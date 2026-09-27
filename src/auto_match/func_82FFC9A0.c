@@ -41,7 +41,7 @@ undefined8 fn_82FFC9A0(longlong param_1,uint *param_2)
   uint uVar4;
   ulonglong uVar5;
   undefined8 uVar6;
-  int aiStack_40 [16];
+  int aiStack_40 [8];
   
   aiStack_40[0] = 0;
   uVar3 = fn_82FFC4C8(param_1,*(undefined8 *)param_2,*(undefined8 *)(param_2 + 2),

@@ -31,7 +31,7 @@ extern unsigned int *auStack_80;
 extern int fn_82230110();
 extern int fn_82231700();
 extern int fn_8265D5A8();
-extern int fn_82F69290();
+extern int _CxxThrowException();
 extern int fn_82F6F870();
 extern int fn_82F919B8();
 extern int fn_82F91FA0();
@@ -78,7 +78,7 @@ undefined4 * fn_82F928A8(undefined4 *param_1,int param_2,undefined8 param_3)
   int iStack0000001c;
   undefined4 uStack00000020;
   undefined4 uStack00000024;
-  undefined1 auStack_80 [44];
+  undefined1 auStack_80 [1];
   int iStack_54;
   int iStack_50;
   int iStack_4c;
@@ -96,7 +96,7 @@ undefined4 * fn_82F928A8(undefined4 *param_1,int param_2,undefined8 param_3)
     fn_82230110(auStack_40,0xffffffff821963f4);
     fn_82F937F8(auStack_80,auStack_40);
                     /* WARNING: Subroutine does not return */
-    fn_82F69290(auStack_80,0xffffffff821dda18);
+    _CxxThrowException(auStack_80,0xffffffff821dda18);
   }
   iVar5 = fn_82F93A00(&stack0x00000020);
   fn_82F92140(&stack0x00000020);

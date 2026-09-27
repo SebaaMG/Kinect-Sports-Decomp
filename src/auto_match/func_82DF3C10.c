@@ -39,7 +39,7 @@ void fn_82DF3C10(int param_1,int param_2)
   ulonglong uVar4;
   undefined4 *puVar5;
   int *piVar6;
-  undefined4 auStack_30 [12];
+  undefined4 auStack_30;
   
   fn_82D94630();
   piVar6 = (int *)(param_1 + 0x44);
@@ -50,10 +50,10 @@ void fn_82DF3C10(int param_1,int param_2)
     if ((*(uint *)(param_1 + 0x4c) & 0x80000000) == 0) {
       (**(code **)(*piVar1 + 0x10))(piVar1,*piVar6,uVar2,4);
     }
-    auStack_30[0] = *(undefined4 *)(param_2 + 0x48);
-    iVar3 = (**(code **)(*piVar1 + 0xc))(piVar1,auStack_30,4);
+    auStack_30 = *(undefined4 *)(param_2 + 0x48);
+    iVar3 = (**(code **)(*piVar1 + 0xc))(piVar1,&auStack_30,4);
     *piVar6 = iVar3;
-    *(undefined4 *)(param_1 + 0x4c) = auStack_30[0];
+    *(undefined4 *)(param_1 + 0x4c) = auStack_30;
   }
   uVar2 = *(uint *)(param_2 + 0x48);
   uVar4 = (ulonglong)uVar2;

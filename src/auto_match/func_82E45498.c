@@ -36,10 +36,10 @@ ulonglong fn_82E45498(undefined4 *param_1)
   ulonglong uVar1;
   undefined4 *puVar2;
   ulonglong uVar3;
-  uint auStack_30 [12];
+  uint auStack_30;
   
   uVar3 = 0;
-  auStack_30[0] = 0;
+  auStack_30 = 0;
   if (param_1 == (undefined4 *)0x0) {
     uVar3 = 0xffffffff80070057;
   }
@@ -50,8 +50,8 @@ ulonglong fn_82E45498(undefined4 *param_1)
       puVar2 = (undefined4 *)0x0;
     }
     else {
-      puVar2 = (undefined4 *)fn_82E451C8(uVar1,auStack_30);
-      uVar3 = (ulonglong)auStack_30[0];
+      puVar2 = (undefined4 *)fn_82E451C8(uVar1,&auStack_30);
+      uVar3 = (ulonglong)auStack_30;
     }
     if (puVar2 == (undefined4 *)0x0) {
       uVar3 = 0xffffffff8007000e;

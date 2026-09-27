@@ -39,7 +39,7 @@ undefined8 fn_82C1EE20(int param_1,undefined4 *param_2,int *param_3,uint *param_
   char cVar4;
   char cVar5;
   char cVar6;
-  undefined1 auStack_60 [96];
+  undefined1 auStack_60 [16];
   
   piVar1 = *(int **)(param_1 + 0x1c);
   if ((((piVar1 == (int *)0x0) || (param_2 == (undefined4 *)0x0)) || (param_4 == (uint *)0x0)) ||

@@ -25,15 +25,15 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F63DC0();
+extern int _onexit();
 
 
-longlong fn_82F63EC8(void)
+longlong atexit(void)
 
 {
   longlong lVar1;
   
-  lVar1 = fn_82F63DC0();
+  lVar1 = _onexit();
   return -(ulonglong)(lVar1 == 0);
 }
 

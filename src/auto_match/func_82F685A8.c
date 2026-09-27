@@ -25,8 +25,8 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F63BA0();
-extern int fn_82F68240();
+extern int _invalid_parameter_noinfo();
+extern int _errno();
 
 
 undefined4 fn_82F685A8(ulonglong param_1,char *param_2,uint param_3,ulonglong param_4,int param_5)
@@ -44,14 +44,14 @@ undefined4 fn_82F685A8(ulonglong param_1,char *param_2,uint param_3,ulonglong pa
   
   uVar3 = (uint)param_4;
   if (param_2 == (char *)0x0) {
-    puVar2 = (undefined4 *)fn_82F68240();
+    puVar2 = (undefined4 *)_errno();
     *puVar2 = 0x16;
-    fn_82F63BA0();
+    _invalid_parameter_noinfo();
     return 0x16;
   }
   if (param_3 == 0) {
 LAB_82f685e0:
-    puVar2 = (undefined4 *)fn_82F68240();
+    puVar2 = (undefined4 *)_errno();
     uVar9 = 0x16;
   }
   else {
@@ -96,11 +96,11 @@ LAB_82f685e0:
       }
       *param_2 = '\0';
     }
-    puVar2 = (undefined4 *)fn_82F68240();
+    puVar2 = (undefined4 *)_errno();
     uVar9 = 0x22;
   }
   *puVar2 = uVar9;
-  fn_82F63BA0();
+  _invalid_parameter_noinfo();
   return uVar9;
 }
 

@@ -25,7 +25,7 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F691F0();
+extern int memset();
 extern unsigned int lbl_821AAD20;
 
 
@@ -37,7 +37,7 @@ undefined8 fn_82FBA940(int param_1)
   uint uVar3;
   int iVar4;
   
-  fn_82F691F0(*(undefined4 *)(param_1 + 0x28),0,
+  memset(*(undefined4 *)(param_1 + 0x28),0,
                 ((longlong)*(int *)(param_1 + 0x20) * (longlong)*(int *)(param_1 + 0x10) &
                 0x3fffffffU) << 2);
   uVar2 = lbl_821AAD20;

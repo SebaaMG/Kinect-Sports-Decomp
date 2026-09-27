@@ -61,8 +61,8 @@ undefined8 fn_83049930(int *param_1,char param_2)
   ulonglong uVar6;
   int *piVar7;
   int *piVar8;
-  undefined4 uStack_a0;
-  undefined4 uStack_9c;
+  struct { undefined4 first; undefined4 second; } stack_pair_a0;
+
   undefined1 uStack_98;
   undefined1 uStack_97;
   undefined4 uStack_90;
@@ -116,17 +116,17 @@ LAB_83049b04:
     }
     uVar1 = (ulonglong)uStack_7e << 1;
     uStack_98 = (undefined1)uStack_7e;
-    uStack_9c = (undefined4)(uVar5 / uVar1);
-    uStack_a0 = uStack_7c;
+    stack_pair_a0.second = (undefined4)(uVar5 / uVar1);
+    stack_pair_a0.first = uStack_7c;
     trapWord(6,uVar1,0);
     uStack_97 = 2;
-    uVar2 = fn_8307DBA0(1,&uStack_a0);
+    uVar2 = fn_8307DBA0(1,&stack_pair_a0.first);
     uVar5 = fn_82FA5100(lbl_831BC770,uVar2,0x100);
     param_1[0xe] = (int)uVar5;
     if ((uVar5 & 0xffffffff) == 0) {
       return 0x34;
     }
-    iVar3 = fn_8307E7A8(1,&uStack_a0,2,piVar4,uVar5,uVar2);
+    iVar3 = fn_8307E7A8(1,&stack_pair_a0.first,2,piVar4,uVar5,uVar2);
     if (iVar3 == 0) {
       fn_8307DE78(*piVar4);
       fn_8307E6E0(*piVar4);

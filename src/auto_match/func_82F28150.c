@@ -25,7 +25,7 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int iStack0000003c;
 extern unsigned int iStack0000004c;
 extern unsigned int uStack0000002c;
@@ -208,9 +208,9 @@ LAB_82f28490:
       uVar2 = *(undefined4 *)(param_1 + 0x948);
       *(undefined4 *)(param_1 + 0x948) = *(undefined4 *)(param_1 + 0x954);
       *(undefined4 *)(param_1 + 0x954) = uVar2;
-      fn_82F68CC0(*(undefined4 *)(param_1 + 0x960),*(undefined4 *)(param_1 + 0x958),
+      memcpy(*(undefined4 *)(param_1 + 0x960),*(undefined4 *)(param_1 + 0x958),
                     *(int *)(param_1 + 0x2d0) << 6);
-      fn_82F68CC0(*(undefined4 *)(param_1 + 0x96c),*(undefined4 *)(param_1 + 0x964),
+      memcpy(*(undefined4 *)(param_1 + 0x96c),*(undefined4 *)(param_1 + 0x964),
                     *(int *)(param_1 + 0x2d0) << 6);
     }
     uVar2 = *(undefined4 *)(param_1 + 0x950);

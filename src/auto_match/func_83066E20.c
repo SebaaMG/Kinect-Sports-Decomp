@@ -35,7 +35,7 @@ void fn_83066E20(longlong param_1,undefined8 param_2)
 
 {
   double dVar1;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [1];
   
   fn_82810328(param_2,param_1 + 0xc,auStack_30);
   dVar1 = (double)fn_82810280(param_1,auStack_30);

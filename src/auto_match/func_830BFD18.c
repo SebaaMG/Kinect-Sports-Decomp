@@ -41,7 +41,7 @@ undefined8 fn_830BFD18(int param_1)
 {
   undefined8 uVar1;
   int iVar2;
-  undefined1 auStack_630 [1584];
+  undefined1 auStack_630 [1536];
   
   iVar2 = param_1 + 0x3e70;
   fn_830BD430(param_1,iVar2);

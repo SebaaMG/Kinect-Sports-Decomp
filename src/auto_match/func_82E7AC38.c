@@ -30,7 +30,7 @@ extern int fn_82E780A8();
 extern int fn_82E78690();
 extern int fn_82E79B28();
 extern int fn_82EEB7A8();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 ulonglong fn_82E7AC38(int param_1,int param_2)
@@ -42,7 +42,7 @@ ulonglong fn_82E7AC38(int param_1,int param_2)
   int iVar4;
   uint uVar5;
   longlong lVar6;
-  uint auStack_50 [20];
+  uint auStack_50;
   
   if ((param_2 == 0) ||
      (uVar5 = (uint)*(ushort *)(param_2 + 10), uVar5 < *(ushort *)(param_2 + 0x40))) {
@@ -54,8 +54,8 @@ ulonglong fn_82E7AC38(int param_1,int param_2)
       do {
         uVar1 = *(uint *)(param_1 + 0x1e0);
         lVar6 = (ulonglong)uVar1 - 1;
-        lVar3 = fn_82E78690(param_1 + 0x178,lVar6,auStack_50);
-        if ((-(uint)(lVar3 != 0) & auStack_50[0]) == 0) goto LAB_82e7ad50;
+        lVar3 = fn_82E78690(param_1 + 0x178,lVar6,&auStack_50);
+        if ((-(uint)(lVar3 != 0) & auStack_50) == 0) goto LAB_82e7ad50;
         fn_82EEB7A8(param_1 + 0x1e4);
         if (((ulonglong)uVar1 <= (ulonglong)*(uint *)(param_1 + 0x1e0)) &&
            (iVar4 = fn_82E780A8(param_1 + 0x178,lVar6), -1 < iVar4)) {
@@ -63,10 +63,10 @@ ulonglong fn_82E7AC38(int param_1,int param_2)
         }
       } while (uVar5 < *(uint *)(param_1 + 0x1e0));
     }
-    fn_82F68CC0(param_1 + 0x13c,param_2,0x3c);
+    memcpy(param_1 + 0x13c,param_2,0x3c);
     if ((ulonglong)*(ushort *)(param_1 + 0x146) != 0) {
-      lVar3 = fn_82E78690(param_1 + 0x178,(ulonglong)*(ushort *)(param_1 + 0x146) - 1,auStack_50);
-      uVar5 = -(uint)(lVar3 != 0) & auStack_50[0];
+      lVar3 = fn_82E78690(param_1 + 0x178,(ulonglong)*(ushort *)(param_1 + 0x146) - 1,&auStack_50);
+      uVar5 = -(uint)(lVar3 != 0) & auStack_50;
       if (uVar5 == 0) {
 LAB_82e7ad50:
         uVar2 = 0xffffffff8000ffff;
@@ -82,8 +82,8 @@ LAB_82e7ad50:
           else if (*(short *)(param_2 + 0x40) != 0) {
             do {
               lVar3 = fn_82E78690(param_1 + 0x178,(*(ushort *)(param_1 + 0x146) - uVar2) + -1,
-                                    auStack_50);
-              uVar5 = -(uint)(lVar3 != 0) & auStack_50[0];
+                                    &auStack_50);
+              uVar5 = -(uint)(lVar3 != 0) & auStack_50;
               if (uVar5 == 0) goto LAB_82e7ad50;
               uVar2 = uVar2 + 1 & 0xffff;
               *(undefined4 *)(uVar5 + 0x134) = *(undefined4 *)(param_2 + 0x44);

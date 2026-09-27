@@ -25,21 +25,21 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F64188();
-extern int fn_82F641D8();
-extern int fn_82F706C0();
+extern int abort();
+extern int _set_abort_behavior();
+extern int _NMSG_WRITE();
 extern int (*lbl_83263400)();
 
 
-void fn_82F63EF0(void)
+void _purecall(void)
 
 {
   if (lbl_83263400 != (code *)0x0) {
     (*lbl_83263400)();
   }
-  fn_82F706C0(0x19);
-  fn_82F641D8(0,1);
-  fn_82F64188();
+  _NMSG_WRITE(0x19);
+  _set_abort_behavior(0,1);
+  abort();
   return;
 }
 

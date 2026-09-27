@@ -44,7 +44,7 @@ undefined8 fn_82E64938(int param_1,undefined4 *param_2)
   ulonglong uVar4;
   longlong lVar6;
   undefined8 uVar7;
-  uint auStack_40 [16];
+  uint auStack_40;
   
   lVar6 = 0;
   fn_82E50D88(param_1 + 0xc);
@@ -58,8 +58,8 @@ LAB_82e64964:
     uVar7 = 0xffffffff80004005;
     goto LAB_82e64a64;
   }
-  lVar2 = fn_82E644B8(param_1 + 0x4c,*(int *)(param_1 + 0xb8),auStack_40);
-  puVar5 = (undefined4 *)(-(uint)(lVar2 != 0) & auStack_40[0]);
+  lVar2 = fn_82E644B8(param_1 + 0x4c,*(int *)(param_1 + 0xb8),&auStack_40);
+  puVar5 = (undefined4 *)(-(uint)(lVar2 != 0) & auStack_40);
   if (puVar5 == (undefined4 *)0x0) goto LAB_82e64964;
   psVar1 = (short *)*puVar5;
   lVar2 = 0;

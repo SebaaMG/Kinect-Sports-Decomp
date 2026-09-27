@@ -46,7 +46,7 @@ void fn_82D846E0(undefined4 *param_1)
   int *piVar2;
   int iVar3;
   int iVar4;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [32];
   
   iVar4 = param_1[0x1d];
   *param_1 = &lbl_8214134C;

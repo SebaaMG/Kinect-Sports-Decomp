@@ -25,14 +25,14 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 void fn_82CE63B0(int *param_1,undefined4 *param_2,undefined8 param_3)
 
 {
   undefined4 uVar1;
-  int aiStack_30 [12];
+  int aiStack_30 [4];
   
   aiStack_30[0] = param_2[1] << 1;
   if (param_2[1] == 0) {
@@ -46,7 +46,7 @@ void fn_82CE63B0(int *param_1,undefined4 *param_2,undefined8 param_3)
   }
   else {
     uVar1 = (**(code **)(*param_1 + 0xc))(param_1,aiStack_30,param_3);
-    fn_82F68CC0(uVar1,*param_2,(longlong)(int)param_3 * (longlong)(int)param_2[1]);
+    memcpy(uVar1,*param_2,(longlong)(int)param_3 * (longlong)(int)param_2[1]);
     *param_2 = uVar1;
     param_2[2] = aiStack_30[0];
   }

@@ -36,7 +36,7 @@ int fn_82CEDE28(int param_1,undefined8 param_2)
   int *piVar1;
   int iVar2;
   undefined8 uVar3;
-  undefined1 auStack_2750 [10064];
+  undefined1 auStack_2750 [10032];
   
   fn_82CFBB60(auStack_2750,0x2728,0xffffffff82132db8,param_2);
   piVar1 = *(int **)(param_1 + 8);

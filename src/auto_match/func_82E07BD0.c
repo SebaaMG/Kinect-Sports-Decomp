@@ -42,7 +42,7 @@ undefined8 fn_82E07BD0(undefined8 param_1,undefined8 param_2,char param_3,uint *
   int iVar2;
   undefined8 uVar1;
   undefined1 auStack_240 [16];
-  undefined1 auStack_230 [560];
+  undefined1 auStack_230 [512];
   
   iVar2 = fn_82E07840(param_1,param_2,0xffffffff8323f8cc);
   if (iVar2 == 0) {

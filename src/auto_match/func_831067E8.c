@@ -107,7 +107,7 @@ undefined8 fn_831067E8(int param_1,int param_2,int *param_3)
   uint uStack_694;
   uint *puStack_688;
   undefined1 auStack_600 [592];
-  undefined1 auStack_3b0 [944];
+  undefined1 auStack_3b0 [848];
   
   iVar31 = *(int *)(param_1 + 0xe0);
   iVar4 = *(int *)(param_2 + 0x558);

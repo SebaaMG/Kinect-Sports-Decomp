@@ -86,8 +86,7 @@ extern unsigned int uStack_788;
 /* WARNING: Removing unreachable block (ram,0x82ebde84) */
 /* WARNING: Removing unreachable block (ram,0x82ebe1f0) */
 
-void fn_82EBBDA0(int param_1,undefined4 param_2,undefined4 param_3,undefined4 param_4,uint param_5
-                  ,int param_6,int param_7,uint param_8)
+void fn_82EBBDA0(int param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4, uint param_5, int param_6, int param_7, uint param_8, int in_stack_00000054, int in_stack_0000005c, undefined8 unused_arg_11, undefined8 unused_arg_12, undefined8 unused_arg_13, undefined8 unused_arg_14, undefined8 unused_arg_15, undefined8 unused_arg_16, undefined8 unused_arg_17, undefined8 unused_arg_18, int in_stack_000000a4, int in_stack_000000ac, uint in_stack_000000b4, int in_stack_000000bc, int in_stack_000000c4, int in_stack_000000cc, uint in_stack_000000d4, int in_stack_000000dc, int in_stack_000000e4, undefined8 unused_arg_28, undefined4 in_stack_000000f4)
 
 {
   code *pcVar1;
@@ -138,8 +137,8 @@ void fn_82EBBDA0(int param_1,undefined4 param_2,undefined4 param_3,undefined4 pa
   int iStack0000003c;
   int iStack00000044;
   uint uStack0000004c;
-  int in_stack_00000054;
-  int in_stack_0000005c;
+
+
   code *in_stack_00000064;
   code *in_stack_0000006c;
   code *in_stack_00000074;
@@ -148,17 +147,17 @@ void fn_82EBBDA0(int param_1,undefined4 param_2,undefined4 param_3,undefined4 pa
   code *in_stack_0000008c;
   code *in_stack_00000094;
   code *in_stack_0000009c;
-  int in_stack_000000a4;
-  int in_stack_000000ac;
-  uint in_stack_000000b4;
-  int in_stack_000000bc;
-  int in_stack_000000c4;
-  int in_stack_000000cc;
-  uint in_stack_000000d4;
-  int in_stack_000000dc;
-  int in_stack_000000e4;
+
+
+
+
+
+
+
+
+
   undefined4 *in_stack_000000ec;
-  undefined4 in_stack_000000f4;
+
   undefined4 *in_stack_000000fc;
   int *in_stack_00000104;
   undefined4 *in_stack_0000010c;

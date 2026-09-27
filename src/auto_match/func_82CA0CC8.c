@@ -30,8 +30,7 @@ typedef struct { U64 lo, hi; } V16;
 extern int iRam8329f13c;
 
 
-void fn_82CA0CC8(undefined8 param_1,int param_2,longlong param_3,longlong param_4,int param_5,
-                  int param_6,int param_7,int param_8)
+void fn_82CA0CC8(undefined8 param_1, int param_2, longlong param_3, longlong param_4, int param_5, int param_6, int param_7, int param_8, int in_stack_00000054, int in_stack_0000005c, int in_stack_00000064)
 
 {
   undefined1 uVar1;
@@ -47,9 +46,9 @@ void fn_82CA0CC8(undefined8 param_1,int param_2,longlong param_3,longlong param_
   undefined4 *puVar11;
   undefined1 *puVar12;
   longlong lVar13;
-  int in_stack_00000054;
-  int in_stack_0000005c;
-  int in_stack_00000064;
+
+
+
   
   iVar5 = iRam8329f13c;
   param_5 = param_2 + param_5;

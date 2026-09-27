@@ -39,7 +39,7 @@ void fn_82E28318(int *param_1,undefined8 param_2,undefined8 param_3,undefined8 p
   int iVar1;
   undefined4 in_stack_00000054;
   undefined4 uStack_50;
-  undefined4 auStack_4c [19];
+  undefined4 auStack_4c;
   
   iVar1 = (**(code **)(*param_1 + 0x50))();
   if ((-1 < iVar1) &&
@@ -52,8 +52,8 @@ void fn_82E28318(int *param_1,undefined8 param_2,undefined8 param_3,undefined8 p
          ) && (((param_6 & 0xffffffff) == 0 ||
                (iVar1 = (**(code **)(*param_1 + 0x54))(param_1,0xffffffff82153688,param_6),
                -1 < iVar1)))) && ((0 < param_8 && (param_8 < 100000000)))) {
-      fn_82E26F18(param_8,auStack_4c,&uStack_50);
-      (**(code **)(*param_1 + 0x58))(param_1,0xffffffff82153588,CONCAT44(auStack_4c[0],uStack_50));
+      fn_82E26F18(param_8,&auStack_4c,&uStack_50);
+      (**(code **)(*param_1 + 0x58))(param_1,0xffffffff82153588,CONCAT44(auStack_4c,uStack_50));
     }
   }
   return;

@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 
 
-undefined8 fn_82F80548(int param_1,undefined4 *param_2,int param_3)
+undefined8 SkipUnwoundFrames(int param_1,undefined4 *param_2,int param_3)
 
 {
   if ((*(uint *)(param_1 + 4) & 0x66) == 0) {

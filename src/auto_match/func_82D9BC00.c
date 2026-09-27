@@ -44,7 +44,7 @@ void fn_82D9BC00(int param_1)
   undefined **ppuStack_a0;
   undefined2 uStack_9a;
   undefined8 uStack_88;
-  undefined1 auStack_80 [128];
+  undefined1 auStack_80 [96];
   
   puVar2 = &uStack_88;
   lVar7 = 10;

@@ -44,7 +44,7 @@ void fn_8306DA38(int param_1,undefined8 param_2)
   undefined4 in_register_000103f4;
   undefined4 in_register_000103f8;
   undefined4 in_vr63;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [1];
   
   fn_83075D30(auStack_40,param_2,0);
   altv207_13(in_vs32,in_vs35);

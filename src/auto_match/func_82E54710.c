@@ -36,7 +36,7 @@ ulonglong fn_82E54710(undefined8 param_1,undefined8 param_2,undefined8 param_3,u
   ulonglong uVar1;
   int *piVar2;
   ulonglong uVar3;
-  uint auStack_40 [16];
+  uint auStack_40 [4];
   
   uVar3 = 0;
   auStack_40[0] = 0;

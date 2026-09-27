@@ -42,7 +42,7 @@ void fn_830101C8(int param_1)
   longlong lVar4;
   longlong lStack_90;
   undefined1 auStack_88 [8];
-  undefined4 auStack_80 [32];
+  undefined4 auStack_80 [16];
   
   if (*(int *)(param_1 + 0x60) != 0) {
     lStack_90 = (ulonglong)*(uint *)(param_1 + 0x50) << 0x20;

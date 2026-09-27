@@ -39,7 +39,7 @@ void fn_82D2A660(void)
   undefined8 in_r0;
   int iVar1;
   undefined1 auStack_220 [16];
-  undefined1 auStack_210 [528];
+  undefined1 auStack_210 [512];
   
   fn_82CEE578(auStack_220,auStack_210,0x200);
   fn_82CEDB38(auStack_220,0xffffffff821348bc);

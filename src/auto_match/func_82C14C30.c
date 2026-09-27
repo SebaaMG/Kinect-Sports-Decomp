@@ -43,7 +43,7 @@ undefined8 fn_82C14C30(longlong *param_1,ulonglong param_2,ulonglong param_3)
   longlong lVar7;
   undefined8 uVar8;
   uint uVar9;
-  byte *apbStack_9c [39];
+  byte *apbStack_9c [23];
   
   lVar7 = (param_3 & 0xffffffff) + *param_1;
   apbStack_9c[0] = (byte *)0x0;

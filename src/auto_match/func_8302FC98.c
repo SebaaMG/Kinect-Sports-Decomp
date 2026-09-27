@@ -44,8 +44,8 @@ undefined8 fn_8302FC98(int param_1,undefined8 param_2,undefined4 *param_3,undefi
 {
   int *piVar1;
   undefined8 uVar2;
-  undefined4 uStack_60;
-  undefined4 uStack_5c;
+  struct { undefined4 first; undefined4 second; } stack_pair_60;
+
   undefined4 uStack_58;
   undefined4 uStack_54;
   undefined4 uStack_50;
@@ -59,14 +59,14 @@ undefined8 fn_8302FC98(int param_1,undefined8 param_2,undefined4 *param_3,undefi
     fn_83011240(lbl_832642E4,param_2,param_4);
     if ((*(byte *)(param_3 + 2) & 0xe0) == 0x20) {
       uStack_54 = *param_3;
-      uStack_5c = (undefined4)param_4;
+      stack_pair_60.second = (undefined4)param_4;
       uStack_4c = 0;
       uStack_4a = 0;
       uStack_50 = 4;
-      uStack_60 = 0;
+      stack_pair_60.first = 0;
       uStack_58 = 0;
       uStack_4b = 0;
-      uVar2 = (**(code **)(*piVar1 + 0x1c))(piVar1,&uStack_60);
+      uVar2 = (**(code **)(*piVar1 + 0x1c))(piVar1,&stack_pair_60.first);
     }
     else {
       (**(code **)(*piVar1 + 0x28))(piVar1,param_4,*(undefined4 *)(param_1 + 0xc),0);

@@ -34,7 +34,7 @@ undefined1 * fn_82DC9DD0(undefined1 *param_1,int param_2,int param_3,int param_4
 {
   int iVar1;
   char *pcVar2;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [1];
   
   iVar1 = *(int *)(param_2 + 0x34);
   if ((iVar1 != 0) &&

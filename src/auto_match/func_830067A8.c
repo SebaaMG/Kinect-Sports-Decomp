@@ -33,13 +33,12 @@ extern unsigned int lbl_831BC768;
 
 
 undefined8
-fn_830067A8(int *param_1,undefined8 param_2,undefined8 param_3,undefined4 param_4,
-             undefined8 param_5,undefined8 param_6,undefined8 param_7,ulonglong param_8)
+fn_830067A8(int *param_1, undefined8 param_2, undefined8 param_3, undefined4 param_4, undefined8 param_5, undefined8 param_6, undefined8 param_7, ulonglong param_8, int in_stack_00000054)
 
 {
   undefined4 *puVar1;
   undefined8 uVar2;
-  int in_stack_00000054;
+
   
   if (param_1[10] == 0) {
     puVar1 = (undefined4 *)fn_82FA5060(lbl_831BC768,0x40);

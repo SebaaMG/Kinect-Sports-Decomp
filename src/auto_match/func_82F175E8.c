@@ -32,8 +32,7 @@ extern int fn_82F45228();
 
 
 undefined8
-fn_82F175E8(int *param_1,int param_2,int param_3,int param_4,int param_5,int param_6,int param_7,
-             int param_8)
+fn_82F175E8(int *param_1, int param_2, int param_3, int param_4, int param_5, int param_6, int param_7, int param_8, int in_stack_00000054, int in_stack_0000005c, int in_stack_00000064, int in_stack_0000006c, int in_stack_00000074)
 
 {
   short sVar1;
@@ -43,11 +42,11 @@ fn_82F175E8(int *param_1,int param_2,int param_3,int param_4,int param_5,int par
   int iVar5;
   int iVar6;
   int iVar7;
-  int in_stack_00000054;
-  int in_stack_0000005c;
-  int in_stack_00000064;
-  int in_stack_0000006c;
-  int in_stack_00000074;
+
+
+
+
+
   
   if ((param_1 == (int *)0x0) || (param_3 == 0)) {
     return 1;

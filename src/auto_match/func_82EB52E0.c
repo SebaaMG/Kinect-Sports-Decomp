@@ -177,7 +177,7 @@ void fn_82EB52E0(int param_1,undefined4 param_2,uint param_3,uint param_4,int pa
   int aiStack_410 [52];
   int aiStack_340 [52];
   int aiStack_270 [44];
-  undefined1 auStack_1c0 [448];
+  undefined1 auStack_1c0 [368];
   
   if ((*(uint *)(param_1 + 0x6db8) & 1) == 0) {
     uVar15 = in_stack_000000ac;

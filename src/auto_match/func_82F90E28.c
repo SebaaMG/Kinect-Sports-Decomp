@@ -39,7 +39,7 @@ void fn_82F90E28(int param_1,int param_2)
   undefined4 uVar1;
   int iStack00000014;
   int iStack0000001c;
-  undefined1 auStack_20 [16];
+  undefined1 auStack_20 [1];
   
   iStack00000014 = param_1;
   iStack0000001c = param_2;

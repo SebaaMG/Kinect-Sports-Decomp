@@ -37,7 +37,7 @@ undefined8 fn_82E7A3B8(int param_1,ulonglong param_2,int *param_3)
   undefined8 uVar1;
   longlong lVar2;
   int iStack_30;
-  uint auStack_2c [11];
+  uint auStack_2c;
   
   iStack_30 = 0;
   if (((param_2 & 0xffffffff) < (ulonglong)*(uint *)(param_1 + 0x1e0)) && (param_3 != (int *)0x0)) {
@@ -46,12 +46,12 @@ undefined8 fn_82E7A3B8(int param_1,ulonglong param_2,int *param_3)
       return uVar1;
     }
     if (iStack_30 != 0) {
-      lVar2 = fn_82E78690(param_1 + 0x178,param_2,auStack_2c);
-      auStack_2c[0] = -(uint)(lVar2 != 0) & auStack_2c[0];
-      if (auStack_2c[0] == 0) {
+      lVar2 = fn_82E78690(param_1 + 0x178,param_2,&auStack_2c);
+      auStack_2c = -(uint)(lVar2 != 0) & auStack_2c;
+      if (auStack_2c == 0) {
         return 0xffffffff8000ffff;
       }
-      uVar1 = fn_82E78A40(param_1,auStack_2c[0],param_3);
+      uVar1 = fn_82E78A40(param_1,auStack_2c,param_3);
       return uVar1;
     }
   }

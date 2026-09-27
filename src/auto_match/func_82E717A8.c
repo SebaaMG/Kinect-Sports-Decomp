@@ -36,15 +36,15 @@ void fn_82E717A8(int param_1,undefined8 param_2)
 {
   undefined2 uVar1;
   int iVar2;
-  undefined8 auStack_30 [6];
+  undefined8 auStack_30;
   
   iVar2 = fn_82E71510();
   if (-1 < iVar2) {
     uVar1 = *(undefined2 *)(param_1 + 0x72);
-    auStack_30[0] = 0;
-    iVar2 = fn_82E71308(param_1,param_2,0xff,auStack_30,0,0);
+    auStack_30 = 0;
+    iVar2 = fn_82E71308(param_1,param_2,0xff,&auStack_30,0,0);
     if (-1 < iVar2) {
-      fn_82E6FC00(param_1,auStack_30[0],uVar1);
+      fn_82E6FC00(param_1,auStack_30,uVar1);
     }
   }
   return;

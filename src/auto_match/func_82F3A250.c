@@ -36,7 +36,7 @@ undefined8 fn_82F3A250(undefined8 param_1,int param_2)
   undefined8 uVar1;
   uint uVar2;
   int iStack_30;
-  int aiStack_2c [11];
+  int aiStack_2c;
   
   if (param_2 == 0) {
     uVar1 = 0xffffffff80004003;
@@ -53,9 +53,9 @@ undefined8 fn_82F3A250(undefined8 param_1,int param_2)
         if (*(int *)(iStack_30 + 4) != 0) {
           fn_82E4FE40();
         }
-        fn_82F39D20(param_2 + 0x14,uVar2,aiStack_2c);
+        fn_82F39D20(param_2 + 0x14,uVar2,&aiStack_2c);
         uVar2 = uVar2 + 1 & 0xffff;
-        *(undefined4 *)(aiStack_2c[0] + 4) = 0;
+        *(undefined4 *)(aiStack_2c + 4) = 0;
       } while (uVar2 < *(uint *)(param_2 + 0xd0));
     }
     uVar1 = 0;

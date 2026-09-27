@@ -36,20 +36,20 @@ undefined8 fn_82C112A8(int param_1,undefined8 *param_2)
   bool bVar3;
   undefined8 uVar4;
   int iVar5;
-  int aiStack_40 [16];
+  int aiStack_40;
   
   *param_2 = 0;
-  aiStack_40[0] = 0;
+  aiStack_40 = 0;
   bVar2 = false;
   bVar3 = false;
-  uVar4 = fn_82C10F40(*(undefined4 *)(param_1 + 0x48),*(undefined1 *)(param_1 + 0x10),aiStack_40);
+  uVar4 = fn_82C10F40(*(undefined4 *)(param_1 + 0x48),*(undefined1 *)(param_1 + 0x10),&aiStack_40);
   if ((int)uVar4 < 0) {
     return uVar4;
   }
-  if (*(int *)(aiStack_40[0] + 0x18) == 0) {
+  if (*(int *)(aiStack_40 + 0x18) == 0) {
     return 0xffffffff8050000b;
   }
-  iVar5 = *(int *)(aiStack_40[0] + 0x18);
+  iVar5 = *(int *)(aiStack_40 + 0x18);
   if (iVar5 == 0) {
 LAB_82c113a4:
     *param_2 = *(undefined8 *)(param_1 + 0x38);

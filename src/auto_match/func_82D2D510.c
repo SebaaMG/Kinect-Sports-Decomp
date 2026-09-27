@@ -61,7 +61,7 @@ longlong fn_82D2D510(int param_1)
   undefined1 *puStack_270;
   uint uStack_26c;
   uint uStack_268;
-  undefined1 auStack_264 [612];
+  undefined1 auStack_264 [516];
   
   for (puVar12 = *(undefined4 **)(param_1 + 0x34); puVar12 != (undefined4 *)0x0;
       puVar12 = (undefined4 *)*puVar12) {

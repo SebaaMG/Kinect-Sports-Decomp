@@ -47,7 +47,7 @@ void fn_82CE8D08(int param_1,int param_2,int param_3)
   ulonglong uVar5;
   ulonglong uVar7;
   int aiStack_d0 [4];
-  undefined1 auStack_c0 [192];
+  undefined1 auStack_c0 [112];
   
   iVar6 = KeTlsGetValue(lbl_8323B4A0);
   puVar2 = *(undefined4 **)(iVar6 + 4);

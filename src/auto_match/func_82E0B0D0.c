@@ -41,7 +41,7 @@ undefined8 fn_82E0B0D0(int param_1,int *param_2,ulonglong param_3)
   undefined4 uVar2;
   int iVar3;
   undefined1 auStack_80 [16];
-  undefined1 auStack_70 [112];
+  undefined1 auStack_70 [64];
   
   if (*(int *)(param_1 + 0x7c) != 0) {
     fn_82CE4118();

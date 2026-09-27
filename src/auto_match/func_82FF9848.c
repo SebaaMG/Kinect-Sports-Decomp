@@ -46,7 +46,7 @@ undefined8 fn_82FF9848(longlong param_1,int param_2)
   int iVar5;
   char cStack_50;
   undefined1 uStack_4f;
-  ushort auStack_4e [39];
+  ushort auStack_4e;
   
   if (lbl_832642E8 == 0) {
     uVar1 = 2;
@@ -71,15 +71,15 @@ LAB_82ff99ac:
         if ((int)uVar1 != 1) {
           return uVar1;
         }
-        uVar1 = fn_82FF8938(param_1,auStack_4e,2);
+        uVar1 = fn_82FF8938(param_1,&auStack_4e,2);
         if ((int)uVar1 != 1) {
           return uVar1;
         }
-        uVar2 = fn_82FA5060(lbl_831BC768,(ulonglong)auStack_4e[0] * 0xc);
+        uVar2 = fn_82FA5060(lbl_831BC768,(ulonglong)auStack_4e * 0xc);
         if ((uVar2 & 0xffffffff) == 0) goto LAB_82ff99ac;
-        uVar1 = fn_82FF8938(param_1,uVar2,(ulonglong)auStack_4e[0] * 0xc);
+        uVar1 = fn_82FF8938(param_1,uVar2,(ulonglong)auStack_4e * 0xc);
         if ((int)uVar1 == 1) {
-          fn_83015888(lbl_83264300,lVar3,iVar5,auStack_4e[0],uVar2,uStack_4f);
+          fn_83015888(lbl_83264300,lVar3,iVar5,auStack_4e,uVar2,uStack_4f);
         }
         fn_82FA5190(lbl_831BC768,uVar2);
         if ((int)uVar1 != 1) {

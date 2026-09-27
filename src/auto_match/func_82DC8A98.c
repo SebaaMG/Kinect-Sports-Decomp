@@ -43,7 +43,7 @@ void fn_82DC8A98(int *param_1,int *param_2)
   int *piVar9;
   int *piVar10;
   int *piVar11;
-  int aiStack_40 [16];
+  int aiStack_40;
   
   piVar11 = (int *)*param_1;
   piVar10 = piVar11 + param_1[1] * 4;
@@ -51,7 +51,7 @@ void fn_82DC8A98(int *param_1,int *param_2)
     return;
   }
   lVar8 = (ulonglong)(uint)param_1[1] + (ulonglong)(uint)param_2[1];
-  aiStack_40[0] = (int)lVar8;
+  aiStack_40 = (int)lVar8;
   if (lVar8 == 0) {
     piVar3 = (int *)0x0;
     iVar2 = 0;
@@ -59,10 +59,10 @@ void fn_82DC8A98(int *param_1,int *param_2)
   else {
     iVar2 = fn_82CE5410();
     piVar3 = (int *)(**(code **)(**(int **)(iVar2 + 0x10) + 0xc))
-                              (*(int **)(iVar2 + 0x10),aiStack_40,0xc);
-    iVar2 = aiStack_40[0];
-    iVar5 = aiStack_40[0];
-    if (aiStack_40[0] != 0) goto LAB_82dc8b08;
+                              (*(int **)(iVar2 + 0x10),&aiStack_40,0xc);
+    iVar2 = aiStack_40;
+    iVar5 = aiStack_40;
+    if (aiStack_40 != 0) goto LAB_82dc8b08;
   }
   iVar5 = -0x80000000;
 LAB_82dc8b08:

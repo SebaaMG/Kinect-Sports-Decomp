@@ -47,12 +47,12 @@ undefined8 fn_82C2A200(undefined8 param_1,undefined8 param_2,int *param_3,undefi
 {
   undefined8 uVar1;
   int iVar2;
-  int aiStack_40 [16];
+  int aiStack_40;
   
-  uVar1 = fn_82C10BA8(param_1,lbl_83175B68,aiStack_40);
+  uVar1 = fn_82C10BA8(param_1,lbl_83175B68,&aiStack_40);
   if (-1 < (int)uVar1) {
-    if ((aiStack_40[0] == 0) ||
-       (iVar2 = fn_82C10968(aiStack_40[0],lbl_83175B6C), iVar2 == 0)) {
+    if ((aiStack_40 == 0) ||
+       (iVar2 = fn_82C10968(aiStack_40,lbl_83175B6C), iVar2 == 0)) {
       *param_4 = fn_82C28E48;
       param_4[1] = fn_82C29878;
       param_4[2] = fn_82C29978;

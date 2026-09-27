@@ -26,7 +26,7 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_70;
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int iStack_80;
 
 
@@ -45,10 +45,10 @@ fn_82C3CE78(int param_1,int param_2,uint *param_3,undefined8 param_4,uint *param
   uint uVar6;
   int iStack_80;
   int aiStack_7c [3];
-  undefined8 auStack_70 [14];
+  undefined8 auStack_70;
   
   aiStack_7c[0] = 0;
-  auStack_70[0] = 0;
+  auStack_70 = 0;
   iStack_80 = 0;
   aiStack_7c[2] = 0;
   aiStack_7c[1] = 0;
@@ -68,11 +68,11 @@ fn_82C3CE78(int param_1,int param_2,uint *param_3,undefined8 param_4,uint *param
         return 6;
       }
       if (puVar1[4] == 0) {
-        iVar4 = (*pcVar2)(uVar3,puVar1 + 5,puVar1 + 3,aiStack_7c,auStack_70,&iStack_80,
+        iVar4 = (*pcVar2)(uVar3,puVar1 + 5,puVar1 + 3,aiStack_7c,&auStack_70,&iStack_80,
                           aiStack_7c + 2,aiStack_7c + 1);
         if (iVar4 < 0) goto LAB_82c3cf58;
         if (iStack_80 != 0) {
-          *(undefined8 *)(puVar1 + 0x12) = auStack_70[0];
+          *(undefined8 *)(puVar1 + 0x12) = auStack_70;
         }
         if (aiStack_7c[0] != 0) {
           puVar1[0x1c] = 1;
@@ -88,9 +88,9 @@ fn_82C3CE78(int param_1,int param_2,uint *param_3,undefined8 param_4,uint *param
         if (0x1000 < uVar5) {
           uVar5 = 0x1000;
         }
-        fn_82F68CC0((int)puVar1 + param_2 + 0x74,puVar1[5],uVar5);
+        memcpy((int)puVar1 + param_2 + 0x74,puVar1[5],uVar5);
         if ((uVar5 < 4) && (puVar1[0x1c] == 0)) {
-          iVar4 = (*pcVar2)(uVar3,puVar1 + 5,puVar1 + 3,aiStack_7c,auStack_70,&iStack_80,
+          iVar4 = (*pcVar2)(uVar3,puVar1 + 5,puVar1 + 3,aiStack_7c,&auStack_70,&iStack_80,
                             aiStack_7c + 2,aiStack_7c + 1);
           if (iVar4 < 0) {
 LAB_82c3cf58:
@@ -100,7 +100,7 @@ LAB_82c3cf58:
             return 6;
           }
           if (iStack_80 != 0) {
-            *(undefined8 *)(puVar1 + 0x12) = auStack_70[0];
+            *(undefined8 *)(puVar1 + 0x12) = auStack_70;
           }
           if (aiStack_7c[0] != 0) {
             puVar1[0x1c] = 1;
@@ -110,7 +110,7 @@ LAB_82c3cf58:
           if (0x1000 < uVar6) {
             uVar6 = 0x1000;
           }
-          fn_82F68CC0((int)puVar1 + param_2 + uVar5 + 0x74,puVar1[5],uVar6);
+          memcpy((int)puVar1 + param_2 + uVar5 + 0x74,puVar1[5],uVar6);
           *param_3 = (uint)(puVar1 + 0x1d);
           *param_5 = uVar5 + uVar6 + param_2;
           uVar5 = uVar6;

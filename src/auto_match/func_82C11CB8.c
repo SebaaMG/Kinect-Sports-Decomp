@@ -32,26 +32,26 @@ void fn_82C11CB8(int param_1,undefined8 param_2,undefined4 *param_3,undefined4 p
 
 {
   int iVar1;
-  undefined1 *apuStack_40 [16];
+  undefined1 * apuStack_40;
   
-  apuStack_40[0] = (undefined1 *)0x0;
-  iVar1 = fn_82C10E58(*(undefined4 *)(param_1 + 0x48),param_2,apuStack_40);
+  apuStack_40 = (undefined1 *)0x0;
+  iVar1 = fn_82C10E58(*(undefined4 *)(param_1 + 0x48),param_2,&apuStack_40);
   if (-1 < iVar1) {
-    *apuStack_40[0] = (char)param_2;
-    *(undefined4 *)(apuStack_40[0] + 4) = 0;
-    *(undefined4 *)(apuStack_40[0] + 8) = 0;
-    *(undefined4 *)(apuStack_40[0] + 0xc) = 0;
-    *(undefined4 *)(apuStack_40[0] + 0x10) = 0;
-    *(undefined4 *)(apuStack_40[0] + 0x14) = 0;
-    *(undefined4 *)(apuStack_40[0] + 0x18) = 0;
-    *(undefined4 *)(apuStack_40[0] + 0x1c) = 0;
-    *(undefined4 *)(apuStack_40[0] + 0x20) = 0;
-    *(undefined4 *)(apuStack_40[0] + 0x24) = 1;
-    *(undefined4 *)(apuStack_40[0] + 0x28) = param_4;
-    *(undefined4 *)(apuStack_40[0] + 4) = *param_3;
-    *(undefined4 *)(apuStack_40[0] + 8) = param_3[1];
-    *(undefined4 *)(apuStack_40[0] + 0xc) = param_3[2];
-    *(undefined4 *)(apuStack_40[0] + 0x10) = param_3[3];
+    *apuStack_40 = (char)param_2;
+    *(undefined4 *)(apuStack_40 + 4) = 0;
+    *(undefined4 *)(apuStack_40 + 8) = 0;
+    *(undefined4 *)(apuStack_40 + 0xc) = 0;
+    *(undefined4 *)(apuStack_40 + 0x10) = 0;
+    *(undefined4 *)(apuStack_40 + 0x14) = 0;
+    *(undefined4 *)(apuStack_40 + 0x18) = 0;
+    *(undefined4 *)(apuStack_40 + 0x1c) = 0;
+    *(undefined4 *)(apuStack_40 + 0x20) = 0;
+    *(undefined4 *)(apuStack_40 + 0x24) = 1;
+    *(undefined4 *)(apuStack_40 + 0x28) = param_4;
+    *(undefined4 *)(apuStack_40 + 4) = *param_3;
+    *(undefined4 *)(apuStack_40 + 8) = param_3[1];
+    *(undefined4 *)(apuStack_40 + 0xc) = param_3[2];
+    *(undefined4 *)(apuStack_40 + 0x10) = param_3[3];
     *(short *)(param_1 + 0x4c) = *(short *)(param_1 + 0x4c) + 1;
   }
   return;

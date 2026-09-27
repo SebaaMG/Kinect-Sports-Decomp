@@ -25,9 +25,9 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F63BA0();
-extern int fn_82F68240();
-extern int fn_82F691F0();
+extern int _invalid_parameter_noinfo();
+extern int _errno();
+extern int memset();
 
 
 undefined4 fn_82F85880(undefined4 *param_1,undefined1 *param_2,uint param_3,ushort param_4)
@@ -47,26 +47,26 @@ undefined4 fn_82F85880(undefined4 *param_1,undefined1 *param_2,uint param_3,usho
       *param_1 = 0xffffffff;
     }
     if (0x7fffffff < param_3) {
-      puVar1 = (undefined4 *)fn_82F68240();
+      puVar1 = (undefined4 *)_errno();
       *puVar1 = 0x16;
-      fn_82F63BA0();
+      _invalid_parameter_noinfo();
       return 0x16;
     }
     if (0xff < param_4) {
       if ((param_2 != (undefined1 *)0x0) && (param_3 != 0)) {
                     /* WARNING: Subroutine does not return */
-        fn_82F691F0(param_2,0);
+        memset(param_2,0);
       }
-      puVar1 = (undefined4 *)fn_82F68240();
+      puVar1 = (undefined4 *)_errno();
       *puVar1 = 0x2a;
-      puVar1 = (undefined4 *)fn_82F68240();
+      puVar1 = (undefined4 *)_errno();
       return *puVar1;
     }
     if (param_2 != (undefined1 *)0x0) {
       if (param_3 == 0) {
-        puVar1 = (undefined4 *)fn_82F68240();
+        puVar1 = (undefined4 *)_errno();
         *puVar1 = 0x22;
-        fn_82F63BA0();
+        _invalid_parameter_noinfo();
         return 0x22;
       }
       *param_2 = (char)param_4;

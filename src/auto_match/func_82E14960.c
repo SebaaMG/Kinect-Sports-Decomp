@@ -59,7 +59,7 @@ void fn_82E14960(int param_1,int *param_2)
   undefined1 auStack_4a0 [16];
   undefined1 auStack_490 [16];
   undefined1 auStack_480 [512];
-  undefined1 auStack_280 [640];
+  undefined1 auStack_280 [528];
   
   param_2[1] = 0;
   iVar6 = *(int *)(param_1 + 0x14);

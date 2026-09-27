@@ -42,8 +42,8 @@ void fn_83060EC8(int param_1,float *param_2,float *param_3)
   int iVar3;
   longlong lVar4;
   int iVar5;
-  float fStack_40;
-  float fStack_3c;
+  struct { float first; float second; } stack_pair_40;
+
   float fStack_38;
   
   fVar2 = lbl_82005C8C;
@@ -65,21 +65,21 @@ void fn_83060EC8(int param_1,float *param_2,float *param_3)
       iVar3 = fn_8305D680(iVar5);
       if (0 < iVar3) {
         do {
-          fn_8305D688(iVar5,lVar4,&fStack_40);
-          if (fStack_40 < *param_2) {
-            *param_2 = fStack_40;
+          fn_8305D688(iVar5,lVar4,&stack_pair_40.first);
+          if (stack_pair_40.first < *param_2) {
+            *param_2 = stack_pair_40.first;
           }
-          if (fStack_3c < param_2[1]) {
-            param_2[1] = fStack_3c;
+          if (stack_pair_40.second < param_2[1]) {
+            param_2[1] = stack_pair_40.second;
           }
           if (fStack_38 < param_2[2]) {
             param_2[2] = fStack_38;
           }
-          if (*param_3 < fStack_40) {
-            *param_3 = fStack_40;
+          if (*param_3 < stack_pair_40.first) {
+            *param_3 = stack_pair_40.first;
           }
-          if (param_3[1] < fStack_3c) {
-            param_3[1] = fStack_3c;
+          if (param_3[1] < stack_pair_40.second) {
+            param_3[1] = stack_pair_40.second;
           }
           if (param_3[2] < fStack_38) {
             param_3[2] = fStack_38;

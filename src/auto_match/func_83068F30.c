@@ -68,7 +68,7 @@ void fn_83068F30(undefined8 param_1,undefined8 param_2,float *param_3,undefined8
   double dVar20;
   double dVar21;
   double dVar22;
-  undefined1 auStack_d0 [208];
+  undefined1 auStack_d0 [1];
   
   piVar3 = (int *)fn_82F6A53C();
   uVar1 = piVar3[2];

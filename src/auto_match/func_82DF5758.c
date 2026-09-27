@@ -33,7 +33,7 @@ void fn_82DF5758(int param_1,undefined8 param_2,undefined8 param_3)
 
 {
   int iVar1;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [64];
   
   iVar1 = *(int *)(*(int *)(param_1 + 0x3c) * 4 + *(int *)(param_1 + 0x38) + -4);
   if (*(char *)(iVar1 + 0x28) == '\x01') {

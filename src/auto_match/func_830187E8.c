@@ -53,7 +53,7 @@ undefined8 fn_830187E8(int param_1,int *param_2)
   float fStack_6c;
   float fStack_68;
   float fStack_64;
-  float afStack_60 [24];
+  float afStack_60;
   
   RtlEnterCriticalSection(param_1 + 0x720);
   piVar1 = *(int **)(param_1 + 0x6a0);
@@ -111,8 +111,8 @@ undefined8 fn_830187E8(int param_1,int *param_2)
               dVar9 = (double)(float)(dVar7 + dVar9);
             } while (iVar6 != piVar1[6]);
           }
-          afStack_60[0] = (float)dVar9;
-          fn_82FEF5A0(piVar1[1],(short)piVar1[2],afStack_60,4);
+          afStack_60 = (float)dVar9;
+          fn_82FEF5A0(piVar1[1],(short)piVar1[2],&afStack_60,4);
         }
         else {
           fn_83034FA0();

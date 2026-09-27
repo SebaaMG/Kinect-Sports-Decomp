@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 
 
-void fn_82F68B40(void)
+void __savegprlr(void)
 
 {
   return;

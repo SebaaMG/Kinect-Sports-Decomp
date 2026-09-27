@@ -36,22 +36,22 @@ longlong fn_82E7D948(undefined8 param_1,undefined2 param_2,undefined8 param_3,in
 {
   longlong lVar1;
   int iVar2;
-  int *apiStack_40 [4];
+  int * apiStack_40;
   undefined8 uStack_30;
   undefined8 uStack_28;
   
-  apiStack_40[0] = (int *)0x0;
+  apiStack_40 = (int *)0x0;
   uStack_30 = 0;
   uStack_28 = 0;
-  lVar1 = (**(code **)(*param_5 + 0xc))(param_5,param_3,param_2,0,apiStack_40);
+  lVar1 = (**(code **)(*param_5 + 0xc))(param_5,param_3,param_2,0,&apiStack_40);
   if (((-1 < lVar1) &&
-      (iVar2 = (**(code **)(*apiStack_40[0] + 0x1c))(apiStack_40[0],0xffffffff8215f0d0,&uStack_30),
+      (iVar2 = (**(code **)(*apiStack_40 + 0x1c))(apiStack_40,0xffffffff8215f0d0,&uStack_30),
       iVar2 == 0)) && ((((U64)(uStack_30) >> 0) & 0xFFFF) == 0x1f)) {
     lVar1 = (**(code **)(*param_4 + 100))(param_4,0xffffffff8214c230,(((U64)(uStack_28) >> 0) & 0xFFFFFFFF));
   }
-  if (apiStack_40[0] != (int *)0x0) {
-    (**(code **)(*apiStack_40[0] + 8))();
-    apiStack_40[0] = (int *)0x0;
+  if (apiStack_40 != (int *)0x0) {
+    (**(code **)(*apiStack_40 + 8))();
+    apiStack_40 = (int *)0x0;
   }
   fn_82E50330(&uStack_30);
   return lVar1;

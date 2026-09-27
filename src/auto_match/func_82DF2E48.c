@@ -39,7 +39,7 @@ void fn_82DF2E48(int param_1,int param_2,ulonglong param_3)
   int iVar3;
   longlong lVar4;
   undefined1 uVar5;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [1];
   
   lVar4 = 0;
   if (0 < *(int *)(param_1 + 0xc)) {

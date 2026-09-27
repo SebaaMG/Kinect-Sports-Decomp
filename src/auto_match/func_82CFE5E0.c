@@ -35,7 +35,7 @@ void fn_82CFE5E0(int param_1,longlong param_2,ulonglong param_3)
   int iVar1;
   longlong lVar2;
   longlong lVar3;
-  undefined1 auStack_230 [560];
+  undefined1 auStack_230 [512];
   
   if (*(char *)(param_1 + 0xc) == '\0') {
     (**(code **)(**(int **)(param_1 + 8) + 0x10))();

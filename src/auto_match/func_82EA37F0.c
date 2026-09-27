@@ -37,8 +37,7 @@ extern unsigned int uStack_118;
 extern unsigned int uStack_120;
 
 
-void fn_82EA37F0(int param_1,undefined8 param_2,undefined8 param_3,undefined8 param_4,uint param_5
-                  ,undefined8 param_6,undefined8 param_7)
+void fn_82EA37F0(int param_1, undefined8 param_2, undefined8 param_3, undefined8 param_4, uint param_5, undefined8 param_6, undefined8 param_7, undefined8 unused_arg_8, undefined8 unused_arg_9, int in_stack_0000005c, int in_stack_00000064, int in_stack_0000006c, int in_stack_00000074, int in_stack_0000007c, undefined8 unused_arg_15, undefined4 in_stack_0000008c, undefined8 unused_arg_17, undefined8 unused_arg_18, uint in_stack_000000a4, uint in_stack_000000ac, uint in_stack_000000b4, uint in_stack_000000bc, int in_stack_000000c4, int in_stack_000000cc)
 
 {
   code *pcVar1;
@@ -63,18 +62,18 @@ void fn_82EA37F0(int param_1,undefined8 param_2,undefined8 param_3,undefined8 pa
   int *piVar20;
   longlong lVar21;
   uint uStack00000034;
-  int in_stack_0000005c;
-  int in_stack_00000064;
-  int in_stack_0000006c;
-  int in_stack_00000074;
-  int in_stack_0000007c;
-  undefined4 in_stack_0000008c;
-  uint in_stack_000000a4;
-  uint in_stack_000000ac;
-  uint in_stack_000000b4;
-  uint in_stack_000000bc;
-  int in_stack_000000c4;
-  int in_stack_000000cc;
+
+
+
+
+
+
+
+
+
+
+
+
   undefined4 *in_stack_000000d4;
   undefined4 *in_stack_000000dc;
   undefined4 *in_stack_000000e4;

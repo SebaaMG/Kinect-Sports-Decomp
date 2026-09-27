@@ -42,7 +42,7 @@ undefined8 fn_8301D4F0(int param_1,int param_2)
   undefined8 uVar3;
   int iVar4;
   int iStack0000001c;
-  int aiStack_40 [16];
+  int aiStack_40;
   
   iStack0000001c = param_2;
   uVar3 = (**(code **)(*(int *)(*(int *)(param_1 + 0xc) + 0xc0) + 0xc))
@@ -63,9 +63,9 @@ LAB_8301d5d4:
         if (param_2 == 0) {
           return 0x2d;
         }
-        aiStack_40[0] = param_2;
-        uVar3 = (**(code **)(*(int *)(iVar1 + 0xc0) + 0xc))(iVar1 + 0xc0,aiStack_40);
-        param_2 = param_2 - aiStack_40[0];
+        aiStack_40 = param_2;
+        uVar3 = (**(code **)(*(int *)(iVar1 + 0xc0) + 0xc))(iVar1 + 0xc0,&aiStack_40);
+        param_2 = param_2 - aiStack_40;
         if ((int)uVar3 == 0x2d) {
           return uVar3;
         }

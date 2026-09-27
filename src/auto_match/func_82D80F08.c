@@ -44,8 +44,8 @@ void fn_82D80F08(int param_1,longlong param_2,longlong param_3)
   int iVar2;
   longlong lVar4;
   undefined1 auStack_50 [8];
-  undefined4 uStack_48;
-  undefined4 uStack_44;
+  struct { undefined4 first; undefined4 second; } stack_pair_48;
+
   undefined1 auStack_40 [4];
   undefined4 uStack_3c;
   undefined4 uStack_38;
@@ -58,13 +58,13 @@ void fn_82D80F08(int param_1,longlong param_2,longlong param_3)
                                  (auStack_50,*(int *)(param_1 + 0x7c) + 8,param_2 + 0x10,
                                   param_3 + 0x10);
       if ((*pcVar1 != '\0') && (iVar2 = fn_82D7C120(param_2 + 0x10,param_3 + 0x10), iVar2 == 0)) {
-        uStack_48 = (undefined4)(param_2 + 0x24);
-        uStack_44 = (undefined4)(param_3 + 0x24);
+        stack_pair_48.first = (undefined4)(param_2 + 0x24);
+        stack_pair_48.second = (undefined4)(param_3 + 0x24);
         lVar4 = (ulonglong)*(uint *)(param_1 + 0x7c) + 8;
         if ((ulonglong)*(uint *)(param_1 + 0x7c) == 0) {
           lVar4 = 0;
         }
-        fn_83088518(*(undefined4 *)(param_1 + 100),&uStack_48,1,lVar4);
+        fn_83088518(*(undefined4 *)(param_1 + 100),&stack_pair_48.first,1,lVar4);
       }
     }
   }

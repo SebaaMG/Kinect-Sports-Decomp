@@ -45,7 +45,7 @@ void fn_82D2E4C0(int *param_1,ulonglong param_2)
   int iVar4;
   uint *puVar5;
   undefined1 auStack_240 [16];
-  undefined1 auStack_230 [560];
+  undefined1 auStack_230 [512];
   
   if ((param_2 & 0xffffffff) == 0) {
     return;

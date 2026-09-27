@@ -36,18 +36,18 @@ void fn_82FFF670(double param_1,int *param_2,undefined8 param_3,undefined4 param
                   undefined4 param_5)
 
 {
-  undefined4 uStack_20;
-  undefined4 uStack_1c;
+  struct { undefined4 first; undefined4 second; } stack_pair_20;
+
   undefined1 uStack_18;
   undefined4 uStack_14;
   float fStack_10;
   
   fStack_10 = (float)param_1;
-  uStack_20 = 8;
+  stack_pair_20.first = 8;
   uStack_18 = 0;
-  uStack_1c = param_4;
+  stack_pair_20.second = param_4;
   uStack_14 = param_5;
-  (**(code **)(*param_2 + 0x38))(param_2,&uStack_20);
+  (**(code **)(*param_2 + 0x38))(param_2,&stack_pair_20.first);
   return;
 }
 

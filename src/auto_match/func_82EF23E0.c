@@ -37,7 +37,7 @@ undefined8 fn_82EF23E0(int param_1,longlong *param_2,longlong *param_3)
   longlong lVar2;
   ulonglong uVar3;
   int iStack_40;
-  int aiStack_3c [15];
+  int aiStack_3c;
   
   if (*(int *)(param_1 + 0xc) == 0) {
     uVar1 = 0xffffffffc00d36b6;
@@ -52,10 +52,10 @@ undefined8 fn_82EF23E0(int param_1,longlong *param_2,longlong *param_3)
     if (*(int *)(param_1 + 0x3b8) != 0) {
       do {
         fn_82EF1D58(param_1 + 0x50,uVar3,&iStack_40);
-        fn_82EF1D58(param_1 + 0x50,uVar3,aiStack_3c);
+        fn_82EF1D58(param_1 + 0x50,uVar3,&aiStack_3c);
         uVar3 = uVar3 + 1;
         lVar2 = (((ulonglong)*(uint *)(iStack_40 + 0x1c) & 0x7fffffff) * 2 +
-                 (ulonglong)*(uint *)(aiStack_3c[0] + 0x20) & 0xffffffff) + lVar2 + 0x1e;
+                 (ulonglong)*(uint *)(aiStack_3c + 0x20) & 0xffffffff) + lVar2 + 0x1e;
       } while ((uVar3 & 0xffffffff) < (ulonglong)*(uint *)(param_1 + 0x3b8));
     }
     if (param_2 != (longlong *)0x0) {

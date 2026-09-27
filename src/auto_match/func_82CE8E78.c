@@ -46,7 +46,7 @@ undefined8 fn_82CE8E78(int param_1,int param_2,undefined8 param_3,undefined8 par
   int iVar7;
   undefined8 uVar4;
   int aiStack_d0 [4];
-  undefined1 auStack_c0 [192];
+  undefined1 auStack_c0 [112];
   
   iVar5 = KeTlsGetValue(lbl_8323B4A0);
   puVar1 = *(undefined4 **)(iVar5 + 4);

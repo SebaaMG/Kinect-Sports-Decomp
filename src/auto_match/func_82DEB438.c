@@ -71,7 +71,7 @@ void fn_82DEB438(int param_1,short *param_2)
   int iVar11;
   char cStack_560;
   undefined1 auStack_55f [3];
-  uint auStack_55c [3];
+  uint auStack_55c;
   undefined1 auStack_550 [8];
   undefined4 uStack_548;
   int iStack_544;
@@ -90,7 +90,7 @@ void fn_82DEB438(int param_1,short *param_2)
   RtlEnterCriticalSection(uVar3);
   cStack_560 = '\0';
   iVar6 = fn_82DEACE8((ulonglong)*(uint *)(param_2 + 2) - 0x44,*(undefined4 *)(param_2 + 4),
-                        &cStack_560,auStack_55c,auStack_55f);
+                        &cStack_560,&auStack_55c,auStack_55f);
   if (iVar6 == 0) {
     RtlLeaveCriticalSection(uVar3);
     fn_82D94BD8(auStack_550);
@@ -115,7 +115,7 @@ void fn_82DEB438(int param_1,short *param_2)
     uStack_4f8 = uStack_4f8 + 1;
     puVar9 = (uint *)(puStack_4fc + iVar7);
     *puVar9 = uVar5;
-    puVar9[1] = auStack_55c[0];
+    puVar9[1] = auStack_55c;
     if (*param_2 == 0) {
       uVar10 = *(uint *)(*(int *)(param_2 + 2) + -8);
       bVar2 = *(byte *)(uVar10 + 10);

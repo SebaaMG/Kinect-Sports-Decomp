@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_40;
 extern int fn_82D7E470();
-extern int fn_82F68240();
+extern int _errno();
 extern int fn_82F6AB08();
 extern int fn_82F7C468();
 extern int fn_82F7C9A0();
@@ -49,12 +49,12 @@ undefined2 fn_82F88C00(undefined2 param_1,uint *param_2)
   undefined *puVar7;
   uint uVar8;
   longlong lVar9;
-  undefined2 auStack_40 [32];
+  undefined2 auStack_40;
   
   uVar1 = fn_82F7C468(param_2);
   uVar8 = param_2[3];
   if ((uVar8 & 0x82) == 0) {
-    puVar3 = (undefined4 *)fn_82F68240();
+    puVar3 = (undefined4 *)_errno();
     uVar6 = 9;
   }
   else {
@@ -80,8 +80,8 @@ undefined2 fn_82F88C00(undefined2 param_1,uint *param_2)
       }
       if ((param_2[3] & 0x108) == 0) {
         lVar9 = 2;
-        auStack_40[0] = param_1;
-        iVar5 = fn_82F7C9A0(uVar1,auStack_40,2);
+        auStack_40 = param_1;
+        iVar5 = fn_82F7C9A0(uVar1,&auStack_40,2);
       }
       else {
         uVar8 = param_2[2];
@@ -109,7 +109,7 @@ undefined2 fn_82F88C00(undefined2 param_1,uint *param_2)
       }
       goto LAB_82f88c40;
     }
-    puVar3 = (undefined4 *)fn_82F68240();
+    puVar3 = (undefined4 *)_errno();
     uVar6 = 0x22;
   }
   *puVar3 = uVar6;

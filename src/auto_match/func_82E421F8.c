@@ -40,7 +40,7 @@ longlong fn_82E421F8(int param_1,uint param_2,int *param_3,undefined8 param_4)
   undefined8 uVar3;
   longlong lVar4;
   int aiStack_50 [2];
-  undefined8 auStack_48 [9];
+  undefined8 auStack_48;
   
   if (param_3 == (int *)0x0) {
     return -0x7ff8ffa9;
@@ -50,9 +50,9 @@ longlong fn_82E421F8(int param_1,uint param_2,int *param_3,undefined8 param_4)
     return -0x3ff2c94d;
   }
   aiStack_50[1] = 0;
-  auStack_48[0] = 0x7fffffffffffffff;
+  auStack_48 = 0x7fffffffffffffff;
   if (*(int *)(param_1 + 0x594) == 0) {
-    (**(code **)(*param_3 + 0x8c))(param_3,auStack_48);
+    (**(code **)(*param_3 + 0x8c))(param_3,&auStack_48);
     (**(code **)(*param_3 + 0xb4))(param_3,aiStack_50 + 1);
     piVar1 = *(int **)(iVar2 + param_1);
     uVar3 = (**(code **)(*piVar1 + 4))(piVar1,param_3);

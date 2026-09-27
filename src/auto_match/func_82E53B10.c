@@ -36,7 +36,7 @@ longlong fn_82E53B10(int param_1,undefined4 *param_2)
 {
   longlong lVar1;
   int *piVar2;
-  int *apiStack_40 [16];
+  int * apiStack_40;
   
   fn_82E50CB8(param_1 + 0x18);
   if (param_2 == (undefined4 *)0x0) {
@@ -44,20 +44,20 @@ longlong fn_82E53B10(int param_1,undefined4 *param_2)
   }
   else {
     *param_2 = 0;
-    apiStack_40[0] = (int *)0x0;
-    lVar1 = fn_82EE2C00(*(undefined2 *)(param_1 + 0x10),1,param_1 + 0x14,apiStack_40);
+    apiStack_40 = (int *)0x0;
+    lVar1 = fn_82EE2C00(*(undefined2 *)(param_1 + 0x10),1,param_1 + 0x14,&apiStack_40);
     if (-1 < lVar1) {
       piVar2 = (int *)(param_1 + -0x4c);
-      lVar1 = (**(code **)(*piVar2 + 0x80))(piVar2,apiStack_40[0]);
-      if ((-1 < lVar1) && (lVar1 = fn_82E53908(piVar2,apiStack_40[0]), -1 < lVar1)) {
-        *param_2 = apiStack_40[0];
-        if (apiStack_40[0] == (int *)0x0) goto LAB_82e53b40;
-        (**(code **)(*apiStack_40[0] + 4))();
+      lVar1 = (**(code **)(*piVar2 + 0x80))(piVar2,apiStack_40);
+      if ((-1 < lVar1) && (lVar1 = fn_82E53908(piVar2,apiStack_40), -1 < lVar1)) {
+        *param_2 = apiStack_40;
+        if (apiStack_40 == (int *)0x0) goto LAB_82e53b40;
+        (**(code **)(*apiStack_40 + 4))();
       }
     }
-    if (apiStack_40[0] != (int *)0x0) {
-      (**(code **)(*apiStack_40[0] + 8))();
-      apiStack_40[0] = (int *)0x0;
+    if (apiStack_40 != (int *)0x0) {
+      (**(code **)(*apiStack_40 + 8))();
+      apiStack_40 = (int *)0x0;
     }
   }
 LAB_82e53b40:

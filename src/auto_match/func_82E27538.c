@@ -36,17 +36,17 @@ longlong fn_82E27538(int param_1,undefined8 param_2,undefined4 *param_3)
   undefined4 uVar2;
   ulonglong uVar3;
   ulonglong uVar4;
-  int aiStack_30 [12];
+  int aiStack_30;
   
-  lVar1 = fn_82E26C90(param_1,param_2,aiStack_30);
+  lVar1 = fn_82E26C90(param_1,param_2,&aiStack_30);
   if (-1 < lVar1) {
-    if (aiStack_30[0] == 0) {
+    if (aiStack_30 == 0) {
       *param_3 = 0;
     }
     else {
       uVar4 = (ulonglong)((int)*(uint *)(param_1 + 8) >> 0x1f);
       uVar3 = (ulonglong)((int)*(uint *)(param_1 + 4) >> 0x1f);
-      uVar2 = fn_82E26630(aiStack_30[0],(*(uint *)(param_1 + 4) ^ uVar3) - uVar3,
+      uVar2 = fn_82E26630(aiStack_30,(*(uint *)(param_1 + 4) ^ uVar3) - uVar3,
                             (*(uint *)(param_1 + 8) ^ uVar4) - uVar4);
       *param_3 = uVar2;
     }

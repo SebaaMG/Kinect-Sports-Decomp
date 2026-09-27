@@ -47,7 +47,7 @@ undefined8 fn_82C3D380(int param_1,int param_2)
 {
   undefined4 uVar1;
   undefined8 uVar2;
-  int aiStack_70 [4];
+  int aiStack_70;
   undefined4 uStack_60;
   undefined4 uStack_5c;
   undefined4 uStack_58;
@@ -62,7 +62,7 @@ undefined8 fn_82C3D380(int param_1,int param_2)
   undefined4 uStack_34;
   
   uVar1 = *(undefined4 *)(param_2 + 0x1c);
-  aiStack_70[0] = 0;
+  aiStack_70 = 0;
   uStack_60 = 0xc;
   uStack_5c = 1;
   uStack_58 = 2;
@@ -76,13 +76,13 @@ undefined8 fn_82C3D380(int param_1,int param_2)
   uStack_38 = 10;
   uStack_34 = 0xb;
   uVar2 = fn_82C4D9B8(param_2,*(undefined4 *)(param_1 + 0x1084),&uStack_60,0xc,param_1 + 100,
-                          (undefined4 *)(param_1 + 0x68),aiStack_70);
+                          (undefined4 *)(param_1 + 0x68),&aiStack_70);
   if ((((-1 < (int)uVar2) &&
        (uVar2 = fn_82C4DC18(param_2,*(undefined4 *)(param_1 + 0x1084),
                                 *(undefined4 *)(param_1 + 0x68),param_1 + 0x20,param_1 + 0x24,
-                                param_1 + 0x6c,aiStack_70), -1 < (int)uVar2)) &&
+                                param_1 + 0x6c,&aiStack_70), -1 < (int)uVar2)) &&
       (uVar2 = fn_82C107F8(*(undefined4 *)(param_1 + 0x1084),uVar1,0x90000,0), -1 < (int)uVar2
-      )) && (aiStack_70[0] != 0)) {
+      )) && (aiStack_70 != 0)) {
     uVar2 = 0x500009;
   }
   return uVar2;

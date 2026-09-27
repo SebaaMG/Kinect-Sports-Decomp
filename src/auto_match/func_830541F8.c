@@ -35,10 +35,10 @@ void fn_830541F8(int param_1,undefined8 *param_2)
 {
   int iVar1;
   int iVar2;
-  undefined8 auStack_30 [6];
+  undefined8 auStack_30;
   
-  auStack_30[0] = param_2[2];
-  fn_83051330(param_1,auStack_30,*(undefined4 *)(param_2 + 4),
+  auStack_30 = param_2[2];
+  fn_83051330(param_1,&auStack_30,*(undefined4 *)(param_2 + 4),
                   *(undefined4 *)((int)param_2 + 0x1c),0);
   fn_830508A0(param_1,*param_2,param_2[2]);
   iVar1 = *(int *)(param_1 + 0x60);

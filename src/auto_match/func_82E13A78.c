@@ -44,17 +44,17 @@ void fn_82E13A78(undefined4 *param_1)
   undefined8 uVar2;
   int iVar3;
   undefined4 *puVar4;
-  char acStack_30 [48];
+  char acStack_30;
   
   puVar4 = param_1 + 5;
   *param_1 = &lbl_8214B274;
   uVar2 = fn_82CFFFC8(puVar4);
-  fn_82D002F0(acStack_30,puVar4,uVar2);
-  while (acStack_30[0] != '\0') {
+  fn_82D002F0(&acStack_30,puVar4,uVar2);
+  while (acStack_30 != '\0') {
     fn_82D00020(puVar4,uVar2);
     fn_82CE3E48();
     uVar2 = fn_82D00060(puVar4,uVar2);
-    fn_82D002F0(acStack_30,puVar4,uVar2);
+    fn_82D002F0(&acStack_30,puVar4,uVar2);
   }
   fn_82D002A8(puVar4);
   fn_82D003F0(puVar4);

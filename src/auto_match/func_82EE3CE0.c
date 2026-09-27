@@ -34,7 +34,7 @@ undefined8 fn_82EE3CE0(int param_1,uint param_2,uint param_3,undefined2 *param_4
 {
   undefined8 uVar1;
   int *piStack_30;
-  undefined2 *apuStack_2c [11];
+  undefined2 * apuStack_2c;
   
   if (*(int *)(param_1 + 0xc) == 0) {
     uVar1 = 0xffffffffc00d36b6;
@@ -48,8 +48,8 @@ undefined8 fn_82EE3CE0(int param_1,uint param_2,uint param_3,undefined2 *param_4
       fn_82EE3630(param_1 + 0x48,param_2,&piStack_30);
       if ((param_3 & 0xffff) < *(uint *)(*piStack_30 + 0x40)) {
         fn_82EE3630(param_1 + 0x48,param_2,&piStack_30);
-        fn_82E3C5F8(*piStack_30,param_3 & 0xffff,apuStack_2c);
-        *param_4 = *apuStack_2c[0];
+        fn_82E3C5F8(*piStack_30,param_3 & 0xffff,&apuStack_2c);
+        *param_4 = *apuStack_2c;
         return 0;
       }
     }

@@ -27,16 +27,16 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_10;
 extern int fn_82511350();
-extern int fn_82F63EC8();
+extern int atexit();
 
 
 void fn_83125688(void)
 
 {
-  undefined1 auStack_10 [16];
+  undefined1 auStack_10 [1];
   
   fn_82511350(0xffffffff83296ff4,auStack_10,auStack_10);
-  fn_82F63EC8(0xffffffff8313f8f8);
+  atexit(0xffffffff8313f8f8);
   return;
 }
 

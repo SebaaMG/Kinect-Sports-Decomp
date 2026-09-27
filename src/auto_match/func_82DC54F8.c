@@ -29,7 +29,7 @@ typedef struct { U64 lo, hi; } V16;
 #define TBLr 0
 extern unsigned int *auStack_c0;
 extern int fn_82CE8E78();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern int fn_830A2398();
 extern int fn_830A4688();
 extern unsigned int iStack_8c;
@@ -81,7 +81,7 @@ void fn_82DC54F8(longlong param_1,undefined8 param_2,int param_3)
     puVar1[1] = (int)uVar6;
     *(undefined4 **)(iVar7 + 4) = puVar1 + 4;
   }
-  fn_82F68CC0(auStack_c0,param_1 + 0x10,0x60);
+  memcpy(auStack_c0,param_1 + 0x10,0x60);
   piVar2 = *(int **)(param_3 + 0x20);
   puVar12 = (uint *)(piVar2 + 6);
   apuStack_d0[0] = (undefined4 *)piVar2[3];

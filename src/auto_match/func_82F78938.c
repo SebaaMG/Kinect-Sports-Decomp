@@ -25,9 +25,9 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82A2AA10();
+extern int RaiseException();
 extern int fn_82F688E8();
-extern int fn_82F79430();
+extern int _statfp();
 extern unsigned int stack0x00000014;
 extern unsigned int uStack_50;
 
@@ -74,7 +74,7 @@ void fn_82F78938(uint *param_1,uint *param_2,ulonglong param_3,uint param_4,uint
   param_1[2] = (~*param_2 & 0x20) << 0x19 | param_1[2] & 0xbfffffff;
   param_1[2] = (~*param_2 & 8) << 0x1c | param_1[2] & 0x7fffffff;
   puStack00000014 = param_1;
-  uVar1 = fn_82F79430();
+  uVar1 = _statfp();
   if ((uVar1 & 0x20000000) != 0) {
     puStack00000014[3] = puStack00000014[3] | 0x8000000;
   }
@@ -128,7 +128,7 @@ LAB_82f78b70:
     puStack00000014[0x14] = *param_6;
   }
   fn_82F688E8();
-  fn_82A2AA10(uVar3,0,1,&stack0x00000014);
+  RaiseException(uVar3,0,1,&stack0x00000014);
   if ((puStack00000014[2] & 0x8000000) != 0) {
     *param_2 = *param_2 & 0xffffff7f;
   }

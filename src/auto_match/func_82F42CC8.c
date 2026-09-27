@@ -32,8 +32,7 @@ extern unsigned int uStack00000034;
 extern unsigned int uStack0000003c;
 
 
-void fn_82F42CC8(int param_1,ulonglong param_2,ulonglong param_3,int param_4,uint param_5,
-                  uint param_6,uint param_7,longlong param_8)
+void fn_82F42CC8(int param_1, ulonglong param_2, ulonglong param_3, int param_4, uint param_5, uint param_6, uint param_7, longlong param_8, undefined8 unused_arg_9, uint in_stack_0000005c, int in_stack_00000064, uint in_stack_0000006c)
 
 {
   byte *pbVar1;
@@ -53,9 +52,9 @@ void fn_82F42CC8(int param_1,ulonglong param_2,ulonglong param_3,int param_4,uin
   undefined4 uStack00000024;
   uint uStack00000034;
   uint uStack0000003c;
-  uint in_stack_0000005c;
-  int in_stack_00000064;
-  uint in_stack_0000006c;
+
+
+
   uint *in_stack_00000074;
   
   uStack0000001c = (undefined4)param_2;

@@ -28,15 +28,14 @@ typedef struct { U64 lo, hi; } V16;
 extern int fn_82D4B3C0();
 
 
-void fn_82D4B6C0(undefined8 param_1,longlong param_2,undefined8 param_3,int param_4,int param_5,
-                  int *param_6,int *param_7,undefined8 param_8)
+void fn_82D4B6C0(undefined8 param_1, longlong param_2, undefined8 param_3, int param_4, int param_5, int *param_6, int *param_7, undefined8 param_8, undefined4 in_stack_00000054)
 
 {
   int iVar1;
   int iVar2;
   ulonglong uVar3;
   ulonglong uVar4;
-  undefined4 in_stack_00000054;
+
   
   uVar3 = (**(code **)(*param_6 + 0x10))(param_6,param_8);
   if ((int)uVar3 == -1) {

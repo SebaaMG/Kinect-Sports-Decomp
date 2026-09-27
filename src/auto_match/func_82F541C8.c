@@ -35,12 +35,12 @@ extern unsigned int uStack_20;
 void fn_82F541C8(uint *param_1,undefined4 *param_2)
 
 {
-  undefined4 uStack_20;
-  undefined4 uStack_1c;
+  struct { undefined4 first; undefined4 second; } stack_pair_20;
+
   
-  uStack_1c = *param_2;
-  uStack_20 = 0xffffffff;
-  fn_82F53F18((ulonglong)*param_1 + 0x1564,&uStack_20);
+  stack_pair_20.second = *param_2;
+  stack_pair_20.first = 0xffffffff;
+  fn_82F53F18((ulonglong)*param_1 + 0x1564,&stack_pair_20.first);
   (*(code *)**(undefined4 **)*param_2)();
   fn_826744A0(param_1 + 1,param_2);
   if (param_2[1] != 0) {

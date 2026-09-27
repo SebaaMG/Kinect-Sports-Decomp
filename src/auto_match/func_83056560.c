@@ -25,7 +25,7 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F63EC8();
+extern int atexit();
 extern int fn_8305B500();
 extern unsigned int uRam83265060;
 
@@ -36,7 +36,7 @@ undefined8 fn_83056560(void)
   if ((uRam83265060 & 1) == 0) {
     uRam83265060 = uRam83265060 | 1;
     fn_8305B500(0xffffffff83265058);
-    fn_82F63EC8(0xffffffff83141e20);
+    atexit(0xffffffff83141e20);
     return 0xffffffff83265058;
   }
   return 0xffffffff83265058;

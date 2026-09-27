@@ -41,7 +41,7 @@ undefined8 fn_82FEB928(undefined8 param_1,undefined4 *param_2)
   longlong lVar4;
   undefined4 uStack_64;
   undefined4 uStack_60;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [48];
   
   RtlEnterCriticalSection(0xffffffff8326434c);
   iVar1 = fn_83015740(auStack_40,lbl_83264300,param_1);

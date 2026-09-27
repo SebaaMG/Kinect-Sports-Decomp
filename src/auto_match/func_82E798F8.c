@@ -36,17 +36,17 @@ longlong fn_82E798F8(longlong param_1)
   longlong lVar1;
   longlong lVar2;
   ulonglong uVar3;
-  uint auStack_20 [4];
+  uint auStack_20;
   
   lVar1 = fn_82E76C40();
   uVar3 = (ulonglong)*(uint *)((int)param_1 + 0x1e0);
   lVar1 = lVar1 + (ulonglong)*(byte *)((int)param_1 + 0x150);
   if (uVar3 != 0) {
-    lVar2 = fn_82E78690(param_1 + 0x178,uVar3 - 1,auStack_20);
-    auStack_20[0] = -(uint)(lVar2 != 0) & auStack_20[0];
-    if (auStack_20[0] != 0) {
-      lVar1 = (ulonglong)*(uint *)(auStack_20[0] + 0x17) +
-              (ulonglong)*(uint *)(auStack_20[0] + 0x13);
+    lVar2 = fn_82E78690(param_1 + 0x178,uVar3 - 1,&auStack_20);
+    auStack_20 = -(uint)(lVar2 != 0) & auStack_20;
+    if (auStack_20 != 0) {
+      lVar1 = (ulonglong)*(uint *)(auStack_20 + 0x17) +
+              (ulonglong)*(uint *)(auStack_20 + 0x13);
     }
   }
   return lVar1;

@@ -52,7 +52,7 @@ void fn_83010408(int param_1,int param_2)
   undefined1 auStack_188 [8];
   undefined4 auStack_180 [20];
   undefined4 auStack_130 [20];
-  undefined4 auStack_e0 [20];
+  undefined4 auStack_e0;
   undefined4 auStack_90 [36];
   
   bVar3 = true;
@@ -71,11 +71,11 @@ void fn_83010408(int param_1,int param_2)
         bVar3 = false;
       }
       else {
-        auStack_e0[0] = 0;
+        auStack_e0 = 0;
         uVar2 = *(uint *)(*(int *)(uVar1 + 8) + 0x14) >> 8;
         if (uVar2 == 0x4011) {
 LAB_830104dc:
-          (**(code **)(**(int **)(uVar1 + 8) + 0x28))(*(int **)(uVar1 + 8),auStack_e0);
+          (**(code **)(**(int **)(uVar1 + 8) + 0x28))(*(int **)(uVar1 + 8),&auStack_e0);
         }
         else if (uVar2 == 0x5011) {
           fn_83032FE8();

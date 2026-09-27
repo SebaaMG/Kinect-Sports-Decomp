@@ -42,8 +42,8 @@ undefined8 fn_82FAABA8(int param_1,undefined4 param_2,ulonglong param_3,undefine
   undefined1 auStack_50 [8];
   uint uStack_48;
   int *piStack_44;
-  undefined4 uStack_40;
-  undefined4 uStack_3c;
+  struct { undefined4 first; undefined4 second; } stack_pair_40;
+
   undefined4 uStack_38;
   
   uStack_48 = (**(code **)(**(int **)(param_1 + 8) + 0x18))();
@@ -55,10 +55,10 @@ undefined8 fn_82FAABA8(int param_1,undefined4 param_2,ulonglong param_3,undefine
       param_3 = param_3 - 1;
       uVar1 = param_3;
     }
-    uStack_3c = 1;
-    uStack_40 = param_4;
+    stack_pair_40.second = 1;
+    stack_pair_40.first = param_4;
     uStack_38 = param_2;
-    uVar2 = fn_82FAA780(piStack_44,&uStack_40);
+    uVar2 = fn_82FAA780(piStack_44,&stack_pair_40.first);
     return uVar2;
   }
   return 2;

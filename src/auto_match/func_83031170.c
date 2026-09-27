@@ -25,7 +25,7 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F68CC0();
+extern int memcpy();
 extern int fn_830310B8();
 
 
@@ -53,7 +53,7 @@ longlong fn_83031170(undefined4 *param_1,undefined8 param_2)
     *puVar1 = 0;
     param_1[5] = param_1[5] + 1;
     lVar3 = (ulonglong)(uint)param_1[1] + 8;
-    fn_82F68CC0(lVar3,param_2,0x68);
+    memcpy(lVar3,param_2,0x68);
   }
   return lVar3;
 }

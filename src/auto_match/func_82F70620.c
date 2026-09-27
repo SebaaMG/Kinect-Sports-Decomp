@@ -27,20 +27,20 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_82A277E0();
 extern int fn_82A2A360();
-extern int fn_82F63BA0();
-extern int fn_82F68240();
+extern int _invalid_parameter_noinfo();
+extern int _errno();
 
 
-undefined8 fn_82F70620(ulonglong param_1)
+undefined8 _msize(ulonglong param_1)
 
 {
   undefined4 *puVar2;
   undefined8 uVar1;
   
   if ((param_1 & 0xffffffff) == 0) {
-    puVar2 = (undefined4 *)fn_82F68240();
+    puVar2 = (undefined4 *)_errno();
     *puVar2 = 0x16;
-    fn_82F63BA0();
+    _invalid_parameter_noinfo();
     uVar1 = 0xffffffffffffffff;
   }
   else {

@@ -30,8 +30,7 @@ typedef struct { U64 lo, hi; } V16;
 #define CONCAT44(h,l) ((U64)((((U32)(h)) << 32) | ((U32)(l))))
 
 
-void fn_82F13CB0(undefined4 *param_1,int param_2,longlong param_3,longlong param_4,int param_5,
-                  int param_6,int param_7,int param_8)
+void fn_82F13CB0(undefined4 *param_1, int param_2, longlong param_3, longlong param_4, int param_5, int param_6, int param_7, int param_8, int in_stack_00000054, int in_stack_0000005c)
 
 {
   int iVar1;
@@ -56,8 +55,8 @@ void fn_82F13CB0(undefined4 *param_1,int param_2,longlong param_3,longlong param
   undefined1 *puVar20;
   longlong lVar21;
   longlong lVar22;
-  int in_stack_00000054;
-  int in_stack_0000005c;
+
+
   
   puVar20 = (undefined1 *)(param_2 + param_5);
   puVar17 = (undefined4 *)((int)param_1 + param_5 + -0x10);

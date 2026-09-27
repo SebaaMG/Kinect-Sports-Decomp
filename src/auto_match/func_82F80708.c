@@ -25,12 +25,12 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F63CA0();
+extern int memmove();
 extern int fn_82F812C0();
 extern int fn_82F86A50();
 
 
-int fn_82F80708(int param_1,int *param_2,uint *param_3,uint *param_4)
+int __BuildCatchObjectHelper(int param_1,int *param_2,uint *param_3,uint *param_4)
 
 {
   undefined4 uVar1;
@@ -54,7 +54,7 @@ int fn_82F80708(int param_1,int *param_2,uint *param_3,uint *param_4)
                       *(int *)(*(int *)(param_4[3] + *(int *)(param_1 + 0x18)) + param_4[4]) + iVar2
               ;
             }
-            fn_82F63CA0(param_2,iVar2,param_4[5]);
+            memmove(param_2,iVar2,param_4[5]);
             return 0;
           }
         }
@@ -69,7 +69,7 @@ int fn_82F80708(int param_1,int *param_2,uint *param_3,uint *param_4)
       else {
         iVar2 = fn_82F86A50(uVar1,1);
         if ((iVar2 != 0) && (iVar2 = fn_82F86A50(param_2,1), iVar2 != 0)) {
-          fn_82F63CA0(param_2,*(undefined4 *)(param_1 + 0x18),param_4[5]);
+          memmove(param_2,*(undefined4 *)(param_1 + 0x18),param_4[5]);
           if (param_4[5] != 4) {
             return 0;
           }

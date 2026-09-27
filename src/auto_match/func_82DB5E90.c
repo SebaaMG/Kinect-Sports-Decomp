@@ -44,7 +44,7 @@ fn_82DB5E90(undefined1 *param_1,int *param_2,int *param_3,undefined8 param_4,int
   int iVar6;
   int *piVar7;
   int iVar8;
-  undefined1 auStack_470 [1136];
+  undefined1 auStack_470 [1024];
   
   uVar4 = 1;
   iVar5 = 0;

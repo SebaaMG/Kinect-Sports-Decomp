@@ -35,7 +35,7 @@ undefined1 * fn_82D44850(undefined1 *param_1,int param_2,undefined8 param_3,unde
   char *pcVar2;
   ulonglong uVar3;
   longlong lVar4;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [1];
   
   uVar3 = (ulonglong)*(uint *)(param_2 + 0x20) - 1;
   if (-1 < (longlong)uVar3) {

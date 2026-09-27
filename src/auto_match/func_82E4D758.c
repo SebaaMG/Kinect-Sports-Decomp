@@ -35,24 +35,24 @@ void fn_82E4D758(int param_1)
 
 {
   int iVar1;
-  int *apiStack_30 [12];
+  int * apiStack_30;
   
   if (*(int *)(param_1 + 0x230) != 0) {
-    fn_82E914C0(*(int *)(param_1 + 0x230),apiStack_30,0);
-    while (apiStack_30[0] != (int *)0x0) {
-      if (*apiStack_30[0] != 0) {
-        fn_8265C990(*apiStack_30[0],0x248c8000);
-        *apiStack_30[0] = 0;
+    fn_82E914C0(*(int *)(param_1 + 0x230),&apiStack_30,0);
+    while (apiStack_30 != (int *)0x0) {
+      if (*apiStack_30 != 0) {
+        fn_8265C990(*apiStack_30,0x248c8000);
+        *apiStack_30 = 0;
       }
-      if (apiStack_30[0][1] != 0) {
-        fn_8265C990(apiStack_30[0][1],0x248c8000);
-        apiStack_30[0][1] = 0;
+      if (apiStack_30[1] != 0) {
+        fn_8265C990(apiStack_30[1],0x248c8000);
+        apiStack_30[1] = 0;
       }
-      if (apiStack_30[0] != (int *)0x0) {
-        fn_8265C990(apiStack_30[0],0x248c8000);
-        apiStack_30[0] = (int *)0x0;
+      if (apiStack_30 != (int *)0x0) {
+        fn_8265C990(apiStack_30,0x248c8000);
+        apiStack_30 = (int *)0x0;
       }
-      fn_82E914C0(*(undefined4 *)(param_1 + 0x230),apiStack_30,0);
+      fn_82E914C0(*(undefined4 *)(param_1 + 0x230),&apiStack_30,0);
     }
     iVar1 = *(int *)(param_1 + 0x230);
     if (iVar1 != 0) {

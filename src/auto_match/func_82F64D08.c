@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 
 
-longlong fn_82F64D08(ushort *param_1,ushort *param_2)
+longlong __ascii_stricmp(ushort *param_1,ushort *param_2)
 
 {
   int iVar1;

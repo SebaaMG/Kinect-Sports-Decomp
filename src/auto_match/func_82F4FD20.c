@@ -42,7 +42,7 @@ void fn_82F4FD20(int param_1,undefined8 param_2)
   undefined4 uVar5;
   undefined4 uVar6;
   undefined4 uVar7;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [1];
   
   puVar1 = (undefined4 *)(in_r0 + param_1 & 0xfffffff0);
   uVar5 = puVar1[1];

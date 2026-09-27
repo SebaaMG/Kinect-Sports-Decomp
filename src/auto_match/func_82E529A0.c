@@ -39,7 +39,7 @@ longlong fn_82E529A0(int param_1,undefined4 *param_2)
   int iVar3;
   int *piStack_40;
   int *piStack_3c;
-  uint auStack_38 [14];
+  uint auStack_38;
   
   if (param_2 == (undefined4 *)0x0) {
     lVar1 = -0x7fffbffd;
@@ -52,14 +52,14 @@ longlong fn_82E529A0(int param_1,undefined4 *param_2)
       iVar3 = param_1 + -0x4c;
       lVar1 = fn_82E51480(iVar3);
       if (-1 < lVar1) {
-        auStack_38[0] = 0;
-        lVar1 = (**(code **)(*piStack_40 + 0x84))(piStack_40,auStack_38);
+        auStack_38 = 0;
+        lVar1 = (**(code **)(*piStack_40 + 0x84))(piStack_40,&auStack_38);
         if (-1 < lVar1) {
-          if ((auStack_38[0] == 0) || (0x7f < auStack_38[0])) {
+          if ((auStack_38 == 0) || (0x7f < auStack_38)) {
             lVar1 = -0x3ff2b9a7;
           }
           else {
-            *(short *)(param_1 + 0x10) = (short)auStack_38[0];
+            *(short *)(param_1 + 0x10) = (short)auStack_38;
             lVar1 = (**(code **)(*piStack_40 + 0x88))(piStack_40,&piStack_3c);
             if (-1 < lVar1) {
               iVar2 = (**(code **)(*piStack_3c + 0x1c))(piStack_3c,param_1 + 0x14);

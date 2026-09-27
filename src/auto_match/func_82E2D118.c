@@ -39,13 +39,13 @@ longlong fn_82E2D118(int *param_1,undefined4 *param_2)
   longlong lVar2;
   int *piStack_30;
   int iStack_2c;
-  undefined4 auStack_28 [10];
+  undefined4 auStack_28;
   
   iStack_2c = 0;
   piStack_30 = (int *)0x0;
-  lVar2 = (**(code **)(*param_1 + 0x40))(param_1,0xffffffff821534c8,&iStack_2c,auStack_28);
+  lVar2 = (**(code **)(*param_1 + 0x40))(param_1,0xffffffff821534c8,&iStack_2c,&auStack_28);
   if (((-1 < lVar2) && (lVar2 = fn_82E2D068(&piStack_30), -1 < lVar2)) &&
-     (lVar2 = fn_82E25C48(piStack_30,iStack_2c,auStack_28[0]), piVar1 = piStack_30, -1 < lVar2
+     (lVar2 = fn_82E25C48(piStack_30,iStack_2c,auStack_28), piVar1 = piStack_30, -1 < lVar2
      )) {
     piStack_30 = (int *)0x0;
     *param_2 = piVar1;

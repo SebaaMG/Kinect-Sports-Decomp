@@ -46,8 +46,8 @@ undefined8 fn_82E23A10(longlong param_1,int param_2)
   undefined8 uVar5;
   char in_RESERVE;
   byte in_cr0;
-  undefined4 uStack_40;
-  undefined4 uStack_3c;
+  struct { undefined4 first; undefined4 second; } stack_pair_40;
+
   uint uStack_38;
   uint uStack_34;
   
@@ -65,12 +65,12 @@ undefined8 fn_82E23A10(longlong param_1,int param_2)
     uStack_34 = puVar2[4];
     uStack_38 = puVar2[3];
     uVar3 = puVar2[*(byte *)(puVar2 + 0x27) + 0x25];
-    uStack_40 = 0;
-    uStack_3c = 0;
+    stack_pair_40.first = 0;
+    stack_pair_40.second = 0;
     fn_82A98F18(*(undefined4 *)(puVar2[(uint)*(byte *)(puVar2 + 0x27) * 4 + 0x1d] + 8),
                     uStack_38 << 2,0,
                     *(undefined4 *)(puVar2[(uint)*(byte *)(puVar2 + 0x27) * 4 + 0x1d] + 8),uStack_38
-                    ,uStack_34,&uStack_40,4);
+                    ,uStack_34,&stack_pair_40.first,4);
     if ((param_2 != 0) || (uVar4 = 0, puVar2[(*(byte *)(puVar2 + 0x27) + 8) * 4] != 0)) {
       uVar4 = 1;
     }

@@ -40,7 +40,7 @@ ulonglong fn_82D42078(int *param_1,ulonglong param_2)
   ulonglong uVar4;
   ulonglong uVar5;
   undefined1 auStack_250 [16];
-  undefined1 auStack_240 [576];
+  undefined1 auStack_240 [496];
   
   uVar3 = param_2 & 0x80000000;
   uVar5 = (ulonglong)(((uint)param_2 & 0x7fffffff) >> (0x20U - param_1[0x28] & 0x3f));

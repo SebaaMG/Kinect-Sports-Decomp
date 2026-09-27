@@ -90,7 +90,7 @@ undefined8 fn_830BC7C0(int param_1,int param_2,int *param_3,int param_4,int para
   uint uStack_67c;
   uint uStack_678;
   undefined1 auStack_600 [592];
-  undefined1 auStack_3b0 [944];
+  undefined1 auStack_3b0 [848];
   
   uVar1 = *(ushort *)(param_2 + 0x32);
   uVar18 = (uint)(*(ushort *)(param_2 + 0x34) >> 1);

@@ -44,7 +44,7 @@ void fn_82FFB900(longlong param_1,int param_2)
   int *piVar5;
   undefined1 auStack_70 [8];
   int iStack_68;
-  undefined1 auStack_60 [96];
+  undefined1 auStack_60 [16];
   
   if (((*(byte *)(param_2 + 0x48) & 0x20) != 0) && (*(int *)(param_2 + 0x28) != 0)) {
     RtlEnterCriticalSection(param_1 + 0x50);

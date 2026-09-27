@@ -33,8 +33,7 @@ extern unsigned int lbl_821AAD20;
 
 
 undefined8
-fn_82C2B878(int param_1,int param_2,undefined4 param_3,undefined4 param_4,int param_5,
-             undefined2 param_6,undefined4 param_7,uint param_8)
+fn_82C2B878(int param_1, int param_2, undefined4 param_3, undefined4 param_4, int param_5, undefined2 param_6, undefined4 param_7, uint param_8, undefined4 in_stack_00000054, undefined4 in_stack_0000005c, int in_stack_00000064, ushort in_stack_0000006e, ushort in_stack_00000076, int in_stack_0000007c, undefined4 in_stack_00000084)
 
 {
   float fVar1;
@@ -47,13 +46,13 @@ fn_82C2B878(int param_1,int param_2,undefined4 param_3,undefined4 param_4,int pa
   uint uVar8;
   double dVar9;
   double dVar10;
-  undefined4 in_stack_00000054;
-  undefined4 in_stack_0000005c;
-  int in_stack_00000064;
-  ushort in_stack_0000006e;
-  ushort in_stack_00000076;
-  int in_stack_0000007c;
-  undefined4 in_stack_00000084;
+
+
+
+
+
+
+
   ushort *in_stack_0000008c;
   
   if (in_stack_0000008c == (ushort *)0x0) {

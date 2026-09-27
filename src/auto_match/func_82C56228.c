@@ -26,7 +26,7 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_82C53960();
-extern int fn_82F691F0();
+extern int memset();
 
 
 ulonglong fn_82C56228(undefined4 *param_1,int param_2,int param_3)
@@ -46,7 +46,7 @@ ulonglong fn_82C56228(undefined4 *param_1,int param_2,int param_3)
       uVar2 = fn_82C53960(uVar1,0);
       if ((uVar2 & 0xffffffff) != 0) {
                     /* WARNING: Subroutine does not return */
-        fn_82F691F0(uVar2,0,uVar1);
+        memset(uVar2,0,uVar1);
       }
       RtlLeaveCriticalSection(*param_1);
     }

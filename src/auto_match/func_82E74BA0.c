@@ -30,12 +30,12 @@ typedef struct { U64 lo, hi; } V16;
 ulonglong fn_82E74BA0(int param_1,ulonglong param_2)
 
 {
-  int aiStack_20 [4];
+  int aiStack_20;
   
   if ((param_2 & 0xffffffff) != 0) {
-    aiStack_20[0] = 0;
-    (**(code **)(*(int *)param_2 + 0xb4))(param_2,aiStack_20);
-    param_2 = (ulonglong)(uint)(aiStack_20[0] * 8000) / (ulonglong)*(uint *)(param_1 + 0x18);
+    aiStack_20 = 0;
+    (**(code **)(*(int *)param_2 + 0xb4))(param_2,&aiStack_20);
+    param_2 = (ulonglong)(uint)(aiStack_20 * 8000) / (ulonglong)*(uint *)(param_1 + 0x18);
     trapWord(6,(ulonglong)*(uint *)(param_1 + 0x18),0);
   }
   return param_2;

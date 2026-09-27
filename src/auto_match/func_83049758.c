@@ -37,12 +37,12 @@ undefined8 fn_83049758(int param_1,uint *param_2)
   ulonglong uVar2;
   ulonglong uVar3;
   ulonglong uVar4;
-  char acStack_30 [48];
+  char acStack_30;
   
   uVar4 = (ulonglong)*(uint *)(param_1 + 0x3c);
-  acStack_30[0] = '\0';
-  uVar1 = fn_830491F8(param_1,param_2,acStack_30);
-  if (acStack_30[0] == '\0') {
+  acStack_30 = '\0';
+  uVar1 = fn_830491F8(param_1,param_2,&acStack_30);
+  if (acStack_30 == '\0') {
     uVar3 = (ulonglong)*param_2;
     uVar2 = uVar4;
   }

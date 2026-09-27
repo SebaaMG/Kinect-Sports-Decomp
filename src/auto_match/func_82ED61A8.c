@@ -38,8 +38,7 @@ extern unsigned int uStack0000003c;
 extern unsigned int uStack0000004c;
 
 
-void fn_82ED61A8(int param_1,undefined4 param_2,uint *param_3,ulonglong param_4,undefined4 param_5
-                  ,uint param_6,ulonglong param_7,uint param_8)
+void fn_82ED61A8(int param_1, undefined4 param_2, uint *param_3, ulonglong param_4, undefined4 param_5, uint param_6, ulonglong param_7, uint param_8, undefined4 in_stack_00000054, undefined4 in_stack_0000005c, uint in_stack_00000064, undefined8 unused_arg_12, uint in_stack_00000074, int in_stack_0000007c, uint in_stack_00000084, int in_stack_0000008c, uint in_stack_00000094, int in_stack_0000009c, uint in_stack_000000a4, int in_stack_000000ac, uint in_stack_000000b4, uint in_stack_000000bc, uint in_stack_000000c4)
 
 {
   bool bVar1;
@@ -62,21 +61,21 @@ void fn_82ED61A8(int param_1,undefined4 param_2,uint *param_3,ulonglong param_4,
   undefined4 uStack00000034;
   uint uStack0000003c;
   uint uStack0000004c;
-  undefined4 in_stack_00000054;
-  undefined4 in_stack_0000005c;
-  uint in_stack_00000064;
+
+
+
   undefined2 *in_stack_0000006c;
-  uint in_stack_00000074;
-  int in_stack_0000007c;
-  uint in_stack_00000084;
-  int in_stack_0000008c;
-  uint in_stack_00000094;
-  int in_stack_0000009c;
-  uint in_stack_000000a4;
-  int in_stack_000000ac;
-  uint in_stack_000000b4;
-  uint in_stack_000000bc;
-  uint in_stack_000000c4;
+
+
+
+
+
+
+
+
+
+
+
   uint *puStack_ac;
   
   uVar12 = (ulonglong)in_stack_00000074;

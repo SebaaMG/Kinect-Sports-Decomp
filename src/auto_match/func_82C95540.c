@@ -100,7 +100,7 @@ fn_82C95540(int param_1,uint *param_2,longlong param_3,undefined4 param_4,undefi
   undefined4 uStack_d0;
   undefined4 uStack_cc;
   undefined *puStack_c8;
-  undefined1 auStack_c0 [192];
+  undefined1 auStack_c0 [64];
   
   bVar34 = *(int *)(param_1 + 0x14c) != 0;
   uVar25 = *(uint *)(param_1 + 0x154);

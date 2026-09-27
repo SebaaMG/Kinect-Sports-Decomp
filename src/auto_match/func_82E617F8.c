@@ -41,7 +41,7 @@ longlong fn_82E617F8(int *param_1,int *param_2,int *param_3)
   int *piStack_40;
   int *piStack_3c;
   uint uStack_38;
-  uint auStack_34 [13];
+  uint auStack_34;
   
   if (((param_1 == (int *)0x0) || (param_2 == (int *)0x0)) || (param_3 == (int *)0x0)) {
     return -0x7ff8ffa9;
@@ -52,10 +52,10 @@ longlong fn_82E617F8(int *param_1,int *param_2,int *param_3)
   if (((-1 < lVar1) && (lVar1 = fn_82E60688(param_1,piStack_40), -1 < lVar1)) &&
      ((lVar1 = (**(code **)(*param_2 + 0x1c))(param_2,0xffffffff820f8f08,&piStack_3c), -1 < lVar1 &&
       (lVar1 = fn_82E60E60(param_3,param_1,piStack_3c), -1 < lVar1)))) {
-    auStack_34[0] = 0;
-    lVar1 = (**(code **)(*param_1 + 0x1c))(param_1,0xffffffff8214c720,auStack_34);
+    auStack_34 = 0;
+    lVar1 = (**(code **)(*param_1 + 0x1c))(param_1,0xffffffff8214c720,&auStack_34);
     if (-1 < lVar1) {
-      if ((auStack_34[0] & 0x80000000) != 0) {
+      if ((auStack_34 & 0x80000000) != 0) {
         uStack_38 = 0;
         lVar1 = fn_82E62670(piStack_40,&uStack_38);
         if (lVar1 < 0) goto LAB_82e61974;

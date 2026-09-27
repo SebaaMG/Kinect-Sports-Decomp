@@ -31,7 +31,7 @@ extern int fn_82E7EC68();
 extern int fn_82E7ECB8();
 extern int fn_82E7ED68();
 extern int fn_82E7EE40();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int uStack_6c;
 extern unsigned int uStack_70;
 
@@ -50,13 +50,13 @@ longlong fn_82E7F6C0(ushort *param_1)
   longlong lVar9;
   uint uStack_70;
   uint uStack_6c;
-  int aiStack_68 [26];
+  int aiStack_68;
   
   uVar1 = *param_1;
   uStack_70 = 0;
   lVar9 = 0;
   uStack_6c = 0;
-  aiStack_68[0] = 0;
+  aiStack_68 = 0;
   if (uVar1 != 0) {
     if ((uVar1 & 0x1000) == 0) {
       lVar9 = -0x3ff2c914;
@@ -87,12 +87,12 @@ longlong fn_82E7F6C0(ushort *param_1)
                 lVar9 = fn_82E7ED68(param_1,uVar7,&uStack_70);
                 uVar4 = uStack_70;
                 if ((lVar9 < 0) ||
-                   (lVar9 = fn_82E7EE40(param_1,*param_1 & 0xfff,uVar8,uStack_70,aiStack_68),
+                   (lVar9 = fn_82E7EE40(param_1,*param_1 & 0xfff,uVar8,uStack_70,&aiStack_68),
                    lVar9 < 0)) goto LAB_82e7f854;
-                if (0 < aiStack_68[0]) {
-                  fn_82F68CC0(lVar6,uVar8,uVar3);
-                  fn_82F68CC0(uVar8,uVar4,uVar3);
-                  fn_82F68CC0(uVar4,lVar6,uVar3);
+                if (0 < aiStack_68) {
+                  memcpy(lVar6,uVar8,uVar3);
+                  memcpy(uVar8,uVar4,uVar3);
+                  memcpy(uVar4,lVar6,uVar3);
                   bVar2 = true;
                 }
                 uVar7 = uVar7 + 1;

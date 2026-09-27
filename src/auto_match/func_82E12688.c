@@ -44,7 +44,7 @@ int fn_82E12688(undefined8 param_1,int *param_2,ulonglong param_3)
   int iVar3;
   int iVar4;
   int iVar5;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [32];
   
   iVar5 = 0;
   fn_82D00388(auStack_40,0);

@@ -71,7 +71,7 @@ double fn_82D102A8(int param_1,int param_2,int *param_3,int *param_4,int *param_
   undefined4 *puStack_29c;
   undefined4 *puStack_298;
   undefined4 *puStack_294;
-  undefined1 auStack_290 [16];
+  undefined1 auStack_290 [1];
   undefined1 auStack_280 [16];
   undefined1 auStack_270 [624];
   

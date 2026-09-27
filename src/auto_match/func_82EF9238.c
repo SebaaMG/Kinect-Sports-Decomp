@@ -71,7 +71,7 @@ void fn_82EF9238(int param_1,int param_2,int param_3,int param_4,int param_5,int
   byte *pbStack_8f8;
   uint uStack_8f4;
   short sStack_8de;
-  undefined1 auStack_8dc [2268];
+  undefined1 auStack_8dc [2060];
   
   iVar19 = param_1 + -2 >> 2;
   lVar32 = 0x10;

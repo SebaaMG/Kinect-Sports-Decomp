@@ -50,7 +50,7 @@ undefined4 * fn_82CE9E40(undefined4 *param_1,undefined4 *param_2)
   longlong lVar15;
   uint *puVar17;
   longlong lVar16;
-  uint auStack_70 [28];
+  uint auStack_70;
   
   puVar11 = param_1 + 2;
   *param_1 = *param_2;
@@ -101,10 +101,10 @@ undefined4 * fn_82CE9E40(undefined4 *param_1,undefined4 *param_2)
         if ((*puVar17 & 0x80000000) == 0) {
           (**(code **)(*piVar2 + 0x10))(piVar2,puVar17[-2],uVar5,4);
         }
-        auStack_70[0] = *puVar14;
-        uVar5 = (**(code **)(*piVar2 + 0xc))(piVar2,auStack_70,4);
+        auStack_70 = *puVar14;
+        uVar5 = (**(code **)(*piVar2 + 0xc))(piVar2,&auStack_70,4);
         puVar17[-2] = uVar5;
-        *puVar17 = auStack_70[0];
+        *puVar17 = auStack_70;
       }
       uVar5 = *puVar14;
       uVar7 = (ulonglong)uVar5;
@@ -136,22 +136,22 @@ undefined4 * fn_82CE9E40(undefined4 *param_1,undefined4 *param_2)
         piVar2[-1] = 0;
         *piVar2 = 0;
         piVar2[1] = -0x80000000;
-        auStack_70[0] = *(uint *)((iVar3 - (int)lVar9) + (int)piVar2);
-        if (auStack_70[0] == 0) {
+        auStack_70 = *(uint *)((iVar3 - (int)lVar9) + (int)piVar2);
+        if (auStack_70 == 0) {
           puVar6 = (undefined4 *)0x0;
           uVar10 = 0;
 LAB_82cea088:
-          auStack_70[0] = 0x80000000;
+          auStack_70 = 0x80000000;
         }
         else {
           iVar4 = fn_82CE5410();
           puVar6 = (undefined4 *)
                    (**(code **)(**(int **)(iVar4 + 0x10) + 0xc))
-                             (*(int **)(iVar4 + 0x10),auStack_70,4);
-          uVar10 = (ulonglong)auStack_70[0];
-          if (auStack_70[0] == 0) goto LAB_82cea088;
+                             (*(int **)(iVar4 + 0x10),&auStack_70,4);
+          uVar10 = (ulonglong)auStack_70;
+          if (auStack_70 == 0) goto LAB_82cea088;
         }
-        piVar2[1] = auStack_70[0];
+        piVar2[1] = auStack_70;
         piVar2[-1] = (int)puVar6;
         *piVar2 = (int)uVar10;
         if (0 < (int)uVar10) {

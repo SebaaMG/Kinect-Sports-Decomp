@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_82F04110();
 extern int fn_82F27B98();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 void fn_82F07788(int param_1,undefined8 param_2)
@@ -47,11 +47,11 @@ void fn_82F07788(int param_1,undefined8 param_2)
     }
     uVar1 = *(uint *)(param_1 + 0x564);
     if (*(int *)(param_1 + 4) == 8) {
-      fn_82F68CC0((ulonglong)*(uint *)(param_1 + 0x5278) + ((ulonglong)uVar1 & 0x1fffffff) * -8,
+      memcpy((ulonglong)*(uint *)(param_1 + 0x5278) + ((ulonglong)uVar1 & 0x1fffffff) * -8,
                    (ulonglong)*(uint *)(param_1 + 0x14) + ((ulonglong)uVar1 & 0x1fffffff) * -8,
                    (longlong)(*(int *)(param_1 + 0x56c) + 0x10) * (longlong)(int)uVar1);
       uVar2 = (ulonglong)*(uint *)(param_1 + 0x568) & 0x3fffffff;
-      fn_82F68CC0((ulonglong)*(uint *)(param_1 + 0x527c) + uVar2 * -4,
+      memcpy((ulonglong)*(uint *)(param_1 + 0x527c) + uVar2 * -4,
                    (ulonglong)*(uint *)(param_1 + 0x18) + uVar2 * -4,
                    (longlong)(*(int *)(param_1 + 0x570) + 8) *
                    (longlong)(int)*(uint *)(param_1 + 0x568));
@@ -61,15 +61,15 @@ void fn_82F07788(int param_1,undefined8 param_2)
       uVar2 = (ulonglong)*(uint *)(param_1 + 0x5280) + uVar2 * -4;
     }
     else {
-      fn_82F68CC0(*(undefined4 *)(param_1 + 0x5278),*(undefined4 *)(param_1 + 0x14),
+      memcpy(*(undefined4 *)(param_1 + 0x5278),*(undefined4 *)(param_1 + 0x14),
                    (longlong)*(int *)(param_1 + 0x56c) * (longlong)(int)uVar1);
-      fn_82F68CC0(*(undefined4 *)(param_1 + 0x527c),*(undefined4 *)(param_1 + 0x18),
+      memcpy(*(undefined4 *)(param_1 + 0x527c),*(undefined4 *)(param_1 + 0x18),
                    (longlong)*(int *)(param_1 + 0x570) * (longlong)*(int *)(param_1 + 0x568));
       uVar4 = (ulonglong)*(uint *)(param_1 + 0x1c);
       uVar2 = (ulonglong)*(uint *)(param_1 + 0x5280);
       lVar5 = (longlong)*(int *)(param_1 + 0x570) * (longlong)*(int *)(param_1 + 0x568);
     }
-    fn_82F68CC0(uVar2,uVar4,lVar5);
+    memcpy(uVar2,uVar4,lVar5);
     fn_82F27B98(param_1);
     (**(code **)(param_1 + 0x1bac))
               (*(undefined4 *)(param_1 + 0x14),*(undefined4 *)(param_1 + 0x564),

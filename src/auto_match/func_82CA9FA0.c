@@ -33,8 +33,7 @@ extern unsigned int uStack0000003c;
 extern unsigned int uStack_a0;
 
 
-void fn_82CA9FA0(byte *param_1,uint param_2,uint param_3,int param_4,ulonglong param_5,
-                  ulonglong param_6,uint param_7,int param_8)
+void fn_82CA9FA0(byte *param_1, uint param_2, uint param_3, int param_4, ulonglong param_5, ulonglong param_6, uint param_7, int param_8, uint in_stack_00000054, undefined4 in_stack_0000005c, int in_stack_00000064)
 
 {
   byte bVar1;
@@ -58,9 +57,9 @@ void fn_82CA9FA0(byte *param_1,uint param_2,uint param_3,int param_4,ulonglong p
   uint uStack00000024;
   undefined4 uStack00000034;
   undefined4 uStack0000003c;
-  uint in_stack_00000054;
-  undefined4 in_stack_0000005c;
-  int in_stack_00000064;
+
+
+
   uint *in_stack_00000074;
   uint uStack_a0;
   

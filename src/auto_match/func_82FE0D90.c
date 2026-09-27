@@ -48,7 +48,7 @@ void fn_82FE0D90(int param_1,undefined8 param_2)
   double dVar8;
   double dVar9;
   undefined1 auStack_70 [16];
-  undefined4 auStack_60 [24];
+  undefined4 auStack_60 [4];
   
   fn_82FDFBD0(4,param_1 + 0x174,auStack_70);
   fn_82FDFDC8(auStack_70,*(undefined4 *)(param_1 + 200),4,auStack_60);

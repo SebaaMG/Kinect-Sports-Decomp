@@ -38,15 +38,15 @@ fn_82E53558(int param_1,uint param_2,undefined4 *param_3,undefined2 *param_4,ulo
   longlong lVar1;
   undefined4 *puVar2;
   undefined8 uVar3;
-  uint auStack_40 [16];
+  uint auStack_40;
   
   uVar3 = 0;
   if ((param_3 == (undefined4 *)0x0) || (param_4 == (undefined2 *)0x0)) {
     uVar3 = 0xffffffff80004003;
   }
   else if ((param_2 & 0xffff) < *(uint *)(param_1 + 0x108)) {
-    lVar1 = fn_82E531C8(param_1 + 0xa0,param_2 & 0xffff,auStack_40);
-    puVar2 = (undefined4 *)(-(uint)(lVar1 != 0) & auStack_40[0]);
+    lVar1 = fn_82E531C8(param_1 + 0xa0,param_2 & 0xffff,&auStack_40);
+    puVar2 = (undefined4 *)(-(uint)(lVar1 != 0) & auStack_40);
     if (puVar2 == (undefined4 *)0x0) {
       uVar3 = 0xffffffffc00d36bb;
     }

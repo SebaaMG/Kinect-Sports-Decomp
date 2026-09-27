@@ -41,7 +41,7 @@ undefined8 fn_82F78848(undefined8 param_1,undefined8 param_2)
   undefined8 *puVar1;
   undefined8 uStack_40;
   undefined8 uStack_38;
-  undefined8 auStack_30 [6];
+  undefined8 auStack_30;
   
   puVar1 = (undefined8 *)fn_82F72318(0xffffffff832635a0,8,0);
   if (puVar1 == (undefined8 *)0x0) {
@@ -53,8 +53,8 @@ undefined8 fn_82F78848(undefined8 param_1,undefined8 param_2)
     *(undefined1 *)((int)puVar1 + 5) = 0;
   }
   fn_82F78748(param_1,puVar1);
-  fn_82F72738(auStack_30);
-  uStack_40 = auStack_30[0];
+  fn_82F72738(&auStack_30);
+  uStack_40 = auStack_30;
   fn_82F735D8(&uStack_40,0x20);
   uStack_38 = uStack_40;
   fn_82F73228(&uStack_38,param_2);

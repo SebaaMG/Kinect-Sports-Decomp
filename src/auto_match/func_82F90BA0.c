@@ -42,7 +42,7 @@ int fn_82F90BA0(int *param_1)
   char cVar3;
   int iVar2;
   int *piStack00000014;
-  undefined1 auStack_50 [64];
+  undefined1 auStack_50 [48];
   
   piStack00000014 = param_1;
   fn_82F90628(auStack_50,param_1 + 3);

@@ -103,7 +103,7 @@ void fn_82C1AFD0(undefined8 param_1,ulonglong param_2,ulonglong param_3,ulonglon
   float afStack_294 [33];
   int aiStack_210 [32];
   int aiStack_190 [32];
-  float afStack_110 [68];
+  float afStack_110 [60];
   
   lVar5 = fn_82F6A538();
   fVar1 = lbl_821AAD20;

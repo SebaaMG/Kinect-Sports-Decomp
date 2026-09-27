@@ -30,12 +30,11 @@ extern int fn_82CD31A8();
 extern int fn_82CD4888();
 extern int fn_82CD4988();
 extern int fn_82CD58C0();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 undefined8
-fn_82CA2488(int *param_1,int param_2,int param_3,int param_4,int param_5,int param_6,int param_7,
-             int param_8)
+fn_82CA2488(int *param_1, int param_2, int param_3, int param_4, int param_5, int param_6, int param_7, int param_8, int in_stack_00000054, int in_stack_0000005c, int in_stack_00000064, int in_stack_0000006c, int in_stack_00000074)
 
 {
   short sVar1;
@@ -45,11 +44,11 @@ fn_82CA2488(int *param_1,int param_2,int param_3,int param_4,int param_5,int par
   undefined8 uVar5;
   int iVar6;
   uint uVar7;
-  int in_stack_00000054;
-  int in_stack_0000005c;
-  int in_stack_00000064;
-  int in_stack_0000006c;
-  int in_stack_00000074;
+
+
+
+
+
   
   iVar6 = 0;
   if ((param_1 == (int *)0x0) || (param_3 == 0)) {
@@ -194,7 +193,7 @@ fn_82CA2488(int *param_1,int param_2,int param_3,int param_4,int param_5,int par
           fn_82A1DDC0((ulonglong)(uint)param_1[1] + 0x28,param_3 + 0x28,0x400);
         }
         else if (*(int *)(param_3 + 0x10) == 3) {
-          fn_82F68CC0((ulonglong)(uint)param_1[1] + 0x28,param_3 + 0x28,0xc);
+          memcpy((ulonglong)(uint)param_1[1] + 0x28,param_3 + 0x28,0xc);
         }
         iVar6 = 1;
         if (*(int *)(param_3 + 8) < 0) {

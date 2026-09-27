@@ -53,7 +53,7 @@ void fn_83036ED0(int *param_1,int param_2,uint param_3)
   undefined4 auStack_3a0 [4];
   undefined2 uStack_390;
   undefined4 uStack_38c;
-  undefined1 auStack_370 [880];
+  undefined1 auStack_370 [848];
   
   iVar5 = *(int *)(*(int *)(param_2 + 4) + 0x14);
   if (iVar5 == 0) {

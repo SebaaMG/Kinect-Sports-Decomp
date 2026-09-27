@@ -45,7 +45,7 @@ void fn_82CF0E70(double param_1,undefined8 param_2,float *param_3,longlong param
   float *pfVar8;
   int iVar9;
   double dVar10;
-  undefined1 auStack_160 [352];
+  undefined1 auStack_160 [272];
   
   if ((int)param_4 != 0) {
     if (1 < (int)param_4) {

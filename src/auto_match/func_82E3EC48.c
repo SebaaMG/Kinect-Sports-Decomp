@@ -40,7 +40,7 @@ undefined8 fn_82E3EC48(longlong param_1)
   int iVar1;
   undefined4 *apuStack_50 [2];
   undefined1 auStack_48 [8];
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [16];
   
   fn_82E50CB8(param_1 + 8);
   apuStack_50[0] = (undefined4 *)0x0;

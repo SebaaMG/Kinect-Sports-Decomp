@@ -29,7 +29,7 @@ extern int fn_82E22E18();
 extern int fn_82E23350();
 extern int fn_82E23750();
 extern int fn_82E23950();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 longlong fn_82E233E0(int param_1,undefined4 *param_2)
@@ -38,7 +38,7 @@ longlong fn_82E233E0(int param_1,undefined4 *param_2)
   longlong lVar1;
   uint uVar2;
   
-  fn_82F68CC0(param_1 + 0xc,param_2,0x20);
+  memcpy(param_1 + 0xc,param_2,0x20);
   *(undefined4 *)(param_1 + 0x15c) = 0;
   *(undefined4 *)(param_1 + 0x160) = 0;
   *(undefined4 *)(param_1 + 0x164) = 0;

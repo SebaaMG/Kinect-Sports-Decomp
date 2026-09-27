@@ -43,12 +43,12 @@ fn_82E13058(undefined8 param_1,undefined8 param_2,undefined8 param_3,code *param
   undefined8 uVar1;
   int iVar2;
   longlong lVar3;
-  char acStack_40 [64];
+  char acStack_40;
   
   uVar1 = fn_82CEAC20(param_2);
   uVar1 = fn_82D001D8(param_3,uVar1);
-  fn_82D002F0(acStack_40,param_3,uVar1);
-  if (acStack_40[0] == '\0') {
+  fn_82D002F0(&acStack_40,param_3,uVar1);
+  if (acStack_40 == '\0') {
     iVar2 = (*param_4)(param_1,param_2,param_5);
     if (iVar2 == 1) {
       return 1;

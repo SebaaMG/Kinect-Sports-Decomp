@@ -45,7 +45,7 @@ undefined8 fn_82E0CF68(int *param_1,ulonglong param_2,ulonglong param_3)
   char *pcVar6;
   int iVar7;
   ulonglong uVar4;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [1];
   
   if ((param_3 & 0xffffffff) != 0) {
     fn_82E12D08();

@@ -25,7 +25,7 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F68CC0();
+extern int memcpy();
 extern int fn_82FE0080();
 extern int fn_82FE0190();
 extern int fn_82FE02A0();
@@ -37,7 +37,7 @@ extern unsigned int lbl_821AAD20;
 void fn_82FE1028(int param_1)
 
 {
-  fn_82F68CC0(param_1 + 0xe4,(ulonglong)*(uint *)(param_1 + 0xe0) + 4,0x50);
+  memcpy(param_1 + 0xe4,(ulonglong)*(uint *)(param_1 + 0xe0) + 4,0x50);
   *(undefined1 *)(param_1 + 0xd3) = 0;
   if ((*(float *)(param_1 + 0xe4) != *(float *)(param_1 + 0x1a4)) ||
      (*(float *)(param_1 + 0xe8) != *(float *)(param_1 + 0x1a8))) {

@@ -35,7 +35,7 @@ undefined8 fn_82E42C88(int param_1,ulonglong *param_2)
   ulonglong uVar2;
   ulonglong uVar3;
   ulonglong uVar4;
-  ushort *apuStack_40 [16];
+  ushort * apuStack_40;
   
   if (param_2 == (ulonglong *)0x0) {
     uVar1 = 0xffffffff80070057;
@@ -45,8 +45,8 @@ undefined8 fn_82E42C88(int param_1,ulonglong *param_2)
     uVar4 = 0;
     if (*(int *)(param_1 + 0x2ac) != 0) {
       do {
-        fn_82E3C5F8(param_1 + 0x26c,uVar4,apuStack_40);
-        uVar2 = (**(code **)(**(int **)((*apuStack_40[0] + 0x1b) * 4 + param_1) + 0x18))();
+        fn_82E3C5F8(param_1 + 0x26c,uVar4,&apuStack_40);
+        uVar2 = (**(code **)(**(int **)((*apuStack_40 + 0x1b) * 4 + param_1) + 0x18))();
         if (uVar2 < uVar3) {
           uVar3 = uVar2;
         }

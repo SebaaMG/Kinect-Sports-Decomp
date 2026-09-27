@@ -32,14 +32,14 @@ undefined8 fn_82F35F08(int param_1,undefined8 param_2)
 
 {
   ulonglong uVar1;
-  undefined4 *apuStack_30 [12];
+  undefined4 * apuStack_30;
   
   *(int *)(param_1 + 0x4c) = (int)param_2;
   uVar1 = 0;
   if (*(int *)(param_1 + 0xc4) != 0) {
     do {
-      fn_82F35400(param_1 + 0x5c,uVar1,apuStack_30);
-      (**(code **)(*(int *)*apuStack_30[0] + 0xc))((int *)*apuStack_30[0],param_2);
+      fn_82F35400(param_1 + 0x5c,uVar1,&apuStack_30);
+      (**(code **)(*(int *)*apuStack_30 + 0xc))((int *)*apuStack_30,param_2);
       uVar1 = uVar1 + 1;
     } while ((uVar1 & 0xffffffff) < (ulonglong)*(uint *)(param_1 + 0xc4));
   }

@@ -78,7 +78,7 @@ void fn_82EF96C8(int param_1,int param_2,longlong param_3,uint param_4,int param
   uint uStack_8f8;
   uint uStack_8f4;
   short sStack_8de;
-  undefined1 auStack_8dc [2268];
+  undefined1 auStack_8dc [2092];
   
   uVar22 = (ulonglong)param_4;
   uVar29 = uVar22 & 0x7fffffff;

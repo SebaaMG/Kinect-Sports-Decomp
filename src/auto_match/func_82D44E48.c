@@ -41,7 +41,7 @@ ulonglong fn_82D44E48(int param_1,ulonglong param_2)
   uint uVar8;
   ushort *puVar9;
   int iVar10;
-  uint auStack_60 [24];
+  uint auStack_60 [4];
   ushort *puVar6;
   
   uVar1 = *(uint *)(param_1 + 0xc);

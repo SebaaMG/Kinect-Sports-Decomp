@@ -130,7 +130,7 @@ uint fn_82D5B3B0(int *param_1,undefined8 param_2,int param_3,int param_4,int par
   undefined1 auStack_1180 [16];
   undefined1 auStack_1170 [16];
   undefined1 auStack_1160 [64];
-  undefined1 auStack_1120 [4384];
+  undefined1 auStack_1120 [4288];
   
   iVar8 = KeTlsGetValue(lbl_8323B4A0);
   puVar2 = *(undefined4 **)(iVar8 + 4);

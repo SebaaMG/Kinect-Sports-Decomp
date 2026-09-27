@@ -25,27 +25,27 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F6FA38();
+extern int _getptd();
 extern int fn_82F812C0();
 
 
-void fn_82F698B8(int param_1)
+void _FindAndUnlinkFrame(int param_1)
 
 {
   int iVar1;
   int *piVar2;
   
-  iVar1 = fn_82F6FA38();
+  iVar1 = _getptd();
   if ((*(int *)(iVar1 + 0x94) == 0) || (param_1 == 0)) {
     fn_82F812C0();
   }
-  iVar1 = fn_82F6FA38();
+  iVar1 = _getptd();
   if (param_1 == *(int *)(iVar1 + 0x94)) {
-    iVar1 = fn_82F6FA38();
+    iVar1 = _getptd();
     *(undefined4 *)(iVar1 + 0x94) = *(undefined4 *)(param_1 + 8);
   }
   else {
-    iVar1 = fn_82F6FA38();
+    iVar1 = _getptd();
     piVar2 = (int *)(*(int *)(iVar1 + 0x94) + 8);
     for (iVar1 = *piVar2; iVar1 != 0; iVar1 = *(int *)(iVar1 + 8)) {
       iVar1 = *piVar2;

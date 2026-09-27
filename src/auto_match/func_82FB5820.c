@@ -31,7 +31,7 @@ extern unsigned int *auStack_120;
 extern unsigned int *auStack_130;
 extern unsigned int *auStack_bc;
 extern unsigned int *auStack_d0;
-extern int fn_82F69148();
+extern int _blkmov();
 extern int fn_82FA5190();
 extern int fn_82FA9410();
 extern int fn_82FA9648();
@@ -241,7 +241,7 @@ LAB_82fb5b4c:
         piVar6 = (int *)fn_82FB6240(param_1 + 0x54);
         if ((piVar6 == (int *)0x0) || (*piVar6 = iVar4, iVar4 == 0)) goto LAB_82fb5c24;
         if (uVar14 < (uVar15 & 0xffffffff)) {
-          fn_82F69148(uVar14,uVar14 + 4,
+          _blkmov(uVar14,uVar14 + 4,
                        ((((-1 - uVar14) + uVar15 & 0xffffffff) >> 2) + 1) * 4 & 0xfffffffc);
         }
         uVar12 = uVar12 - 4;

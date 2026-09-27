@@ -46,7 +46,7 @@ void fn_83098750(int *param_1,int param_2,int param_3,undefined4 *param_4)
   undefined4 uVar4;
   undefined4 uVar5;
   undefined4 uVar6;
-  undefined1 auStack_30 [16];
+  undefined1 auStack_30 [1];
   undefined4 uStack_20;
   int iStack_1c;
   undefined4 uStack_18;

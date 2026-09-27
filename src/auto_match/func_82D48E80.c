@@ -46,7 +46,7 @@ char * fn_82D48E80(char *param_1,int param_2,int param_3,int param_4)
   int *piVar9;
   char cStack_260;
   char cStack_25f;
-  undefined1 auStack_25e [14];
+  undefined1 auStack_25e [1];
   undefined1 auStack_250 [592];
   
   iVar5 = KeTlsGetValue(lbl_8323B4A0);

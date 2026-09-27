@@ -97,7 +97,7 @@ void fn_82E19000(int *param_1,int param_2,undefined4 param_3,undefined8 param_4,
   undefined8 auStack_2c0 [2];
   undefined8 uStack_2b0;
   undefined8 uStack_2a8;
-  undefined1 auStack_2a0 [672];
+  undefined1 auStack_2a0 [512];
   
   iStack0000001c = param_2;
   uStack00000024 = param_3;

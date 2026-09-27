@@ -31,16 +31,16 @@ undefined8 fn_82E65420(int param_1,int *param_2,undefined4 *param_3,undefined4 *
 
 {
   undefined8 uVar1;
-  int aiStack_30 [12];
+  int aiStack_30;
   
-  aiStack_30[0] = 0;
+  aiStack_30 = 0;
   if (param_2 == (int *)0x0) {
     uVar1 = 0xffffffff80070057;
   }
   else {
-    uVar1 = (**(code **)(**(int **)(param_1 + 0xc) + 0xc))(*(int **)(param_1 + 0xc),aiStack_30,0,0);
+    uVar1 = (**(code **)(**(int **)(param_1 + 0xc) + 0xc))(*(int **)(param_1 + 0xc),&aiStack_30,0,0);
     if (-1 < (int)uVar1) {
-      *param_2 = *(int *)(param_1 + 0x10) + aiStack_30[0];
+      *param_2 = *(int *)(param_1 + 0x10) + aiStack_30;
       if (param_4 != (undefined4 *)0x0) {
         *param_4 = *(undefined4 *)(param_1 + 0x14);
       }

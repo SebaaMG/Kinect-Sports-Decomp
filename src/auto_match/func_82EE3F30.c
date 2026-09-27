@@ -44,7 +44,7 @@ undefined8 fn_82EE3F30(int param_1)
   ulonglong uVar4;
   int *piStack_50;
   int iStack_4c;
-  int aiStack_48 [18];
+  int aiStack_48;
   
   if (*(int *)(param_1 + 0xc) == 0) {
     uVar2 = 0xffffffffc00d36b6;
@@ -61,8 +61,8 @@ undefined8 fn_82EE3F30(int param_1)
             do {
               fn_82EE34E0(iVar1 + 0x44,uVar4,&iStack_4c);
               if (*(int *)(iStack_4c + 4) != 0) {
-                fn_82EE34E0(iVar1 + 0x44,uVar4,aiStack_48);
-                if (*(int *)(aiStack_48[0] + 4) != 0) {
+                fn_82EE34E0(iVar1 + 0x44,uVar4,&aiStack_48);
+                if (*(int *)(aiStack_48 + 4) != 0) {
                   fn_82E4FE40();
                 }
               }
@@ -84,8 +84,8 @@ undefined8 fn_82EE3F30(int param_1)
     uVar3 = 0;
     if (*(int *)(param_1 + 0x170) != 0) {
       do {
-        fn_82EE34E0(param_1 + 0xb4,uVar3,aiStack_48);
-        if (*(int *)(aiStack_48[0] + 4) != 0) {
+        fn_82EE34E0(param_1 + 0xb4,uVar3,&aiStack_48);
+        if (*(int *)(aiStack_48 + 4) != 0) {
           fn_82EE34E0(param_1 + 0xb4,uVar3,&iStack_4c);
           if (*(int *)(iStack_4c + 4) != 0) {
             fn_82E4FE40();

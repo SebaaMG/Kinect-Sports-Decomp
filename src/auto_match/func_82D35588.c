@@ -40,7 +40,7 @@ void fn_82D35588(int param_1,int param_2)
   undefined1 *puStack_230;
   uint uStack_22c;
   uint uStack_228;
-  undefined1 auStack_224 [548];
+  undefined1 auStack_224 [500];
   
   if (param_2 != 0) {
     puStack_230 = auStack_224;

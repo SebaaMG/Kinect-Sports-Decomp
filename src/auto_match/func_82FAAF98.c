@@ -42,7 +42,7 @@ ulonglong fn_82FAAF98(int param_1,undefined8 param_2,undefined4 *param_3,uint *p
   int iVar4;
   int iVar5;
   ulonglong uVar2;
-  uint auStack_60 [2];
+  uint auStack_60;
   uint uStack_58;
   int *piStack_54;
   uint uStack_50;
@@ -65,13 +65,13 @@ ulonglong fn_82FAAF98(int param_1,undefined8 param_2,undefined4 *param_3,uint *p
     }
     piStack_4c = piStack_54;
     uStack_50 = uStack_58;
-    iVar5 = (**(code **)(*piVar3 + 0xc))(piVar3,*(undefined4 *)(param_1 + 8),&uStack_50,auStack_60);
+    iVar5 = (**(code **)(*piVar3 + 0xc))(piVar3,*(undefined4 *)(param_1 + 8),&uStack_50,&auStack_60);
     _uStack_50 = CONCAT44(uStack_50,iVar5);
     if (iVar5 != 0) {
       if (*(int *)(iVar5 + 0x40) == 0) {
         if (((iVar4 == 1) && (iVar1 != 0)) && ((*(byte *)(iVar1 + 0x34) & 0x80) != 0)) {
-          *param_4 = auStack_60[0] - piVar3[3];
-          return (ulonglong)auStack_60[0];
+          *param_4 = auStack_60 - piVar3[3];
+          return (ulonglong)auStack_60;
         }
       }
       else if ((iVar4 != 3) || ((*(byte *)(*(int *)(iVar5 + 0x40) + 0x34) & 0x80) != 0)) {
@@ -79,11 +79,11 @@ ulonglong fn_82FAAF98(int param_1,undefined8 param_2,undefined4 *param_3,uint *p
         uVar2 = fn_82FAAC50(param_1,&uStack_50,param_2,param_4);
         if ((uVar2 & 0xffffffff) < 4) {
           if ((int)uVar2 == 0) {
-            return (ulonglong)*param_4 + (ulonglong)auStack_60[0];
+            return (ulonglong)*param_4 + (ulonglong)auStack_60;
           }
           if ((uVar2 != 1) && (iVar4 != 3)) {
             *param_4 = 0;
-            return (ulonglong)auStack_60[0];
+            return (ulonglong)auStack_60;
           }
         }
         return 0;

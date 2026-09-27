@@ -45,7 +45,7 @@ void fn_830171D8(int param_1,ulonglong param_2)
   uint uStack_4c;
   undefined4 *puStack_48;
   undefined4 *puStack_44;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [16];
   
   RtlEnterCriticalSection(param_1 + 0x720);
   if ((param_2 & 0xffffffff) == 0) {

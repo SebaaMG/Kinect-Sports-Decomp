@@ -35,11 +35,11 @@ undefined8 fn_82D0FE70(undefined8 param_1,undefined8 param_2,int *param_3)
   undefined8 uVar2;
   int iVar3;
   int iVar4;
-  undefined4 *apuStack_30 [12];
+  undefined4 * apuStack_30;
   
   iVar3 = param_3[1];
-  fn_82D0FA60(param_1,param_2,apuStack_30);
-  if (apuStack_30[0] == (undefined4 *)0x0) {
+  fn_82D0FA60(param_1,param_2,&apuStack_30);
+  if (apuStack_30 == (undefined4 *)0x0) {
     if (iVar3 < param_3[1]) {
       iVar4 = iVar3 << 2;
       do {
@@ -55,7 +55,7 @@ undefined8 fn_82D0FE70(undefined8 param_1,undefined8 param_2,int *param_3)
     param_3[1] = 0;
   }
   else {
-    (**(code **)*apuStack_30[0])(apuStack_30[0],1);
+    (**(code **)*apuStack_30)(apuStack_30,1);
     uVar2 = 1;
   }
   return uVar2;

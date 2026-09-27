@@ -39,7 +39,7 @@ undefined8 fn_82FB7468(int param_1,undefined8 param_2,undefined8 param_3,int *pa
   undefined8 uVar1;
   int iVar2;
   int *piVar3;
-  undefined4 auStack_40 [16];
+  undefined4 auStack_40;
   
   piVar3 = (int *)(param_1 + 0x40);
   fn_82FAD100(piVar3);
@@ -51,9 +51,9 @@ undefined8 fn_82FB7468(int param_1,undefined8 param_2,undefined8 param_3,int *pa
       uVar1 = 2;
     }
     else {
-      auStack_40[0] = *(undefined4 *)(param_1 + 0x44);
+      auStack_40 = *(undefined4 *)(param_1 + 0x44);
       *(int *)(param_1 + 0x50) = iVar2;
-      (**(code **)(*piVar3 + 4))(piVar3,auStack_40,0);
+      (**(code **)(*piVar3 + 4))(piVar3,&auStack_40,0);
       if (*(int *)(param_1 + 0xc) == 0) {
         uVar1 = fn_82FAD5B0(piVar3);
       }

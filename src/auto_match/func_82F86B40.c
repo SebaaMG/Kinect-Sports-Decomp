@@ -25,13 +25,13 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F80548();
+extern int SkipUnwoundFrames();
 
 
-void fn_82F86B40(undefined8 param_1,int param_2,undefined8 param_3,undefined8 param_4)
+void _SkipUnwoundFrames(undefined8 param_1,int param_2,undefined8 param_3,undefined8 param_4)
 
 {
-  fn_82F80548(param_1,param_4,*(undefined4 *)(param_2 + -0x58));
+  SkipUnwoundFrames(param_1,param_4,*(undefined4 *)(param_2 + -0x58));
   return;
 }
 

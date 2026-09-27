@@ -35,7 +35,7 @@ fn_82EF3718(int param_1,ulonglong param_2,undefined2 *param_3,undefined4 *param_
 {
   undefined8 uVar1;
   undefined2 *puStack_50;
-  int aiStack_4c [19];
+  int aiStack_4c;
   
   uVar1 = 0;
   if ((((param_3 == (undefined2 *)0x0) || (param_4 == (undefined4 *)0x0)) ||
@@ -48,12 +48,12 @@ fn_82EF3718(int param_1,ulonglong param_2,undefined2 *param_3,undefined4 *param_
     param_1 = param_1 + 0x58;
     fn_82EF2CB8(param_1,param_2,&puStack_50);
     *param_3 = *puStack_50;
-    fn_82EF2CB8(param_1,param_2,aiStack_4c);
-    *param_4 = *(undefined4 *)(aiStack_4c[0] + 4);
+    fn_82EF2CB8(param_1,param_2,&aiStack_4c);
+    *param_4 = *(undefined4 *)(aiStack_4c + 4);
     fn_82EF2CB8(param_1,param_2,&puStack_50);
     *param_5 = *(undefined4 *)(puStack_50 + 4);
-    fn_82EF2CB8(param_1,param_2,aiStack_4c);
-    *param_6 = *(undefined4 *)(aiStack_4c[0] + 0x10);
+    fn_82EF2CB8(param_1,param_2,&aiStack_4c);
+    *param_6 = *(undefined4 *)(aiStack_4c + 0x10);
     fn_82EF2CB8(param_1,param_2,&puStack_50);
     *param_7 = puStack_50[10];
   }

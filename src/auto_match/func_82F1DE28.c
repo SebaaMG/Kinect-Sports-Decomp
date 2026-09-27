@@ -33,8 +33,7 @@ extern unsigned int lbl_820DA2C8;
 extern unsigned int lbl_82162850;
 
 
-void fn_82F1DE28(int param_1,int param_2,ulonglong param_3,int param_4,ulonglong param_5,
-                  longlong param_6,undefined8 param_7,undefined8 param_8)
+void fn_82F1DE28(int param_1, int param_2, ulonglong param_3, int param_4, ulonglong param_5, longlong param_6, undefined8 param_7, undefined8 param_8, undefined8 unused_arg_9, undefined8 unused_arg_10, undefined8 unused_arg_11, int in_stack_0000006c)
 
 {
   short sVar1;
@@ -62,12 +61,12 @@ void fn_82F1DE28(int param_1,int param_2,ulonglong param_3,int param_4,ulonglong
   double dVar23;
   double dVar24;
   short *in_stack_0000005c;
-  int in_stack_0000006c;
+
   short sStack_312;
   short asStack_310 [12];
   longlong lStack_2f8;
   undefined1 auStack_2f0 [48];
-  short asStack_2c0 [352];
+  short asStack_2c0 [288];
   
   lVar20 = 6;
   puVar11 = (undefined4 *)(param_2 + 0x98);

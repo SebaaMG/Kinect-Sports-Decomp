@@ -44,10 +44,10 @@ longlong fn_82E461E0(int *param_1,int *param_2,longlong param_3)
   uint uStack_4c;
   int *piStack_48;
   int *piStack_44;
-  uint auStack_40 [16];
+  uint auStack_40;
   
   uStack_50 = 0;
-  auStack_40[0] = 0;
+  auStack_40 = 0;
   uStack_4c = 0;
   piStack_48 = (int *)0x0;
   piStack_44 = (int *)0x0;
@@ -60,9 +60,9 @@ longlong fn_82E461E0(int *param_1,int *param_2,longlong param_3)
   lVar1 = (**(code **)(*param_2 + 0x14))(param_2,&uStack_50);
   if (lVar1 < 0) goto LAB_82e46474;
   if (param_3 == 0) {
-    lVar1 = (**(code **)(*(int *)param_1[6] + 0x14))((int *)param_1[6],auStack_40);
+    lVar1 = (**(code **)(*(int *)param_1[6] + 0x14))((int *)param_1[6],&auStack_40);
     if (lVar1 < 0) goto LAB_82e46474;
-    if (uStack_50 < auStack_40[0]) {
+    if (uStack_50 < auStack_40) {
       lVar1 = -0x3ff2c94f;
       goto LAB_82e46474;
     }

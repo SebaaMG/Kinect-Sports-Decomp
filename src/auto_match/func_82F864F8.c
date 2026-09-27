@@ -37,7 +37,7 @@ undefined8 fn_82F864F8(undefined8 param_1,undefined8 param_2)
   ulonglong uVar1;
   int iVar2;
   undefined1 auStack_30 [8];
-  undefined1 auStack_28 [16];
+  undefined1 auStack_28 [1];
   
   uVar1 = fn_82F819D0(auStack_28,auStack_30,param_2,0,0,0,0,0xffffffff831bbca8);
   iVar2 = fn_82F86B68(auStack_28,param_1);

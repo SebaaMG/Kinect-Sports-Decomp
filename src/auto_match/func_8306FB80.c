@@ -67,8 +67,8 @@ void fn_8306FB80(undefined8 param_1,undefined8 param_2)
   undefined1 in_vs35 [16];
   undefined1 in_vs42 [16];
   undefined1 in_vs43 [16];
-  float fStack_d0;
-  float fStack_cc;
+  struct { float first; float second; } stack_pair_d0;
+
   float fStack_c8;
   float fStack_c4;
   undefined1 auStack_c0 [16];
@@ -78,7 +78,7 @@ void fn_8306FB80(undefined8 param_1,undefined8 param_2)
   float fStack_9c;
   undefined1 auStack_90 [4];
   float fStack_8c;
-  undefined1 auStack_80 [104];
+  undefined1 auStack_80 [56];
   
   iVar1 = fn_82F6DA24();
   fn_83075D30(auStack_c0);
@@ -87,8 +87,8 @@ void fn_8306FB80(undefined8 param_1,undefined8 param_2)
   altv207_13(in_vs32,in_vs35);
   fStack_c4 = lbl_82002C5C;
   fStack_c8 = lbl_82002C5C;
-  fStack_cc = lbl_82002C5C;
-  fStack_d0 = lbl_82002C5C;
+  stack_pair_d0.second = lbl_82002C5C;
+  stack_pair_d0.first = lbl_82002C5C;
   altv207_13(in_vs32,in_vs42);
   fn_8306ED30();
   dVar2 = (double)fn_8306EE38();
@@ -96,21 +96,21 @@ void fn_8306FB80(undefined8 param_1,undefined8 param_2)
     fn_8306ED38((double)lbl_82186E24);
     fn_83075DB8(param_2,0xc);
     fn_83075DB8(param_2,0x10);
-    fn_83075D30(&fStack_d0,param_2,4);
+    fn_83075D30(&stack_pair_d0.first,param_2,4);
     fn_83075D30(auStack_80,param_2,8);
     dVar3 = (double)fn_8306ED98();
     fn_8306ED98();
-    fStack_d0 = (float)(dVar3 / (double)(float)(dVar2 * dVar2)) - lbl_820AA968;
-    dVar2 = (double)fStack_d0;
+    stack_pair_d0.first = (float)(dVar3 / (double)(float)(dVar2 * dVar2)) - lbl_820AA968;
+    dVar2 = (double)stack_pair_d0.first;
     altv207_13(in_vs32,in_vs42);
-    fStack_cc = fStack_d0;
-    fStack_c8 = fStack_d0;
-    fStack_c4 = fStack_d0;
+    stack_pair_d0.second = stack_pair_d0.first;
+    fStack_c8 = stack_pair_d0.first;
+    fStack_c4 = stack_pair_d0.first;
     fn_83075DB8(param_2,4);
     fStack_c4 = (float)dVar2;
     fStack_c8 = (float)dVar2;
-    fStack_cc = (float)dVar2;
-    fStack_d0 = (float)dVar2;
+    stack_pair_d0.second = (float)dVar2;
+    stack_pair_d0.first = (float)dVar2;
     altv207_13(in_vs32,in_vs43);
     fn_83075DB8(param_2,8);
     fn_83075D30(auStack_90,param_2,0);

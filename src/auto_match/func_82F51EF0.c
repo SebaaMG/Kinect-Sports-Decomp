@@ -47,18 +47,18 @@ void fn_82F51EF0(int param_1,char param_2)
   uint *puVar6;
   char in_RESERVE;
   byte in_cr0;
-  undefined4 uStack_30;
-  int iStack_2c;
+  struct { undefined4 first; int second; } stack_pair_30;
+
   undefined1 auStack_28 [4];
   int *piStack_24;
   
   puVar2 = (undefined4 *)fn_82F57198(auStack_28,*(undefined4 *)(*(int *)(param_1 + 4) + 4));
-  uStack_30 = 0;
-  iStack_2c = 0;
-  fn_82517978(&uStack_30,*puVar2,puVar2[1],0);
-  puVar3 = (uint *)fn_823D22D0(uStack_30);
-  if (iStack_2c != 0) {
-    fn_822315A0(iStack_2c);
+  stack_pair_30.first = 0;
+  stack_pair_30.second = 0;
+  fn_82517978(&stack_pair_30.first,*puVar2,puVar2[1],0);
+  puVar3 = (uint *)fn_823D22D0(stack_pair_30.first);
+  if (stack_pair_30.second != 0) {
+    fn_822315A0(stack_pair_30.second);
   }
   if (ZEXT48(piStack_24) != 0) {
     lVar5 = ZEXT48(piStack_24) + 8;

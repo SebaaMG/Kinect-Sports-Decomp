@@ -67,7 +67,7 @@ fn_82DDD950(double param_1,undefined8 param_2,undefined8 param_3,int param_4,und
   undefined4 uVar11;
   undefined4 uVar12;
   undefined4 in_stack_00000054;
-  undefined1 auStack_d0 [16];
+  undefined1 auStack_d0 [1];
   undefined1 auStack_c0 [16];
   undefined1 auStack_b0 [16];
   undefined1 auStack_a0 [16];

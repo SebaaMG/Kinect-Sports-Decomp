@@ -41,7 +41,7 @@ void fn_82FAA228(int param_1)
   undefined4 uVar3;
   ulonglong uVar4;
   ulonglong uVar5;
-  uint auStack_50 [2];
+  uint auStack_50;
   ulonglong uStack_48;
   undefined8 uStack_40;
   
@@ -60,10 +60,10 @@ void fn_82FAA228(int param_1)
       while( true ) {
         uStack_40 = uStack_48;
         uVar3 = (**(code **)(*(int *)uVar2 + 0xc))
-                          (uVar2,*(undefined4 *)(param_1 + 8),&uStack_40,auStack_50);
+                          (uVar2,*(undefined4 *)(param_1 + 8),&uStack_40,&auStack_50);
         uStack_40 = CONCAT44((((U64)(uStack_40) >> 0) & 0xFFFFFFFF),uVar3);
-        uVar5 = (ulonglong)auStack_50[0];
-        if ((int)uVar4 < (int)auStack_50[0]) {
+        uVar5 = (ulonglong)auStack_50;
+        if ((int)uVar4 < (int)auStack_50) {
           uVar5 = uVar4;
         }
         if ((((int *)uVar2)[0x10] != 0) && ((uVar5 & 0xffffffff) != 0)) {

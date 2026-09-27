@@ -36,7 +36,7 @@ extern int fn_82F07248();
 extern int fn_82F0F9A0();
 extern int fn_82F1DDA0();
 extern int fn_82F65350();
-extern int fn_82F691F0();
+extern int memset();
 
 
 void fn_82E8CD90(int param_1,int param_2)
@@ -140,7 +140,7 @@ void fn_82E8CD90(int param_1,int param_2)
   }
   if ((*(int *)(param_1 + 0x7984) != 0) && (*(int *)(param_1 + 0x4f2c) == 0)) {
                     /* WARNING: Subroutine does not return */
-    fn_82F691F0(*(undefined4 *)(param_1 + 0x79a0),0,*(undefined4 *)(param_1 + 0x2d4));
+    memset(*(undefined4 *)(param_1 + 0x79a0),0,*(undefined4 *)(param_1 + 0x2d4));
   }
   if ((*(int *)(param_1 + 0x1be4) == 0) || (param_2 == 0)) {
     fn_82F0F9A0(param_1,1);

@@ -44,7 +44,7 @@ void fn_82CFA0B8(int param_1,undefined8 param_2,undefined8 param_3,undefined8 pa
   ulonglong uVar1;
   longlong lVar2;
   undefined1 auStack_870 [8];
-  undefined1 auStack_868 [72];
+  undefined1 auStack_868 [56];
   undefined1 auStack_820 [2047];
   undefined1 uStack_21;
   

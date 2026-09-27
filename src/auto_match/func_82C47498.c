@@ -40,7 +40,7 @@ undefined8 fn_82C47498(int param_1)
   int iStack_30;
   undefined4 uStack_2c;
   undefined4 uStack_28;
-  undefined4 auStack_24 [3];
+  undefined4 auStack_24;
   
   iStack_30 = *(int *)(*(int *)(param_1 + 0x50) + 0x18);
   if (iStack_30 != 0) {
@@ -49,8 +49,8 @@ undefined8 fn_82C47498(int param_1)
       fn_82A9FA30(*(undefined4 *)(iVar1 + 0x2c),0,&uStack_28,4,&uStack_2c,&iStack_30);
       *(int *)(iVar1 + 0x18) = iStack_30;
       if (*(int *)(*(int *)(iVar1 + 0x28) + 0x3cb0) == 7) {
-        auStack_24[0] = uStack_28;
-        fn_82C7CA40(*(int *)(iVar1 + 0x28),uStack_28,uStack_2c,auStack_24,&uStack_2c,iStack_30
+        auStack_24 = uStack_28;
+        fn_82C7CA40(*(int *)(iVar1 + 0x28),uStack_28,uStack_2c,&auStack_24,&uStack_2c,iStack_30
                          );
       }
     }

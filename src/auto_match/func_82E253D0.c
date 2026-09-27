@@ -39,7 +39,7 @@ fn_82E253D0(int param_1,int *param_2,undefined8 param_3,undefined8 param_4,undef
 {
   undefined8 uVar1;
   undefined4 *puVar2;
-  undefined4 auStack_40 [16];
+  undefined4 auStack_40;
   
   puVar2 = (undefined4 *)(param_1 + 0x104);
   if (*(int *)(param_1 + 0x104) == 0) {
@@ -56,12 +56,12 @@ fn_82E253D0(int param_1,int *param_2,undefined8 param_3,undefined8 param_4,undef
     if (-1 < (int)uVar1) {
       uVar1 = fn_82E24948(param_1,param_3,param_4,param_5,param_6);
       if (-1 < (int)uVar1) {
-        auStack_40[0] = 0;
+        auStack_40 = 0;
         uVar1 = fn_82E25140(param_1);
         if ((-1 < (int)uVar1) &&
            (uVar1 = (**(code **)(**(int **)(param_1 + 0x108) + 0x14))
-                              (*(int **)(param_1 + 0x108),0,auStack_40), -1 < (int)uVar1)) {
-          uVar1 = (**(code **)(*(int *)*puVar2 + 0x1c))((int *)*puVar2,auStack_40[0]);
+                              (*(int **)(param_1 + 0x108),0,&auStack_40), -1 < (int)uVar1)) {
+          uVar1 = (**(code **)(*(int *)*puVar2 + 0x1c))((int *)*puVar2,auStack_40);
         }
       }
     }

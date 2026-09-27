@@ -44,7 +44,7 @@ void fn_82E00CC0(int param_1,int param_2)
   uint uVar4;
   float *pfVar5;
   uint uVar6;
-  undefined1 auStack_60 [96];
+  undefined1 auStack_60 [48];
   
   bVar1 = *(byte *)(*(int *)(param_2 + 0x1c) + 0x20);
   uVar6 = (uint)bVar1;

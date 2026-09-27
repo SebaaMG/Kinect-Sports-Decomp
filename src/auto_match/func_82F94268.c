@@ -44,9 +44,9 @@ void fn_82F94268(int *param_1)
   undefined8 uVar1;
   char cVar2;
   int *piStack00000014;
-  undefined1 auStack_50 [12];
+  undefined1 auStack_50 [1];
   undefined1 auStack_44 [4];
-  undefined8 auStack_40 [2];
+  undefined8 auStack_40;
   undefined1 auStack_30 [8];
   undefined1 auStack_28 [24];
   
@@ -56,11 +56,11 @@ void fn_82F94268(int *param_1)
     if (piStack00000014 != (int *)0x0) {
       (**(code **)(*piStack00000014 + 0x2c))(piStack00000014,1);
     }
-    fn_82F95200(auStack_40,0xffffffff832641f0,auStack_44);
+    fn_82F95200(&auStack_40,0xffffffff832641f0,auStack_44);
     uVar1 = fn_82F94750(auStack_30,0xffffffff832641f0);
-    cVar2 = fn_82F952E8(auStack_40,uVar1);
+    cVar2 = fn_82F952E8(&auStack_40,uVar1);
     if (cVar2 != '\0') {
-      fn_82F949D0(auStack_28,0xffffffff832641f0,auStack_40[0]);
+      fn_82F949D0(auStack_28,0xffffffff832641f0,auStack_40);
     }
   }
   fn_82F90680(auStack_50);

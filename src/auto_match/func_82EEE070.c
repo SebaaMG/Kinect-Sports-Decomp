@@ -41,7 +41,7 @@ longlong fn_82EEE070(int *param_1,int *param_2,undefined8 param_3,uint param_4,i
   longlong lVar1;
   int iVar2;
   uint uStack0000002c;
-  int aiStack_50 [20];
+  int aiStack_50;
   
   uStack0000002c = param_4;
   fn_82F41920(param_2);
@@ -50,12 +50,12 @@ longlong fn_82EEE070(int *param_1,int *param_2,undefined8 param_3,uint param_4,i
   lVar1 = (**(code **)(*param_1 + 0x14))(param_1,-(ulonglong)(param_7 != 0) & 0x20000,param_2);
   fn_82F41758(param_2);
   if (-1 < (int)lVar1) {
-    aiStack_50[0] = 0;
-    lVar1 = (**(code **)(*param_1 + 0x20))(param_1,aiStack_50);
+    aiStack_50 = 0;
+    lVar1 = (**(code **)(*param_1 + 0x20))(param_1,&aiStack_50);
     if (-1 < lVar1) {
       iVar2 = 0;
       lVar1 = 1;
-      if (0 < aiStack_50[0]) {
+      if (0 < aiStack_50) {
         do {
           if ((int)lVar1 != 1) break;
           *param_2 = iVar2;
@@ -70,7 +70,7 @@ longlong fn_82EEE070(int *param_1,int *param_2,undefined8 param_3,uint param_4,i
                             (param_1,-(ulonglong)(param_7 != 0) & 0x20000 | 0x401,param_2);
           if (lVar1 < 0) goto LAB_82eee228;
           iVar2 = iVar2 + 1;
-        } while (iVar2 < aiStack_50[0]);
+        } while (iVar2 < aiStack_50);
         if ((int)lVar1 < 0) goto LAB_82eee228;
         if ((int)lVar1 != 1) {
           if ((param_5 == 0) || (iVar2 = fn_82EED968(param_1 + 2,param_2,0), iVar2 != 0)) {

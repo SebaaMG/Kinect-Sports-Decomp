@@ -46,7 +46,7 @@ double fn_82D2A740(int param_1,int param_2)
   undefined4 uVar9;
   undefined4 uVar10;
   undefined4 uVar11;
-  undefined1 auStack_40 [16];
+  undefined1 auStack_40 [1];
   undefined1 auStack_30 [24];
   
   iVar1 = *(int *)(param_2 + 0x20);

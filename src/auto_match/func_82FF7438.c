@@ -34,15 +34,15 @@ undefined8 fn_82FF7438(longlong param_1,int param_2,undefined4 param_3)
 
 {
   int iVar1;
-  int iStack_20;
-  undefined4 uStack_1c;
+  struct { int first; undefined4 second; } stack_pair_20;
+
   
   if (param_2 == 0) {
     return 0x1f;
   }
-  iStack_20 = param_2;
-  uStack_1c = param_3;
-  iVar1 = fn_82FF82A8(param_1 + 0x10,&iStack_20);
+  stack_pair_20.first = param_2;
+  stack_pair_20.second = param_3;
+  iVar1 = fn_82FF82A8(param_1 + 0x10,&stack_pair_20.first);
   if (iVar1 == 0) {
     return 2;
   }

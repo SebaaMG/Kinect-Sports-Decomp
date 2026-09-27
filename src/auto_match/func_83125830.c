@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_82230040();
 extern int fn_8265C9E0();
-extern int fn_82F63EC8();
+extern int atexit();
 extern unsigned int lbl_82002B04;
 extern unsigned int lbl_83297038;
 extern unsigned int uStack_c;
@@ -48,7 +48,7 @@ void fn_83125830(void)
     *(int *)(lbl_83297038 + 8) = lbl_83297038;
     *(undefined1 *)(lbl_83297038 + 0x10) = 1;
     *(undefined1 *)(lbl_83297038 + 0x11) = 1;
-    fn_82F63EC8(0xffffffff8313fa00);
+    atexit(0xffffffff8313fa00);
     return;
   }
   uStack_c = 0;

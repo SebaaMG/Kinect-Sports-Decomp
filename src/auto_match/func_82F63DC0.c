@@ -26,15 +26,15 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_82F63EA4();
-extern int fn_82F6CB60();
-extern int fn_82F70530();
-extern int fn_82F70620();
+extern int _lockexit();
+extern int realloc();
+extern int _msize();
 extern unsigned int lbl_8329F724;
 extern unsigned int lbl_8329F728;
 extern unsigned int uStack_60;
 
 
-undefined4 fn_82F63DC0(undefined4 param_1)
+undefined4 _onexit(undefined4 param_1)
 
 {
   undefined4 *puVar1;
@@ -44,23 +44,23 @@ undefined4 fn_82F63DC0(undefined4 param_1)
   uint uVar5;
   undefined4 uStack_60;
   
-  fn_82F6CB60();
+  _lockexit();
   puVar1 = lbl_8329F728;
   puVar3 = lbl_8329F724;
   if (lbl_8329F728 <= lbl_8329F724) {
     iVar4 = (int)lbl_8329F724 - (int)lbl_8329F728;
     uVar5 = iVar4 + 4;
     if (3 < uVar5) {
-      uVar2 = fn_82F70620(lbl_8329F728);
+      uVar2 = _msize(lbl_8329F728);
       if (uVar2 < uVar5) {
         uVar5 = uVar2;
         if (0x7ff < uVar2) {
           uVar5 = 0x800;
         }
         if (((uVar5 + uVar2 < uVar2) ||
-            (puVar3 = (undefined4 *)fn_82F70530(puVar1), puVar3 == (undefined4 *)0x0)) &&
+            (puVar3 = (undefined4 *)realloc(puVar1), puVar3 == (undefined4 *)0x0)) &&
            ((uVar2 + 0x10 < uVar2 ||
-            (puVar3 = (undefined4 *)fn_82F70530(puVar1), puVar3 == (undefined4 *)0x0))))
+            (puVar3 = (undefined4 *)realloc(puVar1), puVar3 == (undefined4 *)0x0))))
         goto LAB_82f63e84;
         lbl_8329F728 = puVar3;
         puVar3 = lbl_8329F728 + (iVar4 >> 2);

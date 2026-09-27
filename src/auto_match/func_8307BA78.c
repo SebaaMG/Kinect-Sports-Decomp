@@ -44,7 +44,7 @@ int fn_8307BA78(int param_1,int param_2)
   undefined4 uVar3;
   undefined4 uVar4;
   undefined4 uVar5;
-  undefined1 auStack_40 [16];
+  undefined1 auStack_40 [1];
   undefined1 auStack_30 [24];
   
   fn_83078FA8(auStack_40,*(undefined4 *)(*(int *)(param_2 + 0xb4) + 0x709c));

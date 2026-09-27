@@ -40,16 +40,16 @@ void fn_82E1A7F0(undefined8 param_1)
   undefined8 uVar1;
   undefined8 uVar2;
   int iVar3;
-  char acStack_30 [48];
+  char acStack_30;
   
   uVar1 = fn_82CFFFC8();
-  fn_82D002F0(acStack_30,param_1,uVar1);
-  while (acStack_30[0] != '\0') {
+  fn_82D002F0(&acStack_30,param_1,uVar1);
+  while (acStack_30 != '\0') {
     uVar2 = fn_82D00000(param_1,uVar1);
     iVar3 = fn_82CE5410();
     fn_82CFBF28(uVar2,*(undefined4 *)(iVar3 + 0x10));
     uVar1 = fn_82D00060(param_1,uVar1);
-    fn_82D002F0(acStack_30,param_1,uVar1);
+    fn_82D002F0(&acStack_30,param_1,uVar1);
   }
   fn_82D002A8(param_1);
   return;

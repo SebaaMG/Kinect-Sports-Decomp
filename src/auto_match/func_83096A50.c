@@ -33,7 +33,7 @@ undefined1 * fn_83096A50(undefined1 *param_1,int param_2,int *param_3)
 {
   int iVar1;
   char *pcVar2;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [1];
   
   iVar1 = *param_3;
   if (((iVar1 != 0) && (*(int **)(param_2 + 0x14) != param_3)) &&

@@ -36,18 +36,18 @@ undefined8 fn_82C107F8(int param_1,int param_2,undefined8 param_3,undefined8 par
   undefined8 uVar1;
   int *piVar2;
   undefined4 auStack_30 [4];
-  undefined4 uStack_20;
-  undefined4 uStack_1c;
+  struct { undefined4 first; undefined4 second; } stack_pair_20;
+
   
   auStack_30[0] = 0;
-  uStack_20 = 0;
-  uStack_1c = 0;
+  stack_pair_20.first = 0;
+  stack_pair_20.second = 0;
   if ((-1 < param_2) && (param_2 < 0x7f)) {
     piVar2 = (int *)(param_2 * 0xc + param_1);
     if (*piVar2 == 0) {
       return 0xffffffff805000b6;
     }
-    uVar1 = (*(code *)piVar2[1])(piVar2[2],param_3,param_4,auStack_30,&uStack_20);
+    uVar1 = (*(code *)piVar2[1])(piVar2[2],param_3,param_4,auStack_30,&stack_pair_20.first);
     return uVar1;
   }
   return 0xffffffff80070057;

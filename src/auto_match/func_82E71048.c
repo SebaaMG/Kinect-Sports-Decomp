@@ -48,7 +48,7 @@ longlong fn_82E71048(int param_1,ulonglong param_2,undefined8 param_3,ulonglong 
   uint uStack_9c;
   uint uStack_98;
   uint uStack_94;
-  uint auStack_90 [2];
+  uint auStack_90;
   ulonglong uStack_88;
   longlong lStack_80;
   longlong alStack_78 [15];
@@ -99,7 +99,7 @@ longlong fn_82E71048(int param_1,ulonglong param_2,undefined8 param_3,ulonglong 
           if ((uVar5 & 0xffffffff) < (ulonglong)uStack_9c) {
             do {
               alStack_78[0] = 0;
-              auStack_90[0] = 0;
+              auStack_90 = 0;
               lVar2 = (**(code **)(*piStack_a0 + 0x2c))
                                 (piStack_a0,uVar5,*(undefined2 *)(param_1 + 8),param_3,alStack_78);
               piVar3 = piStack_a0;
@@ -108,11 +108,11 @@ longlong fn_82E71048(int param_1,ulonglong param_2,undefined8 param_3,ulonglong 
               lVar2 = fn_82E6FC88(param_1,lVar6);
               piVar3 = piStack_a0;
               if ((lVar2 < 0) ||
-                 (lVar2 = fn_82E6F498(param_1,lVar6,auStack_90), piVar3 = piStack_a0, lVar2 < 0))
+                 (lVar2 = fn_82E6F498(param_1,lVar6,&auStack_90), piVar3 = piStack_a0, lVar2 < 0))
               goto LAB_82e712c0;
-              if (auStack_90[0] != param_5) {
+              if (auStack_90 != param_5) {
                 bVar1 = true;
-                param_5 = auStack_90[0];
+                param_5 = auStack_90;
                 goto LAB_82e71274;
               }
               uVar5 = uVar5 + 1;

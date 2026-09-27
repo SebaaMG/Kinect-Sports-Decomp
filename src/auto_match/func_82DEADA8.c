@@ -52,15 +52,15 @@ int fn_82DEADA8(int param_1,int param_2,undefined1 *param_3,int *param_4,undefin
   undefined4 uVar10;
   undefined4 uVar11;
   undefined4 uVar12;
-  byte abStack_60 [8];
+  byte abStack_60;
   undefined8 uStack_58;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [16];
   
   iVar1 = *(int *)(param_1 + 0x98);
   dVar9 = (double)(**(code **)(**(int **)(param_2 + 0xc) + 0x10))();
   uStack_58 = CONCAT44((float)dVar9,(((U64)(uStack_58) >> 32) & 0xFFFFFFFF));
-  fn_82CE5458(abStack_60,&uStack_58);
-  uStack_58 = (longlong)*(float *)(&lbl_82131F88 + (uint)abStack_60[0] * 4);
+  fn_82CE5458(&abStack_60,&uStack_58);
+  uStack_58 = (longlong)*(float *)(&lbl_82131F88 + (uint)abStack_60 * 4);
   *param_5 = (undefined1)uStack_58;
   if (iVar1 != 0) {
     if (param_1 == *(int *)(param_2 + 0x14)) {

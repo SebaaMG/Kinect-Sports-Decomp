@@ -41,7 +41,7 @@ void fn_82D1EE70(int param_1)
   undefined4 uVar5;
   undefined4 uVar6;
   undefined4 uVar7;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [1];
   
   for (puVar1 = *(undefined4 **)(param_1 + 0x2c); puVar1 != (undefined4 *)0x0;
       puVar1 = (undefined4 *)*puVar1) {

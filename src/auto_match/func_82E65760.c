@@ -32,17 +32,17 @@ undefined8 fn_82E65760(int param_1,undefined4 *param_2,int *param_3)
 
 {
   undefined8 uVar1;
-  uint auStack_30 [12];
+  uint auStack_30;
   
-  auStack_30[0] = 0;
-  uVar1 = (**(code **)(**(int **)(param_1 + 8) + 0x14))(*(int **)(param_1 + 8),auStack_30);
+  auStack_30 = 0;
+  uVar1 = (**(code **)(**(int **)(param_1 + 8) + 0x14))(*(int **)(param_1 + 8),&auStack_30);
   if (-1 < (int)uVar1) {
-    if (auStack_30[0] < *(uint *)(param_1 + 0x14)) {
+    if (auStack_30 < *(uint *)(param_1 + 0x14)) {
       uVar1 = 0xffffffff8000ffff;
     }
     else {
       if (param_3 != (int *)0x0) {
-        *param_3 = auStack_30[0] - *(uint *)(param_1 + 0x14);
+        *param_3 = auStack_30 - *(uint *)(param_1 + 0x14);
       }
       if (param_2 != (undefined4 *)0x0) {
         *param_2 = *(undefined4 *)(param_1 + 0xc);

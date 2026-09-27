@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 
 
-void fn_82F6DA48(void)
+void __restvmx(void)
 
 {
   return;

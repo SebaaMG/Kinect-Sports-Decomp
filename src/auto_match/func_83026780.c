@@ -43,7 +43,7 @@ undefined8 fn_83026780(int param_1,uint *param_2)
   int iVar5;
   uint uStack_40;
   uint uStack_3c;
-  uint auStack_38 [14];
+  uint auStack_38;
   
   iVar5 = param_1 + 0x10;
   fn_8303A350((double)*(float *)(*(int *)(param_1 + 0xb0) + 8),iVar5);
@@ -54,15 +54,15 @@ undefined8 fn_83026780(int param_1,uint *param_2)
   do {
     if (uStack_40 == 0) goto LAB_83026888;
     if ((*(short *)(param_1 + 0x6e) == 0) && (*(char *)(param_1 + 0xb8) == '\0')) {
-      auStack_38[0] = (uint)*(ushort *)(param_1 + 0xbe);
-      uVar1 = (**(code **)(**(int **)(param_1 + 4) + 0xc))(*(int **)(param_1 + 4),auStack_38);
+      auStack_38 = (uint)*(ushort *)(param_1 + 0xbe);
+      uVar1 = (**(code **)(**(int **)(param_1 + 4) + 0xc))(*(int **)(param_1 + 4),&auStack_38);
       if ((int)uVar1 != 0x2d) {
         if ((int)uVar1 != 0x11) {
           return uVar1;
         }
         *(undefined1 *)(param_1 + 0xb8) = 1;
       }
-      *(short *)(param_1 + 0x6e) = (short)auStack_38[0];
+      *(short *)(param_1 + 0x6e) = (short)auStack_38;
     }
     uVar2 = (uint)*(ushort *)(param_1 + 0x6e);
     uVar3 = uStack_40;

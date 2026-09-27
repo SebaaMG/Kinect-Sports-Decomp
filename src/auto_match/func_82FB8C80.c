@@ -41,7 +41,7 @@ undefined8 fn_82FB8C80(int *param_1)
   int iVar4;
   uint uVar5;
   int *piVar7;
-  char acStack_40 [64];
+  char acStack_40;
   
   param_1[4] = 0;
   *(undefined1 *)(param_1 + 6) = 1;
@@ -67,21 +67,21 @@ undefined8 fn_82FB8C80(int *param_1)
         return 2;
       }
     }
-    acStack_40[0] = '\0';
+    acStack_40 = '\0';
     while( true ) {
       uVar5 = 0;
       iVar4 = param_1[2] + -0xc;
       uVar1 = *(uint *)(*(int *)(param_1[2] + -0xc) + 0x1c);
       if (uVar1 < 4) {
         if ((uVar1 == 0) || (uVar1 == 1)) {
-          uVar5 = fn_82FB8420(param_1,iVar4,acStack_40);
+          uVar5 = fn_82FB8420(param_1,iVar4,&acStack_40);
         }
         else {
-          uVar5 = fn_82FB8808(param_1,iVar4,acStack_40);
+          uVar5 = fn_82FB8808(param_1,iVar4,&acStack_40);
         }
       }
-      cVar6 = acStack_40[0];
-      if (acStack_40[0] == '\0') {
+      cVar6 = acStack_40;
+      if (acStack_40 == '\0') {
         piVar3 = *(int **)((uVar5 & 0xffff) * 4 + piVar7[4]);
       }
       else {

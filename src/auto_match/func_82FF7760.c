@@ -35,14 +35,14 @@ char fn_82FF7760(longlong param_1,undefined4 param_2,undefined4 param_3,undefine
 
 {
   int iVar1;
-  undefined4 uStack_20;
-  undefined4 uStack_1c;
+  struct { undefined4 first; undefined4 second; } stack_pair_20;
+
   undefined4 uStack_18;
   
-  uStack_20 = param_2;
-  uStack_1c = param_3;
+  stack_pair_20.first = param_2;
+  stack_pair_20.second = param_3;
   uStack_18 = param_4;
-  iVar1 = fn_82FF8358(param_1 + 0x30,&uStack_20);
+  iVar1 = fn_82FF8358(param_1 + 0x30,&stack_pair_20.first);
   return (iVar1 == 0) + '\x01';
 }
 

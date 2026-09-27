@@ -25,7 +25,7 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F66570();
+extern int strchr();
 
 
 ulonglong fn_82E1D888(undefined8 param_1,ulonglong param_2,undefined1 param_3)
@@ -36,7 +36,7 @@ ulonglong fn_82E1D888(undefined8 param_1,ulonglong param_2,undefined1 param_3)
   ulonglong uVar2;
   
   if ((param_2 & 0xffffffff) != 0) {
-    uVar1 = fn_82F66570(param_2,param_3);
+    uVar1 = strchr(param_2,param_3);
     uVar2 = param_2;
     do {
       pcVar3 = (char *)uVar2;

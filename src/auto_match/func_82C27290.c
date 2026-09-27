@@ -63,19 +63,19 @@ undefined8 fn_82C27290(int param_1,longlong param_2)
   byte *pbVar8;
   ulonglong uVar9;
   ulonglong uVar10;
-  short asStack_80 [2];
+  short asStack_80;
   uint uStack_7c;
   uint uStack_78;
   undefined4 uStack_74;
-  uint uStack_70;
-  uint uStack_6c;
+  struct { uint first; uint second; } stack_pair_70;
+
   byte abStack_60 [96];
   
   piVar3 = *(int **)(param_1 + 0x1c);
   uVar9 = param_2 - 0x18;
   uStack_74 = 0;
   uStack_78 = 0;
-  uStack_70 = 0;
+  stack_pair_70.first = 0;
   uVar5 = (**(code **)(*piVar3 + 0xc))(*piVar3,uVar9);
   if ((int)uVar5 < 0) {
     return uVar5;
@@ -85,7 +85,7 @@ undefined8 fn_82C27290(int param_1,longlong param_2)
     if ((int)uVar5 < 0) {
       return uVar5;
     }
-    uVar5 = fn_82C1E938(param_1,asStack_80,&uStack_74,&uStack_78,&uStack_7c);
+    uVar5 = fn_82C1E938(param_1,&asStack_80,&uStack_74,&uStack_78,&uStack_7c);
     if ((int)uVar5 < 0) {
       return uVar5;
     }
@@ -98,16 +98,16 @@ undefined8 fn_82C27290(int param_1,longlong param_2)
       pbVar7 = pbVar7 + 1;
       pbVar8 = pbVar8 + 1;
     } while (pbVar7 != (byte *)&lbl_82154BB8);
-    if ((((int)((ulonglong)bVar1 - (ulonglong)bVar2) == 0) && (asStack_80[0] == 6)) &&
+    if ((((int)((ulonglong)bVar1 - (ulonglong)bVar2) == 0) && (asStack_80 == 6)) &&
        (uStack_7c = 4, 0x15 < (uVar9 & 0xffffffff))) {
       uVar10 = 0x16;
-      uVar5 = fn_82C1EAB8(param_1,&uStack_70,&uStack_74,&uStack_78,&uStack_7c);
+      uVar5 = fn_82C1EAB8(param_1,&stack_pair_70.first,&uStack_74,&uStack_78,&uStack_7c);
       if ((int)uVar5 < 0) {
         return uVar5;
       }
-      if ((0x17 < uStack_70) && (0x16 < (uVar9 & 0xffffffff))) {
+      if ((0x17 < stack_pair_70.first) && (0x16 < (uVar9 & 0xffffffff))) {
         do {
-          uVar5 = fn_82C24BE8(param_1,abStack_60,&uStack_70);
+          uVar5 = fn_82C24BE8(param_1,abStack_60,&stack_pair_70.first);
           if ((int)uVar5 < 0) {
             return uVar5;
           }
@@ -121,7 +121,7 @@ undefined8 fn_82C27290(int param_1,longlong param_2)
             pbVar7 = pbVar7 + 1;
           } while (pbVar8 != &lbl_820ED0C8);
           if ((int)((ulonglong)bVar1 - (ulonglong)bVar2) == 0) {
-            uVar10 = uStack_6c + uVar10;
+            uVar10 = stack_pair_70.second + uVar10;
             if ((uVar9 & 0xffffffff) < (uVar10 & 0xffffffff)) {
               return 0xffffffff8050000c;
             }
@@ -143,7 +143,7 @@ joined_r0x82c27584:
               pbVar7 = pbVar7 + 1;
             } while (pbVar8 != &lbl_820F8F18);
             if ((int)((ulonglong)bVar1 - (ulonglong)bVar2) == 0) {
-              uVar10 = uStack_6c + uVar10;
+              uVar10 = stack_pair_70.second + uVar10;
               if ((uVar9 & 0xffffffff) < (uVar10 & 0xffffffff)) {
                 return 0xffffffff8050000c;
               }
@@ -161,7 +161,7 @@ joined_r0x82c27584:
               pbVar7 = pbVar7 + 1;
             } while (pbVar8 != &lbl_820F8F38);
             if ((int)((ulonglong)bVar1 - (ulonglong)bVar2) == 0) {
-              uVar10 = uStack_6c + uVar10;
+              uVar10 = stack_pair_70.second + uVar10;
               if ((uVar9 & 0xffffffff) < (uVar10 & 0xffffffff)) {
                 return 0xffffffff8050000c;
               }
@@ -179,7 +179,7 @@ joined_r0x82c27584:
               pbVar7 = pbVar7 + 1;
             } while (pbVar8 != &lbl_820F8F48);
             if ((int)((ulonglong)bVar1 - (ulonglong)bVar2) == 0) {
-              uVar10 = uStack_6c + uVar10;
+              uVar10 = stack_pair_70.second + uVar10;
               if ((uVar9 & 0xffffffff) < (uVar10 & 0xffffffff)) {
                 return 0xffffffff8050000c;
               }
@@ -187,10 +187,10 @@ joined_r0x82c27584:
               iVar6 = (int)uVar5;
               goto joined_r0x82c27584;
             }
-            lVar4 = CONCAT44(uStack_70,uStack_6c);
-            uStack_7c = uStack_6c;
-            uVar10 = uStack_6c + uVar10;
-            uVar5 = (**(code **)(*piVar3 + 0x14))(*piVar3,(ulonglong)uStack_6c - 0x18);
+            lVar4 = CONCAT44(stack_pair_70.first,stack_pair_70.second);
+            uStack_7c = stack_pair_70.second;
+            uVar10 = stack_pair_70.second + uVar10;
+            uVar5 = (**(code **)(*piVar3 + 0x14))(*piVar3,(ulonglong)stack_pair_70.second - 0x18);
             if ((int)uVar5 < 0) {
               return uVar5;
             }

@@ -40,7 +40,7 @@ void fn_82F07248(int param_1)
   int iVar4;
   bool bVar5;
   int iVar6;
-  uint auStack_40 [16];
+  uint auStack_40;
   
   *(undefined4 *)(param_1 + 0x97c) = 0;
   uVar3 = 0;
@@ -53,7 +53,7 @@ void fn_82F07248(int param_1)
     bVar1 = false;
   }
   if (((bVar5) || (bVar1)) &&
-     (uVar2 = fn_82ED41C8(*(undefined4 *)(param_1 + 0x7b40),auStack_40),
+     (uVar2 = fn_82ED41C8(*(undefined4 *)(param_1 + 0x7b40),&auStack_40),
      (uVar2 & 0xffffffff) != 0)) {
     *(undefined4 *)(param_1 + 0x97c) = 1;
     *(undefined4 *)(param_1 + 0x984) = 0;
@@ -100,11 +100,11 @@ void fn_82F07248(int param_1)
       return;
     }
     *(undefined4 *)(param_1 + 0x97c) = 1;
-    auStack_40[0] = 4;
+    auStack_40 = 4;
     *(undefined4 *)(param_1 + 0x984) = 0;
   }
   *(undefined1 *)(param_1 + 0x980) = 1;
-  uVar3 = auStack_40[0];
+  uVar3 = auStack_40;
 LAB_82f073e8:
   if (*(char *)(param_1 + 0x980) == '\x01') {
     if (*(int *)(param_1 + 0x1a74) == 0) {

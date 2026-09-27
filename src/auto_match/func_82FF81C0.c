@@ -35,10 +35,10 @@ undefined8 * fn_82FF81C0(int param_1,undefined8 param_2,undefined4 param_3)
 {
   undefined8 *puVar1;
   undefined8 *puVar2;
-  uint auStack_30 [12];
+  uint auStack_30;
   
-  fn_82FF7EB0(auStack_30,param_1,param_2);
-  puVar2 = (undefined8 *)(-(uint)(*(uint *)(param_1 + 4) != auStack_30[0]) & auStack_30[0] + 8);
+  fn_82FF7EB0(&auStack_30,param_1,param_2);
+  puVar2 = (undefined8 *)(-(uint)(*(uint *)(param_1 + 4) != auStack_30) & auStack_30 + 8);
   if (puVar2 == (undefined8 *)0x0) {
     puVar1 = (undefined8 *)fn_8301B248(param_1);
     if (puVar1 != (undefined8 *)0x0) {

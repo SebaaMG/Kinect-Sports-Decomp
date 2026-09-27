@@ -35,7 +35,7 @@ void fn_830E1800(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefi
 
 {
   longlong lVar1;
-  undefined1 auStack_320 [800];
+  undefined1 auStack_320 [768];
   
   lVar1 = (param_5 + 1U & 0x1fffffff) << 3;
   fn_830DF2D0(param_1,param_2,auStack_320,lVar1,lVar1);

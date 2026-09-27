@@ -39,8 +39,7 @@ extern unsigned int uStack_b8;
 extern unsigned int uStack_bc;
 
 
-bool fn_82F08810(int param_1,short *param_2,short *param_3,int param_4,int *param_5,int *param_6,
-                  ulonglong param_7)
+bool fn_82F08810(int param_1, short *param_2, short *param_3, int param_4, int *param_5, int *param_6, ulonglong param_7, undefined8 unused_arg_8, int in_stack_00000054, undefined4 in_stack_0000005c, undefined4 in_stack_00000064, int in_stack_0000006c)
 
 {
   short sVar1;
@@ -66,10 +65,10 @@ bool fn_82F08810(int param_1,short *param_2,short *param_3,int param_4,int *para
   short *psStack0000001c;
   int *piStack0000003c;
   uint uStack00000044;
-  int in_stack_00000054;
-  undefined4 in_stack_0000005c;
-  undefined4 in_stack_00000064;
-  int in_stack_0000006c;
+
+
+
+
   short *psStack_c0;
   undefined4 uStack_bc;
   undefined4 uStack_b8;

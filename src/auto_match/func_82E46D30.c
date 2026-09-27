@@ -26,7 +26,7 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_4c;
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int iStack_5c;
 extern unsigned int iStack_60;
 extern unsigned int uStack_50;
@@ -46,14 +46,14 @@ longlong fn_82E46D30(int *param_1,int *param_2)
   uint uStack_58;
   uint uStack_54;
   undefined4 uStack_50;
-  undefined4 auStack_4c [19];
+  undefined4 auStack_4c;
   
   if (param_2 == (int *)0x0) {
     return -0x7ff8ffa9;
   }
   iStack_60 = 0;
-  auStack_4c[0] = 0;
-  lVar1 = (**(code **)(*param_2 + 0xc))(param_2,&iStack_60,0,auStack_4c);
+  auStack_4c = 0;
+  lVar1 = (**(code **)(*param_2 + 0xc))(param_2,&iStack_60,0,&auStack_4c);
   if (-1 < lVar1) {
     uStack_54 = 0;
     lVar1 = (**(code **)(*param_2 + 0x1c))(param_2,&uStack_54);
@@ -78,7 +78,7 @@ longlong fn_82E46D30(int *param_1,int *param_2)
               iStack_5c = 0;
               lVar1 = (**(code **)(*(int *)*piVar4 + 0xc))((int *)*piVar4,&uStack_50,0,&iStack_5c);
               if (lVar1 < 0) goto LAB_82e46eb4;
-              fn_82F68CC0(iStack_60,uStack_50,iStack_5c);
+              memcpy(iStack_60,uStack_50,iStack_5c);
               iStack_60 = iStack_5c + iStack_60;
               (**(code **)(*(int *)*piVar4 + 0x10))();
               uVar2 = uVar2 + 1;

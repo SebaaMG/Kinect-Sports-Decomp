@@ -60,8 +60,8 @@ extern int fn_82C91E80();
 extern int fn_82C91F40();
 extern int fn_82C9A740();
 extern int fn_82CA12A8();
-extern int fn_82F68CC0();
-extern int fn_82F691F0();
+extern int memcpy();
+extern int memset();
 extern int fn_82F6E7A8();
 extern int fn_830B9E98();
 extern int fn_830BD320();
@@ -324,7 +324,7 @@ LAB_82c4a4d0:
                             (longlong)*(int *)(param_1 + 0xd8) * (longlong)*(int *)(param_1 + 0xd0))
           ;
                     /* WARNING: Subroutine does not return */
-          fn_82F691F0(*(undefined4 *)(param_1 + 0x6f0),0,*(int *)(param_1 + 0x90) << 4);
+          memset(*(undefined4 *)(param_1 + 0x6f0),0,*(int *)(param_1 + 0x90) << 4);
         }
         fn_82CA12A8(param_1,*(undefined4 *)(param_1 + 0x50d0));
         uVar15 = fn_82C47498(param_1);
@@ -392,7 +392,7 @@ LAB_82c4a4d0:
           } while (uVar19 != 0);
         }
                     /* WARNING: Subroutine does not return */
-        fn_82F691F0(*(undefined4 *)(param_1 + 0xc10),0,
+        memset(*(undefined4 *)(param_1 + 0xc10),0,
                      ((longlong)(*(int *)(param_1 + 0x8c) + 1) * (longlong)*(int *)(param_1 + 0x88)
                      & 0xfffffffU) << 4);
       }
@@ -567,7 +567,7 @@ LAB_82c4a9f8:
             } while (uVar12 < uVar3);
           }
                     /* WARNING: Subroutine does not return */
-          fn_82F691F0(*(undefined4 *)(param_1 + 0xc10),0,
+          memset(*(undefined4 *)(param_1 + 0xc10),0,
                        ((longlong)(*(int *)(param_1 + 0x8c) + 1) *
                         (longlong)*(int *)(param_1 + 0x88) & 0xfffffffU) << 4);
         }
@@ -672,11 +672,11 @@ LAB_82c4a334:
           fn_82C91D80(param_1);
         }
         fn_82C91E80(param_1);
-        fn_82F68CC0(*(undefined4 *)(param_1 + 0xec0),*(undefined4 *)(param_1 + 0xecc),
+        memcpy(*(undefined4 *)(param_1 + 0xec0),*(undefined4 *)(param_1 + 0xecc),
                      (longlong)*(int *)(param_1 + 0xcc) * (longlong)*(int *)(param_1 + 0xd4));
-        fn_82F68CC0(*(undefined4 *)(param_1 + 0xec4),*(undefined4 *)(param_1 + 0xed0),
+        memcpy(*(undefined4 *)(param_1 + 0xec4),*(undefined4 *)(param_1 + 0xed0),
                      *(int *)(param_1 + 0xcc) * *(int *)(param_1 + 0xd4) >> 2);
-        fn_82F68CC0(*(undefined4 *)(param_1 + 0xec8),*(undefined4 *)(param_1 + 0xed4),
+        memcpy(*(undefined4 *)(param_1 + 0xec8),*(undefined4 *)(param_1 + 0xed4),
                      *(int *)(param_1 + 0xcc) * *(int *)(param_1 + 0xd4) >> 2);
         *(undefined4 *)(param_1 + 0xd68) = 1;
       }

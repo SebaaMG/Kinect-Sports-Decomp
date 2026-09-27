@@ -33,8 +33,7 @@ extern unsigned int uStack_9c;
 extern unsigned int uStack_a0;
 
 
-void fn_82CD6530(uint param_1,int param_2,int param_3,int param_4,ulonglong param_5,
-                  ulonglong param_6,ulonglong param_7,int param_8)
+void fn_82CD6530(uint param_1, int param_2, int param_3, int param_4, ulonglong param_5, ulonglong param_6, ulonglong param_7, int param_8, uint in_stack_00000054, uint in_stack_0000005c, uint in_stack_00000064, uint in_stack_0000006c, undefined8 unused_arg_13, uint in_stack_0000007c, int in_stack_00000084)
 
 {
   uint uVar1;
@@ -60,12 +59,12 @@ void fn_82CD6530(uint param_1,int param_2,int param_3,int param_4,ulonglong para
   uint uStack00000014;
   int iStack0000001c;
   undefined4 uStack00000044;
-  uint in_stack_00000054;
-  uint in_stack_0000005c;
-  uint in_stack_00000064;
-  uint in_stack_0000006c;
-  uint in_stack_0000007c;
-  int in_stack_00000084;
+
+
+
+
+
+
   undefined4 uStack_a0;
   undefined4 uStack_9c;
   

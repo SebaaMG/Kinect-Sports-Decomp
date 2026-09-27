@@ -100,8 +100,8 @@ fn_82C46C48(int param_1,int param_2,int param_3,undefined8 param_4,longlong para
   float fStack_8c;
   float fStack_88;
   float fStack_84;
-  float fStack_80;
-  float fStack_7c;
+  struct { float first; float second; } stack_pair_80;
+
   float fStack_78;
   float afStack_74 [29];
   
@@ -326,7 +326,7 @@ LAB_82c47178:
         }
         if ((*(int *)(iVar1 + 0x3c08) == 1) || (*(int *)(iVar1 + 0x3c08) == 2)) {
           if (*(int *)(iVar1 + 0x3c48) == 0) {
-            uVar4 = fn_82C45200(iVar1,&fStack_80,afStack_74,&fStack_84,&fStack_78,&fStack_7c,
+            uVar4 = fn_82C45200(iVar1,&stack_pair_80.first,afStack_74,&fStack_84,&fStack_78,&stack_pair_80.second,
                                   &fStack_88,&fStack_8c);
             if ((int)uVar4 != 0) {
               return uVar4;
@@ -336,10 +336,10 @@ LAB_82c47178:
             dVar17 = lbl_82005710;
             dVar18 = lbl_82005758;
             if ((*(int *)(iVar1 + 0x3c44) != 0) &&
-               (dVar13 = (double)fStack_80, dVar18 = dVar13, *(int *)(iVar1 + 0x3c44) != 1)) {
+               (dVar13 = (double)stack_pair_80.first, dVar18 = dVar13, *(int *)(iVar1 + 0x3c44) != 1)) {
               dVar15 = (double)afStack_74[0];
               dVar17 = (double)fStack_78;
-              dVar18 = (double)fStack_7c;
+              dVar18 = (double)stack_pair_80.second;
             }
             dVar14 = lbl_82005758;
             dVar16 = lbl_82005710;
@@ -349,13 +349,13 @@ LAB_82c47178:
                               *(undefined4 *)(iVar1 + 0xef8),*(undefined4 *)(iVar1 + 0xefc),
                               *(undefined4 *)(iVar1 + 0xf00));
             if (*(int *)(iVar1 + 0x3c08) == 2) {
-              fn_82C45200(iVar1,&fStack_80,&fStack_7c,&fStack_8c,&fStack_78,afStack_74,&fStack_88,
+              fn_82C45200(iVar1,&stack_pair_80.first,&stack_pair_80.second,&fStack_8c,&fStack_78,afStack_74,&fStack_88,
                             &fStack_84);
               dVar13 = dVar16;
               dVar15 = dVar14;
               if ((*(int *)(iVar1 + 0x3c44) != 0) &&
-                 (dVar14 = (double)fStack_80, dVar15 = dVar14, *(int *)(iVar1 + 0x3c44) != 1)) {
-                dVar16 = (double)fStack_7c;
+                 (dVar14 = (double)stack_pair_80.first, dVar15 = dVar14, *(int *)(iVar1 + 0x3c44) != 1)) {
+                dVar16 = (double)stack_pair_80.second;
                 dVar13 = (double)fStack_78;
                 dVar15 = (double)afStack_74[0];
               }

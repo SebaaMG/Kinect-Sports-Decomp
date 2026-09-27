@@ -56,12 +56,12 @@ byte * fn_82D7CE78(undefined8 param_1,int param_2,int param_3,int param_4,int pa
   undefined4 in_register_000100d8;
   undefined4 in_vr13;
   undefined4 in_stack_00000054;
-  int iStack_c0;
-  int iStack_bc;
+  struct { int first; int second; } stack_pair_c0;
+
   undefined4 uStack_b8;
   int *piStack_b4;
   undefined4 uStack_b0;
-  undefined1 auStack_a0 [160];
+  undefined1 auStack_a0 [80];
   
   iVar2 = *param_8;
   pbVar6 = (byte *)fn_82D7CDB8();
@@ -90,8 +90,8 @@ byte * fn_82D7CE78(undefined8 param_1,int param_2,int param_3,int param_4,int pa
   *(int *)(iVar4 + iVar7 + 4) = param_2;
   uStack_b8 = 0;
   uStack_b0 = *(undefined4 *)(pbVar6 + 8);
-  iStack_c0 = param_3;
-  iStack_bc = param_5;
+  stack_pair_c0.first = param_3;
+  stack_pair_c0.second = param_5;
   piStack_b4 = param_8;
   fn_82CE6820(auStack_a0,*(undefined4 *)(param_3 + 8),*(undefined4 *)(param_5 + 8));
   bVar1 = *(byte *)(*(char *)(param_2 + 0x1a) * 10 + (int)*(char *)(param_4 + 0x1a) + *param_8 +
@@ -114,7 +114,7 @@ byte * fn_82D7CE78(undefined8 param_1,int param_2,int param_3,int param_4,int pa
     puVar3[2] = in_register_000100d8;
     puVar3[3] = in_vr13;
   }
-  (**(code **)((uint)pbVar6[1] * 0x50 + iVar2 + 0x16b0))(&iStack_c0,pbVar6,pbVar8);
+  (**(code **)((uint)pbVar6[1] * 0x50 + iVar2 + 0x16b0))(&stack_pair_c0.first,pbVar6,pbVar8);
   pbVar6[3] = 0x80;
   return pbVar6;
 }

@@ -36,7 +36,7 @@ ulonglong fn_82CF6F58(int param_1,ulonglong param_2)
   uint *puVar3;
   longlong lVar4;
   ulonglong uVar5;
-  uint auStack_30 [12];
+  uint auStack_30 [4];
   
   uVar1 = *(uint *)(param_1 + 8);
   uVar5 = (ulonglong)uVar1;

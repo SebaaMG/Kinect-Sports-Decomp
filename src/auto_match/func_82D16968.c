@@ -67,8 +67,8 @@ undefined4 * fn_82D16968(undefined4 *param_1)
   uint *puVar16;
   undefined4 uVar17;
   undefined4 uVar18;
-  undefined4 uStack_70;
-  undefined4 uStack_6c;
+  struct { undefined4 first; undefined4 second; } stack_pair_70;
+
   undefined4 uStack_68;
   undefined4 uStack_60;
   undefined4 uStack_5c;
@@ -284,14 +284,14 @@ undefined4 * fn_82D16968(undefined4 *param_1)
     }
   }
   if (param_1[0x10] != 0) {
-    uStack_70 = 0;
-    uStack_6c = 0;
+    stack_pair_70.first = 0;
+    stack_pair_70.second = 0;
     uStack_68 = 0xffffffff;
     iVar4 = fn_82CE5410();
-    fn_82CEAB00(&uStack_70,*(undefined4 *)(iVar4 + 0x10),0);
+    fn_82CEAB00(&stack_pair_70.first,*(undefined4 *)(iVar4 + 0x10),0);
     uVar7 = param_1[0x10];
     iVar4 = fn_82CE5410();
-    fn_82CEAB00(&uStack_70,*(undefined4 *)(iVar4 + 0x10),uVar7);
+    fn_82CEAB00(&stack_pair_70.first,*(undefined4 *)(iVar4 + 0x10),uVar7);
     puVar10 = (undefined4 *)param_1[0xf];
     if (puVar10 != (undefined4 *)0x0) {
       puVar15 = (undefined4 *)*puVar10;
@@ -315,15 +315,15 @@ undefined4 * fn_82D16968(undefined4 *param_1)
         puVar16 = (uint *)(iVar4 + 0x14);
         iVar6 = iVar4;
         do {
-          uVar8 = fn_82CEA280(&uStack_70,(*puVar16 & 3) + (*puVar16 & 0xfffffffc),0);
+          uVar8 = fn_82CEA280(&stack_pair_70.first,(*puVar16 & 3) + (*puVar16 & 0xfffffffc),0);
           uVar1 = uVar8 & 0xfffffffc;
           if (uVar1 == 0) {
             iVar9 = fn_82CE5410();
-            fn_82CEA160(&uStack_70,*(undefined4 *)(iVar9 + 0x10),
+            fn_82CEA160(&stack_pair_70.first,*(undefined4 *)(iVar9 + 0x10),
                               (int)puVar10 + (iVar6 - iVar4),iVar6);
           }
           else {
-            fn_82CEAAA0(&uStack_70,(*puVar16 & 3) + (*puVar16 & 0xfffffffc));
+            fn_82CEAAA0(&stack_pair_70.first,(*puVar16 & 3) + (*puVar16 & 0xfffffffc));
             *puVar16 = (uVar8 & 3) + uVar1;
             *(int *)(((uVar8 & 3) + 5) * 4 + uVar1) = iVar6;
           }
@@ -335,8 +335,8 @@ undefined4 * fn_82D16968(undefined4 *param_1)
       } while (puVar10 != (undefined4 *)0x0);
     }
     iVar4 = fn_82CE5410();
-    fn_82CEA4B8(&uStack_70,*(undefined4 *)(iVar4 + 0x10));
-    fn_82BA02A8(&uStack_70);
+    fn_82CEA4B8(&stack_pair_70.first,*(undefined4 *)(iVar4 + 0x10));
+    fn_82BA02A8(&stack_pair_70.first);
   }
   iVar4 = fn_82CE5410();
   fn_82CEA4B8(&uStack_60,*(undefined4 *)(iVar4 + 0x10));
