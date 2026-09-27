@@ -53,8 +53,8 @@ fn_82F1A5F0(int param_1,uint param_2,int param_3,ulonglong param_4,short *param_
   undefined4 uStack_60;
   undefined4 uStack_5c;
   undefined4 uStack_58;
-  ulonglong auStack_50 [10];
-  
+  ulonglong auStack_50 [6];
+
   dVar8 = (double)*(float *)(param_7 + 0x30) * (double)(longlong)*param_5;
   if ((double)*(float *)(param_7 + 0x30) * (double)(longlong)*param_5 * lbl_820DA2C8 <= lbl_82005710
      ) {
@@ -107,4 +107,3 @@ fn_82F1A5F0(int param_1,uint param_2,int param_3,ulonglong param_4,short *param_
   } while (sVar5 < 8);
   return uVar4;
 }
-

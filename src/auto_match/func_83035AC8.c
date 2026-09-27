@@ -46,10 +46,10 @@ fn_83035AC8(int param_1,int param_2,float *param_3,ulonglong param_4,undefined8 
   int *piVar2;
   double dVar3;
   byte abStack_50 [4];
-  float fStack_4c;
-  int iStack_48;
+  struct { float first; int second; } stack_pair_4c;
+
   uint uStack_44;
-  
+
   for (piVar2 = *(int **)(param_1 + 0x10);
       (piVar2 != *(int **)(param_1 + 0x14) && (*piVar2 != *(int *)(param_2 + 0xc)));
       piVar2 = piVar2 + 6) {
@@ -72,19 +72,18 @@ fn_83035AC8(int param_1,int param_2,float *param_3,ulonglong param_4,undefined8 
   }
   if ((*(int *)(param_1 + 0x24) != 0) && (piVar2[3] != 0)) {
     abStack_50[0] = 1;
-    cVar1 = fn_83017108(lbl_832642FC,*(int *)(param_1 + 0x24),param_6,&fStack_4c,abStack_50);
+    cVar1 = fn_83017108(lbl_832642FC,*(int *)(param_1 + 0x24),param_6,&stack_pair_4c.first,abStack_50);
     if (cVar1 == '\0') {
-      fStack_4c = *(float *)(param_1 + 0x28);
+      stack_pair_4c.first = *(float *)(param_1 + 0x28);
       abStack_50[0] = 0;
     }
-    dVar3 = (double)fn_83015B10((double)fStack_4c,piVar2 + 3);
+    dVar3 = (double)fn_83015B10((double)stack_pair_4c.first,piVar2 + 3);
     if ((dVar3 != (double)lbl_82005CCC) || (abStack_50[0] != 0)) {
       uStack_44 = (uint)(LZCOUNT((uint)abStack_50[0]) << 0x1a) & 0x80000000 | uStack_44 & 0x3fffffff
       ;
-      iStack_48 = param_1;
+      stack_pair_4c.second = param_1;
       fn_82FF2510(param_5,CONCAT44(param_1,uStack_44));
     }
   }
   return 1;
 }
-

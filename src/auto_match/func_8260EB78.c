@@ -29,7 +29,7 @@ extern unsigned int *auStack_28;
 extern int fn_82569980();
 extern int fn_8262A108();
 extern int fn_8265C9E0();
-extern int fn_82A1EFC0();
+extern int fn_8257E0B8();
 
 
 void fn_8260EB78(int param_1,undefined8 param_2,int param_3,undefined8 param_4,int param_5)
@@ -39,8 +39,8 @@ void fn_8260EB78(int param_1,undefined8 param_2,int param_3,undefined8 param_4,i
   int iVar3;
   int iVar4;
   ulonglong uVar2;
-  undefined1 auStack_28 [40];
-  
+  undefined1 auStack_28 [8];
+
   if (param_5 == 0) {
     iVar3 = fn_82569980(param_1,*(undefined1 *)(param_3 + 0x10));
     if (iVar3 == -1) {
@@ -74,9 +74,8 @@ void fn_8260EB78(int param_1,undefined8 param_2,int param_3,undefined8 param_4,i
     }
     if (iVar3 != 0) {
                     /* WARNING: Subroutine does not return */
-      fn_82A1EFC0(auStack_28,0,4);
+      fn_8257E0B8(auStack_28,0,4);
     }
   }
   return;
 }
-

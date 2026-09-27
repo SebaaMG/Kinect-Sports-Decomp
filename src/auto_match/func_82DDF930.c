@@ -43,8 +43,8 @@ void fn_82DDF930(undefined4 *param_1,int param_2,float *param_3,undefined4 param
 {
   undefined4 uVar1;
   int iVar2;
-  int iStack_30;
-  int iStack_2c;
+  struct { int first; int second; } stack_pair_30;
+
   int iStack_28;
   int iStack_24;
   undefined4 uStack_20;
@@ -53,7 +53,7 @@ void fn_82DDF930(undefined4 *param_1,int param_2,float *param_3,undefined4 param
   undefined4 uStack_14;
   undefined4 uStack_10;
   undefined4 uStack_c;
-  
+
   uVar1 = *(undefined4 *)(param_2 + 0x20);
   *param_1 = param_4;
   uStack_20 = 0;
@@ -63,15 +63,14 @@ void fn_82DDF930(undefined4 *param_1,int param_2,float *param_3,undefined4 param
   uStack_c = 0;
   uStack_10 = 0x10;
   param_1[4] = (int)((*param_3 - *(float *)(param_2 + 0x10)) * *(float *)(param_2 + 0x1c)) + -1;
-  iStack_30 = (int)*(short *)(param_1 + 4);
+  stack_pair_30.first = (int)*(short *)(param_1 + 4);
   param_1[5] = (int)((param_3[1] - *(float *)(param_2 + 0x14)) * *(float *)(param_2 + 0x1c)) + -1;
-  iStack_2c = (int)*(short *)(param_1 + 5);
+  stack_pair_30.second = (int)*(short *)(param_1 + 5);
   param_1[6] = (int)((param_3[2] - *(float *)(param_2 + 0x18)) * *(float *)(param_2 + 0x1c)) + -1;
   iVar2 = (int)(param_3[3] * *(float *)(param_2 + 0x1c)) + 2;
   param_1[7] = iVar2;
   iStack_24 = (iVar2 >> 0x10) + 1;
   iStack_28 = (int)*(short *)(param_1 + 6);
-  fn_82DDEF70(param_1,&iStack_30,uVar1);
+  fn_82DDEF70(param_1,&stack_pair_30.first,uVar1);
   return;
 }
-

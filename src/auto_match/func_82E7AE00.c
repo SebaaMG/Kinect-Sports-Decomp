@@ -26,15 +26,15 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_82EEB658();
-extern int fn_82F691F0();
+extern int fn_82E798F8();
 
 
 undefined8 fn_82E7AE00(longlong param_1,int param_2)
 
 {
   undefined8 uVar1;
-  int aiStack_50 [20];
-  
+  int aiStack_50 [16];
+
   if (param_2 == 0) {
     uVar1 = 0xffffffff80070057;
   }
@@ -43,10 +43,9 @@ undefined8 fn_82E7AE00(longlong param_1,int param_2)
     fn_82EEB658(param_1 + 0x1e4,aiStack_50);
     if (aiStack_50[0] != 0) {
                     /* WARNING: Subroutine does not return */
-      fn_82F691F0(aiStack_50[0],0,0x148);
+      fn_82E798F8(aiStack_50[0],0,0x148);
     }
     uVar1 = 0xffffffff8007000e;
   }
   return uVar1;
 }
-

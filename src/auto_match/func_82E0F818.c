@@ -88,8 +88,8 @@ void fn_82E0F818(int *param_1,int *param_2,int *param_3,int *param_4)
   undefined1 auStack_e0 [8];
   undefined4 uStack_d8;
   undefined ** appuStack_d0;
-  int iStack_b0;
-  int iStack_ac;
+  struct { int first; int second; } stack_pair_b0;
+
   undefined4 uStack_a8;
   int iStack_a4;
   int iStack_a0;
@@ -101,13 +101,13 @@ void fn_82E0F818(int *param_1,int *param_2,int *param_3,int *param_4)
   undefined4 uStack_88;
   undefined4 uStack_84;
   undefined4 uStack_80;
-  
+
   stack_pair_100.first = 0;
   stack_pair_100.second = 0;
   uStack_f8 = 0x80000000;
   fn_82CEE1B0(auStack_e0,&stack_pair_100.first);
-  iStack_b0 = 0;
-  iStack_ac = 0;
+  stack_pair_b0.first = 0;
+  stack_pair_b0.second = 0;
   iStack_a4 = 0;
   iStack_a0 = 0;
   uStack_98 = 0;
@@ -141,7 +141,7 @@ void fn_82E0F818(int *param_1,int *param_2,int *param_3,int *param_4)
       uVar1 = *puVar8;
       iVar4 = fn_82CE5410();
       fn_82CEA160(&uStack_f0,*(undefined4 *)(iVar4 + 0x10),uVar1,iVar2);
-      fn_82E19B50(&appuStack_d0,*puVar8,puVar8[1],uStack_d8,iVar6,&iStack_b0);
+      fn_82E19B50(&appuStack_d0,*puVar8,puVar8[1],uStack_d8,iVar6,&stack_pair_b0.first);
       fn_82E17FB8(&appuStack_d0);
       iVar3 = iVar3 + 1;
       iVar5 = iVar5 + 4;
@@ -165,15 +165,15 @@ void fn_82E0F818(int *param_1,int *param_2,int *param_3,int *param_4)
       } while (iVar5 < param_3[1]);
     }
     iVar5 = 0;
-    if (0 < iStack_ac) {
+    if (0 < stack_pair_b0.second) {
       iVar6 = 0;
       do {
         iVar5 = iVar5 + 1;
-        iVar2 = iVar6 + iStack_b0;
-        piVar7 = (int *)(iVar6 + iStack_b0);
+        iVar2 = iVar6 + stack_pair_b0.first;
+        piVar7 = (int *)(iVar6 + stack_pair_b0.first);
         iVar6 = iVar6 + 8;
         *(int *)(*piVar7 + iVar3) = *(int *)(iVar2 + 4) + iVar3;
-      } while (iVar5 < iStack_ac);
+      } while (iVar5 < stack_pair_b0.second);
     }
     iVar5 = 0;
     if (0 < iStack_a0) {
@@ -189,15 +189,14 @@ void fn_82E0F818(int *param_1,int *param_2,int *param_3,int *param_4)
     iVar3 = fn_82CE5410();
     fn_82CEA4B8(&uStack_f0,*(undefined4 *)(iVar3 + 0x10));
     fn_82BA02A8(&uStack_f0);
-    fn_82E1A688(&iStack_b0);
+    fn_82E1A688(&stack_pair_b0.first);
                     /* WARNING: Subroutine does not return */
     fn_82CED958(auStack_e0);
   }
   iVar3 = fn_82CE5410();
   fn_82CEA4B8(&uStack_f0,*(undefined4 *)(iVar3 + 0x10));
   fn_82BA02A8(&uStack_f0);
-  fn_82E1A688(&iStack_b0);
+  fn_82E1A688(&stack_pair_b0.first);
                     /* WARNING: Subroutine does not return */
   fn_82CED958(auStack_e0);
 }
-

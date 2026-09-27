@@ -28,7 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 extern int fn_82E83368();
 extern int fn_82E8F418();
 extern int fn_82E8FCA8();
-extern int fn_82E90020();
+extern int fn_82E90418();
 extern int fn_82E90418();
 extern int fn_82E90960();
 extern int fn_82E93850();
@@ -69,7 +69,7 @@ fn_82E90D68(int param_1,int param_2,undefined8 param_3,undefined8 param_4,int *p
   undefined4 in_stack_00000084;
   undefined4 in_stack_000000b4;
   undefined8 uStack_70;
-  
+
   uVar9 = *(uint *)(param_1 + 0x1a70);
   *(undefined4 *)(param_1 + 0x884) = in_stack_00000084;
   if ((uVar9 != 0) &&
@@ -182,7 +182,7 @@ LAB_82e9101c:
       *(uint *)(param_1 + 0x69c) = uVar5;
       *(uint *)(param_1 + 0x6a0) = ((int)uVar9 >> 4) + (uint)((int)uVar9 < 0 && (uVar9 & 0xf) != 0);
 LAB_82e9123c:
-      fn_82E90020(param_1,in_stack_000000b4);
+      fn_82E90418(param_1,in_stack_000000b4);
     }
     else {
       *(uint *)(param_1 + 0x69c) = ((int)uVar5 >> 1) + (uint)((int)uVar5 < 0 && (uVar5 & 1) != 0);
@@ -269,4 +269,3 @@ LAB_82e913c4:
   *(int *)(param_1 + 0x1e4c) = *(int *)(param_1 + 0x1e4c) + 1;
   return 0;
 }
-

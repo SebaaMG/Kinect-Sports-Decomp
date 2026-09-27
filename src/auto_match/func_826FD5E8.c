@@ -54,7 +54,7 @@ undefined8 fn_826FD5E8(undefined8 param_1,int param_2,float *param_3,undefined8 
   undefined4 uStack_64;
   undefined4 uStack_60;
   undefined4 uStack_5c;
-  undefined1 auStack_50 [64];
+  undefined1 auStack_50 [48];
 
   uVar1 = fn_826F6FA8(param_2,0);
   fn_8268CC00(auStack_50);

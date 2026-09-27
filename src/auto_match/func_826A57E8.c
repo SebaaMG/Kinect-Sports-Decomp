@@ -72,7 +72,7 @@ void fn_826A57E8(int param_1)
   struct { int first; int second; } stack_pair_88;
 
   byte bStack_80;
-  undefined1 auStack_70 [64];
+  undefined1 auStack_70 [48];
 
   cVar7 = fn_82695468(param_1,7);
   if (cVar7 == '\0') {

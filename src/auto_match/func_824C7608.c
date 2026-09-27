@@ -27,8 +27,8 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_2c;
 extern int fn_8255EBE0();
-extern int fn_8255EDD0();
 extern int fn_827EFFE8();
+extern int fn_8255EDD0();
 extern int fn_827F0180();
 extern int fn_82A1DD38();
 extern int fn_82F63108();
@@ -43,8 +43,8 @@ void fn_824C7608(undefined4 *param_1,int param_2)
   int iVar3;
   uint *puVar4;
   uint uStack_30;
-  uint auStack_2c [11];
-  
+  uint auStack_2c [1];
+
   if (param_1[0x78] == 0) {
                     /* WARNING: Subroutine does not return */
     fn_82F63108();
@@ -53,13 +53,13 @@ void fn_824C7608(undefined4 *param_1,int param_2)
   puVar2 = *(undefined4 **)((iVar3 + 0x20) * 4 + param_1[0x73]);
   if ((param_2 == 0) || (param_1[0x7c] == 0)) {
     if (param_1[0x7a] == 0) {
-      fn_827EFFE8(*param_1);
+      fn_8255EDD0(*param_1);
     }
     else if (param_1[0x7b] == 0) {
       fn_8255EBE0(*param_1,param_1 + 0x69);
     }
     else {
-      fn_8255EDD0();
+      fn_827EFFE8();
     }
     fn_827F0180(*param_1,*puVar2,1,0,0);
     param_1[0x7e] = iVar3;
@@ -82,4 +82,3 @@ void fn_824C7608(undefined4 *param_1,int param_2)
   }
   return;
 }
-

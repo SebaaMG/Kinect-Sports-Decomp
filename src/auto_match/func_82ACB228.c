@@ -26,8 +26,8 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_30;
-extern int fn_82ACAE18();
 extern int fn_82ACAF10();
+extern int fn_82ACAE18();
 
 
 ulonglong fn_82ACB228(int param_1,ulonglong param_2,ulonglong param_3,longlong param_4)
@@ -36,21 +36,21 @@ ulonglong fn_82ACB228(int param_1,ulonglong param_2,ulonglong param_3,longlong p
   uint *puVar1;
   ulonglong uVar2;
   ulonglong uVar3;
-  uint auStack_30 [12];
-  
+  uint auStack_30;
+
   uVar2 = (param_2 & 0x3fffffff) << 2;
   while( true ) {
     if ((int)param_4 < 1) {
-      uVar2 = fn_82ACAF10((uint *)(param_1 + 4),uVar2 + 3,auStack_30);
+      uVar2 = fn_82ACAE18((uint *)(param_1 + 4),uVar2 + 3,&auStack_30);
     }
     else {
-      uVar2 = fn_82ACAE18();
+      uVar2 = fn_82ACAF10();
     }
     if ((uint)uVar2 == 0xffffffff) {
       return 0xffffffffffffffff;
     }
     if ((param_3 & 0xffffffff) == 1) break;
-    uVar3 = (ulonglong)auStack_30[0];
+    uVar3 = (ulonglong)auStack_30;
     if ((param_3 & 0xffffffff) <=
         (((0x4a2932934dcU >> (uVar3 & 0x7f)) >> (uVar3 & 0x7f)) >> (uVar3 & 0x7f) & 7)) {
       uVar3 = ~uVar3;
@@ -72,4 +72,3 @@ ulonglong fn_82ACB228(int param_1,ulonglong param_2,ulonglong param_3,longlong p
 LAB_82acb300:
   return (uVar2 & 0x3ffffffc) << 2 | uVar3 & 0xffffffff0000000f;
 }
-

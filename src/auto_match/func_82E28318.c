@@ -32,15 +32,14 @@ extern int fn_82E27DB8();
 extern unsigned int uStack_50;
 
 
-void fn_82E28318(int *param_1,undefined8 param_2,undefined8 param_3,undefined8 param_4,
-                  undefined8 param_5,ulonglong param_6,ulonglong param_7,longlong param_8)
+void fn_82E28318(int *param_1, undefined8 param_2, undefined8 param_3, undefined8 param_4, undefined8 param_5, ulonglong param_6, ulonglong param_7, longlong param_8, undefined4 in_stack_00000054)
 
 {
   int iVar1;
-  undefined4 in_stack_00000054;
+
   undefined4 uStack_50;
   undefined4 auStack_4c;
-  
+
   iVar1 = (**(code **)(*param_1 + 0x50))();
   if ((-1 < iVar1) &&
      (iVar1 = (**(code **)(*param_1 + 0x60))(param_1,0xffffffff82153478,0xffffffff821537b8),
@@ -58,4 +57,3 @@ void fn_82E28318(int *param_1,undefined8 param_2,undefined8 param_3,undefined8 p
   }
   return;
 }
-

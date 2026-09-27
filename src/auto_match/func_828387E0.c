@@ -26,8 +26,8 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_82A93C18();
-extern int fn_82A93D70();
 extern int fn_82A93DE0();
+extern int fn_82A93C18();
 
 
 /* WARNING: Removing unreachable block (ram,0x82838848) */
@@ -43,7 +43,7 @@ void fn_828387E0(int param_1,int param_2)
   undefined4 uVar1;
   uint uVar2;
   int iVar3;
-  
+
   uVar1 = *(undefined4 *)(param_1 + 0x28);
   if (*(char *)(param_1 + 0x30) != '\0') {
     iVar3 = *(int *)(param_1 + 0x1c);
@@ -53,7 +53,7 @@ void fn_828387E0(int param_1,int param_2)
                         *(undefined4 *)(param_2 + 0x2c));
     }
     else if (iVar3 == 2) {
-      fn_82A93D70(*(undefined2 *)(param_1 + 0x24),*(undefined1 *)(param_2 + 0x30),0,
+      fn_82A93DE0(*(undefined2 *)(param_1 + 0x24),*(undefined1 *)(param_2 + 0x30),0,
                         *(undefined4 *)(param_1 + 0x18),0,uVar1,*(undefined4 *)(param_2 + 0x2c),
                         *(undefined4 *)(param_1 + 0x34));
     }
@@ -79,7 +79,7 @@ void fn_828387E0(int param_1,int param_2)
       if (iVar3 != 5) {
         return;
       }
-      fn_82A93DE0(*(undefined2 *)(param_1 + 0x24),*(undefined2 *)(param_1 + 0x26),
+      fn_82A93C18(*(undefined2 *)(param_1 + 0x24),*(undefined2 *)(param_1 + 0x26),
                         *(undefined4 *)(param_1 + 0x38),*(undefined1 *)(param_2 + 0x30),0,
                         *(undefined4 *)(param_1 + 0x18),0,uVar1);
     }
@@ -87,4 +87,3 @@ void fn_828387E0(int param_1,int param_2)
   }
   return;
 }
-

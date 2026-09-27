@@ -53,8 +53,8 @@ void fn_82D58028(int *param_1,undefined4 *param_2,int *param_3,int param_4)
   undefined4 *puVar5;
   undefined4 *puVar6;
   undefined1 auStack_4f0 [16];
-  int iStack_4e0;
-  undefined4 uStack_4dc;
+  struct { int first; undefined4 second; } stack_pair_4e0;
+
   undefined4 uStack_4d8;
   undefined4 *puStack_4d4;
   undefined1 auStack_4d0 [32];
@@ -64,7 +64,7 @@ void fn_82D58028(int *param_1,undefined4 *param_2,int *param_3,int param_4)
   uint uStack_468;
   undefined4 auStack_464 [105];
   undefined1 auStack_260 [608];
-  
+
   iVar2 = KeTlsGetValue(lbl_8323B4A0);
   puVar5 = *(undefined4 **)(iVar2 + 4);
   if (puVar5 < *(undefined4 **)(iVar2 + 0xc)) {
@@ -100,10 +100,10 @@ void fn_82D58028(int *param_1,undefined4 *param_2,int *param_3,int param_4)
                                (auStack_4f0,param_3[3] + 0xc,param_3,param_1,param_2,piVar3,*puVar6)
     ;
     if (*pcVar4 != '\0') {
-      iStack_4e0 = (**(code **)(*piVar3 + 0x14))(piVar3,*puVar6,auStack_260);
-      uStack_4dc = *puVar6;
-      (**(code **)((uint)*(byte *)((iVar2 + 0xd) * 0x20 + *(int *)(iStack_4e0 + 0xc) + *param_3) *
-                   0x14 + *param_3 + 0x9a4))(param_1,&iStack_4e0,param_3,param_4);
+      stack_pair_4e0.first = (**(code **)(*piVar3 + 0x14))(piVar3,*puVar6,auStack_260);
+      stack_pair_4e0.second = *puVar6;
+      (**(code **)((uint)*(byte *)((iVar2 + 0xd) * 0x20 + *(int *)(stack_pair_4e0.first + 0xc) + *param_3) *
+                   0x14 + *param_3 + 0x9a4))(param_1,&stack_pair_4e0.first,param_3,param_4);
       if (*(char *)(param_4 + 4) != '\0') break;
     }
   }
@@ -123,4 +123,3 @@ void fn_82D58028(int *param_1,undefined4 *param_2,int *param_3,int param_4)
   }
   return;
 }
-

@@ -79,8 +79,8 @@ void fn_827EE7C8(undefined8 param_1,double param_2,undefined8 param_3,undefined8
   struct { float first; float second; } stack_pair_a8;
 
   float fStack_a0;
-  float fStack_98;
-  float fStack_94;
+  struct { float first; float second; } stack_pair_98;
+
   float fStack_90;
   float fStack_88;
   float fStack_84;
@@ -132,7 +132,7 @@ void fn_827EE7C8(undefined8 param_1,double param_2,undefined8 param_3,undefined8
       fStack_64 = (float)dVar7;
       dVar7 = (double)fn_827EDE70((double)param_6[2],(double)param_7[2],dVar9);
       fStack_60 = (float)dVar7;
-      fn_82810328(pfVar4,&fStack_68,&fStack_98);
+      fn_82810328(pfVar4,&fStack_68,&stack_pair_98.first);
       fStack_b0 = (float)param_2;
       dVar7 = (double)(float)(dVar10 * dVar10);
       bVar2 = false;
@@ -140,9 +140,9 @@ void fn_827EE7C8(undefined8 param_1,double param_2,undefined8 param_3,undefined8
       iVar5 = fn_8280A5E8(dVar9);
       dVar10 = (double)lbl_821AAD20;
       if ((iVar5 == 0) &&
-         (iVar5 = fn_827EDED0(dVar9,(double)(fStack_90 * fStack_a0 + fStack_98 * stack_pair_a8.first),
+         (iVar5 = fn_827EDED0(dVar9,(double)(fStack_90 * fStack_a0 + stack_pair_98.first * stack_pair_a8.first),
                                 (double)(float)((double)(fStack_90 * fStack_90 +
-                                                        fStack_98 * fStack_98) - dVar7),
+                                                        stack_pair_98.first * stack_pair_98.first) - dVar7),
                                 (double)fStack_b0), iVar5 != 0)) {
         dVar9 = (double)stack_pair_a8.second;
         fVar1 = (float)((double)fStack_ac * dVar9 + (double)pfVar4[1]);
@@ -158,8 +158,8 @@ void fn_827EE7C8(undefined8 param_1,double param_2,undefined8 param_3,undefined8
       dVar9 = (double)(fStack_a0 * fStack_a0 + (float)(dVar9 * dVar9));
       iVar5 = fn_8280A5E8(dVar9);
       if ((iVar5 == 0) &&
-         (iVar5 = fn_827EDED0(dVar9,(double)(fStack_90 * fStack_a0 + fStack_94 * stack_pair_a8.second),
-                                (double)(float)((double)(fStack_94 * fStack_94 +
+         (iVar5 = fn_827EDED0(dVar9,(double)(fStack_90 * fStack_a0 + stack_pair_98.second * stack_pair_a8.second),
+                                (double)(float)((double)(stack_pair_98.second * stack_pair_98.second +
                                                         fStack_90 * fStack_90) - dVar7),
                                 (double)fStack_b0), iVar5 != 0)) {
         dVar9 = (double)stack_pair_a8.first;
@@ -176,9 +176,9 @@ void fn_827EE7C8(undefined8 param_1,double param_2,undefined8 param_3,undefined8
       dVar9 = (double)(stack_pair_a8.second * stack_pair_a8.second + (float)(dVar9 * dVar9));
       iVar5 = fn_8280A5E8(dVar9);
       if ((iVar5 == 0) &&
-         (iVar5 = fn_827EDED0(dVar9,(double)(fStack_94 * stack_pair_a8.second + fStack_98 * stack_pair_a8.first),
-                                (double)(float)((double)(fStack_94 * fStack_94 +
-                                                        fStack_98 * fStack_98) - dVar7),
+         (iVar5 = fn_827EDED0(dVar9,(double)(stack_pair_98.second * stack_pair_a8.second + stack_pair_98.first * stack_pair_a8.first),
+                                (double)(float)((double)(stack_pair_98.second * stack_pair_98.second +
+                                                        stack_pair_98.first * stack_pair_98.first) - dVar7),
                                 (double)fStack_b0), iVar5 != 0)) {
         fVar1 = (float)((double)fStack_ac * (double)fStack_a0 + (double)pfVar4[2]);
         if (((lbl_831F13C0 == 0) || (dVar10 <= (double)fStack_ac)) &&
@@ -189,9 +189,9 @@ void fn_827EE7C8(undefined8 param_1,double param_2,undefined8 param_3,undefined8
       }
       fVar1 = fStack_b0;
       if (!bVar2) {
-        dVar10 = (double)fn_82810308(&fStack_98);
+        dVar10 = (double)fn_82810308(&stack_pair_98.first);
         dVar10 = (double)(float)(dVar10 - dVar7);
-        uVar3 = fn_82810280(&stack_pair_a8.first,&fStack_98);
+        uVar3 = fn_82810280(&stack_pair_a8.first,&stack_pair_98.first);
         uVar8 = fn_82810308(&stack_pair_a8.first);
         uVar3 = fn_827EDED0(uVar8,uVar3,dVar10,param_2);
         goto LAB_827ee844;

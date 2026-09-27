@@ -82,10 +82,10 @@ void fn_82D36438(int param_1,undefined8 param_2,undefined4 *param_3,ulonglong pa
   struct { float first; float second; } stack_pair_a0;
 
   float fStack_98;
-  float fStack_90;
-  float fStack_8c;
+  struct { float first; float second; } stack_pair_90;
+
   float fStack_88;
-  
+
   iVar3 = (int)param_4;
   *(int *)(param_1 + 0x18) = iVar3;
   if (iVar3 != 0) {
@@ -124,7 +124,7 @@ void fn_82D36438(int param_1,undefined8 param_2,undefined4 *param_3,ulonglong pa
         iVar4 = iVar2 + iStack_b8;{ V16 _vt0 = vectorMinimumFloatingPoint(in_vs37,in_vs39); memcpy(auVar8, &_vt0, 16); }{ V16 _vt1 = vectorMinimumFloatingPoint(in_vs38,in_vs39); memcpy(auVar9, &_vt1, 16); }
         vectorMaximumFloatingPoint(auVar8,in_vs32);
         vectorMaximumFloatingPoint(auVar9,in_vs32);
-        puVar1 = (undefined4 *)((int)&fStack_90 + in_r0 & 0xfffffff0);
+        puVar1 = (undefined4 *)((int)&stack_pair_90.first + in_r0 & 0xfffffff0);
         *puVar1 = in_register_00010010;
         puVar1[1] = in_register_00010014;
         puVar1[2] = in_register_00010018;
@@ -135,8 +135,8 @@ void fn_82D36438(int param_1,undefined8 param_2,undefined4 *param_3,ulonglong pa
         puVar1[2] = in_register_00010028;
         puVar1[3] = in_vr2;
         *(short *)(iVar2 + iStack_b8) = (short)((uint)(int)stack_pair_a0.first >> 0xf);
-        *(short *)(iVar4 + 8) = (short)((uint)(int)fStack_8c >> 0xf);
-        *(short *)(iVar4 + 6) = (short)((uint)(int)fStack_90 >> 0xf);
+        *(short *)(iVar4 + 8) = (short)((uint)(int)stack_pair_90.second >> 0xf);
+        *(short *)(iVar4 + 6) = (short)((uint)(int)stack_pair_90.first >> 0xf);
         *(short *)(iVar4 + 10) = (short)((uint)(int)fStack_88 >> 0xf);
         iVar2 = iVar2 + 0xc;
         *(short *)(iVar4 + 4) = (short)((uint)(int)fStack_98 >> 0xf);
@@ -167,4 +167,3 @@ void fn_82D36438(int param_1,undefined8 param_2,undefined4 *param_3,ulonglong pa
   }
   return;
 }
-

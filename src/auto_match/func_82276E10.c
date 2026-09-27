@@ -26,10 +26,10 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_30;
-extern int fn_822762E8();
-extern int fn_82276590();
-extern int fn_822766D0();
 extern int fn_82276818();
+extern int fn_822766D0();
+extern int fn_82276590();
+extern int fn_822762E8();
 extern int fn_82356F98();
 extern int fn_82520158();
 extern int fn_8265C9E0();
@@ -42,8 +42,8 @@ undefined4 * fn_82276E10(undefined4 *param_1,int param_2)
   uint uVar1;
   undefined4 uVar2;
   undefined4 *puVar3;
-  undefined1 auStack_30 [48];
-  
+  undefined1 auStack_30 [1];
+
   uVar1 = *(uint *)(*(int *)(param_2 + 0x24) + 4);
   if (uVar1 == 0) {
     fn_82520158(0xffffffff821a80c4,auStack_30,0);
@@ -54,7 +54,7 @@ undefined4 * fn_82276E10(undefined4 *param_1,int param_2)
       *puVar3 = &lbl_821A8D8C;
       puVar3[2] = 1;
       if (puVar3 + 4 != (undefined4 *)0x0) {
-        fn_822762E8(puVar3 + 4,auStack_30,uVar2,*(undefined4 *)(param_2 + 0x28));
+        fn_82276818(puVar3 + 4,auStack_30,uVar2,*(undefined4 *)(param_2 + 0x28));
       }
       goto LAB_82276fb8;
     }
@@ -68,7 +68,7 @@ undefined4 * fn_82276E10(undefined4 *param_1,int param_2)
       *puVar3 = &lbl_821A8D8C;
       puVar3[2] = 1;
       if (puVar3 + 4 != (undefined4 *)0x0) {
-        fn_82276590(puVar3 + 4,auStack_30,uVar2);
+        fn_822766D0(puVar3 + 4,auStack_30,uVar2);
       }
       goto LAB_82276fb8;
     }
@@ -82,7 +82,7 @@ undefined4 * fn_82276E10(undefined4 *param_1,int param_2)
       *puVar3 = &lbl_821A8D8C;
       puVar3[2] = 1;
       if (puVar3 + 4 != (undefined4 *)0x0) {
-        fn_822766D0(puVar3 + 4,auStack_30,uVar2);
+        fn_82276590(puVar3 + 4,auStack_30,uVar2);
       }
       goto LAB_82276fb8;
     }
@@ -100,7 +100,7 @@ undefined4 * fn_82276E10(undefined4 *param_1,int param_2)
       *puVar3 = &lbl_821A8D8C;
       puVar3[2] = 1;
       if (puVar3 + 4 != (undefined4 *)0x0) {
-        fn_82276818(puVar3 + 4,auStack_30,uVar2,*(undefined4 *)(param_2 + 0x28));
+        fn_822762E8(puVar3 + 4,auStack_30,uVar2,*(undefined4 *)(param_2 + 0x28));
       }
       goto LAB_82276fb8;
     }
@@ -111,4 +111,3 @@ LAB_82276fb8:
   *param_1 = puVar3 + 4;
   return param_1;
 }
-

@@ -69,8 +69,7 @@ extern unsigned int uStack_4a4;
 /* WARNING: Removing unreachable block (ram,0x82eb1e78) */
 /* WARNING: Removing unreachable block (ram,0x82eb2ee0) */
 
-void fn_82EB1548(int param_1,undefined4 param_2,uint param_3,int param_4,int param_5,int param_6,
-                  uint param_7,uint param_8)
+void fn_82EB1548(int param_1, undefined4 param_2, uint param_3, int param_4, int param_5, int param_6, uint param_7, uint param_8, uint in_stack_00000054, uint in_stack_0000005c, uint in_stack_00000064, uint in_stack_0000006c, uint in_stack_00000074, uint in_stack_0000007c, int in_stack_00000084, uint in_stack_0000008c, int in_stack_00000094, int in_stack_0000009c, int in_stack_000000a4, int in_stack_000000ac, undefined4 in_stack_000000b4)
 
 {
   uint uVar1;
@@ -122,19 +121,19 @@ void fn_82EB1548(int param_1,undefined4 param_2,uint param_3,int param_4,int par
   int iStack0000003c;
   uint uStack00000044;
   uint uStack0000004c;
-  uint in_stack_00000054;
-  uint in_stack_0000005c;
-  uint in_stack_00000064;
-  uint in_stack_0000006c;
-  uint in_stack_00000074;
-  uint in_stack_0000007c;
-  int in_stack_00000084;
-  uint in_stack_0000008c;
-  int in_stack_00000094;
-  int in_stack_0000009c;
-  int in_stack_000000a4;
-  int in_stack_000000ac;
-  undefined4 in_stack_000000b4;
+
+
+
+
+
+
+
+
+
+
+
+
+
   int *in_stack_000000bc;
   int *in_stack_000000c4;
   int *in_stack_000000cc;
@@ -173,7 +172,7 @@ void fn_82EB1548(int param_1,undefined4 param_2,uint param_3,int param_4,int par
   undefined1 auStack_340 [208];
   undefined1 auStack_270 [176];
   undefined1 auStack_1c0 [416];
-  
+
   puStack_45c = auStack_1c0;
   if ((*(uint *)(param_1 + 0x6db8) & 1) == 0) {
     uVar14 = in_stack_000000b4;
@@ -946,4 +945,3 @@ LAB_82eb1854:
   *in_stack_000000cc = (int)puVar22;
   return;
 }
-

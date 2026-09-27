@@ -28,19 +28,18 @@ typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_54;
 extern unsigned int *auStack_5c;
 extern int fn_827F6950();
-extern int fn_827F6960();
-extern int fn_827F7210();
+extern int fn_827F6950();
+extern int fn_827F6950();
 
 
 void fn_827FBAC0(undefined8 param_1,undefined8 param_2)
 
 {
   undefined1 auStack_5c [8];
-  undefined1 auStack_54 [84];
-  
-  fn_827F7210();
-  fn_827F6960(param_2,auStack_54);
+  undefined1 auStack_54 [52];
+
+  fn_827F6950();
+  fn_827F6950(param_2,auStack_54);
                     /* WARNING: Subroutine does not return */
   fn_827F6950(param_1,auStack_5c);
 }
-

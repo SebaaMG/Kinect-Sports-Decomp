@@ -32,11 +32,11 @@ extern int fn_82270B70();
 extern int fn_82271378();
 extern int fn_822715B0();
 extern int fn_82272008();
+extern int fn_82272770();
+extern int fn_82272008();
+extern int fn_82272608();
 extern int fn_822720D8();
 extern int fn_82272268();
-extern int fn_822724D0();
-extern int fn_82272608();
-extern int fn_82272770();
 extern int fn_82272BA0();
 extern int fn_82275128();
 extern int fn_8228C2C8();
@@ -45,7 +45,7 @@ extern int fn_8266F580();
 extern int fn_827EF828();
 extern int fn_827EFFE8();
 extern int fn_827F0180();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int lbl_821917B4;
 extern unsigned int lbl_821954C8;
 extern unsigned int lbl_821CC160;
@@ -65,8 +65,8 @@ void fn_8226D970(void)
   int iVar7;
   ulonglong uVar8;
   double dVar9;
-  undefined1 auStack_b0 [176];
-  
+  undefined1 auStack_b0 [112];
+
   piVar5 = (int *)fn_82270B70();
   if (piVar5[0x27] != 0) {
     return;
@@ -85,24 +85,24 @@ void fn_8226D970(void)
     if (uVar6 != 1) {
       bVar3 = bVar4;
       if (uVar6 < 3) {
-        uVar6 = fn_822720D8(piVar5);
+        uVar6 = fn_82272770(piVar5);
       }
       else if (uVar6 == 3) {
-        uVar6 = fn_822724D0(piVar5);
+        uVar6 = fn_82272608(piVar5);
       }
       else if (uVar6 < 5) {
-        uVar6 = fn_82272608(piVar5);
+        uVar6 = fn_822720D8(piVar5);
       }
       else {
         bVar3 = true;
         if (uVar6 == 5) {
-          uVar6 = fn_82272770();
+          uVar6 = fn_82272268();
           bVar3 = bVar4;
         }
       }
       goto LAB_8226da44;
     }
-    uVar6 = fn_82272268(piVar5);
+    uVar6 = fn_82272008(piVar5);
   }
   bVar3 = false;
 LAB_8226da44:
@@ -122,7 +122,7 @@ LAB_8226da44:
     uVar8 = (ulonglong)(uint)piVar5[0x15];
     if (uVar8 != 0) {
       fn_82272BA0(auStack_b0);
-      fn_82F68CC0(uVar8 + 0x38,auStack_b0,0x70);
+      memcpy(uVar8 + 0x38,auStack_b0,0x70);
     }
     if (piVar5[0x15] != 0) {
       *(ulonglong *)(piVar5[0x15] + 0xa8) = CONCAT44(lbl_821954C8,lbl_821954C8);
@@ -174,4 +174,3 @@ LAB_8226dc08:
     piVar1 = (int *)piVar1[1];
   } while( true );
 }
-

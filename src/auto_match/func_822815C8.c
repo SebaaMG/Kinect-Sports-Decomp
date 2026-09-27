@@ -35,7 +35,7 @@ extern int fn_822800E8();
 extern int fn_822820E0();
 extern int fn_82356F98();
 extern int fn_823F2E20();
-extern int fn_82F691F0();
+extern int fn_82528BF8();
 extern unsigned int iStack_83c;
 extern unsigned int lbl_820E975C;
 extern unsigned int uStack_830;
@@ -55,8 +55,8 @@ void fn_822815C8(int param_1)
   int iStack_83c;
   undefined1 auStack_838 [8];
   undefined2 uStack_830;
-  undefined1 auStack_82e [2094];
-  
+  undefined1 auStack_82e [2046];
+
   if ((*(int *)(param_1 + 0x10) != 0) && (fn_822800E8(), *(int *)(param_1 + 0xc) != 0)) {
     iVar1 = *(int *)(param_1 + 0x10);
     if ((*(int *)(iVar1 + 0x44) != 0) &&
@@ -71,7 +71,7 @@ void fn_822815C8(int param_1)
       if (*piVar4 != 0) {
         uStack_830 = lbl_820E975C;
                     /* WARNING: Subroutine does not return */
-        fn_82F691F0(auStack_82e,0,0x7fe);
+        fn_82528BF8(auStack_82e,0,0x7fe);
       }
       *(undefined4 *)(param_1 + 0xc) = 0;
     }
@@ -98,4 +98,3 @@ void fn_822815C8(int param_1)
   }
   return;
 }
-

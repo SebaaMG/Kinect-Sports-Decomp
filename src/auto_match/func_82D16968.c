@@ -70,10 +70,10 @@ undefined4 * fn_82D16968(undefined4 *param_1)
   struct { undefined4 first; undefined4 second; } stack_pair_70;
 
   undefined4 uStack_68;
-  undefined4 uStack_60;
-  undefined4 uStack_5c;
+  struct { undefined4 first; undefined4 second; } stack_pair_60;
+
   undefined4 uStack_58;
-  
+
   iVar4 = fn_82CE5410();
   iVar4 = (**(code **)(**(int **)(iVar4 + 0x10) + 4))(*(int **)(iVar4 + 0x10),0x1c0);
   if (iVar4 == 0) {
@@ -258,15 +258,15 @@ undefined4 * fn_82D16968(undefined4 *param_1)
       iVar6 = iVar6 + 0x10;
     } while (iVar4 < (int)param_1[0x16]);
   }
-  uStack_60 = 0;
-  uStack_5c = 0;
+  stack_pair_60.first = 0;
+  stack_pair_60.second = 0;
   uStack_58 = 0xffffffff;
   iVar4 = fn_82CE5410();
-  fn_82CEAB00(&uStack_60,*(undefined4 *)(iVar4 + 0x10),0);
+  fn_82CEAB00(&stack_pair_60.first,*(undefined4 *)(iVar4 + 0x10),0);
   iVar4 = param_1[10];
   if (iVar4 != 0) {
     iVar6 = fn_82CE5410();
-    fn_82CEAB00(&uStack_60,*(undefined4 *)(iVar6 + 0x10),iVar4);
+    fn_82CEAB00(&stack_pair_60.first,*(undefined4 *)(iVar6 + 0x10),iVar4);
     puVar10 = (undefined4 *)param_1[9];
     if (puVar10 != (undefined4 *)0x0) {
       for (puVar15 = (undefined4 *)*puVar10; puVar15 != (undefined4 *)0x0;
@@ -277,7 +277,7 @@ undefined4 * fn_82D16968(undefined4 *param_1)
         do {
           uVar3 = fn_82D16610(puVar5 + 6,puVar10);
           iVar4 = fn_82CE5410();
-          fn_82CEA160(&uStack_60,*(undefined4 *)(iVar4 + 0x10),puVar10,uVar3);
+          fn_82CEA160(&stack_pair_60.first,*(undefined4 *)(iVar4 + 0x10),puVar10,uVar3);
           puVar10 = (undefined4 *)puVar10[1];
         } while (puVar10 != (undefined4 *)0x0);
       }
@@ -306,7 +306,7 @@ undefined4 * fn_82D16968(undefined4 *param_1)
         lVar12 = 3;
         puVar15 = (undefined4 *)(iVar4 + 4);
         do {
-          uVar7 = fn_82CEA280(&uStack_60,puVar15[1],0);
+          uVar7 = fn_82CEA280(&stack_pair_60.first,puVar15[1],0);
           lVar12 = lVar12 + -1;
           puVar15 = puVar15 + 1;
           *puVar15 = uVar7;
@@ -339,8 +339,7 @@ undefined4 * fn_82D16968(undefined4 *param_1)
     fn_82BA02A8(&stack_pair_70.first);
   }
   iVar4 = fn_82CE5410();
-  fn_82CEA4B8(&uStack_60,*(undefined4 *)(iVar4 + 0x10));
-  fn_82BA02A8(&uStack_60);
+  fn_82CEA4B8(&stack_pair_60.first,*(undefined4 *)(iVar4 + 0x10));
+  fn_82BA02A8(&stack_pair_60.first);
   return puVar5;
 }
-

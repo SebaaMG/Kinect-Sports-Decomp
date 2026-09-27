@@ -25,10 +25,10 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_827BB5D0();
+extern int fn_827BC248();
 extern int fn_827BB6B8();
 extern int fn_827BBB00();
-extern int fn_827BBEB0();
+extern int fn_827BCEC0();
 extern int fn_827BC248();
 extern int fn_827BC550();
 extern int fn_827BCEC0();
@@ -45,7 +45,7 @@ undefined8 fn_827BD1E0(int *param_1)
   undefined8 uVar4;
   undefined8 uVar5;
   undefined4 uVar6;
-  
+
   do {
     if (param_1[0x5f] == 0) {
       if (*(char *)(param_1[0x65] + 0xc) == '\0') {
@@ -95,7 +95,7 @@ LAB_827bd294:
             }
             if (iVar1 == 0xc3) goto LAB_827bd2f8;
             if (iVar1 == 0xc4) {
-              cVar3 = fn_827BBEB0(param_1);
+              cVar3 = fn_827BCEC0(param_1);
               goto LAB_827bd2d8;
             }
           }
@@ -121,7 +121,7 @@ LAB_827bd2fc:
           if (0xcf < iVar1) {
             if (iVar1 < 0xd8) goto LAB_827bd370;
             if (iVar1 == 0xd8) {
-              cVar3 = fn_827BB5D0(param_1);
+              cVar3 = fn_827BC248(param_1);
               goto LAB_827bd2d8;
             }
             if (iVar1 == 0xd9) {
@@ -175,4 +175,3 @@ LAB_827bd2d8:
     param_1[0x5f] = 0;
   } while( true );
 }
-

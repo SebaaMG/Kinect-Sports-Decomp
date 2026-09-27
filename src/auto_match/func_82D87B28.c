@@ -82,10 +82,10 @@ void fn_82D87B28(int param_1,undefined8 param_2,undefined8 param_3,int param_4)
   struct { int first; uint second; } stack_pair_88;
 
   uint uStack_80;
-  undefined4 uStack_78;
-  undefined4 uStack_74;
+  struct { undefined4 first; undefined4 second; } stack_pair_78;
+
   uint uStack_70;
-  
+
   iVar4 = KeTlsGetValue(lbl_8323B4A0);
   puVar1 = *(undefined4 **)(iVar4 + 4);
   if (puVar1 < *(undefined4 **)(iVar4 + 0xc)) {
@@ -94,11 +94,11 @@ void fn_82D87B28(int param_1,undefined8 param_2,undefined8 param_3,int param_4)
     puVar1[1] = (int)uVar3;
     *(undefined4 **)(iVar4 + 4) = puVar1 + 3;
   }
-  uStack_78 = 0;
-  uStack_74 = 0;
+  stack_pair_78.first = 0;
+  stack_pair_78.second = 0;
   uStack_70 = 0x80000000;
   (**(code **)(**(int **)(param_1 + 0x58) + 0x54))
-            (*(int **)(param_1 + 0x58),param_2,param_3,&uStack_78);
+            (*(int **)(param_1 + 0x58),param_2,param_3,&stack_pair_78.first);
   (**(code **)(**(int **)(param_1 + 0x58) + 0x58))
             (*(int **)(param_1 + 0x58),(ulonglong)*(uint *)(param_1 + 0x78) + 0x20,
              (ulonglong)*(uint *)(param_1 + 0x78) + 0x30);
@@ -119,7 +119,7 @@ void fn_82D87B28(int param_1,undefined8 param_2,undefined8 param_3,int param_4)
   if ((ulonglong)*(uint *)(param_1 + 0x7c) == 0) {
     lVar9 = 0;
   }
-  fn_83088518(*(undefined4 *)(param_1 + 100),uStack_78,uStack_74,lVar9);
+  fn_83088518(*(undefined4 *)(param_1 + 100),stack_pair_78.first,stack_pair_78.second,lVar9);
   if (*(int *)(param_1 + 0x1bc) != 0) {
     piVar7 = (int *)(*(int *)(param_1 + 0x1bc) + 0x18);
     lVar9 = 6;
@@ -260,11 +260,10 @@ LAB_82d87ee0:
     *(undefined4 **)(iVar4 + 4) = puVar1 + 3;
   }
   iVar4 = fn_82CE5410();
-  uStack_74 = 0;
+  stack_pair_78.second = 0;
   if ((uStack_70 & 0x80000000) == 0) {
     (**(code **)(**(int **)(iVar4 + 0x10) + 0x10))
-              (*(int **)(iVar4 + 0x10),uStack_78,uStack_70 & 0x3fffffff,8);
+              (*(int **)(iVar4 + 0x10),stack_pair_78.first,uStack_70 & 0x3fffffff,8);
   }
   return;
 }
-

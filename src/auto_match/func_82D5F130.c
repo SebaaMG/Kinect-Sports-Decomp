@@ -48,9 +48,9 @@ void fn_82D5F130(int param_1,int param_2,int param_3,undefined8 param_4)
   undefined4 *puVar13;
   longlong lVar14;
   undefined4 auStack_9c [3];
-  undefined4 auStack_90 [7];
+  undefined4 auStack_90 [1];
   uint auStack_74 [29];
-  
+
   do {
     uVar4 = param_2 + param_3 >> 1;
     iVar10 = uVar4 * 0x20 + param_1;
@@ -148,4 +148,3 @@ void fn_82D5F130(int param_1,int param_2,int param_3,undefined8 param_4)
     }
   } while( true );
 }
-

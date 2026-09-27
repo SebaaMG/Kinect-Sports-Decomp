@@ -28,7 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_50;
 extern int fn_82273CD8();
 extern int fn_82526A70();
-extern int fn_82528F60();
+extern int fn_82526A70();
 extern int fn_8265CA60();
 extern int fn_8266F780();
 
@@ -45,8 +45,8 @@ void fn_826700E0(int *param_1,int param_2,ulonglong param_3)
   ulonglong uVar7;
   int iVar8;
   undefined4 *puVar9;
-  undefined4 auStack_50 [20];
-  
+  undefined4 auStack_50;
+
   uVar6 = (uint)param_3;
   if ((uVar6 == 0) || (param_2 == 0)) {
     *param_1 = 0;
@@ -85,24 +85,24 @@ void fn_826700E0(int *param_1,int param_2,ulonglong param_3)
         fn_8266F780((int)puVar9 + *param_1 + (-8 - param_2),puVar9 + -2);
         uVar6 = puVar9[-1] & 0x8f;
         if (uVar6 == 4) {
-          auStack_50[0] = 0;
+          auStack_50 = 0;
           if (((uint)puVar9[-1] >> 6 & 1) == 0) {
             uVar1 = *puVar9;
           }
           else {
             uVar1 = *(undefined4 *)*puVar9;
           }
-          fn_82526A70(auStack_50,uVar1);
+          fn_82526A70(&auStack_50,uVar1);
           uVar4 = 4;
 LAB_826701f8:
-          uVar1 = auStack_50[0];
+          uVar1 = auStack_50;
           iVar8 = (int)puVar9 + *param_1 + (-8 - param_2);
           fn_82273CD8(iVar8,uVar4);
           *(undefined4 *)(iVar8 + 8) = uVar1;
         }
         else if (uVar6 == 5) {
-          auStack_50[0] = 0;
-          fn_82528F60(auStack_50,*puVar9);
+          auStack_50 = 0;
+          fn_82526A70(&auStack_50,*puVar9);
           uVar4 = 5;
           goto LAB_826701f8;
         }
@@ -113,4 +113,3 @@ LAB_826701f8:
   }
   return;
 }
-

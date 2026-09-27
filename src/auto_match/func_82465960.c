@@ -29,8 +29,8 @@ typedef struct { U64 lo, hi; } V16;
 extern int fn_82270AC0();
 extern int fn_824656C8();
 extern int fn_82465C10();
-extern int fn_82465D80();
 extern int fn_82465FA8();
+extern int fn_82465C10();
 extern int fn_824660C0();
 extern int fn_82520780();
 extern unsigned int lbl_821954D8;
@@ -52,7 +52,7 @@ void fn_82465960(double param_1,int param_2)
   int iVar5;
   uint uVar6;
   ulonglong uVar7;
-  
+
   fVar4 = lbl_821CC160;
   uVar7 = 0;
   if (*(int *)(param_2 + 0xd0) == 1) {
@@ -109,7 +109,7 @@ void fn_82465960(double param_1,int param_2)
     fn_82465C10(param_2);
   }
   else if (iVar5 == 2) {
-    fn_82465D80(param_2);
+    fn_82465FA8(param_2);
   }
   else if (iVar5 == 3) {
     uVar6 = lbl_831D3874;
@@ -126,8 +126,7 @@ void fn_82465960(double param_1,int param_2)
     }
   }
   else if (iVar5 == 4) {
-    fn_82465FA8(param_2);
+    fn_82465C10(param_2);
   }
   return;
 }
-

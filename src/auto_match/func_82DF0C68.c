@@ -78,8 +78,8 @@ void fn_82DF0C68(undefined8 param_1,undefined8 param_2,uint param_3,longlong par
   undefined4 uVar21;
   undefined4 uVar22;
   uint uStack_180;
-  float fStack_170;
-  float fStack_16c;
+  struct { float first; float second; } stack_pair_170;
+
   float fStack_168;
   undefined1 auStack_160 [16];
   undefined1 auStack_150 [16];
@@ -92,7 +92,7 @@ void fn_82DF0C68(undefined8 param_1,undefined8 param_2,uint param_3,longlong par
   undefined4 uStack_100;
   undefined4 uStack_e0;
   uint uStack_d0;
-  
+
   iVar5 = fn_82F6A548();
   uStack_180 = 2;
   dVar16 = (double)lbl_82079F28;
@@ -112,11 +112,11 @@ void fn_82DF0C68(undefined8 param_1,undefined8 param_2,uint param_3,longlong par
           iVar13 = 0;
           do {
             uVar14 = (ulonglong)*(uint *)(iVar13 + *(int *)(iVar1 + 0x48));
-            fn_82CE5088(&fStack_170,param_2,uVar14 + 0x140);
-            dVar15 = (double)fStack_170;
+            fn_82CE5088(&stack_pair_170.first,param_2,uVar14 + 0x140);
+            dVar15 = (double)stack_pair_170.first;
             if (((dVar17 <= dVar15) && (dVar15 <= (double)*(float *)(iVar5 + 0x34))) &&
                (uVar14 != param_3)) {
-              dVar19 = (double)((ABS(fStack_168) + ABS(fStack_16c)) / (float)(dVar15 + dVar18));
+              dVar19 = (double)((ABS(fStack_168) + ABS(stack_pair_170.second)) / (float)(dVar15 + dVar18));
               dVar15 = (double)fn_82D93128(uVar14 + 0xe0);
               if ((double)*(float *)(iVar5 + 0x30) < dVar15) {
                 dVar19 = (double)(float)(dVar19 + dVar17);
@@ -185,4 +185,3 @@ LAB_82df0e20:
     }
   } while( true );
 }
-

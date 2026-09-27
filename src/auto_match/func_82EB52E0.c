@@ -71,8 +71,7 @@ extern unsigned int uStack_560;
 /* WARNING: Removing unreachable block (ram,0x82eb6fe8) */
 /* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
 
-void fn_82EB52E0(int param_1,undefined4 param_2,uint param_3,uint param_4,int param_5,int param_6,
-                  ulonglong param_7,ulonglong param_8)
+void fn_82EB52E0(int param_1, undefined4 param_2, uint param_3, uint param_4, int param_5, int param_6, ulonglong param_7, ulonglong param_8, uint in_stack_00000054, uint in_stack_0000005c, uint in_stack_00000064, uint in_stack_0000006c, uint in_stack_00000074, uint in_stack_0000007c, int in_stack_00000084, uint in_stack_0000008c, int in_stack_00000094, int in_stack_0000009c, undefined8 unused_arg_19, undefined4 in_stack_000000ac)
 
 {
   code *pcVar1;
@@ -131,18 +130,18 @@ void fn_82EB52E0(int param_1,undefined4 param_2,uint param_3,uint param_4,int pa
   int iStack0000003c;
   uint uStack00000044;
   uint uStack0000004c;
-  uint in_stack_00000054;
-  uint in_stack_0000005c;
-  uint in_stack_00000064;
-  uint in_stack_0000006c;
-  uint in_stack_00000074;
-  uint in_stack_0000007c;
-  int in_stack_00000084;
-  uint in_stack_0000008c;
-  int in_stack_00000094;
-  int in_stack_0000009c;
+
+
+
+
+
+
+
+
+
+
   undefined4 *in_stack_000000a4;
-  undefined4 in_stack_000000ac;
+
   int *in_stack_000000b4;
   int *in_stack_000000bc;
   int *in_stack_000000c4;
@@ -178,7 +177,7 @@ void fn_82EB52E0(int param_1,undefined4 param_2,uint param_3,uint param_4,int pa
   int aiStack_340 [52];
   int aiStack_270 [44];
   undefined1 auStack_1c0 [368];
-  
+
   if ((*(uint *)(param_1 + 0x6db8) & 1) == 0) {
     uVar15 = in_stack_000000ac;
     if ((*(uint *)(param_1 + 0x6db8) & 4) == 0) {
@@ -1063,4 +1062,3 @@ LAB_82eb5608:
   *in_stack_000000c4 = iStack_548;
   return;
 }
-

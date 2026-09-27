@@ -35,7 +35,7 @@ extern int fn_82535298();
 extern int fn_82536288();
 extern int fn_82536358();
 extern int fn_828647D8();
-extern int fn_82864898();
+extern int fn_824A75E0();
 extern unsigned int lbl_821CC160;
 
 
@@ -54,7 +54,7 @@ void fn_824A6B70(int param_1)
   undefined4 auStack_90 [4];
   undefined1 auStack_80 [48];
   undefined1 auStack_50 [80];
-  
+
   iVar1 = *(int *)(param_1 + 0x3c);
   if (*(float *)(iVar1 + 0x20) <= lbl_821CC160) {
     return;
@@ -124,7 +124,6 @@ void fn_824A6B70(int param_1)
   puVar7 = auStack_50;
   *(undefined4 *)(*(int *)(param_1 + 0x3c) + 0x34) = uVar6;
 LAB_824a6d78:
-  fn_82864898(puVar7);
+  fn_824A75E0(puVar7);
   return;
 }
-

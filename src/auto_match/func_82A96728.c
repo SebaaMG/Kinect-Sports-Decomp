@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_40;
 extern unsigned int *auStack_4c;
-extern int fn_82AA75B8();
+extern int fn_82AA7710();
 extern unsigned int iStack_44;
 extern unsigned int uStack_50;
 
@@ -46,10 +46,10 @@ void fn_82A96728(int param_1,int param_2)
   undefined4 in_register_00010018;
   undefined4 in_vr1;
   uint uStack_50;
-  uint auStack_4c [2];
+  uint auStack_4c;
   int iStack_44;
-  undefined1 auStack_40 [64];
-  
+  undefined1 auStack_40 [16];
+
   piVar5 = (int *)(param_2 + 0xc);
   piVar3 = &iStack_44;
   lVar4 = 4;
@@ -61,12 +61,11 @@ void fn_82A96728(int param_1,int param_2)
   do {
     piVar3 = piVar3 + 1;
     uStack_50 = *piVar3 << (piVar5[8] & 0x3fU) & piVar5[4];
-    fn_82AA75B8(auStack_4c,&uStack_50,0x40001);
+    fn_82AA7710(&auStack_4c,&uStack_50,0x40001);
     iVar1 = *piVar5;
     lVar4 = lVar4 + -1;
     piVar5 = piVar5 + 1;
-    *(uint *)(iVar1 * 4 + param_1) = auStack_4c[0] | *(uint *)(iVar1 * 4 + param_1);
+    *(uint *)(iVar1 * 4 + param_1) = auStack_4c | *(uint *)(iVar1 * 4 + param_1);
   } while (lVar4 != 0);
   return;
 }
-

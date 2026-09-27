@@ -65,7 +65,7 @@ void fn_826B24E0(uint *param_1,undefined8 param_2)
   uint *puVar12;
   undefined1 auStack_70;
   int iStack_6c;
-  int aiStack_68 [2];
+  int aiStack_68;
   struct { int first; int second; } stack_pair_60;
 
   byte bStack_58;
@@ -87,8 +87,8 @@ void fn_826B24E0(uint *param_1,undefined8 param_2)
   for (uVar3 = (ulonglong)CONCAT11(puVar9[1],*puVar9); uVar3 != 0; uVar3 = uVar3 - 1) {
     iVar6 = fn_82694700((ulonglong)*(uint *)(*param_1 + 0x78) + 0x254,param_1[2] + iVar8);
     *(int *)(iVar6 + 8) = *(int *)(iVar6 + 8) + 1;
-    aiStack_68[0] = iVar6;
-    iVar7 = fn_826ABDB8(iVar5,0,aiStack_68);
+    aiStack_68 = iVar6;
+    iVar7 = fn_826ABDB8(iVar5,0,&aiStack_68);
     lVar10 = (ulonglong)*(uint *)(iVar6 + 8) - 1;
     iVar7 = *(int *)(*(int *)(iVar7 + 4) + 0x10);
     *(int *)(iVar6 + 8) = (int)lVar10;

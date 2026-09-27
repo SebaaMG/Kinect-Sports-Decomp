@@ -49,8 +49,8 @@ void fn_82DB61C8(int param_1,int param_2,int param_3)
   undefined4 uVar9;
   undefined4 uVar10;
   undefined1 auStack_220 [1];
-  undefined1 auStack_210 [512];
-  
+  undefined1 auStack_210 [496];
+
   if (*(uint *)(param_1 + 0x34) == (*(uint *)(param_1 + 0x38) & 0x3fffffff)) {
     fn_82CEE578(auStack_220,auStack_210,0x200);
     fn_82CEDB38(auStack_220,0xffffffff82142448);
@@ -120,4 +120,3 @@ void fn_82DB61C8(int param_1,int param_2,int param_3)
   puVar3[0x11] = *(undefined4 *)(param_2 + 0x307c);
   return;
 }
-

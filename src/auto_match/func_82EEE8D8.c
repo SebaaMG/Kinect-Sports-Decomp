@@ -36,20 +36,19 @@ extern int fn_82F41B20();
 extern int fn_82F41DF8();
 
 
-longlong fn_82EEE8D8(int *param_1,undefined8 param_2,undefined8 param_3,undefined8 param_4,
-                      ulonglong param_5,undefined4 *param_6,undefined2 *param_7,undefined8 param_8)
+longlong fn_82EEE8D8(int *param_1, undefined8 param_2, undefined8 param_3, undefined8 param_4, ulonglong param_5, undefined4 *param_6, undefined2 *param_7, undefined8 param_8, int in_stack_00000054, int in_stack_0000005c, undefined4 in_stack_00000064)
 
 {
   undefined4 *puVar1;
   int iVar2;
   undefined4 *puVar3;
   longlong lVar4;
-  int in_stack_00000054;
-  int in_stack_0000005c;
-  undefined4 in_stack_00000064;
+
+
+
   undefined4 *puStack_60;
   int aiStack_5c;
-  
+
   puStack_60 = (undefined4 *)0x0;
   aiStack_5c = 0;
   if (param_1[0x1d] == 0) {
@@ -116,4 +115,3 @@ longlong fn_82EEE8D8(int *param_1,undefined8 param_2,undefined8 param_3,undefine
   }
   return lVar4;
 }
-

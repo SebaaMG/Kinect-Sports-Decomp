@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_30;
 extern int fn_826824B0();
-extern int fn_826944C8();
+extern int fn_826959C8();
 extern int fn_826957D0();
 extern int fn_826959C8();
 extern int fn_82695FA0();
@@ -50,8 +50,8 @@ void fn_826BFBB8(int param_1)
   struct { int first; int second; } stack_pair_48;
 
   byte bStack_40;
-  undefined1 auStack_30 [32];
-  
+  undefined1 auStack_30 [16];
+
   if (*(int *)(param_1 + 0x1c) < 2) {
     puVar2 = *(undefined1 **)(param_1 + 4);
     fn_826959C8(puVar2);
@@ -87,7 +87,7 @@ void fn_826BFBB8(int param_1)
       lVar5 = (ulonglong)*(uint *)(aiStack_50[0] + 8) - 1;
       *(int *)(aiStack_50[0] + 8) = (int)lVar5;
       if (lVar5 == 0) {
-        fn_826944C8(aiStack_50[0]);
+        fn_826959C8(aiStack_50[0]);
       }
       fn_82696330(auStack_30);
     }
@@ -101,4 +101,3 @@ void fn_826BFBB8(int param_1)
   }
   return;
 }
-

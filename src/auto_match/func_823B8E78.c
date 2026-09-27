@@ -61,7 +61,7 @@ undefined4 * fn_823B8E78(undefined4 *param_1,int *param_2,int param_3,int param_
   struct { int first; undefined4 second; } stack_pair_50;
 
   uint uStack_48;
-  undefined1 auStack_40 [48];
+  undefined1 auStack_40 [32];
 
   uStack_58 = *(uint *)(param_3 + 8);
   piVar6 = (int *)0x0;

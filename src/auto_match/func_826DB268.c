@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_30;
 extern int fn_8267C4C8();
-extern int fn_8267C4F0();
+extern int fn_826DABA8();
 extern int fn_826DABA8();
 extern int fn_826DAEE0();
 extern unsigned int stack0x0000001c;
@@ -38,8 +38,8 @@ void fn_826DB268(longlong param_1,undefined4 param_2,ulonglong param_3)
 
 {
   undefined4 uStack0000001c;
-  undefined4 auStack_30 [12];
-  
+  undefined4 auStack_30;
+
   uStack0000001c = param_2;
   RtlEnterCriticalSection(param_1 + 0x14);
   if ((param_3 & 0xffffffff) == 0) {
@@ -47,11 +47,10 @@ void fn_826DB268(longlong param_1,undefined4 param_2,ulonglong param_3)
   }
   else {
     fn_8267C4C8(param_3);
-    auStack_30[0] = (undefined4)param_3;
-    fn_826DAEE0(param_1 + 0x10,param_1 + 0x10,auStack_30);
-    fn_8267C4F0(param_3);
+    auStack_30 = (undefined4)param_3;
+    fn_826DAEE0(param_1 + 0x10,param_1 + 0x10,&auStack_30);
+    fn_826DABA8(param_3);
   }
   RtlLeaveCriticalSection(param_1 + 0x14);
   return;
 }
-

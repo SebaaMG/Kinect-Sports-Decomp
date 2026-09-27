@@ -51,7 +51,7 @@ extern unsigned int fStack_fc;
 extern int fn_82522D98();
 extern int fn_828F10B0();
 extern int fn_82A1DBD8();
-extern int fn_82F6A538();
+extern int fn_82522D98();
 extern int fn_82F6A584();
 extern unsigned int lbl_821916FC;
 extern unsigned int lbl_821954E8;
@@ -127,8 +127,8 @@ void fn_82613480(undefined8 param_1,double param_2,double param_3,double param_4
   float fStack_104;
   float fStack_fc;
   float fStack_f8;
-  undefined4 uStack_f0;
-  undefined4 uStack_ec;
+  struct { undefined4 first; undefined4 second; } stack_pair_f0;
+
   undefined4 uStack_e8;
   float fStack_e4;
   float fStack_dc;
@@ -145,8 +145,8 @@ void fn_82613480(undefined8 param_1,double param_2,double param_3,double param_4
   float fStack_a4;
   float fStack_9c;
   float fStack_98;
-  
-  piVar4 = (int *)fn_82F6A538();
+
+  piVar4 = (int *)fn_82522D98();
   dVar10 = extraout_f1;
   iVar5 = fn_82522D98(0x40);
   *(float *)(iVar5 + 0x10) = (float)param_5;
@@ -493,18 +493,18 @@ void fn_82613480(undefined8 param_1,double param_2,double param_3,double param_4
     if (*(float *)(iVar2 + 0x14) < fStack_d8) {
       *(float *)(iVar2 + 0x14) = fStack_d8;
     }
-    uStack_f0 = *param_8;
-    uStack_ec = param_8[1];
+    stack_pair_f0.first = *param_8;
+    stack_pair_f0.second = param_8[1];
     uStack_e8 = param_8[2];
     uVar3 = (ulonglong)*(uint *)(iVar2 + 0xc) & 0x3fffffff;
     lVar8 = uVar3 * 4;
     lVar9 = uVar3 * 0x70;
     fStack_e4 = (float)param_4;
     fStack_dc = (float)param_5;
-    fn_82A1DBD8(lVar9 + (ulonglong)*(uint *)(iVar2 + 0x8c),&uStack_f0,0x1c);
-    fn_82A1DBD8(lVar9 + (ulonglong)*(uint *)(iVar2 + 0x8c) + 0x1c,&uStack_f0,0x1c);
-    fn_82A1DBD8((lVar8 + 2) * 0x1c + (ulonglong)*(uint *)(iVar2 + 0x8c),&uStack_f0,0x1c);
-    fn_82A1DBD8((lVar8 + 3) * 0x1c + (ulonglong)*(uint *)(iVar2 + 0x8c),&uStack_f0,0x1c);
+    fn_82A1DBD8(lVar9 + (ulonglong)*(uint *)(iVar2 + 0x8c),&stack_pair_f0.first,0x1c);
+    fn_82A1DBD8(lVar9 + (ulonglong)*(uint *)(iVar2 + 0x8c) + 0x1c,&stack_pair_f0.first,0x1c);
+    fn_82A1DBD8((lVar8 + 2) * 0x1c + (ulonglong)*(uint *)(iVar2 + 0x8c),&stack_pair_f0.first,0x1c);
+    fn_82A1DBD8((lVar8 + 3) * 0x1c + (ulonglong)*(uint *)(iVar2 + 0x8c),&stack_pair_f0.first,0x1c);
     stack_pair_180.first = (float)dVar12;
     stack_pair_180.second = (float)dVar11;
     fn_828F10B0(lVar9 + (ulonglong)*(uint *)(iVar2 + 0x8c) + 0x10,&stack_pair_180.first,2);
@@ -633,4 +633,3 @@ void fn_82613480(undefined8 param_1,double param_2,double param_3,double param_4
   fn_82F6A584();
   return;
 }
-

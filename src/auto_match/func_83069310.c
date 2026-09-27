@@ -31,7 +31,7 @@ extern int fn_8305D7C0();
 extern int fn_8305DC18();
 extern int fn_8305E0F8();
 extern int fn_8305E6F8();
-extern int fn_8305E768();
+extern int fn_83067658();
 extern int fn_8305EC98();
 extern int fn_83060380();
 extern int fn_830603C0();
@@ -52,8 +52,8 @@ ulonglong fn_83069310(undefined8 param_1,undefined8 param_2,undefined8 param_3,u
   int iVar3;
   ulonglong uVar2;
   undefined8 uVar5;
-  undefined1 auStack_50 [80];
-  
+  undefined1 auStack_50 [32];
+
   fn_83060380(auStack_50,param_2);
   fn_83060CB0(auStack_50);
   cVar4 = fn_830603C0(auStack_50);
@@ -90,7 +90,7 @@ LAB_8306941c:
             if ((param_5 & 0xffffffff) != 0) {
               fn_83067658(param_5,0xffffffff8217ea80,0xffffffff8217ea48);
             }
-            fn_8305E768(param_1,uVar5);
+            fn_83067658(param_1,uVar5);
           }
         }
       }
@@ -100,4 +100,3 @@ LAB_8306941c:
   uVar2 = fn_830604F0(param_3);
   return (-uVar2 & ~uVar2 & 0xffffffff) >> 0x1f;
 }
-

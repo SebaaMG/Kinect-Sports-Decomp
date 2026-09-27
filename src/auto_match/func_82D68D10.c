@@ -82,10 +82,10 @@ double fn_82D68D10(undefined4 *param_1,undefined8 param_2,int param_3)
   undefined1 auStack_d0 [16];
   undefined4 uStack_c0;
   undefined1 auStack_b0 [16];
-  undefined1 auStack_a0 [12];
+  undefined1 auStack_a0 [1];
   float fStack_94;
   undefined4 auStack_90 [36];
-  
+
   puStack_11c = (undefined4 *)param_1[1];
   puStack_120 = (undefined4 *)*param_1;
   uStack_118 = param_1[2];
@@ -190,4 +190,3 @@ double fn_82D68D10(undefined4 *param_1,undefined8 param_2,int param_3)
   } while (iVar7 < 8);
   return (double)fStack_94;
 }
-

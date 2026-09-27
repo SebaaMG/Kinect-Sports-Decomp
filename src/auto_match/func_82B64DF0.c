@@ -28,9 +28,9 @@ typedef struct { U64 lo, hi; } V16;
 #define CONCAT44(h,l) ((U64)((((U32)(h)) << 32) | ((U32)(l))))
 extern int fn_8265C9E0();
 extern int fn_8265CA20();
-extern int fn_82920AD8();
+extern int fn_82B64580();
+extern int fn_82B64278();
 extern int fn_82920BD8();
-extern int fn_82B64178();
 extern int fn_82B64278();
 extern int fn_82B64380();
 extern int fn_82B64480();
@@ -74,7 +74,7 @@ undefined8 fn_82B64DF0(int *param_1)
   int iVar29;
   int iVar30;
   double dVar31;
-  
+
   if (*(char *)((int)param_1 + 0xb) != '\x05') {
     return 0xffffffff80004005;
   }
@@ -122,7 +122,7 @@ undefined8 fn_82B64DF0(int *param_1)
      ((*(int *)(param_1[1] + 0x10) != 0 || (*(int *)(iVar22 + 0x10) != 0)))) goto LAB_82b6504c;
   if ((int)uVar25 < 0x28000103) {
     if ((uVar25 == 0x28000102) || (uVar25 == 0x4900102)) {
-      iVar22 = fn_82920BD8(param_1);
+      iVar22 = fn_82B64278(param_1);
     }
     else if (uVar26 == 0x800014a) {
       iVar22 = fn_82B64580(param_1);
@@ -148,10 +148,10 @@ undefined8 fn_82B64DF0(int *param_1)
   else {
     uVar26 = uVar26 - 0x28280143;
     if (uVar26 == 0) {
-      iVar22 = fn_82920AD8(param_1);
+      iVar22 = fn_82B64580(param_1);
     }
     else if ((uVar26 & 0xffffffff) == 1) {
-      iVar22 = fn_82B64178(param_1);
+      iVar22 = fn_82920BD8(param_1);
     }
     else if ((uVar26 & 0xffffffff) == 0xc) {
       iVar22 = fn_82B64480(param_1);
@@ -253,4 +253,3 @@ LAB_82b6504c:
   }
   return 0xffffffff8007000e;
 }
-

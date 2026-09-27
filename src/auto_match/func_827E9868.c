@@ -58,7 +58,7 @@ void fn_827E9868(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefi
   double dVar11;
   undefined1 auStack_a0 [1];
   undefined1 auStack_90 [1];
-  undefined1 auStack_80 [128];
+  undefined1 auStack_80 [16];
 
   uVar2 = fn_82F6A538();
   dVar8 = extraout_f1;

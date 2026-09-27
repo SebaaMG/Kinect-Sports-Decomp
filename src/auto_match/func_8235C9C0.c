@@ -25,7 +25,7 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_822315A0();
+extern int fn_82356F98();
 extern int fn_8223AAC0();
 extern int fn_82356F98();
 
@@ -38,8 +38,8 @@ int * fn_8235C9C0(int *param_1,int param_2)
   int iVar3;
   int iVar4;
   int iVar5;
-  int aiStack_50 [20];
-  
+  int aiStack_50 [4];
+
   iVar5 = *(int *)(param_2 + 0x17c);
   if (iVar5 == 0) {
 LAB_8235ca8c:
@@ -62,7 +62,7 @@ LAB_8235ca8c:
     *(undefined4 *)(param_2 + 0x180) = 0;
     *(undefined4 *)(param_2 + 0x17c) = 0;
     if (iVar5 != 0) {
-      fn_822315A0();
+      fn_82356F98();
     }
     *param_1 = 0;
     param_1[1] = 0;
@@ -73,9 +73,8 @@ LAB_8235ca8c:
       *param_1 = iVar3;
     }
     if (iVar5 != 0) {
-      fn_822315A0(iVar5);
+      fn_82356F98(iVar5);
     }
   }
   return param_1;
 }
-

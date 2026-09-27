@@ -28,7 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 #define CONCAT11(h,l) ((U16)((((U8)(h)) << 8) | ((U8)(l))))
 extern unsigned int *auStack_60;
 extern int fn_8267B890();
-extern int fn_8267BE38();
+extern int fn_826E20C0();
 extern int fn_8267C498();
 extern int fn_82680AC8();
 extern int fn_826A6A38();
@@ -36,7 +36,7 @@ extern int fn_826A9280();
 extern int fn_826DF4E8();
 extern int fn_826DF848();
 extern int fn_826DFA28();
-extern int fn_826E20C0();
+extern int fn_8267BE38();
 extern int fn_826F4A18();
 extern unsigned int lbl_831E7E64;
 
@@ -67,8 +67,8 @@ void fn_826E26C0(int param_1,int *param_2)
   int iVar21;
   char *pcVar22;
   longlong lVar23;
-  uint auStack_60 [24];
-  
+  uint auStack_60;
+
   uVar9 = fn_826A6A38();
   cVar15 = fn_826DF4E8(param_1);
   uVar10 = fn_826A6A38(param_1);
@@ -256,7 +256,7 @@ void fn_826E26C0(int param_1,int *param_2)
                 iVar21 = iVar21 + 1;
               } while (iVar21 < (int)uVar11);
             }
-            fn_826E20C0(iVar12);
+            fn_8267BE38(iVar12);
           }
           goto LAB_826e2cb8;
         }
@@ -295,14 +295,13 @@ void fn_826E26C0(int param_1,int *param_2)
         }
       }
     }
-    fn_8267BE38(iVar14);
+    fn_826E20C0(iVar14);
   }
 LAB_826e2cb8:
-  auStack_60[0] = uVar9 & 0xffff;
-  fn_826F4A18(param_1,auStack_60,iVar12);
+  auStack_60 = uVar9 & 0xffff;
+  fn_826F4A18(param_1,&auStack_60,iVar12);
   if (iVar12 != 0) {
     fn_8267C498(iVar12);
   }
   return;
 }
-

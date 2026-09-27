@@ -77,8 +77,8 @@ void fn_82DB7128(int param_1,int *param_2,int *param_3)
   struct { int first; uint second; } stack_pair_3130;
 
   uint uStack_3128;
-  undefined4 uStack_3120;
-  undefined4 uStack_311c;
+  struct { undefined4 first; undefined4 second; } stack_pair_3120;
+
   undefined4 uStack_3118;
   undefined1 *puStack_3110;
   undefined4 uStack_310c;
@@ -87,7 +87,7 @@ void fn_82DB7128(int param_1,int *param_2,int *param_3)
   float fStack_c0;
   float fStack_bc;
   undefined4 uStack_90;
-  
+
   iVar5 = KeTlsGetValue(lbl_8323B4A0);
   puVar1 = *(undefined4 **)(iVar5 + 4);
   if (puVar1 < *(undefined4 **)(iVar5 + 0xc)) {
@@ -97,11 +97,11 @@ void fn_82DB7128(int param_1,int *param_2,int *param_3)
     *(undefined4 **)(iVar5 + 4) = puVar1 + 3;
   }
   *(int *)(*(int *)(param_1 + 0xc) + 0x94) = *(int *)(*(int *)(param_1 + 0xc) + 0x94) + 1;
-  uStack_3120 = 0;
-  uStack_311c = 0;
+  stack_pair_3120.first = 0;
+  stack_pair_3120.second = 0;
   uStack_3118 = 0xffffffff;
   iVar5 = fn_82CE5410();
-  fn_82CEAB00(&uStack_3120,*(undefined4 *)(iVar5 + 0x10),0);
+  fn_82CEAB00(&stack_pair_3120.first,*(undefined4 *)(iVar5 + 0x10),0);
   iVar5 = param_3[2];
   stack_pair_3130.first = 0;
   iVar10 = 0;
@@ -125,7 +125,7 @@ void fn_82DB7128(int param_1,int *param_2,int *param_3)
         iVar5 = 0;
         do {
           iVar3 = *(int *)(*piVar6 + iVar5);
-          iVar7 = fn_82CEA280(&uStack_3120,iVar3,0);
+          iVar7 = fn_82CEA280(&stack_pair_3120.first,iVar3,0);
           if (iVar7 == 0) {
             iVar7 = *(char *)(iVar3 + 0xc) * 0x40 + *(int *)(*(int *)(param_1 + 0xc) + 0x80);
             if ((*(int *)(iVar7 + 0x1c30) == 0) ||
@@ -139,7 +139,7 @@ void fn_82DB7128(int param_1,int *param_2,int *param_3)
                            uVar2) + 0xcc);
               }
               iVar7 = fn_82CE5410();
-              fn_82CEA160(&uStack_3120,*(undefined4 *)(iVar7 + 0x10),iVar3,0);
+              fn_82CEA160(&stack_pair_3120.first,*(undefined4 *)(iVar7 + 0x10),iVar3,0);
               iVar7 = fn_82CE5410();
               if (stack_pair_3130.second == (uStack_3128 & 0x3fffffff)) {
                     /* WARNING: Subroutine does not return */
@@ -223,8 +223,7 @@ void fn_82DB7128(int param_1,int *param_2,int *param_3)
   stack_pair_3130.first = 0;
   uStack_3128 = 0x80000000;
   iVar5 = fn_82CE5410();
-  fn_82CEA4B8(&uStack_3120,*(undefined4 *)(iVar5 + 0x10));
-  fn_82BA02A8(&uStack_3120);
+  fn_82CEA4B8(&stack_pair_3120.first,*(undefined4 *)(iVar5 + 0x10));
+  fn_82BA02A8(&stack_pair_3120.first);
   return;
 }
-

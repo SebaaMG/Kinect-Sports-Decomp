@@ -51,8 +51,8 @@ void fn_823DEEF8(int param_1)
   undefined4 uVar6;
   int iVar7;
   uint uVar8;
-  uint uStack_60;
-  int iStack_5c;
+  struct { uint first; int second; } stack_pair_60;
+
   struct { uint first; int second; } stack_pair_58;
 
   struct { uint first; int second; } stack_pair_50;
@@ -87,8 +87,8 @@ void fn_823DEEF8(int param_1)
     if (*(int *)(*(int *)(piVar2[4] * 4 + *piVar2) + 8) != 0) {
       do {
         if ((!bVar3) &&
-           (((uStack_60 = uVar8, iStack_5c = iVar7,
-             cVar5 = fn_8230C220(iVar1 + 0xa18,&uStack_60), cVar5 != '\0' ||
+           (((stack_pair_60.first = uVar8, stack_pair_60.second = iVar7,
+             cVar5 = fn_8230C220(iVar1 + 0xa18,&stack_pair_60.first), cVar5 != '\0' ||
              (stack_pair_58.first = uVar8, stack_pair_58.second = iVar7,
              cVar5 = fn_8230C220(iVar1 + 0xa08,&stack_pair_58.first), cVar5 != '\0')) ||
             (stack_pair_50.first = uVar8, stack_pair_50.second = iVar7,

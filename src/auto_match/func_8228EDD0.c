@@ -75,8 +75,8 @@ void fn_8228EDD0(int param_1,undefined8 param_2,undefined8 param_3,undefined8 pa
   struct { undefined4 first; undefined4 second; } stack_pair_6b0;
 
   undefined4 uStack_6a8;
-  undefined4 uStack_6a0;
-  undefined4 uStack_69c;
+  struct { undefined4 first; undefined4 second; } stack_pair_6a0;
+
   undefined4 uStack_698;
   uint auStack_690 [4];
   undefined1 auStack_680 [8];
@@ -113,10 +113,10 @@ void fn_8228EDD0(int param_1,undefined8 param_2,undefined8 param_3,undefined8 pa
         stack_pair_6b0.second = 4;
         fn_82290458(&stack_pair_6c0.first,&stack_pair_6b0.first);
         uStack_698 = (undefined4)uVar2;
-        uStack_6a0 = 0;
-        uStack_69c = 5;
-        fn_82290458(&stack_pair_6c0.first,&uStack_6a0);
-        fn_82273C88(&uStack_6a0);
+        stack_pair_6a0.first = 0;
+        stack_pair_6a0.second = 5;
+        fn_82290458(&stack_pair_6c0.first,&stack_pair_6a0.first);
+        fn_82273C88(&stack_pair_6a0.first);
         fn_82273C88(&stack_pair_6b0.first);
         uVar7 = uVar7 + 0x20;
         uVar2 = uVar2 + 0x200;

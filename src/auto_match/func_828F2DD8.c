@@ -31,7 +31,7 @@ extern unsigned int *auStack_550;
 extern int fn_8291C788();
 extern int fn_8291CAB8();
 extern int fn_82920050();
-extern int fn_82F691F0();
+extern int fn_828F1438();
 extern unsigned int iStack_500;
 extern unsigned int iStack_504;
 extern unsigned int iStack_548;
@@ -68,7 +68,7 @@ fn_828F2DD8(int param_1,ulonglong param_2,ulonglong param_3,uint param_4,uint pa
   int iStack_500;
   undefined1 auStack_4c0 [32];
   undefined1 auStack_4a0 [1184];
-  
+
   uStack0000002c = param_4;
   uStack00000034 = param_5;
   uStack0000003c = param_6;
@@ -146,7 +146,7 @@ LAB_828f2f38:
     }
     if (iStack_548 == 0) {
                     /* WARNING: Subroutine does not return */
-      fn_82F691F0(auStack_4a0,0xff,0x400);
+      fn_828F1438(auStack_4a0,0xff,0x400);
     }
     uVar3 = 0xffffffff80004001;
   }
@@ -154,4 +154,3 @@ LAB_828f2e68:
   fn_8291CAB8(auStack_550);
   return uVar3;
 }
-

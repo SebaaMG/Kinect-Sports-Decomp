@@ -31,16 +31,16 @@ extern int fn_830E6978();
 extern V16 vectorSplatHalfWord();
 
 
-void fn_830E98C0(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefined8 param_4)
+void fn_830E98C0(undefined8 param_1, undefined8 param_2, undefined8 param_3, undefined8 param_4, undefined8 unused_arg_5, undefined8 unused_arg_6, undefined8 unused_arg_7, undefined8 unused_arg_8, int in_stack_00000054)
 
 {
   int iVar1;
   int iVar2;
   uint in_r10;
   undefined1 in_vs32 [16];
-  int in_stack_00000054;
+
   undefined1 auStack_330 [736];
-  
+
   iVar1 = 4 << (in_r10 & 0x3f);
   iVar2 = 1 << (in_stack_00000054 == 0 & in_r10) + 2;
   fn_830DF2D0(param_1,param_2,auStack_330,iVar1,iVar2);
@@ -48,4 +48,3 @@ void fn_830E98C0(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefi
   fn_830E6978(auStack_330,param_4,param_3,iVar1,iVar2);
   return;
 }
-

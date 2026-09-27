@@ -71,8 +71,8 @@ undefined8 fn_830335A0(int param_1,int param_2)
   byte bStack_f3;
   int iStack_f0;
   undefined4 uStack_ec;
-  undefined4 uStack_e0;
-  undefined4 uStack_dc;
+  struct { undefined4 first; undefined4 second; } stack_pair_e0;
+
   undefined4 uStack_d8;
   undefined4 *puStack_d4;
   undefined8 uStack_d0;
@@ -85,7 +85,7 @@ undefined8 fn_830335A0(int param_1,int param_2)
   undefined4 uStack_64;
   undefined1 uStack_60;
   undefined1 uStack_5f;
-  
+
   stack_pair_110.first = *(undefined4 *)(param_1 + 0x84);
   iVar2 = *(int *)(param_1 + 0x80);
   stack_pair_110.second = 4;
@@ -126,12 +126,12 @@ undefined8 fn_830335A0(int param_1,int param_2)
     uStack_c0 = *(undefined8 *)(param_2 + 0x28);
     puStack_d4 = &stack_pair_110.first;
     uStack_6c = *(undefined4 *)(param_2 + 0x10);
-    uStack_dc = *(undefined4 *)(param_1 + 0x98);
+    stack_pair_e0.second = *(undefined4 *)(param_1 + 0x98);
     uStack_70 = *(undefined4 *)(param_1 + 0x88);
     uStack_5f = *(undefined1 *)(param_1 + 0x91);
     uStack_64 = *(undefined4 *)(param_1 + 0x8c);
-    uStack_e0 = 1;
-    uVar3 = (**(code **)(*piVar4 + 0x18))(piVar4,&uStack_e0);
+    stack_pair_e0.first = 1;
+    uVar3 = (**(code **)(*piVar4 + 0x18))(piVar4,&stack_pair_e0.first);
     lbl_832643DC = lbl_832643DC + 1;
     iVar2 = *(int *)(param_1 + 0x34);
     *(undefined4 *)(param_1 + 0x34) = 0;
@@ -154,4 +154,3 @@ undefined8 fn_830335A0(int param_1,int param_2)
   }
   return uVar3;
 }
-

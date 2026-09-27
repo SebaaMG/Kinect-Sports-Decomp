@@ -54,8 +54,8 @@ undefined8 fn_82DF5EB0(int param_1,int param_2,longlong param_3)
   undefined1 auStack_70 [1];
   undefined1 auStack_60 [16];
   undefined1 auStack_50 [16];
-  undefined1 auStack_40 [64];
-  
+  undefined1 auStack_40 [16];
+
   iVar3 = fn_82DED480(param_1,auStack_70,auStack_60);
   if (iVar3 == 0) {
     if (*(int *)(param_2 + 0x3c) == 0) {
@@ -126,4 +126,3 @@ undefined8 fn_82DF5EB0(int param_1,int param_2,longlong param_3)
   }
   return 1;
 }
-

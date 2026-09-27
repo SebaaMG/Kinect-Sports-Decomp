@@ -49,8 +49,8 @@ undefined8 fn_82DED480(int param_1,int param_2,int param_3)
   undefined4 uVar10;
   undefined4 uVar11;
   undefined1 auStack_230 [1];
-  undefined1 auStack_220 [544];
-  
+  undefined1 auStack_220 [512];
+
   piVar2 = *(int **)(param_1 + 0xc);
   uVar5 = (**(code **)(*piVar2 + 0x20))(piVar2);
   if ((uVar5 & 0xffffffff) < 8) {
@@ -99,4 +99,3 @@ LAB_82ded508:
   }
   return uVar6;
 }
-

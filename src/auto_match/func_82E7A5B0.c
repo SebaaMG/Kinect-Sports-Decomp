@@ -34,7 +34,7 @@ extern int fn_82E77000();
 extern int fn_82E77258();
 extern int fn_82E77398();
 extern int fn_82E78ED8();
-extern int fn_82EEB4D8();
+extern int fn_82EEB538();
 extern unsigned int lbl_82154D80;
 extern unsigned int lbl_8215F018;
 extern unsigned int lbl_8215F020;
@@ -47,18 +47,18 @@ void fn_82E7A5B0(undefined4 *param_1)
   int iVar2;
   ulonglong uVar3;
   undefined1 auStack_40 [4];
-  int aiStack_3c [15];
-  
+  int aiStack_3c;
+
   *param_1 = &lbl_8215F020;
   fn_82E78ED8();
   uVar3 = 0;
   if (param_1[5] != 0) {
     do {
-      aiStack_3c[0] = 0;
-      fn_82E77000(param_1 + 2,uVar3,auStack_40,aiStack_3c);
-      iVar2 = aiStack_3c[0];
-      if (aiStack_3c[0] != 0) {
-        fn_82E77398(aiStack_3c[0]);
+      aiStack_3c = 0;
+      fn_82E77000(param_1 + 2,uVar3,auStack_40,&aiStack_3c);
+      iVar2 = aiStack_3c;
+      if (aiStack_3c != 0) {
+        fn_82E77398(aiStack_3c);
         fn_82E4FE40(iVar2);
       }
       uVar3 = uVar3 + 1;
@@ -84,7 +84,7 @@ void fn_82E7A5B0(undefined4 *param_1)
     fn_82E77258(param_1 + 0x91,0);
   }
   fn_82E57CA0(param_1 + 0x86);
-  fn_82EEB4D8(param_1 + 0x79);
+  fn_82EEB538(param_1 + 0x79);
   param_1[0x5e] = &lbl_82154D80;
   if (param_1[0x5f] == 0) {
     fn_82E569B0(param_1 + 0x5e,0);
@@ -92,4 +92,3 @@ void fn_82E7A5B0(undefined4 *param_1)
   fn_82E2D9C0(param_1 + 6);
   return;
 }
-

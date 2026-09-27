@@ -45,15 +45,15 @@ undefined4 * fn_8260CF98(int param_1,undefined8 param_2,undefined8 param_3,undef
 {
   int iVar1;
   undefined4 *puVar2;
-  undefined4 auStack_70 [2];
+  undefined4 auStack_70;
   struct { undefined4 first; int second; } stack_pair_68;
 
   struct { undefined4 first; undefined4 second; } stack_pair_60;
 
   undefined1 auStack_50 [32];
 
-  auStack_70[0] = 0;
-  fn_82811438(auStack_50,auStack_70,0x10);
+  auStack_70 = 0;
+  fn_82811438(auStack_50,&auStack_70,0x10);
   puVar2 = (undefined4 *)
            (**(code **)(*(int *)lbl_83156AA0 + 4))(lbl_83156AA0,0x18,auStack_50,param_3);
   if ((int)param_4 == -1) {

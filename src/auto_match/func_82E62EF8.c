@@ -25,7 +25,7 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82E63998();
+extern int fn_82E32038();
 
 
 longlong fn_82E62EF8(int *param_1,undefined4 *param_2)
@@ -35,36 +35,35 @@ longlong fn_82E62EF8(int *param_1,undefined4 *param_2)
   longlong lVar2;
   int iVar3;
   ulonglong uVar4;
-  int *apiStack_40 [16];
-  
-  apiStack_40[0] = (int *)0x0;
+  int * apiStack_40;
+
+  apiStack_40 = (int *)0x0;
   if (param_2 == (undefined4 *)0x0) {
     lVar2 = -0x7ff8ffa9;
   }
   else {
-    lVar2 = fn_82E63998(param_1[0x15],param_1[0x16],apiStack_40);
-    if ((-1 < lVar2) && (lVar2 = (**(code **)(*param_1 + 0x80))(param_1,apiStack_40[0]), -1 < lVar2)
+    lVar2 = fn_82E32038(param_1[0x15],param_1[0x16],&apiStack_40);
+    if ((-1 < lVar2) && (lVar2 = (**(code **)(*param_1 + 0x80))(param_1,apiStack_40), -1 < lVar2)
        ) {
       uVar4 = 0;
       if (param_1[0x15] != 0) {
         iVar3 = 0;
         do {
           if ((*(int *)(param_1[0x17] + iVar3) != 0) &&
-             (lVar2 = (**(code **)(*apiStack_40[0] + 0x8c))(apiStack_40[0],uVar4), lVar2 < 0))
+             (lVar2 = (**(code **)(*apiStack_40 + 0x8c))(apiStack_40,uVar4), lVar2 < 0))
           goto LAB_82e62fd0;
           uVar4 = uVar4 + 1;
           iVar3 = iVar3 + 4;
         } while ((uVar4 & 0xffffffff) < (ulonglong)(uint)param_1[0x15]);
       }
-      piVar1 = apiStack_40[0];
-      apiStack_40[0] = (int *)0x0;
+      piVar1 = apiStack_40;
+      apiStack_40 = (int *)0x0;
       *param_2 = piVar1;
     }
 LAB_82e62fd0:
-    if (apiStack_40[0] != (int *)0x0) {
-      (**(code **)(*apiStack_40[0] + 8))();
+    if (apiStack_40 != (int *)0x0) {
+      (**(code **)(*apiStack_40 + 8))();
     }
   }
   return lVar2;
 }
-

@@ -38,30 +38,29 @@ void fn_830295A8(double param_1,int param_2,int param_3)
 {
   int iVar1;
   int *piVar2;
-  undefined4 uStack_40;
-  undefined4 uStack_3c;
+  struct { undefined4 first; undefined4 second; } stack_pair_40;
+
   undefined1 uStack_38;
   undefined4 uStack_34;
   float fStack_30;
-  
+
   for (piVar2 = *(int **)(param_2 + 0x88);
       (piVar2 != *(int **)(param_2 + 0x8c) && (*piVar2 != param_3)); piVar2 = piVar2 + 2) {
   }
   piVar2 = (int *)(-(uint)(*(int **)(param_2 + 0x8c) != piVar2) & (uint)(piVar2 + 1));
   if (piVar2 != (int *)0x0) {
     iVar1 = *(int *)(param_2 + 0x7c);
-    uStack_40 = 0;
+    stack_pair_40.first = 0;
     uStack_38 = 0;
-    uStack_3c = 0;
+    stack_pair_40.second = 0;
     fStack_30 = (float)(param_1 - (double)*(float *)(*piVar2 + 0x2c));
     uStack_34 = 0;
     for (; iVar1 != 0; iVar1 = *(int *)(iVar1 + 0x14)) {
       if (*(int *)(iVar1 + 0x6c) == *piVar2) {
-        fn_82FF0F00(iVar1,&uStack_40);
+        fn_82FF0F00(iVar1,&stack_pair_40.first);
       }
     }
     *(float *)(*piVar2 + 0x2c) = (float)param_1;
   }
   return;
 }
-

@@ -39,9 +39,9 @@ char fn_83018220(int param_1,ulonglong param_2,int param_3,char param_4)
   int iVar2;
   int iVar3;
   char cVar4;
-  undefined4 uStack_40;
-  int iStack_3c;
-  
+  struct { undefined4 first; int second; } stack_pair_40;
+
+
   iVar3 = param_1 + 0x720;
   RtlEnterCriticalSection(iVar3);
   if (param_4 == '\0') {
@@ -57,12 +57,11 @@ char fn_83018220(int param_1,ulonglong param_2,int param_3,char param_4)
   cVar4 = '\x1f';
   if ((param_2 & 0xffffffff) != 0) {
     fn_830178D8(param_1,param_2);
-    uStack_40 = (undefined4)param_2;
-    iStack_3c = param_3;
-    iVar2 = fn_82FF82A8(param_1 + 0x6c0,&uStack_40);
+    stack_pair_40.first = (undefined4)param_2;
+    stack_pair_40.second = param_3;
+    iVar2 = fn_82FF82A8(param_1 + 0x6c0,&stack_pair_40.first);
     cVar4 = (iVar2 == 0) + '\x01';
   }
   RtlLeaveCriticalSection(iVar3);
   return cVar4;
 }
-

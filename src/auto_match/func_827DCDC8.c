@@ -29,7 +29,7 @@ extern unsigned int *auStack_40;
 extern unsigned int *auStack_50;
 extern int fn_82811438();
 extern int fn_8281C4D0();
-extern int fn_82F691F0();
+extern int fn_8281C4D8();
 extern unsigned int lbl_83156AA0;
 
 
@@ -40,8 +40,8 @@ void fn_827DCDC8(undefined8 param_1,undefined8 param_2)
   undefined8 uVar2;
   undefined8 uVar3;
   undefined4 auStack_50 [4];
-  undefined1 auStack_40 [64];
-  
+  undefined1 auStack_40 [32];
+
   auStack_50[0] = 0;
   fn_82811438(auStack_40,auStack_50,0x10);
   iVar1 = *(int *)lbl_83156AA0;
@@ -49,6 +49,5 @@ void fn_827DCDC8(undefined8 param_1,undefined8 param_2)
   uVar2 = (**(code **)(iVar1 + 4))(lbl_83156AA0,uVar2,auStack_40,param_2);
   uVar3 = fn_8281C4D0();
                     /* WARNING: Subroutine does not return */
-  fn_82F691F0(uVar2,0,uVar3);
+  fn_8281C4D8(uVar2,0,uVar3);
 }
-

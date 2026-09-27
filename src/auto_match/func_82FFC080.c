@@ -28,7 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_a0;
 extern unsigned int *auStack_b8;
 extern int fn_82FA5100();
-extern int fn_82FA5190();
+extern int fn_82FA52E0();
 extern int fn_82FF86F0();
 extern int fn_82FF8988();
 extern int fn_82FF9F20();
@@ -61,12 +61,12 @@ undefined8 fn_82FFC080(int param_1,int param_2,ulonglong param_3)
   struct { uint first; uint second; } stack_pair_c0;
 
   uint auStack_b8 [2];
-  int iStack_b0;
-  uint uStack_ac;
+  struct { int first; uint second; } stack_pair_b0;
+
   int *piStack_a8;
   int *piStack_a4;
   undefined1 auStack_a0 [160];
-  
+
   uVar7 = 1;
   if ((param_3 & 0xffffffff) == 0) {
     uVar7 = 1;
@@ -152,13 +152,13 @@ LAB_82ffc2c4:
               goto LAB_82ffc2d4;
             }
             if ((uVar13 & 0xffffffff) != 0) {
-              fn_82FA5190(lbl_832645A4,uVar13);
+              fn_82FA52E0(lbl_832645A4,uVar13);
             }
           }
           uVar12 = piVar3[5];
           piVar3[5] = (int)((ulonglong)uVar12 - 1);
           if (((ulonglong)uVar12 - 1 == 0) && (*piVar3 != 0)) {
-            fn_82FA5190(lbl_832645A4);
+            fn_82FA52E0(lbl_832645A4);
             *piVar3 = 0;
             piVar3[1] = 0;
           }
@@ -195,9 +195,9 @@ LAB_82ffc3b4:
           uVar12 = *(uint *)(iVar8 + *(int *)(param_2 + 0x28));
           RtlEnterCriticalSection(param_1 + 0x50);
           piStack_a4 = (int *)0x0;
-          iStack_b0 = param_1 + 0x94;
-          uStack_ac = uVar12 % 0xc1;
-          piStack_a8 = *(int **)((uStack_ac + 1) * 4 + param_1 + 0x90);
+          stack_pair_b0.first = param_1 + 0x94;
+          stack_pair_b0.second = uVar12 % 0xc1;
+          piStack_a8 = *(int **)((stack_pair_b0.second + 1) * 4 + param_1 + 0x90);
           if (piStack_a8 != (int *)0x0) {
             do {
               piVar3 = piStack_a8;
@@ -206,12 +206,12 @@ LAB_82ffc3b4:
                 piVar3[7] = (int)((ulonglong)uVar12 - 1);
                 piStack_a8 = piVar3;
                 if (((ulonglong)uVar12 - 1 == 0) && (piVar3[2] != 0)) {
-                  fn_82FA5190(lbl_832645A4);
+                  fn_82FA52E0(lbl_832645A4);
                   piVar3[2] = 0;
                   piVar3[3] = 0;
                 }
                 if (piVar3[7] == 0) {
-                  fn_82FFF348(auStack_a0,param_1 + 0x90,&iStack_b0);
+                  fn_82FFF348(auStack_a0,param_1 + 0x90,&stack_pair_b0.first);
                 }
                 goto LAB_82ffc494;
               }
@@ -232,4 +232,3 @@ LAB_82ffc494:
   }
   return uVar7;
 }
-

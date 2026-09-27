@@ -26,7 +26,7 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_8302E258();
-extern int fn_8302E350();
+extern int fn_8302E258();
 extern int fn_83032B40();
 extern int fn_83032D88();
 extern unsigned int iStack_20;
@@ -55,7 +55,7 @@ undefined8 fn_8302E888(int param_1,int *param_2)
   undefined1 uStack_23;
   int iStack_20;
   undefined4 uStack_1c;
-  
+
   *(undefined1 *)(param_1 + 0x122) = 1;
   if ((*(byte *)(param_1 + 0x11f) & 2) == 0) {
     uVar3 = fn_8302E258(param_1,param_2);
@@ -84,15 +84,14 @@ undefined8 fn_8302E888(int param_1,int *param_2)
     }
     else {
       param_2[0x1e] = (int)&stack_pair_30.first;
-      uVar3 = fn_8302E350(param_1,param_2);
+      uVar3 = fn_8302E258(param_1,param_2);
       if (iStack_20 != 0) {
         fn_83032D88(iStack_20);
       }
     }
   }
   else {
-    uVar3 = fn_8302E350(param_1,param_2);
+    uVar3 = fn_8302E258(param_1,param_2);
   }
   return uVar3;
 }
-

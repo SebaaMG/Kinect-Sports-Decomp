@@ -47,8 +47,8 @@ undefined8 fn_8302E350(int *param_1,int param_2)
   longlong lVar8;
   undefined2 uVar9;
   undefined2 auStack_30 [2];
-  undefined1 auStack_2c [44];
-  
+  undefined1 auStack_2c [1];
+
   puVar6 = (undefined4 *)fn_8302EB70((ulonglong)*(uint *)(*(int *)(param_2 + 0x78) + 0x10) + 4);
   if (puVar6 != (undefined4 *)0x0) {
     fn_8302EA08(puVar6,param_1,1);
@@ -86,4 +86,3 @@ undefined8 fn_8302E350(int *param_1,int param_2)
   }
   return uVar5;
 }
-

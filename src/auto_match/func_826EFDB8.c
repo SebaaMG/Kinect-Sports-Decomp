@@ -25,7 +25,7 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_826EF340();
+extern int fn_826EF410();
 extern int fn_826EF410();
 extern int fn_826EF508();
 extern int fn_82F63CA0();
@@ -42,7 +42,7 @@ void fn_826EFDB8(int param_1)
   uint *puVar6;
   int iVar7;
   uint uVar8;
-  
+
   if (*(char *)(param_1 + 8) == '\0') {
     puVar6 = (uint *)(param_1 + 0x10);
     if (((*(uint *)(param_1 + 0x10) & 0xf8000000) != 0) || (*(longlong *)(param_1 + 0x28) != 0)) {
@@ -61,7 +61,7 @@ void fn_826EFDB8(int param_1)
       }
       else {
         uVar1 = (longlong)*(ulonglong *)(param_1 + 0x28) >> 0x3f;
-        fn_826EF340(puVar6,param_1 + 0x30,(*(ulonglong *)(param_1 + 0x28) ^ uVar1) - uVar1,1,
+        fn_826EF410(puVar6,param_1 + 0x30,(*(ulonglong *)(param_1 + 0x28) ^ uVar1) - uVar1,1,
                       *(uint *)(param_1 + 0x1c) >> 0x1b);
       }
     }
@@ -149,4 +149,3 @@ void fn_826EFDB8(int param_1)
   }
   return;
 }
-

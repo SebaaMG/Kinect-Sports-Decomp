@@ -26,9 +26,9 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_10;
-extern int fn_825BBD78();
-extern int fn_825BBFA8();
 extern int fn_825BC0E0();
+extern int fn_825BBFA8();
+extern int fn_825BBD78();
 
 
 undefined8 fn_8255C820(undefined8 param_1,ushort *param_2)
@@ -36,21 +36,20 @@ undefined8 fn_8255C820(undefined8 param_1,ushort *param_2)
 {
   ushort uVar1;
   undefined8 uVar2;
-  undefined1 auStack_10 [16];
-  
+  undefined1 auStack_10 [1];
+
   uVar1 = *param_2;
   if (uVar1 == 0) {
     uVar2 = fn_825BBFA8(param_2,param_1,auStack_10);
   }
   else if (uVar1 == 1) {
-    uVar2 = fn_825BC0E0(param_2,param_1,auStack_10);
+    uVar2 = fn_825BBD78(param_2,param_1,auStack_10);
   }
   else if (uVar1 < 3) {
-    uVar2 = fn_825BBD78(param_2,param_1,1);
+    uVar2 = fn_825BC0E0(param_2,param_1,1);
   }
   else {
     uVar2 = 0;
   }
   return uVar2;
 }
-

@@ -122,8 +122,8 @@ void fn_8272F150(undefined8 param_1,undefined8 param_2)
   double dVar21;
   double dVar22;
   double dVar23;
-  float fStack_170;
-  float fStack_16c;
+  struct { float first; float second; } stack_pair_170;
+
   float fStack_168;
   float fStack_164;
   float fStack_160;
@@ -176,13 +176,13 @@ void fn_8272F150(undefined8 param_1,undefined8 param_2)
   piVar4 = *(int **)(*piVar11 + 0xc);
   if (piVar4 == (int *)0x0) goto LAB_8272f7bc;
   pfVar12 = (float *)piVar11[0x10];
-  fStack_170 = *pfVar12;
-  fStack_16c = pfVar12[1];
+  stack_pair_170.first = *pfVar12;
+  stack_pair_170.second = pfVar12[1];
   fStack_168 = pfVar12[2];
   fStack_164 = pfVar12[3];
   fStack_160 = pfVar12[4];
   fStack_15c = pfVar12[5];
-  fn_8268CEC0(&fStack_170,piVar8 + 0x11);
+  fn_8268CEC0(&stack_pair_170.first,piVar8 + 0x11);
   memcpy(auStack_d0,piVar11[0x11],0x20);
   fn_8268D5D8(auStack_d0,piVar8 + 9);
   iVar9 = (**(code **)(*piVar8 + 0x40))(piVar8);
@@ -193,7 +193,7 @@ void fn_8272F150(undefined8 param_1,undefined8 param_2)
   fStack_10c = lbl_821AAD20;
   fStack_108 = lbl_821AAD20;
   fStack_104 = lbl_821AAD20;
-  fn_8268D280(&fStack_170,&fStack_110,uVar7);
+  fn_8268D280(&stack_pair_170.first,&fStack_110,uVar7);
   if ((((*(float *)(iVar9 + 0xd4) < fStack_10c) || (fStack_104 < *(float *)(iVar9 + 0xcc))) ||
       (fStack_108 < *(float *)(iVar9 + 200))) ||
      (bVar6 = true, *(float *)(iVar9 + 0xd0) < fStack_110)) {
@@ -207,8 +207,8 @@ void fn_8272F150(undefined8 param_1,undefined8 param_2)
     fStack_fc = (float)dVar23;
     fStack_f8 = (float)dVar23;
     fStack_f4 = (float)dVar23;
-    stack_pair_90.first = fStack_170;
-    stack_pair_90.second = fStack_16c;
+    stack_pair_90.first = stack_pair_170.first;
+    stack_pair_90.second = stack_pair_170.second;
     fStack_88 = fStack_168;
     fStack_84 = fStack_164;
     fStack_80 = fStack_160;
@@ -249,24 +249,24 @@ void fn_8272F150(undefined8 param_1,undefined8 param_2)
   *(ushort *)(piVar8 + 0x32) = uVar3 & 0xffbf;
   uVar3 = uVar3 >> 6 & 1;
   uVar7 = fn_8269D300(iVar9,piVar8);
-  fn_8279A588(piVar8[0x28],param_2,&fStack_170,auStack_d0,uVar7);
+  fn_8279A588(piVar8[0x28],param_2,&stack_pair_170.first,auStack_d0,uVar7);
   if (piVar8[0x39] == 0) {
 LAB_8272f73c:
-    fn_827A2128(piVar8[0x28],param_2,&fStack_170,auStack_d0,uVar3);
+    fn_827A2128(piVar8[0x28],param_2,&stack_pair_170.first,auStack_d0,uVar3);
   }
   else {
     uVar13 = 0;
     if (*(int *)(piVar8[0x39] + 0xc) != 0) {
       iVar14 = 0;
       do {
-        dVar22 = (double)fStack_170;
-        dVar21 = (double)fStack_16c;
+        dVar22 = (double)stack_pair_170.first;
+        dVar21 = (double)stack_pair_170.second;
         dVar20 = (double)fStack_168;
         dVar19 = (double)fStack_164;
         dVar18 = (double)fStack_160;
         dVar17 = (double)fStack_15c;
-        stack_pair_f0.first = fStack_170;
-        stack_pair_f0.second = fStack_16c;
+        stack_pair_f0.first = stack_pair_170.first;
+        stack_pair_f0.second = stack_pair_170.second;
         fStack_e8 = fStack_168;
         fStack_e4 = fStack_164;
         fStack_e0 = fStack_160;
@@ -298,14 +298,14 @@ LAB_8272f73c:
     uVar13 = 0;
     iVar14 = 0;
     do {
-      fStack_ac = fStack_16c;
-      fStack_b0 = fStack_170;
+      fStack_ac = stack_pair_170.second;
+      fStack_b0 = stack_pair_170.first;
       fStack_a0 = fStack_160;
       fStack_a4 = fStack_164;
       pfVar12 = (float *)(*(int *)(piVar8[0x39] + 0x14) + iVar14);
       fVar1 = *pfVar12;
       fVar2 = pfVar12[1];
-      fStack_a8 = fVar1 * fStack_170 + fStack_16c * fVar2 + fStack_168;
+      fStack_a8 = fVar1 * stack_pair_170.first + stack_pair_170.second * fVar2 + fStack_168;
       fStack_9c = fStack_164 * fVar1 + fStack_160 * fVar2 + fStack_15c;
       fn_827A2128(piVar8[0x28],param_2,&fStack_b0,auStack_d0,uVar3);
       uVar13 = uVar13 + 1;
@@ -314,10 +314,10 @@ LAB_8272f73c:
   }
   if ((*(int *)(piVar8[0x28] + 0x114) != 0) &&
      (cVar10 = fn_8269D300(iVar9,piVar8), cVar10 != '\0')) {
-    fn_827A3BE8(*(undefined4 *)(piVar8[0x28] + 0x114),param_2,&fStack_170,auStack_d0);
+    fn_827A3BE8(*(undefined4 *)(piVar8[0x28] + 0x114),param_2,&stack_pair_170.first,auStack_d0);
   }
   (**(code **)(*piVar8 + 0xf4))(piVar8);
-  fn_82799B68(piVar8[0x28],param_2,&fStack_170,auStack_d0,uVar7);
+  fn_82799B68(piVar8[0x28],param_2,&stack_pair_170.first,auStack_d0,uVar7);
 LAB_8272f7bc:
   fn_82F6A588();
   return;

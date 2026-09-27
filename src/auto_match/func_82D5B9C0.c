@@ -48,16 +48,16 @@ fn_82D5B9C0(int param_1,int *param_2,int *param_3,undefined8 param_4,undefined8 
   uint uVar7;
   int *piVar8;
   int *piVar9;
-  int iStack_280;
-  uint uStack_27c;
+  struct { int first; uint second; } stack_pair_280;
+
   int iStack_278;
   int *piStack_274;
   struct { int first; uint second; } stack_pair_270;
 
   int iStack_268;
   int *piStack_264;
-  undefined1 auStack_260 [560];
-  
+  undefined1 auStack_260 [544];
+
   iVar3 = *param_2;
   piVar8 = param_2;
   if (*(int *)(iVar3 + 0xc) == 0x17) {
@@ -95,14 +95,13 @@ LAB_82d5bb2c:
         pbVar6 = pbVar6 + 2;
       } while ((int)uVar7 < (int)((uint)param_6[9] + (uint)bVar1));
     }
-    iStack_280 = (**(code **)(*(int *)(iVar3 + 0x14) + 0x14))(iVar3 + 0x14,bVar2,auStack_260);
+    stack_pair_280.first = (**(code **)(*(int *)(iVar3 + 0x14) + 0x14))(iVar3 + 0x14,bVar2,auStack_260);
     iStack_278 = param_3[2];
-    piVar9 = &iStack_280;
-    uStack_27c = (uint)bVar2;
+    piVar9 = &stack_pair_280.first;
+    stack_pair_280.second = (uint)bVar2;
     piStack_274 = param_3;
   }
   uVar4 = (**(code **)(**(int **)(param_1 + 0xc) + 0xc))
                     (*(int **)(param_1 + 0xc),piVar8,piVar9,param_4,param_5,param_6,param_7);
   return uVar4;
 }
-

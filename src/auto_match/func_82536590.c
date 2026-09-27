@@ -30,9 +30,9 @@ extern unsigned int *auStack_80;
 extern int fn_82535298();
 extern int fn_82536288();
 extern int fn_828647D8();
-extern int fn_828647F0();
-extern int fn_82864898();
 extern int fn_82864988();
+extern int fn_82864898();
+extern int fn_828647F0();
 extern unsigned int *lbl_8327F868;
 
 
@@ -44,13 +44,13 @@ bool fn_82536590(undefined4 *param_1,int param_2)
   char cVar3;
   int *apiStack_90 [4];
   undefined1 auStack_80 [48];
-  undefined1 auStack_50 [80];
-  
+  undefined1 auStack_50 [48];
+
   if (param_2 == 0) {
-    fn_82864988(auStack_80,0xffffffff821c3abc);
+    fn_828647F0(auStack_80,0xffffffff821c3abc);
   }
   else {
-    fn_828647F0(auStack_50);
+    fn_82864988(auStack_50);
   }
   uVar1 = fn_828647D8();
   apiStack_90[0] = (int *)*param_1;
@@ -73,4 +73,3 @@ bool fn_82536590(undefined4 *param_1,int param_2)
   }
   return cVar3 == '\0';
 }
-

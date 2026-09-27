@@ -26,20 +26,19 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_10;
-extern int fn_82A2B760();
+extern int fn_82A31F28();
 
 
 undefined4 fn_82A1F3F0(undefined8 param_1)
 
 {
   int iVar1;
-  undefined4 auStack_10 [4];
-  
-  iVar1 = XexLoadImage(param_1,9,0,auStack_10);
-  if (iVar1 < 0) {
-    fn_82A2B760();
-    auStack_10[0] = 0;
-  }
-  return auStack_10[0];
-}
+  undefined4 auStack_10;
 
+  iVar1 = XexLoadImage(param_1,9,0,&auStack_10);
+  if (iVar1 < 0) {
+    fn_82A31F28();
+    auStack_10 = 0;
+  }
+  return auStack_10;
+}

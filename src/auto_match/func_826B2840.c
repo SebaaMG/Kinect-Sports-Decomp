@@ -70,7 +70,7 @@ void fn_826B2840(int *param_1,undefined8 param_2)
   uint *puVar16;
   undefined1 auStack_70;
   int iStack_6c;
-  int aiStack_68 [2];
+  int aiStack_68;
   struct { int first; int second; } stack_pair_60;
 
   byte bStack_58;
@@ -105,8 +105,8 @@ void fn_826B2840(int *param_1,undefined8 param_2)
     iVar8 = fn_82694610((ulonglong)*(uint *)(*param_1 + 0x78) + 0x254,pcVar10,
                               pcVar13 + (-1 - (int)pcVar10));
     *(int *)(iVar8 + 8) = *(int *)(iVar8 + 8) + 1;
-    aiStack_68[0] = iVar8;
-    iVar9 = fn_826ABDB8(iVar7,uVar1,aiStack_68);
+    aiStack_68 = iVar8;
+    iVar9 = fn_826ABDB8(iVar7,uVar1,&aiStack_68);
     lVar12 = (ulonglong)*(uint *)(iVar8 + 8) - 1;
     iVar9 = *(int *)(*(int *)(iVar9 + 4) + 0x10);
     *(int *)(iVar8 + 8) = (int)lVar12;

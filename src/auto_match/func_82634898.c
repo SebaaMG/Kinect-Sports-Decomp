@@ -57,8 +57,8 @@ void fn_82634898(int param_1,char param_2,char param_3,code *param_4,undefined8 
 
   struct { uint first; uint second; } stack_pair_b8;
 
-  uint uStack_b0;
-  uint uStack_ac;
+  struct { uint first; uint second; } stack_pair_b0;
+
   uint uStack_a8;
   uint uStack_a4;
 
@@ -94,10 +94,10 @@ void fn_82634898(int param_1,char param_2,char param_3,code *param_4,undefined8 
       lVar11 = (longlong)iVar1;
       uVar8 = uVar7;
       do {
-        puVar9 = &uStack_b0;
+        puVar9 = &stack_pair_b0.first;
         lVar12 = 2;
-        uStack_b0 = puVar14[-2];
-        uStack_ac = puVar14[-1] & 0xffff;
+        stack_pair_b0.first = puVar14[-2];
+        stack_pair_b0.second = puVar14[-1] & 0xffff;
         uStack_a8 = puVar14[-1] >> 0x10 | *puVar14 << 0x10;
         uStack_a4 = *puVar14 >> 0x10;
         do {

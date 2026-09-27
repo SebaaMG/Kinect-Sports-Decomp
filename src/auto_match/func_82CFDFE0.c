@@ -47,8 +47,8 @@ void fn_82CFDFE0(int param_1,longlong param_2,ulonglong param_3,int param_4)
   undefined1 auStack_254 [2];
   undefined1 uStack_252;
   undefined1 uStack_251;
-  undefined1 auStack_250 [592];
-  
+  undefined1 auStack_250 [480];
+
   iVar2 = (int)param_3;
   if (*(char *)(param_1 + 0xc) == '\0') {
     (**(code **)(**(int **)(param_1 + 8) + 0x10))
@@ -125,4 +125,3 @@ void fn_82CFDFE0(int param_1,longlong param_2,ulonglong param_3,int param_4)
   }
   return;
 }
-

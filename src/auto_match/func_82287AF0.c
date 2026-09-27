@@ -28,10 +28,10 @@ typedef struct { U64 lo, hi; } V16;
 extern int fn_8225C590();
 extern int fn_8225D388();
 extern int fn_8225D8B8();
-extern int fn_82287D08();
 extern int fn_82287DA8();
-extern int fn_82288040();
 extern int fn_82288228();
+extern int fn_82288040();
+extern int fn_82287DA8();
 extern int fn_823AB478();
 
 
@@ -45,9 +45,9 @@ void fn_82287AF0(int param_1)
   longlong lVar5;
   int iVar6;
   uint uVar7;
-  
+
   uVar1 = *(uint *)(*(int *)(param_1 + 0x11f0) + 0x18bc);
-  fn_82288228(param_1,0,0);
+  fn_82287DA8(param_1,0,0);
   uVar7 = 1;
   if (uVar1 == 0) {
     uVar7 = 1;
@@ -68,10 +68,10 @@ void fn_82287AF0(int param_1)
         lVar5 = -1;
 LAB_82287bc8:
         if ((int)lVar5 == -1) {
-          fn_82287DA8(param_1,(*(int *)(*(int *)(param_1 + 0x11f0) + 0x18b8) == 1) + '\x01');
+          fn_82288228(param_1,(*(int *)(*(int *)(param_1 + 0x11f0) + 0x18b8) == 1) + '\x01');
         }
         else {
-          fn_82288228(param_1,lVar5);
+          fn_82287DA8(param_1,lVar5);
         }
       }
       else if (uVar1 == 3) {
@@ -91,7 +91,7 @@ LAB_82287bc8:
           uVar3 = 3;
           uVar7 = 4;
         }
-        fn_82287D08(param_1,uVar3);
+        fn_82287DA8(param_1,uVar3);
       }
       goto LAB_82287c84;
     }
@@ -107,10 +107,10 @@ LAB_82287bc8:
     lVar5 = -1;
 LAB_82287c28:
     if ((int)lVar5 == -1) {
-      fn_82287DA8(param_1,1);
+      fn_82288228(param_1,1);
     }
     else {
-      fn_82288228(param_1,lVar5,1);
+      fn_82287DA8(param_1,lVar5,1);
     }
     fn_82288040(param_1,2);
     cVar4 = '\x03';
@@ -135,4 +135,3 @@ LAB_82287c84:
   }
   return;
 }
-

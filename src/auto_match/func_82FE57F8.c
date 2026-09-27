@@ -25,7 +25,7 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F691F0();
+extern int memset();
 extern V16 vectorMultiplyAddFloatingPoint();
 extern void *memcpy(void *, const void *, unsigned int);
 
@@ -49,8 +49,8 @@ void fn_82FE57F8(int *param_1,ulonglong param_2,int param_3,longlong param_4,uin
   undefined4 uVar9;
   undefined4 uVar10;
   undefined4 uVar11;
-  
-  fn_82F691F0(param_4,0,(param_2 & 0x3fffffff) << 2);
+
+  memset(param_4,0,(param_2 & 0x3fffffff) << 2);
   uVar5 = 1;
   iVar6 = 0;
   do {
@@ -89,4 +89,3 @@ LAB_82fe5998:
     uVar5 = uVar5 << 1;
   } while( true );
 }
-

@@ -46,8 +46,8 @@ void fn_828D7598(undefined8 param_1,int *param_2,int *param_3,int *param_4)
   struct { undefined4 first; undefined4 second; } stack_pair_38;
 
   int iStack_30;
-  undefined4 uStack_28;
-  undefined4 uStack_24;
+  struct { undefined4 first; undefined4 second; } stack_pair_28;
+
   int iStack_20;
   struct { undefined4 first; undefined4 second; } stack_pair_18;
 
@@ -60,11 +60,11 @@ void fn_828D7598(undefined8 param_1,int *param_2,int *param_3,int *param_4)
     stack_pair_38.first = *puVar1;
   }
   iStack_30 = param_4[2];
-  uStack_28 = 0;
-  uStack_24 = 0;
+  stack_pair_28.first = 0;
+  stack_pair_28.second = 0;
   if (((int *)*param_3 != (int *)0x0) &&
      (puVar1 = *(undefined4 **)*param_3, puVar1 != (undefined4 *)0x0)) {
-    uStack_28 = *puVar1;
+    stack_pair_28.first = *puVar1;
   }
   iStack_20 = param_3[2];
   stack_pair_18.first = 0;
@@ -74,6 +74,6 @@ void fn_828D7598(undefined8 param_1,int *param_2,int *param_3,int *param_4)
     stack_pair_18.first = *puVar1;
   }
   iStack_10 = param_2[2];
-  fn_828D7150(param_1,&stack_pair_18.first,&uStack_28,&stack_pair_38.first,uStack_40);
+  fn_828D7150(param_1,&stack_pair_18.first,&stack_pair_28.first,&stack_pair_38.first,uStack_40);
   return;
 }

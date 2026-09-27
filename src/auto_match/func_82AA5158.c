@@ -26,7 +26,7 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 #define CONCAT44(h,l) ((U64)((((U32)(h)) << 32) | ((U32)(l))))
-extern int fn_82636E10();
+extern int fn_82637088();
 extern int fn_82AA1C90();
 extern int fn_82AA2720();
 extern unsigned int iStack_28;
@@ -41,14 +41,14 @@ fn_82AA5158(undefined8 param_1,undefined4 param_2,int param_3,undefined8 param_4
   undefined8 uVar1;
   undefined8 uStack_30;
   int iStack_28;
-  
+
   if (*(int *)(param_6 * 8 + param_3 + 0x14) == 0) {
     uVar1 = 0;
   }
   else {
     uStack_30 = CONCAT44((int)param_1,param_2);
     iStack_28 = param_6;
-    uVar1 = fn_82636E10(param_5,&uStack_30,0xffffffff82aa5020);
+    uVar1 = fn_82637088(param_5,&uStack_30,0xffffffff82aa5020);
     if (-1 < (int)uVar1) {
       fn_82AA2720(param_1,0xffffffff821ce7a4);
       fn_82AA1C90(param_1,0xffffffff821cc86c);
@@ -57,4 +57,3 @@ fn_82AA5158(undefined8 param_1,undefined4 param_2,int param_3,undefined8 param_4
   }
   return uVar1;
 }
-

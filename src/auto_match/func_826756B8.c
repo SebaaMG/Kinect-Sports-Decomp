@@ -31,7 +31,7 @@ extern int fn_82526CC0();
 extern int fn_82526D78();
 extern int fn_82526DC8();
 extern int fn_8268B8E8();
-extern int fn_8268BA10();
+extern int fn_8268B8E8();
 
 
 void fn_826756B8(undefined8 param_1,undefined8 param_2,int *param_3)
@@ -40,8 +40,8 @@ void fn_826756B8(undefined8 param_1,undefined8 param_2,int *param_3)
   longlong lVar1;
   longlong lVar2;
   undefined1 auStack_a0 [64];
-  undefined1 auStack_60 [96];
-  
+  undefined1 auStack_60 [64];
+
   if (*param_3 == 1) {
     lVar2 = ((ulonglong)(uint)param_3[1] & 0xfffffffc) + 8;
     lVar1 = fn_82526CC0(lVar2,0xffffffff82002d90);
@@ -51,8 +51,7 @@ void fn_826756B8(undefined8 param_1,undefined8 param_2,int *param_3)
     fn_8268B8E8(param_2,auStack_60);
   }
   else {
-    fn_8268BA10(param_2,param_3 + 1);
+    fn_8268B8E8(param_2,param_3 + 1);
   }
   return;
 }
-

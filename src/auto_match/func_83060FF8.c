@@ -40,8 +40,8 @@ void fn_83060FF8(int param_1,undefined8 param_2,float *param_3)
   double dVar1;
   double dVar2;
   undefined1 auStack_40 [1];
-  undefined1 auStack_30 [48];
-  
+  undefined1 auStack_30 [16];
+
   fn_83060EC8(param_1,auStack_40,auStack_30);
   if (*(int *)(param_1 + 0xc) != 0) {
     fn_82810328(auStack_30,auStack_40,param_2);
@@ -52,4 +52,3 @@ void fn_83060FF8(int param_1,undefined8 param_2,float *param_3)
   }
   return;
 }
-

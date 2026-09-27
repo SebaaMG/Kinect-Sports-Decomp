@@ -45,8 +45,8 @@ fn_83066C10(double param_1,longlong param_2,undefined8 param_3,undefined8 param_
   double dVar3;
   double dVar4;
   undefined1 auStack_60 [1];
-  undefined1 auStack_50 [80];
-  
+  undefined1 auStack_50 [16];
+
   fn_82810328(param_4,param_3,auStack_60);
   dVar3 = (double)fn_82810308(auStack_60);
   if ((double)(float)(param_1 * param_1) < dVar3) {
@@ -70,4 +70,3 @@ fn_83066C10(double param_1,longlong param_2,undefined8 param_3,undefined8 param_
   }
   return 0;
 }
-

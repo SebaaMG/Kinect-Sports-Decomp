@@ -72,15 +72,15 @@ undefined8 fn_826CF350(int *param_1,float *param_2,ulonglong param_3)
   struct { int first; int second; } stack_pair_110;
 
   undefined4 uStack_108;
-  float fStack_100;
-  float fStack_fc;
+  struct { float first; float second; } stack_pair_100;
+
   int iStack_f0;
   int iStack_ec;
   int iStack_e8;
   int iStack_e4;
   int iStack_e0;
   int iStack_dc;
-  undefined1 auStack_d8 [8];
+  undefined1 auStack_d8 [1];
   undefined1 auStack_d0 [32];
   undefined1 auStack_b0 [32];
   undefined1 auStack_90 [32];
@@ -139,9 +139,9 @@ undefined8 fn_826CF350(int *param_1,float *param_2,ulonglong param_3)
             iStack_e4 = piVar5[0x14];
             iStack_e0 = piVar5[0x15];
             iStack_dc = piVar5[0x16];
-            fn_8268D008(&iStack_f0,&fStack_100,param_2);
-            stack_pair_120.first = fStack_100;
-            stack_pair_120.second = fStack_fc;
+            fn_8268D008(&iStack_f0,&stack_pair_100.first,param_2);
+            stack_pair_120.first = stack_pair_100.first;
+            stack_pair_120.second = stack_pair_100.second;
             cVar6 = (**(code **)(*piVar5 + 0x30))(piVar5,&stack_pair_120.first,param_3);
             if (cVar6 != '\0') {
               fn_8267BE38(iVar3);

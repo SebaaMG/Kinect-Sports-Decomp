@@ -29,7 +29,7 @@ extern unsigned int *auStack_30;
 extern int fn_826A6A38();
 extern int fn_826D8EA8();
 extern int fn_826DFA28();
-extern int fn_8276E270();
+extern int fn_826DFA28();
 
 
 void fn_826E03B8(int param_1,undefined4 *param_2)
@@ -38,11 +38,11 @@ void fn_826E03B8(int param_1,undefined4 *param_2)
   uint uVar2;
   ulonglong uVar1;
   int iVar3;
-  uint auStack_30 [12];
-  
+  uint auStack_30;
+
   uVar2 = fn_826A6A38();
-  auStack_30[0] = uVar2 & 0xffff;
-  uVar1 = fn_826D8EA8(*(undefined4 *)(param_1 + 0x20),auStack_30);
+  auStack_30 = uVar2 & 0xffff;
+  uVar1 = fn_826D8EA8(*(undefined4 *)(param_1 + 0x20),&auStack_30);
   if ((uVar1 & 0xffffffff) == 0) {
     fn_826DFA28(param_1 + 0x14,0xffffffff8200ca94,uVar2 & 0xffff);
   }
@@ -51,8 +51,7 @@ void fn_826E03B8(int param_1,undefined4 *param_2)
     if (iVar3 == 0) {
       iVar3 = param_1 + 0x28;
     }
-    fn_8276E270(uVar1,iVar3,*param_2);
+    fn_826DFA28(uVar1,iVar3,*param_2);
   }
   return;
 }
-

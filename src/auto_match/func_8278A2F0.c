@@ -116,8 +116,8 @@ void fn_8278A2F0(undefined8 param_1,undefined8 param_2,int param_3)
   struct { int first; int second; } stack_pair_f0;
 
   int iStack_e8;
-  undefined4 uStack_e0;
-  undefined4 uStack_dc;
+  struct { undefined4 first; undefined4 second; } stack_pair_e0;
+
   undefined4 uStack_d8;
   undefined4 uStack_d0;
   undefined4 uStack_cc;
@@ -350,13 +350,13 @@ void fn_8278A2F0(undefined8 param_1,undefined8 param_2,int param_3)
                                   ((uVar31 | uVar32 & 0xffffffff) >> 2 & 0xff) * 0xf + 3 &
                                  0xffffffff) << 2) + *(int *)((uVar19 >> 8 & 0xfffffc) + uVar4));
                 uVar2 = *(undefined4 *)(((&lbl_820155B4)[uVar24 & 3] + iVar14 + 3) * 4 + iVar1);
-                uStack_e0 = *(undefined4 *)
+                stack_pair_e0.first = *(undefined4 *)
                              ((((uint)((uVar31 | uVar32 & 0xffffffff) >> 2) & 0xff) * 0xf +
                                (uVar21 & 3) + 3) * 4 + *(int *)((uVar19 >> 8 & 0xfffffc) + uVar4));
                 uVar3 = *(undefined4 *)((iVar14 + (uVar24 & 3) + 3) * 4 + iVar1);
-                uStack_dc = uVar10;
+                stack_pair_e0.second = uVar10;
                 uStack_d8 = uVar2;
-                fn_82789C08(puVar22,&uStack_e0);
+                fn_82789C08(puVar22,&stack_pair_e0.first);
                 uStack_d0 = uVar2;
                 uStack_cc = uVar10;
                 uStack_c8 = uVar3;

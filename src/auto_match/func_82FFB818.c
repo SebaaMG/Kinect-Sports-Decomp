@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_60;
 extern unsigned int *auStack_70;
-extern int fn_82FA5190();
+extern int fn_82FA52E0();
 extern int fn_82FFDF28();
 extern int fn_82FFE400();
 extern int fn_82FFF348();
@@ -45,8 +45,8 @@ void fn_82FFB818(longlong param_1,int param_2)
   int *piVar5;
   undefined1 auStack_70 [8];
   int iStack_68;
-  undefined1 auStack_60 [96];
-  
+  undefined1 auStack_60 [16];
+
   if (*(int *)(param_2 + 0x28) != 0) {
     RtlEnterCriticalSection(param_1 + 0x50);
     uVar3 = 0;
@@ -61,7 +61,7 @@ void fn_82FFB818(longlong param_1,int param_2)
           lVar2 = (ulonglong)*(uint *)(iVar1 + 0x1c) - 1;
           *(int *)(iVar1 + 0x1c) = (int)lVar2;
           if ((lVar2 == 0) && (*piVar5 != 0)) {
-            fn_82FA5190(lbl_832645A4);
+            fn_82FA52E0(lbl_832645A4);
             *piVar5 = 0;
             *(undefined4 *)(iVar1 + 0xc) = 0;
           }
@@ -77,4 +77,3 @@ void fn_82FFB818(longlong param_1,int param_2)
   }
   return;
 }
-

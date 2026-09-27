@@ -40,17 +40,17 @@ void fn_82F87998(char *param_1,ulonglong param_2,uint *param_3)
   uint uVar4;
   uint uVar5;
   short sVar6;
-  int iStack_40;
-  uint uStack_3c;
+  struct { int first; uint second; } stack_pair_40;
+
   uint uStack_38;
-  
+
   param_3[2] = 0;
   sVar6 = 0x404e;
   param_3[1] = 0;
   *param_3 = 0;
   if ((param_2 & 0xffffffff) != 0) {
     do {
-      fn_82F68CC0(&iStack_40,param_3,0xc);
+      fn_82F68CC0(&stack_pair_40.first,param_3,0xc);
       uVar2 = param_3[2];
       uVar4 = param_3[1];
       bVar3 = false;
@@ -81,8 +81,8 @@ void fn_82F87998(char *param_1,ulonglong param_2,uint *param_3)
         }
       }
       bVar3 = false;
-      uVar4 = param_3[1] + uStack_3c;
-      if ((uVar4 < param_3[1]) || (uVar4 < uStack_3c)) {
+      uVar4 = param_3[1] + stack_pair_40.second;
+      if ((uVar4 < param_3[1]) || (uVar4 < stack_pair_40.second)) {
         bVar3 = true;
       }
       param_3[1] = uVar4;
@@ -92,7 +92,7 @@ void fn_82F87998(char *param_1,ulonglong param_2,uint *param_3)
       uVar5 = uVar2 * 2;
       param_3[2] = uVar5;
       uVar1 = param_3[1] << 1 | uVar2 >> 0x1f;
-      uVar2 = (*param_3 + iStack_40) * 2 | uVar4 >> 0x1f;
+      uVar2 = (*param_3 + stack_pair_40.first) * 2 | uVar4 >> 0x1f;
       param_3[1] = uVar1;
       bVar3 = false;
       *param_3 = uVar2;
@@ -138,4 +138,3 @@ LAB_82f87c14:
   *(short *)param_3 = sVar6;
   return;
 }
-

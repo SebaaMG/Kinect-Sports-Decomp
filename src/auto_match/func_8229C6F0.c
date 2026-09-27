@@ -29,8 +29,8 @@ extern unsigned int *auStack_230;
 extern int fn_82250A18();
 extern int fn_8225F160();
 extern int fn_8229C290();
-extern int fn_8229CAD0();
 extern int fn_8229CB40();
+extern int fn_8229CAD0();
 extern int fn_82358FD8();
 extern int fn_8249ABC0();
 extern int fn_828AAF70();
@@ -48,8 +48,8 @@ void fn_8229C6F0(int param_1,int param_2,int param_3)
   char cVar5;
   longlong lVar6;
   bool bVar7;
-  undefined1 auStack_230 [560];
-  
+  undefined1 auStack_230 [496];
+
   if (param_3 != 0) {
     iVar4 = fn_8249ABC0();
     piVar2 = *(int **)(iVar4 + 0x1c);
@@ -96,10 +96,10 @@ void fn_8229C6F0(int param_1,int param_2,int param_3)
         }
         fn_82358FD8(*(undefined4 *)(param_1 + 0x4c),auStack_230,0x100,0xffffffff821aaf94);
         if (*(int *)(param_1 + 0x10) == 0) {
-          fn_8229CAD0(param_1,auStack_230);
+          fn_8229CB40(param_1,auStack_230);
         }
         else {
-          fn_8229CB40(param_1,auStack_230,auStack_230);
+          fn_8229CAD0(param_1,auStack_230,auStack_230);
         }
         *(undefined4 *)(param_1 + 0x20) = 1;
         return;
@@ -109,4 +109,3 @@ void fn_8229C6F0(int param_1,int param_2,int param_3)
   fn_8229C290(param_1);
   return;
 }
-

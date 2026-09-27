@@ -37,7 +37,7 @@ extern int fn_8223DCC8();
 extern int fn_8223FBB0();
 extern int fn_82240158();
 extern int fn_822403C8();
-extern int fn_82F646C8();
+extern int fn_82F644D8();
 
 
 undefined8 fn_82245E18(undefined8 param_1,undefined8 param_2,undefined8 param_3,int param_4)
@@ -46,12 +46,12 @@ undefined8 fn_82245E18(undefined8 param_1,undefined8 param_2,undefined8 param_3,
   undefined8 uVar1;
   undefined8 uVar2;
   undefined4 *puVar3;
-  undefined1 auStack_170 [32];
+  undefined1 auStack_170 [1];
   undefined1 auStack_150 [4];
   undefined1 auStack_14c [156];
   undefined1 auStack_b0 [4];
   undefined1 auStack_ac [148];
-  
+
   fn_8223CFC0(auStack_b0,2,1);
   if (*(uint *)(param_4 + 0xc) < 5) {
     puVar3 = (undefined4 *)(param_4 + 8);
@@ -63,7 +63,7 @@ undefined8 fn_82245E18(undefined8 param_1,undefined8 param_2,undefined8 param_3,
   fn_8223FBB0(auStack_150,*puVar3);
   fn_822403C8(auStack_170,auStack_14c);
   fn_8223DCC8(auStack_150);
-  uVar1 = fn_82F646C8(0xffffffff831d70c4,0xffffffff8326338c);
+  uVar1 = fn_82F644D8(0xffffffff831d70c4,0xffffffff8326338c);
   uVar2 = fn_82240158(auStack_b0,0xffffffff821976d0);
   uVar1 = fn_82240158(uVar2,uVar1);
   uVar1 = fn_82240158(uVar1,0xffffffff821976c8);
@@ -74,4 +74,3 @@ undefined8 fn_82245E18(undefined8 param_1,undefined8 param_2,undefined8 param_3,
   fn_8223DCC8(auStack_b0);
   return param_1;
 }
-

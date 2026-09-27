@@ -44,9 +44,9 @@ void fn_82CF7878(int param_1,uint param_2,uint param_3)
   uint *puVar9;
   int iVar10;
   int iVar11;
-  uint uStack_30;
-  uint uStack_2c;
-  
+  struct { uint first; uint second; } stack_pair_30;
+
+
   iVar11 = param_1 + 0x124;
   RtlEnterCriticalSection(iVar11);
   uVar4 = param_2 + param_3;
@@ -124,12 +124,11 @@ void fn_82CF7878(int param_1,uint param_2,uint param_3)
       RtlLeaveCriticalSection(iVar11);
       return;
     }
-    uStack_30 = param_2;
-    uStack_2c = param_3;
-    fn_82CF7AF0(param_1 + 0x18,0,uVar5 + 1,0,&uStack_30,1);
+    stack_pair_30.first = param_2;
+    stack_pair_30.second = param_3;
+    fn_82CF7AF0(param_1 + 0x18,0,uVar5 + 1,0,&stack_pair_30.first,1);
   }
 LAB_82cf7ad8:
   RtlLeaveCriticalSection(iVar11);
   return;
 }
-

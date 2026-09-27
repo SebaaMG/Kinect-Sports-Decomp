@@ -138,8 +138,8 @@ void fn_82715F40(undefined1 param_1,int param_2)
   char cStack_64;
   undefined1 uStack_63;
   int *apiStack_60 [4];
-  undefined4 uStack_50;
-  undefined4 uStack_4c;
+  struct { undefined4 first; undefined4 second; } stack_pair_50;
+
   undefined2 uStack_48;
   undefined1 uStack_46;
   undefined1 uStack_45;
@@ -278,14 +278,14 @@ LAB_827161ac:
     }
     if ((*(uint *)(param_2 + 0xc) & 1) != 0) {
       if (piVar2 != (int *)0x0) {
-        uStack_4c = 0;
+        stack_pair_50.second = 0;
         uStack_48 = 0;
         uStack_46 = 0;
         uStack_43 = 0;
-        uStack_50 = 0x400;
+        stack_pair_50.first = 0x400;
         uStack_44 = 0;
         uStack_45 = param_1;
-        (**(code **)(*piVar2 + 0xe8))(piVar2,&uStack_50);
+        (**(code **)(*piVar2 + 0xe8))(piVar2,&stack_pair_50.first);
       }
       *(byte *)(param_2 + 0x20) = *(byte *)(param_2 + 0x20) | 0x20;
     }

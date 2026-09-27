@@ -29,7 +29,7 @@ extern int fn_82A40AD8();
 extern int fn_82A40B38();
 extern int fn_82A43380();
 extern int fn_82A43C88();
-extern int fn_82A43D00();
+extern int fn_82A43C88();
 extern int fn_82A47D50();
 extern int fn_82A4F4E0();
 
@@ -43,8 +43,8 @@ void fn_82A44218(int param_1,int param_2)
   longlong lVar2;
   undefined8 uVar5;
   int iVar6;
-  int aiStack_30 [12];
-  
+  int aiStack_30;
+
   if (*(int *)(param_1 + 0x1b8) == 0) {
     return;
   }
@@ -58,8 +58,8 @@ void fn_82A44218(int param_1,int param_2)
     }
   }
   else {
-    aiStack_30[0] = param_2;
-    lVar2 = fn_82A43380(iVar6,aiStack_30,0xffffffff82a43368,0);
+    aiStack_30 = param_2;
+    lVar2 = fn_82A43380(iVar6,&aiStack_30,0xffffffff82a43368,0);
     if (lVar2 == 0) {
       return;
     }
@@ -80,10 +80,9 @@ void fn_82A44218(int param_1,int param_2)
       if (2 < uVar1) goto LAB_82a442dc;
       uVar5 = 2;
     }
-    fn_82A43D00(param_1,uVar5);
+    fn_82A43C88(param_1,uVar5);
   }
 LAB_82a442dc:
   fn_82A4F4E0(iVar3);
   return;
 }
-

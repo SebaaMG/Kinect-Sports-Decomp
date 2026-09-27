@@ -25,8 +25,8 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82522D98();
-extern int fn_82CE0C20();
+extern int fn_82522ED8();
+extern int fn_82CE11A0();
 extern unsigned int iStack_60;
 extern unsigned int lbl_821C1A4C;
 
@@ -35,8 +35,8 @@ undefined4 * fn_824F1588(undefined4 *param_1,undefined4 *param_2)
 
 {
   int iStack_60;
-  int aiStack_5c [23];
-  
+  int aiStack_5c [19];
+
   param_1[1] = param_2;
   *param_1 = &lbl_821C1A4C;
   if (param_2 == (undefined4 *)0x0) {
@@ -49,11 +49,10 @@ undefined4 * fn_824F1588(undefined4 *param_1,undefined4 *param_2)
   param_1[4] = 0;
   param_1[5] = 0;
   param_1[6] = 0;
-  fn_82CE0C20(0,0,10,&iStack_60,aiStack_5c);
+  fn_82CE11A0(0,0,10,&iStack_60,aiStack_5c);
   if ((aiStack_5c[0] != 0) && (iStack_60 != 0)) {
                     /* WARNING: Subroutine does not return */
-    fn_82522D98();
+    fn_82522ED8();
   }
   return param_1;
 }
-

@@ -25,7 +25,7 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82FA5190();
+extern int fn_82FA52E0();
 extern int fn_8304D648();
 extern int fn_8307DE78();
 extern int fn_8307E5A8();
@@ -44,10 +44,9 @@ void fn_83049050(int *param_1)
     param_1[10] = 0;
   }
   if (param_1[0xe] != 0) {
-    fn_82FA5190(lbl_831BC770);
+    fn_82FA52E0(lbl_831BC770);
     param_1[0xe] = 0;
   }
   fn_8304D648(param_1);
   return;
 }
-

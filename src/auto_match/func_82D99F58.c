@@ -26,7 +26,7 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_30;
-extern int fn_82CE57B0();
+extern int fn_82CE5990();
 extern int fn_82D937A8();
 extern unsigned int lbl_8213A3E4;
 
@@ -34,8 +34,8 @@ extern unsigned int lbl_8213A3E4;
 void fn_82D99F58(undefined4 *param_1,undefined8 param_2,undefined8 param_3)
 
 {
-  undefined1 auStack_30 [48];
-  
+  undefined1 auStack_30 [16];
+
   fn_82D937A8(param_1,param_2,2);
   param_1[0x23] = 0;
   param_1[0x24] = 0;
@@ -46,6 +46,5 @@ void fn_82D99F58(undefined4 *param_1,undefined8 param_2,undefined8 param_3)
   *(undefined1 *)(param_1 + 8) = 0xf0;
   *param_1 = &lbl_8213A3E4;
                     /* WARNING: Subroutine does not return */
-  fn_82CE57B0(auStack_30,param_3);
+  fn_82CE5990(auStack_30,param_3);
 }
-

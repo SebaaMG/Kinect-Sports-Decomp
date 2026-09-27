@@ -63,25 +63,25 @@ int fn_82DDD738(int param_1,undefined8 param_2)
   undefined4 uVar10;
   undefined4 uVar11;
   undefined4 uVar12;
-  int aiStack_2f40 [4];
-  float fStack_2f30;
-  float fStack_2f2c;
+  int aiStack_2f40;
+  struct { float first; float second; } stack_pair_2f30;
+
   float fStack_2f28;
   longlong lStack_2f20;
   undefined1 auStack_2f10 [8];
   int iStack_2f08;
-  undefined1 auStack_2ef0 [48];
+  undefined1 auStack_2ef0 [1];
   undefined4 auStack_2ec0 [2992];
-  
+
   dVar7 = (double)lbl_8208ED40;
   dVar8 = (double)lbl_82002D08;
   dVar6 = (double)lbl_8208E088;
   do {
-    aiStack_2f40[0] = 0;
-    iVar4 = fn_82DDCE28(param_1,param_2,aiStack_2f40);
+    aiStack_2f40 = 0;
+    iVar4 = fn_82DDCE28(param_1,param_2,&aiStack_2f40);
     if (iVar4 == 1) {
-      if (aiStack_2f40[0] != 3) {
-        return aiStack_2f40[0];
+      if (aiStack_2f40 != 3) {
+        return aiStack_2f40;
       }
     }
     else {
@@ -92,7 +92,7 @@ int fn_82DDD738(int param_1,undefined8 param_2)
       auStack_2ec0[iStack_2f08 * 0x10] = 0;
       iStack_2f08 = iStack_2f08 + 1;
       fn_82DDC940(param_1,uVar3,auStack_2ef0 + iVar4);
-      iVar4 = fn_82DDCA78(param_1,auStack_2f10,uVar3,auStack_2ef0 + iVar4,aiStack_2f40);
+      iVar4 = fn_82DDCA78(param_1,auStack_2f10,uVar3,auStack_2ef0 + iVar4,&aiStack_2f40);
       while (iVar2 = iStack_2f08, iVar4 != 1) {
         if (0x36 < iStack_2f08) {
           iVar4 = 2;
@@ -103,10 +103,10 @@ int fn_82DDD738(int param_1,undefined8 param_2)
         auStack_2ec0[iVar2 * 0x10] = 0;
         fn_82DDC940(param_1,uVar3,auStack_2ef0 + iVar2 * 0x40);
         iVar4 = fn_82DDCA78(param_1,auStack_2f10,uVar3,auStack_2ef0 + iVar2 * 0x40,
-                                  aiStack_2f40);
+                                  &aiStack_2f40);
       }
-      iVar4 = aiStack_2f40[0];
-      if (aiStack_2f40[0] != 3) {
+      iVar4 = aiStack_2f40;
+      if (aiStack_2f40 != 3) {
 LAB_82ddd924:
         fn_82DDCBA8(param_1,auStack_2f10,uVar3,param_2);
         return iVar4;
@@ -119,7 +119,7 @@ LAB_82ddd924:
     }
     else {
       if (0x13 < iVar4) {
-        return aiStack_2f40[0];
+        return aiStack_2f40;
       }
       *(undefined4 *)(param_1 + 0x6c) = 0;
       lStack_2f20 = (longlong)(int)(iVar4 * -0x3e39b193 + 0x3039U & 0x7fffffff);
@@ -130,10 +130,10 @@ LAB_82ddd924:
       uVar11 = puVar1[2];
       uVar12 = puVar1[3];
       dVar5 = (double)(float)((double)lStack_2f20 * dVar6);
-      fStack_2f30 = (float)((double)(float)(dVar5 - dVar8) * dVar7);
-      fStack_2f2c = (float)((double)(float)(dVar5 - dVar8) * dVar7);
+      stack_pair_2f30.first = (float)((double)(float)(dVar5 - dVar8) * dVar7);
+      stack_pair_2f30.second = (float)((double)(float)(dVar5 - dVar8) * dVar7);
       fStack_2f28 = (float)((double)(float)(dVar5 - dVar8) * dVar7);{ V16 _vt0 = vectorAddFloatingPoint(in_vs45,in_vs32); memcpy(in_vs32, &_vt0, 16); }
-      puVar1 = (undefined4 *)((int)&fStack_2f30 + iVar4 & 0xfffffff0);
+      puVar1 = (undefined4 *)((int)&stack_pair_2f30.first + iVar4 & 0xfffffff0);
       *puVar1 = uVar9;
       puVar1[1] = uVar10;
       puVar1[2] = uVar11;
@@ -146,4 +146,3 @@ LAB_82ddd924:
     }
   } while( true );
 }
-

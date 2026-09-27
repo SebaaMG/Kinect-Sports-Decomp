@@ -26,7 +26,7 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_70;
-extern int fn_82291F90();
+extern int fn_82292100();
 extern int fn_82292100();
 extern int fn_82358FD8();
 
@@ -36,8 +36,8 @@ void fn_82436240(int param_1,undefined8 param_2,uint *param_3,undefined8 param_4
 {
   int *piVar1;
   uint uVar2;
-  undefined1 auStack_70 [112];
-  
+  undefined1 auStack_70 [64];
+
   piVar1 = *(int **)(param_1 + 0x40);
   if (piVar1[0x3e] == 0) {
     fn_82358FD8(*piVar1,auStack_70,0x20,0xffffffff821aa224);
@@ -47,9 +47,8 @@ void fn_82436240(int param_1,undefined8 param_2,uint *param_3,undefined8 param_4
   }
   else {
     uVar2 = *param_3;
-    fn_82291F90(*(undefined4 *)(*piVar1 + 0xd4),param_2,(int)uVar2 / 100,
+    fn_82292100(*(undefined4 *)(*piVar1 + 0xd4),param_2,(int)uVar2 / 100,
                     (ulonglong)uVar2 + (longlong)((int)uVar2 / 100) * -100,param_4);
   }
   return;
 }
-

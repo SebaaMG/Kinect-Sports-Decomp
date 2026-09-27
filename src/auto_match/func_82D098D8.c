@@ -43,10 +43,10 @@ void fn_82D098D8(undefined8 param_1,int param_2)
   struct { undefined4 first; int second; } stack_pair_40;
 
   uint uStack_38;
-  undefined4 uStack_30;
-  int iStack_2c;
+  struct { undefined4 first; int second; } stack_pair_30;
+
   undefined4 uStack_28;
-  
+
   stack_pair_40.first = 0;
   stack_pair_40.second = 0;
   uStack_38 = 0x80000000;
@@ -56,10 +56,10 @@ void fn_82D098D8(undefined8 param_1,int param_2)
     *(undefined4 *)(param_2 + 4) = 0;
   }
   else {
-    iStack_2c = stack_pair_40.second;
+    stack_pair_30.second = stack_pair_40.second;
     uStack_28 = 0x10;
-    uStack_30 = stack_pair_40.first;
-    fn_82D08138(&uStack_30,param_2);
+    stack_pair_30.first = stack_pair_40.first;
+    fn_82D08138(&stack_pair_30.first,param_2);
   }
   iVar1 = fn_82CE5410();
   stack_pair_40.second = 0;
@@ -69,4 +69,3 @@ void fn_82D098D8(undefined8 param_1,int param_2)
   }
   return;
 }
-

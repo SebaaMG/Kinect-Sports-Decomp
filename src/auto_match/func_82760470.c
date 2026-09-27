@@ -83,7 +83,7 @@ void fn_82760470(int *param_1,int *param_2,int *param_3)
   undefined4 uStack_88;
   undefined4 uStack_84;
   undefined4 uStack_80;
-  undefined1 auStack_7c [32];
+  undefined1 auStack_7c [1];
   undefined4 uStack_5c;
   undefined4 uStack_58;
   undefined4 uStack_54;

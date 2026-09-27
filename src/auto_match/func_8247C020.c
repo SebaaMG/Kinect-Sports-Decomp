@@ -26,7 +26,7 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_82484BF0();
-extern int fn_82484D38();
+extern int fn_82484BF0();
 extern int fn_82484E08();
 extern int fn_82484EE0();
 extern int fn_82485850();
@@ -39,7 +39,7 @@ void fn_8247C020(int param_1,ulonglong param_2,undefined4 *param_3,undefined8 pa
 {
   int iVar1;
   undefined4 uVar2;
-  
+
   if (((param_2 & 0xffffffff) == 3) && (param_3 != (undefined4 *)0x0)) {
     *param_3 = 0;
     *(undefined4 *)(param_1 + 0x4c) = 1;
@@ -74,7 +74,7 @@ void fn_8247C020(int param_1,ulonglong param_2,undefined4 *param_3,undefined8 pa
         }
         goto LAB_8247c150;
       }
-      fn_82484D38(*(undefined4 *)(param_1 + 0x34));
+      fn_82484BF0(*(undefined4 *)(param_1 + 0x34));
     }
   }
   else {
@@ -139,4 +139,3 @@ LAB_8247c204:
   }
   return;
 }
-

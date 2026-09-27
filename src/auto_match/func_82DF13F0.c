@@ -30,8 +30,8 @@ extern unsigned int *auStack_60;
 extern unsigned int *auStack_70;
 extern unsigned int *auStack_80;
 extern int fn_82DF0E70();
-extern int fn_82DF1050();
 extern int fn_82DF1108();
+extern int fn_82DF1050();
 extern int fn_82DF1328();
 
 
@@ -53,17 +53,17 @@ void fn_82DF13F0(undefined8 param_1,int param_2,undefined8 param_3,undefined8 pa
   undefined4 uVar11;
   undefined4 uVar12;
   undefined4 uVar13;
-  undefined1 auStack_80 [16];
+  undefined1 auStack_80 [1];
   undefined1 auStack_70 [16];
   undefined1 auStack_60 [16];
   undefined1 auStack_50 [80];
-  
+
   iVar5 = (int)param_5;
   if (param_7 == '\0') {
     if (param_8 != '\0') {
       if (*(int *)(param_2 + 0x24) == *(int *)(param_2 + 0x2c)) {
         if (*(int *)(param_2 + 0x24) != 0) {
-          fn_82DF1050(param_2,0);
+          fn_82DF1108(param_2,0);
         }
         iVar1 = *(int *)(param_2 + 0x18);
         iVar6 = 0;
@@ -122,7 +122,7 @@ void fn_82DF13F0(undefined8 param_1,int param_2,undefined8 param_3,undefined8 pa
     }
   }
   else {
-    fn_82DF1108(param_2,param_6,param_5,param_4);
+    fn_82DF1050(param_2,param_6,param_5,param_4);
     iVar1 = *(int *)(param_2 + 0x18);
     iVar6 = 0;
     puVar3 = (undefined4 *)(iVar5 + 0x120U & 0xfffffff0);
@@ -147,4 +147,3 @@ void fn_82DF13F0(undefined8 param_1,int param_2,undefined8 param_3,undefined8 pa
   fn_82DF0E70(param_1,param_2);
   return;
 }
-

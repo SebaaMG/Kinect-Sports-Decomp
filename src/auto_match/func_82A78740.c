@@ -29,8 +29,8 @@ extern unsigned int *auStack_30;
 extern int fn_82A49B60();
 extern int fn_82A77548();
 extern int fn_82A77D58();
-extern int fn_82A77E00();
 extern int fn_82A77FA8();
+extern int fn_82A77E00();
 
 
 ulonglong fn_82A78740(int param_1,ulonglong param_2)
@@ -39,10 +39,10 @@ ulonglong fn_82A78740(int param_1,ulonglong param_2)
   longlong lVar1;
   ulonglong uVar2;
   ulonglong uVar3;
-  uint auStack_30 [12];
-  
+  uint auStack_30;
+
   uVar3 = 0;
-  auStack_30[0] = 0;
+  auStack_30 = 0;
   uVar2 = 0;
   if ((param_2 & 0xffffffff) == 0) {
     uVar2 = (ulonglong)*(uint *)(*(int *)(param_1 + 4) + 0x214);
@@ -59,20 +59,19 @@ ulonglong fn_82A78740(int param_1,ulonglong param_2)
         break;
       }
       if (*(int *)(param_1 + 0xc0) == 0) {
-        lVar1 = fn_82A77E00(param_1,param_2,auStack_30);
+        lVar1 = fn_82A77FA8(param_1,param_2,&auStack_30);
       }
       else {
-        lVar1 = fn_82A77FA8();
+        lVar1 = fn_82A77E00();
       }
       if (uVar2 == 0) {
-        uVar2 = (ulonglong)auStack_30[0];
+        uVar2 = (ulonglong)auStack_30;
       }
-      uVar3 = lVar1 + (ulonglong)auStack_30[0];
+      uVar3 = lVar1 + (ulonglong)auStack_30;
       param_2 = param_2 - lVar1;
-      auStack_30[0] = (uint)uVar3;
+      auStack_30 = (uint)uVar3;
     } while (param_2 != 0);
   }
   fn_82A77548(param_1);
   return uVar2;
 }
-

@@ -28,8 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 extern int fn_82CD7760();
 
 
-void fn_82CD8418(undefined8 param_1,undefined8 param_2,int param_3,int param_4,int param_5,
-                  int param_6,undefined8 param_7,int param_8)
+void fn_82CD8418(undefined8 param_1, undefined8 param_2, int param_3, int param_4, int param_5, int param_6, undefined8 param_7, int param_8, undefined8 unused_arg_9, undefined8 unused_arg_10, undefined8 unused_arg_11, uint in_stack_0000006c, undefined8 unused_arg_13, int in_stack_0000007c)
 
 {
   undefined1 uVar1;
@@ -41,9 +40,9 @@ void fn_82CD8418(undefined8 param_1,undefined8 param_2,int param_3,int param_4,i
   uint uVar7;
   int iVar8;
   longlong lVar9;
-  uint in_stack_0000006c;
-  int in_stack_0000007c;
-  
+
+
+
   uVar7 = in_stack_0000006c;
   if ((in_stack_0000006c ^ (int)in_stack_0000006c >> 0x1f) - ((int)in_stack_0000006c >> 0x1f) != 1)
   {
@@ -77,4 +76,3 @@ void fn_82CD8418(undefined8 param_1,undefined8 param_2,int param_3,int param_4,i
   fn_82CD7760(param_1,param_2,param_7,in_stack_0000006c);
   return;
 }
-

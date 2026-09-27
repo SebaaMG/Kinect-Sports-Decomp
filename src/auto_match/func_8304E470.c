@@ -55,8 +55,8 @@ undefined8 fn_8304E470(int *param_1)
   int iVar7;
   int *piVar8;
   undefined8 uStack_80;
-  undefined4 uStack_70;
-  uint uStack_6c;
+  struct { undefined4 first; uint second; } stack_pair_70;
+
   undefined4 uStack_68;
   undefined4 uStack_64;
   byte bStack_60;
@@ -67,7 +67,7 @@ undefined8 fn_8304E470(int *param_1)
   undefined4 uStack_48;
   undefined4 uStack_44;
   undefined1 uStack_40;
-  
+
   if (*(char *)((int)param_1 + 0x41) == '\0') {
     iVar3 = param_1[2];
     iVar7 = *(int *)(iVar3 + 0x6c);
@@ -91,8 +91,8 @@ undefined8 fn_8304E470(int *param_1)
           bVar5 = false;
         }
       }
-      uStack_70 = 0;
-      uStack_6c = (uint)*(ushort *)(iVar7 + 0x1c);
+      stack_pair_70.first = 0;
+      stack_pair_70.second = (uint)*(ushort *)(iVar7 + 0x1c);
       piVar8 = param_1 + 10;
       uStack_64 = 0;
       uStack_68 = 0;
@@ -101,7 +101,7 @@ undefined8 fn_8304E470(int *param_1)
       uStack_5d = 0;
       uStack_80 = (longlong)(int)fVar1;
       uVar6 = (**(code **)(*lbl_83265044 + 0x10))
-                        (lbl_83265044,*(undefined4 *)(iVar7 + 8),&uStack_70,&stack_pair_50.first,0,piVar8,0);
+                        (lbl_83265044,*(undefined4 *)(iVar7 + 8),&stack_pair_70.first,&stack_pair_50.first,0,piVar8,0);
       if ((int)uVar6 != 1) {
         return uVar6;
       }
@@ -135,4 +135,3 @@ LAB_8304e678:
   }
   return uVar6;
 }
-

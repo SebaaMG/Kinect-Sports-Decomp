@@ -47,8 +47,8 @@ undefined8 fn_823B9968(undefined8 param_1,int *param_2,int *param_3,int *param_4
   struct { undefined4 first; undefined4 second; } stack_pair_30;
 
   int iStack_28;
-  undefined4 uStack_20;
-  undefined4 uStack_1c;
+  struct { undefined4 first; undefined4 second; } stack_pair_20;
+
   int iStack_18;
 
   stack_pair_40.first = 0;
@@ -65,13 +65,13 @@ undefined8 fn_823B9968(undefined8 param_1,int *param_2,int *param_3,int *param_4
     stack_pair_30.first = *puVar1;
   }
   iStack_28 = param_3[2];
-  uStack_20 = 0;
-  uStack_1c = 0;
+  stack_pair_20.first = 0;
+  stack_pair_20.second = 0;
   if (((int *)*param_2 != (int *)0x0) &&
      (puVar1 = *(undefined4 **)*param_2, puVar1 != (undefined4 *)0x0)) {
-    uStack_20 = *puVar1;
+    stack_pair_20.first = *puVar1;
   }
   iStack_18 = param_2[2];
-  fn_823BA0F0(param_1,&uStack_20,&stack_pair_30.first,&stack_pair_40.first);
+  fn_823BA0F0(param_1,&stack_pair_20.first,&stack_pair_30.first,&stack_pair_40.first);
   return param_1;
 }

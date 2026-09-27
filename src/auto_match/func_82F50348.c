@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_180;
 extern unsigned int *auStack_1d0;
-extern int fn_82A1DD38();
+extern int fn_824B4298();
 extern int fn_82F4F140();
 extern int fn_82F4F578();
 extern int fn_82F4FBE8();
@@ -62,11 +62,11 @@ void fn_82F50348(int param_1,longlong param_2,longlong param_3,undefined8 param_
   undefined4 uVar18;
   undefined4 auStack_1d0 [18];
   float afStack_188 [2];
-  undefined1 auStack_180 [384];
-  
+  undefined1 auStack_180 [304];
+
   iVar6 = (int)param_3;
   if ((-1 < iVar6) && (iVar6 < 6)) {
-    fn_82A1DD38(param_1 + 0x1e0,param_2,0xab0);
+    fn_824B4298(param_1 + 0x1e0,param_2,0xab0);
     *(int *)(param_1 + 0xc90) = iVar6;
     lVar14 = 0x14;
     lVar12 = 0;
@@ -114,7 +114,7 @@ void fn_82F50348(int param_1,longlong param_2,longlong param_3,undefined8 param_
                       *(undefined4 *)(*(int *)(param_1 + 0xcf0) + 0x1844));
     fn_82F4FC68(param_1,(ulonglong)*(uint *)(param_1 + 0xcf0) + 0x60);
     fn_82F4FBE8(param_1,(ulonglong)*(uint *)(param_1 + 0xcf0) + 0x60);
-    fn_82A1DD38(param_1 + 0x20,lVar12,0x1c0);
+    fn_824B4298(param_1 + 0x20,lVar12,0x1c0);
     lVar14 = 0x14;
     pfVar13 = afStack_188;
     lVar12 = 0;
@@ -145,4 +145,3 @@ void fn_82F50348(int param_1,longlong param_2,longlong param_3,undefined8 param_
   }
   return;
 }
-

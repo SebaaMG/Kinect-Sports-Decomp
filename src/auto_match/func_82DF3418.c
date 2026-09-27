@@ -27,10 +27,10 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_82CE5410();
 extern int fn_82CED628();
-extern int fn_82D94918();
-extern int fn_82D949A8();
-extern int fn_82D94A38();
 extern int fn_82D94AC8();
+extern int fn_82DF2E48();
+extern int fn_82D94A38();
+extern int fn_82D949A8();
 extern int fn_82D94B58();
 extern unsigned int uStack0000001c;
 
@@ -43,7 +43,7 @@ void fn_82DF3418(int param_1,undefined4 param_2)
   longlong lVar2;
   int iVar4;
   undefined4 uStack0000001c;
-  
+
   uStack0000001c = param_2;
   iVar3 = fn_82CE5410();
   iVar3 = (**(code **)(**(int **)(iVar3 + 0x10) + 4))(*(int **)(iVar3 + 0x10),0x44);
@@ -53,7 +53,7 @@ void fn_82DF3418(int param_1,undefined4 param_2)
   if (0 < *(int *)(param_1 + 0xc)) {
     iVar4 = 0;
     do {
-      fn_82D94918(uVar1,*(undefined4 *)(iVar4 + *(int *)(param_1 + 8)));
+      fn_82D94AC8(uVar1,*(undefined4 *)(iVar4 + *(int *)(param_1 + 8)));
       iVar3 = iVar3 + 1;
       iVar4 = iVar4 + 4;
     } while (iVar3 < *(int *)(param_1 + 0xc));
@@ -62,7 +62,7 @@ void fn_82DF3418(int param_1,undefined4 param_2)
   if (0 < *(int *)(param_1 + 0x24)) {
     iVar4 = 0;
     do {
-      fn_82D94AC8(uVar1,*(undefined4 *)(iVar4 + *(int *)(param_1 + 0x20)));
+      fn_82D949A8(uVar1,*(undefined4 *)(iVar4 + *(int *)(param_1 + 0x20)));
       iVar3 = iVar3 + 1;
       iVar4 = iVar4 + 4;
     } while (iVar3 < *(int *)(param_1 + 0x24));
@@ -80,7 +80,7 @@ void fn_82DF3418(int param_1,undefined4 param_2)
   if (0 < *(int *)(param_1 + 0x30)) {
     iVar4 = 0;
     do {
-      fn_82D949A8(uVar1,*(undefined4 *)(*(int *)(param_1 + 0x2c) + iVar4));
+      fn_82DF2E48(uVar1,*(undefined4 *)(*(int *)(param_1 + 0x2c) + iVar4));
       iVar3 = iVar3 + 1;
       iVar4 = iVar4 + 4;
     } while (iVar3 < *(int *)(param_1 + 0x30));
@@ -92,4 +92,3 @@ void fn_82DF3418(int param_1,undefined4 param_2)
                     /* WARNING: Subroutine does not return */
   fn_82CED628(lVar2 + 0x38,0xffffffff821458e0);
 }
-

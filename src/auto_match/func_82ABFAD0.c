@@ -224,11 +224,11 @@ uint fn_82ABFAD0(uint *param_1,uint param_2,undefined8 param_3,undefined4 *param
   int iStack_cc;
   int iStack_c8;
   undefined4 uStack_c4;
-  undefined1 auStack_c0 [8];
+  undefined1 auStack_c0 [1];
   undefined4 uStack_b8;
   undefined4 uStack_b4;
   undefined1 auStack_b0 [176];
-  
+
   if (((param_1[0xb] & 0x10) == 0) || (bVar4 = true, (param_1[0xb] & 0x20) != 0)) {
     bVar4 = false;
   }
@@ -1550,4 +1550,3 @@ LAB_82ac2384:
   param_4[3] = puVar31;
   return uVar10;
 }
-

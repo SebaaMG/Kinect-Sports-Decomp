@@ -26,7 +26,7 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_8251E530();
-extern int fn_825925D8();
+extern int fn_8261C680();
 extern int fn_825A1778();
 extern int fn_825D1EC8();
 extern int fn_8261C680();
@@ -38,14 +38,14 @@ void fn_8261C588(int param_1,int *param_2)
   int iVar1;
   uint uVar2;
   uint uVar3;
-  
+
   iVar1 = *param_2;
   if (iVar1 != 0x17) {
     if (iVar1 == 0x33) {
       uVar2 = *(uint *)(param_1 + 0x4b8);
       *(uint *)(param_1 + 0x4b8) = uVar2 | 4;
       *(uint *)(param_1 + 0x4b8) = uVar2 | 5;
-      fn_825925D8(param_1,param_2);
+      fn_8261C680(param_1,param_2);
       fn_8261C680(param_1,param_2[2]);
     }
     else {
@@ -65,9 +65,8 @@ void fn_8261C588(int param_1,int *param_2)
           }
         }
       }
-      fn_825925D8(param_1,param_2);
+      fn_8261C680(param_1,param_2);
     }
   }
   return;
 }
-

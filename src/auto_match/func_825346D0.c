@@ -29,7 +29,7 @@ extern unsigned int *auStack_50;
 extern int fn_82230040();
 extern int fn_82292780();
 extern int fn_82537040();
-extern int fn_8265C9E0();
+extern int fn_82864898();
 extern int fn_828647A8();
 extern int fn_828647D8();
 extern int fn_82864898();
@@ -49,8 +49,8 @@ undefined8 fn_825346D0(int param_1,int param_2,undefined8 param_3)
   undefined4 *apuStack_68 [2];
   undefined **ppuStack_60;
   undefined4 uStack_5c;
-  undefined1 auStack_50 [80];
-  
+  undefined1 auStack_50 [48];
+
   fn_828648F0(auStack_50,param_3);
   param_1 = param_2 * 0x10 + param_1;
   fn_828647D8(auStack_50);
@@ -77,7 +77,7 @@ undefined8 fn_825346D0(int param_1,int param_2,undefined8 param_3)
   ppuVar4 = apuStack_68;
 LAB_82534778:
   if (*ppuVar4 == *(undefined4 **)(param_1 + 8)) {
-    puVar2 = (undefined4 *)fn_8265C9E0(0x34);
+    puVar2 = (undefined4 *)fn_82864898(0x34);
     if (puVar2 == (undefined4 *)0x0) {
       uStack_5c = 0;
       ppuStack_60 = &lbl_82002B04;
@@ -102,4 +102,3 @@ LAB_82534778:
   }
   return uVar1;
 }
-

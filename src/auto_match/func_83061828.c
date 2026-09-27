@@ -27,16 +27,15 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_60;
 extern unsigned int *auStack_70;
-extern int fn_825ACAC8();
+extern int fn_825AC9E8();
 
 
 void fn_83061828(void)
 
 {
   undefined1 auStack_70 [16];
-  undefined1 auStack_60 [96];
-  
-                    /* WARNING: Subroutine does not return */
-  fn_825ACAC8(auStack_60,auStack_70);
-}
+  undefined1 auStack_60 [80];
 
+                    /* WARNING: Subroutine does not return */
+  fn_825AC9E8(auStack_60,auStack_70);
+}

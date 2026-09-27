@@ -47,15 +47,15 @@ ulonglong fn_83017558(int param_1,ulonglong param_2,ulonglong param_3)
   ulonglong uVar6;
   double dVar7;
   undefined1 auStack_50 [8];
-  float fStack_48;
-  undefined4 uStack_44;
-  
+  struct { float first; undefined4 second; } stack_pair_48;
+
+
   iVar5 = param_1 + 0x720;
   RtlEnterCriticalSection(iVar5);
   for (puVar1 = *(undefined4 **)(param_1 + 0x6e0); puVar1 != (undefined4 *)0x0;
       puVar1 = (undefined4 *)*puVar1) {
     if ((ulonglong)(uint)puVar1[1] == (param_2 & 0xffffffff)) {
-      cVar4 = fn_83017108(param_1,puVar1[2],param_3,&fStack_48,auStack_50);
+      cVar4 = fn_83017108(param_1,puVar1[2],param_3,&stack_pair_48.first,auStack_50);
       if (cVar4 == '\0') {
         pfVar3 = (float *)fn_82FFE0F0(param_1 + 0x61c,puVar1[2]);
         if (pfVar3 == (float *)0x0) {
@@ -66,23 +66,23 @@ ulonglong fn_83017558(int param_1,ulonglong param_2,ulonglong param_3)
         }
       }
       else {
-        dVar7 = (double)fStack_48;
+        dVar7 = (double)stack_pair_48.first;
       }
       uVar6 = fn_830193C8(dVar7,puVar1 + 3);
       RtlLeaveCriticalSection(iVar5);
       return uVar6;
     }
   }
-  uStack_44 = (undefined4)param_3;
-  fStack_48 = (float)param_2;
-  puVar2 = (uint *)fn_83016E90(param_1 + 0x310,CONCAT44(fStack_48,uStack_44),
+  stack_pair_48.second = (undefined4)param_3;
+  stack_pair_48.first = (float)param_2;
+  puVar2 = (uint *)fn_83016E90(param_1 + 0x310,CONCAT44(stack_pair_48.first,stack_pair_48.second),
                                 param_2 + param_3 +
                                 ((param_2 + param_3 & 0xffffffff) / 0xc1) * -0xc1);
   uVar6 = 0;
   if (puVar2 == (uint *)0x0) {
     if ((param_3 & 0xffffffff) == 0) goto LAB_83017614;
-    uStack_44 = 0;
-    puVar2 = (uint *)fn_83016E90(param_1 + 0x310,(ulonglong)(uint)fStack_48 << 0x20,
+    stack_pair_48.second = 0;
+    puVar2 = (uint *)fn_83016E90(param_1 + 0x310,(ulonglong)(uint)stack_pair_48.first << 0x20,
                                   param_2 + ((param_2 & 0xffffffff) / 0xc1) * -0xc1);
     if (puVar2 == (uint *)0x0) goto LAB_83017614;
   }
@@ -91,4 +91,3 @@ LAB_83017614:
   RtlLeaveCriticalSection(iVar5);
   return uVar6;
 }
-

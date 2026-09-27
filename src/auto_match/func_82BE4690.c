@@ -89,8 +89,8 @@ undefined8 fn_82BE4690(int param_1)
   undefined8 uStack_e0;
   undefined4 uStack_d8;
   undefined1 auStack_d0 [8];
-  undefined4 uStack_c8;
-  undefined4 uStack_c4;
+  struct { undefined4 first; undefined4 second; } stack_pair_c8;
+
   undefined4 uStack_c0;
   float fStack_b8;
   float fStack_b4;
@@ -137,20 +137,20 @@ undefined8 fn_82BE4690(int param_1)
         }
         uVar5 = fn_82BEEB88(&uStack_a8,param_1 + 0xac,param_1 + 0xb8);
         dVar13 = (double)lbl_82005344;
-        fn_82BEEB50(dVar13,&uStack_c8,uVar5);
-        uVar9 = fn_82BEA038(&uStack_c8,&uStack_c8);
+        fn_82BEEB50(dVar13,&stack_pair_c8.first,uVar5);
+        uVar9 = fn_82BEA038(&stack_pair_c8.first,&stack_pair_c8.first);
         *(uint *)(param_1 + 0xd4) = (uint)LZCOUNT((uVar9 & 0xffff) - 2) >> 5;
         if (*(int *)(param_1 + 200) != 0) {
           fn_82BA02A8(&stack_pair_80.first);
           fn_82BA02A8(&stack_pair_74.first);
           fn_82BA02A8(&uStack_68);
-          uVar5 = fn_82BEEB88(auStack_98,param_1 + 0x7c,&uStack_c8);
+          uVar5 = fn_82BEEB88(auStack_98,param_1 + 0x7c,&stack_pair_c8.first);
           fn_82BEEB50(dVar13,&uStack_e0,uVar5);
-          uVar5 = fn_82BEEB88(auStack_98,param_1 + 0x94,&uStack_c8);
+          uVar5 = fn_82BEEB88(auStack_98,param_1 + 0x94,&stack_pair_c8.first);
           fn_82BEEB50(dVar13,&uStack_a8,uVar5);
           uStack_5c = *(undefined4 *)(param_1 + 0xcc);
-          stack_pair_74.first = uStack_c8;
-          stack_pair_74.second = uStack_c4;
+          stack_pair_74.first = stack_pair_c8.first;
+          stack_pair_74.second = stack_pair_c8.second;
           uStack_6c = uStack_c0;
           stack_pair_80.first = (((U64)(uStack_e0) >> 0) & 0xFFFFFFFF);
           stack_pair_80.second = (((U64)(uStack_e0) >> 32) & 0xFFFFFFFF);
@@ -213,7 +213,7 @@ undefined8 fn_82BE4690(int param_1)
         uVar3 = fn_82BE9300();
         iVar7 = fn_82BE93B0();
         if (((uVar3 & 0xffffffff) != 0) && (iVar7 != 0)) {
-          fn_82BEEB18(&fStack_b8,&uStack_c8,uVar3);
+          fn_82BEEB18(&fStack_b8,&stack_pair_c8.first,uVar3);
           fn_82BEEC00(&fStack_b8);
           *(float *)(param_1 + 0xd8) =
                -(*(float *)(param_1 + 0x70) * fStack_b8 +

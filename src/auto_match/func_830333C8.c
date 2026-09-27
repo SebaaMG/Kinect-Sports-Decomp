@@ -44,8 +44,8 @@ undefined8 fn_830333C8(int param_1,undefined8 param_2,undefined8 param_3)
   ulonglong uVar6;
   bool bVar7;
   undefined2 auStack_50 [2];
-  undefined1 auStack_4c [76];
-  
+  undefined1 auStack_4c [1];
+
   iVar1 = *(int *)(param_1 + 0x34);
   if (iVar1 != 0) {
     if (*(int *)(iVar1 + 8) != *(int *)(iVar1 + 4)) {
@@ -104,4 +104,3 @@ undefined8 fn_830333C8(int param_1,undefined8 param_2,undefined8 param_3)
   }
   return 1;
 }
-

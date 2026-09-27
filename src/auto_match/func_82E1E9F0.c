@@ -28,8 +28,8 @@ typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_40;
 extern int fn_8265CA60();
 extern int fn_8265CAA0();
-extern int fn_82E1E6E0();
 extern int fn_82E1E768();
+extern int fn_82E1E6E0();
 extern int fn_82E21B90();
 extern int fn_82E21BA0();
 extern int fn_82E21BB0();
@@ -42,8 +42,8 @@ void fn_82E1E9F0(int param_1,ulonglong param_2,undefined8 param_3)
   int *piVar1;
   undefined8 uVar2;
   ulonglong uVar3;
-  undefined1 auStack_40 [64];
-  
+  undefined1 auStack_40 [16];
+
   uVar3 = 0;
   if (**(char **)(param_1 + 0x54) != '\0') {
     fn_82E21B90(auStack_40);
@@ -58,14 +58,13 @@ void fn_82E1E9F0(int param_1,ulonglong param_2,undefined8 param_3)
     (**(code **)(*piVar1 + 0x10))(piVar1,param_2,param_3);
   }
   if (*(char *)(param_1 + 0xf) == '\0') {
-    fn_82E1E6E0(param_1,param_2,param_3);
+    fn_82E1E768(param_1,param_2,param_3);
   }
   else {
-    fn_82E1E768();
+    fn_82E1E6E0();
   }
   if ((uVar3 & 0xffffffff) != 0) {
     fn_8265CAA0(uVar3);
   }
   return;
 }
-

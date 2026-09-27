@@ -30,8 +30,8 @@ extern int fn_82636758();
 extern int fn_828F5688();
 extern int fn_829370D8();
 extern int fn_82A9A228();
-extern int fn_82A9F198();
-extern int fn_82F691F0();
+extern int fn_82A9F7D8();
+extern int memset();
 
 
 undefined8
@@ -42,8 +42,8 @@ fn_8293F5D8(int *param_1,undefined8 param_2,int param_3,ulonglong param_4,int pa
   uint uVar1;
   int iVar2;
   ulonglong uVar3;
-  undefined1 auStack_c20 [3104];
-  
+  undefined1 auStack_c20 [3088];
+
   param_1[1] = (int)param_2;
   fn_828F5688(param_2,0);
   if (param_5 == 0) {
@@ -108,10 +108,9 @@ fn_8293F5D8(int *param_1,undefined8 param_2,int param_3,ulonglong param_4,int pa
       if (param_1[0x10] != 1) {
         uVar3 = 0xfffffffffffe0000;
       }
-      fn_82A9F198(param_1[0x4f],0,uVar3 | 0x3fd);
+      fn_82A9F7D8(param_1[0x4f],0,uVar3 | 0x3fd);
     }
   }
                     /* WARNING: Subroutine does not return */
-  fn_82F691F0(auStack_c20,0,0xbdc);
+  memset(auStack_c20,0,0xbdc);
 }
-

@@ -26,9 +26,9 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_30;
-extern int fn_82230110();
 extern int fn_82230180();
-extern int fn_82240378();
+extern int fn_82230180();
+extern int fn_82230110();
 extern int fn_82240D80();
 extern int fn_8265F210();
 extern unsigned int uStack00000014;
@@ -43,21 +43,20 @@ undefined4 fn_8265F4B8(undefined4 param_1,undefined4 param_2,undefined4 param_3)
   undefined4 uStack00000014;
   undefined4 uStack0000001c;
   undefined4 uStack00000024;
-  undefined1 auStack_30 [48];
-  
+  undefined1 auStack_30 [16];
+
   uStack00000014 = param_1;
   uStack0000001c = param_2;
   uStack00000024 = param_3;
   fn_82240D80(auStack_30);
   cVar1 = fn_8265F210(0xffffffff831e7a30,uStack0000001c,uStack00000024,auStack_30);
   if (cVar1 == '\0') {
-    fn_82230110(uStack00000014,0xffffffff82196582);
+    fn_82230180(uStack00000014,0xffffffff82196582);
     fn_82230180(auStack_30);
   }
   else {
-    fn_82240378(uStack00000014,auStack_30);
+    fn_82230110(uStack00000014,auStack_30);
     fn_82230180(auStack_30);
   }
   return uStack00000014;
 }
-

@@ -87,8 +87,8 @@ undefined8 fn_82B27568(int param_1,int param_2,undefined8 param_3)
   double extraout_f1;
   undefined4 uStack_d0;
   undefined4 uStack_cc;
-  int iStack_c8;
-  uint uStack_c4;
+  struct { int first; uint second; } stack_pair_c8;
+
   int iStack_c0;
   struct { int first; uint second; } stack_pair_b8;
 
@@ -126,14 +126,14 @@ LAB_82b275b4:
                                         *(undefined4 *)(uVar16 + 0x14),param_3);
           fn_82B25038(param_1,piVar9);
           iStack_c0 = 0;
-          uStack_c4 = -(uint)((*(uint *)(param_2 + 4) & 1) == 0) & *(uint *)(param_2 + 4);
-          iStack_c8 = param_2;
+          stack_pair_c8.second = -(uint)((*(uint *)(param_2 + 4) & 1) == 0) & *(uint *)(param_2 + 4);
+          stack_pair_c8.first = param_2;
           while( true ) {
-            if ((uStack_c4 == 0) || (bVar5 = false, iStack_c0 == *(int *)(uStack_c4 + 8))) {
+            if ((stack_pair_c8.second == 0) || (bVar5 = false, iStack_c0 == *(int *)(stack_pair_c8.second + 8))) {
               bVar5 = true;
             }
             if (bVar5) break;
-            puVar8 = (undefined4 *)fn_82ACB180(&iStack_c8);
+            puVar8 = (undefined4 *)fn_82ACB180(&stack_pair_c8.first);
             piVar2 = (int *)*puVar8;
             if (piVar2 != piVar1) {
               fn_82B25038(param_1,piVar2);

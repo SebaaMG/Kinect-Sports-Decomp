@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_82FA6EF8();
 extern int fn_82FA6FB0();
-extern int fn_82FA7040();
+extern int fn_82FA6EF8();
 extern int fn_82FB01E8();
 extern unsigned int lbl_83264230;
 
@@ -36,7 +36,7 @@ void fn_82FAF930(undefined8 param_1,uint *param_2)
 
 {
   uint uVar1;
-  
+
   uVar1 = *param_2;
   if (uVar1 == 0) {
     fn_82FA6EF8(lbl_83264230,param_1,param_2[1],param_2 + 3,param_2[2]);
@@ -45,9 +45,8 @@ void fn_82FAF930(undefined8 param_1,uint *param_2)
     fn_82FA6FB0(lbl_83264230,param_1,param_2[1],param_2 + 3);
   }
   else if (uVar1 < 3) {
-    fn_82FA7040(lbl_83264230,param_1,param_2[1],param_2 + 3,*(undefined1 *)((int)param_2 + 0x16));
+    fn_82FA6EF8(lbl_83264230,param_1,param_2[1],param_2 + 3,*(undefined1 *)((int)param_2 + 0x16));
   }
   fn_82FB01E8(param_1,param_2);
   return;
 }
-

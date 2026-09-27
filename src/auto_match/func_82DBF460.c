@@ -36,9 +36,9 @@ extern int fn_82DBEF90();
 extern int fn_82DBF000();
 extern int fn_82DBF070();
 extern int fn_82DBF0E0();
-extern int fn_82DBF150();
 extern int fn_82DBF1C0();
-extern int fn_82DBF230();
+extern int fn_82DBF2A0();
+extern int fn_82DBF380();
 extern int fn_82DBF2A0();
 extern int fn_82DBF310();
 extern int fn_82DBF380();
@@ -53,7 +53,7 @@ int fn_82DBF460(int *param_1)
   undefined8 uVar2;
   int iVar5;
   ulonglong uVar3;
-  
+
   uVar4 = (**(code **)(*param_1 + 0x20))();
   switch(uVar4) {
   case 0:
@@ -78,13 +78,13 @@ int fn_82DBF460(int *param_1)
     iVar5 = fn_82DBF0E0(param_1);
     break;
   case 7:
-    iVar5 = fn_82DBF150(param_1);
-    break;
-  case 8:
     iVar5 = fn_82DBF1C0(param_1);
     break;
+  case 8:
+    iVar5 = fn_82DBF2A0(param_1);
+    break;
   case 9:
-    iVar5 = fn_82DBF230(param_1);
+    iVar5 = fn_82DBF380(param_1);
     break;
   case 0xc:
     uVar3 = fn_82DBF460(param_1[6]);
@@ -131,4 +131,3 @@ LAB_82dbf6cc:
   }
   return iVar5;
 }
-

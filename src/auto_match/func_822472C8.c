@@ -33,7 +33,7 @@ extern int fn_828A1C20();
 extern int fn_828A1C28();
 extern int fn_828ACCE8();
 extern int fn_828AD740();
-extern int fn_828B0348();
+extern int fn_82247890();
 
 
 void fn_822472C8(int *param_1,int param_2)
@@ -44,7 +44,7 @@ void fn_822472C8(int *param_1,int param_2)
   longlong lVar2;
   undefined4 uVar3;
   int iVar4;
-  
+
   cVar5 = fn_828ACCE8(param_1[4]);
   if (cVar5 == '\0') {
 LAB_82247304:
@@ -91,8 +91,7 @@ LAB_82247304:
   bVar1 = false;
 LAB_822473ac:
   if (bVar1) {
-    fn_828B0348(param_1[4]);
+    fn_82247890(param_1[4]);
   }
   return;
 }
-

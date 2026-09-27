@@ -28,7 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 extern int fn_82250A18();
 extern int fn_8226FE40();
 extern int fn_82354750();
-extern int fn_82354840();
+extern int fn_82354750();
 extern int fn_82356690();
 extern int fn_8249ABC0();
 extern int fn_82512C30();
@@ -43,7 +43,7 @@ void fn_82350688(int param_1,undefined8 param_2)
   int *piVar1;
   int iVar2;
   double dVar3;
-  
+
   piVar1 = (int *)fn_82512C30();
   if (*piVar1 == 0) {
     iVar2 = fn_8249ABC0();
@@ -77,7 +77,7 @@ void fn_82350688(int param_1,undefined8 param_2)
         }
       }
       else if (iVar2 == 0x10) {
-        fn_82354840(param_1);
+        fn_82354750(param_1);
       }
       if (*(int **)(param_1 + 0x18) != (int *)0x0) {
         (**(code **)(**(int **)(param_1 + 0x18) + 0x40))(dVar3);
@@ -88,4 +88,3 @@ void fn_82350688(int param_1,undefined8 param_2)
   }
   return;
 }
-

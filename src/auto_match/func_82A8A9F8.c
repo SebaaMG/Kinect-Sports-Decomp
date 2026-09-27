@@ -30,7 +30,7 @@ extern unsigned int *auStack_c0;
 extern unsigned int *auStack_f8;
 extern int fn_82A86F50();
 extern int fn_82A8C620();
-extern int fn_82F691F0();
+extern int fn_82A8CF10();
 extern unsigned int iStack_100;
 extern unsigned int iStack_fc;
 
@@ -41,10 +41,10 @@ undefined8 fn_82A8A9F8(int param_1,int *param_2)
   char cVar1;
   int iStack_100;
   int iStack_fc;
-  undefined1 auStack_f8 [56];
+  undefined1 auStack_f8 [8];
   undefined1 auStack_c0 [48];
   undefined1 auStack_90 [144];
-  
+
   cVar1 = (**(code **)(*param_2 + 4))(param_2);
   if ((cVar1 != '\0') &&
      (cVar1 = (**(code **)(*param_2 + 0x10))(param_2,auStack_90,0x21,auStack_f8), cVar1 != '\0')) {
@@ -61,8 +61,7 @@ undefined8 fn_82A8A9F8(int param_1,int *param_2)
     *(int *)(param_1 + 0x1f8) = *(int *)(param_1 + 0x200) + iStack_100;
     *(int *)(param_1 + 0x1fc) = *(int *)(param_1 + 0x200) + iStack_fc;
                     /* WARNING: Subroutine does not return */
-    fn_82F691F0(param_1 + 4,0,0x1e0);
+    fn_82A8CF10(param_1 + 4,0,0x1e0);
   }
   return 0;
 }
-

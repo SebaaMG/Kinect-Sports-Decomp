@@ -25,7 +25,7 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_828114A8();
+extern int fn_82811500();
 extern int fn_82811500();
 
 
@@ -40,7 +40,7 @@ void fn_82802488(int param_1,int param_2,undefined8 param_3,int param_4)
   longlong lVar6;
   ulonglong uVar7;
   uint uVar8;
-  
+
   uVar8 = 0;
   lVar6 = 0;
   uVar7 = 0;
@@ -54,7 +54,7 @@ void fn_82802488(int param_1,int param_2,undefined8 param_3,int param_4)
             uVar2 = (*(uint *)((uVar8 >> 3 & 0x1ffffffc) + param_2 + 0x10) & 3 << (uVar8 & 0x1f)) >>
                     (uVar8 & 0x1f);
             if ((uVar2 == 2) || (uVar2 == 3)) {
-              fn_828114A8(param_3,lVar6);
+              fn_82811500(param_3,lVar6);
             }
             else {
               fn_82811500(param_3,lVar6);
@@ -82,7 +82,7 @@ void fn_82802488(int param_1,int param_2,undefined8 param_3,int param_4)
               uVar8 = uVar8 + 2;
             } while (uVar4 < *(ushort *)(param_2 + 10));
             if (bVar3) {
-              fn_828114A8(param_3,uVar7);
+              fn_82811500(param_3,uVar7);
               goto LAB_828025d8;
             }
           }
@@ -97,4 +97,3 @@ LAB_828025d8:
   }
   return;
 }
-

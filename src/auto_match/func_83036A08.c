@@ -27,12 +27,12 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_3a0;
 extern int fn_82FA5060();
-extern int fn_82FA5190();
+extern int fn_83024B20();
 extern int fn_82FEF8A0();
 extern int fn_82FEFD50();
 extern int fn_83022408();
-extern int fn_830224E8();
-extern int fn_83024B20();
+extern int fn_83024E30();
+extern int fn_82FA5190();
 extern int fn_83024C50();
 extern int fn_83024E30();
 extern int fn_83027798();
@@ -68,8 +68,8 @@ void fn_83036A08(int *param_1,int param_2,uint param_3)
   undefined2 uStack_3c2;
   undefined2 uStack_3c0;
   undefined4 uStack_3bc;
-  undefined1 auStack_3a0 [848];
-  
+  undefined1 auStack_3a0 [832];
+
   iVar3 = *(int *)(*(int *)(param_2 + 4) + 0x14);
   if (iVar3 == 0) {
     uVar11 = 0;
@@ -122,7 +122,7 @@ LAB_83036be4:
             else {
               if (*puVar12 != 0) {
 LAB_83036bd8:
-                fn_83024B20(*puVar12,&stack_pair_3d0.first);
+                fn_82FA5190(*puVar12,&stack_pair_3d0.first);
                 goto LAB_83036be4;
               }
               puVar5 = (undefined4 *)fn_82FA5060(lbl_831BC770,0x180);
@@ -138,8 +138,8 @@ LAB_83036bd8:
                     fn_83024E30(*puVar12);
                     goto LAB_83036bd8;
                   }
-                  fn_830224E8((ulonglong)*puVar12 + 0x80);
-                  fn_82FA5190(lbl_831BC770,*puVar12);
+                  fn_83024E30((ulonglong)*puVar12 + 0x80);
+                  fn_83024B20(lbl_831BC770,*puVar12);
                   *puVar12 = 0;
                 }
               }
@@ -154,4 +154,3 @@ LAB_83036bd8:
   fn_83027798(iVar3);
   return;
 }
-

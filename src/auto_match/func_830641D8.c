@@ -81,8 +81,8 @@ void fn_830641D8(int param_1,int param_2,ulonglong param_3,code *param_4,undefin
 
   undefined4 uStack_128;
   undefined4 *puStack_120;
-  undefined4 uStack_110;
-  undefined4 uStack_10c;
+  struct { undefined4 first; undefined4 second; } stack_pair_110;
+
   undefined4 uStack_108;
   undefined4 *puStack_100;
   undefined1 auStack_f8 [1];
@@ -90,8 +90,8 @@ void fn_830641D8(int param_1,int param_2,ulonglong param_3,code *param_4,undefin
   undefined1 auStack_d8 [16];
   undefined1 auStack_c8 [24];
   undefined1 auStack_b0 [32];
-  undefined1 auStack_90 [144];
-  
+  undefined1 auStack_90 [80];
+
   cVar6 = fn_83068418(param_2);
   if (cVar6 != '\0') {
     if ((param_4 != (code *)0x0) &&
@@ -102,8 +102,8 @@ void fn_830641D8(int param_1,int param_2,ulonglong param_3,code *param_4,undefin
     stack_pair_130.second = 0;
     uStack_128 = 0;
     puStack_120 = (undefined4 *)0x0;
-    uStack_110 = 0;
-    uStack_10c = 0;
+    stack_pair_110.first = 0;
+    stack_pair_110.second = 0;
     uStack_108 = 0;
     puStack_100 = (undefined4 *)0x0;
     if (((*(uint *)(param_1 + 0xc) & 4) != 0) && (*(code **)(param_1 + 4) != (code *)0x0)) {
@@ -111,13 +111,13 @@ void fn_830641D8(int param_1,int param_2,ulonglong param_3,code *param_4,undefin
                 (param_1,*(undefined4 *)(param_1 + 8),*(uint *)(param_1 + 0xc) & 4,param_2);
     }
     fn_8305D7D0(param_3,param_2 + 0x10);
-    fn_83064008(param_1,param_2 + 0x10,param_2 + 0x44,&stack_pair_130.first,&uStack_110);
+    fn_83064008(param_1,param_2 + 0x10,param_2 + 0x44,&stack_pair_130.first,&stack_pair_110.first);
     iVar4 = fn_83065E70();
     *(int *)(iVar4 + 0x2c) = param_2;
     fn_83068358(iVar4 + 0x44,&stack_pair_130.first);
     iVar5 = fn_83065E70();
     *(int *)(iVar5 + 0x2c) = param_2;
-    fn_83068358(iVar5 + 0x44,&uStack_110);
+    fn_83068358(iVar5 + 0x44,&stack_pair_110.first);
     *(int *)(param_2 + 0x30) = iVar4;
     *(int *)(param_2 + 0x34) = iVar5;
     if (((*(uint *)(param_1 + 0xc) & 1) != 0) && (*(code **)(param_1 + 4) != (code *)0x0)) {
@@ -242,4 +242,3 @@ LAB_83064654:
   }
   return;
 }
-

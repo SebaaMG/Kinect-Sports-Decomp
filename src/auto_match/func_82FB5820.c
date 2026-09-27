@@ -115,8 +115,8 @@ void fn_82FB5820(int param_1,undefined8 param_2,undefined8 param_3,int *param_4)
   undefined4 uStack_104;
   undefined4 uStack_100;
   undefined4 uStack_fc;
-  undefined4 uStack_f8;
-  undefined4 uStack_f4;
+  struct { undefined4 first; undefined4 second; } stack_pair_f8;
+
   undefined4 uStack_f0;
   undefined4 uStack_ec;
   ushort uStack_e4;
@@ -127,7 +127,7 @@ void fn_82FB5820(int param_1,undefined8 param_2,undefined8 param_3,int *param_4)
   undefined4 uStack_c0;
   uint auStack_bc [6];
   ushort uStack_a4;
-  
+
   fn_82FA9648(&uStack_170,*(undefined4 *)(param_1 + 0x38));
   if (piStack_16c == (int *)0x0) {
     (**(code **)(*(int *)(*param_4 + 4) + 4))(*param_4 + 4,0);
@@ -176,12 +176,12 @@ LAB_82fb5c20:
       uStack_fc = *(undefined4 *)(iVar4 + 0x14);
       iVar5 = *(int *)(iVar4 + 0x30);
       uStack_e0 = 0;
-      uStack_f8 = *(undefined4 *)(iVar5 + 4);
-      uStack_f4 = *(undefined4 *)(iVar5 + 8);
+      stack_pair_f8.first = *(undefined4 *)(iVar5 + 4);
+      stack_pair_f8.second = *(undefined4 *)(iVar5 + 8);
       uStack_f0 = *(undefined4 *)(iVar5 + 0xc);
       uStack_ec = 0;
       uStack_e4 = (ushort)((uint)*(undefined4 *)(iVar5 + 0x1c) >> 0x1f) << 0xc | uStack_e4 & 0xfff;
-      iVar5 = fn_82FABE28(piVar6,&uStack_f8,0,&iStack_144);
+      iVar5 = fn_82FABE28(piVar6,&stack_pair_f8.first,0,&iStack_144);
       if (iVar5 != 1) goto LAB_82fb5c24;
       (**(code **)(*piVar6 + 0x20))(piVar6);
       iVar5 = fn_82FAE168();
@@ -286,4 +286,3 @@ LAB_82fb5c5c:
   }
   return;
 }
-

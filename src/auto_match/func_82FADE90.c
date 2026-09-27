@@ -36,20 +36,19 @@ undefined8 fn_82FADE90(int *param_1,int param_2)
 {
   ulonglong uVar1;
   undefined8 uVar2;
-  int aiStack_30 [2];
+  int aiStack_30;
   struct { undefined4 first; undefined4 second; } stack_pair_28;
 
   undefined4 uStack_20;
-  
+
   uVar1 = (**(code **)(*param_1 + 0x160))
-                    (param_1,0,*(undefined4 *)(param_2 + 8),param_2 + 0x10,aiStack_30);
+                    (param_1,0,*(undefined4 *)(param_2 + 8),param_2 + 0x10,&aiStack_30);
   if ((uVar1 & 0xffffffff) != 0) {
     stack_pair_28.first = **(undefined4 **)(param_2 + 0xc);
     stack_pair_28.second = (*(undefined4 **)(param_2 + 0xc))[1];
-    uStack_20 = *(undefined4 *)(*(int *)(aiStack_30[0] + 0x40) + 0x68);
+    uStack_20 = *(undefined4 *)(*(int *)(aiStack_30 + 0x40) + 0x68);
     uVar2 = fn_82FA8948(uVar1,&stack_pair_28.first,0);
     return uVar2;
   }
   return 2;
 }
-

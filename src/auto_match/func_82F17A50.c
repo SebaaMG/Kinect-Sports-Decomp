@@ -32,8 +32,7 @@ extern int fn_82F17960();
 extern int fn_82F68CC0();
 
 
-int * fn_82F17A50(int *param_1,int param_2,int param_3,int param_4,int param_5,int param_6,
-                   int param_7,int param_8)
+int * fn_82F17A50(int *param_1, int param_2, int param_3, int param_4, int param_5, int param_6, int param_7, int param_8, int in_stack_00000054, undefined4 in_stack_0000005c, int in_stack_00000064, int in_stack_0000006c, int in_stack_00000074, undefined4 in_stack_0000007c)
 
 {
   uint uVar1;
@@ -43,13 +42,13 @@ int * fn_82F17A50(int *param_1,int param_2,int param_3,int param_4,int param_5,i
   longlong lVar5;
   ulonglong uVar6;
   int iVar7;
-  int in_stack_00000054;
-  undefined4 in_stack_0000005c;
-  int in_stack_00000064;
-  int in_stack_0000006c;
-  int in_stack_00000074;
-  undefined4 in_stack_0000007c;
-  
+
+
+
+
+
+
+
   if ((((((param_4 < 0) || (param_5 < 0)) || (param_8 < 0)) ||
        (((in_stack_00000054 < 0 || (param_6 < 0)) ||
         ((param_7 < 0 ||
@@ -133,4 +132,3 @@ int * fn_82F17A50(int *param_1,int param_2,int param_3,int param_4,int param_5,i
   }
   return (int *)0x0;
 }
-

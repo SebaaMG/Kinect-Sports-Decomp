@@ -27,12 +27,12 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_8265C990();
 extern int fn_82ABDF50();
-extern int fn_82ABE8C8();
+extern int fn_82ABDF50();
 extern int fn_82B462A8();
 extern int fn_82B46770();
-extern int fn_82F65AC0();
-extern int fn_82F68CC0();
-extern int fn_82F691F0();
+extern int stricmp();
+extern int memcpy();
+extern int memset();
 
 
 longlong fn_82B84FB0(int param_1,uint param_2,ulonglong param_3,ulonglong param_4)
@@ -52,7 +52,7 @@ longlong fn_82B84FB0(int param_1,uint param_2,ulonglong param_3,ulonglong param_
   longlong lVar12;
   uint *puVar13;
   int iVar14;
-  
+
   uVar5 = *(uint *)(param_1 + 0x14);
   lVar10 = (ulonglong)uVar5 + 1;
   uVar7 = lVar10 * 0x28;
@@ -65,7 +65,7 @@ longlong fn_82B84FB0(int param_1,uint param_2,ulonglong param_3,ulonglong param_
       if (puVar2 != (undefined4 *)0x0) {
         *(undefined4 *)(iVar6 + iVar14) = *puVar2;
                     /* WARNING: Subroutine does not return */
-        fn_82F691F0(puVar2,0,uVar7);
+        memset(puVar2,0,uVar7);
       }
       uVar3 = fn_82ABDF50(iVar14);
     }
@@ -74,10 +74,10 @@ longlong fn_82B84FB0(int param_1,uint param_2,ulonglong param_3,ulonglong param_
     }
   }
   else {
-    uVar3 = fn_82ABE8C8(iVar14);
+    uVar3 = fn_82ABDF50(iVar14);
   }
   lVar12 = (ulonglong)uVar5 * 0x28 + uVar3;
-  fn_82F68CC0(uVar3,*(undefined4 *)(param_1 + 0xc));
+  memcpy(uVar3,*(undefined4 *)(param_1 + 0xc));
   puVar2 = *(undefined4 **)(param_1 + 0xc);
   uVar5 = *(int *)(param_1 + 0x14) * 0x28;
   if (uVar5 < 0x85) {
@@ -107,7 +107,7 @@ longlong fn_82B84FB0(int param_1,uint param_2,ulonglong param_3,ulonglong param_
       if (puVar2 != (undefined4 *)0x0) {
         *(undefined4 *)(iVar6 + iVar14) = *puVar2;
                     /* WARNING: Subroutine does not return */
-        fn_82F691F0(puVar2,0,uVar7);
+        memset(puVar2,0,uVar7);
       }
       uVar5 = fn_82ABDF50(iVar14);
     }
@@ -116,7 +116,7 @@ longlong fn_82B84FB0(int param_1,uint param_2,ulonglong param_3,ulonglong param_
     }
   }
   else {
-    uVar5 = fn_82ABE8C8(iVar14);
+    uVar5 = fn_82ABDF50(iVar14);
   }
   puVar13[7] = uVar5;
   if ((param_4 & 0xffffffff) == 0) {
@@ -132,7 +132,7 @@ longlong fn_82B84FB0(int param_1,uint param_2,ulonglong param_3,ulonglong param_
         return lVar12;
       }
       uVar4 = fn_82B462A8(param_1,uVar3);
-      iVar6 = fn_82F65AC0(uVar4,uVar7);
+      iVar6 = stricmp(uVar4,uVar7);
       uVar8 = uVar7;
       if (iVar6 == 0) break;
       uVar3 = uVar3 + 1;
@@ -150,7 +150,7 @@ longlong fn_82B84FB0(int param_1,uint param_2,ulonglong param_3,ulonglong param_
         if (puVar2 != (undefined4 *)0x0) {
           *(undefined4 *)(iVar6 + iVar14) = *puVar2;
                     /* WARNING: Subroutine does not return */
-          fn_82F691F0(puVar2,0,uVar3);
+          memset(puVar2,0,uVar3);
         }
         param_4 = fn_82ABDF50(iVar14);
       }
@@ -159,7 +159,7 @@ longlong fn_82B84FB0(int param_1,uint param_2,ulonglong param_3,ulonglong param_
       }
     }
     else {
-      param_4 = fn_82ABE8C8(iVar14);
+      param_4 = fn_82ABDF50(iVar14);
     }
     iVar6 = (int)uVar7;
     *(undefined1 *)param_4 = 0x24;
@@ -170,4 +170,3 @@ longlong fn_82B84FB0(int param_1,uint param_2,ulonglong param_3,ulonglong param_
     } while (cVar1 != '\0');
   } while( true );
 }
-

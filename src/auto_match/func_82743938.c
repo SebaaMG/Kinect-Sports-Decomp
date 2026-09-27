@@ -68,7 +68,7 @@ void fn_82743938(int param_1)
   undefined1 auStack_60 [16];
   undefined1 auStack_50 [16];
   undefined1 auStack_40 [16];
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
 
   fn_826BC950();
   fn_82681898(*(undefined4 *)(param_1 + 4));

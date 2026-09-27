@@ -30,7 +30,7 @@ extern unsigned int *auStack_40;
 extern int fn_83015740();
 extern int fn_8301E4B8();
 extern int fn_830251B0();
-extern int fn_830251D0();
+extern int fn_8301E4B8();
 extern unsigned int lbl_83264300;
 extern unsigned int uStack_44;
 
@@ -49,15 +49,15 @@ void fn_83024E30(int param_1)
   undefined1 in_vs39 [16];
   undefined4 in_register_000103f0;
   undefined4 uStack_44;
-  undefined1 auStack_40 [16];
+  undefined1 auStack_40 [1];
   undefined1 auStack_30 [48];
-  
+
   if (*(int *)(param_1 + 0x74) != 1) {
     dVar6 = (double)fn_830251B0(param_1 + 0x70);
     *(float *)(param_1 + 0x14) = (float)dVar6;
     dVar6 = (double)fn_8301E4B8();
     *(float *)(param_1 + 4) = (float)dVar6;
-    dVar6 = (double)fn_830251D0(param_1 + 0x70);
+    dVar6 = (double)fn_8301E4B8(param_1 + 0x70);
     *(float *)(param_1 + 0x18) = (float)dVar6;
     dVar6 = (double)fn_8301E4B8();
     *(float *)(param_1 + 0x10) = (float)dVar6;
@@ -101,4 +101,3 @@ void fn_83024E30(int param_1)
   *(int *)(param_1 + 0x170) = *(int *)(param_1 + 0x170) + 1;
   return;
 }
-

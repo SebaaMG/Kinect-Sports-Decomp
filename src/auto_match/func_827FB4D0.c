@@ -27,20 +27,19 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_74;
 extern unsigned int *auStack_7c;
+extern int fn_8280D8E0();
+extern int fn_828116B8();
 extern int fn_827F6950();
-extern int fn_827F6960();
-extern int fn_827F7210();
 
 
 void fn_827FB4D0(undefined8 param_1,undefined8 param_2)
 
 {
   undefined1 auStack_7c [8];
-  undefined1 auStack_74 [116];
-  
-  fn_827F7210(param_1);
-  fn_827F6960(param_2,auStack_74);
-                    /* WARNING: Subroutine does not return */
-  fn_827F6950(param_1,auStack_7c);
-}
+  undefined1 auStack_74 [84];
 
+  fn_827F6950(param_1);
+  fn_828116B8(param_2,auStack_74);
+                    /* WARNING: Subroutine does not return */
+  fn_8280D8E0(param_1,auStack_7c);
+}

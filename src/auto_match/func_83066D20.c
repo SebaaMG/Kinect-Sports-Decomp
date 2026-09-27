@@ -43,8 +43,8 @@ undefined8 fn_83066D20(longlong param_1,undefined8 param_2,undefined8 param_3,in
   double dVar2;
   double dVar3;
   undefined1 auStack_50 [1];
-  undefined1 auStack_40 [64];
-  
+  undefined1 auStack_40 [16];
+
   dVar2 = (double)fn_82810280(param_3,param_1);
   fn_82810B78(param_3,auStack_50);
   fn_82810280(auStack_50,param_1);
@@ -63,4 +63,3 @@ undefined8 fn_83066D20(longlong param_1,undefined8 param_2,undefined8 param_3,in
   }
   return uVar1;
 }
-

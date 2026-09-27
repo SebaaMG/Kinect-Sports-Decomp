@@ -105,8 +105,8 @@ fn_82DF7D90(int param_1,int param_2,int param_3,int param_4,undefined8 param_5,i
   struct { int first; uint second; } stack_pair_31c0;
 
   uint uStack_31b8;
-  int iStack_31b0;
-  int iStack_31ac;
+  struct { int first; int second; } stack_pair_31b0;
+
   int iStack_31a8;
   int iStack_31a4;
   undefined4 uStack_31a0;
@@ -142,7 +142,7 @@ fn_82DF7D90(int param_1,int param_2,int param_3,int param_4,undefined8 param_5,i
   float fStack_f0;
   float fStack_d0;
   float fStack_cc;
-  
+
   uVar10 = (ulonglong)*(uint *)(param_3 + 0xcc);
   piVar5 = *(int **)(param_6 + 8);
   uVar11 = uVar10;
@@ -252,18 +252,18 @@ fn_82DF7D90(int param_1,int param_2,int param_3,int param_4,undefined8 param_5,i
       *(undefined2 *)(piVar5[0x1d] + 0x10) = *(undefined2 *)(piVar5[0xf] + 2);
       uVar4 = *(ushort *)(piVar5[0xf] + 4);
       iStack_31a8 = uVar4 + 2;
-      iStack_31b0 = ((int)(uint)uVar4 >> 1) * 0x70 + ((uVar4 & 1) + (uVar4 & 1) * 2) * 0x10;
+      stack_pair_31b0.first = ((int)(uint)uVar4 >> 1) * 0x70 + ((uVar4 & 1) + (uVar4 & 1) * 2) * 0x10;
       iStack_31a4 = uVar4 + 3;
-      iStack_31ac = iStack_31b0 + 0x80;
-      iStack_31b0 = iStack_31b0 + 0xa0;
+      stack_pair_31b0.second = stack_pair_31b0.first + 0x80;
+      stack_pair_31b0.first = stack_pair_31b0.first + 0xa0;
       if (1 < uVar4) {
         iStack_31a8 = uVar4 + 3;
         iStack_31a4 = uVar4 + 4;
-        iStack_31ac = iStack_31b0;
+        stack_pair_31b0.second = stack_pair_31b0.first;
       }
       fn_82D92F30(*(undefined4 *)
                     (*(int *)((*(byte *)(piVar5[0x1d] + 0x1a) + 1) * 4 + piVar5[0x1d]) + 0xcc),
-                   piVar5 + 0x11,&iStack_31b0);
+                   piVar5 + 0x11,&stack_pair_31b0.first);
       iVar7 = piVar5[0xf];
       fn_82CFC050((uint)*(ushort *)(iVar7 + 6) * 0x20 + iVar7 + 0x30,
                    *(undefined4 *)(param_2 + 0x50),
@@ -384,4 +384,3 @@ fn_82DF7D90(int param_1,int param_2,int param_3,int param_4,undefined8 param_5,i
   }
   return 1;
 }
-

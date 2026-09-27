@@ -36,7 +36,7 @@ extern int fn_8223CFC0();
 extern int fn_8223DCC8();
 extern int fn_82240158();
 extern int fn_822403C8();
-extern int fn_82F646C8();
+extern int fn_82F644D8();
 
 
 undefined8 fn_82245D20(undefined8 param_1)
@@ -44,20 +44,20 @@ undefined8 fn_82245D20(undefined8 param_1)
 {
   undefined8 uVar1;
   undefined8 uVar2;
-  undefined1 auStack_180 [32];
+  undefined1 auStack_180 [1];
   undefined1 auStack_160 [4];
   undefined1 auStack_15c [156];
   undefined1 auStack_c0 [4];
   undefined1 auStack_bc [188];
-  
+
   fn_8223CFC0(auStack_c0,2,1);
   fn_8223CFC0(auStack_160,2,1);
-  uVar1 = fn_82F646C8(0xffffffff831d7094,0xffffffff8326338c);
+  uVar1 = fn_82F644D8(0xffffffff831d7094,0xffffffff8326338c);
   uVar2 = fn_82240158(auStack_160,0xffffffff821976e0);
   fn_82240158(uVar2,uVar1);
   fn_822403C8(auStack_180,auStack_15c);
   fn_8223DCC8(auStack_160);
-  uVar1 = fn_82F646C8(0xffffffff831d7094,0xffffffff8326338c);
+  uVar1 = fn_82F644D8(0xffffffff831d7094,0xffffffff8326338c);
   uVar2 = fn_82240158(auStack_c0,0xffffffff821976d0);
   uVar1 = fn_82240158(uVar2,uVar1);
   uVar1 = fn_82240158(uVar1,0xffffffff821976c8);
@@ -68,4 +68,3 @@ undefined8 fn_82245D20(undefined8 param_1)
   fn_8223DCC8(auStack_c0);
   return param_1;
 }
-

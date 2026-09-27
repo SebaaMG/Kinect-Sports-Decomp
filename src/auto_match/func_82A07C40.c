@@ -82,8 +82,8 @@ void fn_82A07C40(undefined8 param_1,int param_2)
   float fStack_f8;
   struct { float first; float second; } stack_pair_f0;
 
-  float fStack_e8;
-  float fStack_e4;
+  struct { float first; float second; } stack_pair_e8;
+
   float fStack_e0;
   float fStack_dc;
   float fStack_d8;
@@ -105,8 +105,8 @@ void fn_82A07C40(undefined8 param_1,int param_2)
   dVar3 = (double)lbl_821AAD20;
   stack_pair_f0.first = lbl_821AAD20;
   stack_pair_f0.second = lbl_821AAD20;
-  fStack_e8 = lbl_821AAD20;
-  fStack_e4 = lbl_821AAD20;
+  stack_pair_e8.first = lbl_821AAD20;
+  stack_pair_e8.second = lbl_821AAD20;
   fStack_e0 = lbl_821AAD20;
   fStack_dc = lbl_821AAD20;
   fStack_d8 = lbl_821AAD20;
@@ -125,8 +125,8 @@ void fn_82A07C40(undefined8 param_1,int param_2)
   fStack_a4 = lbl_821AAD20;
   fn_82A022A0(&stack_pair_f0.first);
   fn_82A022A0(&stack_pair_f0.first);
-  fn_82A022A0(&fStack_e8);
-  fn_82A022A0(&fStack_e8);
+  fn_82A022A0(&stack_pair_e8.first);
+  fn_82A022A0(&stack_pair_e8.first);
   fn_82A022A0(&fStack_b0);
   fn_82A022A0(&fStack_b0);
   fn_82A022A0(&fStack_e0);
@@ -174,8 +174,8 @@ void fn_82A07C40(undefined8 param_1,int param_2)
   if (lbl_83218C34 != (int *)0x0) {
     stack_pair_f0.first = *(float *)(iVar2 + 0x40a0);
     stack_pair_f0.second = *(float *)(iVar2 + 0x40a8);
-    fStack_e8 = *(float *)(iVar2 + 0x40b0);
-    fStack_e4 = *(float *)(iVar2 + 0x40b8);
+    stack_pair_e8.first = *(float *)(iVar2 + 0x40b0);
+    stack_pair_e8.second = *(float *)(iVar2 + 0x40b8);
     fStack_e0 = *(float *)(iVar2 + 0x40c0);
     fStack_dc = *(float *)(iVar2 + 0x40c8);
     fStack_d8 = *(float *)(iVar2 + 0x40d0);

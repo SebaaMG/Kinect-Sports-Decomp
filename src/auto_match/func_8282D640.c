@@ -26,8 +26,8 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_82823030();
-extern int fn_82823058();
 extern int fn_82823080();
+extern int fn_82823058();
 extern int fn_828230A8();
 extern unsigned int iStack_4c;
 extern unsigned int iStack_50;
@@ -41,15 +41,15 @@ void fn_8282D640(undefined8 param_1,undefined8 param_2,code *param_3,char param_
   ulonglong uVar3;
   int iStack_50;
   int iStack_4c;
-  int aiStack_48 [18];
-  
+  int aiStack_48;
+
   iVar2 = 0;
   bVar1 = false;
   fn_82823030(param_2,&iStack_50);
   uVar3 = 0;
   do {
     if (uVar3 == 0) {
-      fn_82823080(iStack_50,&iStack_4c);
+      fn_82823058(iStack_50,&iStack_4c);
       if (iStack_4c == 0) {
         if (param_4 == '\0') {
           (*param_3)(param_1,iStack_50);
@@ -68,15 +68,15 @@ LAB_8282d728:
       uVar3 = 2;
     }
     else if (uVar3 < 3) {
-      fn_82823058(iStack_50,&iStack_4c);
+      fn_82823080(iStack_50,&iStack_4c);
       if (iStack_4c == 0) {
         bVar1 = true;
       }
       else {
         uVar3 = 1;
         if (param_4 == '\0') {
-          fn_82823080(iStack_4c,aiStack_48);
-          if (aiStack_48[0] == iStack_50) {
+          fn_82823058(iStack_4c,&aiStack_48);
+          if (aiStack_48 == iStack_50) {
             (*param_3)(param_1,iStack_4c);
           }
         }
@@ -89,4 +89,3 @@ LAB_8282d728:
     }
   } while( true );
 }
-

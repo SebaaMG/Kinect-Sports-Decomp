@@ -87,8 +87,8 @@ void fn_82EC3ED8(int param_1, undefined4 param_2, undefined4 param_3, undefined4
   undefined4 uStack_c8;
   code *pcStack_c4;
   uint auStack_c0 [4];
-  uint auStack_b0 [8];
-  
+  uint auStack_b0 [4];
+
   iVar13 = 0;
   iVar12 = 0;
   lVar11 = 4;
@@ -220,4 +220,3 @@ void fn_82EC3ED8(int param_1, undefined4 param_2, undefined4 param_3, undefined4
   *in_stack_000000d4 = in_stack_00000084;
   return;
 }
-

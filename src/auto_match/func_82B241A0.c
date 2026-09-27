@@ -72,8 +72,8 @@ longlong fn_82B241A0(undefined8 param_1,int param_2)
   struct { int first; uint second; } stack_pair_b8;
 
   int iStack_b0;
-  int iStack_a8;
-  uint uStack_a4;
+  struct { int first; uint second; } stack_pair_a8;
+
   int iStack_a0;
 
   lVar6 = 0;
@@ -86,13 +86,13 @@ longlong fn_82B241A0(undefined8 param_1,int param_2)
   fn_82AEFC28(auStack_d0,lVar6,0xffffffff82af07e8,param_1);
   uVar12 = 0;
   iStack_a0 = 0;
-  uStack_a4 = -(uint)((*(uint *)(param_2 + 4) & 1) == 0) & *(uint *)(param_2 + 4);
+  stack_pair_a8.second = -(uint)((*(uint *)(param_2 + 4) & 1) == 0) & *(uint *)(param_2 + 4);
   uVar11 = auStack_d0[0];
-  iStack_a8 = param_2;
+  stack_pair_a8.first = param_2;
 LAB_82b24234:
   do {
     do {
-      if ((uStack_a4 == 0) || (bVar2 = false, iStack_a0 == *(int *)(uStack_a4 + 8))) {
+      if ((stack_pair_a8.second == 0) || (bVar2 = false, iStack_a0 == *(int *)(stack_pair_a8.second + 8))) {
         bVar2 = true;
       }
       if (bVar2) {
@@ -157,7 +157,7 @@ LAB_82b24234:
         }
         return lVar14;
       }
-      piVar4 = (int *)fn_82ACB180(&iStack_a8);
+      piVar4 = (int *)fn_82ACB180(&stack_pair_a8.first);
       iVar15 = *piVar4;
       uVar12 = uVar12 + 1;
       puVar10 = (uint *)(uVar11 + 4);

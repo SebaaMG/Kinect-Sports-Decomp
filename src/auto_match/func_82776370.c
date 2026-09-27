@@ -105,8 +105,8 @@ void fn_82776370(int param_1,int *param_2,int *param_3,undefined8 param_4,char p
   char cStack_dc;
   struct { float first; float second; } stack_pair_d8;
 
-  float fStack_d0;
-  float fStack_cc;
+  struct { float first; float second; } stack_pair_d0;
+
   float fStack_c8;
   float fStack_c4;
   float fStack_c0;
@@ -231,9 +231,9 @@ void fn_82776370(int param_1,int *param_2,int *param_3,undefined8 param_4,char p
           fVar2 = fStack_e4;
           fVar3 = fStack_e0;
           if (param_6 != '\0') {
-            fn_8268CCB0(param_1 + 0x9cc,&fStack_d0,&stack_pair_110.first);
-            stack_pair_110.first = fStack_d0;
-            stack_pair_110.second = fStack_cc;
+            fn_8268CCB0(param_1 + 0x9cc,&stack_pair_d0.first,&stack_pair_110.first);
+            stack_pair_110.first = stack_pair_d0.first;
+            stack_pair_110.second = stack_pair_d0.second;
             fn_8268CCB0(param_1 + 0x9cc,&fStack_c0,&fStack_f8);
             fVar2 = fStack_c0;
             fVar3 = fStack_bc;

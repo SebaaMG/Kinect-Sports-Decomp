@@ -28,7 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 #define ZEXT48(x) ((U64)((U32)(x)))
 extern int fn_82A2A378();
 extern int fn_82F64CE0();
-extern int fn_82F6E8D4();
+extern int fn_82F64CE0();
 extern int fn_82F6F8B8();
 extern int fn_82FE8948();
 extern int fn_82FFA510();
@@ -48,12 +48,12 @@ undefined8 fn_82FE8FA0(undefined8 param_1)
   ulonglong uVar6;
   longlong lVar7;
   longlong lVar8;
-  
+
   puVar2 = (undefined4 *)(ZEXT48(&stack0x00000000) - 0x90);
   *puVar2 = register0x0000000c;
   uVar3 = fn_82F64CE0();
   uVar6 = (uVar3 + 1 & 0x7fffffff) * -2 & 0xfffffff0;
-  fn_82F6E8D4();
+  fn_82F64CE0();
   lVar7 = (ZEXT48(&stack0x00000000) - 0x90) + uVar6;
   *(undefined4 *)lVar7 = *puVar2;
   lVar8 = lVar7 + 0x50;
@@ -65,7 +65,7 @@ undefined8 fn_82FE8FA0(undefined8 param_1)
 LAB_82fe901c:
       uVar4 = fn_82FE8948(lVar8);
       uVar6 = -(uVar3 + 1) & 0xfffffff0;
-      fn_82F6E8D4();
+      fn_82F64CE0();
       *(undefined4 *)(lVar7 + uVar6) = *(undefined4 *)lVar7;
       lVar7 = lVar7 + uVar6 + 0x50;
       lVar5 = fn_82F64CE0(lVar8);
@@ -87,4 +87,3 @@ LAB_82fe901c:
     sVar1 = *(short *)lVar5;
   } while( true );
 }
-

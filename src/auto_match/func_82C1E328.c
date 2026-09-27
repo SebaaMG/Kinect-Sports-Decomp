@@ -25,7 +25,7 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F691F0();
+extern int fn_82C10F68();
 
 
 void fn_82C1E328(int param_1,undefined8 param_2)
@@ -33,7 +33,7 @@ void fn_82C1E328(int param_1,undefined8 param_2)
 {
   int *piVar1;
   int iVar2;
-  
+
   piVar1 = *(int **)(param_1 + 0x1c);
   iVar2 = (**(code **)(*piVar1 + 0x18))(*piVar1);
   if (-1 < iVar2) {
@@ -41,8 +41,7 @@ void fn_82C1E328(int param_1,undefined8 param_2)
     *(undefined8 *)(piVar1 + 8) = param_2;
     *(undefined8 *)(piVar1 + 10) = param_2;
                     /* WARNING: Subroutine does not return */
-    fn_82F691F0(piVar1[0xc],0,0x4c);
+    fn_82C10F68(piVar1[0xc],0,0x4c);
   }
   return;
 }
-

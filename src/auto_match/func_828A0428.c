@@ -29,7 +29,7 @@ extern unsigned int *auStack_44;
 extern unsigned int *auStack_50;
 extern unsigned int *auStack_5c;
 extern unsigned int *auStack_60;
-extern int fn_8265C9E0();
+extern int fn_828A7F70();
 extern int fn_8265CA20();
 extern int fn_828A2058();
 extern int fn_828A7F70();
@@ -48,14 +48,14 @@ undefined4 * fn_828A0428(undefined4 *param_1,undefined8 param_2)
   ulonglong uVar2;
   undefined8 uVar3;
   undefined1 auStack_60 [4];
-  undefined4 auStack_5c [3];
+  undefined4 auStack_5c;
   undefined4 auStack_50 [3];
   undefined1 auStack_44 [4];
   undefined4 *puStack_40;
   undefined1 uStack_34;
-  
-  auStack_5c[0] = 0;
-  uVar2 = fn_8265C9E0(0x10);
+
+  auStack_5c = 0;
+  uVar2 = fn_828A7F70(0x10);
   bVar1 = (uVar2 & 0xffffffff) == 0;
   if (bVar1) {
     uVar3 = 0;
@@ -70,7 +70,7 @@ undefined4 * fn_828A0428(undefined4 *param_1,undefined8 param_2)
   fn_828E35B8(param_1 + 1,uVar3);
   fn_82BA02A8(param_1,uVar3,uVar3);
   if (!bVar1) {
-    fn_828E4F28(auStack_5c,auStack_44,*puStack_40);
+    fn_828E4F28(&auStack_5c,auStack_44,*puStack_40);
     fn_8265CA20(puStack_40);
     fn_828E3D60(auStack_50);
     fn_8265CA20(auStack_50[0]);
@@ -79,4 +79,3 @@ undefined4 * fn_828A0428(undefined4 *param_1,undefined8 param_2)
   RtlInitializeCriticalSection(param_1 + 3);
   return param_1;
 }
-

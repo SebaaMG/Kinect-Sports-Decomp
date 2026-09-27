@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_30;
 extern int fn_822315A0();
-extern int fn_82248B90();
+extern int fn_8265CA20();
 extern int fn_8224E928();
 extern int fn_8224ED20();
 extern int fn_82383000();
@@ -47,16 +47,16 @@ undefined8 fn_823830A0(int param_1)
   char cVar5;
   int iVar3;
   uint uVar4;
-  undefined4 *apuStack_40 [2];
-  int iStack_38;
-  int iStack_34;
+  undefined4 * apuStack_40;
+  struct { int first; int second; } stack_pair_38;
+
   undefined1 auStack_30 [4];
   undefined4 *puStack_2c;
-  
-  fn_82383000(&iStack_38,param_1);
-  if (iStack_38 == 0) {
+
+  fn_82383000(&stack_pair_38.first,param_1);
+  if (stack_pair_38.first == 0) {
 LAB_823831a8:
-    if (iStack_34 != 0) {
+    if (stack_pair_38.second != 0) {
       fn_822315A0();
     }
     uVar2 = 0;
@@ -65,28 +65,27 @@ LAB_823831a8:
     uVar2 = fn_828A12E8(*(undefined4 *)(param_1 + 0x10));
     uVar2 = fn_8288F948(uVar2,10);
     fn_8224E928(auStack_30,uVar2);
-    apuStack_40[0] = (undefined4 *)*puStack_2c;
-    while (apuStack_40[0] != puStack_2c) {
-      piVar1 = (int *)apuStack_40[0][5];
+    apuStack_40 = (undefined4 *)*puStack_2c;
+    while (apuStack_40 != puStack_2c) {
+      piVar1 = (int *)apuStack_40[5];
       cVar5 = fn_8288B760(piVar1);
       if (cVar5 == '\0') {
         iVar3 = (**(code **)(*piVar1 + 8))(piVar1);
         uVar4 = (**(code **)(*(int *)(iVar3 + 0x2e8) + 0x3c))();
-        if (uVar4 < *(uint *)(iStack_38 + 0x2180)) {
-          fn_8224ED20(apuStack_40,auStack_30,*puStack_2c);
+        if (uVar4 < *(uint *)(stack_pair_38.first + 0x2180)) {
+          fn_8224ED20(&apuStack_40,auStack_30,*puStack_2c);
           fn_8265CA20(puStack_2c);
           goto LAB_823831a8;
         }
       }
-      fn_82248B90(apuStack_40);
+      fn_8265CA20(&apuStack_40);
     }
-    fn_8224ED20(apuStack_40,auStack_30,*puStack_2c);
+    fn_8224ED20(&apuStack_40,auStack_30,*puStack_2c);
     fn_8265CA20(puStack_2c);
-    if (iStack_34 != 0) {
+    if (stack_pair_38.second != 0) {
       fn_822315A0();
     }
     uVar2 = 1;
   }
   return uVar2;
 }
-

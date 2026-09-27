@@ -29,7 +29,7 @@ extern unsigned int *auStack_1030;
 extern unsigned int *auStack_1830;
 extern unsigned int *auStack_830;
 extern int fn_82299AC8();
-extern int fn_82299D40();
+extern int fn_82299AC8();
 extern int fn_82358FD8();
 extern unsigned int lbl_82193880;
 extern unsigned int lbl_82193898;
@@ -39,10 +39,10 @@ void fn_822A0AD8(double param_1,int param_2,uint param_3)
 
 {
   int iVar1;
-  undefined1 auStack_1830 [2048];
+  undefined1 auStack_1830 [2000];
   undefined1 auStack_1030 [2048];
   undefined1 auStack_830 [2096];
-  
+
   if (param_3 == 0) {
     fn_82358FD8(*(undefined4 *)(param_2 + 0x1c),auStack_830,0x400,
                       lbl_82193880);
@@ -69,9 +69,8 @@ void fn_822A0AD8(double param_1,int param_2,uint param_3)
     if (*(int *)(iVar1 + 0x1220) != 0) {
       return;
     }
-    fn_82299D40(iVar1,auStack_1830,auStack_1030);
+    fn_82299AC8(iVar1,auStack_1830,auStack_1030);
   }
   *(float *)(iVar1 + 0x121c) = (float)param_1;
   return;
 }
-

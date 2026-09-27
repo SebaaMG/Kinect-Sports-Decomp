@@ -34,7 +34,7 @@ extern int fn_82CE09B8();
 extern int fn_82CE09D0();
 extern int fn_82CE0BE8();
 extern int fn_82CE5410();
-extern int fn_82CE6310();
+extern int fn_82CE5410();
 extern int fn_82CED958();
 extern int fn_82CEE238();
 extern int fn_82CEE578();
@@ -62,8 +62,8 @@ undefined8 fn_82D05F78(int param_1)
   undefined4 uStack_4ac;
   uint uStack_4a8;
   undefined1 auStack_4a4 [36];
-  undefined4 uStack_480;
-  undefined4 uStack_47c;
+  struct { undefined4 first; undefined4 second; } stack_pair_480;
+
   undefined1 auStack_478 [24];
   undefined1 auStack_460 [2];
   undefined2 uStack_45e;
@@ -73,15 +73,15 @@ undefined8 fn_82D05F78(int param_1)
   struct { undefined4 first; uint second; } stack_pair_340;
 
   undefined1 auStack_230 [560];
-  
+
   uStack_44c = *(uint *)(param_1 + 0x20);
   if (uStack_44c != 0xffffffff) {
     uStack_450 = 1;
     stack_pair_340.first = 1;
-    uStack_480 = 0;
-    uStack_47c = 0;
+    stack_pair_480.first = 0;
+    stack_pair_480.second = 0;
     stack_pair_340.second = uStack_44c;
-    iVar1 = fn_82CE09D0((ulonglong)uStack_44c + 1,&uStack_450,0,&stack_pair_340.first,&uStack_480);
+    iVar1 = fn_82CE09D0((ulonglong)uStack_44c + 1,&uStack_450,0,&stack_pair_340.first,&stack_pair_480.first);
     if ((0 < iVar1) &&
        (iVar1 = fn_82CE0BE8(*(undefined4 *)(param_1 + 0x20),&uStack_450), iVar1 != 0)) {
       auStack_4bc[0] = 0x10;
@@ -95,7 +95,7 @@ undefined8 fn_82D05F78(int param_1)
         if (uVar2 < 2) {
           uVar2 = 1;
         }
-        fn_82CE6310(*(undefined4 *)(iVar1 + 0xc),&puStack_4b0,uVar2,1);
+        fn_82CE5410(*(undefined4 *)(iVar1 + 0xc),&puStack_4b0,uVar2,1);
       }
       uStack_4ac = 1;
       *puStack_4b0 = 0;
@@ -111,4 +111,3 @@ undefined8 fn_82D05F78(int param_1)
   }
   return 0;
 }
-

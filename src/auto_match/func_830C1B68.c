@@ -156,15 +156,15 @@ fn_830C1B68(int param_1,int *param_2,uint *param_3,int param_4,ulonglong param_5
   short asStack_d0 [8];
   short sStack_c0;
   undefined *puStack_b0;
-  uint uStack_ac;
-  uint uStack_a8;
+  struct { uint first; uint second; } stack_pair_ac;
+
   uint uStack_a4;
-  
+
   uVar27 = ZEXT48(&stack0x00000000);
   puVar58 = *(uint **)(param_1 + 0x110);
   uVar9 = *(ushort *)((int)param_2 + 0x32) >> 1;
   uVar29 = (uint)uVar9;
-  uStack_a8 = (uint)(*(ushort *)(param_2 + 0xd) >> 1);
+  stack_pair_ac.second = (uint)(*(ushort *)(param_2 + 0xd) >> 1);
   uStack_a4 = (uint)uVar9;
   uVar28 = 0;
   uStack_130 = (uint)param_5;
@@ -2099,7 +2099,7 @@ LAB_830c252c:
           if (((*(byte *)((int)puVar58 + 5) != 0) || (uVar18 == 0)) || (bVar26)) {
             uVar29 = *puVar58;
             uStack_fc = uVar29 >> 0x14 & 3;
-            uStack_ac = uVar29 >> 0x1c & 1;
+            stack_pair_ac.first = uVar29 >> 0x1c & 1;
             uStack_f4 = (uint)*(byte *)((int)param_2 + 0x1d);
             uStack_110 = (uint)*(byte *)((int)param_2 + 0x22);
             uStack_120 = (uint)*(byte *)((int)puVar58 + 5);
@@ -2120,11 +2120,11 @@ LAB_830c252c:
             uVar43 = uStack_118;
             do {
               uStack_118 = uVar43;
-              uVar29 = uStack_ac;
+              uVar29 = stack_pair_ac.first;
               puVar58 = puStack00000024;
               if ((uStack_104 & 0x20) == 0) {
                 if ((uStack_120 & 1) != 0) {
-                  if ((uStack_f4 - 1 & uStack_ac) != 0) {
+                  if ((uStack_f4 - 1 & stack_pair_ac.first) != 0) {
                     puVar12 = (ulonglong *)*param_2;
                     iVar32 = *(int *)param_2[0x98];
                     sVar57 = *(short *)((int)((*puVar12 >> 0x3a) << 1) + iVar32);
@@ -2856,7 +2856,7 @@ LAB_830c5b98:
   puVar58[1] = param_3[6];
   puVar58[2] = param_3[7];
   puVar58[3] = param_3[8];
-  if (uStack_a8 == param_6) {
+  if (stack_pair_ac.second == param_6) {
     *(int *)(param_1 + 0xb0b4) = (int)(param_3[8] - *(int *)(param_1 + 0x5708)) >> 2;
     **(undefined8 **)(param_1 + 0x54) = *(undefined8 *)(param_2 + 0x1a);
     *(int *)(*(int *)(param_1 + 0x54) + 8) = param_2[0x1c];
@@ -2873,4 +2873,3 @@ LAB_830c5b98:
   }
   return uVar28;
 }
-

@@ -49,8 +49,8 @@ undefined8 fn_82FF3150(int *param_1,undefined8 param_2,int *param_3)
   int aiStack_50 [2];
   undefined4 uStack_48;
   undefined4 uStack_44;
-  float afStack_40 [16];
-  
+  float afStack_40 [4];
+
   uVar8 = 2;
   fn_82FF29A8(afStack_40,param_1,param_3[2],aiStack_50);
   cVar5 = fn_82FF2E78((double)afStack_40[0]);
@@ -99,4 +99,3 @@ undefined8 fn_82FF3150(int *param_1,undefined8 param_2,int *param_3)
   fn_82FF3ED8(param_1,lVar6,*(undefined4 *)(param_3[2] + 0x58),param_3 + 4,param_3 + 10);
   return uVar8;
 }
-

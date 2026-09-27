@@ -42,8 +42,8 @@ uint * fn_82D2C878(uint *param_1,undefined8 param_2,uint *param_3,undefined8 par
   int iVar6;
   uint uStack_30;
   uint uStack_2c;
-  undefined1 auStack_28 [40];
-  
+  undefined1 auStack_28 [1];
+
   uStack_30 = *param_3;
   uStack_2c = param_3[1];
   puVar3 = (uint *)fn_82D2BB28(auStack_28,param_2,&uStack_30);
@@ -88,4 +88,3 @@ uint * fn_82D2C878(uint *param_1,undefined8 param_2,uint *param_3,undefined8 par
   param_1[1] = uVar1;
   return param_1;
 }
-

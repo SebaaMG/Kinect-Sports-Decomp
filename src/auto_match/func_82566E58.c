@@ -27,22 +27,21 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_38;
 extern int fn_82569A68();
-extern int fn_82598C60();
-extern int fn_82A1EFC0();
+extern int fn_825BC748();
+extern int fn_82536288();
 
 
 void fn_82566E58(int param_1,undefined4 *param_2)
 
 {
-  undefined1 auStack_38 [56];
-  
+  undefined1 auStack_38 [40];
+
   fn_82569A68(param_1,0);
   if (*(int *)(param_1 + 0x7c) != 0) {
-    fn_82598C60(*param_2);
+    fn_825BC748(*param_2);
     (**(code **)(*(int *)(param_1 + 0x7c) + 0x178))(*(int *)(param_1 + 0x7c));
     *(undefined4 *)(param_1 + 0x7c) = 0;
   }
                     /* WARNING: Subroutine does not return */
-  fn_82A1EFC0(auStack_38,0,4);
+  fn_82536288(auStack_38,0,4);
 }
-

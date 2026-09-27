@@ -29,7 +29,7 @@ extern unsigned int *auStack_30;
 extern int fn_822CA5B0();
 extern int fn_822CB0A0();
 extern int fn_822CB140();
-extern int fn_82327098();
+extern int fn_822CA5B0();
 extern int fn_8288B760();
 
 
@@ -47,8 +47,8 @@ void fn_823275D0(int *param_1)
   undefined4 uVar8;
   undefined4 uVar9;
   undefined4 uVar10;
-  undefined1 auStack_30 [24];
-  
+  undefined1 auStack_30 [1];
+
   iVar1 = param_1[0x2f];
   if (iVar1 != 0) {
     cVar7 = fn_8288B760();
@@ -83,9 +83,8 @@ void fn_823275D0(int *param_1)
       iVar3 = *(int *)(iVar1 + 0x720);
       uVar8 = *(undefined4 *)(iVar1 + 0x5c0);
       lVar6 = (**(code **)(*param_1 + 8))(param_1);
-      fn_82327098(lVar6 + 0x448,uVar8,iVar3 != 0);
+      fn_822CA5B0(lVar6 + 0x448,uVar8,iVar3 != 0);
     }
   }
   return;
 }
-
