@@ -41,7 +41,7 @@ ulonglong fn_827D4DD0(ulonglong param_1,ulonglong param_2,ulonglong param_3)
   uint uVar6;
   longlong lVar7;
   uint auStack_120 [32];
-  uint auStack_a0 [34];
+  uint auStack_a0 [30];
   
   if ((int)param_3 != 0) {
     uVar6 = 1;

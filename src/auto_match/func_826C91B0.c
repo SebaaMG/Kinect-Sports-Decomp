@@ -36,10 +36,10 @@ undefined8 fn_826C91B0(int *param_1,undefined8 param_2,longlong param_3)
   char cVar3;
   undefined8 uVar1;
   int iVar2;
-  uint auStack_30 [12];
+  uint auStack_30;
   
-  auStack_30[0] = 0xffffffff;
-  cVar3 = (**(code **)(*(int *)param_1[0x27] + 0x34))((int *)param_1[0x27],param_2,auStack_30,0);
+  auStack_30 = 0xffffffff;
+  cVar3 = (**(code **)(*(int *)param_1[0x27] + 0x34))((int *)param_1[0x27],param_2,&auStack_30,0);
   if (cVar3 == '\0') {
     iVar2 = param_1[0x20];
     if (iVar2 == 0) {
@@ -49,7 +49,7 @@ undefined8 fn_826C91B0(int *param_1,undefined8 param_2,longlong param_3)
     uVar1 = 0;
   }
   else {
-    (**(code **)(*param_1 + 0x120))(param_1,(ulonglong)auStack_30[0] + param_3);
+    (**(code **)(*param_1 + 0x120))(param_1,(ulonglong)auStack_30 + param_3);
     uVar1 = 1;
   }
   return uVar1;

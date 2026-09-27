@@ -29,7 +29,7 @@ extern int fn_829301D0();
 extern int fn_82930318();
 extern int fn_82930CE0();
 extern int fn_82980D00();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 undefined8 fn_82980DE8(int param_1,undefined8 param_2,char *param_3)
@@ -66,11 +66,11 @@ undefined8 fn_82980DE8(int param_1,undefined8 param_2,char *param_3)
         pcVar3 = (char *)fn_829301D0(*(undefined4 *)(param_1 + 4),pcVar5 + (int)(pcVar6 + 3),
                                            0x10);
         if (pcVar3 == (char *)0x0) goto LAB_82980e8c;
-        fn_82F68CC0(pcVar3,*(undefined4 *)(*(int *)(param_1 + 0x14) + 0x14),pcVar5);
+        memcpy(pcVar3,*(undefined4 *)(*(int *)(param_1 + 0x14) + 0x14),pcVar5);
         pcVar7 = pcVar3 + (int)pcVar5;
         pcVar3[(int)pcVar5] = ':';
         pcVar7[1] = ':';
-        fn_82F68CC0(pcVar7 + 2,param_3,pcVar6);
+        memcpy(pcVar7 + 2,param_3,pcVar6);
         pcVar7[(int)(pcVar6 + 2)] = '\0';
         param_3 = pcVar3;
         goto LAB_82980f0c;

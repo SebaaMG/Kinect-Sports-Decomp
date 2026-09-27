@@ -34,7 +34,7 @@ void fn_8225AE28(int *param_1,undefined8 param_2,undefined8 param_3)
 
 {
   longlong lVar1;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
   
   lVar1 = fn_8225AE88(param_3);
   if (lVar1 == 0) {

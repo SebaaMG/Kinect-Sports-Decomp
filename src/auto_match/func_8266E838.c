@@ -55,9 +55,9 @@ void fn_8266E838(int *param_1)
   ulonglong uVar5;
   undefined4 *puVar7;
   uint uVar8;
-  int *apiStack_60 [4];
-  int iStack_50;
-  int iStack_4c;
+  int * apiStack_60;
+  struct { int first; int second; } stack_pair_50;
+
   undefined4 uStack_48;
   
   fn_82670D68();
@@ -69,8 +69,8 @@ void fn_8266E838(int *param_1)
     iVar6 = fn_82BFE460();
   }
   if (iVar6 == 0) {
-    iStack_50 = 0;
-    iStack_4c = 0;
+    stack_pair_50.first = 0;
+    stack_pair_50.second = 0;
     uStack_48 = 0;
     while( true ) {
       if (param_1[0x3a] == 0) {
@@ -80,13 +80,13 @@ void fn_8266E838(int *param_1)
         iVar6 = fn_82BFE460();
       }
       if (iVar6 != 0) break;
-      apiStack_60[0] = (int *)0x0;
-      uVar5 = fn_82BFE530(param_1[0x3a],apiStack_60);
-      uVar5 = ((uVar5 & 0xffffffff) >> 0x1f) - 1 & ZEXT48(apiStack_60[0]);
-      apiStack_60[0] = (int *)uVar5;
+      apiStack_60 = (int *)0x0;
+      uVar5 = fn_82BFE530(param_1[0x3a],&apiStack_60);
+      uVar5 = ((uVar5 & 0xffffffff) >> 0x1f) - 1 & ZEXT48(apiStack_60);
+      apiStack_60 = (int *)uVar5;
       iVar6 = fn_82670A18(uVar5);
       if (iVar6 == 0) {
-        fn_8257A9F0(&iStack_50,apiStack_60);
+        fn_8257A9F0(&stack_pair_50.first,&apiStack_60);
       }
       else {
         if (uVar5 != 0) {
@@ -96,7 +96,7 @@ void fn_8266E838(int *param_1)
       }
     }
     iVar6 = param_1[0x36];
-    while (iVar4 = iStack_50, iVar6 != param_1[0x37]) {
+    while (iVar4 = stack_pair_50.first, iVar6 != param_1[0x37]) {
       if ((*(int *)(iVar6 + 4) == 0) || (bVar2 = false, *(int *)(*(int *)(iVar6 + 4) + 4) == 0)) {
         bVar2 = true;
       }
@@ -112,9 +112,9 @@ void fn_8266E838(int *param_1)
       }
     }
     uVar8 = 0;
-    uVar1 = iStack_4c - iStack_50 >> 2;
+    uVar1 = stack_pair_50.second - stack_pair_50.first >> 2;
     if (uVar1 != 0) {
-      puVar7 = (undefined4 *)(iStack_50 + -4);
+      puVar7 = (undefined4 *)(stack_pair_50.first + -4);
       do {
         puVar7 = puVar7 + 1;
         fn_82BFE128(param_1[0x3a],*puVar7);

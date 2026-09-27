@@ -59,7 +59,7 @@ ulonglong fn_8265E148(char *param_1,int param_2,int param_3,int param_4)
   int iStack0000002c;
   uint uStack_80;
   int iStack_7c;
-  undefined1 auStack_70 [88];
+  undefined1 auStack_70 [72];
   int iStack_18;
   int iStack_14;
   

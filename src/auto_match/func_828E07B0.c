@@ -54,7 +54,7 @@ void fn_828E07B0(int *param_1,int param_2,undefined8 param_3,ulonglong param_4)
   int iStack_98;
   undefined4 uStack_94;
   undefined4 uStack_90;
-  undefined1 auStack_80 [128];
+  undefined1 auStack_80 [112];
   
   uVar1 = *(uint *)(&lbl_82026D2C + param_2 * 4);
   (**(code **)(*param_1 + 0x40))(param_1,auStack_80);

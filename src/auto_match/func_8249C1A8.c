@@ -45,13 +45,13 @@ uint fn_8249C1A8(int param_1)
   uint uVar7;
   int iVar8;
   int *piVar9;
-  int aiStack_60 [24];
+  int aiStack_60;
   
   uVar7 = 0;
-  aiStack_60[0] = **(int **)(param_1 + 0x38);
-  if ((int *)aiStack_60[0] != *(int **)(param_1 + 0x38)) {
+  aiStack_60 = **(int **)(param_1 + 0x38);
+  if ((int *)aiStack_60 != *(int **)(param_1 + 0x38)) {
     do {
-      uVar1 = *(uint *)(aiStack_60[0] + 0xc);
+      uVar1 = *(uint *)(aiStack_60 + 0xc);
       iVar8 = 0;
       iVar4 = 0;
       piVar9 = (int *)(param_1 + 0x14);
@@ -106,8 +106,8 @@ LAB_8249c324:
       if (2 - iVar8 < iVar4) {
         uVar7 = uVar1 | uVar7;
       }
-      fn_82381BC0(aiStack_60);
-    } while (aiStack_60[0] != *(int *)(param_1 + 0x38));
+      fn_82381BC0(&aiStack_60);
+    } while (aiStack_60 != *(int *)(param_1 + 0x38));
   }
   return uVar7;
 }

@@ -47,7 +47,7 @@ void fn_822D51D0(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefi
   int iVar4;
   undefined4 *puStack_60;
   undefined4 *puStack_5c;
-  undefined1 auStack_58 [88];
+  undefined1 auStack_58 [8];
   
   puVar3 = (undefined4 *)fn_8265C9E0(0x88);
   if (puVar3 == (undefined4 *)0x0) {

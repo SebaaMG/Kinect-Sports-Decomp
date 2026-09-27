@@ -39,8 +39,8 @@ void fn_8267ECD0(int param_1)
   int iVar2;
   ulonglong uVar3;
   undefined4 *puVar4;
-  int iStack_40;
-  uint uStack_3c;
+  struct { int first; uint second; } stack_pair_40;
+
   undefined4 uStack_38;
   
   RtlEnterCriticalSection(param_1 + 0x10);
@@ -49,14 +49,14 @@ void fn_8267ECD0(int param_1)
       (*(code *)**(undefined4 **)(param_1 + 4))((*(undefined4 **)(param_1 + 4))[1]);
     }
     else {
-      iStack_40 = 0;
-      uStack_3c = 0;
+      stack_pair_40.first = 0;
+      stack_pair_40.second = 0;
       uStack_38 = 0;
-      fn_8267E898(&iStack_40,*(undefined4 *)(param_1 + 4),*(undefined4 *)(param_1 + 8));
-      iVar2 = iStack_40;
-      uVar3 = (ulonglong)uStack_3c;
+      fn_8267E898(&stack_pair_40.first,*(undefined4 *)(param_1 + 4),*(undefined4 *)(param_1 + 8));
+      iVar2 = stack_pair_40.first;
+      uVar3 = (ulonglong)stack_pair_40.second;
       if (uVar3 != 0) {
-        puVar4 = (undefined4 *)(iStack_40 + -4);
+        puVar4 = (undefined4 *)(stack_pair_40.first + -4);
         do {
           puVar1 = puVar4 + 1;
           puVar4 = puVar4 + 2;

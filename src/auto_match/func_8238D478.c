@@ -51,7 +51,7 @@ void fn_8238D478(int *param_1)
   ulonglong uStack_840;
   int iStack_838;
   int iStack_834;
-  undefined1 auStack_830 [2096];
+  undefined1 auStack_830 [2032];
   
   dVar6 = (double)(**(code **)(*param_1 + 0x84))();
   uVar4 = (**(code **)(*param_1 + 0x88))(param_1);

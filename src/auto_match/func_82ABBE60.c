@@ -53,7 +53,7 @@ longlong fn_82ABBE60(int param_1,uint *param_2,uint *param_3,int *param_4,int *p
   uint uVar14;
   int *piStack0000002c;
   int aiStack_b0 [2];
-  uint auStack_a8 [42];
+  uint auStack_a8 [6];
   
   uVar1 = *(uint *)(param_1 + 0x10);
   piStack0000002c = param_4;

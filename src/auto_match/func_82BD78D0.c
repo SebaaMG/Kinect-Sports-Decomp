@@ -27,8 +27,8 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_82BD7F18();
 extern int fn_82BDD190();
-extern int fn_82F68CC0();
-extern int fn_82F691F0();
+extern int memcpy();
+extern int memset();
 
 
 undefined8 fn_82BD78D0(int param_1,int param_2)
@@ -47,7 +47,7 @@ undefined8 fn_82BD78D0(int param_1,int param_2)
   int iVar11;
   longlong lVar12;
   longlong lVar13;
-  int aiStack_70 [28];
+  int aiStack_70 [1];
   
   piVar3 = *(int **)(*(int *)(param_1 + 4) + 8);
   iVar9 = 0;
@@ -77,14 +77,14 @@ undefined8 fn_82BD78D0(int param_1,int param_2)
   if ((piVar3 != (int *)0x0) && (iVar9 != 0)) {
     uVar8 = 0;
     while (((param_2 != 0 && (param_2 = param_2 + -1, piVar3 != (int *)0x0)) && (iVar9 != 0))) {
-      fn_82F68CC0(param_1 + 0x1f80,
+      memcpy(param_1 + 0x1f80,
                    (ulonglong)*(uint *)(*piVar3 + 8) + (ulonglong)*(uint *)(*piVar3 + 4),
                    *(undefined4 *)(*(int *)(param_1 + 0x18) + 0x18));
       iVar11 = param_1 + 0x1d00;
       iVar2 = fn_82BDD190(param_1 + 0x20,0,param_1 + 0x1f80,iVar11);
       if (iVar2 != 0) {
                     /* WARNING: Subroutine does not return */
-        fn_82F691F0(iVar11,0,0x280);
+        memset(iVar11,0,0x280);
       }
       piVar10 = aiStack_70;
       lVar13 = 2;
@@ -96,7 +96,7 @@ undefined8 fn_82BD78D0(int param_1,int param_2)
           if ((uint)(*(int *)(*piVar1 + 0xc) - *(int *)(*piVar1 + 4)) < 0x281) {
             lVar12 = (ulonglong)*(uint *)(*piVar1 + 0xc) - (ulonglong)*(uint *)(*piVar1 + 4);
           }
-          fn_82F68CC0((ulonglong)*(uint *)(*piVar1 + 8) + (ulonglong)*(uint *)(*piVar1 + 4),iVar11,
+          memcpy((ulonglong)*(uint *)(*piVar1 + 8) + (ulonglong)*(uint *)(*piVar1 + 4),iVar11,
                        lVar12);
           iVar2 = *piVar1;
           uVar4 = (ulonglong)*(uint *)(iVar2 + 4) + lVar12;

@@ -57,7 +57,7 @@ bool fn_8262C328(int param_1,int param_2,int param_3)
   float fStack_40;
   float fStack_3c;
   float fStack_38;
-  float afStack_30 [12];
+  float afStack_30 [1];
   
   fn_82563B68(param_3,afStack_30,&fStack_40);
   piVar8 = *(int **)(param_1 + 0x148);

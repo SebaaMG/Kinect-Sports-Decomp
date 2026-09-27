@@ -39,20 +39,20 @@ extern unsigned int uStack_c0;
 void fn_82278E58(int param_1,undefined8 param_2)
 
 {
-  undefined4 uStack_c0;
-  undefined4 uStack_bc;
+  struct { undefined4 first; undefined4 second; } stack_pair_c0;
+
   undefined1 *puStack_b8;
   undefined1 auStack_b0 [32];
   undefined1 auStack_90 [128];
   
   fn_8266F600(*(undefined4 *)(param_1 + 8),param_2,auStack_b0,0x20);
-  uStack_c0 = 0;
-  uStack_bc = 0;
-  fn_82273CD8(&uStack_c0,4);
+  stack_pair_c0.first = 0;
+  stack_pair_c0.second = 0;
+  fn_82273CD8(&stack_pair_c0.first,4);
   puStack_b8 = auStack_b0;
   fn_82526C70(auStack_90,0x80,0xffffffff821a8180,param_1 + 0x18);
-  fn_82672C20(*(undefined4 *)(param_1 + 8),auStack_90,&uStack_c0,1);
-  fn_82273C88(&uStack_c0);
+  fn_82672C20(*(undefined4 *)(param_1 + 8),auStack_90,&stack_pair_c0.first,1);
+  fn_82273C88(&stack_pair_c0.first);
   return;
 }
 

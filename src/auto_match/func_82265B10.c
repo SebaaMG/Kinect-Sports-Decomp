@@ -46,8 +46,8 @@ void fn_82265B10(undefined8 param_1,int param_2)
 {
   int *piVar1;
   int iVar2;
-  undefined4 uStack_30;
-  undefined4 uStack_2c;
+  struct { undefined4 first; undefined4 second; } stack_pair_30;
+
   
   if (*(int *)(param_2 + 0x50c) == 0) {
     if (*(int *)(param_2 + 0x104) != 0x3e5) {
@@ -79,11 +79,11 @@ void fn_82265B10(undefined8 param_1,int param_2)
       *(undefined4 *)(param_2 + 0x50c) = 3;
       if ((*(int *)(param_2 + 0x524) != 0) &&
          (iVar2 = *(int *)(*(int *)(param_2 + 0xdc) + 0x8c0), iVar2 != 0)) {
-        uStack_30 = 0;
-        uStack_2c = 0;
-        fn_82517978(&uStack_30,*(undefined4 *)(param_2 + 0x524),
+        stack_pair_30.first = 0;
+        stack_pair_30.second = 0;
+        fn_82517978(&stack_pair_30.first,*(undefined4 *)(param_2 + 0x524),
                           *(undefined4 *)(param_2 + 0x528),0);
-        fn_8266F2D0((double)lbl_821CC160,iVar2,&uStack_30,0);
+        fn_8266F2D0((double)lbl_821CC160,iVar2,&stack_pair_30.first,0);
       }
     }
   }

@@ -48,7 +48,7 @@ fn_82471588(undefined4 *param_1,undefined8 param_2,undefined4 *param_3,undefined
   undefined **ppuStack_70;
   undefined4 uStack_6c;
   undefined ***pppuStack_60;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [48];
   
   param_1[1] = 1;
   *param_1 = &lbl_821A8D8C;

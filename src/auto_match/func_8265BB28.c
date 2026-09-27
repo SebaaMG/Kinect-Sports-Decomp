@@ -26,7 +26,7 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_8265B6B0();
-extern int fn_82F65AC0();
+extern int stricmp();
 
 
 longlong fn_8265BB28(undefined8 param_1)
@@ -39,7 +39,7 @@ longlong fn_8265BB28(undefined8 param_1)
   lVar3 = 0;
   do {
     puVar1 = (undefined4 *)fn_8265B6B0(lVar3);
-    iVar2 = fn_82F65AC0(*puVar1,param_1);
+    iVar2 = stricmp(*puVar1,param_1);
     if (iVar2 == 0) {
       return lVar3;
     }

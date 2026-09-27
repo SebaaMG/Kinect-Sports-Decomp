@@ -42,8 +42,8 @@ void fn_8266E0B8(longlong param_1,undefined8 param_2,ulonglong param_3,int param
   int iVar2;
   longlong lVar3;
   ulonglong uVar4;
-  undefined4 uStack_50;
-  undefined4 uStack_4c;
+  struct { undefined4 first; undefined4 second; } stack_pair_50;
+
   undefined4 uStack_48;
   undefined4 uStack_44;
   undefined4 uStack_40;
@@ -64,13 +64,13 @@ void fn_8266E0B8(longlong param_1,undefined8 param_2,ulonglong param_3,int param
   uVar4 = 0x20;
   if (0x20 < iVar2) {
     do {
-      uStack_50 = 0;
-      uStack_4c = 0;
+      stack_pair_50.first = 0;
+      stack_pair_50.second = 0;
       uStack_48 = 0;
       uStack_44 = 0;
       (*(undefined4 **)(param_4 + 0x10))[1] = **(undefined4 **)(param_4 + 0x10);
       uStack_40 = *(undefined4 *)(param_4 + 0x10);
-      fn_8266DBB8(param_1,param_2,&uStack_50,uVar4,param_3);
+      fn_8266DBB8(param_1,param_2,&stack_pair_50.first,uVar4,param_3);
       fn_8266D7B8(**(undefined4 **)(param_4 + 0x10),(*(undefined4 **)(param_4 + 0x10))[1],param_1,
                     (uVar4 & 0x7fffffff) << 1,param_3);
       uVar4 = (uVar4 & 0x7fffffff) << 2;

@@ -42,13 +42,13 @@ void fn_8277EBC8(int param_1,int *param_2,int param_3)
   int *piVar2;
   int aiStack_60 [2];
   undefined8 uStack_58;
-  undefined4 uStack_50;
-  int iStack_4c;
+  struct { undefined4 first; int second; } stack_pair_50;
+
   int iStack_48;
   int iStack_44;
   
   if (1 < (uint)param_2[1]) {
-    uStack_50 = *(undefined4 *)(param_1 + 0x30);
+    stack_pair_50.first = *(undefined4 *)(param_1 + 0x30);
     piVar2 = (int *)(param_1 + 0x30);
     uVar1 = 0;
     if (param_2[1] != 0) {
@@ -74,10 +74,10 @@ void fn_8277EBC8(int param_1,int *param_2,int param_3)
         uVar1 = uVar1 + 1;
       } while (uVar1 < (uint)param_2[1]);
     }
-    iStack_4c = *piVar2 + -1;
+    stack_pair_50.second = *piVar2 + -1;
     iStack_48 = param_2[3] + param_3;
     iStack_44 = param_2[4] + param_3;
-    fn_8277E600(param_1 + 0x40,&uStack_50);
+    fn_8277E600(param_1 + 0x40,&stack_pair_50.first);
   }
   return;
 }

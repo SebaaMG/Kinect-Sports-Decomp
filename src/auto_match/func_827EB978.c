@@ -56,8 +56,8 @@ void fn_827EB978(undefined8 param_1,float *param_2,undefined8 param_3,float *par
   double dVar12;
   double dVar13;
   double dVar14;
-  float fStack_b0;
-  float fStack_ac;
+  struct { float first; float second; } stack_pair_b0;
+
   float fStack_a8;
   float fStack_a0;
   float fStack_9c;
@@ -65,12 +65,12 @@ void fn_827EB978(undefined8 param_1,float *param_2,undefined8 param_3,float *par
   
   fn_82F6A528();
   fn_828104E8();
-  fn_82810328(param_3,&fStack_a0,&fStack_b0);
+  fn_82810328(param_3,&fStack_a0,&stack_pair_b0.first);
   dVar2 = (double)fn_82809CB0((double)*param_5);
   dVar3 = (double)fn_82809CB0((double)param_5[3]);
   dVar4 = (double)fn_82809CB0((double)param_5[6]);
   dVar12 = (double)(*param_2 - fStack_a0);
-  dVar5 = (double)fn_82809CB0((double)fStack_b0);
+  dVar5 = (double)fn_82809CB0((double)stack_pair_b0.first);
   if (dVar5 <= (double)(float)((double)(float)((double)*param_4 * dVar2 +
                                               (double)(float)((double)param_4[2] * dVar4 +
                                                              (double)(float)((double)param_4[1] *
@@ -79,7 +79,7 @@ void fn_827EB978(undefined8 param_1,float *param_2,undefined8 param_3,float *par
     dVar6 = (double)fn_82809CB0((double)param_5[4]);
     dVar7 = (double)fn_82809CB0((double)param_5[7]);
     dVar13 = (double)(param_2[1] - fStack_9c);
-    dVar8 = (double)fn_82809CB0((double)fStack_ac);
+    dVar8 = (double)fn_82809CB0((double)stack_pair_b0.second);
     if (dVar8 <= (double)(float)((double)(float)((double)*param_4 * dVar5 +
                                                 (double)(float)((double)param_4[2] * dVar7 +
                                                                (double)(float)((double)param_4[1] *
@@ -94,72 +94,72 @@ void fn_827EB978(undefined8 param_1,float *param_2,undefined8 param_3,float *par
                                                                   (double)(float)((double)param_4[1]
                                                                                  * dVar9))) + dVar14
                                    )) {
-        dVar11 = (double)fn_82809CB0((double)(*param_5 * fStack_b0 +
-                                              param_5[3] * fStack_ac + param_5[6] * fStack_a8));
+        dVar11 = (double)fn_82809CB0((double)(*param_5 * stack_pair_b0.first +
+                                              param_5[3] * stack_pair_b0.second + param_5[6] * fStack_a8));
         if (dVar11 <= (double)((float)(dVar12 * dVar2 +
                                       (double)(float)(dVar14 * dVar8 +
                                                      (double)(float)(dVar13 * dVar5))) + *param_4))
         {
-          dVar11 = (double)fn_82809CB0((double)(fStack_ac * param_5[4] +
-                                                param_5[7] * fStack_a8 + param_5[1] * fStack_b0));
+          dVar11 = (double)fn_82809CB0((double)(stack_pair_b0.second * param_5[4] +
+                                                param_5[7] * fStack_a8 + param_5[1] * stack_pair_b0.first));
           if (dVar11 <= (double)((float)(dVar12 * dVar3 +
                                         (double)(float)(dVar14 * dVar9 +
                                                        (double)(float)(dVar13 * dVar6))) +
                                 param_4[1])) {
             dVar11 = (double)fn_82809CB0((double)(param_5[8] * fStack_a8 +
-                                                  param_5[2] * fStack_b0 + param_5[5] * fStack_ac));
+                                                  param_5[2] * stack_pair_b0.first + param_5[5] * stack_pair_b0.second));
             if (dVar11 <= (double)((float)(dVar12 * dVar4 +
                                           (double)(float)(dVar14 * dVar10 +
                                                          (double)(float)(dVar13 * dVar7))) +
                                   param_4[2])) {
-              dVar11 = (double)fn_82809CB0((double)(param_5[1] * fStack_a8 - param_5[2] * fStack_ac
+              dVar11 = (double)fn_82809CB0((double)(param_5[1] * fStack_a8 - param_5[2] * stack_pair_b0.second
                                                     ));
               if (dVar11 <= (double)((float)((double)param_4[1] * dVar4 +
                                             (double)(float)((double)param_4[2] * dVar3)) +
                                     (float)(dVar14 * dVar5 + (double)(float)(dVar8 * dVar13)))) {
                 dVar11 = (double)fn_82809CB0((double)(fStack_a8 * param_5[4] -
-                                                      param_5[5] * fStack_ac));
+                                                      param_5[5] * stack_pair_b0.second));
                 if (dVar11 <= (double)((float)((double)param_4[2] * dVar2 +
                                               (double)(float)((double)*param_4 * dVar4)) +
                                       (float)(dVar14 * dVar6 + (double)(float)(dVar9 * dVar13)))) {
                   dVar11 = (double)fn_82809CB0((double)(param_5[7] * fStack_a8 -
-                                                        param_5[8] * fStack_ac));
+                                                        param_5[8] * stack_pair_b0.second));
                   if (dVar11 <= (double)((float)((double)param_4[1] * dVar2 +
                                                 (double)(float)((double)*param_4 * dVar3)) +
                                         (float)(dVar14 * dVar7 + (double)(float)(dVar10 * dVar13))))
                   {
-                    dVar11 = (double)fn_82809CB0((double)(param_5[2] * fStack_b0 -
+                    dVar11 = (double)fn_82809CB0((double)(param_5[2] * stack_pair_b0.first -
                                                           *param_5 * fStack_a8));
                     if (dVar11 <= (double)((float)((double)param_4[1] * dVar7 +
                                                   (double)(float)((double)param_4[2] * dVar6)) +
                                           (float)(dVar14 * dVar2 + (double)(float)(dVar8 * dVar12)))
                        ) {
-                      dVar11 = (double)fn_82809CB0((double)(param_5[5] * fStack_b0 -
+                      dVar11 = (double)fn_82809CB0((double)(param_5[5] * stack_pair_b0.first -
                                                             param_5[3] * fStack_a8));
                       if (dVar11 <= (double)((float)((double)param_4[2] * dVar5 +
                                                     (double)(float)((double)*param_4 * dVar7)) +
                                             (float)(dVar14 * dVar3 + (double)(float)(dVar9 * dVar12)
                                                    ))) {
-                        dVar11 = (double)fn_82809CB0((double)(param_5[8] * fStack_b0 -
+                        dVar11 = (double)fn_82809CB0((double)(param_5[8] * stack_pair_b0.first -
                                                               param_5[6] * fStack_a8));
                         if (dVar11 <= (double)((float)((double)param_4[1] * dVar5 +
                                                       (double)(float)((double)*param_4 * dVar6)) +
                                               (float)(dVar14 * dVar4 +
                                                      (double)(float)(dVar10 * dVar12)))) {
-                          dVar11 = (double)fn_82809CB0((double)(*param_5 * fStack_ac -
-                                                                param_5[1] * fStack_b0));
+                          dVar11 = (double)fn_82809CB0((double)(*param_5 * stack_pair_b0.second -
+                                                                param_5[1] * stack_pair_b0.first));
                           if (dVar11 <= (double)((float)((double)param_4[1] * dVar10 +
                                                         (double)(float)((double)param_4[2] * dVar9))
                                                 + (float)(dVar5 * dVar12 +
                                                          (double)(float)(dVar13 * dVar2)))) {
-                            dVar2 = (double)fn_82809CB0((double)(param_5[3] * fStack_ac -
-                                                                 fStack_b0 * param_5[4]));
+                            dVar2 = (double)fn_82809CB0((double)(param_5[3] * stack_pair_b0.second -
+                                                                 stack_pair_b0.first * param_5[4]));
                             if (dVar2 <= (double)((float)((double)param_4[2] * dVar8 +
                                                          (double)(float)((double)*param_4 * dVar10))
                                                  + (float)(dVar6 * dVar12 +
                                                           (double)(float)(dVar13 * dVar3)))) {
-                              dVar2 = (double)fn_82809CB0((double)(param_5[6] * fStack_ac -
-                                                                   param_5[7] * fStack_b0));
+                              dVar2 = (double)fn_82809CB0((double)(param_5[6] * stack_pair_b0.second -
+                                                                   param_5[7] * stack_pair_b0.first));
                               uVar1 = 0;
                               if (dVar2 <= (double)((float)((double)param_4[1] * dVar8 +
                                                            (double)(float)((double)*param_4 * dVar9)

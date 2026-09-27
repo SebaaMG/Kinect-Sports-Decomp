@@ -39,13 +39,13 @@ void fn_82C4E0F8(int param_1)
   undefined4 *puVar2;
   int iStack_30;
   int iStack_2c;
-  int aiStack_28 [4];
+  int aiStack_28;
   
   puVar2 = (undefined4 *)(param_1 + 0x18);
-  fn_82A9FA30(*(undefined4 *)(param_1 + 0x2c),0,aiStack_28,4,&iStack_30,puVar2);
+  fn_82A9FA30(*(undefined4 *)(param_1 + 0x2c),0,&aiStack_28,4,&iStack_30,puVar2);
   if ((*(int *)(*(int *)(param_1 + 0x28) + 0x3cb0) == 7) && (*(int *)(param_1 + 0x20) != 0)) {
-    iStack_2c = aiStack_28[0];
-    iVar1 = fn_82C7CA40(*(int *)(param_1 + 0x28),aiStack_28[0],iStack_30,&iStack_2c,&iStack_30
+    iStack_2c = aiStack_28;
+    iVar1 = fn_82C7CA40(*(int *)(param_1 + 0x28),aiStack_28,iStack_30,&iStack_2c,&iStack_30
                               ,*puVar2);
     if (iVar1 != 0) {
       *(undefined4 *)(param_1 + 0x14) = 1;
@@ -55,8 +55,8 @@ void fn_82C4E0F8(int param_1)
     }
   }
   else {
-    *(int *)(param_1 + 0xc) = aiStack_28[0];
-    *(int *)(param_1 + 0x10) = aiStack_28[0] + iStack_30 + -1;
+    *(int *)(param_1 + 0xc) = aiStack_28;
+    *(int *)(param_1 + 0x10) = aiStack_28 + iStack_30 + -1;
   }
   return;
 }

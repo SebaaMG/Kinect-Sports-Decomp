@@ -39,7 +39,7 @@ fn_822953E8(undefined8 param_1,undefined8 param_2,undefined8 param_3,int param_4
 {
   undefined8 uVar1;
   undefined1 auStack_90 [16];
-  undefined1 auStack_80 [128];
+  undefined1 auStack_80 [64];
   
   uVar1 = fn_82296010(auStack_90,0xffffffff82196fe8,*(undefined4 *)(param_4 + 0x14));
   uVar1 = fn_82F64020(auStack_80,0x40,uVar1,param_6);

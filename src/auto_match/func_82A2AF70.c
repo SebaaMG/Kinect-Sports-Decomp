@@ -35,7 +35,7 @@ undefined8 fn_82A2AF70(undefined8 param_1,undefined8 param_2,uint param_3)
 {
   undefined8 uVar1;
   undefined8 uVar2;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [1];
   
   uVar1 = fn_82A36058(auStack_30);
   while( true ) {

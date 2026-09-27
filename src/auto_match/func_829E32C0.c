@@ -58,8 +58,8 @@ fn_829E32C0(double param_1,double param_2,int param_3,undefined8 param_4,undefin
   undefined8 uVar5;
   longlong lVar6;
   undefined4 uVar7;
-  float fStack_70;
-  float fStack_6c;
+  struct { float first; float second; } stack_pair_70;
+
   int iStack_68;
   undefined4 uStack_64;
   undefined4 uStack_60;
@@ -73,14 +73,14 @@ fn_829E32C0(double param_1,double param_2,int param_3,undefined8 param_4,undefin
   }
   iStack_68 = 1;
   uStack_64 = 1;
-  fStack_70 = lbl_82005748;
+  stack_pair_70.first = lbl_82005748;
   uStack_60 = 4;
-  fStack_6c = lbl_82005748;
+  stack_pair_70.second = lbl_82005748;
   uStack_58 = 1;
   fStack_4c = lbl_8201EBA4;
   iStack_50 = 0;
   fStack_48 = lbl_8201FBB0;
-  uVar5 = fn_829E3C40(*(undefined4 *)(param_3 + 8),&fStack_70);
+  uVar5 = fn_829E3C40(*(undefined4 *)(param_3 + 8),&stack_pair_70.first);
   if ((int)uVar5 < 0) {
     return uVar5;
   }
@@ -92,20 +92,20 @@ fn_829E32C0(double param_1,double param_2,int param_3,undefined8 param_4,undefin
     if (iStack_68 != 0) {
       fVar1 = *(float *)(param_3 + 0x10);
       fVar4 = fVar1;
-      if (fVar1 < fStack_70) {
-        fVar4 = fStack_70;
+      if (fVar1 < stack_pair_70.first) {
+        fVar4 = stack_pair_70.first;
       }
       fVar3 = *(float *)(param_3 + 0x60);
-      if (fStack_70 <= *(float *)(param_3 + 0x60)) {
-        fVar3 = fStack_70;
+      if (stack_pair_70.first <= *(float *)(param_3 + 0x60)) {
+        fVar3 = stack_pair_70.first;
       }
-      if (ABS(fStack_6c - fStack_70) < *(float *)(param_3 + 0x74) * fVar3) {
-        fVar3 = fStack_70;
-        if (fVar1 <= fStack_70) {
+      if (ABS(stack_pair_70.second - stack_pair_70.first) < *(float *)(param_3 + 0x74) * fVar3) {
+        fVar3 = stack_pair_70.first;
+        if (fVar1 <= stack_pair_70.first) {
           fVar3 = fVar1;
         }
         if (fVar4 < fVar3 * lbl_82005344) {
-          fn_82F68CC0(param_3 + 0x10,&fStack_70,0x30);
+          fn_82F68CC0(param_3 + 0x10,&stack_pair_70.first,0x30);
           *(undefined4 *)(param_3 + 0x74) = lbl_82057AB8;
           goto LAB_829e3474;
         }
@@ -117,7 +117,7 @@ fn_829E32C0(double param_1,double param_2,int param_3,undefined8 param_4,undefin
     }
     if (ABS(fStack_4c - fStack_48) < *(float *)(param_3 + 0x70) * fStack_48) {
       *(float *)(param_3 + 0x70) = (float)param_2;
-      fn_82F68CC0(param_3 + 0x10,&fStack_70,0x30);
+      fn_82F68CC0(param_3 + 0x10,&stack_pair_70.first,0x30);
 LAB_829e3474:
       *(undefined1 *)(param_3 + 0x78) = 1;
       *param_6 = 0;

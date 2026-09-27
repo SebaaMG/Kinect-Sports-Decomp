@@ -36,11 +36,11 @@ void fn_8281ADC8(int param_1,undefined8 param_2)
 {
   uint uVar1;
   ulonglong uVar2;
-  int aiStack_30 [12];
+  int aiStack_30;
   
   uVar1 = *(uint *)(param_1 + 0x7c);
-  fn_828233A8(param_1 + 0x88,aiStack_30,0xffffffff828192c8,param_2);
-  uVar2 = (ulonglong)(short)((int)(aiStack_30[0] - uVar1) >> 6);
+  fn_828233A8(param_1 + 0x88,&aiStack_30,0xffffffff828192c8,param_2);
+  uVar2 = (ulonglong)(short)((int)(aiStack_30 - uVar1) >> 6);
   fn_82819398((ulonglong)uVar1,param_1 + 0x108,uVar2);
   fn_82822E38((uVar2 & 0x3ffffff) * 0x40 + (ulonglong)uVar1);
   fn_8281A1A0(param_1,uVar2);

@@ -45,7 +45,7 @@ void fn_829DDC18(int param_1,int param_2,undefined4 *param_3,float *param_4)
   undefined4 uVar6;
   int *piVar7;
   double dVar8;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [1];
   
   *param_3 = 4;
   *param_4 = lbl_8200133C;

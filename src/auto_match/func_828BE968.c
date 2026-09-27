@@ -36,7 +36,7 @@ undefined8 fn_828BE968(undefined8 param_1)
 {
   char cVar2;
   undefined8 uVar1;
-  undefined1 auStack_10 [16];
+  undefined1 auStack_10 [1];
   
   fn_828C4620(auStack_10,0xffffffff8321434c,param_1);
   cVar2 = fn_828C4368(auStack_10);

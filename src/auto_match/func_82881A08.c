@@ -44,7 +44,7 @@ ulonglong fn_82881A08(void)
   ulonglong uVar5;
   ulonglong uVar6;
   int iStack_30;
-  int aiStack_2c [11];
+  int aiStack_2c;
   
   if ((uRam83212a14 & 1) == 0) {
     uRam83212a14 = uRam83212a14 | 1;
@@ -55,8 +55,8 @@ ulonglong fn_82881A08(void)
     uVar5 = (ulonglong)uRam83212a10;
   }
   uVar6 = -(ulonglong)(uVar5 != (ulonglong)uRam831599f8 + 1) & (ulonglong)uRam831599f8 + 1;
-  aiStack_2c[0] = (int)uVar6;
-  fn_8289F160(&iStack_30,0xffffffff83212a00,aiStack_2c);
+  aiStack_2c = (int)uVar6;
+  fn_8289F160(&iStack_30,0xffffffff83212a00,&aiStack_2c);
   iVar2 = lbl_83212A04;
   iVar3 = (int)uVar6;
   if (iStack_30 != lbl_83212A04) {

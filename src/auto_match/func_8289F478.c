@@ -35,11 +35,11 @@ void fn_8289F478(longlong param_1,undefined4 param_2)
 
 {
   undefined4 uStack_20;
-  undefined4 auStack_1c [3];
+  undefined4 auStack_1c;
   
   uStack_20 = param_2;
-  fn_8289F1E8(auStack_1c,param_1 + 0x54,&uStack_20);
-  fn_8289E800(&uStack_20,param_1 + 0x54,auStack_1c[0]);
+  fn_8289F1E8(&auStack_1c,param_1 + 0x54,&uStack_20);
+  fn_8289E800(&uStack_20,param_1 + 0x54,auStack_1c);
   return;
 }
 

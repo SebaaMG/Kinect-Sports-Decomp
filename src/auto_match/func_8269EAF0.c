@@ -42,24 +42,24 @@ undefined8 fn_8269EAF0(ulonglong param_1,int param_2,int *param_3)
   uint *puVar4;
   ulonglong uVar5;
   longlong lVar6;
-  int iStack_50;
-  int iStack_4c;
+  struct { int first; int second; } stack_pair_50;
+
   int iStack_48;
   uint uStack_44;
   
-  iStack_50 = *param_3;
-  if ((iStack_50 == 0x40) || (iStack_50 == 0x80)) {
-    iStack_4c = 0;
+  stack_pair_50.first = *param_3;
+  if ((stack_pair_50.first == 0x40) || (stack_pair_50.first == 0x80)) {
+    stack_pair_50.second = 0;
     iStack_48 = 0xff;
     uStack_44 = ((((U64)(uStack_44)) & (~(((U64)0xFFFFFF) << 8))) | ((((U64)((((U64)(uStack_44) >> 8) & 0xFFFFFF) & 0xffff)) & ((U64)0xFFFFFF)) << 8));
     uStack_44 = (uint)(((U64)(uStack_44) >> 8) & 0xFFFFFF);
   }
   else {
-    iStack_4c = param_3[1];
+    stack_pair_50.second = param_3[1];
     iStack_48 = param_3[2];
     uStack_44 = param_3[3];
   }
-  iVar2 = fn_8269D9C0(param_1 + 0x88,&iStack_50);
+  iVar2 = fn_8269D9C0(param_1 + 0x88,&stack_pair_50.first);
   puVar4 = (uint *)(-(uint)(iVar2 != 0) & iVar2 + 0x10U);
   if (puVar4 == (uint *)0x0) {
     uVar1 = 0;

@@ -40,7 +40,7 @@ undefined4 fn_82B46830(undefined8 param_1,int param_2,ulonglong param_3)
   int *piVar3;
   float *pfVar4;
   int aiStack_90 [4];
-  undefined4 auStack_80 [32];
+  undefined4 auStack_80 [20];
   
   piVar3 = (int *)(&stack0x00000000 + -0x90);
   if ((param_3 & 0xffffffff) != 0) {

@@ -40,7 +40,7 @@ void fn_824D4BF0(int param_1)
 {
   undefined4 uVar1;
   undefined1 auStack_70 [32];
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [32];
   
   fn_824CD610();
   fn_82230110(auStack_70,0xffffffff821c0de0);

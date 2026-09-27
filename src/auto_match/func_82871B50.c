@@ -36,7 +36,7 @@ undefined8 fn_82871B50(int param_1,int param_2)
   int *piVar2;
   int iVar3;
   undefined4 *puStack_30;
-  undefined4 auStack_2c [11];
+  undefined4 auStack_2c;
   
   puVar1 = *(undefined4 **)(param_1 + 8);
   puStack_30 = (undefined4 *)*puVar1;
@@ -46,8 +46,8 @@ undefined8 fn_82871B50(int param_1,int param_2)
     if (piVar2 != (int *)0x0) {
       iVar3 = (**(code **)(*piVar2 + 0x4c))(piVar2);
       if (iVar3 == param_2) {
-        auStack_2c[0] = 0;
-        (**(code **)(*piVar2 + 0x50))(piVar2,auStack_2c);
+        auStack_2c = 0;
+        (**(code **)(*piVar2 + 0x50))(piVar2,&auStack_2c);
       }
     }
     fn_8259BDA8(&puStack_30);
@@ -59,8 +59,8 @@ undefined8 fn_82871B50(int param_1,int param_2)
     piVar2 = (int *)puStack_30[3];
     if ((piVar2 != (int *)0x0) && (iVar3 = (**(code **)(*piVar2 + 0x4c))(piVar2), iVar3 == param_2))
     {
-      auStack_2c[0] = 0;
-      (**(code **)(*piVar2 + 0x50))(piVar2,auStack_2c);
+      auStack_2c = 0;
+      (**(code **)(*piVar2 + 0x50))(piVar2,&auStack_2c);
     }
     fn_8259BDA8(&puStack_30);
     puVar1 = *(undefined4 **)(param_1 + 0x28);

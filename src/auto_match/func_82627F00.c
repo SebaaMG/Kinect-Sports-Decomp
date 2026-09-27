@@ -40,8 +40,8 @@ void fn_82627F00(int param_1,uint *param_2,int param_3,int param_4,int *param_5,
 {
   uint uVar1;
   int *piVar2;
-  undefined4 uStack_50;
-  int iStack_4c;
+  struct { undefined4 first; int second; } stack_pair_50;
+
   
   piVar2 = *(int **)(param_1 + 0x34);
   do {
@@ -59,11 +59,11 @@ LAB_82627f64:
     if ((uVar1 & 0xffff) == *param_2) {
       if (*piVar2 != 0) {
         *param_5 = *piVar2;
-        uStack_50 = 0;
-        iStack_4c = 0;
-        fn_82517978(&uStack_50,*(undefined4 *)(param_1 + 4),*(undefined4 *)(param_1 + 8),1);
-        fn_823F2E20(param_6,&uStack_50);
-        if (iStack_4c != 0) {
+        stack_pair_50.first = 0;
+        stack_pair_50.second = 0;
+        fn_82517978(&stack_pair_50.first,*(undefined4 *)(param_1 + 4),*(undefined4 *)(param_1 + 8),1);
+        fn_823F2E20(param_6,&stack_pair_50.first);
+        if (stack_pair_50.second != 0) {
           fn_822315A0();
         }
         goto LAB_82627f64;

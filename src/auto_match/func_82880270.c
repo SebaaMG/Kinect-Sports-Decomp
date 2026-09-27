@@ -42,8 +42,8 @@ uint fn_82880270(undefined8 param_1)
 {
   undefined8 *puVar1;
   longlong lVar2;
-  uint uStack_90;
-  uint uStack_8c;
+  struct { uint first; uint second; } stack_pair_90;
+
   uint uStack_88;
   uint uStack_84;
   uint uStack_80;
@@ -59,7 +59,7 @@ uint fn_82880270(undefined8 param_1)
   } while (lVar2 != 0);
   fn_82A2AA90(auStack_70);
   fn_82A2AA98(auStack_70,param_1,0x24);
-  fn_82A2AAA0(auStack_70,&uStack_90);
-  return uStack_90 ^ uStack_8c ^ uStack_88 ^ uStack_84 ^ uStack_80;
+  fn_82A2AAA0(auStack_70,&stack_pair_90.first);
+  return stack_pair_90.first ^ stack_pair_90.second ^ uStack_88 ^ uStack_84 ^ uStack_80;
 }
 

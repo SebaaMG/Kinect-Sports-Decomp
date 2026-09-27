@@ -49,7 +49,7 @@ undefined8 fn_827217C8(longlong param_1,int param_2,undefined4 *param_3,undefine
   char *pcVar6;
   char *pcVar7;
   char *pcVar8;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [16];
   
   iVar3 = *(int *)(param_2 + 0x78);
   if (*(char *)(iVar3 + 0x2a4) == '\x01') {

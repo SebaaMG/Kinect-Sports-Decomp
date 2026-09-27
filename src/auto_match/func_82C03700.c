@@ -36,7 +36,7 @@ ulonglong fn_82C03700(int param_1,ulonglong param_2,ulonglong param_3,int *param
   int iVar2;
   int iVar3;
   ulonglong uVar4;
-  int aiStack_50 [20];
+  int aiStack_50;
   
   *param_4 = 0;
   if (0x10000 < (param_3 & 0xffffffff)) {
@@ -72,17 +72,17 @@ LAB_82c03798:
     iVar2 = *(int *)(param_1 + 0x70);
   }
   else {
-    aiStack_50[0] = 0;
+    aiStack_50 = 0;
     iVar3 = (**(code **)(**(int **)(param_1 + 0x34) + 0x3c))
                       (*(int **)(param_1 + 0x34),*(uint *)(param_1 + 0x2c) + uVar4,0x10000 - uVar4,
-                       aiStack_50);
+                       &aiStack_50);
     iVar2 = *(int *)(param_1 + 0x70);
     if (-1 < iVar3) {
       if (iVar2 != 0) {
         (**(code **)(**(int **)(param_1 + 0x34) + 0x14))();
       }
       *(int *)(param_1 + 0x298) = (int)param_2;
-      *(int *)(param_1 + 0x29c) = aiStack_50[0] + (int)uVar4;
+      *(int *)(param_1 + 0x29c) = aiStack_50 + (int)uVar4;
 LAB_82c0388c:
       uVar4 = (*(uint *)(param_1 + 0x29c) - param_2) + (ulonglong)*(uint *)(param_1 + 0x298);
       if ((param_3 & 0xffffffff) < (uVar4 & 0xffffffff)) {

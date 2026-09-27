@@ -33,7 +33,7 @@ extern int fn_82517ED8();
 undefined4 * fn_82517FF0(undefined4 *param_1,undefined8 param_2)
 
 {
-  undefined1 auStack_30 [16];
+  undefined1 auStack_30 [1];
   int *piStack_20;
   
   fn_82517ED8(auStack_30);

@@ -26,7 +26,7 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_82A5C1E0();
-extern int fn_82F691F0();
+extern int memset();
 extern unsigned int lbl_8208DEC4;
 extern unsigned int lbl_8208DEFC;
 
@@ -41,6 +41,6 @@ void fn_82A5B820(undefined4 *param_1)
   *param_1 = &lbl_8208DEFC;
   param_1[1] = &lbl_8208DEC4;
                     /* WARNING: Subroutine does not return */
-  fn_82F691F0(param_1 + 7,0,0x3c);
+  memset(param_1 + 7,0,0x3c);
 }
 

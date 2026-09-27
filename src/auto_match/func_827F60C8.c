@@ -41,7 +41,7 @@ void fn_827F60C8(int param_1)
   undefined1 *puVar2;
   longlong lVar3;
   undefined1 auStack_290 [16];
-  undefined1 auStack_280 [588];
+  undefined1 auStack_280 [524];
   undefined1 auStack_34 [52];
   
   fn_827F9C90(param_1 + 0x24);

@@ -42,7 +42,7 @@ void fn_82B86A10(undefined8 param_1,longlong param_2,int param_3)
   int *piVar7;
   uint uVar8;
   uint auStack_30 [4];
-  undefined1 auStack_20 [32];
+  undefined1 auStack_20 [16];
   
   iVar5 = (int)param_2;
   uVar8 = 0;

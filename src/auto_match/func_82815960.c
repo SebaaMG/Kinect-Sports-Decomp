@@ -46,7 +46,7 @@ ulonglong fn_82815960(int param_1,int param_2,int param_3)
   ulonglong uVar8;
   ulonglong uVar9;
   longlong lVar10;
-  uint auStack_70 [28];
+  uint auStack_70;
   
   iVar1 = *(int *)(param_2 + 0x20);
   uVar7 = 0;
@@ -87,9 +87,9 @@ ulonglong fn_82815960(int param_1,int param_2,int param_3)
                       (ulonglong)*(uint *)(iVar4 + 0x15) + uVar8 + 0x43 & 0xfffffffc) -
                      (ulonglong)*(uint *)(iVar4 + 0x15);
             if (iVar1 != 0) {
-              fn_82820290(iVar1,uVar6 + 3,auStack_70);
-              lVar10 = (ulonglong)auStack_70[0] + lVar10;
-              lVar5 = (ulonglong)auStack_70[0] + lVar5;
+              fn_82820290(iVar1,uVar6 + 3,&auStack_70);
+              lVar10 = (ulonglong)auStack_70 + lVar10;
+              lVar5 = (ulonglong)auStack_70 + lVar5;
             }
             if ((*(uint *)(param_2 + 0x10) & 2) == 0) {
               if (lbl_8320A5D0 == (code *)0x0) goto LAB_82815b50;

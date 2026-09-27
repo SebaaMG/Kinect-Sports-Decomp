@@ -50,7 +50,7 @@ void fn_825B51E8(int *param_1,int param_2,int param_3)
   uint uStack_60;
   undefined4 uStack_5c;
   undefined4 auStack_58 [2];
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [48];
   
   iVar3 = param_3 * 4;
   if (*(int *)(*(int *)(*param_1 + 0x98) + iVar3) != 0) {

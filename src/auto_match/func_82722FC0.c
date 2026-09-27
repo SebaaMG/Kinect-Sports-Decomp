@@ -69,7 +69,7 @@ void fn_82722FC0(int param_1)
   int aiStack_868 [2];
   ulonglong uStack_860;
   ulonglong uStack_858;
-  undefined1 auStack_850 [2128];
+  undefined1 auStack_850 [2048];
   
   if (*(int **)(param_1 + 8) != (int *)0x0) {
     iVar7 = (**(code **)(**(int **)(param_1 + 8) + 8))();

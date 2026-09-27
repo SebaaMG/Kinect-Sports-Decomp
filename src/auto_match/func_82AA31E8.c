@@ -39,7 +39,7 @@ fn_82AA31E8(undefined8 param_1,int param_2,undefined8 param_3,uint *param_4,unde
   uint uVar1;
   uint uVar2;
   undefined8 uVar3;
-  undefined1 auStack_60 [96];
+  undefined1 auStack_60 [80];
   
   uVar1 = *param_4;
   uVar2 = param_4[1];

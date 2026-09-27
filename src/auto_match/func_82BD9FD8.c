@@ -38,16 +38,16 @@ undefined8 fn_82BD9FD8(undefined8 *param_1)
   undefined8 *puVar2;
   undefined4 *puVar3;
   undefined4 uStack_30;
-  undefined4 auStack_2c [11];
+  undefined4 auStack_2c;
   
   uVar1 = 0;
   if (*(int *)(param_1 + 4) != 0) {
     puVar3 = (undefined4 *)((int)param_1 + 0x14);
     do {
       fn_82BD52C0(*(undefined4 *)(param_1 + 1),*param_1,*(undefined4 *)(puVar3[1] + 0x18),
-                   auStack_2c,&uStack_30);
+                   &auStack_2c,&uStack_30);
       puVar3 = puVar3 + 1;
-      fn_82BD7B10(*puVar3,auStack_2c[0],uStack_30);
+      fn_82BD7B10(*puVar3,auStack_2c,uStack_30);
       uVar1 = uVar1 + 1;
     } while (uVar1 < *(uint *)(param_1 + 4));
   }

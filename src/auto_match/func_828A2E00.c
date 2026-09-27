@@ -42,7 +42,7 @@ undefined4 * fn_828A2E00(undefined4 *param_1,int *param_2,int *param_3)
   undefined4 uVar7;
   undefined8 uVar6;
   undefined8 uStack_38;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
   
   puVar4 = (undefined4 *)0x0;
   if (((int *)*param_3 != (int *)0x0) &&

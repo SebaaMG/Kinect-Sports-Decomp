@@ -46,7 +46,7 @@ void fn_828863B0(void)
   int iVar5;
   int *piStack_30;
   int iStack_2c;
-  int *apiStack_28 [10];
+  int * apiStack_28;
   
   piVar3 = (int *)fn_825089A0();
   (**(code **)(*piVar3 + 0xc))();
@@ -68,12 +68,12 @@ void fn_828863B0(void)
     do {
       piVar1 = piStack_30;
       iStack_2c = piStack_30[3];
-      fn_8289F160(apiStack_28,0xffffffff83212a00,&iStack_2c);
-      if (apiStack_28[0] == piVar3) {
+      fn_8289F160(&apiStack_28,0xffffffff83212a00,&iStack_2c);
+      if (apiStack_28 == piVar3) {
         iVar4 = 0;
       }
       else {
-        iVar4 = apiStack_28[0][4];
+        iVar4 = apiStack_28[4];
       }
       if (*(char *)(iVar4 + 6) != '\0') {
         do {

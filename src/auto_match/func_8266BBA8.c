@@ -50,7 +50,7 @@ undefined8 fn_8266BBA8(uint param_1,int param_2,undefined2 *param_3,undefined2 *
   int iStack0000001c;
   undefined2 *puStack00000024;
   undefined2 *puStack0000002c;
-  undefined1 auStack_120 [260];
+  undefined1 auStack_120 [212];
   int iStack_1c;
   int iStack_18;
   undefined2 uStack_14;

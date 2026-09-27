@@ -52,7 +52,7 @@ ulonglong fn_827E6208(int param_1,int param_2)
   int *piVar6;
   ulonglong uVar2;
   undefined4 auStack_50 [4];
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [32];
   
   if (*(int *)(param_2 + 0x20) == 0) {
     if (*(int *)(param_1 + 0x3c) <= *(int *)(param_1 + 0x4c)) {

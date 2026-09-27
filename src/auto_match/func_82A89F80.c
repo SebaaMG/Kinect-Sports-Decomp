@@ -37,7 +37,7 @@ fn_82A89F80(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefined8 
 
 {
   char cVar1;
-  undefined1 auStack_b0 [176];
+  undefined1 auStack_b0 [128];
   
   fn_82A88D40(auStack_b0);
   cVar1 = fn_82A88800(param_1,param_2,auStack_b0);

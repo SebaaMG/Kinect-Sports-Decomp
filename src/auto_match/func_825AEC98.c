@@ -45,7 +45,7 @@ void fn_825AEC98(undefined8 param_1)
   undefined4 in_register_000104d4;
   undefined4 in_register_000104d8;
   undefined4 in_vr77;
-  undefined1 auStack_30 [16];
+  undefined1 auStack_30 [1];
   undefined1 auStack_20 [16];
   
   fn_825AF508(auStack_20,param_1);

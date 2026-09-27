@@ -33,19 +33,19 @@ void fn_82A37990(undefined4 *param_1,ulonglong param_2)
 
 {
   undefined4 uVar1;
-  undefined8 auStack_40 [8];
+  undefined8 auStack_40;
   
   uVar1 = *param_1;
   if (param_1[10] != 0) {
     RtlEnterCriticalSection(param_1 + 3);
     while (0 < (int)param_1[0xc]) {
-      auStack_40[0] = 0xfffffffffff0bdc0;
-      KeDelayExecutionThread(1,0,auStack_40);
+      auStack_40 = 0xfffffffffff0bdc0;
+      KeDelayExecutionThread(1,0,&auStack_40);
     }
     NtSetEvent(param_1[10],0);
     if ((param_2 & 0xffffffff) != 0) {
-      auStack_40[0] = 0xfffffffffa0a1f00;
-      NtWaitForSingleObjectEx(param_2,1,0,auStack_40);
+      auStack_40 = 0xfffffffffa0a1f00;
+      NtWaitForSingleObjectEx(param_2,1,0,&auStack_40);
     }
     *param_1 = 0;
     param_1[0xb] = 0;

@@ -43,9 +43,9 @@ void fn_826C9718(int param_1,ulonglong param_2)
   char cVar5;
   int iVar4;
   uint uVar6;
-  undefined4 auStack_40 [2];
-  int iStack_38;
-  uint uStack_34;
+  undefined4 auStack_40;
+  struct { int first; uint second; } stack_pair_38;
+
   
   if ((int)param_2 != -1) {
     iVar4 = *(int *)(param_1 + 0x1ac);
@@ -56,23 +56,23 @@ void fn_826C9718(int param_1,ulonglong param_2)
       uVar2 = (ulonglong)*(uint *)(iVar4 + 0x10);
     }
     if ((param_2 & 0xffffffff) < (uVar2 & 0xffffffff)) {
-      uVar3 = fn_826F5D70((ulonglong)*(uint *)(param_1 + 0xa0) + 0xa2c,auStack_40);
-      (**(code **)(**(int **)(param_1 + 0x9c) + 0x2c))(&iStack_38,*(int **)(param_1 + 0x9c),param_2)
+      uVar3 = fn_826F5D70((ulonglong)*(uint *)(param_1 + 0xa0) + 0xa2c,&auStack_40);
+      (**(code **)(**(int **)(param_1 + 0x9c) + 0x2c))(&stack_pair_38.first,*(int **)(param_1 + 0x9c),param_2)
       ;
       uVar6 = 0;
-      if (uStack_34 != 0) {
+      if (stack_pair_38.second != 0) {
         iVar4 = 0;
         do {
-          piVar1 = *(int **)(iVar4 + iStack_38);
+          piVar1 = *(int **)(iVar4 + stack_pair_38.first);
           cVar5 = (**(code **)(*piVar1 + 0x10))(piVar1);
           if (cVar5 != '\0') {
             (**(code **)(*piVar1 + 4))(piVar1,param_1);
           }
           uVar6 = uVar6 + 1;
           iVar4 = iVar4 + 4;
-        } while (uVar6 < uStack_34);
+        } while (uVar6 < stack_pair_38.second);
       }
-      *(undefined4 *)(*(int *)(param_1 + 0xa0) + 0xa7c) = auStack_40[0];
+      *(undefined4 *)(*(int *)(param_1 + 0xa0) + 0xa7c) = auStack_40;
       fn_82704760(*(undefined4 *)(param_1 + 0xa0),uVar3);
       return;
     }

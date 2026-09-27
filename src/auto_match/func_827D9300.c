@@ -34,7 +34,7 @@ void fn_827D9300(int param_1,int param_2)
 {
   uint uVar1;
   ulonglong uVar2;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
   
   if (**(int **)(param_1 + 4) != param_2) {
     uVar1 = *(uint *)(param_2 + 4);

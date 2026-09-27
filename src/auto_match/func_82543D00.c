@@ -32,7 +32,7 @@ extern int fn_82549798();
 extern int fn_8263C910();
 extern int fn_82A93C18();
 extern int fn_82A93F70();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int lbl_8326B1C8;
 extern unsigned int lbl_8326B1CC;
 extern unsigned int lbl_8326B314;
@@ -69,7 +69,7 @@ void fn_82543D00(void)
   ulonglong uVar14;
   uint auStack_e0 [4];
   int aiStack_d0 [4];
-  undefined1 auStack_c0 [192];
+  undefined1 auStack_c0 [112];
   
   uVar2 = lbl_8326B434;
   uVar1 = lbl_8326B430;
@@ -128,8 +128,8 @@ void fn_82543D00(void)
     fn_82A93F70(0xffffffff8326afc0,lbl_8326B338);
     fn_82A93C18(uVar14,uVar13,1,0,0x18280186,0,0,0xffffffffffffffff);
     fn_82A93F70(0xffffffff8326aff4,lbl_8326B338);
-    fn_82F68CC0(0xffffffff8326b028,0xffffffff8326afc0,0x34);
-    fn_82F68CC0(0xffffffff8326b05c,0xffffffff8326aff4,0x34);
+    memcpy(0xffffffff8326b028,0xffffffff8326afc0,0x34);
+    memcpy(0xffffffff8326b05c,0xffffffff8326aff4,0x34);
     lbl_8326B33C = uVar1;
     lbl_8326B340 = uVar2;
     uRam8326b344 = uVar1;
@@ -149,7 +149,7 @@ void fn_82543D00(void)
     do {
       uVar4 = fn_82544718(auStack_c0,uVar1 / uVar12,uVar2 / uVar12,0x18280186,lVar3,auStack_e0
                                );
-      fn_82F68CC0(lVar7,uVar4,0x34);
+      memcpy(lVar7,uVar4,0x34);
       aiStack_d0[2] = 0;
       aiStack_d0[0] =
            (int)((((longlong)(int)uVar8 * (longlong)iVar11 & 0x3fffffffU) << 2) / 0x1400) +

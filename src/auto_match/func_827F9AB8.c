@@ -35,7 +35,7 @@ void fn_827F9AB8(int param_1)
 {
   uint uVar1;
   uint uVar2;
-  int aiStack_30 [12];
+  int aiStack_30;
   
   if ((*(int *)(param_1 + 0x8c) != 0) && (*(short *)(param_1 + 0x88) != *(short *)(param_1 + 0x2c)))
   {
@@ -49,9 +49,9 @@ void fn_827F9AB8(int param_1)
     uVar2 = 0;
     if (uVar1 != 0) {
       do {
-        fn_827F98C8(param_1,uVar2,aiStack_30);
+        fn_827F98C8(param_1,uVar2,&aiStack_30);
         *(bool *)(uVar2 + *(int *)(param_1 + 0x8c)) =
-             (ushort)*(byte *)(aiStack_30[0] + 0x32) <= *(ushort *)(param_1 + 0x2c);
+             (ushort)*(byte *)(aiStack_30 + 0x32) <= *(ushort *)(param_1 + 0x2c);
         uVar2 = uVar2 + 1;
       } while (uVar2 < uVar1);
     }

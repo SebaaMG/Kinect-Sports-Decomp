@@ -63,14 +63,14 @@ void fn_828A8678(undefined4 *param_1)
   undefined4 *puVar8;
   undefined1 uStack_50;
   undefined4 uStack_4c;
-  undefined4 uStack_48;
-  undefined4 uStack_44;
+  struct { undefined4 first; undefined4 second; } stack_pair_48;
+
   
   *param_1 = &lbl_82024340;
   fn_828A8160(lbl_83213F18,param_1);
   uStack_4c = param_1[10];
-  fn_828A1C98(&uStack_48,0xffffffff83213f00,&uStack_4c);
-  fn_82887890(&uStack_4c,0xffffffff83213f00,uStack_48,uStack_44);
+  fn_828A1C98(&stack_pair_48.first,0xffffffff83213f00,&uStack_4c);
+  fn_82887890(&uStack_4c,0xffffffff83213f00,stack_pair_48.first,stack_pair_48.second);
   puVar8 = (undefined4 *)param_1[0xc0];
   if (puVar8 != (undefined4 *)0x0) {
     (**(code **)*puVar8)(puVar8,1);

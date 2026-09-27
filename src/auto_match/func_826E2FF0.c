@@ -44,16 +44,16 @@ void fn_826E2FF0(undefined8 param_1,undefined8 param_2,undefined4 param_3,undefi
   ulonglong uVar4;
   char in_RESERVE;
   byte in_cr0;
-  uint uStack_40;
-  undefined4 uStack_3c;
+  struct { uint first; undefined4 second; } stack_pair_40;
+
   undefined4 uStack_38;
   
-  fn_8268B330(&uStack_40);
-  fn_8268B8E8(&uStack_40,param_2);
-  uStack_3c = param_3;
+  fn_8268B330(&stack_pair_40.first);
+  fn_8268B8E8(&stack_pair_40.first,param_2);
+  stack_pair_40.second = param_3;
   uStack_38 = param_4;
-  fn_826E1F08(param_1,&uStack_40);
-  lVar2 = ((ulonglong)uStack_40 & 0xfffffffc) + 4;
+  fn_826E1F08(param_1,&stack_pair_40.first);
+  lVar2 = ((ulonglong)stack_pair_40.first & 0xfffffffc) + 4;
   do {
     puVar3 = (uint *)lVar2;
     uVar4 = (ulonglong)*puVar3;

@@ -41,8 +41,8 @@ void fn_823F5B48(int *param_1,undefined8 param_2,int *param_3)
   char cVar4;
   undefined4 *puVar3;
   int iVar5;
-  undefined4 uStack_30;
-  undefined4 uStack_2c;
+  struct { undefined4 first; undefined4 second; } stack_pair_30;
+
   
   if (param_3 != (int *)0x0) {
     if ((int *)*param_3 == (int *)0x0) {
@@ -60,16 +60,16 @@ void fn_823F5B48(int *param_1,undefined8 param_2,int *param_3)
   iVar5 = 0;
 LAB_823f5bb4:
   if (iVar5 == 0) {
-    uStack_30 = 0xffffffff;
-    uStack_2c = 1;
-    (**(code **)(*param_1 + 0x14))(param_1,param_2,&uStack_30);
+    stack_pair_30.first = 0xffffffff;
+    stack_pair_30.second = 1;
+    (**(code **)(*param_1 + 0x14))(param_1,param_2,&stack_pair_30.first);
     puVar3 = (undefined4 *)fn_8265C9E0(0xc);
     if (puVar3 == (undefined4 *)0x0) {
       puVar3 = (undefined4 *)0x0;
     }
     else {
       *puVar3 = &lbl_821B7A80;
-      *(ulonglong *)(puVar3 + 1) = CONCAT44(uStack_30,uStack_2c);
+      *(ulonglong *)(puVar3 + 1) = CONCAT44(stack_pair_30.first,stack_pair_30.second);
     }
     puVar1 = (undefined4 *)*param_3;
     *param_3 = (int)puVar3;

@@ -41,7 +41,7 @@ fn_82303E68(undefined4 *param_1,int param_2,undefined8 param_3,int param_4,undef
 
 {
   undefined4 uVar1;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [32];
   
   fn_82230110(auStack_50,0xffffffff821aee98);
   fn_822C70F0(param_1,auStack_50,param_2);

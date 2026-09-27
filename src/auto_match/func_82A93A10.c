@@ -28,7 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_80;
 extern int fn_8263AB38();
 extern int fn_8263BFD0();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int uStack_50;
 extern unsigned int uStack_60;
 extern unsigned int uStack_68;
@@ -38,8 +38,7 @@ extern unsigned int uStack_8c;
 extern unsigned int uStack_90;
 
 
-longlong fn_82A93A10(ulonglong param_1,ulonglong param_2,ulonglong param_3,ulonglong param_4,
-                      ulonglong param_5,ulonglong param_6,undefined8 param_7,int param_8)
+longlong fn_82A93A10(ulonglong param_1, ulonglong param_2, ulonglong param_3, ulonglong param_4, ulonglong param_5, ulonglong param_6, undefined8 param_7, int param_8, undefined8 unused_arg_9, uint in_stack_0000005c, uint in_stack_00000064, undefined8 unused_arg_12, int in_stack_00000074, int in_stack_0000007c)
 
 {
   undefined8 *puVar1;
@@ -47,10 +46,10 @@ longlong fn_82A93A10(ulonglong param_1,ulonglong param_2,ulonglong param_3,ulong
   uint uVar3;
   ulonglong uVar4;
   longlong lVar5;
-  uint in_stack_0000005c;
-  uint in_stack_00000064;
-  int in_stack_00000074;
-  int in_stack_0000007c;
+
+
+
+
   undefined4 *in_stack_00000084;
   uint *in_stack_0000008c;
   uint uStack_90;
@@ -119,7 +118,7 @@ LAB_82a93ac0:
     *in_stack_0000008c = uStack_8c;
   }
   if (in_stack_0000007c != 0) {
-    fn_82F68CC0(in_stack_0000007c,auStack_80,0x34,1,0xffffffffffff0000,0xffffffffffff0000);
+    memcpy(in_stack_0000007c,auStack_80,0x34,1,0xffffffffffff0000,0xffffffffffff0000);
   }
   return uVar4 + uStack_8c;
 }

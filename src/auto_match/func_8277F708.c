@@ -45,8 +45,8 @@ void fn_8277F708(double param_1,int param_2,int param_3,int *param_4)
   uint uVar2;
   int iStack_50;
   int iStack_4c;
-  float fStack_40;
-  undefined4 uStack_3c;
+  struct { float first; undefined4 second; } stack_pair_40;
+
   undefined4 uStack_38;
   undefined4 uStack_34;
   undefined4 uStack_30;
@@ -58,12 +58,12 @@ void fn_8277F708(double param_1,int param_2,int param_3,int *param_4)
     if (*(int *)(iVar1 + 0x14) == 0) {
       uStack_38 = *(undefined4 *)(param_3 + 8);
       uStack_30 = *(undefined4 *)(param_2 + 0x144);
-      fStack_40 = (float)param_1;
+      stack_pair_40.first = (float)param_1;
       uStack_34 = 0xffffffff;
       uStack_2c = 0;
-      uStack_3c = *(undefined4 *)(*param_4 + 0x1c);
+      stack_pair_40.second = *(undefined4 *)(*param_4 + 0x1c);
       uStack_28 = 0xffffffff;
-      fn_8277E848(param_2 + 0x134,&fStack_40);
+      fn_8277E848(param_2 + 0x134,&stack_pair_40.first);
       uVar2 = *(int *)(param_2 + 0x134) - 1;
       *(uint *)(iVar1 + 0x14) =
            *(int *)((uVar2 >> 2 & 0x3ffffffc) + *(int *)(param_2 + 0x140)) + (uVar2 & 0xf) * 0x1c;

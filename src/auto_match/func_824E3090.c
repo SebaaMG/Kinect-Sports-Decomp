@@ -49,8 +49,8 @@ void fn_824E3090(void)
 {
   int iVar1;
   double dVar2;
-  undefined4 uStack_40;
-  undefined4 uStack_3c;
+  struct { undefined4 first; undefined4 second; } stack_pair_40;
+
   undefined4 uStack_38;
   undefined4 uStack_34;
   undefined4 uStack_30;
@@ -67,8 +67,8 @@ void fn_824E3090(void)
   iVar1 = fn_8258C000();
   if (((*(int *)(iVar1 + 0x1fc) != 0) && (*(int *)(iVar1 + 500) != 0)) &&
      ((*(int *)(iVar1 + 0x1f8) != 0 || (*(int *)(iVar1 + 0x1a0) == 0)))) {
-    uStack_40 = 0;
-    uStack_3c = 0;
+    stack_pair_40.first = 0;
+    stack_pair_40.second = 0;
     uStack_38 = 0;
     uStack_30 = lbl_821CC160;
     uStack_34 = 0;
@@ -76,7 +76,7 @@ void fn_824E3090(void)
     uStack_24 = 0;
     uStack_28 = lbl_821CC160;
     uStack_22 = 0;
-    fn_82BE3A18(&uStack_40,0);
+    fn_82BE3A18(&stack_pair_40.first,0);
   }
   return;
 }

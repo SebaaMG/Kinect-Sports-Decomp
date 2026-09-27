@@ -35,7 +35,7 @@ int * fn_82775520(int *param_1,int param_2,int param_3,int param_4,undefined8 pa
 
 {
   int *piVar1;
-  undefined1 auStack_60 [96];
+  undefined1 auStack_60 [48];
   
   param_1[7] = 0;
   param_1[9] = 0;

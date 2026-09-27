@@ -36,7 +36,7 @@ int fn_829305F0(int *param_1)
   undefined4 *puVar1;
   int iVar2;
   int *piVar3;
-  int aiStack_30 [12];
+  int aiStack_30 [1];
   
   aiStack_30[0] = 0;
   piVar3 = aiStack_30;

@@ -46,7 +46,7 @@ char fn_82BEA038(float *param_1,float *param_2)
   int iVar9;
   float *pfVar10;
   undefined1 auStack_50 [16];
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [1];
   
   if (((param_1 == (float *)0x0) || (param_2 == (float *)0x0)) || (lbl_8322B22C == 0)) {
 LAB_82bea170:

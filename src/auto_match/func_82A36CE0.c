@@ -35,13 +35,13 @@ extern unsigned int uStack_24;
 undefined4 fn_82A36CE0(undefined8 param_1,undefined8 param_2)
 
 {
-  undefined4 auStack_30 [2];
+  undefined4 auStack_30;
   undefined1 auStack_28 [4];
   undefined4 uStack_24;
   
-  auStack_30[0] = 0;
+  auStack_30 = 0;
   fn_82A369B0(auStack_28,param_1);
-  fn_82A39AA8(0,auStack_30,uStack_24,0x14,param_2);
-  return auStack_30[0];
+  fn_82A39AA8(0,&auStack_30,uStack_24,0x14,param_2);
+  return auStack_30;
 }
 

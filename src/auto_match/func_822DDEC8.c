@@ -35,19 +35,19 @@ extern unsigned int iStack_40;
 void fn_822DDEC8(int param_1)
 
 {
-  int iStack_40;
-  int iStack_3c;
+  struct { int first; int second; } stack_pair_40;
+
   
   *(undefined4 *)(param_1 + 0x54) = 0;
   *(undefined4 *)(param_1 + 0x30) = 0x18;
   *(undefined4 *)(param_1 + 0x94) = 0;
   *(undefined4 *)(*(int *)(param_1 + 0x14) + 0x24c) = 0;
   *(undefined4 *)(param_1 + 0xa0) = 0x18;
-  fn_824D2AE8(&iStack_40,param_1 + 0xb4);
-  if (iStack_40 != 0) {
-    *(undefined4 *)(iStack_40 + 0xac) = 1;
+  fn_824D2AE8(&stack_pair_40.first,param_1 + 0xb4);
+  if (stack_pair_40.first != 0) {
+    *(undefined4 *)(stack_pair_40.first + 0xac) = 1;
   }
-  if (iStack_3c != 0) {
+  if (stack_pair_40.second != 0) {
     fn_822315A0();
   }
   *(undefined4 *)(*(int *)(param_1 + 0x14) + 0x2d0) = 0;

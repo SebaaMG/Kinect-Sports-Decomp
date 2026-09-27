@@ -51,7 +51,7 @@ undefined8 fn_82860750(int param_1,undefined8 param_2,float *param_3)
   float fStack_60;
   float fStack_5c;
   float fStack_58;
-  float afStack_50 [20];
+  float afStack_50 [8];
   
   iVar3 = fn_8285A808();
   piVar4 = (int *)fn_8285A830(param_1,param_2);

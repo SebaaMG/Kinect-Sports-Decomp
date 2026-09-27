@@ -42,15 +42,15 @@ void fn_82883B00(undefined4 *param_1)
   undefined4 uVar5;
   int iVar6;
   undefined4 uStack_30;
-  int aiStack_2c [11];
+  int aiStack_2c;
   
   uStack_30 = *param_1;
-  fn_8289F160(aiStack_2c,0xffffffff83212a00,&uStack_30);
-  if (aiStack_2c[0] == lbl_83212A04) {
+  fn_8289F160(&aiStack_2c,0xffffffff83212a00,&uStack_30);
+  if (aiStack_2c == lbl_83212A04) {
     iVar6 = 0;
   }
   else {
-    iVar6 = *(int *)(aiStack_2c[0] + 0x10);
+    iVar6 = *(int *)(aiStack_2c + 0x10);
   }
   piVar2 = (int *)param_1[1];
   if (*(char *)(piVar2 + 9) != '\0') {

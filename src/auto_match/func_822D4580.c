@@ -59,7 +59,7 @@ void fn_822D4580(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefi
   undefined1 auStack_d0 [32];
   undefined1 auStack_b0 [32];
   undefined1 auStack_90 [32];
-  undefined1 auStack_70 [112];
+  undefined1 auStack_70 [32];
   
   puStack_13c = (undefined4 *)fn_8265C9E0(0x1d0);
   if (puStack_13c == (undefined4 *)0x0) {

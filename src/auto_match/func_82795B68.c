@@ -44,7 +44,7 @@ int fn_82795B68(int param_1,int param_2,int param_3)
   uint uVar4;
   int iVar5;
   int iVar6;
-  undefined4 auStack_50 [20];
+  undefined4 auStack_50;
   
   fn_8278FB30();
   *(undefined4 *)(param_1 + 0xc) = 0;
@@ -73,8 +73,8 @@ int fn_82795B68(int param_1,int param_2,int param_3)
     if (bVar1) break;
     iVar6 = iVar5 + *(int *)(param_1 + 0x10);
     uVar2 = fn_8278E7B0(param_3,*(undefined4 *)(iVar6 + 8));
-    auStack_50[0] = (undefined4)uVar2;
-    fn_82790618(iVar6,auStack_50);
+    auStack_50 = (undefined4)uVar2;
+    fn_82790618(iVar6,&auStack_50);
     if ((uVar2 & 0xffffffff) != 0) {
       fn_8267C4F0(uVar2);
     }

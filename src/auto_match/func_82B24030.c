@@ -42,8 +42,8 @@ undefined1 fn_82B24030(undefined8 param_1,int param_2,int param_3,int *param_4)
   int *piVar3;
   int iVar4;
   uint uVar5;
-  int iStack_50;
-  uint uStack_4c;
+  struct { int first; uint second; } stack_pair_50;
+
   int iStack_48;
   int iStack_40;
   uint uStack_3c;
@@ -52,14 +52,14 @@ undefined1 fn_82B24030(undefined8 param_1,int param_2,int param_3,int *param_4)
   iStack_48 = 0;
   iStack_38 = 0;
   uStack_3c = -(uint)((*(uint *)(param_2 + 4) & 1) == 0) & *(uint *)(param_2 + 4);
-  uStack_4c = -(uint)((*(uint *)(param_3 + 4) & 1) == 0) & *(uint *)(param_3 + 4);
+  stack_pair_50.second = -(uint)((*(uint *)(param_3 + 4) & 1) == 0) & *(uint *)(param_3 + 4);
   uVar5 = uStack_3c;
   iVar4 = 0;
-  iStack_50 = param_3;
+  stack_pair_50.first = param_3;
   iStack_40 = param_2;
   do {
     do {
-      if ((uStack_4c == 0) || (bVar1 = false, iStack_48 == *(int *)(uStack_4c + 8))) {
+      if ((stack_pair_50.second == 0) || (bVar1 = false, iStack_48 == *(int *)(stack_pair_50.second + 8))) {
         bVar1 = true;
       }
       if (bVar1) {
@@ -68,7 +68,7 @@ undefined1 fn_82B24030(undefined8 param_1,int param_2,int param_3,int *param_4)
         }
         return 1;
       }
-      piVar2 = (int *)fn_82B1A538(&iStack_50);
+      piVar2 = (int *)fn_82B1A538(&stack_pair_50.first);
     } while ((((param_4 != (int *)0x0) && (*piVar2 == *param_4)) && (piVar2[1] == param_4[1])) &&
             (piVar2[2] == param_4[2]));
     if ((uVar5 == 0) || (bVar1 = false, iVar4 == *(int *)(uVar5 + 8))) {

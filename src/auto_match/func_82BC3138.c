@@ -36,7 +36,7 @@ void fn_82BC3138(int param_1,undefined4 *param_2,int *param_3,undefined8 param_4
 
 {
   int iVar1;
-  undefined1 auStack_50 [32];
+  undefined1 auStack_50 [16];
   uint uStack_30;
   undefined4 uStack_2c;
   

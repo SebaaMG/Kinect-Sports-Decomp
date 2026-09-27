@@ -33,10 +33,10 @@ bool fn_82826648(longlong param_1,undefined4 param_2)
 
 {
   undefined4 uStack_10;
-  int aiStack_c [3];
+  int aiStack_c;
   
   uStack_10 = param_2;
-  fn_82822510(param_1 + 0x2fc,0xffffffff828278f8,&uStack_10,aiStack_c);
-  return *(int *)(aiStack_c[0] + 0x14) != 0;
+  fn_82822510(param_1 + 0x2fc,0xffffffff828278f8,&uStack_10,&aiStack_c);
+  return *(int *)(aiStack_c + 0x14) != 0;
 }
 

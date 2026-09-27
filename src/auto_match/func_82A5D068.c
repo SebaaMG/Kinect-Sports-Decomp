@@ -39,15 +39,15 @@ void fn_82A5D068(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefi
   undefined4 in_stack_00000054;
   undefined4 in_stack_0000005c;
   undefined4 uStack_30;
-  undefined4 auStack_2c [11];
+  undefined4 auStack_2c;
   
   uStack_30 = 0;
-  auStack_2c[0] = 0;
+  auStack_2c = 0;
   iVar1 = fn_82A76808(param_2,param_3,param_5,param_6,&uStack_30);
   if ((-1 < iVar1) &&
      (iVar1 = fn_82A5CF88(param_1,in_stack_00000054,param_4,uStack_30,param_7,in_stack_0000005c,
-                            auStack_2c), -1 < iVar1)) {
-    *param_8 = auStack_2c[0];
+                            &auStack_2c), -1 < iVar1)) {
+    *param_8 = auStack_2c;
   }
   return;
 }

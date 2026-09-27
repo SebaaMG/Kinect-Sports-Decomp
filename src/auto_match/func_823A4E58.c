@@ -39,11 +39,11 @@ void fn_823A4E58(int param_1)
   int iVar2;
   char cVar4;
   int iVar3;
-  undefined4 auStack_30 [12];
+  undefined4 auStack_30;
   
   *(undefined4 *)(param_1 + 0x50) = 0;
-  auStack_30[0] = 0;
-  fn_822AF200(param_1 + 0x4c,auStack_30);
+  auStack_30 = 0;
+  fn_822AF200(param_1 + 0x4c,&auStack_30);
   piVar1 = *(int **)(*(int *)(param_1 + 0x48) + 8);
   if (piVar1 == (int *)0x0) {
     cVar4 = '\x01';

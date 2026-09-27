@@ -33,7 +33,7 @@ extern int fn_82936290();
 extern int fn_829410A8();
 extern int fn_82941178();
 extern int fn_82947448();
-extern int fn_82F69148();
+extern int _blkmov();
 extern unsigned int iStack0000001c;
 extern unsigned int iStack0000003c;
 extern unsigned int lbl_820347A8;
@@ -46,8 +46,7 @@ extern unsigned int uStack0000004c;
 /* WARNING: Restarted to delay deadcode elimination for space: stack */
 
 undefined8
-fn_82947568(int *param_1,int param_2,ulonglong param_3,uint *param_4,int param_5,int param_6,
-             undefined4 param_7,uint param_8)
+fn_82947568(int *param_1, int param_2, ulonglong param_3, uint *param_4, int param_5, int param_6, undefined4 param_7, uint param_8, undefined4 in_stack_00000054, uint in_stack_0000005c, undefined4 in_stack_00000064, uint in_stack_0000006c, uint in_stack_00000074)
 
 {
   char cVar1;
@@ -83,14 +82,14 @@ fn_82947568(int *param_1,int param_2,ulonglong param_3,uint *param_4,int param_5
   int iStack0000003c;
   undefined4 uStack00000044;
   uint uStack0000004c;
-  undefined4 in_stack_00000054;
-  uint in_stack_0000005c;
-  undefined4 in_stack_00000064;
-  uint in_stack_0000006c;
-  uint in_stack_00000074;
+
+
+
+
+
   int aiStack_1e0 [2];
   undefined *apuStack_1d8 [2];
-  uint auStack_1d0 [116];
+  uint auStack_1d0 [100];
   
   uVar8 = ZEXT48(&stack0x00000000);
   uVar21 = 0;
@@ -328,7 +327,7 @@ fn_82947568(int *param_1,int param_2,ulonglong param_3,uint *param_4,int param_5
     } while (uVar28 != 0);
   }
   if ((param_3 & 0xffffffff) != 0) {
-    fn_82F69148(uVar8 - 0x1c0,uVar8 - 0x1d0,(param_3 & 0x3fffffff) << 2);
+    _blkmov(uVar8 - 0x1c0,uVar8 - 0x1d0,(param_3 & 0x3fffffff) << 2);
   }
   lVar25 = uVar8 - 0x1e0;
   do {

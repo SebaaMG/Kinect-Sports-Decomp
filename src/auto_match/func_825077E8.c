@@ -55,8 +55,8 @@ undefined8 fn_825077E8(undefined4 *param_1,undefined8 param_2,undefined4 param_3
   ulonglong uVar1;
   int iVar3;
   double dVar4;
-  undefined4 uStack_70;
-  undefined4 uStack_6c;
+  struct { undefined4 first; undefined4 second; } stack_pair_70;
+
   float fStack_68;
   undefined4 uStack_64;
   undefined4 uStack_60;
@@ -95,15 +95,15 @@ undefined8 fn_825077E8(undefined4 *param_1,undefined8 param_2,undefined4 param_3
   uStack_40 = 0;
   uStack_3c = 0;
   uStack_48 = 0;
-  uStack_70 = 0x4d697850;
-  uStack_6c = lbl_821CA460;
+  stack_pair_70.first = 0x4d697850;
+  stack_pair_70.second = lbl_821CA460;
   uStack_64 = 0x20;
   uStack_60 = lbl_821917C0;
   uStack_54 = 0x40;
   uStack_50 = lbl_821917C0;
   uStack_44 = 0;
   uStack_58 = param_3;
-  fn_82554860(iVar3,0,param_2,&uStack_70);
+  fn_82554860(iVar3,0,param_2,&stack_pair_70.first);
   return 1;
 }
 

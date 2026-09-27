@@ -33,7 +33,7 @@ extern int fn_8256D810();
 extern int fn_827D9630();
 extern int fn_827D96A0();
 extern int fn_827D9FB0();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int lbl_821CAC50;
 extern unsigned int uStack_194;
 extern unsigned int uStack_198;
@@ -55,7 +55,7 @@ fn_8259A3A8(undefined4 *param_1,undefined8 param_2,undefined4 param_3,undefined8
   undefined4 uStack_198;
   undefined4 uStack_194;
   undefined1 auStack_190 [64];
-  char acStack_150 [336];
+  char acStack_150 [320];
   
   uStack_194 = 0;
   uStack_198 = fn_827D96A0(param_5);
@@ -65,7 +65,7 @@ fn_8259A3A8(undefined4 *param_1,undefined8 param_2,undefined4 param_3,undefined8
   fn_827D9FB0(param_1,auStack_190,&uStack_19c,&uStack_1a0,&uStack_198,param_4,&uStack_194);
   fn_8256D798(auStack_190,1,0);
   *param_1 = &lbl_821CAC50;
-  fn_82F68CC0(param_1 + 0x1a,param_2,0x134);
+  memcpy(param_1 + 0x1a,param_2,0x134);
   param_1[0x67] = param_3;
   fn_827D9630(param_1 + 0x68,param_5);
   if (param_6 == 0) {

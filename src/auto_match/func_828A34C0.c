@@ -42,8 +42,8 @@ undefined8 fn_828A34C0(undefined8 param_1,undefined8 param_2,int *param_3)
   undefined4 uStack_30;
   undefined4 uStack_2c;
   int iStack_28;
-  undefined4 uStack_20;
-  undefined4 uStack_1c;
+  struct { undefined4 first; undefined4 second; } stack_pair_20;
+
   int iStack_18;
   
   piVar1 = (int *)*param_3;
@@ -58,12 +58,12 @@ undefined8 fn_828A34C0(undefined8 param_1,undefined8 param_2,int *param_3)
   if ((piVar2 != (int *)0x0) && ((undefined4 *)*piVar2 != (undefined4 *)0x0)) {
     uStack_30 = *(undefined4 *)*piVar2;
   }
-  uStack_20 = 0;
-  uStack_1c = 0;
+  stack_pair_20.first = 0;
+  stack_pair_20.second = 0;
   if ((piVar1 != (int *)0x0) && ((undefined4 *)*piVar1 != (undefined4 *)0x0)) {
-    uStack_20 = *(undefined4 *)*piVar1;
+    stack_pair_20.first = *(undefined4 *)*piVar1;
   }
-  fn_828C5A90(param_1,param_2,&uStack_20,&uStack_30);
+  fn_828C5A90(param_1,param_2,&stack_pair_20.first,&uStack_30);
   return param_1;
 }
 

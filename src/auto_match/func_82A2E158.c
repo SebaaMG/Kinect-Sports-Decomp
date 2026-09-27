@@ -34,13 +34,13 @@ longlong fn_82A2E158(undefined8 param_1,undefined8 param_2,undefined8 param_3,un
 {
   int iVar1;
   longlong lVar2;
-  int aiStack_40 [16];
+  int aiStack_40;
   
   lVar2 = 0;
-  iVar1 = fn_82A2BAF0(param_1,param_2,0,param_4,aiStack_40);
+  iVar1 = fn_82A2BAF0(param_1,param_2,0,param_4,&aiStack_40);
   if ((iVar1 != 0) ||
-     (lVar2 = fn_82A2D960(param_1,param_2,0,param_3,param_4,aiStack_40), -1 < lVar2)) {
-    *(byte *)(aiStack_40[0] + 7) = *(byte *)(aiStack_40[0] + 7) | 0x40;
+     (lVar2 = fn_82A2D960(param_1,param_2,0,param_3,param_4,&aiStack_40), -1 < lVar2)) {
+    *(byte *)(aiStack_40 + 7) = *(byte *)(aiStack_40 + 7) | 0x40;
   }
   return lVar2;
 }

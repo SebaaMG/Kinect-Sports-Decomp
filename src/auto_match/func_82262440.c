@@ -36,27 +36,26 @@ extern int fn_82E1CCA8();
 extern int fn_82E1CD30();
 
 
-void fn_82262440(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefined8 param_4,
-                  undefined8 param_5,undefined8 param_6,undefined8 param_7,undefined8 param_8)
+void fn_82262440(undefined8 param_1, undefined8 param_2, undefined8 param_3, undefined8 param_4, undefined8 param_5, undefined8 param_6, undefined8 param_7, undefined8 param_8, undefined4 in_stack_00000054, undefined4 in_stack_0000005c, undefined4 in_stack_00000064, undefined4 in_stack_0000006c, undefined4 in_stack_00000074, undefined4 in_stack_0000007c, undefined4 in_stack_00000084, undefined4 in_stack_0000008c, undefined4 in_stack_00000094, undefined4 in_stack_0000009c, undefined4 in_stack_000000a4, undefined4 in_stack_000000ac, undefined4 in_stack_000000b4, undefined4 in_stack_000000bc)
 
 {
   char *pcVar1;
   int iVar2;
   char cVar3;
-  undefined4 in_stack_00000054;
-  undefined4 in_stack_0000005c;
-  undefined4 in_stack_00000064;
-  undefined4 in_stack_0000006c;
-  undefined4 in_stack_00000074;
-  undefined4 in_stack_0000007c;
-  undefined4 in_stack_00000084;
-  undefined4 in_stack_0000008c;
-  undefined4 in_stack_00000094;
-  undefined4 in_stack_0000009c;
-  undefined4 in_stack_000000a4;
-  undefined4 in_stack_000000ac;
-  undefined4 in_stack_000000b4;
-  undefined4 in_stack_000000bc;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
   pcVar1 = (char *)fn_8225F670();
   if (*pcVar1 != '\0') {

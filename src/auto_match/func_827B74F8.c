@@ -38,24 +38,24 @@ void fn_827B74F8(undefined8 param_1,undefined8 param_2,longlong param_3,undefine
                   undefined4 param_5,undefined4 param_6,undefined4 param_7,undefined4 param_8)
 
 {
-  undefined4 uStack_60;
-  undefined4 uStack_5c;
+  struct { undefined4 first; undefined4 second; } stack_pair_60;
+
   undefined4 uStack_58;
   undefined4 uStack_54;
   undefined4 uStack_50;
   
-  uStack_60 = param_4;
-  uStack_5c = param_5;
+  stack_pair_60.first = param_4;
+  stack_pair_60.second = param_5;
   uStack_58 = param_6;
   uStack_54 = param_7;
   uStack_50 = param_8;
-  fn_827B6420(&uStack_60,param_4,param_3 + 0x2e0,param_3 + 0x2d4);
-  uStack_60 = param_4;
-  uStack_5c = param_5;
+  fn_827B6420(&stack_pair_60.first,param_4,param_3 + 0x2e0,param_3 + 0x2d4);
+  stack_pair_60.first = param_4;
+  stack_pair_60.second = param_5;
   uStack_58 = param_6;
   uStack_54 = param_7;
   uStack_50 = param_8;
-  fn_827B6880(param_2,&uStack_60);
+  fn_827B6880(param_2,&stack_pair_60.first);
   return;
 }
 

@@ -46,8 +46,8 @@ fn_82636C98(undefined4 *param_1,ulonglong param_2,undefined8 param_3,undefined8 
   undefined4 *puVar5;
   undefined4 in_stack_00000054;
   uint auStack_90 [4];
-  undefined4 uStack_80;
-  uint uStack_7c;
+  struct { undefined4 first; uint second; } stack_pair_80;
+
   uint uStack_78;
   uint uStack_74;
   
@@ -59,9 +59,9 @@ fn_82636C98(undefined4 *param_1,ulonglong param_2,undefined8 param_3,undefined8 
       puVar3 = param_1;
       do {
         uVar4 = 0;
-        puVar5 = &uStack_80;
-        uStack_80 = *puVar3;
-        uStack_7c = puVar3[1] & 0xffff;
+        puVar5 = &stack_pair_80.first;
+        stack_pair_80.first = *puVar3;
+        stack_pair_80.second = puVar3[1] & 0xffff;
         uStack_78 = puVar3[2] << 0x10 | (uint)puVar3[1] >> 0x10;
         uStack_74 = (uint)puVar3[2] >> 0x10;
         do {
@@ -79,8 +79,8 @@ fn_82636C98(undefined4 *param_1,ulonglong param_2,undefined8 param_3,undefined8 
           puVar5 = puVar5 + 2;
         } while ((uVar4 & 0xffffffff) < 2);
         if ((param_7 & 0x20) == 0) {
-          puVar3[1] = uStack_78 << 0x10 | uStack_7c & 0xffff;
-          *puVar3 = uStack_80;
+          puVar3[1] = uStack_78 << 0x10 | stack_pair_80.second & 0xffff;
+          *puVar3 = stack_pair_80.first;
           puVar3[2] = uStack_74 << 0x10 | uStack_78 >> 0x10;
         }
         uVar2 = uVar2 + 0xc;

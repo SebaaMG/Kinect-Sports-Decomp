@@ -25,8 +25,8 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F63CA0();
-extern int fn_82F691F0();
+extern int memmove();
+extern int memset();
 
 
 undefined8 fn_826E7800(int param_1)
@@ -47,7 +47,7 @@ undefined8 fn_826E7800(int param_1)
   }
   uVar4 = (ulonglong)*(uint *)(param_1 + 0x2c);
   if (uVar4 < *(uint *)(param_1 + 0x30)) {
-    fn_82F63CA0((ulonglong)*(uint *)(param_1 + 0x3c),*(uint *)(param_1 + 0x3c) + uVar4,
+    memmove((ulonglong)*(uint *)(param_1 + 0x3c),*(uint *)(param_1 + 0x3c) + uVar4,
                  *(uint *)(param_1 + 0x30) - uVar4);
     *(int *)(param_1 + 0x30) = *(int *)(param_1 + 0x30) - *(int *)(param_1 + 0x2c);
   }
@@ -67,7 +67,7 @@ undefined8 fn_826E7800(int param_1)
         *(int *)(param_1 + 0x34) = *(int *)(param_1 + 0x34) + iVar3;
       }
                     /* WARNING: Subroutine does not return */
-      fn_82F691F0((ulonglong)*(uint *)(param_1 + 0x3c) + (ulonglong)*(uint *)(param_1 + 0x30),0,
+      memset((ulonglong)*(uint *)(param_1 + 0x3c) + (ulonglong)*(uint *)(param_1 + 0x30),0,
                    (ulonglong)*(uint *)(param_1 + 0x40) - (ulonglong)*(uint *)(param_1 + 0x30));
     }
     *(int *)(param_1 + 0x30) = iVar3 + *(int *)(param_1 + 0x30);
@@ -77,6 +77,6 @@ undefined8 fn_826E7800(int param_1)
   *(int *)(param_1 + 0x3c) = param_1 + 0x44;
   *(undefined4 *)(param_1 + 0x40) = 0x200;
                     /* WARNING: Subroutine does not return */
-  fn_82F691F0(param_1 + 0x44,0,0x200);
+  memset(param_1 + 0x44,0,0x200);
 }
 

@@ -105,8 +105,8 @@ void fn_824E9568(undefined8 param_1,double param_2,double param_3,double param_4
   undefined4 uVar26;
   undefined4 uVar27;
   undefined4 uVar28;
-  float fStack_e0;
-  float fStack_dc;
+  struct { float first; float second; } stack_pair_e0;
+
   float fStack_d8;
   undefined4 uStack_d4;
   undefined4 uStack_d0;
@@ -158,7 +158,7 @@ void fn_824E9568(undefined8 param_1,double param_2,double param_3,double param_4
     vectorMergeLowWord(auVar15,auVar17);
     vectorMergeHighWord(auVar14,auVar16);
     vectorMergeLowWord(auVar14,auVar16);
-    puVar7 = (undefined4 *)((int)&fStack_e0 + in_r0 & 0xfffffff0);
+    puVar7 = (undefined4 *)((int)&stack_pair_e0.first + in_r0 & 0xfffffff0);
     *puVar7 = *(undefined4 *)(puVar10 + 2);
     puVar7[1] = uVar22;
     puVar7[2] = uVar23;
@@ -178,7 +178,7 @@ void fn_824E9568(undefined8 param_1,double param_2,double param_3,double param_4
     puVar7[1] = uVar19;
     puVar7[2] = uVar20;
     puVar7[3] = uVar21;
-    fn_826310E0(iVar8,0xc0,&fStack_e0,4,0x8000);
+    fn_826310E0(iVar8,0xc0,&stack_pair_e0.first,4,0x8000);
     fn_8263CBB0(lbl_8320A898,0,in_r8,0x80000000);
     iVar8 = lbl_8320A898;
     uVar1 = *(uint *)(lbl_8320A898 + 0x2934);
@@ -218,8 +218,8 @@ void fn_824E9568(undefined8 param_1,double param_2,double param_3,double param_4
     }
     fStack_cc = (float)(dVar13 + param_4);
     fStack_b4 = (float)(param_2 + param_5);
-    fStack_e0 = (float)dVar13;
-    fStack_dc = (float)param_2;
+    stack_pair_e0.first = (float)dVar13;
+    stack_pair_e0.second = (float)param_2;
     fStack_d8 = (float)param_3;
     uStack_d4 = lbl_821CC160;
     uStack_d0 = lbl_821CC160;
@@ -231,7 +231,7 @@ void fn_824E9568(undefined8 param_1,double param_2,double param_3,double param_4
     fStack_b0 = (float)param_3;
     uStack_ac = lbl_821CC160;
     uStack_a8 = lbl_821CA460;
-    fn_82640058(lbl_8320A898,8,3,&fStack_e0,0x14);
+    fn_82640058(lbl_8320A898,8,3,&stack_pair_e0.first,0x14);
     iVar8 = lbl_8320A898;
     *(uint *)(lbl_8320A898 + 0x2948) = *(uint *)(lbl_8320A898 + 0x2948) & 0xfffffff8 | uVar3 & 7;
     *(ulonglong *)(iVar8 + 0x10) = *(ulonglong *)(iVar8 + 0x10) | 0x40;

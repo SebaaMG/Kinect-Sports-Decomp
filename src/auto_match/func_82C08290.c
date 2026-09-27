@@ -55,7 +55,7 @@ ulonglong fn_82C08290(int param_1,undefined8 param_2,int param_3)
   char *pcStack_78;
   char *pcStack_74;
   char *pcStack_70;
-  undefined1 auStack_60 [96];
+  undefined1 auStack_60 [48];
   
   iStack_8c = 0;
   piStack_84 = (int *)0x0;

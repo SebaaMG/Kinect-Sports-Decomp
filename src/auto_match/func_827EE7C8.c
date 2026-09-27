@@ -85,8 +85,8 @@ void fn_827EE7C8(undefined8 param_1,double param_2,undefined8 param_3,undefined8
   float fStack_88;
   float fStack_84;
   float fStack_80;
-  float fStack_78;
-  float fStack_74;
+  struct { float first; float second; } stack_pair_78;
+
   float fStack_70;
   float fStack_68;
   float fStack_64;
@@ -98,12 +98,12 @@ void fn_827EE7C8(undefined8 param_1,double param_2,undefined8 param_3,undefined8
   dVar7 = (double)fn_82810308(&fStack_a8);
   if ((double)lbl_820069B4 <= dVar7) {
     fStack_88 = (float)((double)*param_7 + dVar10);
-    fStack_78 = (float)((double)*param_6 - dVar10);
+    stack_pair_78.first = (float)((double)*param_6 - dVar10);
     fStack_84 = (float)((double)param_7[1] + dVar10);
     fStack_80 = (float)((double)param_7[2] + dVar10);
-    fStack_74 = (float)((double)param_6[1] - dVar10);
+    stack_pair_78.second = (float)((double)param_6[1] - dVar10);
     fStack_70 = (float)((double)param_6[2] - dVar10);
-    iVar5 = fn_827EA030(param_2,pfVar4,param_5,&fStack_78,&fStack_88,param_8);
+    iVar5 = fn_827EA030(param_2,pfVar4,param_5,&stack_pair_78.first,&fStack_88,param_8);
     if (iVar5 == 0) goto LAB_827ee840;
     iVar5 = fn_827EC970(dVar10,pfVar4);
     fVar1 = lbl_821AAD20;

@@ -39,7 +39,7 @@ longlong fn_829DB8F0(char *param_1,undefined8 param_2,undefined8 param_3)
   int iVar3;
   char *pcVar4;
   int aiStack_160 [4];
-  undefined1 auStack_150 [336];
+  undefined1 auStack_150 [304];
   
   aiStack_160[0] = 300;
   pcVar4 = param_1;

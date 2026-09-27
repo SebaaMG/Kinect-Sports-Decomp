@@ -36,7 +36,7 @@ extern int fn_8268D280();
 extern int fn_8268D5D8();
 extern int fn_8269A3C0();
 extern int fn_8275EC80();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int lbl_821AAD20;
 extern unsigned int uStack_54;
 extern unsigned int uStack_58;
@@ -64,8 +64,8 @@ void fn_82760470(int *param_1,int *param_2,int *param_3)
   bool bVar2;
   undefined4 uVar3;
   int iVar4;
-  float fStack_d0;
-  float fStack_cc;
+  struct { float first; float second; } stack_pair_d0;
+
   float fStack_c8;
   float fStack_c4;
   undefined4 uStack_c0;
@@ -97,7 +97,7 @@ void fn_82760470(int *param_1,int *param_2,int *param_3)
   uStack_b0 = puVar1[4];
   uStack_ac = puVar1[5];
   fn_8268CEC0(&uStack_c0,param_3 + 0x11);
-  fn_82F68CC0(auStack_50,param_2[0x11],0x20);
+  memcpy(auStack_50,param_2[0x11],0x20);
   fn_8268D5D8(auStack_50,param_3 + 9);
   uVar3 = fn_8269A3C0(param_3);
   bVar2 = false;
@@ -110,19 +110,19 @@ void fn_82760470(int *param_1,int *param_2,int *param_3)
   uStack_84 = uStack_b0;
   uStack_80 = uStack_ac;
   piStack_a0 = param_2;
-  fn_82F68CC0(auStack_7c,auStack_50,0x20);
+  memcpy(auStack_7c,auStack_50,0x20);
   uStack_58 = 0;
   uStack_54 = 0;
   uStack_5c = uVar3;
   if ((*(byte *)(param_1 + 9) & 0x10) != 0) {
-    fStack_d0 = lbl_821AAD20;
-    fStack_cc = lbl_821AAD20;
+    stack_pair_d0.first = lbl_821AAD20;
+    stack_pair_d0.second = lbl_821AAD20;
     fStack_c8 = lbl_821AAD20;
     fStack_c4 = lbl_821AAD20;
-    fn_8268D280(&uStack_94,&fStack_d0,param_1 + 1);
+    fn_8268D280(&uStack_94,&stack_pair_d0.first,param_1 + 1);
     iVar4 = (**(code **)(*param_3 + 0x40))(param_3);
-    if ((((fStack_cc <= *(float *)(iVar4 + 0xd4)) && (*(float *)(iVar4 + 0xcc) <= fStack_c4)) &&
-        (*(float *)(iVar4 + 200) <= fStack_c8)) && (fStack_d0 <= *(float *)(iVar4 + 0xd0))) {
+    if ((((stack_pair_d0.second <= *(float *)(iVar4 + 0xd4)) && (*(float *)(iVar4 + 0xcc) <= fStack_c4)) &&
+        (*(float *)(iVar4 + 200) <= fStack_c8)) && (stack_pair_d0.first <= *(float *)(iVar4 + 0xd0))) {
       bVar2 = true;
     }
     if ((!bVar2) && ((*(uint *)(*param_2 + 0x14) & 0x100) == 0)) {

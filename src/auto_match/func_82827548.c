@@ -37,18 +37,18 @@ void fn_82827548(int param_1,int *param_2,int *param_3)
   int iVar2;
   int iVar3;
   int iStack_40;
-  undefined4 *apuStack_3c [15];
+  undefined4 * apuStack_3c;
   
   param_1 = param_1 + 0x2f4;
   iVar3 = 0;
   iVar2 = 0;
   while (fn_828223C8(param_1,&iStack_40), param_1 = iStack_40, iStack_40 != 0) {
     puVar1 = *(undefined4 **)(*(int *)(iStack_40 + 0x28) + 4);
-    apuStack_3c[0] = (undefined4 *)*puVar1;
-    while (apuStack_3c[0] != puVar1) {
+    apuStack_3c = (undefined4 *)*puVar1;
+    while (apuStack_3c != puVar1) {
       iVar3 = iVar3 + 1;
-      iVar2 = apuStack_3c[0][5] + iVar2;
-      fn_82518FF0(apuStack_3c);
+      iVar2 = apuStack_3c[5] + iVar2;
+      fn_82518FF0(&apuStack_3c);
     }
   }
   *param_2 = iVar3;

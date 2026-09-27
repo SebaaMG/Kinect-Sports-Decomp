@@ -30,8 +30,7 @@ extern unsigned int iStack0000001c;
 extern unsigned int lbl_8329EC80;
 
 
-void fn_82BDE5A8(longlong param_1,int param_2,int param_3,longlong param_4,int param_5,int param_6
-                  ,int param_7,int *param_8)
+void fn_82BDE5A8(longlong param_1, int param_2, int param_3, longlong param_4, int param_5, int param_6, int param_7, int *param_8, undefined8 unused_arg_9, uint in_stack_0000005c)
 
 {
   uint uVar1;
@@ -49,7 +48,7 @@ void fn_82BDE5A8(longlong param_1,int param_2,int param_3,longlong param_4,int p
   int *piVar13;
   int iStack0000001c;
   int *in_stack_00000054;
-  uint in_stack_0000005c;
+
   
   *param_8 = 0;
   lVar8 = (longlong)(param_2 >> 1) + -1;

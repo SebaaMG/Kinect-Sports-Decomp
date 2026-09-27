@@ -38,17 +38,17 @@ void fn_82674930(int param_1,undefined4 *param_2)
 {
   int iVar1;
   int iVar2;
-  undefined4 uStack_40;
-  undefined4 uStack_3c;
+  struct { undefined4 first; undefined4 second; } stack_pair_40;
+
   undefined4 uStack_38;
   
   iVar2 = *(int *)(param_1 + 0x28);
   while( true ) {
     if (iVar2 == *(int *)(param_1 + 0x2c)) {
-      uStack_40 = *param_2;
+      stack_pair_40.first = *param_2;
       uStack_38 = 1;
-      uStack_3c = fn_8251F718(param_2);
-      fn_82835208(param_1 + 0x28,&uStack_40);
+      stack_pair_40.second = fn_8251F718(param_2);
+      fn_82835208(param_1 + 0x28,&stack_pair_40.first);
       return;
     }
     iVar1 = fn_825200A8(param_2,iVar2);

@@ -31,8 +31,7 @@ extern int fn_82B471E8();
 extern int fn_82B84350();
 
 
-void fn_82B47420(int param_1,undefined8 param_2,undefined8 param_3,undefined8 param_4,
-                  undefined8 param_5,ulonglong param_6,undefined8 param_7,ulonglong param_8)
+void fn_82B47420(int param_1, undefined8 param_2, undefined8 param_3, undefined8 param_4, undefined8 param_5, ulonglong param_6, undefined8 param_7, ulonglong param_8, undefined4 in_stack_00000054)
 
 {
   undefined8 uVar1;
@@ -41,7 +40,7 @@ void fn_82B47420(int param_1,undefined8 param_2,undefined8 param_3,undefined8 pa
   undefined4 uVar4;
   int iVar5;
   longlong lVar6;
-  undefined4 in_stack_00000054;
+
   
   lVar6 = 2;
   uVar1 = fn_82B471E8();

@@ -50,7 +50,7 @@ int * fn_828A8E18(int *param_1,undefined8 param_2)
   undefined4 uStack_44;
   undefined1 auStack_40 [4];
   char cStack_3c;
-  char acStack_38 [56];
+  char acStack_38 [24];
   
   uVar5 = 0;
   fn_8223FD30(auStack_40,param_1);

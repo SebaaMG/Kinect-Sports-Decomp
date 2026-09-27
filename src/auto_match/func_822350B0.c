@@ -38,7 +38,7 @@ void fn_822350B0(undefined8 param_1,undefined8 param_2,undefined8 param_3,int pa
   undefined1 uVar3;
   undefined8 uVar1;
   uint uVar4;
-  undefined8 auStack_30 [6];
+  undefined8 auStack_30 [2];
   
   iVar2 = fn_8223C610(param_3,1,0,0);
   if (iVar2 == 0) {

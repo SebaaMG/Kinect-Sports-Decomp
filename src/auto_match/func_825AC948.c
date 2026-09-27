@@ -46,7 +46,7 @@ undefined8 fn_825AC948(undefined8 param_1,int param_2,undefined8 param_3)
   undefined8 uVar3;
   undefined1 auStack_e0 [32];
   undefined1 auStack_c0 [4];
-  undefined1 auStack_bc [188];
+  undefined1 auStack_bc [140];
   
   fn_8223CFC0(auStack_c0,2,1);
   uVar2 = fn_828B5B28(auStack_e0,param_2 + 0x84,param_3);

@@ -42,8 +42,8 @@ void fn_826A1A78(int param_1,int param_2)
   longlong lVar3;
   longlong lVar4;
   undefined1 auStack_50 [4];
-  int aiStack_4c [3];
-  undefined1 auStack_40 [64];
+  int aiStack_4c;
+  undefined1 auStack_40 [16];
   
   lVar4 = 0;
   auStack_40[0] = 0;
@@ -51,16 +51,16 @@ void fn_826A1A78(int param_1,int param_2)
     do {
       fn_8269A1F0(auStack_40,lVar4);
       auStack_50[0] = 0;
-      fn_82696D38(aiStack_4c,auStack_40,*(undefined4 *)(param_2 + 0x18),0xffffffffffffffff,0);
+      fn_82696D38(&aiStack_4c,auStack_40,*(undefined4 *)(param_2 + 0x18),0xffffffffffffffff,0);
       iVar1 = *(int *)(param_1 + 0x10);
       uVar2 = fn_826957D0(param_2,lVar4);
       (**(code **)(iVar1 + 0xc))
-                ((int *)(param_1 + 0x10),*(undefined4 *)(param_2 + 0x18),aiStack_4c,uVar2,auStack_50
+                ((int *)(param_1 + 0x10),*(undefined4 *)(param_2 + 0x18),&aiStack_4c,uVar2,auStack_50
                 );
-      lVar3 = (ulonglong)*(uint *)(aiStack_4c[0] + 8) - 1;
-      *(int *)(aiStack_4c[0] + 8) = (int)lVar3;
+      lVar3 = (ulonglong)*(uint *)(aiStack_4c + 8) - 1;
+      *(int *)(aiStack_4c + 8) = (int)lVar3;
       if (lVar3 == 0) {
-        fn_826944C8(aiStack_4c[0]);
+        fn_826944C8(aiStack_4c);
       }
       lVar4 = lVar4 + 1;
     } while ((int)lVar4 < *(int *)(param_2 + 0x1c));

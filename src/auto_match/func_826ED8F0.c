@@ -84,8 +84,8 @@ void fn_826ED8F0(int param_1,int *param_2)
   undefined4 uStack_b4;
   undefined4 uStack_b0;
   undefined4 uStack_ac;
-  int iStack_a0;
-  int iStack_9c;
+  struct { int first; int second; } stack_pair_a0;
+
   float fStack_98;
   int iStack_94;
   int iStack_90;
@@ -160,11 +160,11 @@ void fn_826ED8F0(int param_1,int *param_2)
         if (*(int *)(iVar9 + iVar4 + 4) != 0) {
           fStack_8c = (float)((double)fStack_cc + dVar12);
           fStack_98 = (float)((double)fStack_d8 + dVar12);
-          iStack_a0 = iStack_e0;
-          iStack_9c = iStack_dc;
+          stack_pair_a0.first = iStack_e0;
+          stack_pair_a0.second = iStack_dc;
           iStack_94 = iStack_d4;
           iStack_90 = iStack_d0;
-          (**(code **)(*piVar1 + 0x20))(piVar1,&iStack_a0);
+          (**(code **)(*piVar1 + 0x20))(piVar1,&stack_pair_a0.first);
           uVar11 = 0;
           if (*(int *)(iVar9 + *(int *)(param_1 + 0x50) + 4) != 0) {
             iVar4 = uVar7 * 0x58;

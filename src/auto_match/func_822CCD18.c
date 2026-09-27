@@ -35,7 +35,7 @@ extern int fn_822C1730();
 void fn_822CCD18(longlong param_1,undefined8 param_2,undefined8 param_3)
 
 {
-  undefined1 auStack_50 [28];
+  undefined1 auStack_50 [12];
   undefined1 auStack_34 [28];
   
   fn_82230110(auStack_50);

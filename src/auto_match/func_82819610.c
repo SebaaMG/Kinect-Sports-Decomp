@@ -35,11 +35,11 @@ undefined2 fn_82819610(int param_1,undefined8 param_2,undefined8 param_3,undefin
 
 {
   undefined2 uVar1;
-  undefined4 auStack_40 [16];
+  undefined4 auStack_40;
   
   lbl_8320A5F0 = 0;
-  fn_82823030(param_1 + 0xd8,auStack_40);
-  fn_82819518(auStack_40[0],param_2,param_3,param_4);
+  fn_82823030(param_1 + 0xd8,&auStack_40);
+  fn_82819518(auStack_40,param_2,param_3,param_4);
   if (lbl_8320A5F0 == 0) {
     uVar1 = 0xffff;
   }

@@ -39,7 +39,7 @@ fn_822E18A8(undefined4 *param_1,undefined8 param_2,undefined8 param_3,int param_
 
 {
   undefined8 uVar1;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [16];
   
   uVar1 = fn_82365BD8(auStack_40,param_4);
   fn_822D01E8(param_1,param_2,param_3,2,uVar1,param_5);

@@ -41,7 +41,7 @@ void fn_827CC1E8(int param_1,int param_2,int param_3,int param_4)
   int *piVar6;
   longlong lVar7;
   byte abStack_1b1 [129];
-  undefined1 auStack_130 [304];
+  undefined1 auStack_130 [240];
   
   iVar3 = *(int *)(*(int *)(param_1 + 0x1a8) + 0x18);
   fn_827CBF00(param_1,(param_2 >> 2) * 0x20 + 4,(param_3 >> 3) * 0x20 + 2,

@@ -39,7 +39,7 @@ longlong fn_8284C628(undefined8 param_1,undefined8 param_2,int param_3,int param
   ulonglong uVar2;
   longlong lVar3;
   longlong lVar4;
-  uint auStack_40 [16];
+  uint auStack_40 [2];
   
   lVar4 = 0;
   auStack_40[1] = 0;

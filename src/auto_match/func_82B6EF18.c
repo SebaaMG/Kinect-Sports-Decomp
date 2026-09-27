@@ -28,7 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_8c;
 extern int fn_82AB15D0();
 extern int fn_82B7F830();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int uStack_5c;
 extern unsigned int uStack_60;
 extern unsigned int uStack_64;
@@ -71,7 +71,7 @@ void fn_82B6EF18(int param_1,int param_2,int param_3,undefined8 param_4,uint par
   uint uStack_5c;
   
   puVar1 = *(undefined4 **)(param_1 + 0x1c);
-  fn_82F68CC0(&uStack_80,param_2,0x28);
+  memcpy(&uStack_80,param_2,0x28);
   puVar2 = (uint *)puVar1[0xbbe];
   fn_82B7F830(*(undefined4 *)(param_1 + 0x10),*puVar1,0,param_4,&uStack_90,auStack_8c);
   uVar11 = param_3 << 0x1b;

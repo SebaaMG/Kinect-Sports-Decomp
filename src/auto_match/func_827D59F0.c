@@ -59,8 +59,8 @@ fn_827D59F0(undefined8 param_1,undefined4 *param_2,undefined8 param_3,undefined8
   int iStack_74;
   undefined4 uStack_70;
   undefined4 uStack_6c;
-  undefined4 uStack_68;
-  undefined4 uStack_64;
+  struct { undefined4 first; undefined4 second; } stack_pair_68;
+
   undefined1 auStack_60 [96];
   
   puStack0000001c = param_2;
@@ -77,10 +77,10 @@ fn_827D59F0(undefined8 param_1,undefined4 *param_2,undefined8 param_3,undefined8
     uStack_70 = 0;
     uStack_6c = 0;
     fn_82517978(&uStack_70,uStack_78,iStack_74,0);
-    uStack_68 = 0;
-    uStack_64 = 0;
-    fn_82517978(&uStack_68,*param_2,param_2[1],0);
-    uVar2 = fn_827E13A0(lVar1,&uStack_68,param_3,param_4,param_5,&uStack_70);
+    stack_pair_68.first = 0;
+    stack_pair_68.second = 0;
+    fn_82517978(&stack_pair_68.first,*param_2,param_2[1],0);
+    uVar2 = fn_827E13A0(lVar1,&stack_pair_68.first,param_3,param_4,param_5,&uStack_70);
   }
   fn_82517978(auStack_80,uStack_78,iStack_74,0);
   fn_827D5850(param_1,uVar2,auStack_80,0);

@@ -39,16 +39,16 @@ void fn_82634000(char param_1,char param_2,undefined8 param_3,uint param_4,uint 
   int iVar4;
   uint uVar5;
   longlong lVar6;
-  uint auStack_30 [12];
+  uint auStack_30;
   
   if ((param_1 == '\0') && (param_2 == '\0')) {
-    iVar4 = fn_826338A0(param_5,auStack_30);
+    iVar4 = fn_826338A0(param_5,&auStack_30);
     if (iVar4 != 0) {
       uVar2 = *param_5;
       uVar5 = 0;
       lVar6 = 4;
       do {
-        if ((1 << (uVar5 & 0x3f) & auStack_30[0]) != 0) {
+        if ((1 << (uVar5 & 0x3f) & auStack_30) != 0) {
           bVar1 = *(byte *)(((uVar2 & 0x3f) + 4) * 4 + uVar5 + (int)param_6);
           if (bVar1 != 0xff) {
             iVar4 = *param_6;
@@ -56,7 +56,7 @@ void fn_82634000(char param_1,char param_2,undefined8 param_3,uint param_4,uint 
             *(uint *)(((*(ushort *)((uint)bVar1 * 4 + iVar4) & 0xfff) +
                       (uint)*(ushort *)(iVar3 + (int)param_6)) * 4 + param_6[2]) = param_4 & 0xfff;
             *(short *)(iVar3 + (int)param_6) = *(short *)(iVar3 + (int)param_6) + 1;
-            auStack_30[0] = auStack_30[0] & ~(*(uint *)((uint)bVar1 * 4 + iVar4) >> 0xc & 0xf);
+            auStack_30 = auStack_30 & ~(*(uint *)((uint)bVar1 * 4 + iVar4) >> 0xc & 0xf);
           }
         }
         uVar5 = uVar5 + 1;

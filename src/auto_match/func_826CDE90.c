@@ -28,7 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_70;
 extern int fn_8268D008();
 extern int fn_826CD200();
-extern int fn_82F691F0();
+extern int memset();
 extern unsigned int iStack_4c;
 extern unsigned int iStack_50;
 extern unsigned int iStack_54;
@@ -48,8 +48,8 @@ void fn_826CDE90(int param_1,int *param_2,undefined8 param_3)
   ulonglong uVar6;
   ulonglong uVar7;
   undefined1 auStack_70 [16];
-  int iStack_60;
-  int iStack_5c;
+  struct { int first; int second; } stack_pair_60;
+
   int iStack_58;
   int iStack_54;
   int iStack_50;
@@ -64,15 +64,15 @@ void fn_826CDE90(int param_1,int *param_2,undefined8 param_3)
         if (param_2[1] == 0) {
           fn_826CD200(param_2,uVar6);
                     /* WARNING: Subroutine does not return */
-          fn_82F691F0(*param_2,1,uVar6);
+          memset(*param_2,1,uVar6);
         }
-        iStack_60 = piVar2[0x11];
-        iStack_5c = piVar2[0x12];
+        stack_pair_60.first = piVar2[0x11];
+        stack_pair_60.second = piVar2[0x12];
         iStack_58 = piVar2[0x13];
         iStack_54 = piVar2[0x14];
         iStack_50 = piVar2[0x15];
         iStack_4c = piVar2[0x16];
-        fn_8268D008(&iStack_60,auStack_70,param_3);
+        fn_8268D008(&stack_pair_60.first,auStack_70,param_3);
         iVar1 = *param_2;
         uVar3 = (**(code **)(*piVar2 + 0x30))(piVar2,auStack_70,1);
         uVar5 = uVar7 + 1;

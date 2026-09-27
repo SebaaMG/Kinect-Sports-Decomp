@@ -45,7 +45,7 @@ void fn_8234C258(int param_1,int param_2,undefined8 param_3)
   char cVar3;
   double dVar4;
   double dVar5;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [1];
   
   uVar1 = fn_8234C398();
   param_1 = param_2 * 0x2c + param_1;

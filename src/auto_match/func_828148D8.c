@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_50;
 extern int fn_82820290();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 void fn_828148D8(int param_1)
@@ -42,7 +42,7 @@ void fn_828148D8(int param_1)
   ulonglong uVar7;
   uint *puVar8;
   int iVar9;
-  uint auStack_50 [20];
+  uint auStack_50;
   
   iVar1 = *(int *)(param_1 + 0x20);
   iVar2 = *(int *)(param_1 + 0x1c);
@@ -53,8 +53,8 @@ void fn_828148D8(int param_1)
     if (*(int *)(iVar5 + 0x60) != 0) {
       uVar7 = (ulonglong)*(uint *)(iVar5 + 0x5c);
       if (iVar1 != 0) {
-        fn_82820290(iVar1,uVar6 + 1,auStack_50);
-        uVar7 = auStack_50[0] + uVar7;
+        fn_82820290(iVar1,uVar6 + 1,&auStack_50);
+        uVar7 = auStack_50 + uVar7;
       }
       uVar4 = (ulonglong)*(uint *)(iVar5 + 0x58);
       if (*(uint *)(iVar5 + 0x68) < uVar4) {
@@ -67,15 +67,15 @@ void fn_828148D8(int param_1)
       else {
         iVar9 = puVar8[1] + *puVar8;
         if (iVar1 != 0) {
-          fn_82820290(iVar1,uVar6,auStack_50);
-          iVar9 = iVar9 + auStack_50[0];
+          fn_82820290(iVar1,uVar6,&auStack_50);
+          iVar9 = iVar9 + auStack_50;
         }
         uVar3 = puVar8[4];
         if (uVar3 < *puVar8) {
           iVar9 = (((puVar8[2] - uVar3) + iVar9 + 0x43 & 0xfffffffc) - puVar8[2]) + uVar3;
         }
       }
-      fn_82F68CC0(uVar7,iVar9,*(undefined4 *)(iVar5 + 0x60));
+      memcpy(uVar7,iVar9,*(undefined4 *)(iVar5 + 0x60));
     }
     uVar6 = uVar6 + 1 & 0xff;
     puVar8 = (uint *)(iVar5 + 0x58);

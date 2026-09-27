@@ -51,7 +51,7 @@ fn_82A999C8(undefined8 param_1,undefined8 param_2,undefined4 *param_3,undefined4
   int iVar1;
   int iVar2;
   uint uVar3;
-  undefined4 auStack_150 [2];
+  undefined4 auStack_150;
   undefined1 auStack_148 [24];
   undefined1 auStack_130 [8];
   short sStack_128;
@@ -81,8 +81,8 @@ fn_82A999C8(undefined8 param_1,undefined8 param_2,undefined4 *param_3,undefined4
     *(undefined1 *)(iVar1 + iStack_10c + -1) = 0;
     fn_8265C990(iVar1,0x24870000);
   }
-  auStack_150[0] = 0;
-  iVar1 = fn_82AA8B50(auStack_130,auStack_150);
+  auStack_150 = 0;
+  iVar1 = fn_82AA8B50(auStack_130,&auStack_150);
   if (iVar1 != 0) {
     return 0xffffffff80004005;
   }

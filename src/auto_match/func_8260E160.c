@@ -31,10 +31,10 @@ extern int fn_8260E0D0();
 void fn_8260E160(int param_1,undefined8 param_2,int param_3,undefined8 param_4,int param_5)
 
 {
-  int aiStack_10 [4];
+  int aiStack_10;
   
-  if ((param_5 == 0) && (aiStack_10[0] = *(int *)(param_3 + 0x10), aiStack_10[0] != 0)) {
-    fn_8260E0D0(**(undefined4 **)(param_1 + 0x60),aiStack_10);
+  if ((param_5 == 0) && (aiStack_10 = *(int *)(param_3 + 0x10), aiStack_10 != 0)) {
+    fn_8260E0D0(**(undefined4 **)(param_1 + 0x60),&aiStack_10);
   }
   return;
 }

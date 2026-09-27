@@ -52,9 +52,9 @@ undefined8 fn_8225AF90(int param_1)
   char in_RESERVE;
   double dVar7;
   undefined4 uStack_250;
-  undefined4 uStack_24c;
-  undefined4 uStack_248;
-  undefined1 auStack_240 [576];
+  struct { undefined4 first; undefined4 second; } stack_pair_24c;
+
+  undefined1 auStack_240 [544];
   
   iVar4 = fn_82521888(lbl_832767C8,param_1);
   if (iVar4 == 0) {
@@ -68,9 +68,9 @@ undefined8 fn_8225AF90(int param_1)
         (cVar5 = fn_828EA610(param_1), cVar5 == '\0')) && (*(char *)(param_1 + 0xd8) == '\0')) {
       fn_82F64840(auStack_240,0x104,0xffffffff831d096c,0x103);
       uStack_250 = 0;
-      uStack_24c = 0;
-      uStack_248 = lbl_83283E3C;
-      fn_8225B7C8(param_1,&uStack_250,&uStack_24c);
+      stack_pair_24c.first = 0;
+      stack_pair_24c.second = lbl_83283E3C;
+      fn_8225B7C8(param_1,&uStack_250,&stack_pair_24c.first);
                     /* WARNING: Subroutine does not return */
       fn_82522D98(8);
     }

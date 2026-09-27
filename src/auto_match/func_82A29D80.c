@@ -35,21 +35,21 @@ ulonglong fn_82A29D80(undefined8 param_1,undefined4 *param_2)
 {
   int iVar2;
   ulonglong uVar1;
-  undefined4 uStack_20;
-  uint uStack_1c;
+  struct { undefined4 first; uint second; } stack_pair_20;
+
   
-  iVar2 = fn_82A2B4B8(param_1,&uStack_20);
+  iVar2 = fn_82A2B4B8(param_1,&stack_pair_20.first);
   if (iVar2 == 0) {
     uVar1 = 0xffffffffffffffff;
   }
   else {
     if (param_2 != (undefined4 *)0x0) {
-      *param_2 = uStack_20;
+      *param_2 = stack_pair_20.first;
     }
-    uVar1 = (ulonglong)uStack_1c;
-    if (uStack_1c == 0xffffffff) {
+    uVar1 = (ulonglong)stack_pair_20.second;
+    if (stack_pair_20.second == 0xffffffff) {
       thunk_FUN_82a2b748(0);
-      uVar1 = (ulonglong)uStack_1c;
+      uVar1 = (ulonglong)stack_pair_20.second;
     }
   }
   return uVar1;

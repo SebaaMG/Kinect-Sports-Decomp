@@ -33,10 +33,10 @@ extern unsigned int lbl_821AAD20;
 void fn_82801380(undefined8 param_1,undefined8 param_2)
 
 {
-  undefined4 auStack_10 [4];
+  undefined4 auStack_10;
   
-  auStack_10[0] = lbl_821AAD20;
-  fn_828010F0(param_1,auStack_10,param_2,0);
+  auStack_10 = lbl_821AAD20;
+  fn_828010F0(param_1,&auStack_10,param_2,0);
   return;
 }
 

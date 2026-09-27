@@ -63,8 +63,8 @@ int fn_82498D90(int param_1,int *param_2)
   undefined1 auStack_90 [16];
   undefined **ppuStack_80;
   undefined4 uStack_7c;
-  undefined4 uStack_78;
-  undefined4 uStack_74;
+  struct { undefined4 first; undefined4 second; } stack_pair_78;
+
   undefined4 uStack_70;
   undefined1 uStack_68;
   undefined1 uStack_67;
@@ -99,8 +99,8 @@ int fn_82498D90(int param_1,int *param_2)
   if (piVar4 == (int *)iVar1) {
     iStack_50 = *param_2;
     uStack_7c = 0;
-    uStack_78 = 0;
-    uStack_74 = 0;
+    stack_pair_78.first = 0;
+    stack_pair_78.second = 0;
     uStack_70 = 0;
     ppuStack_80 = &lbl_821BEBB4;
     uStack_68 = 0;
@@ -108,7 +108,7 @@ int fn_82498D90(int param_1,int *param_2)
     uStack_66 = 0;
     ppuStack_4c = &lbl_821BEBB4;
     uStack_48 = 0;
-    fn_824925D0(auStack_44,&uStack_78);
+    fn_824925D0(auStack_44,&stack_pair_78.first);
     uStack_30 = uStack_64;
     uStack_2c = uStack_60;
     uStack_28 = uStack_5c;

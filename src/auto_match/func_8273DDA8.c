@@ -47,23 +47,23 @@ void fn_8273DDA8(int param_1,undefined8 param_2)
   ulonglong uVar3;
   undefined8 uVar4;
   longlong lVar5;
-  undefined1 auStack_50 [4];
+  undefined1 auStack_50;
   int iStack_4c;
   undefined4 auStack_48 [2];
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [16];
   
   iVar1 = *(int *)(*(int *)(param_1 + 8) + 0x78);
   iVar2 = *(int *)(*(int *)(param_1 + 0x14) * 4 + *(int *)(param_1 + 0x10) + -4);
   uVar3 = fn_826B32D0(*(int *)(param_1 + 8),*(undefined4 *)(iVar1 + 0x2a0),iVar1 + 0x10,0,
                             0xffffffffffffffff);
   if (*(char *)(param_1 + 0x1c) == '\0') {
-    auStack_50[0] = 0;
+    auStack_50 = 0;
     fn_8269A190(&iStack_4c,(ulonglong)*(uint *)(*(int *)(param_1 + 8) + 0x78) + 0x254,param_2)
     ;
     iVar1 = *(int *)(iVar2 + 0x10);
     uVar4 = fn_826961B0(auStack_40,uVar3);
     (**(code **)(iVar1 + 0xc))
-              (iVar2 + 0x10,*(undefined4 *)(param_1 + 8),&iStack_4c,uVar4,auStack_50);
+              (iVar2 + 0x10,*(undefined4 *)(param_1 + 8),&iStack_4c,uVar4,&auStack_50);
     lVar5 = (ulonglong)*(uint *)(iStack_4c + 8) - 1;
     *(int *)(iStack_4c + 8) = (int)lVar5;
     if (lVar5 == 0) {

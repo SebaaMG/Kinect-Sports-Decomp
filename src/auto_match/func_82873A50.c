@@ -35,10 +35,10 @@ undefined8 fn_82873A50(int param_1,undefined4 param_2)
 
 {
   int iVar1;
-  undefined4 auStack_10 [4];
+  undefined4 auStack_10;
   
-  auStack_10[0] = param_2;
-  fn_8286D3A0(param_1 + 4,*(undefined4 *)(param_1 + 4),auStack_10);
+  auStack_10 = param_2;
+  fn_8286D3A0(param_1 + 4,*(undefined4 *)(param_1 + 4),&auStack_10);
   fn_82865170();
   iVar1 = fn_82866400();
   *(int *)(iVar1 + 0xc) = *(int *)(iVar1 + 0xc) + 1;

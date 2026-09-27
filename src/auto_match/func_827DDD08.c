@@ -35,7 +35,7 @@ void fn_827DDD08(int param_1,undefined4 *param_2)
 {
   int *piVar1;
   undefined4 *puStack0000001c;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
   
   piVar1 = *(int **)(param_1 + 0xc);
   puStack0000001c = param_2;

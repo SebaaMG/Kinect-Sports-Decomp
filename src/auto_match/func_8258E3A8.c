@@ -37,7 +37,7 @@ undefined4 * fn_8258E3A8(undefined4 *param_1,int param_2,undefined4 *param_3)
   undefined4 **ppuVar4;
   undefined4 *puVar5;
   undefined4 *puStack_40;
-  undefined4 *apuStack_3c [15];
+  undefined4 *apuStack_3c [1];
   
   puVar5 = *(undefined4 **)(param_2 + 4);
   puVar3 = (undefined4 *)(*(undefined4 **)(param_2 + 4))[1];

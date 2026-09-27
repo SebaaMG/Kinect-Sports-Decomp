@@ -42,7 +42,7 @@ void fn_828DBF68(int param_1,undefined8 param_2)
   int iVar3;
   undefined4 uVar4;
   char *pcVar5;
-  char acStack_120 [288];
+  char acStack_120 [240];
   
   iVar2 = fn_828E9DA8(param_2);
   iVar3 = fn_828E9D90(param_2);

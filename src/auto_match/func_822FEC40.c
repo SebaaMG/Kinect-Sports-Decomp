@@ -46,7 +46,7 @@ fn_822FEC40(undefined4 *param_1,undefined8 param_2,undefined8 param_3,int param_
   undefined4 *puVar3;
   undefined4 *puStack_90;
   int iStack_8c;
-  undefined1 auStack_80 [128];
+  undefined1 auStack_80 [48];
   
   fn_8255FD70(&puStack_90,*(undefined4 *)(param_4 + 0x24),param_2);
   *param_1 = 0;

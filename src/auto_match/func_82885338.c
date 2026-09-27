@@ -80,8 +80,8 @@ void fn_82885338(undefined8 param_1)
   int iStack_4dc;
   undefined4 uStack_4d8;
   undefined4 uStack_4d4;
-  undefined4 uStack_4d0;
-  int iStack_4cc;
+  struct { undefined4 first; int second; } stack_pair_4d0;
+
   undefined4 uStack_4c8;
   undefined4 uStack_4c4;
   undefined1 uStack_4c0;
@@ -127,8 +127,8 @@ void fn_82885338(undefined8 param_1)
     iStack_4dc = 0;
     uStack_4d8 = 0;
     uStack_4d4 = 0;
-    uStack_4d0 = 0;
-    iStack_4cc = 0;
+    stack_pair_4d0.first = 0;
+    stack_pair_4d0.second = 0;
     uStack_4c8 = 0;
     uStack_4c4 = 0;
     uStack_4c0 = 0;
@@ -160,11 +160,11 @@ LAB_82885520:
       }
     }
 LAB_82885584:
-    if (iStack_4cc != 0) {
-      *(ulonglong *)(iStack_4cc + 0x40) = uVar5;
-      piVar7 = (int *)fn_82883118(iVar2 + 0x88,&uStack_4d0);
-      *piVar7 = iStack_4cc;
-      iStack_4cc = 0;
+    if (stack_pair_4d0.second != 0) {
+      *(ulonglong *)(stack_pair_4d0.second + 0x40) = uVar5;
+      piVar7 = (int *)fn_82883118(iVar2 + 0x88,&stack_pair_4d0.first);
+      *piVar7 = stack_pair_4d0.second;
+      stack_pair_4d0.second = 0;
       *(int *)(iVar2 + 0xb0) = *(int *)(iVar2 + 0xb0) + 1;
     }
     if (iStack_4dc == 0) {

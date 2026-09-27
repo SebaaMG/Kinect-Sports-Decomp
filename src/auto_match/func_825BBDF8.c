@@ -49,7 +49,7 @@ bool fn_825BBDF8(int param_1,float *param_2,int param_3)
   undefined1 in_vs45 [16];
   float fVar12;
   float fVar13;
-  float afStack_20 [8];
+  float afStack_20 [1];
   
   if (param_3 != 0) {
     uVar3 = in_r0 + (int)param_2 & 0xfffffff0;

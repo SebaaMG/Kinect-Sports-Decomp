@@ -36,7 +36,7 @@ undefined4 * fn_828C9BD0(undefined4 *param_1,int *param_2)
   undefined4 *puVar1;
   undefined4 uVar2;
   undefined4 *puVar3;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [1];
   
   fn_8288C2E0(param_1,auStack_30);
   puVar1 = (undefined4 *)*param_2;

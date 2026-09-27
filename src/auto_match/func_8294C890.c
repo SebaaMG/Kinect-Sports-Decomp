@@ -34,7 +34,7 @@ extern int fn_829639F0();
 extern int fn_82963A30();
 extern int fn_82963D50();
 extern int fn_82BA02A8();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int lbl_82005710;
 extern unsigned int stack0x00000000;
 
@@ -75,7 +75,7 @@ longlong fn_8294C890(int param_1,int *param_2,undefined8 param_3,undefined4 *par
   int aiStack_170 [4];
   int aiStack_160 [4];
   int aiStack_150 [4];
-  int aiStack_140 [80];
+  int aiStack_140 [56];
   
   uVar19 = ZEXT48(&stack0x00000000);
   iVar22 = 0;
@@ -184,11 +184,11 @@ LAB_8294cdc0:
           lVar20 = fn_829632F0(iVar22,*(undefined4 *)(param_1 + 0x104));
           if (lVar20 < 0) goto LAB_8294cd58;
           lVar13 = (uVar12 & 0xfffff) * 4;
-          fn_82F68CC0(*(undefined4 *)(iVar22 + 0x10),
+          memcpy(*(undefined4 *)(iVar22 + 0x10),
                        *(undefined4 *)(*(int *)(param_1 + 0x104) + 0x10),lVar13);
-          fn_82F68CC0(*(undefined4 *)(iVar22 + 8),(uVar28 & 0xfffffff) * 0x10 + (uVar19 - 0x170),
+          memcpy(*(undefined4 *)(iVar22 + 8),(uVar28 & 0xfffffff) * 0x10 + (uVar19 - 0x170),
                        lVar13);
-          fn_82F68CC0(lVar13 + (ulonglong)*(uint *)(iVar22 + 8),
+          memcpy(lVar13 + (ulonglong)*(uint *)(iVar22 + 8),
                        (uVar19 - 0x160) + (uVar28 & 0xfffffff) * -0x10,lVar13);
           iVar21 = *(int *)(param_1 + 0x14);
           iVar23 = *(int *)(**(int **)(iVar22 + 8) * 4 + iVar21);
@@ -278,9 +278,9 @@ LAB_8294caa4:
         lVar20 = fn_82963A30(iVar22,uVar19 & 0xfff00000 | uVar11,lVar14,uVar11,0);
         if ((-1 < lVar20) &&
            (lVar20 = fn_829632F0(iVar22,*(undefined4 *)(param_1 + 0x104)), -1 < lVar20)) {
-          fn_82F68CC0(*(undefined4 *)(iVar22 + 0x10),
+          memcpy(*(undefined4 *)(iVar22 + 0x10),
                        *(undefined4 *)(*(int *)(param_1 + 0x104) + 0x10),lVar13);
-          fn_82F68CC0(*(undefined4 *)(iVar22 + 8),*(undefined4 *)(*(int *)(param_1 + 0x104) + 8),
+          memcpy(*(undefined4 *)(iVar22 + 8),*(undefined4 *)(*(int *)(param_1 + 0x104) + 8),
                        lVar13);
           if (bVar15) {
             lVar20 = (ulonglong)*(uint *)(*(int *)(param_1 + 0x104) + 8) + lVar13;
@@ -288,7 +288,7 @@ LAB_8294caa4:
           else {
             lVar20 = (uVar12 & 0xfffff) * 8 + (ulonglong)*(uint *)(*(int *)(param_1 + 0x104) + 8);
           }
-          fn_82F68CC0(lVar13 + (ulonglong)*(uint *)(iVar22 + 8),lVar20,lVar13);
+          memcpy(lVar13 + (ulonglong)*(uint *)(iVar22 + 8),lVar20,lVar13);
 code_r0x8294cb34:
           lVar20 = fn_82963D50(*(undefined4 *)
                                       (*(int *)(param_1 + 0x100) * 4 + *(int *)(param_1 + 0x18)),

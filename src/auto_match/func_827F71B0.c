@@ -34,10 +34,10 @@ longlong fn_827F71B0(undefined8 param_1,undefined8 param_2)
 {
   int iVar1;
   ulonglong uVar2;
-  uint auStack_10 [4];
+  uint auStack_10;
   
-  iVar1 = fn_82800838(param_1,1,param_2,auStack_10);
-  uVar2 = (ulonglong)auStack_10[0];
+  iVar1 = fn_82800838(param_1,1,param_2,&auStack_10);
+  uVar2 = (ulonglong)auStack_10;
   if (iVar1 == 0) {
     uVar2 = 0xffffffffffffffff;
   }

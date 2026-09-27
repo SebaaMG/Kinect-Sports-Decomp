@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_8265C9E0();
 extern int fn_82897ED8();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int lbl_82197140;
 
 
@@ -48,7 +48,7 @@ undefined4 * fn_8288BB90(undefined4 *param_1,int param_2)
     if (4 < uVar1) {
       uVar2 = fn_8265C9E0();
       *puVar3 = (int)uVar2;
-      fn_82F68CC0(uVar2,*(undefined4 *)(param_2 + 8),param_1[3]);
+      memcpy(uVar2,*(undefined4 *)(param_2 + 8),param_1[3]);
       return param_1;
     }
   }

@@ -36,12 +36,12 @@ void fn_8223CC88(int param_1,undefined8 param_2)
   int iVar1;
   int *piVar2;
   undefined4 *puVar3;
-  int aiStack_30 [12];
+  int aiStack_30;
   
   iVar1 = **(int **)(param_1 + 0x30);
-  aiStack_30[0] = iVar1;
+  aiStack_30 = iVar1;
   fn_8223F508(iVar1);
-  piVar2 = (int *)fn_8223CBE8(aiStack_30);
+  piVar2 = (int *)fn_8223CBE8(&aiStack_30);
   if ((iVar1 != 0) && (puVar3 = (undefined4 *)fn_8223F5A0(iVar1), puVar3 != (undefined4 *)0x0)
      ) {
     (**(code **)*puVar3)(puVar3,1);

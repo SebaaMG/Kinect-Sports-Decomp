@@ -45,8 +45,8 @@ void fn_826A9798(int param_1,undefined8 param_2,undefined8 param_3)
   char cVar4;
   int iVar5;
   int iVar6;
-  undefined4 uStack_40;
-  undefined4 uStack_3c;
+  struct { undefined4 first; undefined4 second; } stack_pair_40;
+
   
   *(int *)(param_1 + 0xc) = (int)param_3;
   uVar3 = fn_8267BED0(param_1,param_3,0);
@@ -55,7 +55,7 @@ void fn_826A9798(int param_1,undefined8 param_2,undefined8 param_3)
   cVar4 = fn_826E7458(param_2);
   if (cVar4 != '\0') {
     iVar2 = *(int *)(param_1 + 8);
-    uStack_3c = 0x33;
+    stack_pair_40.second = 0x33;
     iVar5 = 0;
     do {
       bVar1 = *(byte *)(iVar2 + iVar5);
@@ -65,8 +65,8 @@ void fn_826A9798(int param_1,undefined8 param_2,undefined8 param_3)
                 iVar5 + 3;
       }
       fn_826A91F0(param_2,0xffffffff820072ac,iVar5);
-      uStack_40 = fn_826E7430(param_2);
-      fn_826A68D8(&uStack_40,0xffffffff820071ac);
+      stack_pair_40.first = fn_826E7430(param_2);
+      fn_826A68D8(&stack_pair_40.first,0xffffffff820071ac);
       iVar5 = iVar6;
     } while (bVar1 != 0);
   }

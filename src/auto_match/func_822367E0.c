@@ -35,15 +35,15 @@ void fn_822367E0(int param_1,undefined8 param_2,int param_3)
 {
   int *piVar1;
   undefined4 uStack_40;
-  undefined4 auStack_3c [3];
-  undefined1 auStack_30 [48];
+  undefined4 auStack_3c;
+  undefined1 auStack_30 [16];
   
-  (**(code **)(**(int **)(param_1 + 0x68) + 0x14))(*(int **)(param_1 + 0x68),param_2,auStack_3c);
+  (**(code **)(**(int **)(param_1 + 0x68) + 0x14))(*(int **)(param_1 + 0x68),param_2,&auStack_3c);
   (**(code **)(**(int **)(param_1 + 0x70) + 0x14))(*(int **)(param_1 + 0x70),param_2,&uStack_40);
   (**(code **)(**(int **)(param_1 + 0x78) + 0x14))(*(int **)(param_1 + 0x78),param_2,auStack_30);
   piVar1 = *(int **)(param_3 + 0x10);
   if (piVar1 != (int *)0x0) {
-    (**(code **)(*piVar1 + 4))(piVar1,auStack_3c[0],uStack_40);
+    (**(code **)(*piVar1 + 4))(piVar1,auStack_3c,uStack_40);
   }
   return;
 }

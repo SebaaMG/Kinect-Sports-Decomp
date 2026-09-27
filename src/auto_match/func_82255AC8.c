@@ -34,20 +34,20 @@ void fn_82255AC8(undefined8 param_1,undefined8 param_2,undefined8 param_3,int pa
 
 {
   int iVar1;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30;
   
   iVar1 = fn_8223C610(param_3,1,0,0);
   if (iVar1 == 0) {
-    auStack_30[0] = fn_8223C610(param_3,3,0,0);
+    auStack_30 = fn_8223C610(param_3,3,0,0);
   }
   else {
-    auStack_30[0] = 0;
+    auStack_30 = 0;
   }
   if (param_4 != 0) {
     *(undefined4 *)(param_4 + 8) = 0;
     *(undefined4 *)(param_4 + 4) = 7;
     *(undefined4 *)(param_4 + 0xc) = 1;
-    fn_8223C680(param_4,0,auStack_30);
+    fn_8223C680(param_4,0,&auStack_30);
   }
   return;
 }

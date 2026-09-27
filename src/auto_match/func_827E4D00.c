@@ -36,18 +36,18 @@ undefined8 fn_827E4D00(int param_1)
 {
   undefined8 uVar1;
   int iVar2;
-  undefined4 uStack_20;
-  undefined4 uStack_1c;
+  struct { undefined4 first; undefined4 second; } stack_pair_20;
+
   
   iVar2 = (*(int *)(param_1 + 4) + 3) * 0x28;
   if (*(int *)(iVar2 + *(int *)(param_1 + 0x20)) == 0) {
-    uStack_20 = 0;
-    uStack_1c = 0;
+    stack_pair_20.first = 0;
+    stack_pair_20.second = 0;
     *(undefined4 *)(iVar2 + *(int *)(param_1 + 0x20)) = 1;
-    fn_82517978(&uStack_20,*(undefined4 *)(param_1 + 0x14),*(undefined4 *)(param_1 + 0x18),0);
+    fn_82517978(&stack_pair_20.first,*(undefined4 *)(param_1 + 0x14),*(undefined4 *)(param_1 + 0x18),0);
     uVar1 = fn_827DA9F8(*(undefined4 *)(param_1 + 0x20),*(undefined4 *)(param_1 + 0x30),
                               param_1 + 0x34,*(undefined4 *)(param_1 + 4),
-                              *(undefined4 *)(param_1 + 0x138),&uStack_20);
+                              *(undefined4 *)(param_1 + 0x138),&stack_pair_20.first);
   }
   else {
     uVar1 = 0x1392;

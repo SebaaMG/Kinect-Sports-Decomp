@@ -58,8 +58,8 @@ void fn_826E0BF8(int param_1,undefined4 *param_2)
   uint uStack_60;
   uint uStack_5c;
   uint auStack_58 [2];
-  int iStack_50;
-  int iStack_4c;
+  struct { int first; int second; } stack_pair_50;
+
   
   iVar8 = *(int *)(param_1 + 0x314);
   if (iVar8 == 0) {
@@ -77,9 +77,9 @@ void fn_826E0BF8(int param_1,undefined4 *param_2)
                     ((ulonglong)uStack_60 & 0xfffffffc) + 8,((ulonglong)uStack_5c & 0xfffffffc) + 8,
                     uVar4 & 0xffff);
   auStack_58[0] = (uint)uVar2 & 0x9ffff;
-  fn_826E0920(&iStack_50,param_1,auStack_58,((ulonglong)uStack_60 & 0xfffffffc) + 8,
+  fn_826E0920(&stack_pair_50.first,param_1,auStack_58,((ulonglong)uStack_60 & 0xfffffffc) + 8,
                 ((ulonglong)uStack_5c & 0xfffffffc) + 8,uVar3,uVar4,uVar5);
-  if ((iStack_50 == 0) && (iStack_4c != 0)) {
+  if ((stack_pair_50.first == 0) && (stack_pair_50.second != 0)) {
     fn_82687270();
   }
   lVar6 = ((ulonglong)uStack_60 & 0xfffffffc) + 4;

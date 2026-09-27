@@ -37,7 +37,7 @@ void fn_828ED508(int *param_1,undefined8 param_2,undefined8 param_3,undefined8 p
   int iVar1;
   int *piVar2;
   longlong lVar3;
-  undefined4 auStack_40 [16];
+  undefined4 auStack_40 [8];
   
   if (4 < (param_5 & 0xffffffff)) {
     param_5 = 4;

@@ -44,7 +44,7 @@ fn_8288AF40(undefined4 *param_1,undefined4 param_2,undefined4 param_3,undefined4
   int iVar4;
   longlong lVar5;
   undefined1 auStack_30 [4];
-  int aiStack_2c [11];
+  int aiStack_2c;
   
   param_1[0xc] = param_2;
   param_1[0xe] = param_3;
@@ -68,8 +68,8 @@ fn_8288AF40(undefined4 *param_1,undefined4 param_2,undefined4 param_3,undefined4
   } while (lVar5 != 0);
   iVar4 = 0;
   do {
-    aiStack_2c[0] = iVar4;
-    puVar2 = (undefined1 *)fn_8288AE70(param_1 + 0x49,aiStack_2c);
+    aiStack_2c = iVar4;
+    puVar2 = (undefined1 *)fn_8288AE70(param_1 + 0x49,&aiStack_2c);
     iVar4 = iVar4 + 1;
     *puVar2 = 0;
   } while (iVar4 < 0x1b);

@@ -44,10 +44,10 @@ void fn_8261BD28(uint *param_1)
   longlong lVar6;
   int iVar7;
   short *psVar8;
-  int aiStack_50 [20];
+  int aiStack_50;
   
   if (lbl_83274A04 != 0) {
-    aiStack_50[0] = fn_825A23C0(4,4);
+    aiStack_50 = fn_825A23C0(4,4);
     iVar7 = 0;
     if (0 < lbl_83274A04) {
       psVar8 = &lbl_832749B4;
@@ -68,7 +68,7 @@ void fn_8261BD28(uint *param_1)
             puVar4 = (uint *)0x0;
 LAB_8261bdc0:
             if (puVar4 != (uint *)0x0) {
-              puVar1 = (undefined4 *)fn_825A2410(aiStack_50);
+              puVar1 = (undefined4 *)fn_825A2410(&aiStack_50);
               iVar5 = iVar5 + 1;
               *puVar1 = puVar4;
             }
@@ -76,7 +76,7 @@ LAB_8261bdc0:
           lVar6 = lVar6 + -1;
           psVar8 = psVar8 + 1;
         } while (lVar6 != 0);
-        iVar2 = aiStack_50[0];
+        iVar2 = aiStack_50;
         if (1 < iVar5) {
           iVar2 = fn_8261BE28();
         }

@@ -36,20 +36,20 @@ extern unsigned int uStack_2c;
 undefined4 * fn_828CB7A8(undefined4 *param_1,undefined8 param_2,undefined8 param_3)
 
 {
-  undefined1 auStack_30 [4];
+  undefined1 auStack_30;
   undefined4 uStack_2c;
   undefined4 uStack_28;
   char cStack_24;
   
-  auStack_30[0] = 0;
+  auStack_30 = 0;
   uStack_2c = 0;
-  fn_828CB590(&uStack_28,param_2,param_3,param_2,auStack_30,0);
+  fn_828CB590(&uStack_28,param_2,param_3,param_2,&auStack_30,0);
   if (cStack_24 == '\0') {
     *(undefined1 *)(param_1 + 1) = 0;
     *param_1 = uStack_28;
   }
   else {
-    fn_8223A738(param_2,param_3,auStack_30);
+    fn_8223A738(param_2,param_3,&auStack_30);
     fn_8223A630(param_2,param_3);
     *param_1 = (int)param_3;
     *(undefined1 *)(param_1 + 1) = 1;

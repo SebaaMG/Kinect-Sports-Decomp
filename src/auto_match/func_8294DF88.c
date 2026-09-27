@@ -48,27 +48,27 @@ undefined8 fn_8294DF88(int param_1)
   int iVar7;
   uint uVar8;
   undefined4 auStack_140 [4];
-  undefined4 uStack_130;
-  undefined4 uStack_12c;
+  struct { undefined4 first; undefined4 second; } stack_pair_130;
+
   undefined4 uStack_128;
   undefined4 uStack_124;
   undefined1 auStack_120 [64];
   undefined1 auStack_e0 [16];
-  int aiStack_d0 [52];
+  int aiStack_d0 [44];
   
   uStack_124 = 3;
   uVar2 = **(uint **)(param_1 + 0x104);
   auStack_140[0] = 0;
   uVar8 = uVar2 & 0xfffff;
-  uStack_130 = 0;
-  uStack_12c = 1;
+  stack_pair_130.first = 0;
+  stack_pair_130.second = 1;
   uStack_128 = 2;
   uVar4 = fn_8294AC48(param_1,*(uint **)(param_1 + 0x104),0xffffffff82036550,auStack_120,
-                        auStack_140,auStack_e0,&uStack_130,uVar8);
+                        auStack_140,auStack_e0,&stack_pair_130.first,uVar8);
   bVar1 = (int)uVar4 != 1;
   if (!bVar1) {
     uVar4 = fn_8294AC48(param_1,*(undefined4 *)(param_1 + 0x104),0xffffffff820365b0,auStack_120,
-                          auStack_140,auStack_e0,&uStack_130,uVar8);
+                          auStack_140,auStack_e0,&stack_pair_130.first,uVar8);
   }
   if ((int)uVar4 == 0) {
     uVar6 = 0;

@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_30;
 extern int fn_82A1C5E0();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 void fn_82A1CA50(int param_1,int param_2,int param_3)
@@ -35,7 +35,7 @@ void fn_82A1CA50(int param_1,int param_2,int param_3)
 {
   int iVar1;
   int iVar2;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [1];
   
   KeEnterCriticalRegion();
   (**(code **)(*(int *)(param_2 + 0x298) + 0xc))(*(undefined4 *)(param_3 + 0x48),0,0);
@@ -45,7 +45,7 @@ void fn_82A1CA50(int param_1,int param_2,int param_3)
     iVar1 = (**(code **)(*(int *)(param_2 + 0x298) + 0xc))(*(undefined4 *)(param_3 + 0x48),3,iVar2);
     if (-1 < iVar1) {
       (**(code **)(*(int *)(param_2 + 0x298) + 0xc))(*(undefined4 *)(param_3 + 0x48),4,iVar2);
-      fn_82F68CC0((param_1 + 0x10) * 0x24 + param_2,iVar2,0x24);
+      memcpy((param_1 + 0x10) * 0x24 + param_2,iVar2,0x24);
       fn_82A1C5E0(param_2 + 0x14);
       NtFlushBuffersFile(*(undefined4 *)(param_3 + 0x18),auStack_30);
     }

@@ -38,14 +38,14 @@ void fn_827BA830(int param_1,undefined2 param_2,undefined2 param_3)
 {
   undefined2 uStack_20;
   undefined2 uStack_1e;
-  undefined4 uStack_18;
-  undefined4 uStack_14;
+  struct { undefined4 first; undefined4 second; } stack_pair_18;
+
   
-  uStack_18 = *(undefined4 *)(param_1 + 0x14);
-  uStack_14 = 1;
+  stack_pair_18.first = *(undefined4 *)(param_1 + 0x14);
+  stack_pair_18.second = 1;
   uStack_20 = param_2;
   uStack_1e = param_3;
-  fn_827B4F80(param_1 + 4,&uStack_18);
+  fn_827B4F80(param_1 + 4,&stack_pair_18.first);
   fn_827BA7C0(param_1 + 0x14,&uStack_20);
   return;
 }

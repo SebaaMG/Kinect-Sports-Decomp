@@ -36,7 +36,7 @@ extern int fn_8234D690();
 extern int fn_82560010();
 extern int fn_82564518();
 extern int fn_827EFC90();
-extern int fn_82F691F0();
+extern int memset();
 extern unsigned int lbl_8218E1AC;
 extern unsigned int lbl_821922D0;
 extern unsigned int lbl_821922D4;
@@ -80,15 +80,15 @@ undefined4 * fn_8234B5A8(undefined4 *param_1,int param_2,undefined8 param_3,unde
   undefined4 in_register_000104d4;
   undefined4 in_register_000104d8;
   undefined4 in_vr77;
-  undefined1 auStack_a0 [32];
+  undefined1 auStack_a0 [1];
   undefined1 auStack_80 [128];
   
   puVar12 = param_1 + 4;
   *param_1 = &lbl_821B1D00;
   param_1[1] = &lbl_821B1D08;
-  fn_82F691F0(puVar12,0,0x80);
+  memset(puVar12,0,0x80);
   puVar11 = param_1 + 0x24;
-  fn_82F691F0(puVar11,0,0x80);
+  memset(puVar11,0,0x80);
   param_1[0x45] = param_4;
   param_1[0x44] = param_2;
   puVar10 = param_1 + 0x44;

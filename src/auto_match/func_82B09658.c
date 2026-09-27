@@ -50,7 +50,7 @@ int fn_82B09658(int param_1,ulonglong param_2,int param_3,undefined8 param_4)
   char cVar5;
   int iVar4;
   uint uVar6;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [16];
   
   fn_82BA02A8();
   uVar6 = *(uint *)(param_3 + 8) >> 7 & 0x7f;

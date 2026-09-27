@@ -38,7 +38,7 @@ void fn_826A6F88(int param_1,uint param_2,undefined8 param_3,int param_4)
   byte *pbVar5;
   int iVar6;
   uint uVar7;
-  byte abStack_140 [255];
+  byte abStack_140 [175];
   byte abStack_41 [65];
   
   pbVar5 = abStack_140;

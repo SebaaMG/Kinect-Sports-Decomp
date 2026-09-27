@@ -34,13 +34,13 @@ extern int fn_82784648();
 void fn_82784708(double param_1,double param_2,int param_3)
 
 {
-  float fStack_30;
-  float fStack_2c;
+  struct { float first; float second; } stack_pair_30;
+
   
   fn_82784648();
-  fStack_30 = (float)param_1;
-  fStack_2c = (float)param_2;
-  fn_826EBD10(param_3 + 8,&fStack_30);
+  stack_pair_30.first = (float)param_1;
+  stack_pair_30.second = (float)param_2;
+  fn_826EBD10(param_3 + 8,&stack_pair_30.first);
   *(int *)(*(int *)(param_3 + 0x28) + 4) = *(int *)(*(int *)(param_3 + 0x28) + 4) + 1;
   return;
 }

@@ -38,7 +38,7 @@ undefined8 fn_823B6A78(int *param_1)
   int *piVar3;
   int iVar4;
   undefined8 uVar6;
-  undefined4 *apuStack_30 [12];
+  undefined4 * apuStack_30;
   
   uVar6 = 1;
   if ((param_1[3] == 0) || (cVar5 = fn_8288B760((ulonglong)(uint)param_1[3] - 0x68), cVar5 == '\0')
@@ -48,8 +48,8 @@ LAB_823b6b20:
   }
   else {
     puVar1 = *(undefined4 **)(*param_1 + 0x200);
-    apuStack_30[0] = (undefined4 *)*puVar1;
-    while (puVar2 = apuStack_30[0], apuStack_30[0] != puVar1) {
+    apuStack_30 = (undefined4 *)*puVar1;
+    while (puVar2 = apuStack_30, apuStack_30 != puVar1) {
       piVar3 = (int *)(param_1[3] + -0x68);
       if (param_1[3] == 0) {
         piVar3 = (int *)0x0;
@@ -57,7 +57,7 @@ LAB_823b6b20:
       iVar4 = (**(code **)(*piVar3 + 8))();
       cVar5 = (**(code **)(*(int *)(iVar4 + 0x144) + 0x38))((int *)(iVar4 + 0x144),puVar2[4]);
       if (cVar5 == '\0') goto LAB_823b6b20;
-      fn_82381BC0(apuStack_30);
+      fn_82381BC0(&apuStack_30);
       puVar1 = *(undefined4 **)(*param_1 + 0x200);
     }
   }

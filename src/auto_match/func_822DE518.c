@@ -63,7 +63,7 @@ void fn_822DE518(int param_1)
   int iStack_6c;
   int iStack_68;
   int iStack_64;
-  undefined1 auStack_60 [96];
+  undefined1 auStack_60 [48];
   
   if (*(int *)(*(int *)(param_1 + 0x14) + 0x168) == 0) {
     uVar4 = *(uint *)(*(int *)(param_1 + 0x14) + 0x16c);

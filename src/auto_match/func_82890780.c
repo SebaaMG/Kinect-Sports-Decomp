@@ -35,7 +35,7 @@ extern int fn_828B5580();
 extern int fn_828B55B0();
 extern int fn_828B55F8();
 extern int fn_828C8058();
-extern int fn_82F6B030();
+extern int __u64tod();
 extern unsigned int lbl_82006848;
 
 
@@ -113,7 +113,7 @@ void fn_82890780(undefined8 param_1)
       piVar4 = *(int **)(iVar3 + 0x10);
       lVar7 = *(longlong *)(iVar3 + 0x18);
       fn_8288B4F8(aiStack_50);
-      dVar8 = (double)fn_82F6B030(lVar2 - lVar7);
+      dVar8 = (double)__u64tod(lVar2 - lVar7);
       dVar9 = (double)(float)dVar8;
       dVar8 = (double)(**(code **)(*piVar4 + 0x18))(piVar4);
       if (dVar8 <= (double)(float)(dVar9 * dVar10)) {

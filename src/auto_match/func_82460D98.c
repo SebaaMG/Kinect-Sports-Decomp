@@ -40,8 +40,8 @@ void fn_82460D98(int param_1)
   int iVar2;
   ulonglong uVar3;
   int iVar4;
-  undefined4 uStack_40;
-  int iStack_3c;
+  struct { undefined4 first; int second; } stack_pair_40;
+
   
   iVar4 = 1;
   switch(*(undefined4 *)(param_1 + 0x54)) {
@@ -68,10 +68,10 @@ void fn_82460D98(int param_1)
     }
     if (iVar4 == 0) {
       iVar1 = *(int *)(iVar2 + 0x20);
-      uStack_40 = 0;
+      stack_pair_40.first = 0;
       *(int *)(iVar2 + 0x20) = iVar1 + 1;
-      iStack_3c = iVar1;
-      fn_824BF8A8(iVar2,&uStack_40);
+      stack_pair_40.second = iVar1;
+      fn_824BF8A8(iVar2,&stack_pair_40.first);
       *(int *)(param_1 + 0xbc) = iVar1;
     }
     *(int *)(param_1 + 0xb4) = iVar4;
@@ -85,10 +85,10 @@ void fn_82460D98(int param_1)
     }
     if (iVar4 == 0) {
       iVar2 = *(int *)((int)uVar3 + 0x20);
-      uStack_40 = 0;
+      stack_pair_40.first = 0;
       *(int *)((int)uVar3 + 0x20) = iVar2 + 1;
-      iStack_3c = iVar2;
-      fn_824BF8A8(uVar3 + 0x10,&uStack_40);
+      stack_pair_40.second = iVar2;
+      fn_824BF8A8(uVar3 + 0x10,&stack_pair_40.first);
       *(int *)(param_1 + 0xc0) = iVar2;
     }
     *(int *)(param_1 + 0xb8) = iVar4;

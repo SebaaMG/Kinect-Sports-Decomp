@@ -66,8 +66,8 @@ int * fn_826CDFC0(int *param_1,undefined8 param_2,ulonglong param_3,int *param_4
   ulonglong uVar8;
   undefined1 auStack_e0 [8];
   undefined1 auStack_d8 [8];
-  int iStack_d0;
-  int iStack_cc;
+  struct { int first; int second; } stack_pair_d0;
+
   undefined4 uStack_c8;
   int iStack_c0;
   int iStack_bc;
@@ -77,7 +77,7 @@ int * fn_826CDFC0(int *param_1,undefined8 param_2,ulonglong param_3,int *param_4
   int iStack_ac;
   undefined1 auStack_a0 [32];
   undefined1 auStack_80 [32];
-  undefined1 auStack_60 [96];
+  undefined1 auStack_60 [64];
   
   if (((((uint)param_1[0x23] >> 0xb & 1) == 0) &&
       (((cVar5 = (**(code **)(*param_1 + 8))(), cVar5 != '\0' || (param_1[0x71] != 0)) &&
@@ -107,17 +107,17 @@ int * fn_826CDFC0(int *param_1,undefined8 param_2,ulonglong param_3,int *param_4
         return (int *)0x0;
       }
     }
-    iStack_d0 = 0;
-    iStack_cc = 0;
+    stack_pair_d0.first = 0;
+    stack_pair_d0.second = 0;
     uStack_c8 = 0;
-    fn_826CDE90(param_1,&iStack_d0,auStack_e0,1);
-    iVar2 = iStack_d0;
+    fn_826CDE90(param_1,&stack_pair_d0.first,auStack_e0,1);
+    iVar2 = stack_pair_d0.first;
     uVar8 = (ulonglong)uVar1 - 1;
     if (-1 < (longlong)uVar8) {
       lVar7 = (uVar8 & 0x3fffffff) << 2;
       do {
         piVar3 = *(int **)(param_1[0x2a] + (int)lVar7);
-        if (((iStack_cc == 0) ||
+        if (((stack_pair_d0.second == 0) ||
             ((*(char *)(iVar2 + (int)uVar8) != '\0' && (*(short *)(piVar3 + 0x19) == 0)))) &&
            ((*(byte *)((int)piVar3 + 0x66) & 2) == 0)) {
           piVar3 = (int *)(**(code **)(*piVar3 + 0x34))(piVar3,auStack_e0,param_3,param_4);

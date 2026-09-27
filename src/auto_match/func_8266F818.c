@@ -60,8 +60,8 @@ void fn_8266F818(int param_1,longlong param_2,undefined8 param_3)
   double dVar7;
   double dVar8;
   undefined4 uStack_8c;
-  undefined4 uStack_80;
-  undefined4 uStack_7c;
+  struct { undefined4 first; undefined4 second; } stack_pair_80;
+
   undefined4 uStack_78;
   undefined4 uStack_74;
   undefined4 uStack_70;
@@ -110,8 +110,8 @@ void fn_8266F818(int param_1,longlong param_2,undefined8 param_3)
     uVar3 = fn_8263C538(**(undefined4 **)(param_1 + 0xb8));
     *(undefined4 *)(param_1 + 0xd8) = uVar3;
     uVar3 = lbl_821AAD20;
-    uStack_80 = uVar1;
-    uStack_7c = uStack_8c;
+    stack_pair_80.first = uVar1;
+    stack_pair_80.second = uStack_8c;
     uStack_70 = uVar1;
     uStack_78 = 0;
     uStack_74 = 0;
@@ -129,7 +129,7 @@ void fn_8266F818(int param_1,longlong param_2,undefined8 param_3)
     uStack_68 = 0;
     *(undefined4 *)(param_1 + 0xbc) = 0;
     *(undefined4 *)(param_1 + 0xc0) = 0;
-    (**(code **)(**(int **)(param_1 + 0x10) + 100))(*(int **)(param_1 + 0x10),&uStack_80);
+    (**(code **)(**(int **)(param_1 + 0x10) + 100))(*(int **)(param_1 + 0x10),&stack_pair_80.first);
   }
   return;
 }

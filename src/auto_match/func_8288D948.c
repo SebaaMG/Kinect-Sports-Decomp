@@ -36,20 +36,20 @@ void fn_8288D948(int param_1,undefined8 param_2)
   int iVar1;
   int iVar2;
   ulonglong uVar3;
-  int aiStack_30 [12];
+  int aiStack_30;
   
   iVar1 = fn_828A12E8(param_2);
-  aiStack_30[0] = **(int **)(iVar1 + 0x98);
-  if ((int *)aiStack_30[0] != *(int **)(iVar1 + 0x98)) {
+  aiStack_30 = **(int **)(iVar1 + 0x98);
+  if ((int *)aiStack_30 != *(int **)(iVar1 + 0x98)) {
     do {
-      iVar2 = aiStack_30[0];
-      (**(code **)(**(int **)(aiStack_30[0] + 0x40) + 4))();
+      iVar2 = aiStack_30;
+      (**(code **)(**(int **)(aiStack_30 + 0x40) + 4))();
       uVar3 = (ulonglong)*(uint *)(*(int *)(iVar2 + 0x40) + 8);
       if ((uVar3 != 0) && (iVar2 = fn_828EA268(uVar3 - 1), *(int *)(param_1 + 8) < iVar2)) {
         *(int *)(param_1 + 8) = iVar2;
       }
-      fn_8288BD68(aiStack_30);
-    } while (aiStack_30[0] != *(int *)(iVar1 + 0x98));
+      fn_8288BD68(&aiStack_30);
+    } while (aiStack_30 != *(int *)(iVar1 + 0x98));
   }
   return;
 }

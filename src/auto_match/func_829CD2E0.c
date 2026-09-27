@@ -42,8 +42,8 @@ uint * fn_829CD2E0(void)
   int iVar3;
   uint *puVar4;
   int aiStack_40 [4];
-  undefined4 uStack_30;
-  uint uStack_2c;
+  struct { undefined4 first; uint second; } stack_pair_30;
+
   undefined4 uStack_28;
   uint uStack_24;
   int *piStack_20;
@@ -58,13 +58,13 @@ uint * fn_829CD2E0(void)
   }
   KfReleaseSpinLock(0xffffffff8321506c,uVar2);
   if ((puVar4 != (uint *)0x0) && ((*puVar4 & 0x80) != 0)) {
-    uStack_2c = puVar4[0x19];
+    stack_pair_30.second = puVar4[0x19];
     aiStack_40[0] = 0x96000;
     piStack_20 = aiStack_40;
-    uStack_30 = 0x1e;
+    stack_pair_30.first = 0x1e;
     uStack_28 = 0x67200;
-    uStack_24 = uStack_2c;
-    iVar3 = (*(code *)lbl_8315C3E8)(&uStack_30);
+    uStack_24 = stack_pair_30.second;
+    iVar3 = (*(code *)lbl_8315C3E8)(&stack_pair_30.first);
     if ((iVar3 < 0) || (aiStack_40[0] != 0x96000)) {
       fn_829C9E90(puVar4);
       puVar4 = (uint *)0x0;

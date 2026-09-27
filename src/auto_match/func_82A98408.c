@@ -29,7 +29,7 @@ extern unsigned int *auStack_b8;
 extern int fn_8265C940();
 extern int fn_8265C990();
 extern int fn_82A981D8();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int iStack0000003c;
 extern unsigned int iStack_a4;
 extern unsigned int uStack00000034;
@@ -118,7 +118,7 @@ void fn_82A98408(ulonglong param_1,int param_2,int param_3,uint *param_4,ulonglo
               (uVar7 & 0x3fffff0)) * 2 + (uVar7 & 0xf) + uVar18 + lVar17;
       uVar9 = (((uVar3 >> 3) + uVar19) * 2 & 6) + uVar8;
       lVar16 = (longlong)(int)((int)uVar12 + param_7[1]) * (longlong)iStack0000003c;
-      fn_82F68CC0((((((uVar9 * 8 & 8) + ((ulonglong)(uint)((int)uVar7 >> 6) & 7)) * 8 +
+      memcpy((((((uVar9 * 8 & 8) + ((ulonglong)(uint)((int)uVar7 >> 6) & 7)) * 8 +
                      (uVar9 & 0xfffffffe)) * 4 + (uVar7 & 0xfffffe00)) * 8 & 0xfffffff8) +
                    (uVar7 & 0x3f) + param_1,
                    (ulonglong)(*param_7 << (uVar21 & 0x3f)) + lVar16 + uVar6,
@@ -131,7 +131,7 @@ void fn_82A98408(ulonglong param_1,int param_2,int param_3,uint *param_4,ulonglo
           uVar9 = ((((*param_4 + uVar7 & 0xffffffff) >> 3) + uVar19) * 2 & 6) + uVar8;
           uVar10 = (((ulonglong)((uVar3 >> 5) + iVar20 << (uVar22 & 0x3f)) & 0x1fffffff) +
                    (uVar10 & 0x3fffff0)) * 2 + (uVar10 & 0xf) + uVar18 + lVar17;
-          fn_82F68CC0((((((uVar9 * 8 & 8) + ((ulonglong)(uint)((int)uVar10 >> 6) & 7)) * 8 +
+          memcpy((((((uVar9 * 8 & 8) + ((ulonglong)(uint)((int)uVar10 >> 6) & 7)) * 8 +
                          (uVar9 & 0xfffffffe)) * 4 + (uVar10 & 0xfffffe00)) * 8 & 0xfffffff8) +
                        (uVar10 & 0x3f) + param_1,
                        (ulonglong)(*param_7 + (int)uVar7 << (uVar21 & 0x3f)) + lVar16 + uVar6,
@@ -146,7 +146,7 @@ void fn_82A98408(ulonglong param_1,int param_2,int param_3,uint *param_4,ulonglo
         uVar8 = ((((*param_4 + uVar7 & 0xffffffff) >> 3) + uVar19) * 2 & 6) + uVar8;
         uVar9 = (((ulonglong)((uVar3 >> 5) + iVar20 << (uVar22 & 0x3f)) & 0x1fffffff) +
                 (uVar9 & 0x3fffff0)) * 2 + (uVar9 & 0xf) + uVar18 + lVar17;
-        fn_82F68CC0((((((uVar8 * 8 & 8) + ((ulonglong)(uint)((int)uVar9 >> 6) & 7)) * 8 +
+        memcpy((((((uVar8 * 8 & 8) + ((ulonglong)(uint)((int)uVar9 >> 6) & 7)) * 8 +
                        (uVar8 & 0xfffffffe)) * 4 + (uVar9 & 0xfffffe00)) * 8 & 0xfffffff8) +
                      (uVar9 & 0x3f) + param_1,
                      (ulonglong)(*param_7 + (int)uVar7 << (uVar21 & 0x3f)) + lVar16 + uVar6,

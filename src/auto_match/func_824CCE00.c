@@ -39,7 +39,7 @@ undefined8 fn_824CCE00(undefined8 param_1,int param_2)
   undefined4 uVar4;
   undefined4 uVar5;
   undefined4 uVar6;
-  undefined1 auStack_30 [24];
+  undefined1 auStack_30 [8];
   
   iVar2 = fn_82F52188(auStack_30,*(undefined4 *)(param_2 + 0x20),2);
   puVar1 = (undefined4 *)(in_r0 + iVar2 & 0xfffffff0);

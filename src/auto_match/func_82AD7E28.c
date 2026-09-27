@@ -64,8 +64,8 @@ void fn_82AD7E28(int param_1,int param_2,int param_3,char param_4,int param_5,ui
   uint uVar16;
   int *piVar17;
   uint uVar18;
-  int iStack_80;
-  uint uStack_7c;
+  struct { int first; uint second; } stack_pair_80;
+
   int iStack_78;
   
   uVar16 = *(uint *)(param_3 + 8) >> 7 & 0x7f;
@@ -73,17 +73,17 @@ void fn_82AD7E28(int param_1,int param_2,int param_3,char param_4,int param_5,ui
     bVar1 = false;
   }
   iStack_78 = 0;
-  uStack_7c = -(uint)((*(uint *)(param_2 + 4) & 1) == 0) & *(uint *)(param_2 + 4);
+  stack_pair_80.second = -(uint)((*(uint *)(param_2 + 4) & 1) == 0) & *(uint *)(param_2 + 4);
   iVar4 = *(int *)((0xc - (uint)!bVar1) * 4 + param_3);
-  iStack_80 = param_2;
+  stack_pair_80.first = param_2;
   do {
-    if ((uStack_7c == 0) || (bVar1 = false, iStack_78 == *(int *)(uStack_7c + 8))) {
+    if ((stack_pair_80.second == 0) || (bVar1 = false, iStack_78 == *(int *)(stack_pair_80.second + 8))) {
       bVar1 = true;
     }
     if (bVar1) {
       return;
     }
-    puVar7 = (undefined4 *)fn_82AD3550(&iStack_80);
+    puVar7 = (undefined4 *)fn_82AD3550(&stack_pair_80.first);
     puVar8 = (uint *)fn_82ACA920(param_1,iVar4,*(undefined4 *)(iVar4 + 0xc));
     uVar5 = (ulonglong)*puVar8 & 0xfffffffff1ffffff;
     uVar15 = uVar5 >> 5 & 3;

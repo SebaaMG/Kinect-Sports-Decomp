@@ -41,8 +41,8 @@ fn_82A29FE0(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefined4 
   uint uVar2;
   uint uStack_30;
   undefined4 uStack_2c;
-  undefined4 uStack_28;
-  undefined4 uStack_24;
+  struct { undefined4 first; undefined4 second; } stack_pair_28;
+
   
   if (param_4 != (undefined4 *)0x0) {
     *param_4 = 0;
@@ -60,11 +60,11 @@ fn_82A29FE0(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefined4 
     }
   }
   else {
-    uStack_24 = param_5[2];
-    uStack_28 = param_5[3];
+    stack_pair_28.second = param_5[2];
+    stack_pair_28.first = param_5[3];
     *param_5 = 0x103;
     uVar1 = NtWriteFile(param_1,param_5[4],0,-(uint)((param_5[4] & 1) == 0) & (uint)param_5,param_5,
-                        param_2,param_3,&uStack_28);
+                        param_2,param_3,&stack_pair_28.first);
     if (((uVar1 & 0xc0000000) != 0xc0000000) && (uVar1 != 0x103)) {
       if (param_4 != (undefined4 *)0x0) {
         *param_4 = param_5[1];

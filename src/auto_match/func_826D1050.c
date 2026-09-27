@@ -103,15 +103,15 @@ void fn_826D1050(int param_1)
   int *piVar4;
   undefined4 *puVar5;
   longlong lVar7;
-  int aiStack_120 [5];
+  int aiStack_120;
   undefined4 uStack_10c;
   undefined4 uStack_108;
   undefined4 uStack_104;
   uint uStack_100;
   int iStack_fc;
   byte bStack_f8;
-  undefined4 uStack_f0;
-  undefined4 uStack_ec;
+  struct { undefined4 first; undefined4 second; } stack_pair_f0;
+
   int *piStack_e8;
   undefined4 uStack_e4;
   undefined4 uStack_dc;
@@ -163,9 +163,9 @@ void fn_826D1050(int param_1)
   uStack_100 = 0;
   iStack_fc = 0;
   uVar3 = fn_826957D0(param_1,0);
-  fn_82696D38(aiStack_120,uVar3,iVar1,0xffffffffffffffff,0);
-  if (*(int *)(aiStack_120[0] + 0x10) != 0) {
-    cVar6 = fn_826B0F10(uVar2,(ulonglong)*(uint *)(param_1 + 0x18) + 0x78,aiStack_120,
+  fn_82696D38(&aiStack_120,uVar3,iVar1,0xffffffffffffffff,0);
+  if (*(int *)(aiStack_120 + 0x10) != 0) {
+    cVar6 = fn_826B0F10(uVar2,(ulonglong)*(uint *)(param_1 + 0x18) + 0x78,&aiStack_120,
                               &uStack_100);
     if (cVar6 == '\0') {
       piVar4 = (int *)fn_826BD928(*(undefined4 *)(param_1 + 8));
@@ -216,8 +216,8 @@ void fn_826D1050(int param_1)
       uStack_c8 = 0;
       uStack_cc = 0;
       uStack_d0 = 0;
-      uStack_ec = 2;
-      uStack_f0 = 0;
+      stack_pair_f0.second = 2;
+      stack_pair_f0.first = 0;
       uStack_108 = 0xff;
       uStack_10c = 0;
       uStack_e4 = 0;
@@ -227,8 +227,8 @@ void fn_826D1050(int param_1)
       uStack_b4 = 0;
       piStack_e8 = piVar4;
       uVar3 = (**(code **)(*piVar4 + 0x40))(piVar4);
-      fn_826F75B8(&uStack_f0,uVar3);
-      fn_826CECC8(&uStack_f0);
+      fn_826F75B8(&stack_pair_f0.first,uVar3);
+      fn_826CECC8(&stack_pair_f0.first);
       piVar4[1] = piVar4[1] + 1;
       uStack_78 = 0;
       uStack_7c = 0;
@@ -256,10 +256,10 @@ void fn_826D1050(int param_1)
     fn_826CECC8(puVar5);
     fn_8267C498(piVar4);
   }
-  lVar7 = (ulonglong)*(uint *)(aiStack_120[0] + 8) - 1;
-  *(int *)(aiStack_120[0] + 8) = (int)lVar7;
+  lVar7 = (ulonglong)*(uint *)(aiStack_120 + 8) - 1;
+  *(int *)(aiStack_120 + 8) = (int)lVar7;
   if (lVar7 == 0) {
-    fn_826944C8(aiStack_120[0]);
+    fn_826944C8(aiStack_120);
   }
   if (((bStack_f8 & 2) == 0) && (uStack_100 != 0)) {
     fn_826824B0();

@@ -56,7 +56,7 @@ extern int fn_82429260();
 extern int fn_824D2888();
 extern int fn_82547C80();
 extern int fn_82A1EFC0();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int lbl_821954D8;
 extern unsigned int lbl_821B9BC8;
 extern unsigned int lbl_821CC160;
@@ -86,7 +86,7 @@ void fn_82418800(double param_1,int *param_2)
   double dVar16;
   undefined4 uVar17;
   undefined4 uVar18;
-  undefined1 auStack_120 [4];
+  undefined1 auStack_120 [1];
   float fStack_11c;
   undefined4 uStack_fc;
   undefined **appuStack_e0 [56];
@@ -256,7 +256,7 @@ LAB_82418b90:
             if (*(int *)(iVar6 + 0x24) != 0) {
               fn_8241FB38(param_2,auStack_120,piVar9);
             }
-            fn_82F68CC0(param_2 + 0xbc,auStack_120,0x40);
+            memcpy(param_2 + 0xbc,auStack_120,0x40);
             fn_822BC900(iVar6,*(undefined4 *)(iVar7 + 0x28),*(undefined4 *)(iVar7 + 0x40));
             fn_8240F170(iVar7,auStack_120);
             if (*(int *)(iVar6 + 0x24) != 0) {

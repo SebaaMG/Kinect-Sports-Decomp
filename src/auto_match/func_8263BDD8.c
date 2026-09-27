@@ -42,7 +42,7 @@ void fn_8263BDD8(int param_1,undefined8 param_2,undefined8 param_3,undefined8 pa
   uint uVar4;
   undefined4 uStack_50;
   int aiStack_4c [2];
-  undefined1 auStack_44 [68];
+  undefined1 auStack_44 [20];
   
   fn_8263B958();
   uVar1 = *(uint *)(param_1 + 0x20);

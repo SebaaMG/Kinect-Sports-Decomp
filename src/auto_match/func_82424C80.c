@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_230;
 extern int fn_82F65350();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 void fn_82424C80(ulonglong param_1,ulonglong param_2)
@@ -39,7 +39,7 @@ void fn_82424C80(ulonglong param_1,ulonglong param_2)
   longlong lVar4;
   ulonglong uVar5;
   uint uVar6;
-  undefined1 auStack_230 [560];
+  undefined1 auStack_230 [496];
   
   uVar6 = 2;
   uVar5 = param_1;
@@ -61,9 +61,9 @@ void fn_82424C80(ulonglong param_1,ulonglong param_2)
     }
     lVar4 = (uVar1 - (longlong)(int)((uVar1 & 0xffffffff) / (ulonglong)uVar6) * (longlong)(int)uVar6
             ) * 0x1f0 + param_1;
-    fn_82F68CC0(auStack_230,uVar5,0x1f0);
-    fn_82F68CC0(uVar5,lVar4,0x1f0);
-    fn_82F68CC0(lVar4,auStack_230,0x1f0);
+    memcpy(auStack_230,uVar5,0x1f0);
+    memcpy(uVar5,lVar4,0x1f0);
+    memcpy(lVar4,auStack_230,0x1f0);
     uVar6 = uVar6 + 1;
   } while( true );
 }

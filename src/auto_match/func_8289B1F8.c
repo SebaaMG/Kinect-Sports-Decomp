@@ -35,7 +35,7 @@ extern unsigned int uStack_20;
 void fn_8289B1F8(undefined8 param_1,undefined4 *param_2,undefined4 *param_3)
 
 {
-  int aiStack_30 [4];
+  int aiStack_30;
   undefined4 uStack_20;
   int iStack_1c;
   int *piStack_18;
@@ -48,11 +48,11 @@ void fn_8289B1F8(undefined8 param_1,undefined4 *param_2,undefined4 *param_3)
     fn_82899120(param_2 + 1,uStack_14);
   }
   if ((ulonglong)uStack_14 != 0) {
-    fn_822B1B90(aiStack_30,(ulonglong)uStack_14 + 4);
+    fn_822B1B90(&aiStack_30,(ulonglong)uStack_14 + 4);
     *(int **)(iStack_1c + 4) = piStack_18;
     *piStack_18 = iStack_1c;
     sync(1);
-    *(undefined4 *)(aiStack_30[0] + 8) = 0;
+    *(undefined4 *)(aiStack_30 + 8) = 0;
   }
   return;
 }

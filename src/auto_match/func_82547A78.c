@@ -91,8 +91,8 @@ void fn_82547A78(undefined8 param_1,double param_2,undefined8 param_3,undefined8
   double dVar11;
   double dVar12;
   double dVar13;
-  float fStack_110;
-  float fStack_10c;
+  struct { float first; float second; } stack_pair_110;
+
   float fStack_108;
   float fStack_104;
   float fStack_100;
@@ -171,7 +171,7 @@ void fn_82547A78(undefined8 param_1,double param_2,undefined8 param_3,undefined8
   fStack_94 = lbl_821CC160;
   if (param_5 == 0) {
     fStack_e0 = -fVar1;
-    fStack_10c = lbl_821CC160;
+    stack_pair_110.second = lbl_821CC160;
     fStack_fc = lbl_821CC160;
     fStack_ec = lbl_821CC160;
     fStack_dc = lbl_821CC160;
@@ -179,7 +179,7 @@ void fn_82547A78(undefined8 param_1,double param_2,undefined8 param_3,undefined8
     fStack_bc = lbl_821CC160;
     fStack_ac = lbl_821CC160;
     fStack_9c = lbl_821CC160;
-    fStack_110 = -fVar2;
+    stack_pair_110.first = -fVar2;
     fStack_100 = -fVar3;
     fStack_f0 = -fVar4;
     fStack_d0 = fVar1;
@@ -189,7 +189,7 @@ void fn_82547A78(undefined8 param_1,double param_2,undefined8 param_3,undefined8
   }
   else {
     fStack_dc = -fVar1;
-    fStack_110 = lbl_821CC160;
+    stack_pair_110.first = lbl_821CC160;
     fStack_100 = lbl_821CC160;
     fStack_f0 = lbl_821CC160;
     fStack_e0 = lbl_821CC160;
@@ -197,7 +197,7 @@ void fn_82547A78(undefined8 param_1,double param_2,undefined8 param_3,undefined8
     fStack_c0 = lbl_821CC160;
     fStack_b0 = lbl_821CC160;
     fStack_a0 = lbl_821CC160;
-    fStack_10c = -fVar2;
+    stack_pair_110.second = -fVar2;
     fStack_fc = -fVar3;
     fStack_ec = -fVar4;
     fStack_cc = fVar1;
@@ -205,7 +205,7 @@ void fn_82547A78(undefined8 param_1,double param_2,undefined8 param_3,undefined8
     fStack_ac = fVar3;
     fStack_9c = fVar2;
   }
-  fn_826311B8(uVar5,0,&fStack_110,8,0xc000000000000000);
+  fn_826311B8(uVar5,0,&stack_pair_110.first,8,0xc000000000000000);
   fn_826311B8(uVar5,8,auStack_80,3,0x2000000000000000);
   fn_82F6A590();
   return;

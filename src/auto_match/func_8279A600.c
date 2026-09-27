@@ -35,13 +35,13 @@ longlong fn_8279A600(int param_1,longlong param_2)
 
 {
   bool bVar1;
-  uint auStack_30 [2];
-  int iStack_28;
-  int iStack_24;
+  uint auStack_30;
+  struct { int first; int second; } stack_pair_28;
+
   
-  auStack_30[0] = 0xffffffff;
-  fn_82791070(&iStack_28,*(undefined4 *)(param_1 + 8),param_2,auStack_30);
-  if (((iStack_28 == 0) || (iStack_24 < 0)) || (bVar1 = false, *(int *)(iStack_28 + 4) <= iStack_24)
+  auStack_30 = 0xffffffff;
+  fn_82791070(&stack_pair_28.first,*(undefined4 *)(param_1 + 8),param_2,&auStack_30);
+  if (((stack_pair_28.first == 0) || (stack_pair_28.second < 0)) || (bVar1 = false, *(int *)(stack_pair_28.first + 4) <= stack_pair_28.second)
      ) {
     bVar1 = true;
   }
@@ -49,7 +49,7 @@ longlong fn_8279A600(int param_1,longlong param_2)
     param_2 = -1;
   }
   else {
-    param_2 = param_2 - (ulonglong)auStack_30[0];
+    param_2 = param_2 - (ulonglong)auStack_30;
   }
   return param_2;
 }

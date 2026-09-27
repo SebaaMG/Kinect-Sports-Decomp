@@ -49,7 +49,7 @@ fn_82528BF8(int *param_1,char *param_2,undefined8 param_3,undefined8 param_4,und
   undefined8 uVar7;
   undefined1 auStack_a50 [512];
   char acStack_850 [2048];
-  char acStack_50 [80];
+  char acStack_50 [48];
   
   iVar4 = *param_1;
   uVar7 = 0;

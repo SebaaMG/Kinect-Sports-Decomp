@@ -42,7 +42,7 @@ extern int fn_82993BB0();
 extern int fn_82993CE8();
 extern int fn_82993EA8();
 extern int fn_82BA02A8();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 longlong fn_82995CA0(int *param_1)
@@ -64,7 +64,7 @@ longlong fn_82995CA0(int *param_1)
   uint uVar14;
   ulonglong uVar15;
   undefined4 auStack_c8 [6];
-  undefined4 auStack_b0 [44];
+  undefined4 auStack_b0 [1];
   
   uVar2 = param_1[3];
   lVar13 = 0;
@@ -164,7 +164,7 @@ longlong fn_82995CA0(int *param_1)
             iVar7 = iVar7 + 4;
             lVar13 = lVar13 + -1;
           } while (lVar13 != 0);
-          fn_82F68CC0(*(undefined4 *)(iVar6 + 0x10),*(undefined4 *)(param_1[0x41] + 0x10),
+          memcpy(*(undefined4 *)(iVar6 + 0x10),*(undefined4 *)(param_1[0x41] + 0x10),
                        *(int *)(param_1[0x41] + 0xc) << 2);
           iVar7 = param_1[0x41];
           if (iVar7 != 0) {

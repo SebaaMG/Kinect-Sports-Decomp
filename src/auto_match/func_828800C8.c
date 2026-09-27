@@ -35,7 +35,7 @@ void fn_828800C8(void)
 
 {
   int iVar1;
-  undefined1 auStack_1a0 [416];
+  undefined1 auStack_1a0 [400];
   
   lbl_832129FC = 0;
   iVar1 = fn_82CE0658();

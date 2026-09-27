@@ -38,15 +38,15 @@ void fn_828E4B88(int param_1,undefined8 param_2)
   char cVar1;
   undefined4 *puVar2;
   int iVar3;
-  undefined4 uStack_40;
-  int iStack_3c;
+  struct { undefined4 first; int second; } stack_pair_40;
+
   
   puVar2 = *(undefined4 **)(param_1 + 0x10);
   if (puVar2 != *(undefined4 **)(param_1 + 0x14)) {
     do {
       iVar3 = puVar2[1];
-      uStack_40 = 0;
-      iStack_3c = iVar3;
+      stack_pair_40.first = 0;
+      stack_pair_40.second = iVar3;
       if (iVar3 == 0) {
 LAB_828e4c20:
         *(undefined1 *)(param_1 + 4) = 0;
@@ -61,9 +61,9 @@ LAB_828e4c20:
         iVar3 = 0;
         goto LAB_828e4c20;
       }
-      uStack_40 = *puVar2;
+      stack_pair_40.first = *puVar2;
       if (iVar3 == 0) goto LAB_828e4c20;
-      fn_828A0198(param_2,&uStack_40);
+      fn_828A0198(param_2,&stack_pair_40.first);
       if (iVar3 != 0) {
         fn_8289DF30(iVar3);
       }

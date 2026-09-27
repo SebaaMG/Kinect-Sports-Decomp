@@ -32,7 +32,7 @@ extern int fn_827E8720();
 void fn_827E8448(undefined4 *param_1)
 
 {
-  undefined1 auStack_10 [16];
+  undefined1 auStack_10 [1];
   
   fn_827E8720(auStack_10,param_1,*(undefined4 *)*param_1);
   return;

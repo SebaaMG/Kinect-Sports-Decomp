@@ -40,7 +40,7 @@ bool fn_829E9368(byte *param_1,ulonglong param_2)
   uint *puVar7;
   byte *pbVar9;
   ulonglong uVar8;
-  byte abStack_30 [48];
+  byte abStack_30 [16];
   
   if (((param_1 != (byte *)0x0) && (0x57 < (param_2 & 0xffffffff))) &&
      (iVar4 = fn_829E92B8(param_1,param_2,abStack_30,0x10), -1 < iVar4)) {

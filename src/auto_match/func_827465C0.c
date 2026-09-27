@@ -53,7 +53,7 @@ void fn_827465C0(int param_1)
   longlong lVar8;
   double dVar9;
   double dVar10;
-  ulonglong auStack_70 [2];
+  ulonglong auStack_70 [1];
   undefined1 auStack_60 [16];
   undefined1 auStack_50 [16];
   undefined1 auStack_40 [16];

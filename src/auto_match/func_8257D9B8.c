@@ -42,7 +42,7 @@ longlong fn_8257D9B8(undefined8 param_1,uint *param_2)
   int iVar2;
   longlong lVar4;
   ulonglong uVar5;
-  undefined1 auStack_30 [24];
+  undefined1 auStack_30 [8];
   
   if ((param_2 != (uint *)0x0) &&
      (uVar5 = (ulonglong)*param_2, uVar5 != (uVar5 - 1) + (ulonglong)(uVar5 == 0))) {

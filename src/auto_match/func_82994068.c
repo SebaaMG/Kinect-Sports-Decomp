@@ -50,7 +50,7 @@ uint fn_82994068(int *param_1,uint *param_2,int *param_3)
   ulonglong uVar12;
   ulonglong uVar13;
   longlong lVar14;
-  undefined1 auStack_60 [12];
+  undefined1 auStack_60 [1];
   uint uStack_54;
   uint auStack_50 [20];
   

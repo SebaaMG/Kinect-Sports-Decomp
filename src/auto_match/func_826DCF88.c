@@ -39,29 +39,29 @@ undefined4 * fn_826DCF88(undefined4 *param_1,int param_2,int *param_3)
   char cVar4;
   int *piVar3;
   ulonglong uVar2;
-  int aiStack_30 [2];
-  int iStack_28;
-  int iStack_24;
+  int aiStack_30;
+  struct { int first; int second; } stack_pair_28;
+
   
-  aiStack_30[0] = *param_3;
+  aiStack_30 = *param_3;
   iVar1 = *(int *)(param_2 + 0x1c);
   *param_1 = 0;
   param_1[1] = 0;
-  iStack_28 = 0;
-  iStack_24 = 0;
-  cVar4 = fn_826DC448(*(undefined4 *)(*(int *)(iVar1 + 0xc) + 0x20),&iStack_28,aiStack_30);
+  stack_pair_28.first = 0;
+  stack_pair_28.second = 0;
+  cVar4 = fn_826DC448(*(undefined4 *)(*(int *)(iVar1 + 0xc) + 0x20),&stack_pair_28.first,&aiStack_30);
   if (cVar4 != '\0') {
-    piVar3 = (int *)fn_826D7CA0(&iStack_28,(ulonglong)*(uint *)(param_2 + 0x1c) + 0x18,
-                                      aiStack_30);
+    piVar3 = (int *)fn_826D7CA0(&stack_pair_28.first,(ulonglong)*(uint *)(param_2 + 0x1c) + 0x18,
+                                      &aiStack_30);
     if (piVar3 != (int *)0x0) {
       uVar2 = (**(code **)(*piVar3 + 8))(piVar3);
       if ((uVar2 & 0x8000) != 0) {
         *param_1 = piVar3;
-        param_1[1] = *(undefined4 *)(aiStack_30[0] + 0x2c);
+        param_1[1] = *(undefined4 *)(aiStack_30 + 0x2c);
       }
     }
   }
-  if ((iStack_28 == 0) && (iStack_24 != 0)) {
+  if ((stack_pair_28.first == 0) && (stack_pair_28.second != 0)) {
     fn_82687270();
   }
   return param_1;

@@ -29,7 +29,7 @@ extern unsigned int *__imp__KeDebugMonitorData;
 extern int (*lbl_8329EB4C)();
 
 
-undefined8 fn_82A1E5C0(undefined8 param_1)
+undefined8 UnhandledExceptionFilter(undefined8 param_1)
 
 {
   int iVar1;

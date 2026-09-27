@@ -36,23 +36,23 @@ void fn_826C6E68(int param_1,int param_2)
   char cVar1;
   uint uVar2;
   int iVar3;
-  int iStack_30;
-  uint uStack_2c;
+  struct { int first; uint second; } stack_pair_30;
+
   
   if (*(char *)(param_2 + *(int *)(param_1 + 0xc0)) == '\0') {
     iVar3 = 0;
-    iStack_30 = 0;
-    uStack_2c = 0;
+    stack_pair_30.first = 0;
+    stack_pair_30.second = 0;
     *(int *)(param_1 + 4) = *(int *)(param_1 + 4) + 1;
     cVar1 = (**(code **)(**(int **)(param_1 + 0x9c) + 0x30))
-                      (*(int **)(param_1 + 0x9c),&iStack_30,param_2);
-    if ((cVar1 != '\0') && (uStack_2c != 0)) {
+                      (*(int **)(param_1 + 0x9c),&stack_pair_30.first,param_2);
+    if ((cVar1 != '\0') && (stack_pair_30.second != 0)) {
       uVar2 = 0;
       do {
-        (**(code **)(**(int **)(iVar3 + iStack_30) + 4))(*(int **)(iVar3 + iStack_30),param_1);
+        (**(code **)(**(int **)(iVar3 + stack_pair_30.first) + 4))(*(int **)(iVar3 + stack_pair_30.first),param_1);
         uVar2 = uVar2 + 1;
         iVar3 = iVar3 + 4;
-      } while (uVar2 < uStack_2c);
+      } while (uVar2 < stack_pair_30.second);
       iVar3 = 1;
     }
     if (iVar3 != 0) {

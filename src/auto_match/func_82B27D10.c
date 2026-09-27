@@ -70,24 +70,24 @@ ulonglong fn_82B27D10(int param_1,int param_2,int *param_3,undefined8 param_4,un
   ulonglong uVar18;
   double dVar19;
   double dVar20;
-  int iStack_b0;
-  uint uStack_ac;
+  struct { int first; uint second; } stack_pair_b0;
+
   int iStack_a8;
   int iStack_a0;
   uint uStack_9c;
   int iStack_98;
   
   iStack_a8 = 0;
-  uStack_ac = -(uint)((*(uint *)(param_2 + 4) & 1) == 0) & *(uint *)(param_2 + 4);
+  stack_pair_b0.second = -(uint)((*(uint *)(param_2 + 4) & 1) == 0) & *(uint *)(param_2 + 4);
   uVar18 = 0;
   iVar16 = 0;
-  iStack_b0 = param_2;
+  stack_pair_b0.first = param_2;
   while( true ) {
-    if ((uStack_ac == 0) || (bVar6 = false, iStack_a8 == *(int *)(uStack_ac + 8))) {
+    if ((stack_pair_b0.second == 0) || (bVar6 = false, iStack_a8 == *(int *)(stack_pair_b0.second + 8))) {
       bVar6 = true;
     }
     if (bVar6) break;
-    puVar9 = (undefined4 *)fn_82ACB180(&iStack_b0);
+    puVar9 = (undefined4 *)fn_82ACB180(&stack_pair_b0.first);
     uVar14 = *puVar9;
     cVar17 = fn_82B20920(uVar14,*(undefined8 *)param_3,(ulonglong)(uint)param_3[2] << 0x20);
     if (cVar17 != '\0') {
@@ -123,14 +123,14 @@ ulonglong fn_82B27D10(int param_1,int param_2,int *param_3,undefined8 param_4,un
       puVar12[1] = (uint)puVar12 | 1;
       *puVar12 = (uint)puVar3 | 1;
       bVar6 = false;
-      uStack_ac = -(uint)((*(uint *)(iVar16 + 4) & 1) == 0) & *(uint *)(iVar16 + 4);
-      iStack_b0 = iVar16;
+      stack_pair_b0.second = -(uint)((*(uint *)(iVar16 + 4) & 1) == 0) & *(uint *)(iVar16 + 4);
+      stack_pair_b0.first = iVar16;
       while( true ) {
-        if ((uStack_ac == 0) || (bVar7 = false, iStack_a8 == *(int *)(uStack_ac + 8))) {
+        if ((stack_pair_b0.second == 0) || (bVar7 = false, iStack_a8 == *(int *)(stack_pair_b0.second + 8))) {
           bVar7 = true;
         }
         if (bVar7) break;
-        piVar11 = (int *)fn_82B1A538(&iStack_b0);
+        piVar11 = (int *)fn_82B1A538(&stack_pair_b0.first);
         if (bVar6) {
 LAB_82b27ff4:
           iVar13 = *piVar11;

@@ -55,13 +55,13 @@ undefined4 * fn_823B8E78(undefined4 *param_1,int *param_2,int param_3,int param_
   undefined4 uStack_70;
   undefined4 uStack_6c;
   uint uStack_68;
-  undefined4 uStack_60;
-  undefined4 uStack_5c;
+  struct { undefined4 first; undefined4 second; } stack_pair_60;
+
   uint uStack_58;
   int iStack_50;
   undefined4 uStack_4c;
   uint uStack_48;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [48];
   
   uStack_58 = *(uint *)(param_3 + 8);
   piVar6 = (int *)0x0;
@@ -83,14 +83,14 @@ undefined4 * fn_823B8E78(undefined4 *param_1,int *param_2,int param_3,int param_
     if ((piVar4 != (int *)0x0) && ((undefined4 *)*piVar4 != (undefined4 *)0x0)) {
       uStack_70 = *(undefined4 *)*piVar4;
     }
-    uStack_60 = 0;
-    uStack_5c = 0;
+    stack_pair_60.first = 0;
+    stack_pair_60.second = 0;
     if ((piVar6 != (int *)0x0) && ((undefined4 *)*piVar6 != (undefined4 *)0x0)) {
-      uStack_60 = *(undefined4 *)*piVar6;
+      stack_pair_60.first = *(undefined4 *)*piVar6;
     }
     iStack_50 = *param_2;
     uStack_4c = 0;
-    fn_823B9890(auStack_40,&iStack_50,&uStack_60,&uStack_70);
+    fn_823B9890(auStack_40,&iStack_50,&stack_pair_60.first,&uStack_70);
     uVar3 = uVar8 & 0xffffffff;
     while (uVar3 != 0) {
       fn_823B8A50(param_2);
@@ -99,10 +99,10 @@ undefined4 * fn_823B8E78(undefined4 *param_1,int *param_2,int param_3,int param_
     }
   }
   else {
-    uStack_60 = 0;
-    uStack_5c = 0;
+    stack_pair_60.first = 0;
+    stack_pair_60.second = 0;
     if ((piVar6 != (int *)0x0) && ((undefined4 *)*piVar6 != (undefined4 *)0x0)) {
-      uStack_60 = *(undefined4 *)*piVar6;
+      stack_pair_60.first = *(undefined4 *)*piVar6;
     }
     iStack_50 = *param_2;
     uStack_4c = 0;
@@ -112,7 +112,7 @@ undefined4 * fn_823B8E78(undefined4 *param_1,int *param_2,int param_3,int param_
     if ((piVar4 != (int *)0x0) && ((undefined4 *)*piVar4 != (undefined4 *)0x0)) {
       uStack_70 = *(undefined4 *)*piVar4;
     }
-    fn_823B9968(auStack_40,&uStack_70,&iStack_50,&uStack_60);
+    fn_823B9968(auStack_40,&uStack_70,&iStack_50,&stack_pair_60.first);
     uVar3 = uVar8 & 0xffffffff;
     while (uVar3 != 0) {
       fn_823B9248(param_2);

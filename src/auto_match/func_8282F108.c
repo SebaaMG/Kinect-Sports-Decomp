@@ -40,8 +40,8 @@ void fn_8282F108(ulonglong param_1,ulonglong param_2,ulonglong param_3,undefined
   ulonglong uVar2;
   int iVar3;
   ulonglong uVar4;
-  uint uStack_40;
-  uint uStack_3c;
+  struct { uint first; uint second; } stack_pair_40;
+
   
   iVar1 = (int)param_2 - (int)param_1 >> 2;
   uVar4 = param_2;
@@ -50,13 +50,13 @@ void fn_8282F108(ulonglong param_1,ulonglong param_2,ulonglong param_3,undefined
       iVar3 = (int)param_3;
       param_2 = uVar4;
       if (iVar3 < 1) break;
-      fn_8282EE40(&uStack_40,param_1,uVar4,param_4);
+      fn_8282EE40(&stack_pair_40.first,param_1,uVar4,param_4);
       param_3 = (longlong)(iVar3 >> 1) + (ulonglong)(iVar3 < 0 && (param_3 & 1) != 0);
       param_3 = (longlong)((int)param_3 >> 1) + (ulonglong)((int)param_3 < 0 && (param_3 & 1) != 0)
                 + param_3;
-      uVar2 = (ulonglong)uStack_3c;
-      param_2 = (ulonglong)uStack_40;
-      if ((int)(uStack_40 - (int)param_1 & 0xfffffffc) < (int)((int)uVar4 - uStack_3c & 0xfffffffc))
+      uVar2 = (ulonglong)stack_pair_40.second;
+      param_2 = (ulonglong)stack_pair_40.first;
+      if ((int)(stack_pair_40.first - (int)param_1 & 0xfffffffc) < (int)((int)uVar4 - stack_pair_40.second & 0xfffffffc))
       {
         fn_8282F108(param_1,param_2,param_3,param_4);
         param_1 = uVar2;

@@ -139,8 +139,8 @@ fn_827ED650(float *param_1,float *param_2,undefined8 param_3,float *param_4,floa
   float fStack_1b8;
   float fStack_1b4;
   undefined4 uStack_1b0;
-  float fStack_1a0;
-  float fStack_19c;
+  struct { float first; float second; } stack_pair_1a0;
+
   float fStack_198;
   float fStack_194;
   float fStack_190;
@@ -197,40 +197,40 @@ fn_827ED650(float *param_1,float *param_2,undefined8 param_3,float *param_4,floa
       fn_8280FC78(auStack_f0,auStack_80);
       fn_8280CB70(auStack_80,auStack_130,auStack_c0);
       if ((double)fStack_290 < dVar3) {
-        fStack_1a0 = -*param_2;
+        stack_pair_1a0.first = -*param_2;
       }
       else {
-        fStack_1a0 = *param_2;
+        stack_pair_1a0.first = *param_2;
       }
       if ((double)fStack_28c < dVar3) {
-        fStack_19c = -param_2[1];
+        stack_pair_1a0.second = -param_2[1];
       }
       else {
-        fStack_19c = param_2[1];
+        stack_pair_1a0.second = param_2[1];
       }
       fStack_198 = param_2[2];
       if ((double)fStack_288 < dVar3) {
         fStack_198 = -fStack_198;
       }
-      fStack_190 = -fStack_19c;
+      fStack_190 = -stack_pair_1a0.second;
       fStack_180 = -fStack_198;
-      fStack_170 = -fStack_1a0;
-      fStack_194 = fStack_1a0;
+      fStack_170 = -stack_pair_1a0.first;
+      fStack_194 = stack_pair_1a0.first;
       fStack_18c = fStack_198;
-      fStack_188 = fStack_1a0;
-      fStack_184 = fStack_19c;
-      fStack_17c = fStack_1a0;
+      fStack_188 = stack_pair_1a0.first;
+      fStack_184 = stack_pair_1a0.second;
+      fStack_17c = stack_pair_1a0.first;
       fStack_178 = fStack_190;
       fStack_174 = fStack_180;
-      fStack_16c = fStack_19c;
+      fStack_16c = stack_pair_1a0.second;
       fStack_168 = fStack_198;
       fStack_164 = fStack_170;
       fStack_160 = fStack_190;
       fStack_15c = fStack_198;
       fStack_158 = fStack_170;
-      fStack_154 = fStack_19c;
+      fStack_154 = stack_pair_1a0.second;
       fStack_150 = fStack_180;
-      fn_8280AF20(auStack_c0,&fStack_1a0,auStack_230,7);
+      fn_8280AF20(auStack_c0,&stack_pair_1a0.first,auStack_230,7);
       fn_82810530(auStack_230,auStack_2a0);
       fn_82810328(auStack_224,auStack_230,auStack_260);
       fn_82810328(auStack_218,auStack_230,auStack_250);

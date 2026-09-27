@@ -30,7 +30,7 @@ extern int fn_82A3B5D8();
 extern int fn_82A3B768();
 extern int fn_82A3CED8();
 extern int fn_82A3D230();
-extern int fn_82F691F0();
+extern int memset();
 
 
 undefined8 fn_82A39F40(int *param_1,int *param_2)
@@ -38,7 +38,7 @@ undefined8 fn_82A39F40(int *param_1,int *param_2)
 {
   uint uVar1;
   uint uVar2;
-  undefined4 auStack_30 [12];
+  undefined4 auStack_30 [8];
   
   uVar1 = param_1[1];
   *(undefined1 *)((int)param_1 + 0x972) = 0;
@@ -54,6 +54,6 @@ undefined8 fn_82A39F40(int *param_1,int *param_2)
   fn_82A3B5D8(param_1,0);
   fn_82A3B768(param_1);
                     /* WARNING: Subroutine does not return */
-  fn_82F691F0(param_1[2],0,0x40000);
+  memset(param_1[2],0,0x40000);
 }
 

@@ -34,11 +34,11 @@ undefined4 fn_827F6480(longlong param_1,undefined8 param_2)
 
 {
   undefined4 uStack_10;
-  undefined4 auStack_c [3];
+  undefined4 auStack_c;
   
   uStack_10 = 0;
-  auStack_c[0] = 0;
-  fn_82800648(param_1 + 0x24,3,param_2,&uStack_10,auStack_c);
+  auStack_c = 0;
+  fn_82800648(param_1 + 0x24,3,param_2,&uStack_10,&auStack_c);
   return uStack_10;
 }
 

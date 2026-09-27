@@ -53,8 +53,8 @@ void fn_82364128(int param_1)
   char cVar2;
   undefined4 uStack_70;
   undefined4 uStack_6c;
-  int iStack_68;
-  int iStack_64;
+  struct { int first; int second; } stack_pair_68;
+
   undefined1 auStack_60 [4];
   int iStack_5c;
   int iStack_48;
@@ -64,37 +64,37 @@ void fn_82364128(int param_1)
   
   uStack_6c = *(undefined4 *)(param_1 + 0x530);
   uStack_70 = *(undefined4 *)(param_1 + 0x534);
-  iStack_68 = 1;
-  fn_82365B38(auStack_60,&iStack_68,&uStack_6c,&uStack_70);
-  fn_82365BD8(&iStack_68,auStack_60);
-  fn_82566018(param_1 + 0x518,&iStack_68);
-  if (iStack_64 != 0) {
+  stack_pair_68.first = 1;
+  fn_82365B38(auStack_60,&stack_pair_68.first,&uStack_6c,&uStack_70);
+  fn_82365BD8(&stack_pair_68.first,auStack_60);
+  fn_82566018(param_1 + 0x518,&stack_pair_68.first);
+  if (stack_pair_68.second != 0) {
     fn_822315A0();
   }
-  iStack_64 = 0;
+  stack_pair_68.second = 0;
   uStack_38 = CONCAT44(param_1,uStack_44);
-  iStack_68 = 2;
+  stack_pair_68.first = 2;
   iStack_48 = param_1;
   uVar1 = fn_8265C9E0(0x40);
   if ((uVar1 & 0xffffffff) == 0) {
     uVar1 = 0;
   }
   else {
-    uVar1 = fn_82365DD8(uVar1,&iStack_68,auStack_40,&uStack_6c,&uStack_70);
+    uVar1 = fn_82365DD8(uVar1,&stack_pair_68.first,auStack_40,&uStack_6c,&uStack_70);
   }
-  iStack_68 = 0;
-  iStack_64 = 0;
+  stack_pair_68.first = 0;
+  stack_pair_68.second = 0;
   if (((uVar1 & 0xffffffff) != 0) && (cVar2 = fn_8223AAC0(uVar1), cVar2 != '\0')) {
-    iStack_68 = (int)uVar1 + 0x10;
-    iStack_64 = (int)uVar1;
+    stack_pair_68.first = (int)uVar1 + 0x10;
+    stack_pair_68.second = (int)uVar1;
   }
-  fn_82566018(param_1 + 0x518,&iStack_68);
-  if (iStack_64 != 0) {
+  fn_82566018(param_1 + 0x518,&stack_pair_68.first);
+  if (stack_pair_68.second != 0) {
     fn_822315A0();
   }
-  fn_82365BD8(&iStack_68,auStack_60);
-  fn_824C5748(param_1 + 0x4f0,&iStack_68);
-  if (iStack_64 != 0) {
+  fn_82365BD8(&stack_pair_68.first,auStack_60);
+  fn_824C5748(param_1 + 0x4f0,&stack_pair_68.first);
+  if (stack_pair_68.second != 0) {
     fn_822315A0();
   }
   if ((uVar1 & 0xffffffff) != 0) {

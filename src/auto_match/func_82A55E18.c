@@ -60,10 +60,10 @@ fn_82A55E18(longlong param_1,ulonglong param_2,longlong param_3,ulonglong param_
   int iVar21;
   longlong lVar22;
   short sStack_90;
-  short asStack_8e [71];
+  short asStack_8e;
   
   sStack_90 = -1;
-  asStack_8e[0] = -1;
+  asStack_8e = -1;
   uVar16 = 1;
   if ((((((param_5 == (int *)0x0) || (iVar6 = (int)param_1, 0x20 < iVar6)) || (iVar6 < 1)) ||
        ((iVar8 = (int)param_3, 0x20 < iVar8 || (iVar8 < 1)))) ||
@@ -155,12 +155,12 @@ fn_82A55E18(longlong param_1,ulonglong param_2,longlong param_3,ulonglong param_
     } while (lVar22 != 0);
   }
   fn_82C2EB00(param_2,8,&sStack_90);
-  fn_82C2EB00(param_4,8,asStack_8e);
+  fn_82C2EB00(param_4,8,&asStack_8e);
   if (sStack_90 == -1) {
 LAB_82a56308:
-    if (asStack_8e[0] != -1) {
+    if (asStack_8e != -1) {
       iVar21 = 0;
-      if (0 < asStack_8e[0]) {
+      if (0 < asStack_8e) {
         iVar18 = 0;
         do {
           uVar16 = 0;
@@ -194,9 +194,9 @@ LAB_82a56308:
           }
           iVar21 = iVar21 + 1;
           iVar18 = iVar18 + 4;
-        } while (iVar21 < asStack_8e[0]);
+        } while (iVar21 < asStack_8e);
       }
-      uVar16 = (longlong)asStack_8e[0] + 1;
+      uVar16 = (longlong)asStack_8e + 1;
       if ((int)uVar16 < iVar8) {
         lVar22 = (uVar16 & 0x3fffffff) << 2;
         param_3 = param_3 - uVar16;
@@ -241,10 +241,10 @@ LAB_82a56308:
     if (sStack_90 == -1) goto LAB_82a565f8;
   }
   else {
-    if (asStack_8e[0] != -1) {
+    if (asStack_8e != -1) {
       iVar21 = 0;
-      *(undefined4 *)(param_5[asStack_8e[0]] + sStack_90 * 4) = lbl_82002AE0;
-      if (0 < asStack_8e[0]) {
+      *(undefined4 *)(param_5[asStack_8e] + sStack_90 * 4) = lbl_82002AE0;
+      if (0 < asStack_8e) {
         iVar18 = 0;
         do {
           iVar15 = 0;
@@ -289,9 +289,9 @@ LAB_82a56308:
           }
           iVar21 = iVar21 + 1;
           iVar18 = iVar18 + 4;
-        } while (iVar21 < asStack_8e[0]);
+        } while (iVar21 < asStack_8e);
       }
-      uVar16 = (longlong)asStack_8e[0] + 1;
+      uVar16 = (longlong)asStack_8e + 1;
       if ((int)uVar16 < iVar8) {
         lVar22 = (uVar16 & 0x3fffffff) << 2;
         param_3 = param_3 - uVar16;
@@ -346,7 +346,7 @@ LAB_82a56308:
     }
     if (sStack_90 == -1) goto LAB_82a56308;
   }
-  if (asStack_8e[0] == -1) {
+  if (asStack_8e == -1) {
     if (0 < iVar8) {
       iVar21 = 0;
       fVar3 = (float)(longlong)iVar8;

@@ -45,8 +45,8 @@ undefined8 fn_826AE0C0(undefined8 param_1,undefined4 *param_2)
   char cVar3;
   undefined8 uVar2;
   char acStack_50 [16];
-  undefined4 uStack_40;
-  undefined4 uStack_3c;
+  struct { undefined4 first; undefined4 second; } stack_pair_40;
+
   undefined4 uStack_38;
   undefined4 uStack_34;
   char *pcStack_30;
@@ -54,14 +54,14 @@ undefined8 fn_826AE0C0(undefined8 param_1,undefined4 *param_2)
   
   if (((*(uint *)(*(int *)*param_2 + 0xc) >> 0x19 & 1) == 0) &&
      (cVar3 = fn_826A73F8(), cVar3 != '\0')) {
-    uStack_40 = *param_2;
+    stack_pair_40.first = *param_2;
     pcStack_30 = acStack_50;
-    uStack_3c = param_2[1];
+    stack_pair_40.second = param_2[1];
     uStack_38 = param_2[2];
     uStack_34 = param_2[3];
     uStack_2c = param_2[5];
     acStack_50[0] = '\0';
-    uVar2 = fn_826B3E08(param_1,&uStack_40,0,0);
+    uVar2 = fn_826B3E08(param_1,&stack_pair_40.first,0,0);
     if ((acStack_50[0] == '\0') || (bVar1 = false, acStack_50[0] == '\n')) {
       bVar1 = true;
     }

@@ -79,7 +79,7 @@ fn_82391940(double param_1,undefined8 param_2,undefined8 param_3,undefined8 para
   undefined1 auStack_230 [32];
   undefined1 auStack_210 [32];
   undefined1 auStack_1f0 [32];
-  undefined1 auStack_1d0 [112];
+  undefined1 auStack_1d0 [80];
   undefined1 auStack_160 [112];
   undefined1 auStack_f0 [240];
   

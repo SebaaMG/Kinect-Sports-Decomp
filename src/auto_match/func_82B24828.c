@@ -34,11 +34,11 @@ void fn_82B24828(undefined8 param_1,undefined8 param_2,int param_3,undefined8 pa
 
 {
   int iStack_40;
-  int aiStack_3c [15];
+  int aiStack_3c;
   
   fn_82B24768(param_1,param_2,*(undefined4 *)(param_3 + 0x2c),param_4,param_5,&iStack_40);
-  fn_82B24768(param_1,param_2,*(undefined4 *)(param_3 + 0x30),param_4,param_5,aiStack_3c);
-  if ((iStack_40 == 0) || (aiStack_3c[0] == 0)) {
+  fn_82B24768(param_1,param_2,*(undefined4 *)(param_3 + 0x30),param_4,param_5,&aiStack_3c);
+  if ((iStack_40 == 0) || (aiStack_3c == 0)) {
     iStack_40 = 0;
   }
   if (*param_6 == -1) {

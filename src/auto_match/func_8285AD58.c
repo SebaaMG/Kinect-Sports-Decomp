@@ -48,7 +48,7 @@ ulonglong fn_8285AD58(int param_1,int param_2,float *param_3)
   float fStack_60;
   float fStack_5c;
   float fStack_58;
-  float afStack_50 [20];
+  float afStack_50 [8];
   
   param_2 = *(int *)(param_1 + 100) + param_2;
   uVar2 = 0;

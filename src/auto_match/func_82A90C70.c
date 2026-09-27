@@ -53,13 +53,13 @@ fn_82A90C70(int *param_1,int *param_2,int *param_3,longlong param_4,longlong par
   uint uVar7;
   undefined4 uStack_14d0;
   undefined4 uStack_14cc;
-  undefined4 uStack_14c0;
-  undefined4 uStack_14bc;
+  struct { undefined4 first; undefined4 second; } stack_pair_14c0;
+
   undefined4 uStack_14b8;
   undefined4 uStack_14b4;
   undefined4 uStack_14a8;
   undefined1 auStack_14a0 [2592];
-  undefined1 auStack_a80 [2688];
+  undefined1 auStack_a80 [2624];
   
   uVar5 = param_5 - 1;
   if (-1 < (longlong)uVar5) {
@@ -80,12 +80,12 @@ fn_82A90C70(int *param_1,int *param_2,int *param_3,longlong param_4,longlong par
   uStack_14b4 = 0x48;
   uStack_14d0 = lbl_8201DCB8;
   uStack_14cc = lbl_8201DCB8;
-  uStack_14c0 = lbl_8201DCB8;
+  stack_pair_14c0.first = lbl_8201DCB8;
   uStack_14a8 = lbl_8201DCB8;
   uStack_14b8 = lbl_8201DCB8;
-  uStack_14bc = lbl_8201DCB8;
+  stack_pair_14c0.second = lbl_8201DCB8;
   if (puVar6 == (undefined4 *)0x0) {
-    puVar6 = &uStack_14c0;
+    puVar6 = &stack_pair_14c0.first;
   }
   iVar1 = param_3[2];
   if (-1 < (int)uVar5) {

@@ -27,14 +27,14 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_8269B930();
 extern int fn_826A1440();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 void fn_826A17F0(int *param_1,int param_2)
 
 {
   param_1[5] = *(int *)(param_2 + 0x14);
-  fn_82F68CC0(param_1 + 9,param_2 + 0x24,0x20);
+  memcpy(param_1 + 9,param_2 + 0x24,0x20);
   (**(code **)(*param_1 + 4))(param_1);
   param_1[0x11] = *(int *)(param_2 + 0x44);
   param_1[0x12] = *(int *)(param_2 + 0x48);

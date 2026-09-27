@@ -29,7 +29,7 @@ extern unsigned int *auStack_4c;
 extern unsigned int *auStack_50;
 extern unsigned int *auStack_6c;
 extern int fn_827D51A0();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 int * fn_827D52F8(int *param_1,undefined4 *param_2)
@@ -40,14 +40,14 @@ int * fn_827D52F8(int *param_1,undefined4 *param_2)
   int *piStack00000014;
   undefined1 auStack_6c [28];
   undefined1 auStack_50 [4];
-  undefined1 auStack_4c [76];
+  undefined1 auStack_4c [44];
   
   piVar1 = (int *)*param_2;
   piStack00000014 = param_1;
-  fn_82F68CC0(auStack_6c,param_2 + 1,0x18);
+  memcpy(auStack_6c,param_2 + 1,0x18);
   uVar2 = (**(code **)(*piVar1 + 0xc))(piVar1,0x40,auStack_6c);
   if ((uVar2 & 0xffffffff) != 0) {
-    fn_82F68CC0(auStack_4c,param_2 + 1,0x18);
+    memcpy(auStack_4c,param_2 + 1,0x18);
     fn_827D51A0(uVar2,auStack_50);
   }
   param_1[1] = (int)uVar2;

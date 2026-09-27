@@ -44,10 +44,10 @@ undefined4 * fn_8268C9F8(undefined4 *param_1,uint *param_2)
   char in_RESERVE;
   byte in_cr0;
   int iStack_230;
-  int aiStack_22c [3];
-  undefined1 auStack_220 [544];
+  int aiStack_22c;
+  undefined1 auStack_220 [512];
   
-  aiStack_22c[0] = (*param_2 & 0xfffffffc) + 8;
+  aiStack_22c = (*param_2 & 0xfffffffc) + 8;
   *param_1 = &lbl_83155184;
   do {
     if (in_RESERVE != '\0') {
@@ -58,7 +58,7 @@ undefined4 * fn_8268C9F8(undefined4 *param_1,uint *param_2)
   iStack_230 = 0;
 LAB_8268ca50:
   do {
-    uVar1 = fn_826BD078(aiStack_22c);
+    uVar1 = fn_826BD078(&aiStack_22c);
     if (uVar1 != 0) {
       uVar2 = fn_826BCEF8(uVar1 & 0xffff);
       fn_826BD398(auStack_220,&iStack_230,uVar2);

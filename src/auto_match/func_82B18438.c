@@ -41,8 +41,8 @@ void fn_82B18438(undefined8 param_1,int param_2,int param_3)
   int iVar4;
   int iVar5;
   int iVar6;
-  int iStack_40;
-  int iStack_3c;
+  struct { int first; int second; } stack_pair_40;
+
   
   fn_82B18360(param_1,param_3,param_2);
   if ((*(int *)(param_3 + 8) == 0) || (bVar3 = true, *(int *)(*(int *)(param_3 + 8) + 0xc) == 0)) {
@@ -53,8 +53,8 @@ void fn_82B18438(undefined8 param_1,int param_2,int param_3)
      (*(uint *)(((**(uint **)(param_3 + 0x28) & 0x7ffff) + 0x1f >> 3 & 0x1ffffffc) +
                 ((int)(uVar2 >> 5) + 1) * 4 + (int)*(uint **)(param_3 + 0x28)) &
      1 << ((uint)uVar2 & 0x1f)) != 0)) {
-    while (iStack_3c = iVar5, iStack_40 = iVar4, iVar6 = fn_82AD1750(&iStack_40), iVar6 != 0) {
-      for (piVar1 = *(int **)(iVar6 + 0xc); iVar4 = iStack_40, iVar5 = iStack_3c,
+    while (stack_pair_40.second = iVar5, stack_pair_40.first = iVar4, iVar6 = fn_82AD1750(&stack_pair_40.first), iVar6 != 0) {
+      for (piVar1 = *(int **)(iVar6 + 0xc); iVar4 = stack_pair_40.first, iVar5 = stack_pair_40.second,
           piVar1 != (int *)0x0; piVar1 = (int *)piVar1[2]) {
         uVar2 = (ulonglong)*(uint *)(param_3 + 0x30) & 0x7ffff;
         if ((*(uint *)(((int)(uVar2 >> 5) + 1) * 4 + *(int *)(*piVar1 + 0x28)) &

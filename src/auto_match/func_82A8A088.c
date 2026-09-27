@@ -29,7 +29,7 @@ typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_460;
 extern int fn_82A86D58();
 extern int fn_82A89B90();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int stack0x00000000;
 
 
@@ -54,7 +54,7 @@ fn_82A8A088(uint *param_1,int *param_2,uint *param_3,longlong param_4,ulonglong 
   int iVar12;
   ulonglong uVar13;
   longlong lVar14;
-  undefined1 auStack_460 [1120];
+  undefined1 auStack_460 [1088];
   
   uVar4 = ZEXT48(&stack0x00000000);
   lVar7 = uVar4 - 0x494;
@@ -66,7 +66,7 @@ fn_82A8A088(uint *param_1,int *param_2,uint *param_3,longlong param_4,ulonglong 
     *(undefined4 *)lVar7 = *(undefined4 *)lVar9;
     lVar14 = lVar14 + -1;
   } while (lVar14 != 0);
-  fn_82F68CC0(uVar4 - 0x4c0,uVar4 - 0x490,0x18);
+  memcpy(uVar4 - 0x4c0,uVar4 - 0x490,0x18);
   uVar10 = (ulonglong)*param_1;
   if (uVar10 == 0) {
     uVar10 = uVar4 - 0x490;

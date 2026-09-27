@@ -42,17 +42,17 @@ bool fn_8282A0E8(longlong param_1,undefined4 param_2)
 {
   int iStack_60;
   int iStack_5c;
-  undefined4 uStack_58;
-  undefined4 uStack_54;
+  struct { undefined4 first; undefined4 second; } stack_pair_58;
+
   undefined1 auStack_40 [16];
   undefined4 uStack_30;
   undefined4 uStack_2c;
   undefined4 uStack_28;
   
-  uStack_58 = param_2;
-  fn_828299A8(&uStack_58,param_1,&iStack_60);
+  stack_pair_58.first = param_2;
+  fn_828299A8(&stack_pair_58.first,param_1,&iStack_60);
   uStack_2c = *(undefined4 *)(iStack_60 + 0xc);
-  uStack_28 = uStack_54;
+  uStack_28 = stack_pair_58.second;
   uStack_30 = param_2;
   fn_828233A8(param_1 + 0x36c,&iStack_5c,0xffffffff82829f58,auStack_40);
   return iStack_5c == 0;

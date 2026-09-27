@@ -41,7 +41,7 @@ void fn_827F6010(undefined4 *param_1)
 {
   undefined8 uVar1;
   int aiStack_50 [4];
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [32];
   
   aiStack_50[0] = 0;
   *param_1 = &lbl_8201DDE0;

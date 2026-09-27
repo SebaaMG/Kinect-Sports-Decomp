@@ -47,7 +47,7 @@ void fn_82294070(int param_1,int param_2,longlong param_3)
   double dStack_48;
   undefined1 auStack_40 [8];
   char cStack_38;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [32];
   
   iVar3 = param_2 * 0x1c + param_1;
   if (*(int *)(iVar3 + 0x3c) != (int)param_3) {

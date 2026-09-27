@@ -50,9 +50,9 @@ void fn_82BA11F0(int param_1)
   float fStack_40;
   float fStack_3c;
   float fStack_38;
-  float afStack_34 [13];
+  float afStack_34;
   
-  fn_82B9DA38(*(undefined4 *)(param_1 + 0x10),0,afStack_34,0xffffffff82b7c800,
+  fn_82B9DA38(*(undefined4 *)(param_1 + 0x10),0,&afStack_34,0xffffffff82b7c800,
                 *(undefined4 *)(param_1 + 0xc));
   fn_82B9DAD8(*(undefined4 *)(param_1 + 0x10),0,&fStack_38,0xffffffff82b7c800,
                 *(undefined4 *)(param_1 + 0xc));
@@ -64,7 +64,7 @@ void fn_82BA11F0(int param_1)
   piVar3 = (int *)fn_82BC49F8(0x12,*(undefined4 *)(param_1 + 0xc));
   fn_82BC2958(piVar3,0,uVar1);
   fn_82BC2958(piVar3,1,uVar1);
-  fn_82BC34D8((double)afStack_34[0],(double)fStack_38,(double)fStack_3c,(double)fStack_40,
+  fn_82BC34D8((double)afStack_34,(double)fStack_38,(double)fStack_3c,(double)fStack_40,
                     piVar3,param_1,2);
   (**(code **)(*piVar3 + 0x54))(piVar3,0,3,1);
   *(undefined1 *)((int)piVar3 + 0x9a) = 1;
@@ -80,7 +80,7 @@ void fn_82BA11F0(int param_1)
     lVar4 = lVar4 + 1;
   } while ((int)lVar4 < 4);
   fn_82BC2958(piVar3,2,uVar1);
-  fn_82BC34D8((double)afStack_34[0],(double)fStack_38,(double)fStack_3c,(double)fStack_40,
+  fn_82BC34D8((double)afStack_34,(double)fStack_38,(double)fStack_3c,(double)fStack_40,
                     piVar3,param_1,3);
   (**(code **)(*piVar3 + 0x54))(piVar3,0,3,1);
   fn_82BC5628(*(undefined4 *)(*(int *)(param_1 + 0x6c) + 0x3b4),*(int *)(param_1 + 0x6c),

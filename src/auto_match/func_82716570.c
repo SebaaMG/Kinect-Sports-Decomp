@@ -42,7 +42,7 @@ void fn_82716570(uint *param_1,int param_2,int param_3,longlong param_4)
   undefined1 uVar2;
   undefined8 uVar3;
   undefined1 *puVar4;
-  undefined4 auStack_30 [12];
+  undefined4 auStack_30;
   
   if ((int)param_4 != 0) {
     if (param_3 == 7) {
@@ -63,9 +63,9 @@ void fn_82716570(uint *param_1,int param_2,int param_3,longlong param_4)
     fn_826C8C70(param_2,0xffffffff8200f780,*param_1);
     fn_826A91F0(param_2,0xffffffff8200f768);
     uVar3 = fn_826A9FB0();
-    auStack_30[0] = (undefined4)uVar3;
+    auStack_30 = (undefined4)uVar3;
     fn_826A9798(uVar3,param_2,param_4);
-    fn_82716330(param_1 + 1,auStack_30);
+    fn_82716330(param_1 + 1,&auStack_30);
   }
   return;
 }

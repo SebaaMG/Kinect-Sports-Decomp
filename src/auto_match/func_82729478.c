@@ -175,8 +175,8 @@ undefined8 fn_82729478(undefined8 param_1)
   undefined4 uStack_12c;
   undefined4 uStack_128;
   undefined4 uStack_124;
-  undefined4 uStack_120;
-  undefined4 uStack_11c;
+  struct { undefined4 first; undefined4 second; } stack_pair_120;
+
   undefined4 uStack_118;
   undefined4 uStack_114;
   undefined4 uStack_110;
@@ -225,10 +225,10 @@ undefined8 fn_82729478(undefined8 param_1)
   undefined4 uStack_64;
   
   uStack_118 = 0;
-  uStack_120 = 2;
-  uStack_11c = 0x10;
+  stack_pair_120.first = 2;
+  stack_pair_120.second = 0x10;
   uStack_114 = 0;
-  fn_82729418(param_1,&uStack_120);
+  fn_82729418(param_1,&stack_pair_120.first);
   uStack_1bc = 0x10;
   uStack_1b8 = 0;
   uStack_1c0 = 3;

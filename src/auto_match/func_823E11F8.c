@@ -29,7 +29,7 @@ extern unsigned int *auStack_60;
 extern int fn_82230040();
 extern int fn_823E1690();
 extern int fn_8265C9E0();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int lbl_82002B04;
 extern unsigned int uStack_64;
 
@@ -46,7 +46,7 @@ undefined4 * fn_823E11F8(int param_1,uint *param_2)
   undefined4 *apuStack_70 [2];
   undefined **ppuStack_68;
   undefined4 uStack_64;
-  undefined1 auStack_60 [96];
+  undefined1 auStack_60 [48];
   
   puVar5 = *(undefined4 **)(param_1 + 4);
   if (*(char *)((int)puVar5[1] + 0x51) == '\0') {
@@ -86,7 +86,7 @@ undefined4 * fn_823E11F8(int param_1,uint *param_2)
     *(undefined1 *)((int)puVar3 + 0x51) = 0;
     if (puVar3 + 4 != (uint *)0x0) {
       puVar3[4] = uVar2;
-      fn_82F68CC0(puVar3 + 8,auStack_60,0x30);
+      memcpy(puVar3 + 8,auStack_60,0x30);
     }
     fn_823E1690(apuStack_70,param_1,puVar5,puVar3);
     puVar5 = apuStack_70[0];

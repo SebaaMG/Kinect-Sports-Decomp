@@ -45,7 +45,7 @@ void fn_82729220(int param_1)
   longlong lVar4;
   undefined8 uVar5;
   ulonglong uVar6;
-  int aiStack_30 [12];
+  int aiStack_30;
   
   puVar1 = *(undefined1 **)(param_1 + 4);
   fn_826959C8(puVar1);
@@ -81,15 +81,15 @@ void fn_82729220(int param_1)
       if (lVar4 != 0) {
         uVar3 = *(undefined4 *)(param_1 + 0x18);
         uVar5 = fn_826957D0(param_1,0);
-        fn_82696D38(aiStack_30,uVar5,uVar3,0xffffffffffffffff,0);
-        uVar6 = fn_82722540(aiStack_30);
+        fn_82696D38(&aiStack_30,uVar5,uVar3,0xffffffffffffffff,0);
+        uVar6 = fn_82722540(&aiStack_30);
         if ((int)uVar6 < 5) {
           fn_82728DD0(param_1,(uVar6 & 0xfffffff) * 0x10 + lVar4);
         }
-        lVar4 = (ulonglong)*(uint *)(aiStack_30[0] + 8) - 1;
-        *(int *)(aiStack_30[0] + 8) = (int)lVar4;
+        lVar4 = (ulonglong)*(uint *)(aiStack_30 + 8) - 1;
+        *(int *)(aiStack_30 + 8) = (int)lVar4;
         if (lVar4 == 0) {
-          fn_826944C8(aiStack_30[0]);
+          fn_826944C8(aiStack_30);
         }
       }
       fn_826824B0(iVar7);

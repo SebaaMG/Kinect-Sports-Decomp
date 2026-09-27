@@ -41,8 +41,8 @@ void fn_8242CB38(undefined8 param_1,undefined8 param_2,undefined8 param_3)
   int iVar2;
   int *piVar3;
   uint uVar4;
-  int iStack_30;
-  uint uStack_2c;
+  struct { int first; uint second; } stack_pair_30;
+
   
   iVar2 = fn_8225F160();
   uVar1 = *(uint *)(iVar2 + 0x5c);
@@ -55,9 +55,9 @@ void fn_8242CB38(undefined8 param_1,undefined8 param_2,undefined8 param_3)
       uVar4 = 0;
       if (uVar1 != 0) {
         do {
-          iStack_30 = *piVar3;
-          uStack_2c = uVar4;
-          fn_824BF8A8(param_2,&iStack_30);
+          stack_pair_30.first = *piVar3;
+          stack_pair_30.second = uVar4;
+          fn_824BF8A8(param_2,&stack_pair_30.first);
           uVar4 = uVar4 + 1;
         } while (uVar4 < uVar1);
       }

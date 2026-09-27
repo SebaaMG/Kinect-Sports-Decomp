@@ -47,8 +47,8 @@ void fn_827A2CF8(int param_1)
   undefined8 uVar1;
   int *piVar2;
   ushort uVar3;
-  undefined4 uStack_50;
-  undefined4 uStack_4c;
+  struct { undefined4 first; undefined4 second; } stack_pair_50;
+
   undefined4 uStack_48;
   undefined4 uStack_44;
   undefined4 uStack_40;
@@ -67,13 +67,13 @@ void fn_827A2CF8(int param_1)
       uStack_44 = 0;
       uStack_40 = 0;
       uStack_30 = 0;
-      uStack_50 = 0;
-      uStack_4c = 0;
+      stack_pair_50.first = 0;
+      stack_pair_50.second = 0;
       uStack_48 = 0;
       uStack_38 = 0xff000000;
       uStack_2c = 0x18;
       uStack_34 = 0xffffffff;
-      piVar2 = (int *)fn_827AFE68(uVar1,&uStack_50);
+      piVar2 = (int *)fn_827AFE68(uVar1,&stack_pair_50.first);
     }
     else {
       uVar3 = (ushort)(piVar2[1] != 0);

@@ -43,7 +43,7 @@ longlong fn_82882028(undefined4 *param_1)
   longlong lVar6;
   undefined4 *puStack_40;
   undefined4 *puStack_3c;
-  int aiStack_38 [14];
+  int aiStack_38;
   
   lVar6 = 0;
   if ((-1 < (int)param_1) &&
@@ -56,9 +56,9 @@ longlong fn_82882028(undefined4 *param_1)
     while (puStack_40 != puVar2) {
       iVar1 = puStack_40[4];
       if ((((iVar1 != 0) &&
-           (puStack_3c = param_1, fn_8288E040(aiStack_38,iVar1 + 0x10,&puStack_3c),
-           aiStack_38[0] != *(int *)(iVar1 + 0x14))) &&
-          (uVar5 = *(ulonglong *)(aiStack_38[0] + 0x18), uVar5 != 0)) &&
+           (puStack_3c = param_1, fn_8288E040(&aiStack_38,iVar1 + 0x10,&puStack_3c),
+           aiStack_38 != *(int *)(iVar1 + 0x14))) &&
+          (uVar5 = *(ulonglong *)(aiStack_38 + 0x18), uVar5 != 0)) &&
          ((uVar5 < uVar3 && (uVar3 - uVar5 < 5000)))) {
         lVar6 = lVar6 + 1;
       }

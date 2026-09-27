@@ -40,13 +40,13 @@ void fn_828833A8(undefined4 param_1,int *param_2)
   int *piVar3;
   undefined8 uVar1;
   uint *puVar4;
-  undefined4 auStack_30 [12];
+  undefined4 auStack_30;
   
   (**(code **)(*param_2 + 4))(param_2);
   iVar2 = fn_82886C90();
   if (iVar2 != 0) {
-    auStack_30[0] = param_1;
-    piVar3 = (int *)fn_82883118(0xffffffff83212a00,auStack_30);
+    auStack_30 = param_1;
+    piVar3 = (int *)fn_82883118(0xffffffff83212a00,&auStack_30);
     uVar1 = (**(code **)(*param_2 + 4))(param_2);
     iVar2 = fn_828869A0(*(undefined4 *)(*piVar3 + 0xb4),uVar1);
     param_2[10] = iVar2;
@@ -54,8 +54,8 @@ void fn_828833A8(undefined4 param_1,int *param_2)
   piVar3 = (int *)fn_825089A0();
   iVar2 = (**(code **)(*piVar3 + 0xc))();
   (**(code **)(*param_2 + 0x34))(param_2,(longlong)iVar2);
-  auStack_30[0] = param_1;
-  puVar4 = (uint *)fn_82883118(0xffffffff83212a00,auStack_30);
+  auStack_30 = param_1;
+  puVar4 = (uint *)fn_82883118(0xffffffff83212a00,&auStack_30);
   fn_8287FF40((ulonglong)*puVar4 + 0x70,param_2);
   *(longlong *)(param_2 + 0x12) = (longlong)iVar2;
   return;

@@ -38,8 +38,8 @@ void fn_8228C1B8(double param_1,int param_2)
 {
   undefined4 *puVar1;
   int iVar2;
-  undefined4 uStack_30;
-  float fStack_2c;
+  struct { undefined4 first; float second; } stack_pair_30;
+
   undefined4 uStack_28;
   
   for (puVar1 = *(undefined4 **)**(int **)(param_2 + 0x80);
@@ -53,10 +53,10 @@ LAB_8228c200:
     fn_82266158(iVar2);
     if ((*(int *)(iVar2 + 0xdc) != 0) &&
        ((*(int *)(iVar2 + 0x52c) == 3 || (*(int *)(iVar2 + 0x52c) == 4)))) {
-      fStack_2c = (float)param_1;
+      stack_pair_30.second = (float)param_1;
       uStack_28 = lbl_821CC160;
-      uStack_30 = lbl_821CC160;
-      fn_8252A1B0(*(int *)(iVar2 + 0xdc),&uStack_30,0);
+      stack_pair_30.first = lbl_821CC160;
+      fn_8252A1B0(*(int *)(iVar2 + 0xdc),&stack_pair_30.first,0);
     }
   }
   return;

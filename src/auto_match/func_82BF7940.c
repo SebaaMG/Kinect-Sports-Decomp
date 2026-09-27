@@ -36,7 +36,7 @@ undefined4 * fn_82BF7940(undefined4 *param_1,undefined4 param_2,char *param_3,ch
 {
   int iVar1;
   undefined4 uVar2;
-  char acStack_130 [304];
+  char acStack_130 [256];
   
   fn_82BE8CE0();
   param_1[2] = param_2;

@@ -39,7 +39,7 @@ undefined4 * fn_827E1118(undefined4 *param_1,int param_2,int *param_3,int *param
   int *piVar1;
   undefined8 uVar2;
   undefined4 *puVar3;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [1];
   
   puVar3 = (undefined4 *)(param_2 + 4);
   if ((param_3 == (int *)**(int **)(param_2 + 4)) && (param_4 == *(int **)(param_2 + 4))) {

@@ -41,7 +41,7 @@ void fn_822FF6A0(int param_1)
   undefined8 uVar1;
   undefined4 uVar2;
   undefined1 auStack_60 [32];
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [32];
   
   fn_822CAA28();
   fn_82230110(auStack_60,0xffffffff821aebf4);

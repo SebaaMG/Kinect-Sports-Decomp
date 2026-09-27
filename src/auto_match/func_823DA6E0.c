@@ -38,29 +38,29 @@ void fn_823DA6E0(undefined4 *param_1,undefined4 *param_2,code *param_3)
   undefined4 *puVar3;
   undefined4 *puVar4;
   undefined4 *puVar5;
-  undefined4 uStack_50;
-  undefined4 uStack_4c;
+  struct { undefined4 first; undefined4 second; } stack_pair_50;
+
   undefined4 uStack_48;
   
   puVar3 = param_1;
   puVar1 = param_1;
   while (puVar1 = puVar1 + 3, puVar1 != param_2) {
-    uStack_50 = *puVar1;
-    uStack_4c = puVar1[1];
+    stack_pair_50.first = *puVar1;
+    stack_pair_50.second = puVar1[1];
     uStack_48 = puVar1[2];
-    cVar2 = (*param_3)(&uStack_50,param_1);
+    cVar2 = (*param_3)(&stack_pair_50.first,param_1);
     puVar4 = puVar1;
     puVar5 = puVar3;
     if (cVar2 == '\0') {
-      while (cVar2 = (*param_3)(&uStack_50,puVar5), cVar2 != '\0') {
+      while (cVar2 = (*param_3)(&stack_pair_50.first,puVar5), cVar2 != '\0') {
         *puVar4 = *puVar5;
         puVar4[1] = puVar5[1];
         puVar4[2] = puVar5[2];
         puVar4 = puVar5;
         puVar5 = puVar5 + -3;
       }
-      *puVar4 = uStack_50;
-      puVar4[1] = uStack_4c;
+      *puVar4 = stack_pair_50.first;
+      puVar4[1] = stack_pair_50.second;
       puVar4[2] = uStack_48;
     }
     else {
@@ -70,8 +70,8 @@ void fn_823DA6E0(undefined4 *param_1,undefined4 *param_2,code *param_3)
         puVar4[2] = puVar4[-1];
         puVar4 = puVar4 + -3;
       }
-      *param_1 = uStack_50;
-      param_1[1] = uStack_4c;
+      *param_1 = stack_pair_50.first;
+      param_1[1] = stack_pair_50.second;
       param_1[2] = uStack_48;
     }
     puVar3 = puVar3 + 3;

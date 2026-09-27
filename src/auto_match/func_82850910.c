@@ -36,14 +36,14 @@ undefined8 fn_82850910(int param_1,longlong param_2)
 {
   longlong lVar1;
   longlong lVar2;
-  undefined4 auStack_30 [12];
+  undefined4 auStack_30;
   
   if ((*(int *)(param_1 + 0x144) != 0) && (lVar1 = fn_82817B08(), 0 < lVar1)) {
     lVar2 = 0;
     if (0 < (int)lVar1) {
       do {
-        fn_82817B50(*(undefined4 *)(param_1 + 0x144),lVar2,auStack_30);
-        fn_82817BC8(auStack_30[0],param_2);
+        fn_82817B50(*(undefined4 *)(param_1 + 0x144),lVar2,&auStack_30);
+        fn_82817BC8(auStack_30,param_2);
         lVar2 = lVar2 + 1;
         param_2 = param_2 + 4;
       } while ((int)lVar2 < (int)lVar1);

@@ -39,7 +39,7 @@ extern int fn_823CF178();
 extern int fn_823D2008();
 extern int fn_823E6E98();
 extern int fn_823EAA88();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int iStack_6c;
 extern unsigned int iStack_b8;
 extern unsigned int lbl_832975B0;
@@ -73,8 +73,8 @@ void fn_823CEFB0(int param_1,undefined8 param_2)
   undefined1 auStack_108 [24];
   code *pcStack_f0;
   undefined4 uStack_ec;
-  undefined4 uStack_e0;
-  undefined4 uStack_dc;
+  struct { undefined4 first; undefined4 second; } stack_pair_e0;
+
   undefined4 uStack_d4;
   undefined4 uStack_d0;
   undefined1 uStack_cc;
@@ -92,12 +92,12 @@ void fn_823CEFB0(int param_1,undefined8 param_2)
   int iStack_6c;
   undefined1 auStack_60 [96];
   
-  uStack_dc = 0;
-  uStack_e0 = 0xffffffff;
+  stack_pair_e0.second = 0;
+  stack_pair_e0.first = 0xffffffff;
   uStack_d4 = 0;
   uStack_d0 = 0;
   uStack_cc = 0;
-  fn_823E6E98(param_1,param_2,&uStack_e0);
+  fn_823E6E98(param_1,param_2,&stack_pair_e0.first);
   iVar2 = lbl_832975B0;
   if (lbl_832975B0 == 0) {
     iVar2 = fn_82250A18();
@@ -113,8 +113,8 @@ void fn_823CEFB0(int param_1,undefined8 param_2)
     puVar3[2] = in_register_00010018;
     puVar3[3] = in_vr1;
     uStack_c0 = 0x823cf17800000000;
-    fn_82F68CC0(&uStack_90,&uStack_e0,0x18);
-    fn_82F68CC0(auStack_108,auStack_88,0x18);
+    memcpy(&uStack_90,&stack_pair_e0.first,0x18);
+    memcpy(auStack_108,auStack_88,0x18);
     uVar1 = fn_823D2008(auStack_60,uStack_c0,CONCAT44(iStack_b8,uStack_b4),
                               CONCAT44(uStack_b0,uStack_ac),uStack_a8,uStack_a0,uStack_98,uStack_90)
     ;
@@ -132,15 +132,15 @@ void fn_823CEFB0(int param_1,undefined8 param_2)
       puVar3[1] = in_register_00010014;
       puVar3[2] = in_register_00010018;
       puVar3[3] = in_vr1;
-      fn_82F68CC0(&uStack_90,&uStack_e0,0x18);
-      fn_82F68CC0(auStack_108,auStack_88,0x18);
+      memcpy(&uStack_90,&stack_pair_e0.first,0x18);
+      memcpy(auStack_108,auStack_88,0x18);
       uVar1 = fn_823D2008(auStack_60,uStack_c0,CONCAT44(iStack_b8,uStack_b4),
                                 CONCAT44(uStack_b0,uStack_ac),uStack_a8,uStack_a0,uStack_98,
                                 uStack_90);
       fn_8227CB30(param_1 + 0xb18,uVar1);
       fn_82359C18(uVar1);
       puVar3 = (undefined4 *)fn_822EFBF0(auStack_70,iVar2);
-      fn_823EAA88(*puVar3,param_2,&uStack_e0);
+      fn_823EAA88(*puVar3,param_2,&stack_pair_e0.first);
       if (iStack_6c != 0) {
         fn_822315A0();
       }

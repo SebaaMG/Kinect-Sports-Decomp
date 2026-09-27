@@ -25,8 +25,8 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F68CC0();
-extern int fn_82F691F0();
+extern int memcpy();
+extern int memset();
 extern unsigned int lbl_82002AE0;
 extern unsigned int lbl_821AAD20;
 
@@ -60,7 +60,7 @@ void fn_82A4DBB0(int param_1,undefined8 param_2,undefined4 *param_3,undefined8 p
   if (param_3[1] == 0) {
     if (*(int *)(param_1 + 0x104) != 0) {
                     /* WARNING: Subroutine does not return */
-      fn_82F691F0(*(undefined4 *)(param_1 + 0x54),0,*(int *)(param_1 + 0x60) << 2);
+      memset(*(undefined4 *)(param_1 + 0x54),0,*(int *)(param_1 + 0x60) << 2);
     }
     if (*(int *)(param_1 + 0xfc) != 0) {
       param_5[1] = 0;
@@ -73,7 +73,7 @@ void fn_82A4DBB0(int param_1,undefined8 param_2,undefined4 *param_3,undefined8 p
     if (*(int *)(param_1 + 0x104) != 0) {
       if (param_6 == 0) {
                     /* WARNING: Subroutine does not return */
-        fn_82F691F0(*(undefined4 *)(param_1 + 0x54),0,*(int *)(param_1 + 0x60) << 2);
+        memset(*(undefined4 *)(param_1 + 0x54),0,*(int *)(param_1 + 0x60) << 2);
       }
       iVar4 = *(int *)(param_1 + 0xa0);
       dVar11 = (double)*(float *)(param_1 + 0xa4);
@@ -86,7 +86,7 @@ void fn_82A4DBB0(int param_1,undefined8 param_2,undefined4 *param_3,undefined8 p
       if ((iVar4 == 2) && (dVar11 == dVar12)) {
 LAB_82a4dcbc:
                     /* WARNING: Subroutine does not return */
-        fn_82F691F0(*(undefined4 *)(param_1 + 0x54),0,*(int *)(param_1 + 0x60) << 2);
+        memset(*(undefined4 *)(param_1 + 0x54),0,*(int *)(param_1 + 0x60) << 2);
       }
       *(undefined4 *)(param_1 + 0x4c) = *param_3;
       *(undefined4 *)(param_1 + 0x50) = *(undefined4 *)(param_1 + 0xd8);
@@ -98,7 +98,7 @@ LAB_82a4dcbc:
     *(undefined4 *)(param_1 + 0x28) = *param_5;
     uVar8 = param_3[2] * *(int *)(param_1 + 0x3c);
     if (*(int *)(param_1 + 0xf0) == 0) {
-      fn_82F68CC0(*(undefined4 *)(param_1 + 0xd0),*(undefined4 *)(param_1 + 0xb0),
+      memcpy(*(undefined4 *)(param_1 + 0xd0),*(undefined4 *)(param_1 + 0xb0),
                    ((longlong)*(int *)(param_1 + 0x40) * (longlong)*(int *)(param_1 + 0x3c) &
                    0x3fffffffU) << 2);
       *(undefined4 *)(param_1 + 0xf4) = 0;
@@ -177,7 +177,7 @@ LAB_82a4dcbc:
       trapWord(6,(ulonglong)uVar10,0);
       *(int *)(param_1 + 0x28) =
            (int)(uVar5 / uVar10) * *(int *)(param_1 + 0x40) * 4 + *(int *)(param_1 + 0x28);
-      fn_82F68CC0(*(undefined4 *)(param_1 + 0xd0),*(undefined4 *)(param_1 + 0xb0),
+      memcpy(*(undefined4 *)(param_1 + 0xd0),*(undefined4 *)(param_1 + 0xb0),
                    ((longlong)*(int *)(param_1 + 0x40) * (longlong)(int)uVar10 & 0x3fffffffU) << 2);
       *(undefined4 *)(param_1 + 0x30) = 0;
     }

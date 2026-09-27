@@ -46,7 +46,7 @@ undefined8 fn_82A24680(undefined8 param_1)
   char *pcVar4;
   undefined1 auStack_270 [44];
   char acStack_244 [276];
-  undefined1 auStack_130 [304];
+  undefined1 auStack_130 [256];
   
   uVar2 = fn_82A2A438(0xffffffff820892f8,auStack_270);
   if ((int)uVar2 != -1) {

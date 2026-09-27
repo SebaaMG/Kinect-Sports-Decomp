@@ -42,7 +42,7 @@ void fn_82742860(int param_1)
   undefined8 uVar2;
   ulonglong uVar4;
   double dVar5;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [48];
   
   cVar3 = fn_82695468(param_1,0xf);
   if (cVar3 == '\0') {

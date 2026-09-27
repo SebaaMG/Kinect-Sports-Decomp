@@ -36,7 +36,7 @@ undefined8 fn_82877FC0(int param_1)
 
 {
   undefined1 auStack_40 [4];
-  undefined1 auStack_3c [44];
+  undefined1 auStack_3c [28];
   
   fn_828778E8(auStack_40);
   fn_828788D0(param_1 + 0x10,auStack_40);

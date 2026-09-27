@@ -28,7 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 extern unsigned int lbl_8315D2C4;
 
 
-void fn_82A1E9A0(undefined8 param_1)
+void XapiCallThreadNotifyRoutines(undefined8 param_1)
 
 {
   undefined **ppuVar1;

@@ -35,15 +35,15 @@ void fn_82688820(int param_1,int param_2,char param_3)
 {
   int iVar1;
   int *piVar2;
-  int aiStack_30 [12];
+  int aiStack_30;
   
   if ((*(int *)(param_1 + 0xc) != 0) && (param_2 != 0)) {
     iVar1 = *(int *)(*(int *)(param_2 + 0x1c) + 0xc);
     if (iVar1 != 0) {
       fn_8267C4C8(iVar1);
     }
-    aiStack_30[0] = iVar1;
-    fn_826D9388(*(undefined4 *)(param_1 + 0xc),aiStack_30);
+    aiStack_30 = iVar1;
+    fn_826D9388(*(undefined4 *)(param_1 + 0xc),&aiStack_30);
     if (iVar1 != 0) {
       fn_82687270(iVar1);
     }

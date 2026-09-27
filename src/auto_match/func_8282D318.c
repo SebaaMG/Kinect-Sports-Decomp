@@ -39,21 +39,21 @@ undefined8 fn_8282D318(int param_1,undefined8 param_2)
   undefined8 uVar1;
   longlong lVar3;
   uint uVar4;
-  undefined4 auStack_30 [12];
+  undefined4 auStack_30;
   
-  iVar2 = fn_82F674A8(auStack_30,param_2,0xffffffff8201ed40);
+  iVar2 = fn_82F674A8(&auStack_30,param_2,0xffffffff8201ed40);
   if (iVar2 == 0) {
-    fn_82F6D000(auStack_30[0],0xffffffff8201ed44,*(undefined4 *)(param_1 + 8));
+    fn_82F6D000(auStack_30,0xffffffff8201ed44,*(undefined4 *)(param_1 + 8));
     uVar4 = 0;
     if (*(int *)(param_1 + 8) != 0) {
       lVar3 = 0;
       do {
-        fn_82831618((ulonglong)*(uint *)(param_1 + 0xc) + lVar3,auStack_30[0]);
+        fn_82831618((ulonglong)*(uint *)(param_1 + 0xc) + lVar3,auStack_30);
         uVar4 = uVar4 + 1;
         lVar3 = lVar3 + 0x10;
       } while (uVar4 < *(uint *)(param_1 + 8));
     }
-    fn_82F67988(auStack_30[0]);
+    fn_82F67988(auStack_30);
     uVar1 = 1;
   }
   else {

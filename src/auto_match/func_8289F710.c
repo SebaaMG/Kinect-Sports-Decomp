@@ -36,7 +36,7 @@ void fn_8289F710(longlong param_1,int *param_2)
   int iVar1;
   int iVar2;
   undefined4 uVar3;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [16];
   
   iVar1 = param_2[3];
   if (*(char *)((int)param_2 + 0x26) == '\0') {

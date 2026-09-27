@@ -38,14 +38,14 @@ bool fn_82BF2A50(int param_1)
   longlong lVar1;
   undefined4 uStack_120;
   undefined4 uStack_11c;
-  undefined4 uStack_110;
-  undefined4 uStack_10c;
+  struct { undefined4 first; undefined4 second; } stack_pair_110;
+
   
-  uStack_10c = *(undefined4 *)(param_1 + 0x14);
+  stack_pair_110.second = *(undefined4 *)(param_1 + 0x14);
   uStack_120 = 0;
   uStack_11c = 0;
-  uStack_110 = 1;
-  lVar1 = fn_82CE09D0(0,0,&uStack_110,0,&uStack_120);
+  stack_pair_110.first = 1;
+  lVar1 = fn_82CE09D0(0,0,&stack_pair_110.first,0,&uStack_120);
   return (int)lVar1 != -1 && lVar1 != 0;
 }
 

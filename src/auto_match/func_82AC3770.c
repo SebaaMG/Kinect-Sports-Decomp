@@ -26,7 +26,7 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_82AC3438();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 undefined8
@@ -38,9 +38,9 @@ fn_82AC3770(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefined8 
   char *pcVar2;
   int iVar3;
   int iVar4;
-  char acStack_40 [64];
+  char acStack_40 [16];
   
-  if (((param_5 & 0xffffffff) == 0) || (fn_82F68CC0(acStack_40,param_5,9), acStack_40[0] == '\"'))
+  if (((param_5 & 0xffffffff) == 0) || (memcpy(acStack_40,param_5,9), acStack_40[0] == '\"'))
   {
 code_r0x82ac3794:
     uVar1 = 0xffffffff80004005;

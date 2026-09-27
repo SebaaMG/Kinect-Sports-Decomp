@@ -43,7 +43,7 @@ void fn_82429D88(undefined8 param_1,undefined8 param_2,int param_3)
   undefined4 auStack_60 [4];
   undefined **ppuStack_50;
   undefined4 uStack_4c;
-  int aiStack_48 [18];
+  int aiStack_48 [10];
   
   uVar2 = 0;
   uStack_4c = 0;

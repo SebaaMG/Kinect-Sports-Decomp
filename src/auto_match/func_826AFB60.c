@@ -48,7 +48,7 @@ void fn_826AFB60(int param_1)
   char *pcVar7;
   uint uVar8;
   undefined4 *puStack_820;
-  undefined4 *apuStack_81c [3];
+  undefined4 * apuStack_81c;
   char acStack_810 [16];
   undefined1 auStack_800 [16];
   char acStack_7f0 [2032];
@@ -71,13 +71,13 @@ void fn_826AFB60(int param_1)
         fn_826AEA50(acStack_810,auStack_800,piVar5,iVar2,0,
                       (longlong)(*(int *)(iVar2 + 8) - *(int *)(iVar2 + 0xc) >> 4) +
                       ((ulonglong)*(uint *)(iVar2 + 0x1c) & 0x7ffffff) * 0x20 + -0x1f,0);
-        fn_82696D38(apuStack_81c,auStack_800,*(undefined4 *)(param_1 + 0x18),
+        fn_82696D38(&apuStack_81c,auStack_800,*(undefined4 *)(param_1 + 0x18),
                           0xffffffffffffffff,0);
-        fn_826A90C0(param_1,0xffffffff821cc884,*apuStack_81c[0]);
-        uVar8 = apuStack_81c[0][2];
-        apuStack_81c[0][2] = (int)((ulonglong)uVar8 - 1);
+        fn_826A90C0(param_1,0xffffffff821cc884,*apuStack_81c);
+        uVar8 = apuStack_81c[2];
+        apuStack_81c[2] = (int)((ulonglong)uVar8 - 1);
         if ((ulonglong)uVar8 - 1 == 0) {
-          fn_826944C8(apuStack_81c[0]);
+          fn_826944C8(apuStack_81c);
         }
         fn_82696330(auStack_800);
         fn_82696330(acStack_810);

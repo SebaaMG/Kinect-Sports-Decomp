@@ -41,7 +41,7 @@ void fn_823BDD78(int *param_1,undefined8 param_2,int *param_3)
   char cVar4;
   undefined4 *puVar3;
   int iVar5;
-  undefined1 auStack_1c0 [448];
+  undefined1 auStack_1c0 [416];
   
   if (param_3 != (int *)0x0) {
     if ((int *)*param_3 == (int *)0x0) {

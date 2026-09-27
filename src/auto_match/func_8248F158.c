@@ -48,8 +48,8 @@ void fn_8248F158(undefined4 *param_1,undefined4 *param_2)
   undefined4 *puVar6;
   undefined4 *puVar7;
   undefined4 *puVar8;
-  undefined4 uStack_70;
-  int iStack_6c;
+  struct { undefined4 first; int second; } stack_pair_70;
+
   undefined1 auStack_68 [8];
   undefined1 auStack_60 [8];
   undefined1 auStack_58 [8];
@@ -58,16 +58,16 @@ void fn_8248F158(undefined4 *param_1,undefined4 *param_2)
   puVar7 = param_1;
   puVar2 = param_1;
   while (puVar2 = puVar2 + 2, puVar2 != param_2) {
-    uStack_70 = 0;
-    iStack_6c = 0;
-    if (&uStack_70 != puVar2) {
-      iStack_6c = puVar7[3];
+    stack_pair_70.first = 0;
+    stack_pair_70.second = 0;
+    if (&stack_pair_70.first != puVar2) {
+      stack_pair_70.second = puVar7[3];
       puVar7[3] = 0;
-      uStack_70 = *puVar2;
+      stack_pair_70.first = *puVar2;
       *puVar2 = 0;
     }
     uVar3 = fn_82365BD8(auStack_58,param_1);
-    uVar4 = fn_82365BD8(auStack_50,&uStack_70);
+    uVar4 = fn_82365BD8(auStack_50,&stack_pair_70.first);
     cVar5 = fn_8248E2C0(uVar4,uVar3);
     puVar6 = puVar2;
     puVar8 = puVar7;
@@ -75,7 +75,7 @@ void fn_8248F158(undefined4 *param_1,undefined4 *param_2)
     if (cVar5 == '\0') {
       while( true ) {
         uVar3 = fn_82365BD8(auStack_68,puVar8);
-        uVar4 = fn_82365BD8(auStack_60,&uStack_70);
+        uVar4 = fn_82365BD8(auStack_60,&stack_pair_70.first);
         cVar5 = fn_8248E2C0(uVar4,uVar3);
         if (cVar5 == '\0') break;
         fn_823F2E20(puVar6,puVar8);
@@ -89,8 +89,8 @@ void fn_8248F158(undefined4 *param_1,undefined4 *param_2)
         puVar1 = puVar1 + -2;
       }
     }
-    fn_823F2E20(puVar6,&uStack_70);
-    if (iStack_6c != 0) {
+    fn_823F2E20(puVar6,&stack_pair_70.first);
+    if (stack_pair_70.second != 0) {
       fn_822315A0();
     }
     puVar7 = puVar7 + 2;

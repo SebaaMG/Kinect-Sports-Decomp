@@ -47,7 +47,7 @@ longlong fn_828D1698(int param_1,undefined8 param_2)
   longlong lVar3;
   undefined1 uVar7;
   char *pcVar8;
-  char acStack_130 [304];
+  char acStack_130 [256];
   
   iVar4 = fn_828E9DA8(param_2);
   iVar5 = fn_828E9D90(param_2);

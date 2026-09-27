@@ -26,22 +26,22 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_180;
-extern int fn_82230000();
-extern int fn_82A1E5C0();
-extern int fn_82A1E9A0();
-extern int fn_82A1EBB0();
-extern int fn_82A339A8();
-extern int fn_82A339B8();
-extern int fn_82A33A98();
-extern int fn_82A33BE8();
-extern int fn_82F6CDF8();
-extern int fn_82F6FBA8();
+extern int main();
+extern int UnhandledExceptionFilter();
+extern int XapiCallThreadNotifyRoutines();
+extern int XapiPAL50Incompatible();
+extern int GetCommandLineA();
+extern int _cinit();
+extern int _rtinit();
+extern int XapiInitProcess();
+extern int _cexit();
+extern int _mtinit();
 extern unsigned int lbl_83219D30;
 extern unsigned int lbl_8329F724;
 extern unsigned int lbl_8329F728;
 
 
-void fn_82A1ED98(void)
+void mainCRTStartup(void)
 
 {
   bool bVar1;
@@ -58,15 +58,15 @@ void fn_82A1ED98(void)
   
   lbl_8329F724 = 0xffffffff;
   lbl_8329F728 = 0xffffffff;
-  fn_82A33BE8();
-  fn_82A1E9A0(1);
-  iVar3 = fn_82A1EBB0();
+  XapiInitProcess();
+  XapiCallThreadNotifyRoutines(1);
+  iVar3 = XapiPAL50Incompatible();
   if (iVar3 != 0) {
     XamLoaderTerminateTitle();
   }
-  fn_82F6FBA8();
-  fn_82A33A98();
-  fn_82A339B8(1);
+  _mtinit();
+  _rtinit();
+  _cinit(1);
   if (lbl_83219D30 == 0) {
     puVar5 = (undefined4 *)0x0;
     lVar9 = 0;
@@ -74,7 +74,7 @@ void fn_82A1ED98(void)
   else {
     puVar5 = auStack_180;
     lVar9 = 0;
-    pcVar4 = (char *)fn_82A339A8();
+    pcVar4 = (char *)GetCommandLineA();
     if (pcVar4 != (char *)0x0) {
       pcVar7 = acStack_130;
       while( true ) {
@@ -112,11 +112,11 @@ void fn_82A1ED98(void)
     puVar5[1] = 0;
     puVar5 = auStack_180;
   }
-  uVar2 = fn_82230000(lVar9,puVar5,0);
-  fn_82F6CDF8();
+  uVar2 = main(lVar9,puVar5,0);
+  _cexit();
   DbgPrint(0xffffffff82089248,uVar2);
   XamLoaderTerminateTitle();
-  fn_82A1E5C0();
+  UnhandledExceptionFilter();
   return;
 }
 

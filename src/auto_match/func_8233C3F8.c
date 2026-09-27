@@ -38,8 +38,7 @@ extern int fn_8265C9E0();
 extern unsigned int lbl_821A8D8C;
 
 
-uint * fn_8233C3F8(uint *param_1,int param_2,undefined8 param_3,undefined8 param_4,
-                    undefined8 param_5,undefined8 param_6,undefined8 param_7,uint *param_8)
+uint * fn_8233C3F8(uint *param_1, int param_2, undefined8 param_3, undefined8 param_4, undefined8 param_5, undefined8 param_6, undefined8 param_7, uint *param_8, undefined4 in_stack_00000054)
 
 {
   undefined4 uVar1;
@@ -47,8 +46,8 @@ uint * fn_8233C3F8(uint *param_1,int param_2,undefined8 param_3,undefined8 param
   undefined4 *puVar4;
   undefined8 uVar3;
   int iVar5;
-  undefined4 in_stack_00000054;
-  undefined1 auStack_70 [112];
+
+  undefined1 auStack_70 [16];
   
   uVar1 = *(undefined4 *)(param_2 + 0x80);
   puVar4 = (undefined4 *)fn_8265C9E0(0xa8);

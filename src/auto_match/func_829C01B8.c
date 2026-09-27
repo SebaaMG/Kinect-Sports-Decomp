@@ -38,8 +38,8 @@ void fn_829C01B8(int param_1,undefined8 param_2,int *param_3,undefined8 param_4,
   uint uVar2;
   undefined4 *puVar3;
   uint uVar4;
-  undefined4 uStack_30;
-  undefined4 uStack_2c;
+  struct { undefined4 first; undefined4 second; } stack_pair_30;
+
   
   iVar1 = *(int *)(param_1 + 0x1c8);
   if (*(int *)(iVar1 + 0x24) == 0) {
@@ -52,15 +52,15 @@ void fn_829C01B8(int param_1,undefined8 param_2,int *param_3,undefined8 param_4,
       uVar4 = uVar2;
     }
     puVar3 = (undefined4 *)(*param_6 * 4 + param_5);
-    uStack_30 = *puVar3;
+    stack_pair_30.first = *puVar3;
     if (uVar4 < 2) {
-      uStack_2c = *(undefined4 *)(iVar1 + 0x20);
+      stack_pair_30.second = *(undefined4 *)(iVar1 + 0x20);
       *(undefined4 *)(iVar1 + 0x24) = 1;
     }
     else {
-      uStack_2c = puVar3[1];
+      stack_pair_30.second = puVar3[1];
     }
-    (**(code **)(iVar1 + 0xc))(param_1,param_2,*param_3,&uStack_30);
+    (**(code **)(iVar1 + 0xc))(param_1,param_2,*param_3,&stack_pair_30.first);
   }
   else {
     fn_829B77B8(iVar1 + 0x20,0,*param_6 * 4 + param_5,0,1,*(undefined4 *)(iVar1 + 0x28));

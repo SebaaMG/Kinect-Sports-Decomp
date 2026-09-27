@@ -29,7 +29,7 @@ extern unsigned int *auStack_50;
 extern int fn_82230218();
 extern int fn_82230300();
 extern int fn_822EC770();
-extern int fn_82F640B0();
+extern int memchr();
 
 
 undefined8 fn_822EC378(undefined4 *param_1)
@@ -40,7 +40,7 @@ undefined8 fn_822EC378(undefined4 *param_1)
   undefined4 *puVar3;
   undefined1 uVar4;
   undefined8 uVar5;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [48];
   
   if (param_1[4] == 0) {
 LAB_822ec42c:
@@ -54,7 +54,7 @@ LAB_822ec42c:
     puVar2 = (undefined4 *)((int)puVar2 + param_1[4] + -1);
     uVar4 = *(undefined1 *)puVar2;
     while( true ) {
-      iVar1 = fn_82F640B0(0xffffffff821ac4b4,uVar4,1);
+      iVar1 = memchr(0xffffffff821ac4b4,uVar4,1);
       if (iVar1 != 0) break;
       puVar3 = param_1;
       if (0xf < (uint)param_1[5]) {

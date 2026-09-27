@@ -50,15 +50,15 @@ void fn_82808220(int param_1,int param_2,int param_3)
   int iVar13;
   double dVar14;
   ushort uStack_290;
-  ushort auStack_28e [7];
-  undefined1 auStack_280 [640];
+  ushort auStack_28e;
+  undefined1 auStack_280 [512];
   
   uVar9 = 0;
   if (*(short *)(param_3 + 0x48) != 0) {
     iVar8 = 0;
     dVar14 = (double)lbl_821AAD20;
     do {
-      auStack_28e[0] = 0;
+      auStack_28e = 0;
       uStack_290 = 0;
       if ((*(int *)(param_3 + 0x58) == 0) ||
          (*(ushort *)(iVar8 + *(int *)(param_3 + 0x58)) == uVar9)) {
@@ -75,7 +75,7 @@ void fn_82808220(int param_1,int param_2,int param_3)
           iVar10 = 0xc;
           iVar13 = 3;
           do {
-            fn_82807F68(param_1,param_3,param_2,auStack_280,&uStack_290,auStack_28e,uVar11,lVar12)
+            fn_82807F68(param_1,param_3,param_2,auStack_280,&uStack_290,&auStack_28e,uVar11,lVar12)
             ;
             pbVar1 = *(byte **)(param_3 + 0x24);
             bVar3 = *pbVar1 & 3;
@@ -84,12 +84,12 @@ void fn_82808220(int param_1,int param_2,int param_3)
                 iVar6 = iVar13;
                 iVar5 = iVar10;
                 do {
-                  uVar4 = auStack_28e[0];
+                  uVar4 = auStack_28e;
                   if (iVar13 + 6 <= iVar6) break;
                   *(undefined4 *)((uint)uStack_290 * 4 + param_2) =
                        *(undefined4 *)(*(int *)(param_1 + 8) + iVar5);
                   if ((*(int *)(param_3 + 0x3c) == 0) ||
-                     (pcVar2 = *(code **)((uint)auStack_28e[0] * 4 + *(int *)(param_3 + 0x3c)),
+                     (pcVar2 = *(code **)((uint)auStack_28e * 4 + *(int *)(param_3 + 0x3c)),
                      pcVar2 == (code *)0x0)) {
                     uStack_290 = uStack_290 + 1;
                   }
@@ -97,7 +97,7 @@ void fn_82808220(int param_1,int param_2,int param_3)
                     (*pcVar2)(dVar14,0,0);
                   }
                   iVar6 = iVar6 + 1;
-                  auStack_28e[0] = uVar4 + 1;
+                  auStack_28e = uVar4 + 1;
                   iVar5 = iVar5 + 4;
                 } while (iVar6 < (int)(uint)*(ushort *)(param_1 + 0x1e));
               }
@@ -107,12 +107,12 @@ void fn_82808220(int param_1,int param_2,int param_3)
                 iVar6 = iVar13;
                 iVar5 = iVar10;
                 do {
-                  uVar4 = auStack_28e[0];
+                  uVar4 = auStack_28e;
                   if (iVar13 + 3 <= iVar6) break;
                   *(undefined4 *)((uint)uStack_290 * 4 + param_2) =
                        *(undefined4 *)(*(int *)(param_1 + 8) + iVar5);
                   if ((*(int *)(param_3 + 0x3c) == 0) ||
-                     (pcVar2 = *(code **)((uint)auStack_28e[0] * 4 + *(int *)(param_3 + 0x3c)),
+                     (pcVar2 = *(code **)((uint)auStack_28e * 4 + *(int *)(param_3 + 0x3c)),
                      pcVar2 == (code *)0x0)) {
                     uStack_290 = uStack_290 + 1;
                   }
@@ -120,18 +120,18 @@ void fn_82808220(int param_1,int param_2,int param_3)
                     (*pcVar2)(dVar14,0,0);
                   }
                   iVar6 = iVar6 + 1;
-                  auStack_28e[0] = uVar4 + 1;
+                  auStack_28e = uVar4 + 1;
                   iVar5 = iVar5 + 4;
                 } while (iVar6 < (int)(uint)*(ushort *)(param_1 + 0x1e));
               }
 LAB_82808350:
               *(int *)(param_3 + 0x24) = *(int *)(param_3 + 0x24) + 1;
-              fn_82807F68(param_1,param_3,param_2,auStack_280,&uStack_290,auStack_28e,uVar11,
+              fn_82807F68(param_1,param_3,param_2,auStack_280,&uStack_290,&auStack_28e,uVar11,
                             lVar12);
             }
             else if (bVar3 < 3) {
               *(byte **)(param_3 + 0x24) = pbVar1 + 1;
-              fn_82807F68(param_1,param_3,param_2,auStack_280,&uStack_290,auStack_28e,uVar11,
+              fn_82807F68(param_1,param_3,param_2,auStack_280,&uStack_290,&auStack_28e,uVar11,
                             lVar12);
               if ((lVar12 == 0) &&
                  (iVar6 = iVar13 + 3, iVar6 < (int)(uint)*(ushort *)(param_1 + 0x1e))) {
@@ -139,7 +139,7 @@ LAB_82808350:
                 do {
                   if (iVar13 + 6 <= iVar6) break;
                   iVar6 = iVar6 + 1;
-                  auStack_28e[0] = auStack_28e[0] + 1;
+                  auStack_28e = auStack_28e + 1;
                   *(undefined4 *)((uint)uStack_290 * 4 + param_2) =
                        *(undefined4 *)(*(int *)(param_1 + 8) + iVar5);
                   uStack_290 = uStack_290 + 1;
@@ -149,7 +149,7 @@ LAB_82808350:
             }
             else if (bVar3 == 3) {
               *(byte **)(param_3 + 0x24) = pbVar1 + 1;
-              fn_82807F68(param_1,param_3,param_2,auStack_280,&uStack_290,auStack_28e,uVar11,
+              fn_82807F68(param_1,param_3,param_2,auStack_280,&uStack_290,&auStack_28e,uVar11,
                             lVar12);
               goto LAB_82808350;
             }

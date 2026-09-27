@@ -27,8 +27,8 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_826BCF78();
 extern int fn_82790270();
-extern int fn_82F66A80();
-extern int fn_82F66AA0();
+extern int isdigit();
+extern int isxdigit();
 
 
 undefined4 fn_82790A58(undefined4 *param_1)
@@ -64,14 +64,14 @@ LAB_82790bb4:
         uVar9 = 0;
         iVar5 = fn_826BCF78(psVar2[1] == 0x78);
         if (iVar5 == 0) {
-          iVar5 = fn_82F66A80(*(undefined2 *)param_1[1]);
+          iVar5 = isdigit(*(undefined2 *)param_1[1]);
           if (iVar5 != 0) {
             uVar4 = 0;
             if ((uint)param_1[1] < (uint)param_1[2]) {
               do {
                 uVar9 = uVar4;
                 if (*(short *)param_1[1] == 0x3b) break;
-                iVar5 = fn_82F66A80();
+                iVar5 = isdigit();
                 if (iVar5 == 0) goto LAB_82790d0c;
                 puVar3 = (ushort *)param_1[1];
                 uVar1 = *puVar3;
@@ -104,7 +104,7 @@ LAB_82790d18:
           do {
             uVar9 = uVar4;
             if (*(short *)param_1[1] == 0x3b) break;
-            iVar5 = fn_82F66AA0();
+            iVar5 = isxdigit();
             if (iVar5 == 0) goto LAB_82790d0c;
             uVar9 = uVar9 << 4;
             uVar6 = fn_826BCF78(*(undefined2 *)param_1[1]);

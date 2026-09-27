@@ -42,7 +42,7 @@ void fn_823C2148(int param_1,char param_2,char param_3)
   undefined4 uVar4;
   undefined4 uVar5;
   undefined4 uVar6;
-  undefined1 auStack_40 [48];
+  undefined1 auStack_40 [32];
   
   puVar1 = (undefined4 *)(*(int *)(param_1 + 0xe10) + 0x50U & 0xfffffff0);
   uVar3 = *puVar1;

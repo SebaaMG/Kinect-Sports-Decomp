@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_822315A0();
 extern int fn_8223AAC0();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 undefined4 * fn_82273920(undefined4 *param_1,undefined4 *param_2)
@@ -57,9 +57,9 @@ undefined4 * fn_82273920(undefined4 *param_1,undefined4 *param_2)
   param_1[8] = param_2[8];
   param_1[9] = param_2[9];
   param_1[10] = param_2[10];
-  fn_82F68CC0(param_1 + 0xb,param_2 + 0xb,0x800);
-  fn_82F68CC0(param_1 + 0x20b,param_2 + 0x20b,0x800);
-  fn_82F68CC0(param_1 + 0x40b,param_2 + 0x40b,0x80);
+  memcpy(param_1 + 0xb,param_2 + 0xb,0x800);
+  memcpy(param_1 + 0x20b,param_2 + 0x20b,0x800);
+  memcpy(param_1 + 0x40b,param_2 + 0x40b,0x80);
   param_1[0x42b] = param_2[0x42b];
   param_1[0x42c] = param_2[0x42c];
   param_1[0x42d] = param_2[0x42d];

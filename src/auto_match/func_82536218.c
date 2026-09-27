@@ -36,7 +36,7 @@ void fn_82536218(undefined8 param_1,undefined8 param_2)
 {
   int iVar1;
   undefined8 uVar2;
-  undefined1 auStack_50 [56];
+  undefined1 auStack_50 [40];
   
   iVar1 = *lbl_8327F848;
   uVar2 = fn_82864988(auStack_50,param_2);

@@ -29,7 +29,7 @@ extern unsigned int *auStack_50;
 extern int fn_822A8D30();
 extern int fn_828647F0();
 extern int fn_82864898();
-extern int fn_82F63CA0();
+extern int memmove();
 extern unsigned int lbl_8327F874;
 
 
@@ -40,7 +40,7 @@ void fn_82536288(int *param_1)
   undefined8 uVar2;
   int iVar3;
   int *piVar4;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [48];
   
   iVar1 = *param_1;
   if (iVar1 != 0) {
@@ -51,7 +51,7 @@ void fn_82536288(int *param_1)
           (piVar4 != *(int **)(iVar3 + 0x28) && (*piVar4 != iVar1)); piVar4 = piVar4 + 1) {
       }
       if (piVar4 != *(int **)(iVar3 + 0x28)) {
-        fn_82F63CA0(piVar4,piVar4 + 1,(*(int *)(iVar3 + 0x28) - (int)(piVar4 + 1) >> 2) << 2);
+        memmove(piVar4,piVar4 + 1,(*(int *)(iVar3 + 0x28) - (int)(piVar4 + 1) >> 2) << 2);
         *(int *)(iVar3 + 0x28) = *(int *)(iVar3 + 0x28) + -4;
       }
     }

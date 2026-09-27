@@ -35,7 +35,7 @@ bool fn_822C49D8(undefined8 param_1)
 
 {
   double dVar1;
-  undefined1 auStack_20 [32];
+  undefined1 auStack_20 [1];
   
   fn_822B69A0(auStack_20,param_1);
   dVar1 = (double)fn_8255A260();

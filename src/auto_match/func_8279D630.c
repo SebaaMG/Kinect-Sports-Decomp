@@ -57,7 +57,7 @@ undefined8 fn_8279D630(int *param_1)
   int iStack_f8;
   int iStack_f4;
   int iStack_f0;
-  undefined1 auStack_e0 [224];
+  undefined1 auStack_e0 [208];
   
   if (((((param_1[0xba] == 1) && ((*(byte *)(*param_1 + 0x13d) & 8) != 0)) &&
        (*(char *)(param_1 + 0x14a) == '\0')) &&

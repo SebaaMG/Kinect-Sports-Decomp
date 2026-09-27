@@ -50,8 +50,8 @@ void fn_82246C58(int param_1)
   undefined4 *puVar3;
   int iVar5;
   ulonglong uVar4;
-  undefined4 uStack_30;
-  undefined4 uStack_2c;
+  struct { undefined4 first; undefined4 second; } stack_pair_30;
+
   undefined4 uStack_28;
   
   iVar1 = *(int *)(param_1 + 0x38);
@@ -116,10 +116,10 @@ LAB_82246cec:
       return;
     }
   }
-  uStack_30 = 0;
-  uStack_2c = 0;
+  stack_pair_30.first = 0;
+  stack_pair_30.second = 0;
   uStack_28 = 0;
-  fn_82514888(&uStack_30);
+  fn_82514888(&stack_pair_30.first);
   return;
 }
 

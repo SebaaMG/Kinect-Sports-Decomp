@@ -46,7 +46,7 @@ undefined8 fn_826E6618(undefined8 param_1,undefined8 param_2,ulonglong param_3,u
   undefined8 uVar3;
   undefined4 uStack_40;
   undefined1 auStack_3c [4];
-  undefined1 auStack_38 [56];
+  undefined1 auStack_38 [8];
   
   uVar1 = fn_8267B890(lbl_831E7E64,0x54,0);
   if ((uVar1 & 0xffffffff) == 0) {

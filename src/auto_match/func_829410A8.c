@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_828F5960();
 extern int fn_82940C38();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int stack0x00000020;
 extern unsigned int uStack00000020;
 extern unsigned int uStack00000028;
@@ -73,7 +73,7 @@ fn_829410A8(int param_1,undefined8 param_2,undefined8 param_3,undefined8 param_4
   pcVar3 = pcVar3 + (-1 - (int)acStack_820);
   uVar2 = fn_82940C38(param_1,pcVar3);
   if (-1 < (int)uVar2) {
-    fn_82F68CC0((ulonglong)*(uint *)(param_1 + 0x5fc) + (ulonglong)*(uint *)(param_1 + 0x600),
+    memcpy((ulonglong)*(uint *)(param_1 + 0x5fc) + (ulonglong)*(uint *)(param_1 + 0x600),
                  acStack_820,pcVar3);
     uVar2 = 0;
     *(char **)(param_1 + 0x600) = pcVar3 + *(int *)(param_1 + 0x600);

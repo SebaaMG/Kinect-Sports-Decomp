@@ -36,17 +36,17 @@ extern unsigned int uStack_30;
 void fn_827B2C10(int param_1,short param_2,undefined2 param_3)
 
 {
-  undefined4 uStack_30;
-  undefined4 uStack_2c;
+  struct { undefined4 first; undefined4 second; } stack_pair_30;
+
   
   if (*(int *)(param_1 + 0x28) != 0) {
     fn_827B28D0();
   }
-  uStack_30 = *(undefined4 *)(param_1 + 0x18);
-  uStack_2c = 1;
-  fn_827B1968(param_1 + 0x28,&uStack_30);
-  uStack_30 = CONCAT22(param_2 << 1,param_3);
-  fn_827B18F8(param_1 + 0x18,&uStack_30);
+  stack_pair_30.first = *(undefined4 *)(param_1 + 0x18);
+  stack_pair_30.second = 1;
+  fn_827B1968(param_1 + 0x28,&stack_pair_30.first);
+  stack_pair_30.first = CONCAT22(param_2 << 1,param_3);
+  fn_827B18F8(param_1 + 0x18,&stack_pair_30.first);
   return;
 }
 

@@ -38,7 +38,7 @@ void fn_829D7180(uint param_1,uint *param_2,int param_3,int *param_4,longlong pa
   uint *puVar3;
   ulonglong uVar4;
   int iVar5;
-  undefined1 auStack_830 [2096];
+  undefined1 auStack_830 [2000];
   
   iVar5 = 0;
   uVar2 = 0;

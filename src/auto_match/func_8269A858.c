@@ -37,18 +37,18 @@ void fn_8269A858(int *param_1,int *param_2)
   char cVar3;
   undefined8 uVar1;
   uint *puVar4;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30;
   
-  auStack_30[0] = 0;
+  auStack_30 = 0;
   iVar2 = (**(code **)(*param_1 + 0x5c))();
   puVar4 = (uint *)(iVar2 + 0x78);
-  cVar3 = (**(code **)(*param_2 + 0x2c))(param_2,puVar4,(ulonglong)*puVar4 + 0x130,auStack_30);
+  cVar3 = (**(code **)(*param_2 + 0x2c))(param_2,puVar4,(ulonglong)*puVar4 + 0x130,&auStack_30);
   if (cVar3 != '\0') {
     iVar2 = param_1[0x1a];
-    uVar1 = fn_82696958(auStack_30,0);
+    uVar1 = fn_82696958(&auStack_30,0);
     (**(code **)(iVar2 + 0x34))(param_1 + 0x1a,puVar4,uVar1);
   }
-  fn_82696330(auStack_30);
+  fn_82696330(&auStack_30);
   return;
 }
 

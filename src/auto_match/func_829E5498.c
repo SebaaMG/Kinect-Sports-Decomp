@@ -38,7 +38,7 @@ fn_829E5498(double param_1,double param_2,int param_3,undefined8 param_4,undefin
   float fVar1;
   undefined8 uVar2;
   double dVar3;
-  float afStack_30 [6];
+  float afStack_30;
   
   dVar3 = (double)lbl_821AAD20;
   if (dVar3 < param_2) {
@@ -47,11 +47,11 @@ fn_829E5498(double param_1,double param_2,int param_3,undefined8 param_4,undefin
       uVar2 = 0xffffffff8000ffff;
     }
     else {
-      uVar2 = fn_829E5430(param_2,param_3,param_4,param_5,afStack_30);
+      uVar2 = fn_829E5430(param_2,param_3,param_4,param_5,&afStack_30);
       if (-1 < (int)uVar2) {
         uVar2 = 0;
-        fVar1 = (float)((double)(lbl_82002AE0 - afStack_30[0]) * param_1 +
-                       (double)(*(float *)(param_3 + 4) * afStack_30[0]));
+        fVar1 = (float)((double)(lbl_82002AE0 - afStack_30) * param_1 +
+                       (double)(*(float *)(param_3 + 4) * afStack_30));
         *param_6 = fVar1;
         *(float *)(param_3 + 0x10) = fVar1;
       }

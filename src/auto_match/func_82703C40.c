@@ -41,23 +41,23 @@ void fn_82703C40(int param_1)
   longlong lVar1;
   ulonglong uVar2;
   longlong lVar3;
-  undefined4 uStack_30;
-  int iStack_2c;
+  struct { undefined4 first; int second; } stack_pair_30;
+
   int iStack_28;
   undefined4 uStack_24;
   
   lVar1 = fn_82693410();
-  iStack_2c = param_1 + 0xa2c;
-  uStack_30 = 0;
+  stack_pair_30.second = param_1 + 0xa2c;
+  stack_pair_30.first = 0;
   uStack_24 = 0;
   iStack_28 = 0;
   while( true ) {
-    uVar2 = fn_827039E8(&uStack_30);
+    uVar2 = fn_827039E8(&stack_pair_30.first);
     if ((uVar2 & 0xffffffff) == 0) break;
     fn_826F75B8(uVar2,param_1);
   }
   if (iStack_28 != 0) {
-    fn_82703910(iStack_2c);
+    fn_82703910(stack_pair_30.second);
   }
   lVar3 = fn_82693410();
   *(longlong *)(param_1 + 0xb38) = *(longlong *)(param_1 + 0xb38) + (lVar3 - lVar1);

@@ -149,8 +149,8 @@ void fn_827A3BE8(undefined8 param_1,longlong param_2,undefined4 *param_3,undefin
   undefined4 uStack_f4;
   undefined4 uStack_f0;
   undefined4 uStack_ec;
-  float fStack_e8;
-  float fStack_e4;
+  struct { float first; float second; } stack_pair_e8;
+
   undefined4 uStack_e0;
   undefined4 uStack_dc;
   undefined4 uStack_d8;
@@ -279,9 +279,9 @@ LAB_827a3c90:
     uStack_d0 = uStack_120;
     uStack_cc = uStack_11c;
     fn_8268CD40(&uStack_100,&uStack_e0);
-    fStack_e8 = fStack_160;
-    fStack_e4 = fStack_15c;
-    fn_8268CCB0(&uStack_130,&fStack_170,&fStack_e8);
+    stack_pair_e8.first = fStack_160;
+    stack_pair_e8.second = fStack_15c;
+    fn_8268CCB0(&uStack_130,&fStack_170,&stack_pair_e8.first);
     dVar15 = (double)lbl_82002C5C;
     dVar14 = (double)fn_82F68918((double)(float)((double)fStack_170 + dVar15));
     fStack_170 = (float)dVar14;

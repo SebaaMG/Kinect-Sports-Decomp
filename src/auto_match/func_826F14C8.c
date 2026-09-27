@@ -46,8 +46,8 @@ void fn_826F14C8(int param_1,int *param_2)
   uint uVar5;
   char *pcStack_50;
   uint uStack_4c;
-  int iStack_48;
-  int iStack_44;
+  struct { int first; int second; } stack_pair_48;
+
   uint uStack_40;
   undefined1 uStack_3c;
   undefined4 uStack_38;
@@ -113,10 +113,10 @@ void fn_826F14C8(int param_1,int *param_2)
           if (uVar3 < uStack_4c + 1) {
             uVar4 = uVar3;
           }
-          iStack_44 = uVar3 - uVar4;
-          iStack_48 = *param_2 + uVar4;
-          if (iStack_44 != 0) {
-            (**(code **)(*piVar2 + 8))(piVar2,&iStack_48);
+          stack_pair_48.second = uVar3 - uVar4;
+          stack_pair_48.first = *param_2 + uVar4;
+          if (stack_pair_48.second != 0) {
+            (**(code **)(*piVar2 + 8))(piVar2,&stack_pair_48.first);
           }
           fn_826F0610(*(undefined4 *)(param_1 + 4),param_1,piVar2,1);
         }

@@ -47,7 +47,7 @@ void fn_8289A470(int param_1,undefined8 param_2,int param_3)
   undefined4 *puVar5;
   int iVar6;
   longlong lVar7;
-  undefined1 auStack_70 [16];
+  undefined1 auStack_70 [1];
   undefined1 auStack_60 [16];
   undefined1 auStack_50 [80];
   

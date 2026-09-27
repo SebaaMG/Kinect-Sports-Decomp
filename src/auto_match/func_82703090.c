@@ -62,8 +62,8 @@ undefined8 fn_82703090(int *param_1,undefined8 param_2,int *param_3)
   int iStack_80;
   int *piStack_7c;
   longlong lStack_78;
-  int iStack_70;
-  int iStack_6c;
+  struct { int first; int second; } stack_pair_70;
+
   undefined4 uStack_68;
   undefined4 uStack_64;
   int iStack_60;
@@ -122,8 +122,8 @@ undefined8 fn_82703090(int *param_1,undefined8 param_2,int *param_3)
       dVar7 = (double)(**(code **)(*piVar2 + 0x1c))(piVar2);
       lStack_78 = (longlong)(int)dVar7;
       dVar8 = (double)(**(code **)(*piVar2 + 0x18))(piVar2);
-      iStack_70 = (int)dVar8;
-      lStack_78 = (longlong)iStack_70;
+      stack_pair_70.first = (int)dVar8;
+      lStack_78 = (longlong)stack_pair_70.first;
       fStack_44 = (float)dVar9;
       fStack_48 = (float)dVar9;
       uStack_68 = 0;
@@ -133,10 +133,10 @@ undefined8 fn_82703090(int *param_1,undefined8 param_2,int *param_3)
       uStack_50 = 0;
       uStack_54 = 0;
       uStack_58 = 0;
-      iStack_6c = (int)dVar7;
+      stack_pair_70.second = (int)dVar7;
       iStack_60 = (int)dVar6;
       iStack_5c = (int)dVar5;
-      (**(code **)(*param_1 + 100))(param_1,&iStack_70);
+      (**(code **)(*param_1 + 100))(param_1,&stack_pair_70.first);
     }
   }
   param_1[0x2c0] = param_1[0x2c0] | 0x80;

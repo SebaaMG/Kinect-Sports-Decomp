@@ -44,7 +44,7 @@ int fn_822B6A58(int param_1,int param_2,undefined8 param_3)
   undefined4 in_register_000104d4;
   undefined4 in_register_000104d8;
   undefined4 in_vr77;
-  undefined1 auStack_20 [16];
+  undefined1 auStack_20 [1];
   
   iVar1 = *(int *)(param_2 + 0x14);
   iVar2 = *(int *)(iVar1 + 0x4c);

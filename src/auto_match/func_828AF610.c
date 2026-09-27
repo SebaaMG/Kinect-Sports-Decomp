@@ -32,7 +32,7 @@ extern int fn_8289F6C0();
 extern int fn_8289FC80();
 extern int fn_828AF208();
 extern int fn_82CE0678();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int lbl_82024C08;
 extern unsigned int lbl_821AAD20;
 
@@ -48,7 +48,7 @@ fn_828AF610(undefined4 *param_1,undefined8 param_2,undefined8 param_3,undefined8
   int *piVar4;
   double dVar5;
   undefined4 in_stack_00000054;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [1];
   
   iVar3 = fn_82CE0678(param_7,param_4,auStack_50);
   if (iVar3 == 0) {
@@ -59,7 +59,7 @@ fn_828AF610(undefined4 *param_1,undefined8 param_2,undefined8 param_3,undefined8
   }
   fn_8289FC80(param_1,param_2,uVar2,param_5,param_6,param_8,in_stack_00000054,0);
   *param_1 = &lbl_82024C08;
-  fn_82F68CC0(param_1 + 0x19,param_7,0x24);
+  memcpy(param_1 + 0x19,param_7,0x24);
   param_1[0x22] = 0;
   *(undefined1 *)(param_1 + 0x25) = 0;
   *(undefined1 *)((int)param_1 + 0x95) = 0;

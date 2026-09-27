@@ -37,7 +37,7 @@ void fn_8245C7B8(int param_1)
   int iVar1;
   int iVar2;
   undefined1 auStack_60 [32];
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [32];
   
   fn_82230300(auStack_40,0,0);
   fn_82230300(auStack_60,0,0);

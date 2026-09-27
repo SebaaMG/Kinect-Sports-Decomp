@@ -33,7 +33,7 @@ extern unsigned int *auStack_290;
 extern unsigned int *auStack_2f0;
 extern unsigned int *auStack_b0;
 extern int fn_8243FF38();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 undefined4 * fn_8243ECC8(undefined4 *param_1,int *param_2,int *param_3)
@@ -55,7 +55,7 @@ undefined4 * fn_8243ECC8(undefined4 *param_1,int *param_2,int *param_3)
   undefined1 auStack_1d0 [96];
   undefined1 auStack_170 [96];
   undefined1 auStack_110 [96];
-  undefined1 auStack_b0 [176];
+  undefined1 auStack_b0 [96];
   
   piVar10 = param_3 + -0x17;
   uVar4 = ((int)param_3 - (int)param_2) / 0x5c;
@@ -202,9 +202,9 @@ LAB_8243f048:
           }
           if (bVar1) break;
           piVar9 = piVar9 + -0x17;
-          fn_82F68CC0(auStack_110,piVar9,0x5c);
-          fn_82F68CC0(piVar9,piVar8 + -0x12,0x5c);
-          fn_82F68CC0(piVar8 + -0x12,auStack_110,0x5c);
+          memcpy(auStack_110,piVar9,0x5c);
+          memcpy(piVar9,piVar8 + -0x12,0x5c);
+          memcpy(piVar8 + -0x12,auStack_110,0x5c);
         }
         piVar3 = piVar3 + -0x17;
         piVar8 = piVar8 + -0x17;
@@ -217,13 +217,13 @@ LAB_8243f048:
         return param_1;
       }
       if (piVar7 != piVar10) {
-        fn_82F68CC0(auStack_1d0,piVar9,0x5c);
-        fn_82F68CC0(piVar9,piVar7,0x5c);
-        fn_82F68CC0(piVar7,auStack_1d0,0x5c);
+        memcpy(auStack_1d0,piVar9,0x5c);
+        memcpy(piVar9,piVar7,0x5c);
+        memcpy(piVar7,auStack_1d0,0x5c);
       }
       piVar8 = piVar9 + 0x17;
-      fn_82F68CC0(auStack_2f0,piVar9,0x5c);
-      fn_82F68CC0(piVar9,piVar10,0x5c);
+      memcpy(auStack_2f0,piVar9,0x5c);
+      memcpy(piVar9,piVar10,0x5c);
       puVar2 = auStack_2f0;
       piVar9 = piVar10;
       piVar7 = piVar7 + 0x17;
@@ -232,8 +232,8 @@ LAB_8243f048:
     else {
       if (piVar10 != param_3) {
         piVar3 = piVar3 + -0x17;
-        fn_82F68CC0(auStack_b0,piVar10,0x5c);
-        fn_82F68CC0(piVar10,piVar3,0x5c);
+        memcpy(auStack_b0,piVar10,0x5c);
+        memcpy(piVar10,piVar3,0x5c);
         puVar2 = auStack_b0;
         piVar8 = piVar9;
         piVar9 = piVar3;
@@ -243,17 +243,17 @@ LAB_8243f048:
       piVar3 = piVar3 + -0x17;
       piVar8 = piVar9 + -0x17;
       if (piVar3 != piVar8) {
-        fn_82F68CC0(auStack_230,piVar3,0x5c);
-        fn_82F68CC0(piVar3,piVar8,0x5c);
-        fn_82F68CC0(piVar8,auStack_230,0x5c);
+        memcpy(auStack_230,piVar3,0x5c);
+        memcpy(piVar3,piVar8,0x5c);
+        memcpy(piVar8,auStack_230,0x5c);
       }
       piVar9 = piVar7 + -0x17;
-      fn_82F68CC0(auStack_170,piVar8,0x5c);
-      fn_82F68CC0(piVar8,piVar9,0x5c);
+      memcpy(auStack_170,piVar8,0x5c);
+      memcpy(piVar8,piVar9,0x5c);
       puVar2 = auStack_170;
       piVar7 = piVar9;
     }
-    fn_82F68CC0(piVar9,puVar2,0x5c);
+    memcpy(piVar9,puVar2,0x5c);
     goto LAB_8243f040;
   }
   if (piVar8[0x13] == 1) {
@@ -293,12 +293,12 @@ LAB_8243f048:
     }
     if (bVar1) goto LAB_8243f048;
     piVar6 = piVar7 + 0x17;
-    fn_82F68CC0(auStack_290,piVar7,0x5c);
-    fn_82F68CC0(piVar7,piVar10,0x5c);
+    memcpy(auStack_290,piVar7,0x5c);
+    memcpy(piVar7,piVar10,0x5c);
     puVar2 = auStack_290;
     piVar9 = piVar10;
 LAB_8243f034:
-    fn_82F68CC0(piVar9,puVar2,0x5c);
+    memcpy(piVar9,puVar2,0x5c);
     piVar7 = piVar6;
   }
   piVar10 = piVar10 + 0x17;

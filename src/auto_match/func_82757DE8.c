@@ -50,8 +50,8 @@ void fn_82757DE8(longlong param_1,int param_2)
   int iVar8;
   uint uVar9;
   double dVar10;
-  int iStack_c0;
-  int iStack_bc;
+  struct { int first; int second; } stack_pair_c0;
+
   longlong lStack_b8;
   ushort *puStack_b0;
   ushort *puStack_ac;
@@ -62,11 +62,11 @@ void fn_82757DE8(longlong param_1,int param_2)
   }
   iVar7 = 0;
   bVar3 = true;
-  iStack_bc = 0;
+  stack_pair_c0.second = 0;
   uVar9 = 0;
   dVar10 = (double)lbl_821AAD20;
   iVar8 = 0;
-  iStack_c0 = param_2;
+  stack_pair_c0.first = param_2;
   while( true ) {
     if ((((int *)(param_2 + 0x6c) == (int *)0x0) || (*(uint *)(param_2 + 0x70) <= uVar9)) ||
        (bVar2 = false, (int)uVar9 < 0)) {
@@ -116,8 +116,8 @@ void fn_82757DE8(longlong param_1,int param_2)
       iVar8 = iVar8 + 4;
     }
   }
-  iStack_bc = iVar7;
-  fn_82756E30(param_1,&iStack_c0);
+  stack_pair_c0.second = iVar7;
+  fn_82756E30(param_1,&stack_pair_c0.first);
   if (param_2 != 0) {
     fn_8267C498(param_2);
   }

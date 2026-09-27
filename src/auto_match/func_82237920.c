@@ -49,7 +49,7 @@ int * fn_82237920(int *param_1,undefined8 param_2)
   undefined4 uStack_4c;
   undefined1 auStack_48 [4];
   char cStack_44;
-  char acStack_40 [64];
+  char acStack_40 [16];
   
   uVar5 = 0;
   fn_8223FD30(auStack_48,param_1);

@@ -42,7 +42,7 @@ void fn_828B6B60(int param_1,int param_2,int param_3,undefined4 *param_4)
   undefined4 *puVar7;
   double dVar8;
   double dVar9;
-  undefined4 auStack_60 [24];
+  undefined4 auStack_60 [1];
   
   uVar6 = param_2 - 1;
   iVar2 = ((int)uVar6 >> 1) + (uint)((int)uVar6 < 0 && (uVar6 & 1) != 0);

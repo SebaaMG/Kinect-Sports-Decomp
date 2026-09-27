@@ -35,18 +35,18 @@ extern unsigned int uStack_30;
 void fn_822A0238(undefined4 *param_1,int param_2)
 
 {
-  undefined4 uStack_30;
-  undefined4 uStack_2c;
+  struct { undefined4 first; undefined4 second; } stack_pair_30;
+
   double dStack_28;
   
   if (param_1[param_2 + 0xd] != 0) {
     param_1[param_2 + 0xd] = 0;
-    uStack_30 = 0;
-    uStack_2c = 0;
-    fn_82273CD8(&uStack_30,3);
+    stack_pair_30.first = 0;
+    stack_pair_30.second = 0;
+    fn_82273CD8(&stack_pair_30.first,3);
     dStack_28 = (double)(longlong)(param_2 + 1);
-    fn_82672C20(*param_1,0xffffffff821abb18,&uStack_30,1);
-    fn_82273C88(&uStack_30);
+    fn_82672C20(*param_1,0xffffffff821abb18,&stack_pair_30.first,1);
+    fn_82273C88(&stack_pair_30.first);
   }
   return;
 }

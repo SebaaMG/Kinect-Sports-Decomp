@@ -65,18 +65,18 @@ void fn_8266F2D0(double param_1,int *param_2,undefined4 *param_3,int param_4,und
   double dVar15;
   double dVar16;
   double dVar17;
-  undefined4 uStack_90;
-  uint uStack_8c;
+  struct { undefined4 first; uint second; } stack_pair_90;
+
   double dStack_88;
   
-  uStack_90 = 0;
-  uStack_8c = 0;
+  stack_pair_90.first = 0;
+  stack_pair_90.second = 0;
   dVar17 = (double)lbl_821AAD20;
   if ((param_4 != 0) && (dVar17 < param_1)) {
     fn_8266F5A0(*param_3,param_2);
   }
-  cVar8 = fn_8266FA50(*param_3,&uStack_90,0xffffffff82002c10);
-  if ((cVar8 != '\0') && ((uStack_8c & 0x8f) == 3)) {
+  cVar8 = fn_8266FA50(*param_3,&stack_pair_90.first,0xffffffff82002c10);
+  if ((cVar8 != '\0') && ((stack_pair_90.second & 0x8f) == 3)) {
     uVar1 = (uint)dStack_88;
     uVar14 = (ulonglong)uVar1;
     uVar12 = uVar14 * 5;
@@ -164,7 +164,7 @@ LAB_8266f4e4:
   uVar2 = *param_3;
   uVar3 = fn_8252DCF0(param_2);
   fn_82671E20(uVar2,uVar3);
-  fn_82273C88(&uStack_90);
+  fn_82273C88(&stack_pair_90.first);
   if (param_3[1] != 0) {
     fn_822315A0();
   }

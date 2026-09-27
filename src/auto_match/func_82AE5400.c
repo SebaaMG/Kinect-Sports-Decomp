@@ -35,12 +35,12 @@ ulonglong fn_82AE5400(longlong param_1,ulonglong param_2,ulonglong param_3,longl
 {
   ulonglong uVar1;
   ulonglong uVar2;
-  uint auStack_30 [12];
+  uint auStack_30;
   
   uVar1 = (param_2 & 0x3fffffff) << 2;
   while( true ) {
     if ((int)param_4 < 1) {
-      uVar1 = fn_82AE5188(param_1 + 8,uVar1 + 3,auStack_30);
+      uVar1 = fn_82AE5188(param_1 + 8,uVar1 + 3,&auStack_30);
     }
     else {
       uVar1 = fn_82AE5110();
@@ -49,7 +49,7 @@ ulonglong fn_82AE5400(longlong param_1,ulonglong param_2,ulonglong param_3,longl
       return 0xffffffffffffffff;
     }
     if ((param_3 & 0xffffffff) == 1) break;
-    uVar2 = (ulonglong)auStack_30[0];
+    uVar2 = (ulonglong)auStack_30;
     if ((param_3 & 0xffffffff) <=
         (((0x4a2932934dcU >> (uVar2 & 0x7f)) >> (uVar2 & 0x7f)) >> (uVar2 & 0x7f) & 7)) {
       uVar2 = ~uVar2;

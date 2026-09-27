@@ -39,7 +39,7 @@ fn_822E7DC8(undefined4 *param_1,undefined4 *param_2,undefined8 param_3,undefined
 {
   undefined4 *puVar1;
   undefined2 uStack_50;
-  undefined2 auStack_4e [39];
+  undefined2 auStack_4e;
   
   puVar1 = (undefined4 *)fn_8265C9E0(0x28);
   if (puVar1 == (undefined4 *)0x0) {
@@ -51,8 +51,8 @@ fn_822E7DC8(undefined4 *param_1,undefined4 *param_2,undefined8 param_3,undefined
     puVar1[2] = 1;
     if (puVar1 + 3 != (undefined4 *)0x0) {
       uStack_50 = (undefined2)*param_5;
-      auStack_4e[0] = (undefined2)*param_4;
-      fn_822E8430((double)*param_6,puVar1 + 3,*param_2,param_3,auStack_4e,&uStack_50);
+      auStack_4e = (undefined2)*param_4;
+      fn_822E8430((double)*param_6,puVar1 + 3,*param_2,param_3,&auStack_4e,&uStack_50);
     }
   }
   param_1[1] = puVar1;

@@ -45,7 +45,7 @@ longlong fn_8289BD98(int param_1,int param_2)
   ulonglong uVar8;
   undefined1 auStack_40 [4];
   undefined4 *puStack_3c;
-  undefined4 *apuStack_38 [14];
+  undefined4 *apuStack_38 [2];
   
   if ((((*(int **)(param_1 + 0x20) != (int *)0x0) &&
        (iVar3 = (**(code **)(**(int **)(param_1 + 0x20) + 4))(), iVar3 != 0)) ||

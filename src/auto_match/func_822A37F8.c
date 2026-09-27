@@ -42,8 +42,8 @@ void fn_822A37F8(int param_1)
   bool bVar1;
   bool bVar2;
   int iVar3;
-  undefined4 uStack_40;
-  int iStack_3c;
+  struct { undefined4 first; int second; } stack_pair_40;
+
   int iStack_38;
   int iStack_34;
   
@@ -55,16 +55,16 @@ void fn_822A37F8(int param_1)
     bVar2 = false;
     fn_82517978(&iStack_38,*(undefined4 *)(param_1 + 4),*(undefined4 *)(param_1 + 8),0);
     if (iStack_38 != 0) {
-      uStack_40 = 0;
-      iStack_3c = 0;
+      stack_pair_40.first = 0;
+      stack_pair_40.second = 0;
       bVar2 = true;
-      fn_82517978(&uStack_40,*(undefined4 *)(param_1 + 4),*(undefined4 *)(param_1 + 8),0);
-      iVar3 = fn_8266F578(uStack_40);
+      fn_82517978(&stack_pair_40.first,*(undefined4 *)(param_1 + 4),*(undefined4 *)(param_1 + 8),0);
+      iVar3 = fn_8266F578(stack_pair_40.first);
       if (iVar3 != 0) {
         bVar1 = true;
       }
     }
-    if ((bVar2) && (iStack_3c != 0)) {
+    if ((bVar2) && (stack_pair_40.second != 0)) {
       fn_822315A0();
     }
     if (iStack_34 != 0) {

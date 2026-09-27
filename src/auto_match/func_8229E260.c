@@ -32,7 +32,7 @@ extern int fn_8229E7D0();
 extern int fn_8229E8D8();
 extern int fn_8265CA20();
 extern int fn_82672660();
-extern int fn_82F63CA0();
+extern int memmove();
 extern unsigned int iStack_1c;
 
 
@@ -50,7 +50,7 @@ int * fn_8229E260(int *param_1)
     if (puVar2 != (undefined4 *)puVar1[1]) {
       do {
         if ((int *)*puVar2 == param_1) {
-          fn_82F63CA0(puVar2,puVar2 + 1,((int)puVar1[1] - (int)(puVar2 + 1) >> 2) << 2);
+          memmove(puVar2,puVar2 + 1,((int)puVar1[1] - (int)(puVar2 + 1) >> 2) << 2);
           puVar1[1] = puVar1[1] + -4;
           break;
         }

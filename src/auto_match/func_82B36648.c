@@ -92,7 +92,7 @@ undefined8 fn_82B36648(int param_1,int *param_2)
   uint uVar27;
   byte bVar28;
   uint uVar29;
-  byte abStack_d0 [4];
+  byte abStack_d0;
   uint *puStack_cc;
   int iStack_c8;
   undefined1 auStack_c4 [4];
@@ -349,14 +349,14 @@ LAB_82b36d60:
           uVar27 = *(uint *)((uVar27 & 0xfffffffe) + 4);
         } while (((uVar27 & 1) == 0) && (uVar27 != 0));
       }
-      abStack_d0[0] = 0;
-      fn_82B1F310(param_1,uVar25,abStack_d0,0);
-      bVar28 = abStack_d0[0];
+      abStack_d0 = 0;
+      fn_82B1F310(param_1,uVar25,&abStack_d0,0);
+      bVar28 = abStack_d0;
       if (2000 < uVar17) {
         fn_82B23950(param_1);
         fn_82B330F8(param_1,!bVar6);
         fn_82B24700(&puStack_b0,puStack_cc);
-        bVar28 = abStack_d0[0];
+        bVar28 = abStack_d0;
 LAB_82b37094:
         if ((iStack_a8 != 0) ||
            (bVar19 = true, uStack_ac != (-(uint)((puStack_b0[1] & 1) == 0) & puStack_b0[1]))) {

@@ -33,13 +33,13 @@ undefined4 fn_829F5BE8(undefined8 param_1)
 
 {
   undefined4 uVar1;
-  undefined4 auStack_10 [4];
+  undefined4 auStack_10;
   
-  auStack_10[0] = 0;
+  auStack_10 = 0;
   uVar1 = 0;
   if (lbl_83218C34 != (int *)0x0) {
-    (**(code **)(*lbl_83218C34 + 0x78))(lbl_83218C34,param_1,auStack_10);
-    uVar1 = auStack_10[0];
+    (**(code **)(*lbl_83218C34 + 0x78))(lbl_83218C34,param_1,&auStack_10);
+    uVar1 = auStack_10;
   }
   return uVar1;
 }

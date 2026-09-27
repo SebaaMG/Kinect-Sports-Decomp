@@ -30,7 +30,7 @@ extern unsigned int *auStack_310;
 extern int fn_82266230();
 extern int fn_82267628();
 extern int fn_82517978();
-extern int fn_82F691F0();
+extern int memset();
 extern unsigned int lbl_820E975C;
 extern unsigned int uStack_230;
 extern unsigned int uStack_23c;
@@ -46,17 +46,17 @@ void fn_8228BF40(undefined8 param_1,int param_2,undefined4 *param_3)
 {
   undefined4 *puVar1;
   int iVar2;
-  undefined4 uStack_330;
-  undefined4 uStack_32c;
+  struct { undefined4 first; undefined4 second; } stack_pair_330;
+
   undefined1 auStack_310 [208];
   undefined4 uStack_240;
   undefined4 uStack_23c;
   undefined2 uStack_230;
   undefined1 auStack_22e [558];
   
-  uStack_330 = 0;
+  stack_pair_330.first = 0;
   fn_82266230(param_1,(double)*(float *)(param_2 + 0x18),auStack_310,0xffffffff821a9704,0,0,
-                  param_2 + 0x10,&uStack_330);
+                  param_2 + 0x10,&stack_pair_330.first);
   uStack_240 = *param_3;
   uStack_23c = 0;
   fn_82267628(*(undefined4 *)(param_2 + 0x80),auStack_310);
@@ -67,11 +67,11 @@ void fn_8228BF40(undefined8 param_1,int param_2,undefined4 *param_3)
   }
   iVar2 = 0;
 LAB_8228bfec:
-  uStack_330 = 0;
-  uStack_32c = 0;
-  fn_82517978(&uStack_330,*(undefined4 *)(iVar2 + 0x524),*(undefined4 *)(iVar2 + 0x528),0);
+  stack_pair_330.first = 0;
+  stack_pair_330.second = 0;
+  fn_82517978(&stack_pair_330.first,*(undefined4 *)(iVar2 + 0x524),*(undefined4 *)(iVar2 + 0x528),0);
   uStack_230 = lbl_820E975C;
                     /* WARNING: Subroutine does not return */
-  fn_82F691F0(auStack_22e,0,0x1fe);
+  memset(auStack_22e,0,0x1fe);
 }
 

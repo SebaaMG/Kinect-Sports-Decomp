@@ -46,7 +46,7 @@ undefined4 * fn_8265F9A0(undefined4 *param_1,undefined4 param_2,undefined4 param
   undefined4 *puStack00000014;
   undefined4 uStack0000001c;
   undefined4 uStack00000024;
-  undefined4 auStack_20 [2];
+  undefined4 auStack_20 [1];
   undefined1 auStack_18 [4];
   undefined1 auStack_14 [4];
   undefined4 *puStack_10;

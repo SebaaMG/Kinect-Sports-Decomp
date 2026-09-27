@@ -39,7 +39,7 @@ fn_82304538(undefined4 *param_1,undefined8 param_2,undefined8 param_3,undefined4
 {
   undefined4 *puVar1;
   undefined1 auStack_70 [32];
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [32];
   
   fn_82230110(auStack_50,0xffffffff821aeed4);
   fn_82230110(auStack_70,0xffffffff821aeee4);

@@ -29,7 +29,7 @@ extern unsigned int *auStack_c0;
 extern int fn_82230040();
 extern int fn_823E1808();
 extern int fn_8265C9E0();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int lbl_82002B04;
 extern unsigned int uStack_c4;
 
@@ -41,10 +41,10 @@ undefined4 * fn_823E1310(int param_1,uint *param_2)
   uint uVar2;
   undefined4 *puVar3;
   undefined4 *puVar4;
-  undefined4 *apuStack_d0 [2];
+  undefined4 * apuStack_d0;
   undefined **ppuStack_c8;
   undefined4 uStack_c4;
-  undefined1 auStack_c0 [192];
+  undefined1 auStack_c0 [144];
   
   puVar4 = *(undefined4 **)(param_1 + 4);
   if (*(char *)((int)puVar4[1] + 0xa5) == '\0') {
@@ -78,10 +78,10 @@ undefined4 * fn_823E1310(int param_1,uint *param_2)
   *(undefined1 *)((int)puVar3 + 0xa5) = 0;
   if (puVar3 + 3 != (uint *)0x0) {
     puVar3[3] = uVar2;
-    fn_82F68CC0(puVar3 + 4,auStack_c0,0x94);
+    memcpy(puVar3 + 4,auStack_c0,0x94);
   }
-  fn_823E1808(apuStack_d0,param_1,puVar4,puVar3);
-  puVar4 = apuStack_d0[0];
+  fn_823E1808(&apuStack_d0,param_1,puVar4,puVar3);
+  puVar4 = apuStack_d0;
 LAB_823e13ec:
   return puVar4 + 4;
 }

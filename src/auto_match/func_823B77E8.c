@@ -43,7 +43,7 @@ void fn_823B77E8(int param_1,undefined4 *param_2,uint param_3)
   undefined4 uVar6;
   int iVar7;
   undefined1 auStack_50 [8];
-  uint auStack_48 [18];
+  uint auStack_48 [3];
   
   puVar3 = *(undefined4 **)(param_1 + 0x88);
   puVar5 = (undefined4 *)(*(undefined4 **)(param_1 + 0x88))[1];

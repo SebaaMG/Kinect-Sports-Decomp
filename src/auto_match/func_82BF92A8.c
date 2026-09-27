@@ -25,7 +25,7 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F63CA0();
+extern int memmove();
 extern unsigned int lbl_8322B4F8;
 extern unsigned int lbl_8322F4F8;
 extern unsigned int lbl_8322FCFC;
@@ -101,7 +101,7 @@ void fn_82BF92A8(ulonglong param_1,longlong param_2)
     lVar6 = lVar5;
     lVar5 = lVar9 + -0x7cdd2304;
   }
-  fn_82F63CA0(lVar6,lVar5,lVar7);
+  memmove(lVar6,lVar5,lVar7);
   lVar9 = (param_1 & 0x7fffffff) * 2;
   lVar7 = (uVar10 - param_1 & 0x7fffffff) * 2;
   lVar5 = lVar9 + -0x7cdd1308;
@@ -114,7 +114,7 @@ void fn_82BF92A8(ulonglong param_1,longlong param_2)
     lVar5 = lVar9 + -0x7cdd1306;
     lVar8 = lVar7 + -2;
   }
-  fn_82F63CA0(lVar6,lVar5,lVar8);
+  memmove(lVar6,lVar5,lVar8);
   lVar5 = lVar9 + -0x7cdd0b08;
   if (iVar11 == 0) {
     lVar6 = lVar9 + -0x7cdd0b06;
@@ -125,7 +125,7 @@ void fn_82BF92A8(ulonglong param_1,longlong param_2)
     lVar5 = lVar9 + -0x7cdd0b06;
     lVar8 = lVar7 + -2;
   }
-  fn_82F63CA0(lVar6,lVar5,lVar8);
+  memmove(lVar6,lVar5,lVar8);
   lVar5 = lVar9 + -0x7cdd4b08;
   if (iVar11 == 0) {
     lVar6 = lVar9 + -0x7cdd4b06;
@@ -135,7 +135,7 @@ void fn_82BF92A8(ulonglong param_1,longlong param_2)
     lVar6 = lVar5;
     lVar5 = lVar9 + -0x7cdd4b06;
   }
-  fn_82F63CA0(lVar6,lVar5,lVar7);
+  memmove(lVar6,lVar5,lVar7);
   lbl_8322FD20 = uVar4 + sVar3;
   lbl_8322FD2F = 1;
   return;

@@ -37,7 +37,7 @@ extern int fn_82A1E740();
 extern int fn_82CE1828();
 extern int fn_82CE1908();
 extern int fn_82CE19A8();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 void fn_828EE418(int *param_1)
@@ -49,15 +49,15 @@ void fn_828EE418(int *param_1)
   char cVar4;
   int *piVar5;
   longlong lVar6;
-  int aiStack_50 [20];
+  int aiStack_50;
   
   fn_828ED050();
   fn_828EC900(param_1);
   if ((*(char *)(param_1 + 0x4a) != '\0') && (param_1[0x43] != 0x3e5)) {
     iVar2 = fn_82A1E740(param_1 + 0x43,0,0);
     if (iVar2 == 0) {
-      fn_82F68CC0(param_1 + 0x34,param_1 + 5,0x3c);
-      fn_82F68CC0(param_1 + 5,param_1 + 0x25,0x3c);
+      memcpy(param_1 + 0x34,param_1 + 5,0x3c);
+      memcpy(param_1 + 5,param_1 + 0x25,0x3c);
       *(undefined1 *)((int)param_1 + 0x129) = 1;
     }
     else {
@@ -105,7 +105,7 @@ LAB_828ee568:
     if ((((iVar2 != 5) || (*(char *)(param_1 + 0x59) != '\0')) ||
         ((param_1[0x62] != 0 && (param_1[0x62] != 2)))) || (param_1[0x17] == 0x3e5))
     goto LAB_828ee648;
-    iVar2 = fn_82A1E740(param_1 + 0x17,aiStack_50,0);
+    iVar2 = fn_82A1E740(param_1 + 0x17,&aiStack_50,0);
     if (iVar2 != 0) {
       fn_82A1C098(param_1 + 0x17);
     }
@@ -126,9 +126,9 @@ LAB_828ee648:
   }
   if (param_1[0x6b] == 0) {
     if ((*(char *)(param_1 + 0x6a) != '\0') && (cVar4 = fn_828ED1A0(param_1), cVar4 == '\0')) {
-      aiStack_50[0] = 0;
-      fn_82CE1828(param_1[0x16],0,*(undefined8 *)(param_1 + 0x6e),aiStack_50,0,0);
-      param_1[0x6c] = aiStack_50[0];
+      aiStack_50 = 0;
+      fn_82CE1828(param_1[0x16],0,*(undefined8 *)(param_1 + 0x6e),&aiStack_50,0,0);
+      param_1[0x6c] = aiStack_50;
       iVar2 = fn_8265C9E0();
       param_1[0x6d] = iVar2;
       param_1[0x70] = 0;
@@ -138,7 +138,7 @@ LAB_828ee648:
       param_1[0x74] = 0;
       param_1[0x75] = 0;
       param_1[0x76] = 0;
-      iVar2 = fn_82CE1828(param_1[0x16],0,*(undefined8 *)(param_1 + 0x6e),aiStack_50,
+      iVar2 = fn_82CE1828(param_1[0x16],0,*(undefined8 *)(param_1 + 0x6e),&aiStack_50,
                                 param_1[0x6d],param_1 + 0x70);
       if (iVar2 == 0x3e5) {
         param_1[0x6b] = 1;

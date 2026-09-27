@@ -34,15 +34,15 @@ undefined8 fn_82A89940(undefined8 param_1,undefined8 param_2,undefined8 param_3,
 
 {
   undefined8 uVar1;
-  undefined4 auStack_10 [4];
+  undefined4 auStack_10;
   
   if (param_4 == 2) {
-    auStack_10[0] = 0;
-    uVar1 = fn_82A892D0(auStack_10,param_1,param_2,param_3,0x24);
+    auStack_10 = 0;
+    uVar1 = fn_82A892D0(&auStack_10,param_1,param_2,param_3,0x24);
   }
   else if (param_4 == 1) {
-    auStack_10[0] = 0;
-    uVar1 = fn_82A88CC8(auStack_10,param_1,param_2,param_3,0x20);
+    auStack_10 = 0;
+    uVar1 = fn_82A88CC8(&auStack_10,param_1,param_2,param_3,0x20);
   }
   else {
     uVar1 = 0;

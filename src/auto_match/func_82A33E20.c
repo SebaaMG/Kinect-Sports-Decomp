@@ -41,8 +41,8 @@ undefined4 fn_82A33E20(longlong param_1,undefined4 *param_2,undefined4 param_3)
 {
   int iVar1;
   undefined4 auStack_90 [4];
-  undefined4 uStack_80;
-  undefined4 uStack_7c;
+  struct { undefined4 first; undefined4 second; } stack_pair_80;
+
   undefined4 uStack_78;
   undefined4 uStack_74;
   undefined4 uStack_70;
@@ -50,16 +50,16 @@ undefined4 fn_82A33E20(longlong param_1,undefined4 *param_2,undefined4 param_3)
   undefined4 uStack_68;
   undefined4 *puStack_64;
   
-  uStack_7c = *param_2;
+  stack_pair_80.second = *param_2;
   uStack_74 = param_2[4];
   puStack_64 = auStack_90;
   uStack_6c = param_2[1];
   uStack_78 = param_2[5];
-  uStack_80 = 0;
+  stack_pair_80.first = 0;
   uStack_70 = 0;
   uStack_68 = param_3;
   RtlEnterCriticalSection(param_2 + 0xe);
-  iVar1 = fn_82A37680(param_1 + 0xc4,&uStack_80);
+  iVar1 = fn_82A37680(param_1 + 0xc4,&stack_pair_80.first);
   if (iVar1 == 0) {
     auStack_90[0] = 0xc0000017;
   }

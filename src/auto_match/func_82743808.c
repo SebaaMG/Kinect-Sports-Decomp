@@ -33,14 +33,14 @@ void fn_82743808(int param_1,uint *param_2,longlong param_3)
 
 {
   undefined1 uStack_40;
-  undefined1 auStack_3f [63];
+  undefined1 auStack_3f;
   
   uStack_40 = 0;
   (**(code **)(*(int *)(param_1 + 0x10) + 0x28))
             (param_1 + 0x10,param_2,(ulonglong)*param_2 + 0x1ec,param_3,&uStack_40);
-  auStack_3f[0] = 0;
+  auStack_3f = 0;
   (**(code **)(*(int *)(param_1 + 0x10) + 0x28))
-            (param_1 + 0x10,param_2,(ulonglong)*param_2 + 0x1f0,param_3 + 0x10,auStack_3f);
+            (param_1 + 0x10,param_2,(ulonglong)*param_2 + 0x1f0,param_3 + 0x10,&auStack_3f);
   return;
 }
 

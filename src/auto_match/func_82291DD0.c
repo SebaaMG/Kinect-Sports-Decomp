@@ -38,22 +38,22 @@ extern unsigned int uStack_40;
 void fn_82291DD0(int param_1,undefined8 param_2,undefined8 param_3)
 
 {
-  undefined4 uStack_40;
-  undefined4 uStack_3c;
+  struct { undefined4 first; undefined4 second; } stack_pair_40;
+
   undefined1 *puStack_38;
   undefined1 auStack_30 [32];
   
   fn_82528EE0(auStack_30,10,0xffffffff821aa210,param_2,param_3);
   if (*(int *)(param_1 + 0x3c) != 0) {
-    uStack_40 = 0;
-    uStack_3c = 0;
-    fn_82273CD8(&uStack_40,5);
+    stack_pair_40.first = 0;
+    stack_pair_40.second = 0;
+    fn_82273CD8(&stack_pair_40.first,5);
     puStack_38 = auStack_30;
-    fn_82672C20(*(undefined4 *)(param_1 + 0x3c),0xffffffff821aa200,&uStack_40,1);
-    fn_82273CD8(&uStack_40,4);
+    fn_82672C20(*(undefined4 *)(param_1 + 0x3c),0xffffffff821aa200,&stack_pair_40.first,1);
+    fn_82273CD8(&stack_pair_40.first,4);
     puStack_38 = &lbl_82196582;
-    fn_82672C20(*(undefined4 *)(param_1 + 0x3c),0xffffffff821aa1e8,&uStack_40,1);
-    fn_82273C88(&uStack_40);
+    fn_82672C20(*(undefined4 *)(param_1 + 0x3c),0xffffffff821aa1e8,&stack_pair_40.first,1);
+    fn_82273C88(&stack_pair_40.first);
   }
   return;
 }

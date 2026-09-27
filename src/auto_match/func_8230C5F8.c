@@ -47,7 +47,7 @@ void fn_8230C5F8(double param_1,int param_2)
   bool bVar6;
   undefined4 uStack_50;
   undefined4 uStack_4c;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [16];
   
   fn_823691B0(*(undefined4 *)(param_2 + 0x10),*(undefined4 *)(param_2 + 0xc),auStack_40,
                     &uStack_50);

@@ -39,7 +39,7 @@ undefined4 * fn_82772D08(undefined4 *param_1)
 {
   undefined4 *puVar1;
   undefined4 uStack_40;
-  undefined4 auStack_3c [15];
+  undefined4 auStack_3c;
   
   fn_826D8050();
   *param_1 = &lbl_82015278;
@@ -69,8 +69,8 @@ undefined4 * fn_82772D08(undefined4 *param_1)
     puVar1[10] = 0;
   }
   param_1[0x23] = puVar1;
-  auStack_3c[0] = 0x102;
-  puVar1 = (undefined4 *)fn_8267BED0(param_1,0x2c,auStack_3c);
+  auStack_3c = 0x102;
+  puVar1 = (undefined4 *)fn_8267BED0(param_1,0x2c,&auStack_3c);
   if (puVar1 == (undefined4 *)0x0) {
     puVar1 = (undefined4 *)0x0;
   }

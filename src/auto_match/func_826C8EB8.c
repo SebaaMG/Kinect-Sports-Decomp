@@ -49,8 +49,8 @@ void fn_826C8EB8(int param_1,undefined8 param_2,undefined4 *param_3,undefined8 p
   ulonglong uVar9;
   char in_RESERVE;
   byte in_cr0;
-  uint uStack_50;
-  undefined4 uStack_4c;
+  struct { uint first; undefined4 second; } stack_pair_50;
+
   undefined4 uStack_48;
   undefined4 uStack_44;
   undefined4 uStack_40;
@@ -61,13 +61,13 @@ void fn_826C8EB8(int param_1,undefined8 param_2,undefined4 *param_3,undefined8 p
     uVar3 = param_3[2];
     uVar4 = param_3[1];
     uVar5 = *param_3;
-    fn_8268C750(&uStack_50);
-    uStack_4c = uVar5;
+    fn_8268C750(&stack_pair_50.first);
+    stack_pair_50.second = uVar5;
     uStack_48 = uVar4;
     uStack_44 = uVar3;
     uStack_40 = uVar2;
-    (**(code **)(*piVar1 + 8))(piVar1,&uStack_50,param_4);
-    lVar7 = ((ulonglong)uStack_50 & 0xfffffffc) + 4;
+    (**(code **)(*piVar1 + 8))(piVar1,&stack_pair_50.first,param_4);
+    lVar7 = ((ulonglong)stack_pair_50.first & 0xfffffffc) + 4;
     do {
       puVar8 = (uint *)lVar7;
       uVar9 = (ulonglong)*puVar8;

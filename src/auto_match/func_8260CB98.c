@@ -38,7 +38,7 @@ void fn_8260CB98(int *param_1,undefined8 param_2)
 {
   longlong lVar1;
   undefined4 auStack_40 [2];
-  undefined8 auStack_38 [7];
+  undefined8 auStack_38;
   
   RtlEnterCriticalSection(param_1 + 0x68);
   auStack_40[0] = fn_827D96A0(param_2);
@@ -47,8 +47,8 @@ void fn_8260CB98(int *param_1,undefined8 param_2)
     (**(code **)(*param_1 + 0x34))(param_1,param_2,0);
   }
   else {
-    auStack_38[0] = fn_827D9718(param_2);
-    fn_827D9720(lVar1,auStack_38);
+    auStack_38 = fn_827D9718(param_2);
+    fn_827D9720(lVar1,&auStack_38);
   }
   RtlLeaveCriticalSection(param_1 + 0x68);
   return;

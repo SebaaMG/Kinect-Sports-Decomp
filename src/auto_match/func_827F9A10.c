@@ -36,7 +36,7 @@ longlong fn_827F9A10(int param_1)
   ulonglong uVar2;
   ulonglong uVar3;
   ulonglong uVar4;
-  int aiStack_30 [12];
+  int aiStack_30;
   
   if (*(int *)(param_1 + 8) == 0) {
     lVar1 = -1;
@@ -47,9 +47,9 @@ longlong fn_827F9A10(int param_1)
     uVar3 = 0;
     if ((uVar2 & 0xffff) != 0) {
       do {
-        fn_827F98C8(param_1,uVar4,aiStack_30);
-        if (uVar3 < *(byte *)(aiStack_30[0] + 0x32)) {
-          uVar3 = (ulonglong)*(byte *)(aiStack_30[0] + 0x32);
+        fn_827F98C8(param_1,uVar4,&aiStack_30);
+        if (uVar3 < *(byte *)(aiStack_30 + 0x32)) {
+          uVar3 = (ulonglong)*(byte *)(aiStack_30 + 0x32);
         }
         uVar4 = uVar4 + 1;
       } while ((uVar4 & 0xffffffff) < (uVar2 & 0xffff));

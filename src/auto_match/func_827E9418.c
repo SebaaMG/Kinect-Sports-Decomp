@@ -99,8 +99,8 @@ void fn_827E9418(undefined8 param_1,double param_2,double param_3,double param_4
   float *in_stack_00000064;
   undefined1 auStack_248 [16];
   undefined1 auStack_238 [16];
-  float fStack_228;
-  float fStack_224;
+  struct { float first; float second; } stack_pair_228;
+
   float fStack_220;
   float fStack_218;
   float fStack_214;
@@ -125,7 +125,7 @@ void fn_827E9418(undefined8 param_1,double param_2,double param_3,double param_4
   undefined1 auStack_160 [64];
   undefined1 auStack_120 [64];
   undefined1 auStack_e0 [64];
-  undefined1 auStack_a0 [160];
+  undefined1 auStack_a0 [112];
   
   dVar8 = (double)fn_82F6A53C();
   fVar1 = lbl_821AAD20;
@@ -190,14 +190,14 @@ LAB_827e9810:
           puVar5 = auStack_1b8;
           goto LAB_827e9810;
         }
-        fStack_228 = *in_stack_00000054;
+        stack_pair_228.first = *in_stack_00000054;
         fStack_220 = in_stack_00000054[2];
-        fStack_224 = (float)dVar9;
-        fn_82810B78(&fStack_228,&fStack_228);
-        fStack_208 = (float)((double)fStack_228 * dVar8);
+        stack_pair_228.second = (float)dVar9;
+        fn_82810B78(&stack_pair_228.first,&stack_pair_228.first);
+        fStack_208 = (float)((double)stack_pair_228.first * dVar8);
         fStack_200 = (float)((double)fStack_220 * dVar8);
         fStack_204 = (float)dVar9;
-        fStack_1e8 = (float)((double)fStack_228 * param_2);
+        fStack_1e8 = (float)((double)stack_pair_228.first * param_2);
         fStack_1e4 = (float)param_3;
         fStack_1e0 = (float)((double)fStack_220 * param_2);
         fn_82810328(&fStack_208,&fStack_1e8,auStack_1a8);

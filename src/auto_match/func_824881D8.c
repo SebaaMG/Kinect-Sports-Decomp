@@ -48,7 +48,7 @@ void fn_824881D8(undefined4 *param_1)
   int iVar2;
   ulonglong uVar3;
   undefined1 auStack_80 [48];
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [48];
   
   *param_1 = &lbl_821BE980;
   fn_828647F0(auStack_80,*(undefined4 *)(param_1[10] + 0x84c));

@@ -40,16 +40,16 @@ undefined4 * fn_827916C8(undefined4 param_1,undefined4 param_2,int param_3,uint 
   longlong lVar1;
   undefined4 *puVar3;
   int iStack00000024;
-  undefined4 uStack_20;
-  undefined4 uStack_1c;
+  struct { undefined4 first; undefined4 second; } stack_pair_20;
+
   
   iStack00000024 = param_3;
-  uStack_20 = param_1;
-  uStack_1c = param_2;
-  uVar2 = fn_82790358(&stack0x00000024,0,param_4,&uStack_20,0xffffffff82790e00);
+  stack_pair_20.first = param_1;
+  stack_pair_20.second = param_2;
+  uVar2 = fn_82790358(&stack0x00000024,0,param_4,&stack_pair_20.first,0xffffffff82790e00);
   if (uVar2 < param_4) {
     puVar3 = (undefined4 *)(uVar2 * 0xc + param_3);
-    lVar1 = fn_82790270(uStack_20,*puVar3,uStack_1c);
+    lVar1 = fn_82790270(stack_pair_20.first,*puVar3,stack_pair_20.second);
     if (lVar1 == 0) {
       return puVar3;
     }

@@ -48,7 +48,7 @@ uint fn_822EF1A0(int param_1,undefined8 param_2,uint param_3,char *param_4)
   uint uVar11;
   uint uVar12;
   int iVar13;
-  undefined4 ***apppuStack_80 [5];
+  undefined4 ***apppuStack_80 [1];
   uint uStack_6c;
   undefined1 uVar6;
   

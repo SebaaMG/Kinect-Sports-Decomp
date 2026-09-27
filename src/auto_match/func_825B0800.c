@@ -60,7 +60,7 @@ undefined8 fn_825B0800(int *param_1)
   undefined4 *puVar9;
   int iStack_50;
   int iStack_4c;
-  int aiStack_48 [18];
+  int aiStack_48;
   
   uVar4 = fn_827EF640(0x130);
   if ((uVar4 & 0xffffffff) == 0) {
@@ -83,11 +83,11 @@ undefined8 fn_825B0800(int *param_1)
       iVar8 = fn_827FA3F0(lVar6);
       if (0 < iVar8) {
         do {
-          aiStack_48[0] = 0;
-          fn_82817B50(iStack_50,uVar4,aiStack_48);
-          if (aiStack_48[0] != 0) {
+          aiStack_48 = 0;
+          fn_82817B50(iStack_50,uVar4,&aiStack_48);
+          if (aiStack_48 != 0) {
             iStack_4c = 0;
-            fn_82817BC8(aiStack_48[0],&iStack_4c);
+            fn_82817BC8(aiStack_48,&iStack_4c);
             if (iStack_4c != 0) {
               uVar7 = fn_827EF998(uVar5,uVar4 & 0xffff);
               fn_82850780(iVar1,iVar2,iStack_4c,uVar7);

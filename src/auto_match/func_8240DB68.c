@@ -43,7 +43,7 @@ void fn_8240DB68(int param_1)
   undefined4 in_register_000104d4;
   undefined4 in_register_000104d8;
   undefined4 in_vr77;
-  undefined1 auStack_60 [16];
+  undefined1 auStack_60 [1];
   undefined1 auStack_50 [16];
   undefined1 auStack_40 [64];
   

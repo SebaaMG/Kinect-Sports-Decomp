@@ -36,7 +36,7 @@ undefined4 * fn_8242CF78(undefined4 *param_1,undefined8 param_2,longlong param_3
 {
   ulonglong uVar1;
   undefined4 uVar2;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
   
   fn_82520158(0xffffffff821b2700,auStack_30,0);
   uVar1 = fn_8265C9E0(0x7c);

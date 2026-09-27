@@ -52,19 +52,19 @@ fn_82A6B020(int param_1,undefined8 param_2,ushort *param_3,undefined4 *param_4,u
   undefined8 uVar15;
   ulonglong uVar16;
   int iVar17;
-  ushort auStack_60 [48];
+  ushort auStack_60;
   
-  auStack_60[0] = *param_3;
+  auStack_60 = *param_3;
   iVar17 = 0;
   puVar2 = *(ushort **)(param_1 + 0x2e4);
   uVar15 = 0;
   uVar16 = ((param_5 & 0xffffffff) / (ulonglong)*(uint *)(param_1 + 0x58)) /
            (ulonglong)*(ushort *)(param_1 + 0x22);
   if (*(int *)(param_1 + 0xb0) == 1) {
-    fn_82A69D38(param_1,auStack_60,0,0,param_7);
-    if (*param_3 < auStack_60[0]) {
-      auStack_60[0] = *param_3 & 0xfff0;
-      *param_3 = auStack_60[0];
+    fn_82A69D38(param_1,&auStack_60,0,0,param_7);
+    if (*param_3 < auStack_60) {
+      auStack_60 = *param_3 & 0xfff0;
+      *param_3 = auStack_60;
     }
   }
   if (*(short *)(param_1 + 0x22) != 0) {
@@ -73,13 +73,13 @@ fn_82A6B020(int param_1,undefined8 param_2,ushort *param_3,undefined4 *param_4,u
       iVar13 = iVar12 * 0x6f0;
       sVar14 = (short)iVar12 + 1;
       iVar12 = (int)sVar14;
-      *(uint *)(iVar13 + *(int *)(param_1 + 0x140) + 0x1ec) = (uint)auStack_60[0];
+      *(uint *)(iVar13 + *(int *)(param_1 + 0x140) + 0x1ec) = (uint)auStack_60;
     } while ((int)sVar14 < (int)(uint)*(ushort *)(param_1 + 0x22));
   }
   if (*(int *)(param_1 + 0xb0) == 0) {
     uVar5 = (ulonglong)*(uint *)(param_1 + 0x188) - (ulonglong)*(uint *)(param_1 + 0x184) & 0xffff;
-    uVar10 = (ulonglong)auStack_60[0];
-    if (uVar16 <= auStack_60[0]) {
+    uVar10 = (ulonglong)auStack_60;
+    if (uVar16 <= auStack_60) {
       uVar10 = uVar16;
     }
     if (0x7ffe < (int)uVar10) {
@@ -99,7 +99,7 @@ fn_82A6B020(int param_1,undefined8 param_2,ushort *param_3,undefined4 *param_4,u
     else {
       iVar12 = *(int *)(param_1 + 0x100) >> (*(uint *)(param_1 + 0x1c8) & 0x3f);
     }
-    auStack_60[0] = (ushort)uVar10;
+    auStack_60 = (ushort)uVar10;
     if ((uVar10 & 0xffff) == 0) {
       *param_3 = 0;
     }
@@ -119,18 +119,18 @@ fn_82A6B020(int param_1,undefined8 param_2,ushort *param_3,undefined4 *param_4,u
         } while ((int)sVar14 < (int)(uint)*(ushort *)(param_1 + 0x22));
       }
       if ((*(code **)(param_1 + 0x1ec) != (code *)0x0) &&
-         (uVar15 = (**(code **)(param_1 + 0x1ec))(param_2,auStack_60,0,0), (int)uVar15 < 0)) {
+         (uVar15 = (**(code **)(param_1 + 0x1ec))(param_2,&auStack_60,0,0), (int)uVar15 < 0)) {
         return uVar15;
       }
       uVar1 = *(undefined2 *)(param_1 + 0x22);
       *(undefined2 *)(param_1 + 0x22) = param_6;
-      uVar15 = (**(code **)(param_1 + 0x1e8))(param_1,uVar3,auStack_60[0]);
+      uVar15 = (**(code **)(param_1 + 0x1e8))(param_1,uVar3,auStack_60);
       if ((int)uVar15 < 0) {
         return uVar15;
       }
       *(undefined2 *)(param_1 + 0x22) = uVar1;
-      *(uint *)(param_1 + 0x184) = (uint)auStack_60[0] + *(int *)(param_1 + 0x184);
-      *param_3 = auStack_60[0];
+      *(uint *)(param_1 + 0x184) = (uint)auStack_60 + *(int *)(param_1 + 0x184);
+      *param_3 = auStack_60;
       uVar7 = *(uint *)(param_1 + 0x1d4);
       if ((int)uVar7 <= (int)*(uint *)(param_1 + 0x184)) {
         lVar8 = (ulonglong)*(uint *)(param_1 + 0x184) - (ulonglong)uVar7;
@@ -162,7 +162,7 @@ fn_82A6B020(int param_1,undefined8 param_2,ushort *param_3,undefined4 *param_4,u
   }
   else {
     uVar16 = uVar16 & 0xfffffff0;
-    auStack_60[0] = 0;
+    auStack_60 = 0;
     if (*(short *)(param_1 + 0x22) != 0) {
       iVar17 = *(int *)(param_1 + 0x140);
       uVar5 = 0;
@@ -211,12 +211,12 @@ fn_82A6B020(int param_1,undefined8 param_2,ushort *param_3,undefined4 *param_4,u
           }
         }
         sVar14 = (short)uVar5 + 1;
-        auStack_60[0] = (ushort)uVar10;
+        auStack_60 = (ushort)uVar10;
         uVar5 = (ulonglong)sVar14;
       } while ((int)sVar14 < (int)(uint)*(ushort *)(param_1 + 0x22));
     }
     if ((*(code **)(param_1 + 0x1ec) != (code *)0x0) &&
-       (uVar15 = (**(code **)(param_1 + 0x1ec))(param_2,auStack_60,0,0), (int)uVar15 < 0)) {
+       (uVar15 = (**(code **)(param_1 + 0x1ec))(param_2,&auStack_60,0,0), (int)uVar15 < 0)) {
       return uVar15;
     }
     uVar15 = 0;

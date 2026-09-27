@@ -32,7 +32,7 @@ extern int fn_8224BE90();
 void fn_82247B20(undefined8 param_1,undefined8 param_2,undefined1 *param_3)
 
 {
-  undefined1 auStack_110 [272];
+  undefined1 auStack_110 [256];
   
   if (param_3 == (undefined1 *)0x0) {
     param_3 = auStack_110;

@@ -42,22 +42,22 @@ undefined8 fn_82A8EBF8(int *param_1,int *param_2,longlong param_3)
   char cVar2;
   undefined8 uVar1;
   undefined4 *puVar3;
-  undefined4 uStack_90;
-  undefined4 uStack_8c;
+  struct { undefined4 first; undefined4 second; } stack_pair_90;
+
   undefined4 uStack_84;
-  undefined1 auStack_80 [48];
+  undefined1 auStack_80 [16];
   undefined1 auStack_50 [80];
   
   puVar3 = (undefined4 *)*param_1;
   uStack_84 = lbl_8201DCB8;
-  uStack_90 = lbl_8201DCB8;
-  uStack_8c = lbl_8201DCB8;
+  stack_pair_90.first = lbl_8201DCB8;
+  stack_pair_90.second = lbl_8201DCB8;
   if (puVar3 == (undefined4 *)0x0) {
-    puVar3 = &uStack_90;
+    puVar3 = &stack_pair_90.first;
   }
   cVar2 = (**(code **)(*param_2 + 4))(param_2);
   if ((cVar2 == '\0') ||
-     (cVar2 = (**(code **)(*param_2 + 0x10))(param_2,auStack_80,0x29,&uStack_90), cVar2 == '\0')) {
+     (cVar2 = (**(code **)(*param_2 + 0x10))(param_2,auStack_80,0x29,&stack_pair_90.first), cVar2 == '\0')) {
     uVar1 = 0;
   }
   else {

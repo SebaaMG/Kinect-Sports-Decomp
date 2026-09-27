@@ -45,7 +45,7 @@ ulonglong fn_82C02288(int param_1)
   ulonglong uVar4;
   undefined1 auStack_770 [32];
   undefined1 auStack_750 [800];
-  undefined1 auStack_430 [1072];
+  undefined1 auStack_430 [1040];
   
   fn_82C00470(param_1 + 0x88);
   *(undefined8 *)(param_1 + 0x210) = 0;

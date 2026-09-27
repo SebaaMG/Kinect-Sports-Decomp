@@ -37,7 +37,7 @@ undefined8 fn_82873AA0(int param_1,int param_2)
   undefined4 *puVar1;
   undefined8 uVar2;
   int iVar3;
-  undefined1 auStack_10 [16];
+  undefined1 auStack_10 [1];
   
   for (puVar1 = (undefined4 *)**(undefined4 **)(param_1 + 4);
       (puVar1 != *(undefined4 **)(param_1 + 4) && (puVar1[2] != param_2));

@@ -90,8 +90,8 @@ void fn_822A3EC0(uint *param_1,int param_2,int param_3,int param_4,int param_5,i
   undefined4 uStack_438;
   int iStack_430;
   ulonglong uStack_428;
-  undefined4 uStack_420;
-  undefined4 uStack_41c;
+  struct { undefined4 first; undefined4 second; } stack_pair_420;
+
   double dStack_418;
   undefined4 uStack_3e0;
   undefined4 uStack_3dc;
@@ -161,12 +161,12 @@ void fn_822A3EC0(uint *param_1,int param_2,int param_3,int param_4,int param_5,i
       lVar9 = 5;
       dVar11 = (double)uStack_428;
       do {
-        uStack_420 = 0;
-        uStack_41c = 0;
-        fn_82273CD8(&uStack_420,3);
+        stack_pair_420.first = 0;
+        stack_pair_420.second = 0;
+        fn_82273CD8(&stack_pair_420.first,3);
         dStack_418 = dVar11;
-        fn_82672C20(*(undefined4 *)(*param_1 + 0x28),0xffffffff821ac2cc,&uStack_420,1);
-        fn_82273C88(&uStack_420);
+        fn_82672C20(*(undefined4 *)(*param_1 + 0x28),0xffffffff821ac2cc,&stack_pair_420.first,1);
+        fn_82273C88(&stack_pair_420.first);
         lVar9 = lVar9 + -1;
       } while (lVar9 != 0);
     }

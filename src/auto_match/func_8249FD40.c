@@ -55,7 +55,7 @@ undefined8 fn_8249FD40(int param_1,undefined8 param_2,int *param_3,int param_4,i
   int iStack_60;
   undefined4 *puStack_5c;
   undefined4 *apuStack_58 [2];
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [16];
   
   if ((param_5 == 0) && (param_4 == 0)) {
     iVar2 = fn_824A00C8(param_1,param_3);

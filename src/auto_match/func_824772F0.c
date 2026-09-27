@@ -52,16 +52,16 @@ undefined8 fn_824772F0(undefined8 param_1)
   undefined1 in_vs45 [16];
   float fVar6;
   float fVar7;
-  undefined4 uStack_70;
-  undefined4 uStack_6c;
+  struct { undefined4 first; undefined4 second; } stack_pair_70;
+
   undefined4 uStack_68;
   undefined1 auStack_60 [16];
   undefined1 auStack_50 [16];
   undefined1 auStack_40 [16];
-  float afStack_30 [12];
+  float afStack_30 [1];
   
-  uStack_70 = lbl_821CC160;
-  uStack_6c = lbl_821CA460;
+  stack_pair_70.first = lbl_821CC160;
+  stack_pair_70.second = lbl_821CA460;
   uStack_68 = lbl_821CC160;
   fn_82F50108(param_1,9,2,auStack_60,0,0,0);
   fn_82F50108(param_1,0xe,2,auStack_40,0,0,0);
@@ -69,7 +69,7 @@ undefined8 fn_824772F0(undefined8 param_1)
   fn_82F50108(param_1,0xd,2,afStack_30,0,0,0);
   fVar4 = lbl_83297720;
   vectorSubtractFloatingPoint(in_vs45,in_vs44);
-  uVar2 = (int)&uStack_70 + in_r0 & 0xfffffff0;
+  uVar2 = (int)&stack_pair_70.first + in_r0 & 0xfffffff0;
   fVar6 = *(float *)(uVar2 + 4);
   fVar7 = *(float *)(uVar2 + 8);
   fVar1 = *(float *)(((uint)(auStack_60 + in_r0) & 0xfffffff0) + 4) * fVar6 + 0.0 +

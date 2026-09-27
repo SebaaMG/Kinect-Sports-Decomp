@@ -62,8 +62,8 @@ void fn_825994A0(void)
   undefined4 *puVar6;
   undefined4 uVar7;
   ulonglong uVar8;
-  uint uStack_70;
-  undefined4 uStack_6c;
+  struct { uint first; undefined4 second; } stack_pair_70;
+
   
   uVar8 = 0;
   fn_82A1BB18();
@@ -74,9 +74,9 @@ void fn_825994A0(void)
     }
     fn_82A1BB18();
     iVar3 = fn_8259A230();
-    uStack_70 = 0;
-    uVar8 = fn_82BFE530((&lbl_83296E18)[iVar3],&uStack_70);
-    uVar8 = ((uVar8 & 0xffffffff) >> 0x1f) - 1 & (ulonglong)uStack_70;
+    stack_pair_70.first = 0;
+    uVar8 = fn_82BFE530((&lbl_83296E18)[iVar3],&stack_pair_70.first);
+    uVar8 = ((uVar8 & 0xffffffff) >> 0x1f) - 1 & (ulonglong)stack_pair_70.first;
     if (uVar8 != 0) {
       sync(1);
     }
@@ -93,7 +93,7 @@ void fn_825994A0(void)
         piVar5 = (int *)fn_82CE7310();
         iVar3 = *piVar5;
         lVar2 = fn_82599308();
-        (**(code **)(iVar3 + 0xc))(piVar5,lVar2 + 8,0xffffffff821c7b20,uStack_6c);
+        (**(code **)(iVar3 + 0xc))(piVar5,lVar2 + 8,0xffffffff821c7b20,stack_pair_70.second);
         lVar2 = fn_82599308();
         lVar2 = lVar2 + 8;
 LAB_82599630:
@@ -117,7 +117,7 @@ LAB_82599630:
           piVar5 = (int *)fn_82CE7310();
           iVar3 = *piVar5;
           uVar1 = fn_82CE5420();
-          (**(code **)(iVar3 + 0xc))(piVar5,uVar1,0xffffffff821c7b20,uStack_6c);
+          (**(code **)(iVar3 + 0xc))(piVar5,uVar1,0xffffffff821c7b20,stack_pair_70.second);
           lVar2 = fn_82CE5420();
           goto LAB_82599630;
         }

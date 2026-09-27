@@ -40,11 +40,11 @@ ulonglong fn_82C08638(int *param_1,ulonglong param_2,ulonglong param_3,undefined
   ulonglong uVar3;
   int iStack_50;
   int iStack_4c;
-  int aiStack_48 [18];
+  int aiStack_48;
   
   iStack_4c = 0;
   iStack_50 = 0;
-  aiStack_48[0] = 0;
+  aiStack_48 = 0;
   if ((param_2 & 0xff) == (param_3 & 0xff)) {
     return 0xffffffff80070057;
   }
@@ -83,13 +83,13 @@ LAB_82c08770:
       else {
         if ((uVar2 == 2) || (uVar2 == 0)) goto LAB_82c08770;
         *(undefined4 *)(iStack_4c + 4) = 0;
-        uVar3 = fn_82C10F40(param_1[0x8e],*(undefined1 *)(iStack_4c + 0x14),aiStack_48);
+        uVar3 = fn_82C10F40(param_1[0x8e],*(undefined1 *)(iStack_4c + 0x14),&aiStack_48);
         if ((int)uVar3 < 0) {
           return uVar3;
         }
-        *(undefined4 *)(aiStack_48[0] + 4) = 2;
-        *(undefined4 *)(aiStack_48[0] + 0x10) = 1;
-        *(char *)(aiStack_48[0] + 0x14) = (char)param_3;
+        *(undefined4 *)(aiStack_48 + 4) = 2;
+        *(undefined4 *)(aiStack_48 + 0x10) = 1;
+        *(char *)(aiStack_48 + 0x14) = (char)param_3;
         bVar1 = *(byte *)(iStack_4c + 0x14);
         *(undefined4 *)(iStack_4c + 0x10) = 0;
         *(undefined1 *)(iStack_4c + 0x14) = 0;

@@ -73,7 +73,7 @@ extern int fn_82760648();
 extern int fn_82760BF8();
 extern int fn_82771090();
 extern int fn_82779470();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int iStack_2ec;
 extern unsigned int iStack_324;
 extern unsigned int lbl_82002AE0;
@@ -147,8 +147,8 @@ void fn_82771458(int *param_1,int *param_2,int param_3)
   float fStack_30c;
   float fStack_308;
   float fStack_304;
-  float fStack_300;
-  float fStack_2fc;
+  struct { float first; float second; } stack_pair_300;
+
   float fStack_2f8;
   float fStack_2f4;
   undefined1 uStack_2f0;
@@ -267,7 +267,7 @@ void fn_82771458(int *param_1,int *param_2,int param_3)
   uStack_2b0 = puVar12[4];
   uStack_2ac = puVar12[5];
   fn_8268CEC0(&uStack_2c0,param_3 + 0x44);
-  fn_82F68CC0(auStack_280,param_2[0x11],0x20);
+  memcpy(auStack_280,param_2[0x11],0x20);
   fn_8268D5D8(auStack_280,param_3 + 0x24);
   dVar34 = (double)(float)param_2[9];
   dVar33 = (double)fn_8268D0C8(&uStack_2c0);
@@ -368,11 +368,11 @@ void fn_82771458(int *param_1,int *param_2,int param_3)
               bVar9 = true;
             }
             if (bVar9) {
-              fStack_300 = (float)dVar34;
+              stack_pair_300.first = (float)dVar34;
               fStack_2f4 = (float)dVar34;
               fStack_2f8 = (float)dVar34;
               pfVar18 = &fStack_2e4;
-              fStack_2fc = (float)dVar34;
+              stack_pair_300.second = (float)dVar34;
               uStack_2f0 = 0;
               pfVar21 = &fStack_304;
               lVar30 = 5;
@@ -397,7 +397,7 @@ void fn_82771458(int *param_1,int *param_2,int param_3)
             }
           }
           else {
-            fn_8275E198(&uStack_318,&fStack_300,1);
+            fn_8275E198(&uStack_318,&stack_pair_300.first,1);
             if ((*(byte *)((((U64)(uStack_330) >> 0) & 0xFFFFFFFF) + 0x20) == 1) ||
                (bVar9 = false, (*(byte *)((((U64)(uStack_330) >> 0) & 0xFFFFFFFF) + 0x20) & 0x80) == 0)) {
               bVar9 = true;
@@ -420,10 +420,10 @@ void fn_82771458(int *param_1,int *param_2,int param_3)
           uVar19 = uVar19 - 1;
           pfVar21 = (float *)(iVar28 + *(int *)(iVar16 + 0x14));
           iVar28 = iVar28 + 0x10;
-          *pfVar21 = (float)((double)(float)((double)fStack_2e0 - (double)fStack_300) * dVar35 +
-                            (double)fStack_300);
-          pfVar21[1] = (float)((double)(float)((double)fStack_2dc - (double)fStack_2fc) * dVar35 +
-                              (double)fStack_2fc);
+          *pfVar21 = (float)((double)(float)((double)fStack_2e0 - (double)stack_pair_300.first) * dVar35 +
+                            (double)stack_pair_300.first);
+          pfVar21[1] = (float)((double)(float)((double)fStack_2dc - (double)stack_pair_300.second) * dVar35 +
+                              (double)stack_pair_300.second);
           pfVar21[2] = (float)((double)(float)((double)fStack_2d8 - (double)fStack_2f8) * dVar35 +
                               (double)fStack_2f8);
           pfVar21[3] = (float)((double)(float)((double)fStack_2d4 - (double)fStack_2f4) * dVar35 +

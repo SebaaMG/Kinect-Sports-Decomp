@@ -88,9 +88,9 @@ undefined8 fn_826F38B0(undefined8 param_1,int param_2,int *param_3,int param_4)
   ulonglong uVar13;
   char in_RESERVE;
   byte bVar14;
-  uint auStack_b0 [2];
-  int iStack_a8;
-  undefined4 uStack_a4;
+  uint auStack_b0;
+  struct { int first; undefined4 second; } stack_pair_a8;
+
   int *piStack_a0;
   undefined4 uStack_9c;
   undefined4 uStack_98;
@@ -134,11 +134,11 @@ undefined8 fn_826F38B0(undefined8 param_1,int param_2,int *param_3,int param_4)
   uVar3 = *(undefined4 *)(*(int *)(param_4 + 0x38) + 0x2c);
   fn_8278AF50(&piStack_a0,iVar7,*(undefined4 *)(*(int *)(param_4 + 8) + 8),
                   *(undefined4 *)(*(int *)(param_4 + 8) + 0x10),uVar3);
-  fn_8268B330(auStack_b0);
-  iStack_a8 = 0;
-  uStack_a4 = 0;
+  fn_8268B330(&auStack_b0);
+  stack_pair_a8.first = 0;
+  stack_pair_a8.second = 0;
   uVar5 = 0;
-  iVar8 = fn_82687AB8(*(undefined4 *)(param_4 + 0x38),&iStack_a8,&piStack_a0);
+  iVar8 = fn_82687AB8(*(undefined4 *)(param_4 + 0x38),&stack_pair_a8.first,&piStack_a0);
   if (iVar8 == 3) {
     uStack_7c = *(undefined4 *)(param_2 + 0x18);
     uStack_68 = *(undefined4 *)(param_4 + 0x20);
@@ -160,10 +160,10 @@ undefined8 fn_826F38B0(undefined8 param_1,int param_2,int *param_3,int param_4)
     uStack_58 = uVar3;
     if (piVar2 == (int *)0x0) {
 LAB_826f3adc:
-      fn_8268B8E8(auStack_b0,0xffffffff8200db58);
-      fn_8268BC50(auStack_b0,iVar11);
-      fn_8268B610(auStack_b0,0xffffffff820060d0,0xffffffffffffffff);
-      fn_82687570(uStack_a4,((ulonglong)auStack_b0[0] & 0xfffffffc) + 8);
+      fn_8268B8E8(&auStack_b0,0xffffffff8200db58);
+      fn_8268BC50(&auStack_b0,iVar11);
+      fn_8268B610(&auStack_b0,0xffffffff820060d0,0xffffffffffffffff);
+      fn_82687570(stack_pair_a8.second,((ulonglong)auStack_b0 & 0xfffffffc) + 8);
     }
     else {
       uVar13 = (**(code **)(*piVar2 + 4))(piVar2,&uStack_80);
@@ -179,7 +179,7 @@ LAB_826f3adc:
         uVar5 = fn_826F3700(uVar5,uVar13,&piStack_a0,uStack_7c);
       }
       if ((uVar5 & 0xffffffff) == 0) goto LAB_826f3adc;
-      fn_826874B8(uStack_a4);
+      fn_826874B8(stack_pair_a8.second);
     }
     if ((uVar13 & 0xffffffff) != 0) {
       fn_8267C498(uVar13);
@@ -187,14 +187,14 @@ LAB_826f3adc:
 LAB_826f3b70:
     if ((uVar5 & 0xffffffff) == 0) {
       fn_82683F88((ulonglong)*(uint *)(param_4 + 0xc) + 0xc,0xffffffff8200db4c,
-                        ((ulonglong)auStack_b0[0] & 0xfffffffc) + 8);
-      if (iStack_a8 == 1) {
-        fn_82687270(uStack_a4);
+                        ((ulonglong)auStack_b0 & 0xfffffffc) + 8);
+      if (stack_pair_a8.first == 1) {
+        fn_82687270(stack_pair_a8.second);
       }
-      else if (1 < iStack_a8) {
-        fn_8267C4F0(uStack_a4);
+      else if (1 < stack_pair_a8.first) {
+        fn_8267C4F0(stack_pair_a8.second);
       }
-      lVar9 = ((ulonglong)auStack_b0[0] & 0xfffffffc) + 4;
+      lVar9 = ((ulonglong)auStack_b0 & 0xfffffffc) + 4;
       do {
         puVar10 = (uint *)lVar9;
         uVar5 = (ulonglong)*puVar10;
@@ -214,16 +214,16 @@ LAB_826f3b70:
     }
   }
   else {
-    uVar5 = fn_82686CA8(&iStack_a8);
+    uVar5 = fn_82686CA8(&stack_pair_a8.first);
     bVar14 = (uVar5 == 0) << 1;
     if (uVar5 == 0) {
-      if (iStack_a8 < 2) {
+      if (stack_pair_a8.first < 2) {
         uVar6 = 0xffffffff82196582;
       }
       else {
-        uVar6 = fn_826861C8(uStack_a4);
+        uVar6 = fn_826861C8(stack_pair_a8.second);
       }
-      fn_8268B8E8(auStack_b0,uVar6);
+      fn_8268B8E8(&auStack_b0,uVar6);
       goto LAB_826f3b70;
     }
   }
@@ -235,13 +235,13 @@ LAB_826f3b70:
   if ((uVar5 & 0xffffffff) != 0) {
     fn_82687270(uVar5);
   }
-  if (iStack_a8 == 1) {
-    fn_82687270(uStack_a4);
+  if (stack_pair_a8.first == 1) {
+    fn_82687270(stack_pair_a8.second);
   }
-  else if (1 < iStack_a8) {
-    fn_8267C4F0(uStack_a4);
+  else if (1 < stack_pair_a8.first) {
+    fn_8267C4F0(stack_pair_a8.second);
   }
-  lVar9 = ((ulonglong)auStack_b0[0] & 0xfffffffc) + 4;
+  lVar9 = ((ulonglong)auStack_b0 & 0xfffffffc) + 4;
   do {
     puVar10 = (uint *)lVar9;
     uVar5 = (ulonglong)*puVar10;

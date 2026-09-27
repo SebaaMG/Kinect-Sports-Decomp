@@ -59,8 +59,8 @@ void fn_82B8B8A0(int param_1,int *param_2,uint param_3,char param_4,char param_5
   uint uVar13;
   uint *puVar14;
   int *piVar15;
-  int iStack_80;
-  uint uStack_7c;
+  struct { int first; uint second; } stack_pair_80;
+
   int iStack_78;
   
   iVar1 = param_2[7];
@@ -173,16 +173,16 @@ LAB_82b8bbf4:
 LAB_82b8b9d0:
         if (cVar11 != '\0') {
           bVar6 = true;
-          fn_82B24700(&iStack_80,puVar8);
+          fn_82B24700(&stack_pair_80.first,puVar8);
           do {
             if ((iStack_78 != 0) ||
                (bVar5 = true,
-               uStack_7c !=
-               (-(uint)((*(uint *)(iStack_80 + 4) & 1) == 0) & *(uint *)(iStack_80 + 4)))) {
+               stack_pair_80.second !=
+               (-(uint)((*(uint *)(stack_pair_80.first + 4) & 1) == 0) & *(uint *)(stack_pair_80.first + 4)))) {
               bVar5 = false;
             }
             if (bVar5) goto LAB_82b8ba48;
-            puVar10 = (uint *)fn_82AF8720(&iStack_80);
+            puVar10 = (uint *)fn_82AF8720(&stack_pair_80.first);
           } while ((*puVar10 & 0xfffffffe) != uVar3);
           *puVar10 = uVar3 | 1;
 LAB_82b8ba48:

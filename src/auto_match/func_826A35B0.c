@@ -53,7 +53,7 @@ void fn_826A35B0(int param_1)
   ulonglong uVar11;
   longlong lVar12;
   double dVar13;
-  ulonglong auStack_40 [8];
+  ulonglong auStack_40;
   
   cVar7 = fn_82695468(param_1,7);
   if (cVar7 == '\0') {
@@ -71,7 +71,7 @@ void fn_826A35B0(int param_1)
       uVar5 = fn_826957D0(param_1,0);
       dVar13 = (double)fn_826972E0(uVar5,uVar3);
       uVar1 = (uint)dVar13;
-      auStack_40[0] = (ulonglong)(int)uVar1;
+      auStack_40 = (ulonglong)(int)uVar1;
       uVar11 = (ulonglong)uVar1;
       if ((int)uVar1 < 0) {
         uVar11 = *(uint *)(iVar8 + 0x38) + uVar11;
@@ -87,7 +87,7 @@ void fn_826A35B0(int param_1)
       uVar5 = fn_826957D0(param_1,1);
       dVar13 = (double)fn_826972E0(uVar5,uVar3);
       uVar2 = (uint)dVar13;
-      auStack_40[0] = (ulonglong)(int)uVar2;
+      auStack_40 = (ulonglong)(int)uVar2;
       uVar10 = (ulonglong)uVar2;
       if ((int)uVar2 < 0) {
         uVar10 = *(uint *)(iVar8 + 0x38) + uVar10;
@@ -105,8 +105,8 @@ void fn_826A35B0(int param_1)
       lVar12 = uVar10 - uVar11;
       do {
         if (*(int *)((int)lVar9 + *(int *)(iVar8 + 0x34)) == 0) {
-          auStack_40[0] = auStack_40[0] & 0xffffffff;
-          fn_826EBE48(uVar6 + 0x34,auStack_40);
+          auStack_40 = auStack_40 & 0xffffffff;
+          fn_826EBE48(uVar6 + 0x34,&auStack_40);
         }
         else {
           fn_826A2F80(uVar6);

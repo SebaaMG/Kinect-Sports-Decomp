@@ -34,7 +34,7 @@ undefined8 fn_826FC178(int param_1)
 {
   int iVar1;
   undefined8 uVar2;
-  int aiStack_30 [12];
+  int aiStack_30 [4];
   
   fn_8269CEE0(aiStack_30,param_1);
   iVar1 = aiStack_30[0];

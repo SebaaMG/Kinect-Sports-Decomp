@@ -38,7 +38,7 @@ uint * fn_826748A0(uint *param_1,int param_2,int param_3)
   undefined4 *puVar2;
   uint *puVar3;
   uint uStack_30;
-  uint auStack_2c [11];
+  uint auStack_2c [1];
   
   uStack_30 = fn_82674828(param_2,param_3);
   if (uStack_30 != *(uint *)(param_2 + 4)) {

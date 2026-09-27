@@ -75,8 +75,8 @@ undefined8 fn_82AC4950(int param_1,int *param_2,uint *param_3,int param_4)
   undefined8 uStack_c0;
   uint auStack_b8 [2];
   uint auStack_b0 [2];
-  uint uStack_a8;
-  uint uStack_a4;
+  struct { uint first; uint second; } stack_pair_a8;
+
   undefined4 uStack_a0;
   uint uStack_9c;
   
@@ -90,10 +90,10 @@ undefined8 fn_82AC4950(int param_1,int *param_2,uint *param_3,int param_4)
   goto LAB_82ac4db8;
   puVar18 = (ulonglong *)(((int)uVar8 >> 1) * 0xc + param_1);
   uStack_a0 = *(undefined4 *)puVar18;
-  uStack_a4 = *(uint *)(puVar18 + 1) >> 0x10;
-  uStack_a8 = *(uint *)(puVar18 + 1) << 0x10 | (uint)*puVar18 >> 0x10;
+  stack_pair_a8.second = *(uint *)(puVar18 + 1) >> 0x10;
+  stack_pair_a8.first = *(uint *)(puVar18 + 1) << 0x10 | (uint)*puVar18 >> 0x10;
   uStack_9c = (uint)*puVar18 & 0xffff;
-  uVar11 = CONCAT44(uStack_a8,uStack_a4);
+  uVar11 = CONCAT44(stack_pair_a8.first,stack_pair_a8.second);
   if ((uVar8 & 1) == 0) {
     uVar11 = *puVar18 & 0xffffffff0000ffff;
   }
@@ -277,7 +277,7 @@ code_r0x82ac4e48:
       if ((ulonglong)bVar20 - (ulonglong)bVar1 != 0) break;
       puVar16 = (uint *)((int)puVar16 + 1);
       pbVar15 = pbVar15 + 1;
-    } while (puVar16 != &uStack_a8);
+    } while (puVar16 != &stack_pair_a8.first);
     if (((int)((ulonglong)bVar20 - (ulonglong)bVar1) == 0) && (*(char *)(param_4 + 0x28) == '\0')) {
       uVar12 = 0;
       break;

@@ -88,8 +88,8 @@ void fn_82AC91D0(int param_1,int param_2,char param_3,int *param_4)
   undefined1 auStack_13c [28];
   char cStack_120;
   uint uStack_118;
-  uint uStack_114;
-  int iStack_110;
+  struct { uint first; int second; } stack_pair_114;
+
   undefined1 auStack_10c [48];
   int *piStack_dc;
   int iStack_d0;
@@ -289,7 +289,7 @@ LAB_82ac9688:
                       param_4[0x12] = 0;
                       fn_82AC90A8(param_1,param_2,param_4);
                     }
-                    iStack_110 = param_1;
+                    stack_pair_114.second = param_1;
                     piStack_dc = param_4;
                     /* WARNING: Subroutine does not return */
                     fn_82F691F0(auStack_10c,0,0x24);
@@ -310,10 +310,10 @@ LAB_82ac9688:
         }
         if ((((bVar4) && ((uVar16 & 0x1c000) == 0x4000)) && ((uVar16 >> 0x19 & 1) == 0)) &&
            (iVar6 = fn_82AEA6F8(piVar14), iVar6 == 1)) {
-          uStack_118 = (uint)&uStack_114 | 1;
-          uStack_114 = (uint)auStack_13c | 1;
+          uStack_118 = (uint)&stack_pair_114.first | 1;
+          stack_pair_114.first = (uint)auStack_13c | 1;
           fn_82AED5B8(param_1,piVar14,&uStack_118);
-          if ((uStack_114 & 1) == 0) {
+          if ((stack_pair_114.first & 1) == 0) {
             if (param_4 != (int *)0x0) {
               param_4[2] = 0;
               param_4[3] = 0;

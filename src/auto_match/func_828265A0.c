@@ -32,7 +32,7 @@ extern int fn_828299A8();
 void fn_828265A0(undefined8 param_1,undefined4 param_2)
 
 {
-  undefined4 auStack_20 [8];
+  undefined4 auStack_20 [4];
   
   auStack_20[0] = param_2;
   fn_828299A8(auStack_20,param_1);

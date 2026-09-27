@@ -47,16 +47,16 @@ void fn_828B2AE0(int param_1,int *param_2)
   ulonglong uVar4;
   int *piVar6;
   undefined4 auStack_50 [2];
-  undefined8 auStack_48 [9];
+  undefined8 auStack_48;
   
-  auStack_48[0] = (**(code **)(*param_2 + 0x48))(param_2);
+  auStack_48 = (**(code **)(*param_2 + 0x48))(param_2);
   piVar6 = (int *)(param_1 + 0xc);
   bVar3 = false;
   piVar1 = (int *)**(int **)(param_1 + 0xc);
   if (piVar1 != *(int **)(param_1 + 0xc)) {
     do {
       iVar2 = piVar1[2];
-      cVar5 = fn_828B2D18(iVar2,auStack_48);
+      cVar5 = fn_828B2D18(iVar2,&auStack_48);
       if (cVar5 != '\0') {
         bVar3 = true;
         fn_828B4640(iVar2,param_2);

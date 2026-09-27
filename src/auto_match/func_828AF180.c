@@ -25,7 +25,7 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F63CA0();
+extern int memmove();
 
 
 void fn_828AF180(int param_1,int param_2)
@@ -41,7 +41,7 @@ void fn_828AF180(int param_1,int param_2)
         return;
       }
     }
-    fn_82F63CA0(piVar1,piVar1 + 1,(*(int *)(param_1 + 0x25c) - (int)(piVar1 + 1) >> 2) << 2);
+    memmove(piVar1,piVar1 + 1,(*(int *)(param_1 + 0x25c) - (int)(piVar1 + 1) >> 2) << 2);
     *(int *)(param_1 + 0x25c) = *(int *)(param_1 + 0x25c) + -4;
   }
   return;

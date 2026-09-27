@@ -35,7 +35,7 @@ void fn_82A13C78(int param_1)
 {
   uint uVar1;
   ulonglong uVar2;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
   
   fn_829F5000(3,auStack_30,8);
   uVar1 = 0;

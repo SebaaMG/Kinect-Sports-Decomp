@@ -44,7 +44,7 @@ undefined8 fn_822972A8(int *param_1,int *param_2)
   int iVar4;
   bool bVar5;
   undefined1 auStack_60 [16];
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [48];
   
   bVar5 = false;
   if ((param_1 != (int *)0x0) && (*param_1 == 0)) {

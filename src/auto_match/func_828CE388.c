@@ -39,7 +39,7 @@ undefined4 * fn_828CE388(int param_1,uint *param_2)
   undefined8 uVar3;
   undefined4 *puVar4;
   undefined4 *apuStack_30 [2];
-  uint auStack_28 [4];
+  uint auStack_28 [3];
   
   puVar4 = *(undefined4 **)(param_1 + 4);
   if (*(char *)((int)puVar4[1] + 0x19) == '\0') {

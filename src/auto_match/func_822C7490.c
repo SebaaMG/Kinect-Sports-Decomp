@@ -36,7 +36,7 @@ void fn_822C7490(int param_1,int *param_2)
   int *piVar3;
   int iVar4;
   int iVar5;
-  int aiStack_40 [16];
+  int aiStack_40 [4];
   
   piVar3 = *(int **)(param_1 + 0x30);
   if (piVar3 != *(int **)(param_1 + 0x34)) {

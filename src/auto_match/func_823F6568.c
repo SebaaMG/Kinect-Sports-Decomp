@@ -40,7 +40,7 @@ void fn_823F6568(int *param_1,undefined8 param_2,int *param_3)
   undefined8 *puVar5;
   longlong lVar6;
   undefined8 uStack_58;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [32];
   
   if (param_3 != (int *)0x0) {
     if ((int *)*param_3 == (int *)0x0) {

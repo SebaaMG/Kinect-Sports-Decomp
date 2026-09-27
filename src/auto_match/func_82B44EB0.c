@@ -35,7 +35,7 @@ extern int fn_82AD6090();
 extern int fn_82AEFC28();
 extern int fn_82B43B90();
 extern int fn_82B44C38();
-extern int fn_82F691F0();
+extern int memset();
 
 
 void fn_82B44EB0(int param_1)
@@ -58,7 +58,7 @@ void fn_82B44EB0(int param_1)
   int *piVar15;
   uint uVar16;
   uint uVar17;
-  int *apiStack_60 [24];
+  int *apiStack_60 [4];
   
   uVar12 = 0;
   for (uVar17 = *(uint *)(param_1 + 4); ((uVar17 & 1) == 0 && (uVar17 != 0));
@@ -105,7 +105,7 @@ LAB_82b45018:
       if ((*(uint *)(uVar17 + 0x30) >> 0x13 & 1) != 0) {
         if ((~(uint)piVar15 & 1) != 0) {
                     /* WARNING: Subroutine does not return */
-          fn_82F691F0(piVar15 + 1,0,*piVar15 << 2);
+          memset(piVar15 + 1,0,*piVar15 << 2);
         }
         piVar15 = (int *)0x1;
         apiStack_60[0] = (int *)0x1;

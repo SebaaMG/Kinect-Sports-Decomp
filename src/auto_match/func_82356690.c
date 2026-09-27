@@ -63,7 +63,7 @@ void fn_82356690(int param_1)
   int *piVar4;
   bool bVar5;
   undefined4 auStack_70 [4];
-  undefined1 auStack_60 [96];
+  undefined1 auStack_60 [32];
   
   if (*(int *)(param_1 + 0x3ec) != 0) {
     if (*(int *)(param_1 + 0x288) != 0) {

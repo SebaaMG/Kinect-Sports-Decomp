@@ -48,7 +48,7 @@ undefined8 fn_82B85568(int *param_1,int *param_2,undefined8 param_3)
   uint uVar12;
   uint uVar13;
   int *piVar14;
-  uint auStack_60 [24];
+  uint auStack_60 [1];
   
   if (((param_2[2] ^ param_1[2]) & 0x380000U) == 0) {
     uVar11 = 0;

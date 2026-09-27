@@ -36,7 +36,7 @@ ulonglong fn_8284C6E0(undefined8 param_1,undefined8 param_2,int param_3,undefine
 {
   uint uVar1;
   int iVar2;
-  int aiStack_30 [12];
+  int aiStack_30 [4];
   
   aiStack_30[1] = 0;
   aiStack_30[0] = 0;

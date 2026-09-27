@@ -36,15 +36,15 @@ void fn_8257CED8(int param_1)
   int *piVar2;
   undefined4 *puVar3;
   int iVar4;
-  undefined4 uStack_20;
-  undefined4 uStack_1c;
+  struct { undefined4 first; undefined4 second; } stack_pair_20;
+
   
   iVar4 = *(int *)(param_1 + 0x1c);
   if (iVar4 != 0) {
-    uStack_20 = 0x45;
-    uStack_1c = 8;
+    stack_pair_20.first = 0x45;
+    stack_pair_20.second = 8;
     do {
-      (**(code **)(*(int *)(iVar4 + -0x40) + 0xc))(iVar4 + -0x40,&uStack_20);
+      (**(code **)(*(int *)(iVar4 + -0x40) + 0xc))(iVar4 + -0x40,&stack_pair_20.first);
       iVar4 = *(int *)(iVar4 + 4);
     } while (iVar4 != 0);
   }

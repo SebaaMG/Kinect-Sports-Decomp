@@ -47,7 +47,7 @@ void fn_82699058(int *param_1,int *param_2)
   uint uVar10;
   int iVar11;
   ulonglong uVar12;
-  undefined1 auStack_80 [128];
+  undefined1 auStack_80 [32];
   
   uVar9 = (ulonglong)(uint)param_1[1];
   uVar12 = 0;

@@ -44,7 +44,7 @@ fn_826C2C50(int param_1,int *param_2,undefined8 param_3,undefined8 param_4,undef
   undefined4 uStack_50;
   undefined4 uStack_4c;
   undefined1 uStack_48;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [16];
   
   uStack_48 = 0;
   uStack_50 = 0;

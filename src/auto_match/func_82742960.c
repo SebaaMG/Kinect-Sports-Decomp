@@ -48,8 +48,8 @@ void fn_82742960(int param_1)
   ulonglong uVar4;
   double dVar5;
   double dVar6;
-  float fStack_50;
-  float fStack_4c;
+  struct { float first; float second; } stack_pair_50;
+
   float fStack_48;
   float fStack_44;
   float fStack_40;
@@ -73,14 +73,14 @@ void fn_82742960(int param_1)
       uVar2 = fn_826957D0(param_1,1);
       dVar5 = (double)fn_826972E0(uVar2,uVar1);
       dVar5 = (double)(float)dVar5;
-      fn_82741A50(&fStack_50,uVar4,*(undefined4 *)(param_1 + 0x18));
-      fStack_50 = (float)((double)fStack_50 * dVar6);
-      fStack_4c = (float)((double)fStack_4c * dVar6);
+      fn_82741A50(&stack_pair_50.first,uVar4,*(undefined4 *)(param_1 + 0x18));
+      stack_pair_50.first = (float)((double)stack_pair_50.first * dVar6);
+      stack_pair_50.second = (float)((double)stack_pair_50.second * dVar6);
       fStack_48 = (float)((double)fStack_48 * dVar6);
       fStack_44 = (float)((double)fStack_44 * dVar5);
       fStack_40 = (float)((double)fStack_40 * dVar5);
       fStack_3c = (float)((double)fStack_3c * dVar5);
-      fn_82741C18(uVar4,*(undefined4 *)(param_1 + 0x18),&fStack_50);
+      fn_82741C18(uVar4,*(undefined4 *)(param_1 + 0x18),&stack_pair_50.first);
     }
   }
   return;

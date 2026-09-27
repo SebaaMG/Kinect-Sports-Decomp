@@ -53,8 +53,8 @@ int fn_8249D070(int param_1,undefined4 param_2,undefined8 param_3)
   undefined4 in_stack_00000020;
   undefined4 uStack00000028;
   float fStack0000002c;
-  undefined4 uStack_30;
-  undefined4 uStack_2c;
+  struct { undefined4 first; undefined4 second; } stack_pair_30;
+
   undefined4 uStack_28;
   float fStack_24;
   int iStack_20;
@@ -73,10 +73,10 @@ int fn_8249D070(int param_1,undefined4 param_2,undefined8 param_3)
   uStack00000028 = (undefined4)((ulonglong)param_3 >> 0x20);
   _uStack00000028 = CONCAT44(uStack00000028,fStack_24);
   uStack_28 = uStack00000028;
-  uStack_30 = in_stack_00000020;
-  uStack_2c = param_2;
+  stack_pair_30.first = in_stack_00000020;
+  stack_pair_30.second = param_2;
   iStack_20 = iVar2;
-  fn_8249D310(param_1 + 0x30,&uStack_30);
+  fn_8249D310(param_1 + 0x30,&stack_pair_30.first);
   return iVar2;
 }
 

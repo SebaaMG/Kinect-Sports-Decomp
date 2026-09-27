@@ -40,7 +40,7 @@ void fn_82609918(int param_1,int param_2,undefined8 param_3)
   int iVar2;
   int iVar3;
   int iVar4;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [1];
   
   uVar1 = *(undefined4 *)(param_2 + 8);
   iVar3 = 0;

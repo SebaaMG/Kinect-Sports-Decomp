@@ -50,7 +50,7 @@ void fn_823CFFE8(int param_1,undefined8 param_2,int param_3,undefined8 param_4,u
   undefined4 *puVar5;
   undefined1 auStack_b0 [4];
   int iStack_ac;
-  undefined1 auStack_a0 [160];
+  undefined1 auStack_a0 [144];
   
   fn_82250D10(auStack_a0);
   fn_823E7368(param_1,auStack_a0);

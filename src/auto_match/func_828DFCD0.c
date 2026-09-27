@@ -39,7 +39,7 @@ longlong fn_828DFCD0(int param_1,undefined4 *param_2)
   ulonglong uVar2;
   char cVar4;
   int iVar3;
-  uint auStack_30 [12];
+  uint auStack_30;
   
   uVar2 = fn_828DF3F0();
   if (((uVar2 & 0xffffffff) == (ulonglong)*(uint *)(param_1 + 4)) ||
@@ -50,8 +50,8 @@ longlong fn_828DFCD0(int param_1,undefined4 *param_2)
       *(undefined4 *)(iVar3 + 0xc) = uVar1;
       *(undefined4 *)(iVar3 + 0x10) = 0;
     }
-    fn_828DFA98(auStack_30,param_1,uVar2,iVar3);
-    uVar2 = (ulonglong)auStack_30[0];
+    fn_828DFA98(&auStack_30,param_1,uVar2,iVar3);
+    uVar2 = (ulonglong)auStack_30;
   }
   return uVar2 + 0x10;
 }

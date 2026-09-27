@@ -54,7 +54,7 @@ undefined8 fn_828D47D0(int *param_1,int param_2,int param_3)
   int iStack_88;
   undefined4 uStack_84;
   undefined4 uStack_80;
-  undefined1 auStack_70 [112];
+  undefined1 auStack_70 [96];
   
   uVar1 = *(uint *)(&lbl_82026D2C + param_2 * 4);
   if (param_3 == 0) {

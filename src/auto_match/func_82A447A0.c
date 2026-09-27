@@ -56,8 +56,8 @@ longlong fn_82A447A0(double param_1,int param_2,ulonglong param_3,undefined8 par
   undefined4 *puStack_7c;
   int *piStack_78;
   int *piStack_74;
-  undefined4 uStack_70;
-  undefined4 uStack_6c;
+  struct { undefined4 first; undefined4 second; } stack_pair_70;
+
   undefined4 uStack_68;
   
   if (param_6 == (int *)0x0) {
@@ -105,27 +105,27 @@ longlong fn_82A447A0(double param_1,int param_2,ulonglong param_3,undefined8 par
       if (((param_3 & 2) == 0) || (*(uint *)(param_2 + 0xd4) != uVar7)) {
         lVar3 = fn_82A42FF8(&puStack_7c);
         if (lVar3 < 0) goto LAB_82a44ac0;
-        uStack_70 = lbl_82002AE0;
-        uStack_6c = lbl_82002AE0;
+        stack_pair_70.first = lbl_82002AE0;
+        stack_pair_70.second = lbl_82002AE0;
         if ((param_3 & 2) == 0) {
-          uStack_6c = *(undefined4 *)(param_2 + 200);
-          uStack_70 = lbl_820143E0;
+          stack_pair_70.second = *(undefined4 *)(param_2 + 200);
+          stack_pair_70.first = lbl_820143E0;
         }
         piStack_78 = (int *)0x0;
         (**(code **)*puStack_7c)(puStack_7c,0xffffffff82089748,&piStack_78);
-        (**(code **)(*piStack_78 + 0x18))(piStack_78,&uStack_70,8);
+        (**(code **)(*piStack_78 + 0x18))(piStack_78,&stack_pair_70.first,8);
         (**(code **)(*piStack_78 + 8))();
         *(undefined4 *)(param_2 + 0xdc) = 1;
       }
       if ((puStack_80 == (undefined4 *)0x0) && (puStack_7c == (undefined4 *)0x0)) {
         lVar3 = fn_82A431A8(&puStack_80);
         if (lVar3 < 0) goto LAB_82a44ac0;
-        uStack_70 = 1;
-        uStack_6c = 1;
+        stack_pair_70.first = 1;
+        stack_pair_70.second = 1;
         uStack_68 = 0;
         piStack_74 = (int *)0x0;
         (**(code **)*puStack_80)(puStack_80,0xffffffff82089748,&piStack_74);
-        (**(code **)(*piStack_74 + 0x18))(piStack_74,&uStack_70,0xc);
+        (**(code **)(*piStack_74 + 0x18))(piStack_74,&stack_pair_70.first,0xc);
         (**(code **)(*piStack_74 + 8))();
         *(undefined4 *)(param_2 + 0xe0) = 1;
       }

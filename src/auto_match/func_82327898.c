@@ -60,8 +60,8 @@ void fn_82327898(double param_1,int param_2,undefined4 param_3,undefined8 param_
   int in_stack_00000054;
   undefined4 uStack_90;
   int aiStack_8c [3];
-  uint uStack_80;
-  int iStack_7c;
+  struct { uint first; int second; } stack_pair_80;
+
   undefined4 uStack_78;
   undefined4 uStack_74;
   undefined4 uStack_70;
@@ -76,13 +76,13 @@ void fn_82327898(double param_1,int param_2,undefined4 param_3,undefined8 param_
   if ((iVar6 != 0) && (iVar6 = *(int *)(iVar6 + 0xbc), iVar6 != 0)) {
     fStack_64 = (float)param_1;
     uStack_70 = (undefined4)param_4;
-    uStack_80 = uVar1;
-    iStack_7c = iVar6;
+    stack_pair_80.first = uVar1;
+    stack_pair_80.second = iVar6;
     uStack_78 = param_8;
     uStack_74 = param_3;
     uStack_6c = param_6;
     uStack_68 = param_5;
-    fn_82321138(uVar7 + 0x508,&uStack_80);
+    fn_82321138(uVar7 + 0x508,&stack_pair_80.first);
     uStack_90 = param_3;
     fn_823223C0(aiStack_8c,uVar7 + 0x2a0,&uStack_90);
     fn_822C0AA0(uVar7,param_4,*(undefined4 *)(aiStack_8c[0] + 0x10));

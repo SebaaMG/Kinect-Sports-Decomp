@@ -43,8 +43,8 @@ int fn_82833628(int param_1,uint *param_2)
   uint uVar3;
   uint uVar4;
   uint auStack_40 [4];
-  uint uStack_30;
-  uint uStack_2c;
+  struct { uint first; uint second; } stack_pair_30;
+
   uint uStack_28;
   undefined4 uStack_24;
   
@@ -62,11 +62,11 @@ int fn_82833628(int param_1,uint *param_2)
     }
     if (uVar3 <= uVar4) goto LAB_828336d0;
   }
-  uStack_30 = *param_2;
-  uStack_2c = param_2[1];
+  stack_pair_30.first = *param_2;
+  stack_pair_30.second = param_2[1];
   uStack_28 = param_2[2];
   uStack_24 = 0;
-  uVar1 = fn_828335D0(param_1,&uStack_30);
+  uVar1 = fn_828335D0(param_1,&stack_pair_30.first);
   fn_82833330(auStack_40,param_1,uVar2,uVar1);
   uVar2 = auStack_40[0];
 LAB_828336d0:

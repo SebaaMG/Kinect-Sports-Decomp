@@ -41,10 +41,10 @@ fn_826B32D0(undefined8 param_1,int param_2,undefined8 param_3,undefined8 param_4
   bool bVar1;
   char cVar3;
   undefined8 uVar2;
-  int iStack_50;
-  int iStack_4c;
+  struct { int first; int second; } stack_pair_50;
+
   byte bStack_48;
-  char acStack_40 [64];
+  char acStack_40 [16];
   
   acStack_40[0] = '\0';
   cVar3 = (**(code **)(*(int *)(param_2 + 0x10) + 0x10))(param_2 + 0x10,param_1,param_3,acStack_40);
@@ -53,16 +53,16 @@ fn_826B32D0(undefined8 param_1,int param_2,undefined8 param_3,undefined8 param_4
       bVar1 = true;
     }
     if (bVar1) {
-      uVar2 = fn_82696B20(&iStack_50,acStack_40,param_1);
+      uVar2 = fn_82696B20(&stack_pair_50.first,acStack_40,param_1);
       uVar2 = fn_826B2CF0(param_1,uVar2,param_4,param_5);
-      if (((bStack_48 & 2) == 0) && (iStack_50 != 0)) {
+      if (((bStack_48 & 2) == 0) && (stack_pair_50.first != 0)) {
         fn_826824B0();
       }
-      iStack_50 = 0;
-      if (((bStack_48 & 1) == 0) && (iStack_4c != 0)) {
+      stack_pair_50.first = 0;
+      if (((bStack_48 & 1) == 0) && (stack_pair_50.second != 0)) {
         fn_826824B0();
       }
-      iStack_4c = 0;
+      stack_pair_50.second = 0;
       goto LAB_826b33a0;
     }
   }

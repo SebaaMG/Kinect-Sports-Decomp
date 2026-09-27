@@ -37,7 +37,7 @@ void fn_82715660(int *param_1,undefined4 *param_2)
   undefined4 *puVar2;
   int iVar3;
   byte bVar4;
-  undefined4 auStack_30 [12];
+  undefined4 auStack_30;
   
   iVar1 = param_1[0x28];
   if (param_2 == (undefined4 *)0x0) {
@@ -47,8 +47,8 @@ void fn_82715660(int *param_1,undefined4 *param_2)
   }
   else {
     if (iVar1 == 0) {
-      auStack_30[0] = 0x109;
-      iVar3 = fn_8267BED0(param_1,0x10,auStack_30);
+      auStack_30 = 0x109;
+      iVar3 = fn_8267BED0(param_1,0x10,&auStack_30);
       param_1[0x28] = iVar3;
     }
     puVar2 = (undefined4 *)param_1[0x28];

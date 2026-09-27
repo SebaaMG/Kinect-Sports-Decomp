@@ -38,7 +38,7 @@ longlong fn_828C4258(int param_1)
   char cVar3;
   longlong lVar4;
   int *piVar5;
-  int aiStack_30 [12];
+  int aiStack_30 [1];
   
   if ((*(int *)(param_1 + 0xa0) != 0) || (bVar1 = true, *(int *)(param_1 + 0x8c) != 0)) {
     bVar1 = false;

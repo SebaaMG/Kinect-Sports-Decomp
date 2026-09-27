@@ -41,8 +41,8 @@ void fn_82246F48(undefined4 *param_1)
 {
   undefined4 uVar1;
   ulonglong uVar2;
-  int iStack_20;
-  int iStack_1c;
+  struct { int first; int second; } stack_pair_20;
+
   
   uVar1 = param_1[4];
   uVar2 = (ulonglong)lbl_83297810;
@@ -51,14 +51,14 @@ void fn_82246F48(undefined4 *param_1)
   if (uVar2 == 0) {
     uVar2 = fn_82511928();
   }
-  fn_82513A80(&iStack_20,uVar2,uVar1);
-  if (iStack_20 != 0) {
-    *(undefined1 *)(iStack_20 + 0x50) = 1;
-    *(undefined4 *)(iStack_20 + 0x38) = 0;
-    *(undefined1 *)(iStack_20 + 0x3c) = 1;
-    *(undefined4 *)(iStack_20 + 0x40) = 0x21;
+  fn_82513A80(&stack_pair_20.first,uVar2,uVar1);
+  if (stack_pair_20.first != 0) {
+    *(undefined1 *)(stack_pair_20.first + 0x50) = 1;
+    *(undefined4 *)(stack_pair_20.first + 0x38) = 0;
+    *(undefined1 *)(stack_pair_20.first + 0x3c) = 1;
+    *(undefined4 *)(stack_pair_20.first + 0x40) = 0x21;
   }
-  if (iStack_1c != 0) {
+  if (stack_pair_20.second != 0) {
     fn_822315A0();
   }
   fn_82517E78(param_1);

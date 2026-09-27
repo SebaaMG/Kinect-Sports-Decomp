@@ -31,9 +31,9 @@ extern int fn_828233A8();
 undefined4 fn_8281AA88(longlong param_1,undefined8 param_2)
 
 {
-  int aiStack_10 [4];
+  int aiStack_10;
   
-  fn_828233A8(param_1 + 0x88,aiStack_10,0xffffffff828192c8,param_2);
-  return *(undefined4 *)(aiStack_10[0] + 0x28);
+  fn_828233A8(param_1 + 0x88,&aiStack_10,0xffffffff828192c8,param_2);
+  return *(undefined4 *)(aiStack_10 + 0x28);
 }
 

@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_82275128();
 extern int fn_8265CA20();
-extern int fn_82F63CA0();
+extern int memmove();
 
 
 int fn_8227DE10(int param_1)
@@ -45,7 +45,7 @@ int fn_8227DE10(int param_1)
       for (piVar2 = *(int **)(iVar1 + 0x4c); piVar2 != *(int **)(iVar1 + 0x50); piVar2 = piVar2 + 1)
       {
         if (*piVar2 == *(int *)(param_1 + 0x70)) {
-          fn_82F63CA0(piVar2,piVar2 + 1,(*(int *)(iVar1 + 0x50) - (int)(piVar2 + 1) >> 2) << 2);
+          memmove(piVar2,piVar2 + 1,(*(int *)(iVar1 + 0x50) - (int)(piVar2 + 1) >> 2) << 2);
           *(int *)(iVar1 + 0x50) = *(int *)(iVar1 + 0x50) + -4;
           goto LAB_8227de74;
         }

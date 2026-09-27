@@ -38,7 +38,7 @@ longlong fn_82A43A98(int param_1,int param_2)
   undefined4 uVar1;
   undefined4 *puVar2;
   longlong lVar3;
-  int *apiStack_30 [12];
+  int * apiStack_30;
   
   lVar3 = 0;
   if (param_2 != *(int *)(param_1 + 0x40)) {
@@ -58,15 +58,15 @@ longlong fn_82A43A98(int param_1,int param_2)
           if ((*(uint *)(param_1 + 0x38) & 8) != 0) {
             fn_82A403E8(*(undefined4 *)(param_1 + 0x30),*(undefined4 *)(param_1 + 0x84));
             *(undefined4 *)(param_1 + 0x84) = 0;
-            apiStack_30[0] = (int *)0x0;
-            lVar3 = fn_82A43118(apiStack_30);
+            apiStack_30 = (int *)0x0;
+            lVar3 = fn_82A43118(&apiStack_30);
             if (lVar3 < 0) {
               return lVar3;
             }
             uVar1 = *(undefined4 *)(*(int *)(param_1 + 0x78) + 4);
-            lVar3 = fn_82A507C0(param_1,apiStack_30[0],*(undefined4 *)(param_1 + 0x8c),uVar1,
+            lVar3 = fn_82A507C0(param_1,apiStack_30,*(undefined4 *)(param_1 + 0x8c),uVar1,
                                       uVar1,(undefined4 *)(param_1 + 0x84));
-            (**(code **)(*apiStack_30[0] + 8))(apiStack_30[0]);
+            (**(code **)(*apiStack_30 + 8))(apiStack_30);
             if ((int)lVar3 < 0) {
               return lVar3;
             }

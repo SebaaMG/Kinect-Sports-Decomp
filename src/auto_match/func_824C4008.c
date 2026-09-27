@@ -45,7 +45,7 @@ undefined4 * fn_824C4008(undefined4 *param_1,int param_2)
   undefined8 uVar3;
   ulonglong uVar4;
   int **ppiVar6;
-  int *apiStack_40 [16];
+  int *apiStack_40 [1];
   
   param_1[1] = param_2;
   *param_1 = &lbl_821C0844;

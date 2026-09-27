@@ -37,21 +37,21 @@ undefined4 * fn_828C2248(undefined4 *param_1,int param_2,int param_3)
   int iVar2;
   undefined4 uVar3;
   char cVar4;
-  undefined4 *apuStack_30 [12];
+  undefined4 * apuStack_30;
   
   puVar1 = *(undefined4 **)(*(int *)(param_2 + 4) + 4);
-  apuStack_30[0] = (undefined4 *)*puVar1;
+  apuStack_30 = (undefined4 *)*puVar1;
   while( true ) {
-    if (apuStack_30[0] == puVar1) {
+    if (apuStack_30 == puVar1) {
       *param_1 = 0;
       param_1[1] = 0;
       return param_1;
     }
-    if (*(int *)(apuStack_30[0][10] + 4) == param_3) break;
-    fn_828A1958(apuStack_30);
+    if (*(int *)(apuStack_30[10] + 4) == param_3) break;
+    fn_828A1958(&apuStack_30);
   }
-  iVar2 = apuStack_30[0][0xb];
-  uVar3 = apuStack_30[0][10];
+  iVar2 = apuStack_30[0xb];
+  uVar3 = apuStack_30[10];
   *param_1 = 0;
   param_1[1] = 0;
   if (iVar2 == 0) {

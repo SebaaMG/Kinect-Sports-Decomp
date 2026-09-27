@@ -99,8 +99,8 @@ undefined8 fn_82BE4690(int param_1)
   undefined4 uStack_a4;
   undefined4 uStack_a0;
   undefined1 auStack_98 [24];
-  undefined4 uStack_80;
-  undefined4 uStack_7c;
+  struct { undefined4 first; undefined4 second; } stack_pair_80;
+
   undefined4 uStack_78;
   undefined4 uStack_74;
   undefined4 uStack_70;
@@ -141,7 +141,7 @@ undefined8 fn_82BE4690(int param_1)
         uVar9 = fn_82BEA038(&uStack_c8,&uStack_c8);
         *(uint *)(param_1 + 0xd4) = (uint)LZCOUNT((uVar9 & 0xffff) - 2) >> 5;
         if (*(int *)(param_1 + 200) != 0) {
-          fn_82BA02A8(&uStack_80);
+          fn_82BA02A8(&stack_pair_80.first);
           fn_82BA02A8(&uStack_74);
           fn_82BA02A8(&uStack_68);
           uVar5 = fn_82BEEB88(auStack_98,param_1 + 0x7c,&uStack_c8);
@@ -152,13 +152,13 @@ undefined8 fn_82BE4690(int param_1)
           uStack_74 = uStack_c8;
           uStack_70 = uStack_c4;
           uStack_6c = uStack_c0;
-          uStack_80 = (((U64)(uStack_e0) >> 0) & 0xFFFFFFFF);
-          uStack_7c = (((U64)(uStack_e0) >> 32) & 0xFFFFFFFF);
+          stack_pair_80.first = (((U64)(uStack_e0) >> 0) & 0xFFFFFFFF);
+          stack_pair_80.second = (((U64)(uStack_e0) >> 32) & 0xFFFFFFFF);
           uStack_78 = uStack_d8;
           uStack_68 = uStack_a8;
           uStack_64 = uStack_a4;
           uStack_60 = uStack_a0;
-          iVar7 = (**(code **)(param_1 + 200))(&uStack_80);
+          iVar7 = (**(code **)(param_1 + 200))(&stack_pair_80.first);
           if (iVar7 != 0) {
             return 1;
           }

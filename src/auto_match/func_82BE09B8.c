@@ -28,7 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 #define ZEXT48(x) ((U64)((U32)(x)))
 #define BADSPACEBASE char
 extern unsigned int *auStack_210;
-extern int fn_82F69148();
+extern int _blkmov();
 extern unsigned int register0x0000000c;
 extern unsigned int stack0x00000000;
 
@@ -71,7 +71,7 @@ void fn_82BE09B8(ulonglong param_1,int param_2,int *param_3,int param_4,ulonglon
   ulonglong uVar33;
   int aiStack_220 [4];
   undefined4 auStack_210 [12];
-  int aiStack_1e0 [120];
+  int aiStack_1e0 [80];
   
   uVar11 = ZEXT48(&stack0x00000000);
   iVar10 = (int)(uVar11 - 0x280);
@@ -373,7 +373,7 @@ LAB_82be0a34:
     } while (lVar31 != 0);
   }
   if ((int)uVar18 < (int)lVar20) {
-    fn_82F69148((uVar18 & 0x3fffffff) * 4 + param_5,(uVar19 & 0x3fffffff) * 4 + (uVar11 - 0x1a0),
+    _blkmov((uVar18 & 0x3fffffff) * 4 + param_5,(uVar19 & 0x3fffffff) * 4 + (uVar11 - 0x1a0),
                  (lVar20 - uVar18 & 0x3fffffff) << 2);
   }
   return;

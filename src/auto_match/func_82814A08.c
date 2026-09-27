@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_60;
 extern int fn_82820290();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 void fn_82814A08(int param_1)
@@ -44,7 +44,7 @@ void fn_82814A08(int param_1)
   int iVar9;
   ulonglong uVar10;
   longlong lVar11;
-  uint auStack_60 [24];
+  uint auStack_60;
   
   iVar1 = *(int *)(param_1 + 0x1c);
   iVar2 = *(int *)(param_1 + 0x20);
@@ -56,8 +56,8 @@ void fn_82814A08(int param_1)
       if (*(int *)(iVar9 + 0x15) != 0) {
         lVar8 = (ulonglong)*(uint *)(iVar9 + 0x11) + (ulonglong)*(uint *)(iVar9 + 0xd);
         if (iVar2 != 0) {
-          fn_82820290(iVar2,uVar7 + 3,auStack_60);
-          lVar8 = (ulonglong)auStack_60[0] + lVar8;
+          fn_82820290(iVar2,uVar7 + 3,&auStack_60);
+          lVar8 = (ulonglong)auStack_60 + lVar8;
         }
         if ((ulonglong)*(uint *)(iVar9 + 0x1d) < (ulonglong)*(uint *)(iVar9 + 9)) {
           lVar8 = (((ulonglong)*(uint *)(iVar9 + 9) - (ulonglong)*(uint *)(iVar9 + 0x1d)) +
@@ -79,13 +79,13 @@ void fn_82814A08(int param_1)
         }
         uVar10 = (ulonglong)uVar3;
         if (iVar2 != 0) {
-          fn_82820290(iVar2,uVar7 + 2,auStack_60);
-          lVar11 = lVar11 + (ulonglong)auStack_60[0];
+          fn_82820290(iVar2,uVar7 + 2,&auStack_60);
+          lVar11 = lVar11 + (ulonglong)auStack_60;
         }
         if (uVar10 < uVar5) {
           lVar11 = (((uVar4 - uVar10) + lVar11 + 0x43 & 0xfffffffc) - (ulonglong)uVar4) + uVar10;
         }
-        fn_82F68CC0(lVar8,lVar11,*(undefined4 *)(iVar9 + 0x15));
+        memcpy(lVar8,lVar11,*(undefined4 *)(iVar9 + 0x15));
       }
       uVar7 = uVar7 + 1 & 0xff;
       iVar6 = iVar9;

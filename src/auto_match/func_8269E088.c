@@ -38,16 +38,16 @@ void fn_8269E088(int *param_1,undefined8 param_2)
 {
   int iVar1;
   int aiStack_30 [2];
-  undefined4 uStack_28;
-  undefined4 uStack_24;
+  struct { undefined4 first; undefined4 second; } stack_pair_28;
+
   
   if (param_1[8] == 0) {
     iVar1 = (**(code **)(param_1[0x1a] + 8))(param_1 + 0x1a);
     if (iVar1 == 2) {
       aiStack_30[0] = param_1[0x6a];
-      uStack_24 = (undefined4)param_2;
-      uStack_28 = 0;
-      fn_8269DCE8(&uStack_28,0xffffffff82006aa4,aiStack_30);
+      stack_pair_28.second = (undefined4)param_2;
+      stack_pair_28.first = 0;
+      fn_8269DCE8(&stack_pair_28.first,0xffffffff82006aa4,aiStack_30);
     }
     else {
       fn_8268BEA8(param_2);

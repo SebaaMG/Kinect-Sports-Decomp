@@ -50,8 +50,8 @@ void fn_8260F1E0(int param_1,undefined8 param_2,int param_3,undefined8 param_4,i
   undefined4 uStack_4c;
   undefined4 uStack_48;
   undefined4 uStack_44;
-  undefined4 uStack_40;
-  undefined4 uStack_3c;
+  struct { undefined4 first; undefined4 second; } stack_pair_40;
+
   undefined4 uStack_38;
   undefined4 uStack_34;
   
@@ -133,15 +133,15 @@ LAB_8260f26c:
       goto LAB_8260f474;
     }
     uVar1 = *(uint *)(param_3 + 0x50);
-    uStack_40 = 2;
-    uStack_3c = 8;
+    stack_pair_40.first = 2;
+    stack_pair_40.second = 8;
     if (uVar1 == 0) {
       iVar2 = **(int **)(param_1 + 0x60);
       iVar4 = fn_82586B60(param_3 + 0x10);
       puVar3 = *(undefined4 **)(iVar2 + 0x314);
       for (puVar7 = *(undefined4 **)(iVar2 + 0x310); puVar7 < puVar3; puVar7 = puVar7 + 2) {
         if (puVar7[1] == iVar4) {
-          (**(code **)(*(int *)*puVar7 + 0xc))((int *)*puVar7,&uStack_40);
+          (**(code **)(*(int *)*puVar7 + 0xc))((int *)*puVar7,&stack_pair_40.first);
         }
       }
       return;
@@ -159,7 +159,7 @@ LAB_8260f3a0:
     if (piVar6 == (int *)0x0) {
       return;
     }
-    puVar7 = &uStack_40;
+    puVar7 = &stack_pair_40.first;
   }
   iVar2 = *piVar6;
 LAB_8260f474:

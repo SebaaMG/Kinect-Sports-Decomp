@@ -43,7 +43,7 @@ void fn_82677F48(int *param_1,int param_2)
   undefined8 uVar3;
   int iVar4;
   char cVar5;
-  int aiStack_40 [16];
+  int aiStack_40;
   
   puVar1 = *(ulonglong **)(param_2 + 0xd8);
   fn_826776A0(param_2,*(undefined4 *)(param_2 + 0x1d0));
@@ -69,12 +69,12 @@ void fn_82677F48(int *param_1,int param_2)
   iVar4 = *param_1;
   if (iVar4 == 1) {
     fn_82677E98(param_2,1);
-    aiStack_40[0] = param_1[2];
-    fn_82677848(param_2,aiStack_40);
+    aiStack_40 = param_1[2];
+    fn_82677848(param_2,&aiStack_40);
   }
   else if (iVar4 == 2) {
-    aiStack_40[0] = param_1[2];
-    fn_82677848(param_2,aiStack_40);
+    aiStack_40 = param_1[2];
+    fn_82677848(param_2,&aiStack_40);
     fn_826777B8(param_2,param_1[0x13]);
     if (param_1[0xb] == 0) {
       if (*(int *)(param_2 + 0x18) != 0) {

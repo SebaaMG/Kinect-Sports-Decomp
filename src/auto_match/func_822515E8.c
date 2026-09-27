@@ -32,7 +32,7 @@ extern int fn_82250D78();
 void fn_822515E8(int param_1,undefined8 param_2)
 
 {
-  undefined1 auStack_b0 [176];
+  undefined1 auStack_b0 [144];
   
   fn_82250D78(auStack_b0);
   (**(code **)(**(int **)(param_1 + 0x68) + 0x14))(*(int **)(param_1 + 0x68),param_2,auStack_b0);

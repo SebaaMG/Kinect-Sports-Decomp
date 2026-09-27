@@ -43,16 +43,16 @@ void fn_822FAF40(uint *param_1)
   int iVar6;
   int iVar7;
   uint *puVar8;
-  uint auStack_30 [6];
+  uint auStack_30;
   
   puVar8 = param_1 + 1;
-  fn_8233EB88(auStack_30,puVar8,param_1[1],param_1[2]);
-  auStack_30[0] = 0;
+  fn_8233EB88(&auStack_30,puVar8,param_1[1],param_1[2]);
+  auStack_30 = 0;
   if (*param_1 != 0) {
     do {
-      fn_8257A9F0(puVar8,auStack_30);
-      auStack_30[0] = auStack_30[0] + 1;
-    } while (auStack_30[0] < *param_1);
+      fn_8257A9F0(puVar8,&auStack_30);
+      auStack_30 = auStack_30 + 1;
+    } while (auStack_30 < *param_1);
   }
   fVar5 = lbl_821CA460;
   puVar1 = (undefined4 *)param_1[2];

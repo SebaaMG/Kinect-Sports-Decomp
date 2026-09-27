@@ -53,7 +53,7 @@ fn_82A89598(uint *param_1,int *param_2,uint *param_3,longlong param_4,ulonglong 
   int iVar12;
   longlong lVar13;
   ulonglong uVar14;
-  undefined1 auStack_460 [1120];
+  undefined1 auStack_460 [1040];
   
   uVar4 = ZEXT48(&stack0x00000000);
   uVar9 = (ulonglong)*param_1;

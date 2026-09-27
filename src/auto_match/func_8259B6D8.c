@@ -42,7 +42,7 @@ undefined8 fn_8259B6D8(int param_1,undefined8 param_2)
   undefined8 uVar3;
   ulonglong uVar4;
   undefined4 auStack_60 [4];
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [32];
   
   auStack_60[0] = fn_827D96A0(param_2);
   lVar2 = fn_8259AF08(param_1,auStack_60);

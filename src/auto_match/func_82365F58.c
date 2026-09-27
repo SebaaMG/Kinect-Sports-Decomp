@@ -33,13 +33,13 @@ extern int fn_82536288();
 void fn_82365F58(int param_1,undefined4 *param_2)
 
 {
-  undefined4 auStack_10 [4];
+  undefined4 auStack_10;
   
-  auStack_10[0] = *param_2;
-  auStack_10[0] =
-       fn_82535298(auStack_10,*(undefined4 *)(*(int *)(param_1 + 0x34) + 0x84c),
+  auStack_10 = *param_2;
+  auStack_10 =
+       fn_82535298(&auStack_10,*(undefined4 *)(*(int *)(param_1 + 0x34) + 0x84c),
                          0xffffffff83296bc0,0xffffffff83296bd0);
-  fn_82536288(auStack_10);
+  fn_82536288(&auStack_10);
   return;
 }
 

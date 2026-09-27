@@ -38,11 +38,11 @@ void fn_828644D0(undefined8 param_1)
 {
   undefined8 uVar1;
   undefined2 auStack_20 [2];
-  undefined4 auStack_1c [3];
+  undefined4 auStack_1c;
   
-  fn_82864228(param_1,auStack_20,auStack_1c);
+  fn_82864228(param_1,auStack_20,&auStack_1c);
   uVar1 = fn_82862130(param_1,lbl_832116B4);
-  fn_82864320(param_1,uVar1,auStack_20[0],auStack_1c[0]);
+  fn_82864320(param_1,uVar1,auStack_20[0],auStack_1c);
   return;
 }
 

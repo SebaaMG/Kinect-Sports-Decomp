@@ -52,8 +52,8 @@ undefined4 * fn_828D6D60(undefined4 *param_1,int *param_2,int param_3,int param_
   int *piVar6;
   ulonglong uVar7;
   ulonglong uVar8;
-  undefined4 uStack_70;
-  undefined4 uStack_6c;
+  struct { undefined4 first; undefined4 second; } stack_pair_70;
+
   uint uStack_68;
   undefined4 uStack_60;
   undefined4 uStack_5c;
@@ -61,7 +61,7 @@ undefined4 * fn_828D6D60(undefined4 *param_1,int *param_2,int param_3,int param_
   int iStack_50;
   undefined4 uStack_4c;
   uint uStack_48;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [48];
   
   uStack_58 = *(uint *)(param_3 + 8);
   piVar6 = (int *)0x0;
@@ -78,10 +78,10 @@ undefined4 * fn_828D6D60(undefined4 *param_1,int *param_2,int param_3,int param_
   lVar5 = (ulonglong)(uint)param_2[4] + (ulonglong)uStack_48;
   uVar7 = (ulonglong)uStack_58 - (ulonglong)uStack_48;
   if ((uVar7 & 0xffffffff) < (lVar5 - (ulonglong)uStack_68 & 0xffffffff)) {
-    uStack_70 = 0;
-    uStack_6c = 0;
+    stack_pair_70.first = 0;
+    stack_pair_70.second = 0;
     if ((piVar4 != (int *)0x0) && ((undefined4 *)*piVar4 != (undefined4 *)0x0)) {
-      uStack_70 = *(undefined4 *)*piVar4;
+      stack_pair_70.first = *(undefined4 *)*piVar4;
     }
     uStack_60 = 0;
     uStack_5c = 0;
@@ -90,7 +90,7 @@ undefined4 * fn_828D6D60(undefined4 *param_1,int *param_2,int param_3,int param_
     }
     iStack_50 = *param_2;
     uStack_4c = 0;
-    fn_828D6A20(auStack_40,&iStack_50,&uStack_60,&uStack_70);
+    fn_828D6A20(auStack_40,&iStack_50,&uStack_60,&stack_pair_70.first);
     uVar3 = uVar8 & 0xffffffff;
     while (uVar3 != 0) {
       fn_828B3640(param_2);
@@ -107,12 +107,12 @@ undefined4 * fn_828D6D60(undefined4 *param_1,int *param_2,int param_3,int param_
     iStack_50 = *param_2;
     uStack_4c = 0;
     uStack_48 = (uint)lVar5;
-    uStack_70 = 0;
-    uStack_6c = 0;
+    stack_pair_70.first = 0;
+    stack_pair_70.second = 0;
     if ((piVar4 != (int *)0x0) && ((undefined4 *)*piVar4 != (undefined4 *)0x0)) {
-      uStack_70 = *(undefined4 *)*piVar4;
+      stack_pair_70.first = *(undefined4 *)*piVar4;
     }
-    fn_828D6AF8(auStack_40,&uStack_70,&iStack_50,&uStack_60);
+    fn_828D6AF8(auStack_40,&stack_pair_70.first,&iStack_50,&uStack_60);
     uVar3 = uVar8 & 0xffffffff;
     while (uVar3 != 0) {
       fn_828B36D0(param_2);

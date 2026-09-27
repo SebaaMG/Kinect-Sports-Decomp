@@ -46,8 +46,8 @@ undefined8 fn_8255EF20(undefined8 param_1)
   undefined8 uVar5;
   char in_RESERVE;
   byte in_cr0;
-  undefined4 auStack_50 [4];
-  undefined1 auStack_40 [64];
+  undefined4 auStack_50;
+  undefined1 auStack_40 [1];
   
   uVar3 = fn_827F3AB0();
   uVar5 = 0;
@@ -67,8 +67,8 @@ undefined8 fn_8255EF20(undefined8 param_1)
       goto LAB_8255efac;
     }
   }
-  auStack_50[0] = 0;
-  fn_82811438(auStack_40,auStack_50,0x10);
+  auStack_50 = 0;
+  fn_82811438(auStack_40,&auStack_50,0x10);
   uVar4 = fn_82811080(0xffffffff8320a3e0,uVar3,auStack_40);
 LAB_8255efac:
   fn_827F3B90(param_1,uVar4,uVar3);

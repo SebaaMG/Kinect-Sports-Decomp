@@ -34,11 +34,11 @@ void fn_82827470(longlong param_1,undefined4 param_2,undefined8 param_3,undefine
 
 {
   undefined4 uStack_30;
-  int aiStack_2c [11];
+  int aiStack_2c;
   
   uStack_30 = param_2;
-  fn_82822510(param_1 + 0x2fc,0xffffffff828278f8,&uStack_30,aiStack_2c);
-  fn_82827390(param_1,*(undefined4 *)(aiStack_2c[0] + 0x10),param_3,param_4);
+  fn_82822510(param_1 + 0x2fc,0xffffffff828278f8,&uStack_30,&aiStack_2c);
+  fn_82827390(param_1,*(undefined4 *)(aiStack_2c + 0x10),param_3,param_4);
   return;
 }
 

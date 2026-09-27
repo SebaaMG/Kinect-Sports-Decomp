@@ -42,7 +42,7 @@ void fn_82577000(undefined8 param_1,int *param_2,undefined8 param_3,int param_4)
   char cVar3;
   undefined8 uVar2;
   double dVar4;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [32];
   
   piVar1 = (int *)param_2[0x25];
   dVar4 = (double)lbl_821CC160;

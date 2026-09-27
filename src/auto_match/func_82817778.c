@@ -35,11 +35,11 @@ void fn_82817778(int *param_1,undefined8 param_2,undefined8 param_3,undefined8 p
 
 {
   int iVar1;
-  undefined4 auStack_30 [12];
+  undefined4 auStack_30;
   
-  iVar1 = fn_828176F0(param_1,param_2,auStack_30);
+  iVar1 = fn_828176F0(param_1,param_2,&auStack_30);
   *(int *)(*(int *)(iVar1 * 8 + *param_1) + 0x14) = (int)param_5;
-  fn_82817930(auStack_30[0],param_3,param_4,param_5);
+  fn_82817930(auStack_30,param_3,param_4,param_5);
   return;
 }
 

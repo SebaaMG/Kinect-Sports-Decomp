@@ -44,7 +44,7 @@ void fn_82486BC0(int *param_1,undefined8 param_2)
   int iVar2;
   char cVar3;
   double dVar4;
-  undefined1 auStack_60 [32];
+  undefined1 auStack_60 [1];
   undefined1 auStack_40 [40];
   
   dVar4 = (double)fn_82522FF0();

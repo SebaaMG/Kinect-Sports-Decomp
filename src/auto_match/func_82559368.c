@@ -45,7 +45,7 @@ void fn_82559368(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefi
   undefined8 uVar1;
   undefined4 uStack0000002c;
   undefined4 auStack_a0 [4];
-  undefined1 auStack_90 [32];
+  undefined1 auStack_90 [16];
   undefined1 auStack_70 [32];
   undefined1 auStack_50 [80];
   

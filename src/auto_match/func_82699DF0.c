@@ -29,7 +29,7 @@ extern int fn_8267C498();
 extern int fn_82698C48();
 extern int fn_82698CC0();
 extern int fn_82699C58();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 void fn_82699DF0(int *param_1,int *param_2,int *param_3)
@@ -41,12 +41,12 @@ void fn_82699DF0(int *param_1,int *param_2,int *param_3)
   uint uVar4;
   ulonglong uVar5;
   int *piVar6;
-  int aiStack_40 [16];
+  int aiStack_40;
   
   iVar1 = param_2[0x10];
   uVar2 = param_1[1];
-  aiStack_40[0] = iVar1;
-  uVar4 = fn_82698C48(param_1,0,uVar2,aiStack_40,0xffffffff82698c28);
+  aiStack_40 = iVar1;
+  uVar4 = fn_82698C48(param_1,0,uVar2,&aiStack_40,0xffffffff82698c28);
   if ((uVar4 < uVar2) &&
      (piVar6 = (int *)(uVar4 * 4 + *param_1),
      *(int *)(*(int *)(uVar4 * 4 + *param_1) + 0x14) == iVar1)) {
@@ -63,7 +63,7 @@ void fn_82699DF0(int *param_1,int *param_2,int *param_3)
     if ((*(byte *)((int)param_2 + 0x4b) & 8) == 0) {
       piVar6 = piVar3 + 9;
     }
-    fn_82F68CC0(param_3 + 9,piVar6,0x20);
+    memcpy(param_3 + 9,piVar6,0x20);
     (**(code **)(*param_3 + 4))(param_3);
     piVar6 = param_2 + 9;
     if ((*(byte *)((int)param_2 + 0x4b) & 4) == 0) {

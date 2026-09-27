@@ -52,8 +52,8 @@ undefined8 fn_829C9A70(int *param_1)
   undefined8 *puVar3;
   longlong lVar4;
   undefined8 uStack_88;
-  undefined4 uStack_80;
-  int iStack_7c;
+  struct { undefined4 first; int second; } stack_pair_80;
+
   int iStack_78;
   int iStack_74;
   int iStack_70;
@@ -81,10 +81,10 @@ undefined8 fn_829C9A70(int *param_1)
       lVar4 = lVar4 + -1;
     } while (lVar4 != 0);
     *(undefined4 *)(puVar3 + 2) = 0;
-    uStack_80 = 0x19;
-    uVar2 = (*(code *)lbl_8315C3E8)(&uStack_80);
+    stack_pair_80.first = 0x19;
+    uVar2 = (*(code *)lbl_8315C3E8)(&stack_pair_80.first);
     if (-1 < (int)uVar2) {
-      *param_1 = iStack_7c * 0x32;
+      *param_1 = stack_pair_80.second * 0x32;
       param_1[3] = iStack_70 * 0x32;
       param_1[4] = iStack_6c * 0x32;
       param_1[5] = iStack_68 * 0x32;

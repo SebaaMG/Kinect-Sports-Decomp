@@ -34,8 +34,8 @@ void fn_8252B8B0(int *param_1)
 {
   int *piVar1;
   int iVar2;
-  undefined4 uStack_20;
-  undefined4 uStack_1c;
+  struct { undefined4 first; undefined4 second; } stack_pair_20;
+
   
   piVar1 = (int *)param_1[0x230];
   if (piVar1 != (int *)0x0) {
@@ -45,9 +45,9 @@ void fn_8252B8B0(int *param_1)
       param_1[99] = iVar2;
     }
     if ((param_1[0x24b] == 0) && (iVar2 = (**(code **)(*piVar1 + 0x14))(piVar1), iVar2 != 0)) {
-      uStack_20 = 0x40;
-      uStack_1c = 8;
-      (**(code **)(*param_1 + 0xc))(param_1,&uStack_20);
+      stack_pair_20.first = 0x40;
+      stack_pair_20.second = 8;
+      (**(code **)(*param_1 + 0xc))(param_1,&stack_pair_20.first);
       param_1[0x24b] = 1;
     }
   }

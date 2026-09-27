@@ -44,8 +44,8 @@ undefined8 fn_829BDA18(int param_1,undefined4 *param_2)
   undefined8 uVar4;
   ulonglong uVar6;
   int iVar7;
-  undefined4 uStack_50;
-  undefined4 uStack_4c;
+  struct { undefined4 first; undefined4 second; } stack_pair_50;
+
   int iStack_48;
   uint uStack_44;
   int iStack_40;
@@ -55,8 +55,8 @@ undefined8 fn_829BDA18(int param_1,undefined4 *param_2)
   if (((*(int *)(param_1 + 0x118) == 0) || (*(int *)(iVar2 + 0x28) != 0)) ||
      (iVar5 = fn_829BD4C0(), iVar5 != 0)) {
     iVar7 = 0;
-    uStack_50 = **(undefined4 **)(param_1 + 0x18);
-    uStack_4c = (*(undefined4 **)(param_1 + 0x18))[1];
+    stack_pair_50.first = **(undefined4 **)(param_1 + 0x18);
+    stack_pair_50.second = (*(undefined4 **)(param_1 + 0x18))[1];
     iVar5 = *(int *)(iVar2 + 0xc);
     uVar6 = (ulonglong)*(uint *)(iVar2 + 0x10);
     iStack_40 = param_1;
@@ -64,7 +64,7 @@ undefined8 fn_829BDA18(int param_1,undefined4 *param_2)
       do {
         puVar3 = (ushort *)*param_2;
         if ((int)uVar6 < 1) {
-          iVar5 = fn_829BCB40(&uStack_50,iVar5,uVar6,1);
+          iVar5 = fn_829BCB40(&stack_pair_50.first,iVar5,uVar6,1);
           if (iVar5 == 0) goto LAB_829bda60;
           uVar6 = (ulonglong)uStack_44;
           iVar5 = iStack_48;
@@ -78,8 +78,8 @@ undefined8 fn_829BDA18(int param_1,undefined4 *param_2)
       } while (iVar7 < *(int *)(param_1 + 0x168));
     }
     uVar4 = 1;
-    **(undefined4 **)(param_1 + 0x18) = uStack_50;
-    *(undefined4 *)(*(int *)(param_1 + 0x18) + 4) = uStack_4c;
+    **(undefined4 **)(param_1 + 0x18) = stack_pair_50.first;
+    *(undefined4 *)(*(int *)(param_1 + 0x18) + 4) = stack_pair_50.second;
     *(int *)(iVar2 + 0xc) = iVar5;
     *(int *)(iVar2 + 0x10) = (int)uVar6;
     *(int *)(iVar2 + 0x28) = *(int *)(iVar2 + 0x28) + -1;

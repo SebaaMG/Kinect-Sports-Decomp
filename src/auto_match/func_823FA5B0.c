@@ -31,7 +31,7 @@ extern unsigned int *auStack_70;
 extern unsigned int *auStack_80;
 extern unsigned int *auStack_8c;
 extern unsigned int *auStack_a0;
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int uStack_90;
 extern unsigned int uStack_94;
 extern unsigned int uStack_98;
@@ -49,7 +49,7 @@ void fn_823FA5B0(int param_1,undefined8 param_2,int param_3)
   undefined4 uVar5;
   undefined4 uVar6;
   undefined4 uVar7;
-  undefined1 auStack_a0 [4];
+  undefined1 auStack_a0;
   undefined4 uStack_9c;
   undefined4 uStack_98;
   undefined4 uStack_94;
@@ -58,7 +58,7 @@ void fn_823FA5B0(int param_1,undefined8 param_2,int param_3)
   undefined1 auStack_80 [16];
   undefined1 auStack_70 [16];
   undefined4 auStack_60 [8];
-  undefined4 auStack_40 [16];
+  undefined4 auStack_40 [4];
   
   puVar3 = auStack_60;
   auStack_60[0] = 0;
@@ -78,7 +78,7 @@ void fn_823FA5B0(int param_1,undefined8 param_2,int param_3)
   } while (lVar4 != 0);
   (**(code **)(**(int **)(param_1 + 0x30) + 0x14))(*(int **)(param_1 + 0x30),param_2,&uStack_9c);
   (**(code **)(**(int **)(param_1 + 0x38) + 0x14))(*(int **)(param_1 + 0x38),param_2,auStack_80);
-  (**(code **)(**(int **)(param_1 + 0x40) + 0x14))(*(int **)(param_1 + 0x40),param_2,auStack_a0);
+  (**(code **)(**(int **)(param_1 + 0x40) + 0x14))(*(int **)(param_1 + 0x40),param_2,&auStack_a0);
   (**(code **)(**(int **)(param_1 + 0x48) + 0x14))(*(int **)(param_1 + 0x48),param_2,&uStack_98);
   (**(code **)(**(int **)(param_1 + 0x50) + 0x14))(*(int **)(param_1 + 0x50),param_2,&uStack_94);
   (**(code **)(**(int **)(param_1 + 0x58) + 0x14))(*(int **)(param_1 + 0x58),param_2,&uStack_90);
@@ -97,7 +97,7 @@ void fn_823FA5B0(int param_1,undefined8 param_2,int param_3)
     puVar2[1] = uVar5;
     puVar2[2] = uVar6;
     puVar2[3] = uVar7;
-    *(undefined1 *)(*(int *)(param_1 + 0x10) + param_3) = auStack_a0[0];
+    *(undefined1 *)(*(int *)(param_1 + 0x10) + param_3) = auStack_a0;
     *(undefined4 *)(*(int *)(param_1 + 0x14) + param_3) = uStack_98;
     iVar1 = *(int *)(param_1 + 0x1c);
     *(undefined4 *)(*(int *)(param_1 + 0x18) + param_3) = uStack_94;
@@ -113,8 +113,8 @@ void fn_823FA5B0(int param_1,undefined8 param_2,int param_3)
     puVar2[1] = uVar5;
     puVar2[2] = uVar6;
     puVar2[3] = uVar7;
-    fn_82F68CC0(*(int *)(param_1 + 0x28) + param_3,auStack_60,0x20);
-    fn_82F68CC0(*(int *)(param_1 + 0x2c) + param_3,auStack_40,0x20);
+    memcpy(*(int *)(param_1 + 0x28) + param_3,auStack_60,0x20);
+    memcpy(*(int *)(param_1 + 0x2c) + param_3,auStack_40,0x20);
   }
   return;
 }

@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_38;
 extern int fn_827C6280();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int uStack_3c;
 extern unsigned int uStack_40;
 
@@ -37,24 +37,24 @@ void fn_827C6730(int *param_1)
 {
   uint uVar1;
   char cVar2;
-  undefined4 uStack_40;
-  undefined4 uStack_3c;
+  struct { undefined4 first; undefined4 second; } stack_pair_40;
+
   undefined1 auStack_38 [24];
   int *piStack_20;
   
   uVar1 = param_1[0x57];
-  uStack_40 = *(undefined4 *)param_1[6];
-  uStack_3c = ((undefined4 *)param_1[6])[1];
-  fn_82F68CC0(auStack_38,(ulonglong)uVar1 + 0xc,0x18);
+  stack_pair_40.first = *(undefined4 *)param_1[6];
+  stack_pair_40.second = ((undefined4 *)param_1[6])[1];
+  memcpy(auStack_38,(ulonglong)uVar1 + 0xc,0x18);
   piStack_20 = param_1;
-  cVar2 = fn_827C6280(&uStack_40);
+  cVar2 = fn_827C6280(&stack_pair_40.first);
   if (cVar2 == '\0') {
     *(undefined4 *)(*param_1 + 0x14) = 0x18;
     (**(code **)*param_1)(param_1);
   }
-  *(undefined4 *)param_1[6] = uStack_40;
-  *(undefined4 *)(param_1[6] + 4) = uStack_3c;
-  fn_82F68CC0((ulonglong)uVar1 + 0xc,auStack_38,0x18);
+  *(undefined4 *)param_1[6] = stack_pair_40.first;
+  *(undefined4 *)(param_1[6] + 4) = stack_pair_40.second;
+  memcpy((ulonglong)uVar1 + 0xc,auStack_38,0x18);
   return;
 }
 

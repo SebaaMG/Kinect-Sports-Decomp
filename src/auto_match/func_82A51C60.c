@@ -45,7 +45,7 @@ longlong fn_82A51C60(int *param_1,uint param_2,int *param_3,ulonglong param_4)
   int iVar5;
   uint uVar6;
   uint uVar7;
-  int *apiStack_40 [16];
+  int * apiStack_40;
   
   param_1[0xe] = param_2;
   lVar2 = fn_82A51730();
@@ -53,15 +53,15 @@ longlong fn_82A51C60(int *param_1,uint param_2,int *param_3,ulonglong param_4)
     return lVar2;
   }
   if ((param_2 & 8) != 0) {
-    apiStack_40[0] = (int *)0x0;
-    lVar2 = fn_82A43118(apiStack_40);
+    apiStack_40 = (int *)0x0;
+    lVar2 = fn_82A43118(&apiStack_40);
     if (lVar2 < 0) {
       return lVar2;
     }
     uVar1 = *(undefined4 *)(param_1[0x1e] + 4);
     uVar3 = (**(code **)(*param_1 + 0x68))(param_1);
-    lVar2 = fn_82A507C0(param_1,apiStack_40[0],uVar3,uVar1,uVar1,param_1 + 0x21);
-    (**(code **)(*apiStack_40[0] + 8))(apiStack_40[0]);
+    lVar2 = fn_82A507C0(param_1,apiStack_40,uVar3,uVar1,uVar1,param_1 + 0x21);
+    (**(code **)(*apiStack_40 + 8))(apiStack_40);
   }
   if ((int)lVar2 < 0) {
     return lVar2;

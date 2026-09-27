@@ -39,19 +39,19 @@ void fn_82779B30(byte *param_1,undefined4 param_2)
 
 {
   uint uStack_40;
-  uint uStack_3c;
-  uint uStack_38;
+  struct { uint first; uint second; } stack_pair_3c;
+
   uint auStack_34 [3];
   undefined4 uStack_28;
   
   uStack_40 = (uint)*param_1;
   auStack_34[1] = 2;
-  uStack_3c = (uint)param_1[3];
-  uStack_38 = (uint)param_1[2];
+  stack_pair_3c.first = (uint)param_1[3];
+  stack_pair_3c.second = (uint)param_1[2];
   uStack_28 = 0x200;
   auStack_34[0] = (uint)param_1[1];
   auStack_34[2] = param_2;
-  fn_82779AA8(auStack_34 + 1,0xffffffff82015440,auStack_34,&uStack_38,&uStack_3c,&uStack_40);
+  fn_82779AA8(auStack_34 + 1,0xffffffff82015440,auStack_34,&stack_pair_3c.second,&stack_pair_3c.first,&uStack_40);
   return;
 }
 

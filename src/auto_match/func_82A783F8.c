@@ -46,28 +46,28 @@ longlong fn_82A783F8(int param_1)
   undefined8 uVar2;
   longlong lVar3;
   int iVar5;
-  undefined4 uStack_60;
-  uint uStack_5c;
+  struct { undefined4 first; uint second; } stack_pair_60;
+
   undefined1 *puStack_58;
   uint uStack_54;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [64];
   
   iVar4 = fn_82A59718(*(undefined4 *)(param_1 + 4));
   puStack_58 = *(undefined1 **)(param_1 + 0x78);
-  uStack_60 = *(undefined4 *)(iVar4 + 0x2c);
+  stack_pair_60.first = *(undefined4 *)(iVar4 + 0x2c);
   if (*(int *)(param_1 + 8) != 0) {
-    uVar2 = fn_82A49C98(uStack_60,1);
+    uVar2 = fn_82A49C98(stack_pair_60.first,1);
     fn_82A49DF8(auStack_50,0x28,1,*(undefined2 *)(*(int *)(param_1 + 0x78) + 2),
                       *(undefined4 *)(*(int *)(param_1 + 0x78) + 4),0x10,0x10,uVar2);
     puStack_58 = auStack_50;
   }
   uVar1 = *(ushort *)(*(int *)(iVar4 + 0x2c) + 0xc);
   trapWord(6,(ulonglong)uVar1,0);
-  uStack_5c = *(uint *)(iVar4 + 0x34) / (uint)uVar1;
-  uStack_54 = uStack_5c;
+  stack_pair_60.second = *(uint *)(iVar4 + 0x34) / (uint)uVar1;
+  uStack_54 = stack_pair_60.second;
   (**(code **)(**(int **)(param_1 + 0xfc) + 0x24))();
   lVar3 = (**(code **)(**(int **)(param_1 + 0xfc) + 0x20))
-                    (*(int **)(param_1 + 0xfc),1,&puStack_58,1,&uStack_60);
+                    (*(int **)(param_1 + 0xfc),1,&puStack_58,1,&stack_pair_60.first);
   if (-1 < lVar3) {
     fn_82A40BA8(param_1 + 0x38);
     fn_82A76380();

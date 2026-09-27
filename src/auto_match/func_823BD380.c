@@ -32,17 +32,16 @@ extern unsigned int lbl_821B5F24;
 
 
 undefined4 *
-fn_823BD380(undefined4 *param_1,undefined4 param_2,undefined4 param_3,undefined4 param_4,
-             undefined4 param_5,undefined4 param_6,undefined4 param_7,undefined4 param_8)
+fn_823BD380(undefined4 *param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4, undefined4 param_5, undefined4 param_6, undefined4 param_7, undefined4 param_8, undefined4 in_stack_00000054, undefined4 in_stack_0000005c, undefined4 in_stack_00000064)
 
 {
   undefined4 *puVar1;
   undefined4 *puVar3;
   ulonglong uVar2;
   undefined4 *puVar4;
-  undefined4 in_stack_00000054;
-  undefined4 in_stack_0000005c;
-  undefined4 in_stack_00000064;
+
+
+
   
   puVar4 = (undefined4 *)0x0;
   param_1[1] = 0;

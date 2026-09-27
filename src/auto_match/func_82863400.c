@@ -49,7 +49,7 @@ void fn_82863400(float *param_1,float *param_2,undefined8 param_3,undefined8 par
   longlong lVar1;
   undefined1 *puVar2;
   double dVar3;
-  undefined1 auStack_90 [12];
+  undefined1 auStack_90 [1];
   undefined1 auStack_84 [12];
   undefined1 auStack_78 [12];
   undefined1 auStack_6c [12];

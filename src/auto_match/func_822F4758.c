@@ -122,7 +122,7 @@ void fn_822F4758(undefined8 param_1,undefined8 param_2,undefined8 param_3)
   undefined1 auStack_e8 [4];
   int iStack_e4;
   undefined1 auStack_e0 [16];
-  undefined1 auStack_d0 [208];
+  undefined1 auStack_d0 [64];
   
   iVar5 = fn_82F6A53C();
   iVar1 = (int)param_2;

@@ -27,19 +27,19 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *__imp__XboxHardwareInfo;
 extern unsigned int *auStack_40;
-extern int fn_82A27F98();
+extern int RtlCreateHeap();
 extern unsigned int lbl_8329EB44;
 extern unsigned int uStack_48;
 
 
-bool fn_82A370D0(void)
+bool XapiInitDebugHeap(void)
 
 {
   ulonglong uVar1;
   undefined8 *puVar2;
   longlong lVar3;
   undefined8 uStack_48;
-  undefined4 auStack_40 [12];
+  undefined4 auStack_40;
   
   if ((*__imp__XboxHardwareInfo & 0x10) == 0) {
     uVar1 = (ulonglong)lbl_8329EB44;
@@ -53,9 +53,9 @@ bool fn_82A370D0(void)
       lVar3 = lVar3 + -1;
     } while (lVar3 != 0);
     uVar1 = (ulonglong)lbl_8329EB44;
-    auStack_40[0] = 0x30;
+    auStack_40 = 0x30;
     if (uVar1 == 0) {
-      uVar1 = fn_82A27F98(0xc1002,0,0x100000,0x1000,0,auStack_40);
+      uVar1 = RtlCreateHeap(0xc1002,0,0x100000,0x1000,0,&auStack_40);
       lbl_8329EB44 = (uint)uVar1;
     }
   }

@@ -34,8 +34,8 @@ extern unsigned int uStack_30;
 void fn_82684E28(int param_1,int *param_2)
 
 {
-  undefined4 uStack_30;
-  undefined4 uStack_2c;
+  struct { undefined4 first; undefined4 second; } stack_pair_30;
+
   
   if (param_2 != (int *)0x0) {
     fn_8267C4C8(param_2);
@@ -45,14 +45,14 @@ void fn_82684E28(int param_1,int *param_2)
   }
   *(int **)(param_1 + 0xc) = param_2;
   if (param_2 == (int *)0x0) {
-    uStack_30 = 0;
+    stack_pair_30.first = 0;
     *(undefined4 *)(param_1 + 0x20) = 0;
   }
   else {
-    (**(code **)(*param_2 + 4))(param_2,&uStack_30);
-    *(undefined4 *)(param_1 + 0x20) = uStack_2c;
+    (**(code **)(*param_2 + 4))(param_2,&stack_pair_30.first);
+    *(undefined4 *)(param_1 + 0x20) = stack_pair_30.second;
   }
-  *(undefined4 *)(param_1 + 0x1c) = uStack_30;
+  *(undefined4 *)(param_1 + 0x1c) = stack_pair_30.first;
   return;
 }
 

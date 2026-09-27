@@ -26,7 +26,7 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_120;
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 void fn_82539060(ulonglong param_1,int param_2,uint param_3)
@@ -42,7 +42,7 @@ void fn_82539060(ulonglong param_1,int param_2,uint param_3)
   longlong lVar8;
   ulonglong uVar9;
   ulonglong uVar10;
-  undefined1 auStack_120 [288];
+  undefined1 auStack_120 [176];
   
   iVar2 = (param_2 - (int)param_1) / 0xc4;
   lVar8 = (longlong)iVar2;
@@ -66,9 +66,9 @@ void fn_82539060(ulonglong param_1,int param_2,uint param_3)
         uVar9 = param_1;
       }
       do {
-        fn_82F68CC0(auStack_120,uVar7,0xc4);
-        fn_82F68CC0(uVar7,uVar9,0xc4);
-        fn_82F68CC0(uVar9,auStack_120,0xc4);
+        memcpy(auStack_120,uVar7,0xc4);
+        memcpy(uVar7,uVar9,0xc4);
+        memcpy(uVar9,auStack_120,0xc4);
         iVar1 = (int)(param_3 - (int)uVar9) / 0xc4;
         if (iVar2 < iVar1) {
           uVar10 = lVar8 * 0xc4 + uVar9;

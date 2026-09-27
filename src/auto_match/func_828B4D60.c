@@ -42,10 +42,10 @@ void fn_828B4D60(int param_1)
   undefined4 *puVar4;
   int iVar5;
   uint uVar6;
-  undefined4 uStack_50;
-  undefined4 uStack_4c;
+  struct { undefined4 first; undefined4 second; } stack_pair_50;
+
   uint uStack_48;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [16];
   
   piVar3 = (int *)fn_825089A0();
   uVar2 = (**(code **)(*piVar3 + 0xc))();
@@ -64,12 +64,12 @@ void fn_828B4D60(int param_1)
       uVar6 = uStack_48 - *(uint *)(iVar5 + 8);
     }
     if (uVar2 <= *(ulonglong *)(*(int *)(*(int *)(iVar5 + 4) + uVar6 * 4) + 0x10)) break;
-    uStack_50 = 0;
-    uStack_4c = 0;
+    stack_pair_50.first = 0;
+    stack_pair_50.second = 0;
     if ((piVar3 != (int *)0x0) && ((undefined4 *)*piVar3 != (undefined4 *)0x0)) {
-      uStack_50 = *(undefined4 *)*piVar3;
+      stack_pair_50.first = *(undefined4 *)*piVar3;
     }
-    puVar4 = (undefined4 *)fn_828B4C28(auStack_40,(undefined4 *)(param_1 + 8),&uStack_50);
+    puVar4 = (undefined4 *)fn_828B4C28(auStack_40,(undefined4 *)(param_1 + 8),&stack_pair_50.first);
     if ((piVar3 != (int *)*puVar4) &&
        (puVar1 = *(undefined4 **)*puVar4, puVar1 != (undefined4 *)0x0)) {
       piVar3 = (int *)*puVar1;

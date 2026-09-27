@@ -26,7 +26,7 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_430;
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 void fn_822AEB40(longlong param_1,ulonglong param_2,undefined8 param_3,int *param_4,int *param_5,
@@ -38,7 +38,7 @@ void fn_822AEB40(longlong param_1,ulonglong param_2,undefined8 param_3,int *para
   undefined4 uVar3;
   ulonglong uVar4;
   undefined4 *in_stack_00000054;
-  undefined1 auStack_430 [1072];
+  undefined1 auStack_430 [976];
   
   iVar2 = (int)param_1;
   uVar1 = *(uint *)((int)((param_2 + 0x236d & 0xffffffff) << 2) + iVar2);
@@ -46,8 +46,8 @@ void fn_822AEB40(longlong param_1,ulonglong param_2,undefined8 param_3,int *para
   if (uVar1 == 0xffffffff) {
     uVar4 = param_2;
   }
-  fn_82F68CC0(auStack_430,uVar4 * 1000 + param_1 + 0x128,1000);
-  fn_82F68CC0(param_3,auStack_430,1000);
+  memcpy(auStack_430,uVar4 * 1000 + param_1 + 0x128,1000);
+  memcpy(param_3,auStack_430,1000);
   *param_4 = (int)((uVar4 + 0x2278 & 0xffffffff) << 2) + iVar2;
   *param_5 = (int)((uVar4 + 0x229b & 0xffffffff) << 2) + iVar2;
   *param_6 = (int)((uVar4 + 0x22be & 0xffffffff) << 2) + iVar2;

@@ -82,7 +82,7 @@ void fn_82623930(int param_1)
   undefined4 uVar16;
   undefined4 uVar17;
   undefined4 uVar18;
-  undefined1 auStack_60 [16];
+  undefined1 auStack_60 [1];
   undefined1 auStack_50 [16];
   undefined1 auStack_40 [16];
   undefined1 auStack_30 [48];

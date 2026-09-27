@@ -47,14 +47,14 @@ undefined4 * fn_8288E150(undefined4 *param_1,int *param_2,int param_3,int param_
   int *piVar6;
   ulonglong uVar7;
   ulonglong uVar8;
-  undefined4 uStack_70;
-  undefined4 uStack_6c;
+  struct { undefined4 first; undefined4 second; } stack_pair_70;
+
   uint uStack_68;
   undefined4 uStack_60;
   undefined4 uStack_5c;
   uint uStack_58;
   int aiStack_50 [4];
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [32];
   
   uStack_58 = *(uint *)(param_3 + 8);
   piVar6 = (int *)0x0;
@@ -71,10 +71,10 @@ undefined4 * fn_8288E150(undefined4 *param_1,int *param_2,int param_3,int param_
   lVar5 = (ulonglong)(uint)param_2[4] + (ulonglong)(uint)aiStack_50[2];
   uVar7 = (ulonglong)uStack_58 - (ulonglong)(uint)aiStack_50[2];
   if ((uVar7 & 0xffffffff) < (lVar5 - (ulonglong)uStack_68 & 0xffffffff)) {
-    uStack_70 = 0;
-    uStack_6c = 0;
+    stack_pair_70.first = 0;
+    stack_pair_70.second = 0;
     if ((piVar4 != (int *)0x0) && ((undefined4 *)*piVar4 != (undefined4 *)0x0)) {
-      uStack_70 = *(undefined4 *)*piVar4;
+      stack_pair_70.first = *(undefined4 *)*piVar4;
     }
     uStack_60 = 0;
     uStack_5c = 0;
@@ -83,7 +83,7 @@ undefined4 * fn_8288E150(undefined4 *param_1,int *param_2,int param_3,int param_
     }
     aiStack_50[0] = *param_2;
     aiStack_50[1] = 0;
-    fn_8288D568(auStack_40,aiStack_50,&uStack_60,&uStack_70);
+    fn_8288D568(auStack_40,aiStack_50,&uStack_60,&stack_pair_70.first);
     uVar3 = uVar8 & 0xffffffff;
     while (uVar3 != 0) {
       if ((ulonglong)(uint)param_2[4] != 0) {
@@ -111,12 +111,12 @@ undefined4 * fn_8288E150(undefined4 *param_1,int *param_2,int param_3,int param_
     aiStack_50[0] = *param_2;
     aiStack_50[1] = 0;
     aiStack_50[2] = (int)lVar5;
-    uStack_70 = 0;
-    uStack_6c = 0;
+    stack_pair_70.first = 0;
+    stack_pair_70.second = 0;
     if ((piVar4 != (int *)0x0) && ((undefined4 *)*piVar4 != (undefined4 *)0x0)) {
-      uStack_70 = *(undefined4 *)*piVar4;
+      stack_pair_70.first = *(undefined4 *)*piVar4;
     }
-    fn_8288D640(auStack_40,&uStack_70,aiStack_50,&uStack_60);
+    fn_8288D640(auStack_40,&stack_pair_70.first,aiStack_50,&uStack_60);
     uVar3 = uVar8 & 0xffffffff;
     while (uVar3 != 0) {
       if (((ulonglong)(uint)param_2[4] != 0) &&

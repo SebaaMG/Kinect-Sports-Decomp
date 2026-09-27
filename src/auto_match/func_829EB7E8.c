@@ -33,7 +33,7 @@ extern int fn_829EAE90();
 extern int fn_82A28568();
 extern int fn_82A2AE60();
 extern int fn_82A2AE90();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int iStack_94;
 extern unsigned int iStack_98;
 extern unsigned int iStack_9c;
@@ -58,8 +58,8 @@ longlong fn_829EB7E8(int *param_1,int param_2,int param_3,undefined4 *param_4,in
   ulonglong uVar1;
   undefined4 *puVar4;
   longlong lVar5;
-  undefined4 uStack_b0;
-  undefined4 uStack_ac;
+  struct { undefined4 first; undefined4 second; } stack_pair_b0;
+
   undefined4 uStack_a8;
   undefined4 uStack_a4;
   int iStack_a0;
@@ -100,17 +100,17 @@ longlong fn_829EB7E8(int *param_1,int param_2,int param_3,undefined4 *param_4,in
     uStack_a8 = *(undefined4 *)(param_3 + 0x10);
     uStack_a4 = *(undefined4 *)(param_3 + 0x14);
     puVar4 = &uStack_90;
-    uStack_b0 = 0;
-    uStack_ac = 0;
+    stack_pair_b0.first = 0;
+    stack_pair_b0.second = 0;
     uStack_90 = 0;
     uStack_8c = 0;
     uStack_88 = uStack_a8;
     uStack_84 = uStack_a4;
   }
   else {
-    uStack_b0 = *param_4;
-    puVar4 = &uStack_b0;
-    uStack_ac = param_4[1];
+    stack_pair_b0.first = *param_4;
+    puVar4 = &stack_pair_b0.first;
+    stack_pair_b0.second = param_4[1];
     uStack_a8 = param_4[2];
     uStack_a4 = param_4[3];
   }
@@ -143,7 +143,7 @@ longlong fn_829EB7E8(int *param_1,int param_2,int param_3,undefined4 *param_4,in
     uVar1 = fn_82A28568(*(undefined4 *)(lbl_832179FC + 0x8f4cc),0,lVar5);
     param_1[0xb] = (int)uVar1;
     if ((uVar1 & 0xffffffff) != 0) {
-      fn_82F68CC0(uVar1,param_7,param_1[8] << 2);
+      memcpy(uVar1,param_7,param_1[8] << 2);
       goto LAB_829ebabc;
     }
 LAB_829ebaa0:
@@ -159,7 +159,7 @@ LAB_829ebabc:
       uVar1 = fn_82A28568(*(undefined4 *)(lbl_832179FC + 0x8f4cc),0,lVar5);
       param_1[0x2c] = (int)uVar1;
       if ((uVar1 & 0xffffffff) == 0) goto LAB_829ebaa0;
-      fn_82F68CC0(uVar1,param_8,param_1[8] << 2);
+      memcpy(uVar1,param_8,param_1[8] << 2);
     }
     param_1[9] = 0;
     lVar5 = fn_829EACE8(param_1);

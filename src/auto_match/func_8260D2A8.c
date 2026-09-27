@@ -29,21 +29,21 @@ extern unsigned int *auStack_3c;
 extern int fn_8256D798();
 extern int fn_8256DA00();
 extern int fn_82811400();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 int fn_8260D2A8(int param_1,int param_2)
 
 {
   undefined4 uVar1;
-  undefined1 auStack_3c [60];
+  undefined1 auStack_3c [12];
   
   fn_82811400(auStack_3c,0x10);
   uVar1 = *(undefined4 *)(param_2 + 0x18);
-  fn_82F68CC0(auStack_3c,param_2 + 0x1c,0x18);
+  memcpy(auStack_3c,param_2 + 0x1c,0x18);
   fn_82811400(param_1 + 0x1c,0x10);
   *(undefined4 *)(param_1 + 0x18) = uVar1;
-  fn_82F68CC0(param_1 + 0x1c,auStack_3c,0x18);
+  memcpy(param_1 + 0x1c,auStack_3c,0x18);
   fn_8256D798(param_1,0,0);
   fn_8256DA00(param_1,param_2,0,0xffffffffffffffff);
   return param_1;

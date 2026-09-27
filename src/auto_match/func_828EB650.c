@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_825089A0();
 extern int fn_828EA790();
-extern int fn_82F63EC8();
+extern int atexit();
 extern unsigned int *lbl_83214508;
 extern unsigned int lbl_83214514;
 extern unsigned int uRam8321450c;
@@ -56,7 +56,7 @@ undefined8 fn_828EB650(void)
       lbl_83214508[2] = lbl_83214508;
       *(undefined1 *)(lbl_83214508 + 5) = 1;
       *(undefined1 *)((int)lbl_83214508 + 0x15) = 1;
-      fn_82F63EC8(0xffffffff831418a0);
+      atexit(0xffffffff831418a0);
       uVar5 = lbl_83214514;
     }
     apuStack_40[0] = (undefined4 *)*lbl_83214508;
@@ -72,7 +72,7 @@ undefined8 fn_828EB650(void)
         lbl_83214508[2] = lbl_83214508;
         *(undefined1 *)(lbl_83214508 + 5) = 1;
         *(undefined1 *)((int)lbl_83214508 + 0x15) = 1;
-        fn_82F63EC8(0xffffffff831418a0);
+        atexit(0xffffffff831418a0);
         uVar5 = lbl_83214514;
       }
       if (puVar2 == lbl_83214508) goto LAB_828eb7a0;

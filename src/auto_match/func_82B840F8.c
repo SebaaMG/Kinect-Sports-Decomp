@@ -29,16 +29,15 @@ extern int fn_82ABDD90();
 extern int fn_82B83B68();
 
 
-void fn_82B840F8(int param_1,undefined8 param_2,undefined8 param_3,undefined8 param_4,uint param_5
-                  ,uint param_6,uint param_7)
+void fn_82B840F8(int param_1, undefined8 param_2, undefined8 param_3, undefined8 param_4, uint param_5, uint param_6, uint param_7, undefined8 unused_arg_8, undefined4 in_stack_00000054, uint in_stack_0000005c)
 
 {
   uint uVar1;
   int iVar2;
   uint *puVar3;
   ushort uVar4;
-  undefined4 in_stack_00000054;
-  uint in_stack_0000005c;
+
+
   
   fn_82B83B68(param_1,param_2,param_4,param_3,(int)param_3 == 0x68,in_stack_00000054);
   uVar1 = *(uint *)(param_1 + 8);

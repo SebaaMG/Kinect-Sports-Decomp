@@ -98,7 +98,7 @@ undefined4 * fn_82735960(undefined4 *param_1,int param_2)
   undefined1 uStack_181;
   undefined1 uStack_180;
   undefined1 uStack_17f;
-  undefined1 auStack_17e [14];
+  undefined1 auStack_17e;
   undefined1 auStack_170 [16];
   undefined1 auStack_160 [16];
   undefined1 auStack_150 [16];
@@ -117,7 +117,7 @@ undefined4 * fn_82735960(undefined4 *param_1,int param_2)
   undefined1 auStack_80 [16];
   undefined1 auStack_70 [16];
   undefined1 auStack_60 [16];
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [16];
   
   fn_826C0B08();
   *param_1 = &lbl_8201185C;
@@ -137,8 +137,8 @@ undefined4 * fn_82735960(undefined4 *param_1,int param_2)
   uVar1 = fn_826B14D8(*(undefined4 *)(param_2 + 0x78),0x20);
   fn_826829A0(puVar2,piVar3,uVar1);
   auStack_170[0] = 1;
-  auStack_17e[0] = 2;
-  fn_826A1CC8(puVar2,piVar3,0xffffffff8200feb0,auStack_170,auStack_17e);
+  auStack_17e = 2;
+  fn_826A1CC8(puVar2,piVar3,0xffffffff8200feb0,auStack_170,&auStack_17e);
   fn_82696330(auStack_170);
   uStack_17f = 2;
   auStack_60[0] = 1;

@@ -39,11 +39,11 @@ void fn_8245A260(int param_1)
   undefined8 uVar1;
   undefined4 uVar3;
   double dVar4;
-  int aiStack_30 [12];
+  int aiStack_30;
   
-  aiStack_30[0] = 0;
-  iVar2 = fn_82CE08F0(*(undefined4 *)(param_1 + 0x20),0x4004667f,aiStack_30);
-  if ((iVar2 == 0) && (aiStack_30[0] != 0)) {
+  aiStack_30 = 0;
+  iVar2 = fn_82CE08F0(*(undefined4 *)(param_1 + 0x20),0x4004667f,&aiStack_30);
+  if ((iVar2 == 0) && (aiStack_30 != 0)) {
     iVar2 = *(int *)(param_1 + 0x4f8);
     if (0x3ff < iVar2) {
       iVar2 = 0x400;

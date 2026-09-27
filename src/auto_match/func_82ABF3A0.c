@@ -45,12 +45,12 @@ void fn_82ABF3A0(undefined8 param_1,undefined8 param_2,undefined8 param_3,ulongl
   bool bVar5;
   undefined8 uVar6;
   undefined4 uStack_40;
-  undefined4 auStack_3c [15];
+  undefined4 auStack_3c;
   
   if ((param_4 & 0xffffffff) != 0) {
     lVar2 = fn_82D7E470(param_1,param_5,1);
     if (lVar2 != 0) {
-      cVar4 = fn_82ABDE58(param_1,lVar2,auStack_3c,&uStack_40);
+      cVar4 = fn_82ABDE58(param_1,lVar2,&auStack_3c,&uStack_40);
       if (cVar4 != '\0') {
         if ((*(uint *)(*(int *)(param_5 + 0x1c) + 0x4c) & 0x7ffff) == 0) {
           uVar6 = 0xffffffffffffffff;
@@ -65,7 +65,7 @@ void fn_82ABF3A0(undefined8 param_1,undefined8 param_2,undefined8 param_3,ulongl
           iVar3 = fn_82ABDD90(param_1,0x75,0,0);
           bVar5 = (*(uint *)(iVar3 + (uVar1 - 0x38)) & 7) == 3;
         }
-        fn_82A9F7E0(param_4,param_2,param_3,auStack_3c[0],uStack_40,uVar6,bVar5);
+        fn_82A9F7E0(param_4,param_2,param_3,auStack_3c,uStack_40,uVar6,bVar5);
       }
     }
   }

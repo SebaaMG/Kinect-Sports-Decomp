@@ -48,7 +48,7 @@ fn_82BD5B08(int param_1,ulonglong param_2,int *param_3,undefined8 param_4,undefi
   uint uVar7;
   int *piVar8;
   undefined4 uStack_84;
-  undefined1 auStack_80 [128];
+  undefined1 auStack_80 [16];
   
   uVar6 = 0xffffffff8007048f;
   iVar3 = fn_82BD3880();

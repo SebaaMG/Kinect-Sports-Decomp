@@ -27,8 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 
 
-void fn_829F2E18(int param_1,int *param_2,ushort *param_3,ulonglong *param_4,ulonglong *param_5,
-                  uint *param_6,uint *param_7,int *param_8)
+void fn_829F2E18(int param_1, int *param_2, ushort *param_3, ulonglong *param_4, ulonglong *param_5, uint *param_6, uint *param_7, int *param_8, int in_stack_00000054)
 
 {
   ushort uVar1;
@@ -39,7 +38,7 @@ void fn_829F2E18(int param_1,int *param_2,ushort *param_3,ulonglong *param_4,ulo
   longlong lVar6;
   longlong lVar7;
   longlong lVar8;
-  int in_stack_00000054;
+
   
   iVar4 = 0;
   if (0 < *param_8) {

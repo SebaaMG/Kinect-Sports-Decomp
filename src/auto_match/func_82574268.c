@@ -45,7 +45,7 @@ void fn_82574268(int param_1,int param_2)
   undefined8 uVar6;
   int iVar7;
   int iVar8;
-  undefined4 auStack_40 [16];
+  undefined4 auStack_40;
   
   iVar2 = *(int *)(param_1 + 0x10);
   iVar7 = 0;
@@ -56,7 +56,7 @@ void fn_82574268(int param_1,int param_2)
       iVar4 = *(int *)(iVar8 + *(int *)(iVar2 + 0x50) + 0x14);
       if (iVar4 != 0) {
         uVar6 = fn_82569B10();
-        fn_82549610(auStack_40,uVar6);
+        fn_82549610(&auStack_40,uVar6);
         bVar1 = *(byte *)(iVar4 + 0x28);
         bVar5 = bVar1 >> 6 & 1;
         if ((bVar5 == 0) && (param_2 != 0)) {
@@ -69,7 +69,7 @@ void fn_82574268(int param_1,int param_2)
         }
         *(byte *)(iVar4 + 0x28) = ((byte)param_2 & 1) << 6 | *(byte *)(iVar4 + 0x28) & 0xbf;
         fn_82A1BB18();
-        fn_8259C738(auStack_40[0]);
+        fn_8259C738(auStack_40);
       }
       iVar7 = iVar7 + 1;
       iVar8 = iVar8 + 0x20;

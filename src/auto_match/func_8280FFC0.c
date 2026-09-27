@@ -35,7 +35,7 @@ void fn_8280FFC0(undefined8 param_1)
 {
   undefined8 uVar1;
   ulonglong in_r7;
-  undefined1 auStack_50 [64];
+  undefined1 auStack_50 [48];
   
   fn_8280E890(param_1,auStack_50);
   if ((in_r7 & 0xffffffff) == 0) {

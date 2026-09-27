@@ -91,8 +91,8 @@ undefined8 fn_8265E818(short *param_1,undefined4 param_2)
   int iStack_30;
   int iStack_2c;
   uint uStack_28;
-  undefined4 uStack_24;
-  int iStack_20;
+  struct { undefined4 first; int second; } stack_pair_24;
+
   undefined4 *puStack_1c;
   undefined4 uStack_18;
   
@@ -191,16 +191,16 @@ undefined8 fn_8265E818(short *param_1,undefined4 param_2)
                 puVar5 = (undefined4 *)fn_8265CF50(0xffffffff831e7a1c,4);
                 fn_826660E8(0xffffffff831e7a4c,*puVar5);
               }
-              iStack_20 = fn_82668738(0x5c);
-              if (iStack_20 == 0) {
+              stack_pair_24.second = fn_82668738(0x5c);
+              if (stack_pair_24.second == 0) {
                 uStack_18 = 0;
               }
               else {
-                uStack_18 = fn_826632D8(iStack_20,uStack_4c & 0xffff,uStack_54 & 0xfff,iVar3,
+                uStack_18 = fn_826632D8(stack_pair_24.second,uStack_4c & 0xffff,uStack_54 & 0xfff,iVar3,
                                               iStack_30,psStack_c0,uStack_50);
               }
-              uStack_24 = uStack_18;
-              fn_8265F608(0xffffffff831e7a4c,&uStack_24);
+              stack_pair_24.first = uStack_18;
+              fn_8265F608(0xffffffff831e7a4c,&stack_pair_24.first);
               uVar1 = 1;
             }
             else {

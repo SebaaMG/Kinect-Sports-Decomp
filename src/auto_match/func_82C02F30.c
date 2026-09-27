@@ -57,7 +57,7 @@ undefined8 fn_82C02F30(int *param_1,int *param_2)
   int *piVar5;
   undefined1 auStack_60 [8];
   undefined1 auStack_58 [8];
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [32];
   
   (**(code **)(*param_2 + 4))(param_2);
   (**(code **)(*param_1 + 0x4c))(param_1);

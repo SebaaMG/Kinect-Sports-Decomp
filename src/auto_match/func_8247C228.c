@@ -40,7 +40,7 @@ fn_8247C228(undefined4 *param_1,int param_2,undefined8 param_3,undefined8 param_
 {
   undefined8 uVar1;
   double dVar2;
-  undefined1 auStack_70 [112];
+  undefined1 auStack_70 [1];
   
   dVar2 = (double)lbl_821CC160;
   param_1[3] = lbl_821CC160;

@@ -44,7 +44,7 @@ int * fn_826D7318(int *param_1,undefined8 param_2,char param_3)
   undefined8 uVar2;
   int *piVar4;
   ulonglong uVar3;
-  undefined4 auStack_30 [12];
+  undefined4 auStack_30;
   
   uVar1 = *(uint *)(param_1[7] + 0x14);
   uVar2 = (**(code **)(*param_1 + 0x30))();
@@ -55,8 +55,8 @@ int * fn_826D7318(int *param_1,undefined8 param_2,char param_3)
       uVar3 = 0;
     }
     else {
-      auStack_30[0] = 0x40000;
-      uVar3 = fn_826D4148(uVar3,*(undefined4 *)(param_1[7] + 0xc),param_1,piVar4,0,auStack_30,
+      auStack_30 = 0x40000;
+      uVar3 = fn_826D4148(uVar3,*(undefined4 *)(param_1[7] + 0xc),param_1,piVar4,0,&auStack_30,
                                 0);
     }
     if ((uVar3 & 0xffffffff) != 0) {

@@ -42,7 +42,7 @@ fn_822D54A8(undefined4 *param_1,undefined8 param_2,undefined8 param_3,int param_
   undefined4 uVar1;
   int iVar2;
   undefined4 *puVar3;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [1];
   
   param_1[1] = 1;
   *param_1 = &lbl_821AD588;

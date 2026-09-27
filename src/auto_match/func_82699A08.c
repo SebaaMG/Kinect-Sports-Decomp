@@ -38,12 +38,12 @@ undefined8 fn_82699A08(int *param_1,int param_2)
   uint uVar4;
   uint uVar5;
   int iVar6;
-  int aiStack_30 [12];
+  int aiStack_30;
   
   iVar1 = *(int *)(param_2 + 0x14);
   uVar2 = param_1[1];
-  aiStack_30[0] = iVar1;
-  uVar4 = fn_82698C48(param_1,0,uVar2,aiStack_30,0xffffffff82698c28);
+  aiStack_30 = iVar1;
+  uVar4 = fn_82698C48(param_1,0,uVar2,&aiStack_30,0xffffffff82698c28);
   if (uVar4 < uVar2) {
     iVar6 = uVar4 * 4;
     iVar3 = *(int *)(*param_1 + iVar6);

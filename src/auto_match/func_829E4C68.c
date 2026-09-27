@@ -57,25 +57,25 @@ undefined8 fn_829E4C68(undefined8 param_1,longlong param_2,undefined8 param_3,un
   double dVar2;
   float fStack_50;
   float fStack_4c;
-  float fStack_48;
-  float fStack_44;
+  struct { float first; float second; } stack_pair_48;
+
   float fStack_40;
   float fStack_3c;
   float fStack_38;
   undefined4 uStack_34;
   
   uVar1 = fn_829E37E0(param_3,&fStack_4c);
-  if ((((-1 < (int)uVar1) && (uVar1 = fn_829E3800(param_3,&fStack_48), -1 < (int)uVar1)) &&
+  if ((((-1 < (int)uVar1) && (uVar1 = fn_829E3800(param_3,&stack_pair_48.first), -1 < (int)uVar1)) &&
       (uVar1 = fn_829E37F0(param_3,&fStack_40), -1 < (int)uVar1)) &&
-     (uVar1 = fn_829DAFC8((double)fStack_4c,(double)fStack_48,(double)fStack_40,param_2 != 0),
+     (uVar1 = fn_829DAFC8((double)fStack_4c,(double)stack_pair_48.first,(double)fStack_40,param_2 != 0),
      -1 < (int)uVar1)) {
     dVar2 = (double)lbl_821AAD20;
     if ((int)param_2 == 1) {
-      fStack_4c = fStack_44;
-      fStack_48 = fStack_50;
+      fStack_4c = stack_pair_48.second;
+      stack_pair_48.first = fStack_50;
       fStack_40 = fStack_38;
-      if (((double)fStack_44 != dVar2) && ((double)fStack_50 != dVar2)) {
-        fn_829E3810((double)(lbl_820577E8 / (float)((double)fStack_44 * (double)fStack_50)),
+      if (((double)stack_pair_48.second != dVar2) && ((double)fStack_50 != dVar2)) {
+        fn_829E3810((double)(lbl_820577E8 / (float)((double)stack_pair_48.second * (double)fStack_50)),
                       param_3);
       }
     }
@@ -83,9 +83,9 @@ undefined8 fn_829E4C68(undefined8 param_1,longlong param_2,undefined8 param_3,un
       fStack_3c = (float)dVar2;
       uVar1 = fn_829E37D0(param_3,&fStack_3c);
       if (-1 < (int)uVar1) {
-        fn_829E3810((double)((fStack_48 * fStack_4c * fStack_3c) / (fStack_44 * fStack_50)),
+        fn_829E3810((double)((stack_pair_48.first * fStack_4c * fStack_3c) / (stack_pair_48.second * fStack_50)),
                       0xffffffff83217b50);
-        fn_829E3820((double)fStack_44,0xffffffff83217b50);
+        fn_829E3820((double)stack_pair_48.second,0xffffffff83217b50);
         fn_829E3830((double)fStack_38,0xffffffff83217b50);
         fn_829E3840((double)fStack_50,0xffffffff83217b50);
         uVar1 = 0;

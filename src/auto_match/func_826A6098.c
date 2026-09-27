@@ -38,7 +38,7 @@ undefined8 fn_826A6098(int param_1)
   undefined8 uVar1;
   undefined4 uStack_40;
   int iStack_3c;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [32];
   
   iStack_3c = *(int *)(param_1 + 0x38);
   if (iStack_3c == 0) {

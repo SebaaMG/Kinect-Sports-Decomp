@@ -35,21 +35,21 @@ bool fn_82B457F0(undefined8 param_1,int param_2,int *param_3)
 {
   char cVar1;
   int iStack_20;
-  int aiStack_1c [3];
+  int aiStack_1c;
   
   if (*(int *)(param_2 + 4) == 1) {
     if (*(int *)(param_2 + 0xc) == 0) {
-      cVar1 = fn_82B457C0(param_1,*(undefined4 *)(param_2 + 8),aiStack_1c,&iStack_20);
+      cVar1 = fn_82B457C0(param_1,*(undefined4 *)(param_2 + 8),&aiStack_1c,&iStack_20);
     }
     else {
       cVar1 = '\0';
     }
   }
   else {
-    cVar1 = fn_82B45740(param_1,param_2,aiStack_1c,&iStack_20);
+    cVar1 = fn_82B45740(param_1,param_2,&aiStack_1c,&iStack_20);
   }
   if (cVar1 != '\0') {
-    *param_3 = aiStack_1c[0] * iStack_20;
+    *param_3 = aiStack_1c * iStack_20;
   }
   return cVar1 != '\0';
 }

@@ -29,7 +29,7 @@ extern unsigned int *auStack_48;
 extern unsigned int *auStack_50;
 extern int fn_8223F670();
 extern int fn_8223F7A8();
-extern int fn_82F640B0();
+extern int memchr();
 
 
 undefined4 *
@@ -42,10 +42,10 @@ fn_8223F6E0(undefined4 *param_1,undefined8 param_2,undefined8 param_3,longlong p
   undefined8 *puVar3;
   longlong lVar4;
   undefined1 auStack_50 [8];
-  undefined1 auStack_48 [72];
+  undefined1 auStack_48 [1];
   
   while( true ) {
-    uVar2 = fn_82F640B0(param_4,0,param_5);
+    uVar2 = memchr(param_4,0,param_5);
     lVar4 = uVar2 - param_4;
     if ((uVar2 & 0xffffffff) == 0) {
       lVar4 = param_5;

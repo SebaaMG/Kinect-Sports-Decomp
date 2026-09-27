@@ -72,7 +72,7 @@ void fn_824C4408(int param_1,int param_2)
   longlong lVar10;
   longlong lVar11;
   ulonglong uVar12;
-  uint auStack_170 [4];
+  uint auStack_170;
   undefined **ppuStack_160;
   int iStack_15c;
   undefined ***pppuStack_150;
@@ -84,7 +84,7 @@ void fn_824C4408(int param_1,int param_2)
   undefined1 auStack_e0 [32];
   undefined1 auStack_c0 [32];
   undefined1 auStack_a0 [32];
-  undefined1 auStack_80 [128];
+  undefined1 auStack_80 [112];
   
   if (param_1 != 0) {
     if (param_1 != 1) {
@@ -154,10 +154,10 @@ LAB_824c4db8:
             } while ((int)lVar11 < 4);
             if ((uVar12 & 0xffffffff) == 0) {
               fn_82230110(auStack_80,0xffffffff82198540);
-              auStack_170[0] = fn_8225D288(iVar7,auStack_80,0);
+              auStack_170 = fn_8225D288(iVar7,auStack_80,0);
               fn_82230300(auStack_80,1,0);
-              fn_8225C168(iVar6,auStack_170);
-              uVar12 = (ulonglong)auStack_170[0];
+              fn_8225C168(iVar6,&auStack_170);
+              uVar12 = (ulonglong)auStack_170;
             }
 LAB_824c4e38:
             fn_8225D930(iVar7,uVar12);
@@ -213,10 +213,10 @@ LAB_824c4c24:
           } while ((int)lVar11 < 4);
           if ((uVar12 & 0xffffffff) == 0) {
             fn_82230110(auStack_c0,0xffffffff82198540);
-            auStack_170[0] = fn_8225D288(iVar7,auStack_c0,0);
+            auStack_170 = fn_8225D288(iVar7,auStack_c0,0);
             fn_82230300(auStack_c0,1,0);
-            fn_8225C168(iVar6,auStack_170);
-            uVar12 = (ulonglong)auStack_170[0];
+            fn_8225C168(iVar6,&auStack_170);
+            uVar12 = (ulonglong)auStack_170;
           }
 LAB_824c4ca4:
           fn_8225D930(iVar7,uVar12);
@@ -271,10 +271,10 @@ LAB_824c4a9c:
           } while ((int)lVar11 < 4);
           if ((uVar12 & 0xffffffff) == 0) {
             fn_82230110(auStack_100,0xffffffff82198540);
-            auStack_170[0] = fn_8225D288(iVar7,auStack_100,0);
+            auStack_170 = fn_8225D288(iVar7,auStack_100,0);
             fn_82230300(auStack_100,1,0);
-            fn_8225C168(iVar6,auStack_170);
-            uVar12 = (ulonglong)auStack_170[0];
+            fn_8225C168(iVar6,&auStack_170);
+            uVar12 = (ulonglong)auStack_170;
           }
 LAB_824c4b1c:
           fn_8225D930(iVar7,uVar12);
@@ -338,10 +338,10 @@ LAB_824c4914:
           } while ((int)lVar11 < 4);
           if ((uVar12 & 0xffffffff) == 0) {
             fn_82230110(auStack_a0,0xffffffff82198540);
-            auStack_170[0] = fn_8225D288(iVar7,auStack_a0,0);
+            auStack_170 = fn_8225D288(iVar7,auStack_a0,0);
             fn_82230300(auStack_a0,1,0);
-            fn_8225C168(iVar6,auStack_170);
-            uVar12 = (ulonglong)auStack_170[0];
+            fn_8225C168(iVar6,&auStack_170);
+            uVar12 = (ulonglong)auStack_170;
           }
 LAB_824c4994:
           fn_8225D930(iVar7,uVar12);
@@ -405,10 +405,10 @@ LAB_824c4758:
           } while ((int)lVar11 < 4);
           if ((uVar12 & 0xffffffff) == 0) {
             fn_82230110(auStack_120,0xffffffff82198540);
-            auStack_170[0] = fn_8225D288(iVar7,auStack_120,0);
+            auStack_170 = fn_8225D288(iVar7,auStack_120,0);
             fn_82230300(auStack_120,1,0);
-            fn_8225C168(iVar6,auStack_170);
-            uVar12 = (ulonglong)auStack_170[0];
+            fn_8225C168(iVar6,&auStack_170);
+            uVar12 = (ulonglong)auStack_170;
           }
 LAB_824c47d8:
           fn_8225D930(iVar7,uVar12);
@@ -480,10 +480,10 @@ LAB_824c459c:
           } while ((int)lVar11 < 4);
           if ((uVar12 & 0xffffffff) == 0) {
             fn_82230110(auStack_e0,0xffffffff82198540);
-            auStack_170[0] = fn_8225D288(iVar7,auStack_e0,0);
+            auStack_170 = fn_8225D288(iVar7,auStack_e0,0);
             fn_82230300(auStack_e0,1,0);
-            fn_8225C168(iVar6,auStack_170);
-            uVar12 = (ulonglong)auStack_170[0];
+            fn_8225C168(iVar6,&auStack_170);
+            uVar12 = (ulonglong)auStack_170;
           }
 LAB_824c461c:
           fn_8225D930(iVar7,uVar12);

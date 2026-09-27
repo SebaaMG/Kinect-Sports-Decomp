@@ -25,7 +25,7 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F64D08();
+extern int __ascii_stricmp();
 
 
 bool fn_828BA358(int param_1,byte *param_2)
@@ -45,7 +45,7 @@ bool fn_828BA358(int param_1,byte *param_2)
   }
   if (*(int *)(param_1 + 0x18) == 4) {
     if (((*(int *)(param_1 + 0x14) != 0) && (*(int *)(param_2 + 0xc) != 0)) &&
-       ((*(int *)(param_1 + 0x10) == *(int *)(param_2 + 8) && (iVar3 = fn_82F64D08(), iVar3 == 0)))
+       ((*(int *)(param_1 + 0x10) == *(int *)(param_2 + 8) && (iVar3 = __ascii_stricmp(), iVar3 == 0)))
        ) {
       return true;
     }

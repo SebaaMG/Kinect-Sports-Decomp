@@ -42,7 +42,7 @@ void fn_8228D3D0(undefined8 param_1,int param_2)
   bool bVar1;
   int *piVar2;
   undefined4 *puVar3;
-  undefined4 auStack_40 [2];
+  undefined4 auStack_40;
   undefined1 auStack_38 [4];
   int iStack_34;
   undefined1 auStack_30 [4];
@@ -56,9 +56,9 @@ void fn_8228D3D0(undefined8 param_1,int param_2)
     fn_822315A0();
   }
   if (bVar1) {
-    fn_82837D98(*(undefined4 *)(param_2 + 0x14),0,auStack_40);
+    fn_82837D98(*(undefined4 *)(param_2 + 0x14),0,&auStack_40);
     puVar3 = (undefined4 *)fn_82279C58(auStack_30,param_1);
-    fn_826728E8(*puVar3,0xffffffff821a84fc,auStack_40[0]);
+    fn_826728E8(*puVar3,0xffffffff821a84fc,auStack_40);
     if (iStack_2c != 0) {
       fn_822315A0();
     }

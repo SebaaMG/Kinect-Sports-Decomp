@@ -37,7 +37,7 @@ void fn_825FF908(int param_1,undefined4 *param_2,int *param_3)
   int iVar4;
   undefined4 *puVar5;
   ulonglong uVar6;
-  int aiStack_30 [12];
+  int aiStack_30;
   
   *param_2 = *(undefined4 *)(param_1 + 0x364);
   iVar1 = *(int *)(param_1 + 0x364);
@@ -48,10 +48,10 @@ void fn_825FF908(int param_1,undefined4 *param_2,int *param_3)
     if ((param_3[2] & 0x80000000U) == 0) {
       (**(code **)(*piVar2 + 0x10))(piVar2,*param_3,uVar3,4);
     }
-    aiStack_30[0] = *(int *)(iVar1 + 0x24);
-    iVar4 = (**(code **)(*piVar2 + 0xc))(piVar2,aiStack_30,4);
+    aiStack_30 = *(int *)(iVar1 + 0x24);
+    iVar4 = (**(code **)(*piVar2 + 0xc))(piVar2,&aiStack_30,4);
     *param_3 = iVar4;
-    param_3[2] = aiStack_30[0];
+    param_3[2] = aiStack_30;
   }
   uVar3 = *(uint *)(iVar1 + 0x24);
   uVar6 = (ulonglong)uVar3;

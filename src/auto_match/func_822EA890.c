@@ -41,7 +41,7 @@ fn_822EA890(undefined4 *param_1,undefined8 param_2,undefined8 param_3,undefined8
 {
   undefined4 *puVar1;
   undefined1 auStack_90 [32];
-  undefined1 auStack_70 [112];
+  undefined1 auStack_70 [64];
   
   puVar1 = (undefined4 *)fn_8265C9E0(0xac);
   if (puVar1 == (undefined4 *)0x0) {

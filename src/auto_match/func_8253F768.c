@@ -46,7 +46,7 @@ void fn_8253F768(int param_1)
   int *piVar4;
   longlong lVar5;
   longlong lVar6;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [1];
   
   fn_825715B8(param_1 + 0x380,*(undefined4 *)(param_1 + 0x7c0),*(undefined4 *)(param_1 + 0x4c)
                    );

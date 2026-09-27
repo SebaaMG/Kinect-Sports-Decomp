@@ -48,7 +48,7 @@ void fn_826EF5E8(int param_1)
   undefined1 uStack_5f;
   undefined1 uStack_5e;
   undefined1 auStack_5d [29];
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [16];
   
   if (*(char *)(param_1 + 8) == '\0') {
     uVar2 = *(uint *)(param_1 + 0x1c);

@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_8264DB08();
 extern int fn_82A1DDC0();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 void fn_8263A998(int param_1,undefined8 param_2)
@@ -39,7 +39,7 @@ void fn_8263A998(int param_1,undefined8 param_2)
   byte *pbVar4;
   byte *pbVar5;
   byte *pbVar6;
-  byte abStack_620 [1536];
+  byte abStack_620 [1520];
   byte abStack_20 [8];
   
   fn_8264DB08(abStack_620,param_2,0);
@@ -61,7 +61,7 @@ void fn_8263A998(int param_1,undefined8 param_2)
       }
       *(uint *)(param_1 + 0x5e70) = *(uint *)(param_1 + 0x5e70) | 0x80000000;
     }
-    fn_82F68CC0(pbVar6,abStack_620,0x600);
+    memcpy(pbVar6,abStack_620,0x600);
     *(uint *)(param_1 + 0x421c) = *(uint *)(param_1 + 0x421c) | 2;
   }
   return;

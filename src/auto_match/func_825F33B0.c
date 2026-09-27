@@ -61,7 +61,7 @@ extern int fn_828095F8();
 extern int fn_82837D98();
 extern int fn_828F1160();
 extern int fn_82F65E20();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern int fn_82F6A540();
 extern int fn_82F6A58C();
 extern unsigned int iStack_164;
@@ -212,12 +212,12 @@ void fn_825F33B0(undefined8 param_1,undefined8 param_2,longlong param_3)
     lVar15 = param_3 + -0x7cd693e0;
   }
   dVar16 = extraout_f1;
-  fn_82F68CC0(auStack_120,lVar15,0x40);
+  memcpy(auStack_120,lVar15,0x40);
   param_3 = param_3 + -0x7cd69420;
   if (iVar14 == 0) {
     param_3 = -0x7cd69730;
   }
-  fn_82F68CC0(auStack_e0,param_3,0x40);
+  memcpy(auStack_e0,param_3,0x40);
   fn_828F1160(&uStack_160,auStack_120,auStack_e0);
   dVar17 = (double)fn_82F65E20((double)(float)piVar12[0x14]);
   dVar19 = (double)(float)dVar17;

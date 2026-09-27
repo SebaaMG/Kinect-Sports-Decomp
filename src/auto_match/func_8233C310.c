@@ -50,7 +50,7 @@ uint * fn_8233C310(uint *param_1,int param_2,undefined8 param_3,undefined8 param
   undefined4 uStack0000003c;
   undefined1 auStack_40 [4];
   int iStack_3c;
-  undefined1 auStack_38 [56];
+  undefined1 auStack_38 [1];
   
   uStack0000003c = param_6;
   puVar3 = (uint *)fn_822EA970(auStack_40,param_3,param_7,*(undefined4 *)(param_2 + 0x80),

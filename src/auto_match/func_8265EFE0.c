@@ -52,7 +52,7 @@ void fn_8265EFE0(undefined4 param_1)
   undefined2 *puStack_3c;
   undefined1 auStack_38 [4];
   undefined1 auStack_34 [4];
-  undefined1 auStack_30 [28];
+  undefined1 auStack_30 [12];
   undefined1 *puStack_14;
   
   uStack00000014 = param_1;

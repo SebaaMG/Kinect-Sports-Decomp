@@ -28,7 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 extern int fn_82424AD0();
 extern int fn_8265CA20();
 extern int fn_828DB5B0();
-extern int fn_82F63CA0();
+extern int memmove();
 
 
 uint * fn_828DB668(uint *param_1,uint *param_2)
@@ -49,7 +49,7 @@ uint * fn_828DB668(uint *param_1,uint *param_2)
     if (uVar4 == 0) {
       uVar1 = *param_1;
       if (uVar1 != param_1[1]) {
-        fn_82F63CA0(uVar1,param_1[1],0);
+        memmove(uVar1,param_1[1],0);
         param_1[1] = uVar1;
       }
     }
@@ -76,7 +76,7 @@ uint * fn_828DB668(uint *param_1,uint *param_2)
           iVar7 = param_2[1] - (int)uVar8;
         }
         iVar7 = (iVar7 >> 2) * 4;
-        iVar5 = fn_82F63CA0(uVar1,uVar8,iVar7);
+        iVar5 = memmove(uVar1,uVar8,iVar7);
         param_1[1] = iVar5 + iVar7;
       }
       else {

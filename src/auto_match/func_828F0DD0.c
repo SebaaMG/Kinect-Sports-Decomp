@@ -33,12 +33,11 @@ extern unsigned int uStack_28;
 extern unsigned int uStack_2c;
 
 
-void fn_828F0DD0(undefined4 param_1,undefined4 param_2,undefined4 param_3,undefined4 param_4,
-                  undefined8 param_5,undefined8 param_6,undefined8 param_7,undefined8 param_8)
+void fn_828F0DD0(undefined4 param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4, undefined8 param_5, undefined8 param_6, undefined8 param_7, undefined8 param_8, undefined4 in_stack_00000054, undefined4 in_stack_0000005c)
 
 {
-  undefined4 in_stack_00000054;
-  undefined4 in_stack_0000005c;
+
+
   undefined **ppuStack_30;
   undefined4 uStack_2c;
   undefined4 uStack_28;

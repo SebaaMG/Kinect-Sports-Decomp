@@ -43,7 +43,7 @@ fn_82700B38(int param_1,undefined8 param_2,int *param_3,undefined8 param_4,undef
   int iVar4;
   undefined8 uVar2;
   int iVar5;
-  undefined1 auStack_60 [96];
+  undefined1 auStack_60 [16];
   
   if (*(int *)(param_1 + 0x68) == 0) {
     uVar2 = 0;

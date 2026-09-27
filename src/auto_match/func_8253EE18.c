@@ -35,7 +35,7 @@ extern int fn_8255DB38();
 extern int fn_82CE4118();
 extern int fn_82D82E28();
 extern int fn_82D8CD68();
-extern int fn_82F63CA0();
+extern int memmove();
 
 
 void fn_8253EE18(undefined8 param_1,undefined8 param_2,undefined8 param_3)
@@ -64,7 +64,7 @@ void fn_8253EE18(undefined8 param_1,undefined8 param_2,undefined8 param_3)
   undefined4 uVar20;
   undefined4 uVar21;
   undefined4 uVar22;
-  undefined1 auStack_80 [16];
+  undefined1 auStack_80 [1];
   undefined1 auStack_70 [16];
   undefined1 auStack_60 [16];
   undefined1 auStack_50 [80];
@@ -130,7 +130,7 @@ void fn_8253EE18(undefined8 param_1,undefined8 param_2,undefined8 param_3)
           piVar14 = piVar14 + 1;
         }
         else {
-          fn_82F63CA0(piVar15,piVar14,(*(int *)(iVar2 + 0x13c) - (int)piVar14 >> 2) << 2);
+          memmove(piVar15,piVar14,(*(int *)(iVar2 + 0x13c) - (int)piVar14 >> 2) << 2);
           *(int *)(iVar2 + 0x13c) = *(int *)(iVar2 + 0x13c) + -4;
         }
       } while (piVar15 != *(int **)(iVar2 + 0x13c));

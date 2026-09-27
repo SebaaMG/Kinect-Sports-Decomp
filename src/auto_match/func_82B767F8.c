@@ -26,7 +26,7 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_82AB15D0();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int iStack_25c;
 extern unsigned int lbl_821B597C;
 extern unsigned int uStack_230;
@@ -84,13 +84,13 @@ void fn_82B767F8(undefined4 *param_1)
   int iStack_25c;
   uint uStack_258;
   uint uStack_254;
-  uint uStack_240;
-  uint uStack_23c;
+  struct { uint first; uint second; } stack_pair_240;
+
   uint uStack_238;
   uint uStack_234;
   uint uStack_230;
   int aiStack_220 [32];
-  int aiStack_1a0 [32];
+  int aiStack_1a0 [1];
   int aiStack_120 [72];
   
   uVar2 = param_1[7];
@@ -121,7 +121,7 @@ void fn_82B767F8(undefined4 *param_1)
   iVar17 = *(int *)(uVar2 + 0x3360);
   bVar1 = *(int *)(uVar2 + 0x3368) != 0;
   if (bVar1) {
-    fn_82F68CC0(&uStack_240,iVar17,0x18);
+    memcpy(&stack_pair_240.first,iVar17,0x18);
     *piVar29 = *(int *)(iVar17 + 0x14);
     (*(code *)param_1[2])(*param_1,iVar17);
   }
@@ -132,36 +132,36 @@ void fn_82B767F8(undefined4 *param_1)
   piVar30 = aiStack_120;
   do {
     if (bVar1) {
-      uVar36 = (ulonglong)uStack_23c;
+      uVar36 = (ulonglong)stack_pair_240.second;
       if ((uVar33 & 0xffffffff) == uVar36) {
         iVar17 = (int)uVar39;
-        if ((uStack_240 & 1) != 0) {
+        if ((stack_pair_240.first & 1) != 0) {
           puVar25 = (ushort *)(iVar17 * 6 + uVar3);
           *puVar25 = (ushort)(uVar28 << 0xc) | *puVar25 & 0xfff;
           uVar15 = (uint)(uVar31 << 5) & 0x60 | *(uint *)(puVar25 + 1) & 0xffffff90 | 0xc;
           goto LAB_82b76c2c;
         }
-        if ((uStack_240 & 0x80000000) == 0) {
-          if ((uStack_240 & 0x8000) == 0) {
-            if (((uStack_240 & 2) == 0) && ((uStack_240 & 0x10000) == 0)) {
-              if ((uStack_240 & 4) == 0) {
-                if ((uStack_240 & 8) == 0) {
-                  if ((uStack_240 & 0x10) == 0) {
-                    if ((uStack_240 & 0x20) == 0) {
-                      if ((uStack_240 & 0x80) != 0) {
+        if ((stack_pair_240.first & 0x80000000) == 0) {
+          if ((stack_pair_240.first & 0x8000) == 0) {
+            if (((stack_pair_240.first & 2) == 0) && ((stack_pair_240.first & 0x10000) == 0)) {
+              if ((stack_pair_240.first & 4) == 0) {
+                if ((stack_pair_240.first & 8) == 0) {
+                  if ((stack_pair_240.first & 0x10) == 0) {
+                    if ((stack_pair_240.first & 0x20) == 0) {
+                      if ((stack_pair_240.first & 0x80) != 0) {
                         iVar17 = *(int *)((int)aiStack_220 + (int)(uVar28 << 2));
                         goto LAB_82b76b88;
                       }
-                      if ((uStack_240 & 0x40) == 0) {
-                        if ((uStack_240 & 0x400) != 0) {
+                      if ((stack_pair_240.first & 0x40) == 0) {
+                        if ((stack_pair_240.first & 0x400) != 0) {
                           puVar25 = (ushort *)(iVar17 * 6 + uVar3);
                           uVar15 = *(uint *)(puVar25 + 1) & 0xffff8000 | 0xb;
                           *puVar25 = *puVar25 | 4;
                           iStack_25c = iVar17;
                           goto LAB_82b76bec;
                         }
-                        if ((uStack_240 & 0x100) == 0) {
-                          if ((uStack_240 & 0x200) != 0) {
+                        if ((stack_pair_240.first & 0x100) == 0) {
+                          if ((stack_pair_240.first & 0x200) != 0) {
                             piVar30 = piVar30 + -1;
                             piVar32 = piVar32 + -1;
                             puVar25 = (ushort *)(iVar17 * 6 + uVar3);
@@ -299,7 +299,7 @@ LAB_82b76bec:
                       iVar17 = 1 << (uVar15 & 0x3e);
                     }
                     *puVar38 = *puVar38 & 0xfffff | iVar17 << 0x14 | *puVar38 & 0xfff00000;
-                    if ((uStack_240 & 0x10000) != 0) {
+                    if ((stack_pair_240.first & 0x10000) != 0) {
                       *puVar38 = (1 << ((uint)uVar10 & 0x3f) & 0x3fU) << 0xe | *puVar38;
                     }
                     uVar37 = uVar37 + 1;
@@ -355,7 +355,7 @@ LAB_82b76e58:
         iVar17 = *piVar29;
         bVar1 = *(int *)(uVar2 + 0x3368) != 0;
         if (bVar1) {
-          fn_82F68CC0(&uStack_240,iVar17,0x18);
+          memcpy(&stack_pair_240.first,iVar17,0x18);
           *piVar29 = *(int *)(iVar17 + 0x14);
           (*(code *)puStack00000014[2])(*puStack00000014,iVar17);
           uVar28 = (ulonglong)uStack_234;

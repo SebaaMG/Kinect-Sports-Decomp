@@ -25,7 +25,7 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F65AC0();
+extern int stricmp();
 
 
 undefined8 fn_82935C18(undefined4 *param_1,char *param_2,undefined4 *param_3)
@@ -59,7 +59,7 @@ LAB_82935ca8:
       pcVar6 = pcVar6 + 1;
     } while (cVar1 != '\0');
     if ((pcVar6 + (-1 - (int)pcVar2) == pcVar5 + (-1 - (int)param_2)) &&
-       (iVar4 = fn_82F65AC0(param_2), iVar4 == 0)) {
+       (iVar4 = stricmp(param_2), iVar4 == 0)) {
       uVar7 = *param_1;
       uVar3 = 0;
       goto LAB_82935ca8;

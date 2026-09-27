@@ -37,22 +37,22 @@ extern unsigned int uStack_20;
 void fn_826C5788(int *param_1)
 
 {
-  undefined4 uStack_20;
-  undefined4 uStack_1c;
+  struct { undefined4 first; undefined4 second; } stack_pair_20;
+
   undefined2 uStack_18;
   undefined1 uStack_16;
   undefined1 uStack_15;
   undefined1 uStack_14;
   undefined1 uStack_13;
   
-  uStack_1c = 0;
+  stack_pair_20.second = 0;
   uStack_18 = 0;
   uStack_16 = 0;
   uStack_14 = 0;
   uStack_13 = 0;
-  uStack_20 = 0x80007;
+  stack_pair_20.first = 0x80007;
   uStack_15 = 0xff;
-  (**(code **)(*param_1 + 0x6c))(param_1,&uStack_20);
+  (**(code **)(*param_1 + 0x6c))(param_1,&stack_pair_20.first);
   return;
 }
 

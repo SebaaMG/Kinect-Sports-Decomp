@@ -39,7 +39,7 @@ void fn_822AA508(int *param_1)
   undefined4 *puVar3;
   undefined4 *puVar4;
   int *piVar5;
-  undefined4 *apuStack_40 [16];
+  undefined4 * apuStack_40;
   
   for (piVar5 = (int *)*param_1; piVar5 < (int *)param_1[1]; piVar5 = piVar5 + 1) {
     iVar1 = *piVar5;
@@ -57,13 +57,13 @@ void fn_822AA508(int *param_1)
         fn_8265CA20(iVar2);
       }
       puVar3 = *(undefined4 **)(iVar1 + 4);
-      apuStack_40[0] = (undefined4 *)*puVar3;
-      while (apuStack_40[0] != puVar3) {
-        puVar4 = (undefined4 *)apuStack_40[0][4];
+      apuStack_40 = (undefined4 *)*puVar3;
+      while (apuStack_40 != puVar3) {
+        puVar4 = (undefined4 *)apuStack_40[4];
         if (puVar4 != (undefined4 *)0x0) {
           (**(code **)*puVar4)(puVar4,1);
         }
-        fn_82381BC0(apuStack_40);
+        fn_82381BC0(&apuStack_40);
       }
       puVar3 = *(undefined4 **)(*(int *)(iVar1 + 4) + 4);
       while (*(char *)((int)puVar3 + 0x15) == '\0') {

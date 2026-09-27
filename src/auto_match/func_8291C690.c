@@ -35,12 +35,12 @@ ulonglong fn_8291C690(undefined8 param_1,ulonglong param_2,undefined8 param_3)
 {
   int iVar2;
   ulonglong uVar1;
-  uint auStack_10 [4];
+  uint auStack_10;
   
   if ((param_2 & 0xffffffff) == 0) {
-    iVar2 = fn_8291C428(param_1,param_3,auStack_10);
+    iVar2 = fn_8291C428(param_1,param_3,&auStack_10);
     if (-1 < iVar2) {
-      uVar1 = (ulonglong)auStack_10[0];
+      uVar1 = (ulonglong)auStack_10;
 LAB_8291c6e0:
       return ~uVar1;
     }

@@ -37,7 +37,7 @@ undefined8 fn_82C056D8(int *param_1)
   undefined8 uVar2;
   undefined8 uVar4;
   uint uVar5;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [16];
   
   uVar4 = 0;
   if (param_1[0xb] != -1) {

@@ -37,15 +37,15 @@ double fn_82769828(int param_1,int param_2)
 {
   bool bVar1;
   undefined1 *puVar2;
-  undefined4 auStack_30 [2];
+  undefined4 auStack_30;
   short sStack_28;
   short sStack_26;
   short sStack_24;
   short sStack_22;
   
-  auStack_30[0] = *(undefined4 *)(param_1 + 8);
+  auStack_30 = *(undefined4 *)(param_1 + 8);
   puVar2 = (undefined1 *)(**(int **)(param_1 + 8) + param_2 * 8 + *(int *)(param_1 + 0x10) + 4);
-  fn_827672A0(auStack_30,CONCAT31(CONCAT21(CONCAT11(puVar2[3],puVar2[2]),puVar2[1]),*puVar2));
+  fn_827672A0(&auStack_30,CONCAT31(CONCAT21(CONCAT11(puVar2[3],puVar2[2]),puVar2[1]),*puVar2));
   if ((sStack_24 <= sStack_28) || (bVar1 = true, sStack_22 <= sStack_26)) {
     bVar1 = false;
   }

@@ -64,8 +64,8 @@ void fn_8269D548(void)
   double dVar7;
   double dVar8;
   double dVar9;
-  float fStack_c0;
-  float fStack_bc;
+  struct { float first; float second; } stack_pair_c0;
+
   undefined4 uStack_b8;
   undefined4 uStack_b4;
   undefined1 auStack_b0 [8];
@@ -109,35 +109,35 @@ void fn_8269D548(void)
       uStack_60 = uStack_80;
       uStack_5c = uStack_7c;
     }
-    fn_8268D008(&uStack_70,&fStack_c0,&uStack_b8);
-    fStack_c0 = (float)(dVar9 + (double)fStack_c0);
-    fStack_bc = (float)(dVar8 + (double)fStack_bc);
+    fn_8268D008(&uStack_70,&stack_pair_c0.first,&uStack_b8);
+    stack_pair_c0.first = (float)(dVar9 + (double)stack_pair_c0.first);
+    stack_pair_c0.second = (float)(dVar8 + (double)stack_pair_c0.second);
     if (cVar1 != '\0') {
-      dVar8 = (double)fStack_c0;
-      if (dVar7 <= (double)fStack_c0) {
+      dVar8 = (double)stack_pair_c0.first;
+      if (dVar7 <= (double)stack_pair_c0.first) {
         dVar8 = dVar7;
       }
       if (dVar8 < dVar6) {
         dVar8 = dVar6;
       }
-      fStack_c0 = (float)dVar8;
-      if ((double)fStack_bc < dVar5) {
-        dVar5 = (double)fStack_bc;
+      stack_pair_c0.first = (float)dVar8;
+      if ((double)stack_pair_c0.second < dVar5) {
+        dVar5 = (double)stack_pair_c0.second;
       }
       if (dVar4 <= dVar5) {
-        fStack_bc = (float)dVar5;
+        stack_pair_c0.second = (float)dVar5;
       }
       else {
-        fStack_bc = (float)dVar4;
+        stack_pair_c0.second = (float)dVar4;
       }
     }
     (**(code **)(*piVar2 + 0x14))(piVar2,0);
     auStack_b0[0] = 3;
-    dStack_a8 = (double)fStack_c0 * lbl_82005720;
+    dStack_a8 = (double)stack_pair_c0.first * lbl_82005720;
     dVar5 = lbl_82005720;
     (**(code **)(*piVar2 + 0xfc))(piVar2,0,auStack_b0,0);
     fn_82696330(auStack_b0);
-    dStack_98 = (double)fStack_bc * dVar5;
+    dStack_98 = (double)stack_pair_c0.second * dVar5;
     auStack_a0[0] = 3;
     (**(code **)(*piVar2 + 0xfc))(piVar2,1,auStack_a0,0);
     fn_82696330(auStack_a0);

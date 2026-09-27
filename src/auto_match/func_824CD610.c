@@ -64,7 +64,7 @@ void fn_824CD610(int param_1)
   undefined1 auStack_110 [32];
   undefined1 auStack_f0 [32];
   undefined1 auStack_d0 [4];
-  undefined1 auStack_cc [204];
+  undefined1 auStack_cc [140];
   
   fn_82230110(auStack_1b0,0xffffffff821c0b64);
   fn_82897DF8(param_1 + 0x34,param_1,auStack_1b0);

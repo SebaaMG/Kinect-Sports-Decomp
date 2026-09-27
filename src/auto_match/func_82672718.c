@@ -43,7 +43,7 @@ void fn_82672718(int param_1)
   undefined8 uVar2;
   ulonglong uVar4;
   undefined1 auStack_60 [16];
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [32];
   
   fn_8266EC60();
   iVar3 = fn_8266C738();

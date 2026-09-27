@@ -42,7 +42,7 @@ ulonglong fn_82699B40(int *param_1,int param_2)
   undefined8 uVar4;
   int iVar5;
   int iStack_50;
-  int aiStack_4c [19];
+  int aiStack_4c;
   
   iVar5 = *param_1;
   piVar1 = *(int **)(param_2 * 4 + iVar5);
@@ -63,8 +63,8 @@ ulonglong fn_82699B40(int *param_1,int param_2)
           fn_826997B0(param_1,param_2);
           iVar2 = iStack_50;
           *(int *)(iStack_50 + 0x14) = iVar5;
-          aiStack_4c[0] = iVar5;
-          uVar4 = fn_82698C48(param_1,0,param_1[1],aiStack_4c,0xffffffff82698c28);
+          aiStack_4c = iVar5;
+          uVar4 = fn_82698C48(param_1,0,param_1[1],&aiStack_4c,0xffffffff82698c28);
           fn_82699828(param_1,uVar4,&iStack_50);
           fn_8267C498(iVar2);
         }

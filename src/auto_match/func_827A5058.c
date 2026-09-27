@@ -71,7 +71,7 @@ undefined4 * fn_827A5058(undefined4 *param_1,int param_2)
   undefined4 uStack_e0;
   undefined1 uStack_dc;
   undefined1 auStack_d0 [48];
-  undefined1 auStack_a0 [160];
+  undefined1 auStack_a0 [128];
   
   param_1[1] = 1;
   *param_1 = &lbl_82015C34;

@@ -41,23 +41,23 @@ void fn_8288FAF8(int param_1,undefined4 param_2)
   int iVar3;
   int iVar4;
   undefined4 uStack0000001c;
-  int aiStack_30 [12];
+  int aiStack_30;
   
   iVar4 = param_1 + 0x5c;
   uStack0000001c = param_2;
-  fn_8288E040(aiStack_30,iVar4,&stack0x0000001c);
+  fn_8288E040(&aiStack_30,iVar4,&stack0x0000001c);
   piVar2 = (int *)fn_825089A0();
   uVar1 = (**(code **)(*piVar2 + 0xc))();
-  if (aiStack_30[0] == *(int *)(param_1 + 0x60)) {
+  if (aiStack_30 == *(int *)(param_1 + 0x60)) {
     iVar3 = fn_828807A0(iVar4);
     if ((undefined4 *)(iVar3 + 0x10) != (undefined4 *)0x0) {
       *(undefined4 *)(iVar3 + 0x10) = param_2;
       *(undefined8 *)(iVar3 + 0x18) = uVar1;
     }
-    fn_8288D718(aiStack_30,iVar4,iVar3,0);
+    fn_8288D718(&aiStack_30,iVar4,iVar3,0);
   }
   else {
-    *(undefined8 *)(aiStack_30[0] + 0x18) = uVar1;
+    *(undefined8 *)(aiStack_30 + 0x18) = uVar1;
   }
   return;
 }

@@ -30,7 +30,7 @@ extern int fn_82A73130();
 extern int fn_82A734A0();
 extern int fn_82A73710();
 extern int fn_82A75588();
-extern int fn_82F691F0();
+extern int memset();
 
 
 undefined8 fn_82A73A70(int *param_1)
@@ -43,7 +43,7 @@ undefined8 fn_82A73A70(int *param_1)
   int iVar5;
   int iVar6;
   undefined8 uVar7;
-  int aiStack_80 [32];
+  int aiStack_80 [16];
   
   iVar2 = *param_1;
   aiStack_80[0] = 0;
@@ -54,7 +54,7 @@ undefined8 fn_82A73A70(int *param_1)
     puVar3 = (undefined4 *)param_1[0x1e];
     *puVar3 = 1;
                     /* WARNING: Subroutine does not return */
-    fn_82F691F0(puVar3[1],0,(ulonglong)*(ushort *)(iVar2 + 0x22) << 2);
+    memset(puVar3[1],0,(ulonglong)*(ushort *)(iVar2 + 0x22) << 2);
   }
   iVar6 = param_1[0x16];
   do {
@@ -193,7 +193,7 @@ LAB_82a73f24:
           puVar3 = (undefined4 *)param_1[0x1e];
           *puVar3 = 0;
                     /* WARNING: Subroutine does not return */
-          fn_82F691F0(puVar3[1],0,(ulonglong)*(ushort *)(iVar2 + 0x22) << 2);
+          memset(puVar3[1],0,(ulonglong)*(ushort *)(iVar2 + 0x22) << 2);
         }
         param_1[0x16] = 1;
       }

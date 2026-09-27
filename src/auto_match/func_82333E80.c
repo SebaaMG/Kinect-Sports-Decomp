@@ -39,7 +39,7 @@ fn_82333E80(undefined4 *param_1,undefined8 param_2,undefined8 param_3,undefined8
 
 {
   undefined4 *puVar1;
-  undefined1 auStack_80 [128];
+  undefined1 auStack_80 [64];
   
   puVar1 = (undefined4 *)fn_8265C9E0(0x88);
   if (puVar1 == (undefined4 *)0x0) {

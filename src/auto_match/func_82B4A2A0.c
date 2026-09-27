@@ -39,7 +39,7 @@ undefined4 * fn_82B4A2A0(undefined8 param_1,undefined1 param_2,undefined8 param_
   undefined8 uVar1;
   undefined4 *puVar2;
   undefined4 uVar3;
-  undefined4 auStack_50 [20];
+  undefined4 auStack_50 [8];
   
   uVar1 = fn_82B47730(param_1,5,0);
   fn_82F6DCE0(uVar1,5,0xffffffff820d31c8,param_2,param_3);

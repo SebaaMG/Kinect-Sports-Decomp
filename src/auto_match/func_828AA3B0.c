@@ -38,12 +38,12 @@ void fn_828AA3B0(int param_1,int *param_2)
 {
   bool bVar1;
   char cVar2;
-  undefined8 auStack_30 [6];
+  undefined8 auStack_30;
   
   bVar1 = false;
   fn_8288B760(param_2);
   (**(code **)(*param_2 + 0x44))(param_2);
-  auStack_30[0] = (**(code **)(*param_2 + 0x48))(param_2);
+  auStack_30 = (**(code **)(*param_2 + 0x48))(param_2);
   cVar2 = fn_828B1340(param_1);
   if ((cVar2 != '\0') || (cVar2 = fn_828ED1A0(*(undefined4 *)(param_1 + 0x8c)), cVar2 != '\0')) {
     bVar1 = true;
@@ -52,7 +52,7 @@ void fn_828AA3B0(int param_1,int *param_2)
     fn_828AA188(param_1 + 0x188);
   }
   else {
-    fn_828A94B0(param_1,auStack_30);
+    fn_828A94B0(param_1,&auStack_30);
   }
   return;
 }

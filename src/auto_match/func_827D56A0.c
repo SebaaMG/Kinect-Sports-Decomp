@@ -35,7 +35,7 @@ void fn_827D56A0(int param_1,undefined8 param_2,undefined8 param_3,undefined8 pa
 
 {
   undefined8 auStack_50 [2];
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [16];
   
   auStack_50[0] = 0;
   fn_827D9798(auStack_40,0xffffffff8201ac8a,auStack_50,*(undefined4 *)(param_1 + 0x2c4));

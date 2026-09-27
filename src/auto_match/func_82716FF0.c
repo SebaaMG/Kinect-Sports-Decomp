@@ -48,10 +48,10 @@ fn_82716FF0(undefined4 *param_1,int param_2,undefined8 param_3,undefined8 param_
   undefined8 uVar2;
   int iVar3;
   uint uVar4;
-  undefined4 auStack_30 [12];
+  undefined4 auStack_30;
   
-  auStack_30[0] = *param_5;
-  fn_826A1050(param_1,param_3,param_4,auStack_30);
+  auStack_30 = *param_5;
+  fn_826A1050(param_1,param_3,param_4,&auStack_30);
   param_1[0x27] = param_2;
   param_1[0x28] = 0;
   *param_1 = &lbl_8200F858;

@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_82A43BF8();
 extern int fn_82A459A8();
-extern int fn_83142F1C();
+extern int XAudioGetVoiceCategoryVolume();
 
 
 void fn_82A40888(int param_1)
@@ -37,12 +37,12 @@ void fn_82A40888(int param_1)
   undefined4 *puVar2;
   int *piVar3;
   undefined4 *puVar4;
-  float afStack_30 [12];
+  float afStack_30;
   
-  fn_83142F1C(1,afStack_30);
-  if (afStack_30[0] != *(float *)(param_1 + 0x20c)) {
+  XAudioGetVoiceCategoryVolume(1,&afStack_30);
+  if (afStack_30 != *(float *)(param_1 + 0x20c)) {
     puVar4 = *(undefined4 **)(param_1 + 0x1fc);
-    *(float *)(param_1 + 0x20c) = afStack_30[0];
+    *(float *)(param_1 + 0x20c) = afStack_30;
     while (puVar4 != (undefined4 *)0x0) {
       if (puVar4 == (undefined4 *)0x0) {
         uVar1 = 0;

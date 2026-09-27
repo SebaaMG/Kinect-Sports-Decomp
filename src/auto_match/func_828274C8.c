@@ -36,7 +36,7 @@ void fn_828274C8(int param_1,int *param_2)
   undefined4 *puVar1;
   int iVar2;
   int iStack_30;
-  undefined4 *apuStack_2c [11];
+  undefined4 * apuStack_2c;
   
   param_1 = param_1 + 0x2f4;
   iVar2 = 0;
@@ -48,13 +48,13 @@ void fn_828274C8(int param_1,int *param_2)
       return;
     }
     puVar1 = *(undefined4 **)(*(int *)(iStack_30 + 0x28) + 4);
-    apuStack_2c[0] = (undefined4 *)*puVar1;
-    while (apuStack_2c[0] != puVar1) {
-      if (apuStack_2c[0][5] != 0) {
+    apuStack_2c = (undefined4 *)*puVar1;
+    while (apuStack_2c != puVar1) {
+      if (apuStack_2c[5] != 0) {
         iVar2 = iVar2 + 1;
         break;
       }
-      fn_82518FF0(apuStack_2c);
+      fn_82518FF0(&apuStack_2c);
     }
   } while( true );
 }

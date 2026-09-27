@@ -34,20 +34,20 @@ extern unsigned int uStack_2c;
 void fn_823F9728(int param_1,undefined8 param_2,int param_3)
 
 {
-  undefined1 auStack_30 [4];
+  undefined1 auStack_30;
   undefined4 uStack_2c;
   undefined4 uStack_28;
-  undefined4 auStack_24 [9];
+  undefined4 auStack_24 [1];
   
   (**(code **)(**(int **)(param_1 + 0x18) + 0x14))(*(int **)(param_1 + 0x18),param_2,&uStack_2c);
   (**(code **)(**(int **)(param_1 + 0x20) + 0x14))(*(int **)(param_1 + 0x20),param_2,&uStack_28);
   (**(code **)(**(int **)(param_1 + 0x28) + 0x14))(*(int **)(param_1 + 0x28),param_2,auStack_24);
-  (**(code **)(**(int **)(param_1 + 0x30) + 0x14))(*(int **)(param_1 + 0x30),param_2,auStack_30);
+  (**(code **)(**(int **)(param_1 + 0x30) + 0x14))(*(int **)(param_1 + 0x30),param_2,&auStack_30);
   if (param_3 != 0) {
     *(undefined4 *)(*(int *)(param_1 + 8) + param_3) = uStack_2c;
     *(undefined4 *)(*(int *)(param_1 + 0xc) + param_3) = uStack_28;
     *(undefined4 *)(*(int *)(param_1 + 0x10) + param_3) = auStack_24[0];
-    *(undefined1 *)(*(int *)(param_1 + 0x14) + param_3) = auStack_30[0];
+    *(undefined1 *)(*(int *)(param_1 + 0x14) + param_3) = auStack_30;
   }
   return;
 }

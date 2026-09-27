@@ -92,8 +92,8 @@ void fn_823B0CE8(undefined8 param_1,double param_2,double param_3,undefined8 par
   undefined4 in_stack_0000007c;
   undefined4 in_stack_00000084;
   undefined4 in_stack_0000008c;
-  float fStack_d0;
-  float fStack_cc;
+  struct { float first; float second; } stack_pair_d0;
+
   undefined1 auStack_c0 [16];
   int iStack_b0;
   int iStack_ac;
@@ -144,12 +144,12 @@ LAB_823b0ddc:
   else {
     fVar1 = *(float *)(iVar6 + 0x54) + lbl_831CA090;
     bVar10 = true;
-    puVar7 = (undefined4 *)((int)&fStack_d0 + (int)in_r0 & 0xfffffff0);
+    puVar7 = (undefined4 *)((int)&stack_pair_d0.first + (int)in_r0 & 0xfffffff0);
     *puVar7 = uVar19;
     puVar7[1] = uVar20;
     puVar7[2] = uVar21;
     puVar7[3] = uVar23;
-    if (fStack_cc <= fVar1) goto LAB_823b0ddc;
+    if (stack_pair_d0.second <= fVar1) goto LAB_823b0ddc;
   }
   if ((iVar4 == 0) || (extraout_f1 <= dVar14)) {
 LAB_823b0e10:
@@ -158,12 +158,12 @@ LAB_823b0e10:
   else {
     fVar1 = *(float *)(iVar6 + 0x54);
     bVar9 = true;
-    puVar7 = (undefined4 *)((int)&fStack_d0 + (int)in_r0 & 0xfffffff0);
+    puVar7 = (undefined4 *)((int)&stack_pair_d0.first + (int)in_r0 & 0xfffffff0);
     *puVar7 = uVar19;
     puVar7[1] = uVar20;
     puVar7[2] = uVar21;
     puVar7[3] = uVar23;
-    if (fStack_cc <= fVar1 + fVar2) goto LAB_823b0e10;
+    if (stack_pair_d0.second <= fVar1 + fVar2) goto LAB_823b0e10;
   }
   if ((bVar9) || (bVar9 = true, param_5 <= (double)lbl_831CA084)) {
     bVar9 = false;
@@ -251,14 +251,14 @@ LAB_823b0fd4:
   uVar24 = puVar7[3];
   *(undefined4 *)(iVar6 + 0x268) = *(undefined4 *)(iVar6 + 0x14c);
   *(undefined4 *)(iVar6 + 0x274) = *(undefined4 *)(iVar6 + 0x168);
-  fStack_d0 = (float)dVar14;
+  stack_pair_d0.first = (float)dVar14;
   *(undefined4 *)(iVar6 + 0x2a0) = *(undefined4 *)(iVar6 + 0x178);
   puVar7 = (undefined4 *)(iVar6 + 0x280U & 0xfffffff0);
   *puVar7 = uVar21;
   puVar7[1] = uVar23;
   puVar7[2] = uVar22;
   puVar7[3] = uVar24;
-  *(float *)(iVar6 + 0x90) = fStack_d0;
+  *(float *)(iVar6 + 0x90) = stack_pair_d0.first;
   *(undefined4 *)(iVar6 + 0x94) = uVar19;
   *(undefined4 *)(iVar6 + 0x98) = uVar20;
   fn_823B08C0(param_8);

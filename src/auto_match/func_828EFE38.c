@@ -38,7 +38,7 @@ undefined1 * fn_828EFE38(undefined1 *param_1,int param_2)
   char *pcVar4;
   uint uVar5;
   char acStack_140 [16];
-  char acStack_130 [304];
+  char acStack_130 [256];
   
   fn_82F64020(acStack_130,0x100,0xffffffff821c7f30);
   uVar5 = 0;

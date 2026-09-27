@@ -41,7 +41,7 @@ void fn_82520908(int param_1,undefined8 param_2,undefined8 param_3)
   longlong lVar1;
   int iVar2;
   undefined4 uStack_30;
-  undefined4 auStack_2c [11];
+  undefined4 auStack_2c;
   
   lVar1 = fn_8223C610(param_3,lbl_832961DC,0,0);
   *(int *)(param_1 + 0x7d8) = (int)lVar1;
@@ -50,8 +50,8 @@ void fn_82520908(int param_1,undefined8 param_2,undefined8 param_3)
     uStack_30 = 0;
     iVar2 = fn_82A1BCC0(0,0,0,&uStack_30);
     if (-1 < iVar2) {
-      auStack_2c[0] = 1000;
-      fn_82A1BC10(uStack_30,param_1 + 8,auStack_2c,param_1 + 0x3f0,
+      auStack_2c = 1000;
+      fn_82A1BC10(uStack_30,param_1 + 8,&auStack_2c,param_1 + 0x3f0,
                       *(undefined4 *)(param_1 + 0x7d8));
       fn_82A1BC70(uStack_30);
     }

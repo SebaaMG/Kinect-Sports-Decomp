@@ -56,7 +56,7 @@ longlong fn_8284C288(int param_1,undefined4 param_2)
   int iStack00000014;
   undefined4 uStack0000001c;
   uint uStack_60;
-  uint auStack_5c [3];
+  uint auStack_5c;
   undefined1 auStack_50 [28];
   undefined4 uStack_34;
   undefined4 uStack_30;
@@ -73,10 +73,10 @@ longlong fn_8284C288(int param_1,undefined4 param_2)
   uStack_60 = fn_8284A658(param_1,param_2);
   uStack_24 = uStack_60;
   fn_82BA02A8(&uStack_60,iStack00000014);
-  auStack_5c[0] = *(uint *)(iStack00000014 + 4);
-  uStack_20 = auStack_5c[0];
-  fn_82BA02A8(auStack_5c,iStack00000014);
-  if (auStack_5c[0] != uStack_60) {
+  auStack_5c = *(uint *)(iStack00000014 + 4);
+  uStack_20 = auStack_5c;
+  fn_82BA02A8(&auStack_5c,iStack00000014);
+  if (auStack_5c != uStack_60) {
     uStack_1c = uStack_60;
     uVar2 = fn_822462F0(uStack0000001c,(ulonglong)uStack_60 + 0xc);
     if ((int)LZCOUNT(uVar2) != 0) goto LAB_8284c3b4;

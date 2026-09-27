@@ -40,7 +40,7 @@ ulonglong fn_82A1F740(ulonglong param_1)
 {
   ulonglong uVar1;
   ulonglong uVar2;
-  undefined4 auStack_1090 [2];
+  undefined4 auStack_1090;
   uint auStack_1088 [2];
   undefined4 uStack_1080;
   undefined1 *puStack_107c;
@@ -48,17 +48,17 @@ ulonglong fn_82A1F740(ulonglong param_1)
   undefined1 auStack_1070 [16];
   undefined1 auStack_1060 [40];
   longlong alStack_1038 [3];
-  undefined1 auStack_1020 [4128];
+  undefined1 auStack_1020 [4112];
   
   RtlInitAnsiString(auStack_1070,0xffffffff82089290);
   uStack_1080 = 0xfffffffd;
   puStack_107c = auStack_1070;
   uStack_1078 = 0x40;
   uVar1 = (**(code **)(lbl_83219B8C + 0xc))
-                    (auStack_1090,0x40100000,&uStack_1080,auStack_1088,0,0,0,3);
+                    (&auStack_1090,0x40100000,&uStack_1080,auStack_1088,0,0,0,3);
   if ((-1 < (longlong)uVar1) &&
      (uVar1 = (**(code **)(lbl_83219B8C + 0x20))
-                        (auStack_1090[0],auStack_1088,auStack_1060,0x38,0x22), -1 < (longlong)uVar1)
+                        (auStack_1090,auStack_1088,auStack_1060,0x38,0x22), -1 < (longlong)uVar1)
      ) {
     uVar2 = param_1 & 0xffffffff;
     while (uVar2 != 0) {
@@ -66,9 +66,9 @@ ulonglong fn_82A1F740(ulonglong param_1)
       if ((param_1 & 0xffffffff) < 0x1000) {
         uVar2 = param_1;
       }
-      uVar1 = NtWriteFile(auStack_1090[0],0,0,0,auStack_1088,auStack_1020,0x1000,alStack_1038);
+      uVar1 = NtWriteFile(auStack_1090,0,0,0,auStack_1088,auStack_1020,0x1000,alStack_1038);
       if ((int)uVar1 == 0x103) {
-        uVar1 = NtWaitForSingleObjectEx(auStack_1090[0],1,0,0);
+        uVar1 = NtWaitForSingleObjectEx(auStack_1090,1,0,0);
         if ((longlong)uVar1 < 0) break;
         uVar1 = (ulonglong)auStack_1088[0];
       }
@@ -77,7 +77,7 @@ ulonglong fn_82A1F740(ulonglong param_1)
       param_1 = param_1 - uVar2;
       uVar2 = param_1;
     }
-    NtClose(auStack_1090[0]);
+    NtClose(auStack_1090);
   }
   return uVar1;
 }

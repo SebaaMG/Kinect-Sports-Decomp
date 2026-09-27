@@ -33,12 +33,11 @@ extern int fn_82BF4EE8();
 
 
 undefined8
-fn_82BF52A0(int param_1,undefined1 param_2,undefined8 param_3,undefined8 param_4,
-             undefined8 param_5,undefined8 param_6,undefined8 param_7,undefined8 param_8)
+fn_82BF52A0(int param_1, undefined1 param_2, undefined8 param_3, undefined8 param_4, undefined8 param_5, undefined8 param_6, undefined8 param_7, undefined8 param_8, undefined2 in_stack_00000056)
 
 {
   int iVar1;
-  undefined2 in_stack_00000056;
+
   
   iVar1 = fn_82BF4EE8(param_1,0x2a);
   if (iVar1 != 0) {

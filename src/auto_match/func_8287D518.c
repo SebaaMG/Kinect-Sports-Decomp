@@ -34,10 +34,10 @@ double fn_8287D518(longlong param_1,undefined4 param_2)
 
 {
   undefined4 uStack0000001c;
-  int aiStack_10 [4];
+  int aiStack_10;
   
   uStack0000001c = param_2;
-  fn_8287D6D8(aiStack_10,param_1 + 0xf0,&stack0x0000001c);
-  return (double)*(float *)(aiStack_10[0] + 0x38);
+  fn_8287D6D8(&aiStack_10,param_1 + 0xf0,&stack0x0000001c);
+  return (double)*(float *)(aiStack_10 + 0x38);
 }
 

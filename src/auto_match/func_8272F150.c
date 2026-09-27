@@ -81,7 +81,7 @@ extern int fn_827A0C20();
 extern int fn_827A2128();
 extern int fn_827A3BE8();
 extern int fn_827A8A28();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern int fn_82F6A53C();
 extern int fn_82F6A588();
 extern unsigned int lbl_82002AE0;
@@ -164,8 +164,8 @@ void fn_8272F150(undefined8 param_1,undefined8 param_2)
   float fStack_a4;
   float fStack_a0;
   float fStack_9c;
-  float fStack_90;
-  float fStack_8c;
+  struct { float first; float second; } stack_pair_90;
+
   float fStack_88;
   float fStack_84;
   float fStack_80;
@@ -183,7 +183,7 @@ void fn_8272F150(undefined8 param_1,undefined8 param_2)
   fStack_160 = pfVar12[4];
   fStack_15c = pfVar12[5];
   fn_8268CEC0(&fStack_170,piVar8 + 0x11);
-  fn_82F68CC0(auStack_d0,piVar11[0x11],0x20);
+  memcpy(auStack_d0,piVar11[0x11],0x20);
   fn_8268D5D8(auStack_d0,piVar8 + 9);
   iVar9 = (**(code **)(*piVar8 + 0x40))(piVar8);
   if (iVar9 == 0) goto LAB_8272f7bc;
@@ -207,15 +207,15 @@ void fn_8272F150(undefined8 param_1,undefined8 param_2)
     fStack_fc = (float)dVar23;
     fStack_f8 = (float)dVar23;
     fStack_f4 = (float)dVar23;
-    fStack_90 = fStack_170;
-    fStack_8c = fStack_16c;
+    stack_pair_90.first = fStack_170;
+    stack_pair_90.second = fStack_16c;
     fStack_88 = fStack_168;
     fStack_84 = fStack_164;
     fStack_80 = fStack_160;
     fStack_7c = fStack_15c;
     uVar7 = fn_827A0C20(piVar8[0x28]);
-    fn_827A8A28(&fStack_90,uVar7,&fStack_100);
-    (**(code **)(*piVar4 + 0x20))(piVar4,&fStack_90);
+    fn_827A8A28(&stack_pair_90.first,uVar7,&fStack_100);
+    (**(code **)(*piVar4 + 0x20))(piVar4,&stack_pair_90.first);
     uStack_158 = ((((U64)(uStack_158)) & (~(((U64)0xFFFF) << 48))) | ((((U64)((undefined2)(int)fStack_f8)) & ((U64)0xFFFF)) << 48));
     uStack_134 = (((U64)(uStack_158) >> 48) & 0xFFFF);
     uStack_158 = ((((U64)(uStack_158)) & (~(((U64)0xFFFF) << 48))) | ((((U64)((undefined2)(int)fStack_100)) & ((U64)0xFFFF)) << 48));
@@ -271,7 +271,7 @@ LAB_8272f73c:
         fStack_e4 = fStack_164;
         fStack_e0 = fStack_160;
         fStack_dc = fStack_15c;
-        fn_82F68CC0(&fStack_130,auStack_d0,0x20);
+        memcpy(&fStack_130,auStack_d0,0x20);
         iVar5 = piVar8[0x39];
         fStack_130 = (float)dVar23;
         fStack_120 = (float)dVar23;

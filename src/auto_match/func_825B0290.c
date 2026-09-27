@@ -30,7 +30,7 @@ extern int fn_82569C38();
 extern int fn_82569CF8();
 extern int fn_8265BF48();
 extern int fn_828387B8();
-extern int fn_82F65390();
+extern int strncmp();
 extern unsigned int iStack_40;
 
 
@@ -53,11 +53,11 @@ int fn_825B0290(int param_1,int *param_2,int param_3)
   undefined4 *puVar14;
   int iVar15;
   int iStack_40;
-  int aiStack_3c [15];
+  int aiStack_3c;
   
   puVar14 = (undefined4 *)(*param_2 + param_3);
   iVar5 = *(int *)(*param_2 + param_3);
-  if ((iVar5 == 0) || (iVar5 = fn_82F65390(iVar5,0xffffffff821c81b4,9), iVar5 != 0)) {
+  if ((iVar5 == 0) || (iVar5 = strncmp(iVar5,0xffffffff821c81b4,9), iVar5 != 0)) {
     return 0;
   }
   iStack_40 = puVar14[3];
@@ -102,11 +102,11 @@ LAB_825b0390:
   }
   iVar5 = fn_8251F720(&iStack_40,0);
   iVar5 = *(int *)(iVar5 + 0x14);
-  fn_828387B8(iVar5,aiStack_3c);
+  fn_828387B8(iVar5,&aiStack_3c);
   if (*(int *)(iVar5 + 0x2c) == 0) {
     return iVar5;
   }
-  *(uint *)(aiStack_3c[0] + 0x2c) = *(uint *)(aiStack_3c[0] + 0x2c) & 0xffffffc3 | 4;
+  *(uint *)(aiStack_3c + 0x2c) = *(uint *)(aiStack_3c + 0x2c) & 0xffffffc3 | 4;
   return iVar5;
 LAB_825b040c:
   do {

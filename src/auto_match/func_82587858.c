@@ -37,13 +37,13 @@ void fn_82587858(int param_1)
   uint uVar2;
   ulonglong uVar3;
   int iVar4;
-  ulonglong auStack_30 [6];
+  ulonglong auStack_30;
   
-  auStack_30[0] = (ulonglong)*(uint *)(param_1 + 0x24);
-  if (*(float *)(param_1 + 0x28) < (float)((double)*(uint *)(param_1 + 8) / (double)auStack_30[0]))
+  auStack_30 = (ulonglong)*(uint *)(param_1 + 0x24);
+  if (*(float *)(param_1 + 0x28) < (float)((double)*(uint *)(param_1 + 8) / (double)auStack_30))
   {
     iVar4 = 0;
-    uVar3 = auStack_30[0];
+    uVar3 = auStack_30;
     do {
       if (0x1ffffffe < uVar3) break;
       iVar4 = iVar4 + 1;
@@ -55,7 +55,7 @@ void fn_82587858(int param_1)
       uVar2 = piVar1[1];
       do {
         uVar3 = (ulonglong)**(uint **)(param_1 + 4);
-        fn_825875C0(auStack_30,param_1,uVar3 + 8,uVar3);
+        fn_825875C0(&auStack_30,param_1,uVar3 + 8,uVar3);
       } while (uVar3 != uVar2);
     }
   }

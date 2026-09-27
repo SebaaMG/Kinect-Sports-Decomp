@@ -41,15 +41,15 @@ undefined4 * fn_82694548(int param_1,undefined8 param_2,undefined8 param_3,uint 
   char cVar3;
   undefined4 *puVar2;
   undefined4 *apuStack_50 [2];
-  undefined4 uStack_48;
-  uint uStack_44;
+  struct { undefined4 first; uint second; } stack_pair_48;
+
   undefined4 uStack_40;
   
-  uStack_48 = (int)param_2;
+  stack_pair_48.first = (int)param_2;
   uVar1 = fn_8268AF70(param_2,param_3,0x1505);
-  uStack_44 = uVar1 & 0xffffff;
+  stack_pair_48.second = uVar1 & 0xffffff;
   uStack_40 = (int)param_3;
-  cVar3 = fn_82694448(param_1,&uStack_48,apuStack_50);
+  cVar3 = fn_82694448(param_1,&stack_pair_48.first,apuStack_50);
   if (cVar3 == '\0') {
     puVar2 = (undefined4 *)fn_82693E40(param_1);
     if (puVar2 == (undefined4 *)0x0) {

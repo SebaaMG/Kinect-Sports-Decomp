@@ -46,7 +46,7 @@ void fn_826A2E40(int param_1,int param_2,undefined8 param_3)
   undefined4 uVar6;
   uint uVar8;
   int iVar9;
-  undefined4 auStack_40 [16];
+  undefined4 auStack_40;
   
   *(int *)(param_1 + 0x44) = *(int *)(param_1 + 0x44) + 1;
   cVar7 = fn_826A25C0();
@@ -57,12 +57,12 @@ void fn_826A2E40(int param_1,int param_2,undefined8 param_3)
        (iVar5 = (**(code **)(*(int *)(iVar4 + 0x10) + 8))(iVar4 + 0x10), iVar5 != 7)) {
       uVar3 = fn_8267B890(uVar1,0x10,0);
       if ((uVar3 & 0xffffffff) == 0) {
-        auStack_40[0] = 0;
+        auStack_40 = 0;
       }
       else {
-        auStack_40[0] = fn_82695DA0(uVar3,param_3);
+        auStack_40 = fn_82695DA0(uVar3,param_3);
       }
-      fn_826EBE48(param_1 + 0x34,auStack_40);
+      fn_826EBE48(param_1 + 0x34,&auStack_40);
     }
     else if ((ulonglong)*(uint *)(iVar4 + 0x38) != 0) {
       uVar2 = *(uint *)(param_1 + 0x38);

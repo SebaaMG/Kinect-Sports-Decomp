@@ -116,8 +116,8 @@ void fn_82BB4080(int param_1)
   int iStack_bc;
   undefined4 uStack_b8;
   undefined4 uStack_b4;
-  undefined4 uStack_b0;
-  int iStack_ac;
+  struct { undefined4 first; int second; } stack_pair_b0;
+
   int iStack_a8;
   
   fn_82BA03B8(auStack_c0,*(undefined4 *)(*(int *)(param_1 + 0xc) + 0x5b0));
@@ -132,7 +132,7 @@ void fn_82BB4080(int param_1)
   uStack_100 = 0xffffffff;
   fn_82BA03B8(auStack_d0,*(undefined4 *)(*(int *)(param_1 + 0xc) + 0x5b0));
   iVar13 = iStack_a8;
-  iVar21 = iStack_ac;
+  iVar21 = stack_pair_b0.second;
   while( true ) {
     if ((*(uint *)(*(int *)(param_1 + 0xc) + 0x858) >> 2 & 1) == 0) {
       uVar25 = (ulonglong)uStack_100;
@@ -339,7 +339,7 @@ LAB_82bb4268:
         iVar12 = iVar21;
         iVar15 = iVar13;
         if (0 < piVar19[5]) {
-          puVar11 = &uStack_b0;
+          puVar11 = &stack_pair_b0.first;
           piVar23 = piVar19 + 8;
           do {
             iVar21 = *piVar23;
@@ -353,7 +353,7 @@ LAB_82bb4268:
             piVar23 = piVar23 + 1;
             puVar11 = puVar11 + 1;
             *puVar11 = *(undefined4 *)(iVar13 + 0x10);
-            iVar12 = iStack_ac;
+            iVar12 = stack_pair_b0.second;
             iVar15 = iStack_a8;
           } while (iVar14 <= iVar21);
         }
@@ -382,7 +382,7 @@ LAB_82bb4268:
             piVar19[0x34] = iVar21;
             iVar21 = iVar15;
             iVar13 = iVar12;
-            iStack_ac = iVar15;
+            stack_pair_b0.second = iVar15;
             iStack_a8 = iVar12;
           }
         }
@@ -441,7 +441,7 @@ LAB_82bb47c4:
         }
         iVar12 = 1;
         if (0 < piVar19[5]) {
-          piVar23 = &iStack_ac;
+          piVar23 = &stack_pair_b0.second;
           piVar26 = piVar19 + 7;
           do {
             if ((*(uint *)(*(int *)(param_1 + 0xc) + 0x858) >> 3 & 1) == 0) {

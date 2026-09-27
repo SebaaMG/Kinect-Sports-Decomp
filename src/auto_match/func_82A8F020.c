@@ -46,7 +46,7 @@ fn_82A8F020(int *param_1,int *param_2,int *param_3,longlong param_4,longlong par
   ulonglong uVar5;
   undefined1 *puVar6;
   uint uVar7;
-  undefined1 auStack_a0 [8];
+  undefined1 auStack_a0 [1];
   undefined1 auStack_98 [4];
   undefined4 uStack_94;
   undefined1 auStack_90 [32];

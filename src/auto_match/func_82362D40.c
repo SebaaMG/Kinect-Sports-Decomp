@@ -58,7 +58,7 @@ void fn_82362D40(undefined4 *param_1)
   int *piVar3;
   undefined4 *puVar4;
   double dVar5;
-  undefined1 auStack_50 [16];
+  undefined1 auStack_50 [1];
   undefined **appuStack_40 [4];
   undefined ***pppuStack_30;
   

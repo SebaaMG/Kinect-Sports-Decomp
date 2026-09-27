@@ -40,7 +40,7 @@ void fn_82A5AF28(int param_1)
   int iVar3;
   ulonglong uVar4;
   uint uVar5;
-  uint auStack_40 [16];
+  uint auStack_40 [4];
   
   pcVar2 = (code *)fn_82A68878();
   (*pcVar2)(0xffffffffffffffff,0);

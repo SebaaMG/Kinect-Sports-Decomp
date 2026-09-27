@@ -80,12 +80,12 @@ fn_82B8E280(undefined8 *param_1,undefined8 param_2,int param_3,int param_4,doubl
   double extraout_f1_00;
   double dVar21;
   undefined4 uStack00000044;
-  undefined1 auStack_c0 [8];
+  undefined1 auStack_c0;
   undefined8 uStack_b8;
   ulonglong uStack_b0;
   undefined4 uStack_a8;
   uint uStack_a4;
-  float afStack_a0 [40];
+  float afStack_a0 [4];
   
   uStack00000044 = (undefined4)param_7;
   uStack_a8 = 0;
@@ -218,8 +218,8 @@ LAB_82b8e42c:
     pfVar14 = pfVar14 + 1;
   } while (uVar15 < 8);
   uVar9 = fn_82B86888(param_2,4,afStack_a0,param_7);
-  auStack_c0[0] = 0;
-  fn_82B8CB58(param_2,param_3,uVar9,0xe4,0,param_6,auStack_c0);
+  auStack_c0 = 0;
+  fn_82B8CB58(param_2,param_3,uVar9,0xe4,0,param_6,&auStack_c0);
   uStack_a4 = 0;
   if (bVar7) {
     puVar17 = (uint *)(param_3 + 4);

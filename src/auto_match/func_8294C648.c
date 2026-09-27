@@ -36,7 +36,7 @@ extern int fn_829639F0();
 extern int fn_82963A30();
 extern int fn_82963D50();
 extern int fn_82BA02A8();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int uStack_104;
 extern unsigned int uStack_108;
 extern unsigned int uStack_10c;
@@ -52,8 +52,8 @@ longlong fn_8294C648(int param_1)
   int iVar3;
   int iVar4;
   undefined4 auStack_120 [4];
-  undefined4 uStack_110;
-  undefined4 uStack_10c;
+  struct { undefined4 first; undefined4 second; } stack_pair_110;
+
   undefined4 uStack_108;
   undefined4 uStack_104;
   undefined4 auStack_100 [4];
@@ -62,16 +62,16 @@ longlong fn_8294C648(int param_1)
   
   puVar1 = *(uint **)(param_1 + 0x104);
   iVar4 = 0;
-  uStack_10c = 1;
+  stack_pair_110.second = 1;
   auStack_120[0] = 0;
-  uStack_110 = 0;
+  stack_pair_110.first = 0;
   uStack_108 = 2;
   uStack_104 = 3;
   if (((*puVar1 & 0xfffff) == 1) &&
      ((*(uint *)(*(int *)(*(int *)(*(int *)(*(int *)puVar1[4] * 4 + *(int *)(param_1 + 0x14)) + 4) *
                           4 + *(int *)(param_1 + 0x10)) + 4) & 0x20) == 0)) {
     lVar2 = fn_8294AC48(param_1,puVar1,0xffffffff82036cd0,auStack_60,auStack_120,auStack_100,
-                          &uStack_110,1);
+                          &stack_pair_110.first,1);
     if ((int)lVar2 == 0) {
       iVar3 = fn_82963998(0x74);
       if (iVar3 != 0) {
@@ -88,7 +88,7 @@ longlong fn_8294C648(int param_1)
           fn_829639F0(iVar4);
         }
         else {
-          fn_82F68CC0(*(undefined4 *)(iVar4 + 0x10),
+          memcpy(*(undefined4 *)(iVar4 + 0x10),
                        *(undefined4 *)(*(int *)(param_1 + 0x104) + 0x10),
                        *(int *)(*(int *)(param_1 + 0x104) + 0xc) << 2);
           **(undefined4 **)(iVar4 + 8) = uStack_f0;

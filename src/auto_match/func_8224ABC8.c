@@ -40,7 +40,7 @@ undefined4 * fn_8224ABC8(undefined4 *param_1,undefined4 *param_2)
   undefined4 uVar3;
   int iVar4;
   int iVar5;
-  undefined4 auStack_50 [20];
+  undefined4 auStack_50 [4];
   
   param_1[1] = 1;
   *param_1 = &lbl_821AD588;

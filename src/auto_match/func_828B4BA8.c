@@ -34,16 +34,16 @@ void fn_828B4BA8(int param_1,longlong param_2)
 
 {
   int *piVar1;
-  int aiStack_30 [12];
+  int aiStack_30;
   
   param_2 = param_2 + 0x30;
-  piVar1 = (int *)fn_828B3DF8(aiStack_30,param_1 + 0x54,param_2);
+  piVar1 = (int *)fn_828B3DF8(&aiStack_30,param_1 + 0x54,param_2);
   if (*piVar1 != *(int *)(param_1 + 0x58)) {
     fn_828B4B00(param_1,0,param_2);
   }
-  fn_828B3DF8(aiStack_30,param_1 + 0x44,param_2);
-  if (aiStack_30[0] != *(int *)(param_1 + 0x48)) {
-    fn_828B30E8(aiStack_30,param_1 + 0x44);
+  fn_828B3DF8(&aiStack_30,param_1 + 0x44,param_2);
+  if (aiStack_30 != *(int *)(param_1 + 0x48)) {
+    fn_828B30E8(&aiStack_30,param_1 + 0x44);
   }
   return;
 }

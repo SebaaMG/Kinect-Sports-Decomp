@@ -40,7 +40,7 @@ undefined8 fn_825BDFF8(int param_1,uint *param_2,undefined8 param_3)
   uint uVar4;
   uint uVar5;
   int iVar6;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [32];
   
   fn_82A1E650(*(undefined4 *)(param_1 + 0x1d8),0xffffffffffffffff);
   iVar1 = *(int *)(param_1 + 0x8c);

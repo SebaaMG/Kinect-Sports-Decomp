@@ -48,7 +48,7 @@ undefined8 fn_8249FC20(int param_1,int *param_2)
   undefined4 uStack_4c;
   undefined4 uStack_48;
   undefined4 uStack_44;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [16];
   
   uVar4 = 0;
   if (param_2[8] < 0) {

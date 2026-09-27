@@ -37,18 +37,18 @@ void fn_827B3168(int param_1,char *param_2,undefined8 param_3,undefined8 param_4
 
 {
   int iVar1;
-  char acStack_50 [80];
+  char acStack_50;
   
-  acStack_50[0] = *param_2;
+  acStack_50 = *param_2;
   while( true ) {
-    if (acStack_50[0] == '\0') break;
-    fn_827B19D8(*(undefined4 *)(param_1 + 8),acStack_50);
+    if (acStack_50 == '\0') break;
+    fn_827B19D8(*(undefined4 *)(param_1 + 8),&acStack_50);
     param_2 = param_2 + 1;
-    acStack_50[0] = *param_2;
+    acStack_50 = *param_2;
   }
   iVar1 = param_1 + 8;
-  acStack_50[0] = '\0';
-  fn_827B19D8(*(undefined4 *)(param_1 + 8),acStack_50);
+  acStack_50 = '\0';
+  fn_827B19D8(*(undefined4 *)(param_1 + 8),&acStack_50);
   *(undefined4 *)(param_1 + 0x6c) = **(undefined4 **)(param_1 + 8);
   fn_827B1A38(iVar1,param_3);
   fn_827B1A38(iVar1,param_4);

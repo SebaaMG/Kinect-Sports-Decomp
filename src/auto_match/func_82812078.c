@@ -37,7 +37,7 @@ double fn_82812078(int param_1,int param_2)
   float fVar1;
   double dVar2;
   double dVar3;
-  undefined1 auStack_30 [32];
+  undefined1 auStack_30 [1];
   
   dVar3 = (double)*(float *)(param_2 + 0xc);
   fn_82810328(param_2,param_1,auStack_30);

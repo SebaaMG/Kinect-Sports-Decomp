@@ -46,7 +46,7 @@ undefined4 * fn_8287FB30(int param_1,uint *param_2)
   undefined4 *apuStack_210 [4];
   uint uStack_200;
   undefined1 auStack_1f8 [232];
-  undefined1 auStack_110 [272];
+  undefined1 auStack_110 [224];
   
   puVar5 = *(undefined4 **)(param_1 + 4);
   if (*(char *)((int)puVar5[1] + 0x101) == '\0') {

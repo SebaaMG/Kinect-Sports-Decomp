@@ -47,7 +47,7 @@ fn_827EDAF8(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefined8 
 {
   int iVar2;
   undefined8 uVar1;
-  undefined1 auStack_90 [16];
+  undefined1 auStack_90 [1];
   undefined1 auStack_80 [32];
   undefined1 auStack_60 [12];
   undefined1 auStack_54 [12];

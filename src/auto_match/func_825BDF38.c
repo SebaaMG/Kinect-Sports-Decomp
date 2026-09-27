@@ -41,7 +41,7 @@ undefined8 fn_825BDF38(int param_1,int *param_2,undefined8 param_3)
   uint uVar2;
   longlong lVar3;
   undefined4 auStack_60 [4];
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [32];
   
   fn_82A1E650(*(undefined4 *)(param_1 + 0x1d8),0xffffffffffffffff);
   iVar1 = *(int *)(param_1 + 0x8c);

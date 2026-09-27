@@ -40,7 +40,7 @@ undefined8 fn_82296A68(int *param_1,int *param_2)
   undefined8 uVar1;
   int iVar3;
   bool bVar4;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [48];
   
   bVar4 = false;
   if ((param_1 != (int *)0x0) && (*param_1 == 0)) {

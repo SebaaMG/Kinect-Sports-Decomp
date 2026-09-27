@@ -50,7 +50,7 @@ void fn_824BEAC0(longlong param_1)
   byte bVar5;
   undefined1 auStack_90 [4];
   int iStack_8c;
-  undefined1 auStack_88 [136];
+  undefined1 auStack_88 [72];
   
   if (lbl_83276594 == 0) {
     fn_8245D538();

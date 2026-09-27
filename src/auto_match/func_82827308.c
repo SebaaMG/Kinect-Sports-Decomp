@@ -37,19 +37,19 @@ void fn_82827308(int param_1,int *param_2)
   bool bVar2;
   int iVar3;
   int iStack_40;
-  undefined4 *apuStack_3c [15];
+  undefined4 * apuStack_3c;
   
   iVar3 = *(int *)(param_1 + 0x28);
   param_1 = param_1 + 0x2f4;
   while (fn_828223C8(param_1,&iStack_40), param_1 = iStack_40, iStack_40 != 0) {
     bVar2 = false;
     puVar1 = *(undefined4 **)(*(int *)(iStack_40 + 0x28) + 4);
-    apuStack_3c[0] = (undefined4 *)*puVar1;
-    while (apuStack_3c[0] != puVar1) {
-      if (apuStack_3c[0][5] != 0) {
+    apuStack_3c = (undefined4 *)*puVar1;
+    while (apuStack_3c != puVar1) {
+      if (apuStack_3c[5] != 0) {
         bVar2 = true;
       }
-      fn_82518FF0(apuStack_3c);
+      fn_82518FF0(&apuStack_3c);
     }
     if (!bVar2) {
       iVar3 = iVar3 + -1;

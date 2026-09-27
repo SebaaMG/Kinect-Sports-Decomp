@@ -38,8 +38,8 @@ void fn_827700E8(uint *param_1,uint param_2,uint param_3,undefined4 param_4)
 
 {
   undefined4 uStack0000002c;
-  uint uStack_20;
-  uint uStack_1c;
+  struct { uint first; uint second; } stack_pair_20;
+
   undefined4 uStack_18;
   
   uStack0000002c = param_4;
@@ -47,10 +47,10 @@ void fn_827700E8(uint *param_1,uint param_2,uint param_3,undefined4 param_4)
     fn_8276FEA8(param_1 + 0x15,&stack0x0000002c);
   }
   else {
-    uStack_20 = param_2;
-    uStack_1c = param_3;
+    stack_pair_20.first = param_2;
+    stack_pair_20.second = param_3;
     uStack_18 = param_4;
-    fn_8276FE30(param_1 + 5,&uStack_20);
+    fn_8276FE30(param_1 + 5,&stack_pair_20.first);
   }
   return;
 }

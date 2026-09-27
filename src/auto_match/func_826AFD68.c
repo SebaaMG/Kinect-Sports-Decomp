@@ -56,7 +56,7 @@ void fn_826AFD68(uint *param_1)
   int iVar5;
   double dVar6;
   double dVar7;
-  undefined4 *apuStack_60 [4];
+  undefined4 * apuStack_60;
   int iStack_50;
   undefined1 uStack_4c;
   char cStack_4b;
@@ -84,12 +84,12 @@ void fn_826AFD68(uint *param_1)
   uVar3 = fn_82695608(uVar2);
   iStack_50 = fn_826AE1D8(*param_1,*(undefined4 *)(*param_1 + 8));
   if ((iStack_50 == 0) && ((*(byte *)((int)param_1 + 0x36) & 0x80) != 0)) {
-    fn_82697210(apuStack_60,*(undefined4 *)(*param_1 + 8),*param_1);
-    fn_826ABE30(param_1 + 9,0xffffffff820077b8,*apuStack_60[0]);
-    uVar1 = apuStack_60[0][2];
-    apuStack_60[0][2] = (int)((ulonglong)uVar1 - 1);
+    fn_82697210(&apuStack_60,*(undefined4 *)(*param_1 + 8),*param_1);
+    fn_826ABE30(param_1 + 9,0xffffffff820077b8,*apuStack_60);
+    uVar1 = apuStack_60[2];
+    apuStack_60[2] = (int)((ulonglong)uVar1 - 1);
     if ((ulonglong)uVar1 - 1 == 0) {
-      fn_826944C8(apuStack_60[0]);
+      fn_826944C8(apuStack_60);
     }
   }
   uVar1 = *param_1;

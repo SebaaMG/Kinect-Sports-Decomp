@@ -48,7 +48,7 @@ int * fn_822967A0(int *param_1,longlong param_2)
   uint uVar8;
   longlong lVar9;
   ulonglong uVar10;
-  int aiStack_50 [2];
+  int aiStack_50;
   undefined1 auStack_48 [4];
   char cStack_44;
   
@@ -69,9 +69,9 @@ int * fn_822967A0(int *param_1,longlong param_2)
     goto LAB_82296978;
   }
   iVar4 = **(int **)((int)param_1 + *(int *)(*param_1 + 4) + 0x30);
-  aiStack_50[0] = iVar4;
+  aiStack_50 = iVar4;
   fn_8223F508(iVar4);
-  piVar2 = (int *)fn_82297388(aiStack_50);
+  piVar2 = (int *)fn_82297388(&aiStack_50);
   if ((iVar4 != 0) && (puVar3 = (undefined4 *)fn_8223F5A0(iVar4), puVar3 != (undefined4 *)0x0)
      ) {
     (**(code **)*puVar3)(puVar3,1);

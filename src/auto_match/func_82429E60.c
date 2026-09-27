@@ -47,7 +47,7 @@ void fn_82429E60(undefined8 param_1,undefined8 param_2,int param_3)
   uint auStack_60 [4];
   undefined **ppuStack_50;
   undefined4 uStack_4c;
-  undefined1 auStack_48 [72];
+  undefined1 auStack_48 [24];
   
   uVar4 = 0;
   uStack_4c = 0;

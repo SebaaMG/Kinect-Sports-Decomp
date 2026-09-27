@@ -31,7 +31,7 @@ extern int fn_8263D250();
 extern int fn_826417C8();
 extern int fn_82641B60();
 extern int fn_82645110();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int lbl_821CE890;
 
 
@@ -55,7 +55,7 @@ void fn_8263D7F0(undefined8 param_1,int param_2,ulonglong param_3,uint *param_4,
   undefined4 uVar13;
   undefined4 uVar14;
   undefined4 uVar15;
-  undefined1 auStack_90 [144];
+  undefined1 auStack_90 [32];
   
   if (param_5 == (undefined1 *)0x0) {
     param_5 = auStack_90;
@@ -158,7 +158,7 @@ void fn_8263D7F0(undefined8 param_1,int param_2,ulonglong param_3,uint *param_4,
     puVar5[3] = 0xc01c2b00;
     puVar5[4] = 0;
     puVar5[5] = 0x1b;
-    fn_82F68CC0(puVar5 + 6,0xffffffff8218d7f0,0x6c);
+    memcpy(puVar5 + 6,0xffffffff8218d7f0,0x6c);
     puVar5 = puVar5 + 0x20;
     *(undefined4 **)(param_2 + 0x30) = puVar5;
     if (*(undefined4 **)(param_2 + 0x38) < puVar5) {
@@ -167,7 +167,7 @@ void fn_8263D7F0(undefined8 param_1,int param_2,ulonglong param_3,uint *param_4,
     puVar5[1] = 0xc00a2b00;
     puVar5[2] = 1;
     puVar5[3] = 9;
-    fn_82F68CC0(puVar5 + 4,0xffffffff8218d1d4,0x24);
+    memcpy(puVar5 + 4,0xffffffff8218d1d4,0x24);
     puVar5[0xd] = 0x12180;
     puVar5[0xe] = 0x10010001;
     puVar5 = puVar5 + 0xf;

@@ -38,7 +38,7 @@ undefined8 fn_82934408(int param_1,int *param_2,uint *param_3)
   uint uVar3;
   int iStack_30;
   uint uStack_2c;
-  uint auStack_28 [10];
+  uint auStack_28 [1];
   
   if (param_3 == (uint *)0x0) {
     param_3 = auStack_28;

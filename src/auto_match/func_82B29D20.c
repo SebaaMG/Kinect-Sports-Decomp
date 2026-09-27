@@ -52,7 +52,7 @@ void fn_82B29D20(int param_1,int param_2,int param_3,undefined8 param_4)
   ulonglong uVar12;
   int *piVar13;
   uint *puStack_70;
-  uint auStack_6c [27];
+  uint auStack_6c [1];
   
   for (piVar1 = *(int **)(param_2 + 0xc); piVar1 != (int *)0x0; piVar1 = (int *)piVar1[2]) {
     iVar11 = *piVar1;

@@ -41,22 +41,22 @@ void fn_824C4370(int param_1)
 
 {
   int iVar1;
-  undefined4 auStack_40 [4];
-  undefined4 uStack_30;
-  undefined4 uStack_2c;
+  undefined4 auStack_40;
+  struct { undefined4 first; undefined4 second; } stack_pair_30;
+
   undefined4 uStack_28;
   
   uRam832766f1 = 0;
   if (lbl_832766F7 != '\0') {
-    fn_82520158(0xffffffff821bd350,auStack_40,0);
+    fn_82520158(0xffffffff821bd350,&auStack_40,0);
     iVar1 = fn_8256BF18();
-    *(undefined4 *)(iVar1 + 0x68) = auStack_40[0];
+    *(undefined4 *)(iVar1 + 0x68) = auStack_40;
   }
   fn_824C04E0(*(undefined4 *)(param_1 + 4),1);
-  uStack_30 = 0;
-  uStack_2c = 0;
+  stack_pair_30.first = 0;
+  stack_pair_30.second = 0;
   uStack_28 = 0;
-  fn_8251CF80(param_1 + 8,0,&uStack_30);
+  fn_8251CF80(param_1 + 8,0,&stack_pair_30.first);
   return;
 }
 

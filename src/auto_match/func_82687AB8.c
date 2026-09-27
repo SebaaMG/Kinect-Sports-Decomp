@@ -46,8 +46,8 @@ undefined4 fn_82687AB8(int param_1,undefined4 *param_2,undefined8 param_3)
   int *piVar4;
   int *piVar5;
   undefined4 uVar6;
-  undefined4 uStack_40;
-  int iStack_3c;
+  struct { undefined4 first; int second; } stack_pair_40;
+
   
   RtlEnterCriticalSection(param_1 + 0xc);
   piVar5 = (int *)(param_1 + 0x28);
@@ -88,9 +88,9 @@ undefined4 fn_82687AB8(int param_1,undefined4 *param_2,undefined8 param_3)
     uVar6 = 4;
   }
   else {
-    uStack_40 = 1;
-    iStack_3c = iVar2;
-    fn_826877D8(piVar5,&uStack_40);
+    stack_pair_40.first = 1;
+    stack_pair_40.second = iVar2;
+    fn_826877D8(piVar5,&stack_pair_40.first);
     param_2[1] = iVar2;
     uVar6 = 3;
     *param_2 = 3;

@@ -35,12 +35,12 @@ void fn_8284D7B0(double param_1,undefined8 param_2,int param_3,undefined8 param_
 {
   int iVar1;
   undefined4 uStack_20;
-  int aiStack_1c [3];
+  int aiStack_1c;
   
   iVar1 = fn_82851730(param_2,param_4,&uStack_20);
   if (iVar1 != 0) {
-    fn_82851858(uStack_20,aiStack_1c);
-    *(float *)(aiStack_1c[0] + param_3) = (float)param_1;
+    fn_82851858(uStack_20,&aiStack_1c);
+    *(float *)(aiStack_1c + param_3) = (float)param_1;
   }
   return;
 }

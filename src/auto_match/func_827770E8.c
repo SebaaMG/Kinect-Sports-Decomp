@@ -45,8 +45,8 @@ undefined4 * fn_827770E8(undefined4 *param_1,undefined1 param_2)
   undefined4 uVar1;
   undefined4 uVar2;
   undefined4 uVar3;
-  undefined4 uStack_50;
-  undefined4 uStack_4c;
+  struct { undefined4 first; undefined4 second; } stack_pair_50;
+
   undefined4 uStack_48;
   undefined4 uStack_44;
   undefined4 uStack_40;
@@ -73,14 +73,14 @@ undefined4 * fn_827770E8(undefined4 *param_1,undefined1 param_2)
   param_1[0xf] = uVar2;
   param_1[0x10] = 1;
   param_1[0x11] = 0;
-  uStack_50 = 0x400;
-  uStack_4c = 0x400;
+  stack_pair_50.first = 0x400;
+  stack_pair_50.second = 0x400;
   uStack_48 = 1;
   uStack_44 = 0x30;
   uStack_40 = 2;
   uStack_3c = 0x100;
   uStack_38 = 0x200;
-  fn_82776D18(param_1,&uStack_50);
+  fn_82776D18(param_1,&stack_pair_50.first);
   return param_1;
 }
 

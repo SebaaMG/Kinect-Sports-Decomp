@@ -44,7 +44,7 @@ undefined8 fn_82BDBD58(int *param_1,int param_2)
   int iVar7;
   undefined4 *puVar8;
   undefined4 auStack_60 [4];
-  undefined4 auStack_50 [20];
+  undefined4 auStack_50 [8];
   
   puVar8 = (undefined4 *)0x0;
   pcVar1 = *(code **)(*param_1 + 0x4b8);

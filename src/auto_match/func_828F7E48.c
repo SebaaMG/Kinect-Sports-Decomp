@@ -26,20 +26,20 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_80;
-extern int fn_82F691F0();
+extern int memset();
 
 
 void fn_828F7E48(int param_1,undefined8 param_2,uint param_3)
 
 {
-  undefined1 auStack_80 [128];
+  undefined1 auStack_80 [112];
   
   if (0x10 < param_3) {
     *(undefined4 *)(param_1 + 0x50) = 1;
   }
   if (*(int *)(param_1 + 0x50) == 0) {
                     /* WARNING: Subroutine does not return */
-    fn_82F691F0(auStack_80 + param_3 * 4,0,0x10 - param_3 & 0x3fffffff);
+    memset(auStack_80 + param_3 * 4,0,0x10 - param_3 & 0x3fffffff);
   }
   return;
 }

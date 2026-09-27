@@ -39,7 +39,7 @@ void fn_82523048(undefined4 *param_1)
   undefined4 *puVar2;
   int iVar3;
   int *piVar4;
-  undefined1 auStack_38 [56];
+  undefined1 auStack_38 [40];
   
   puVar2 = (undefined4 *)fn_82522DF8(0x20);
   puVar2[2] = *(undefined4 *)*param_1;

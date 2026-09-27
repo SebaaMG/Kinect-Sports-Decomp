@@ -37,15 +37,15 @@ void fn_823B79F0(longlong param_1,undefined8 param_2,undefined8 *param_3,undefin
 
 {
   undefined8 uStack_20;
-  undefined4 uStack_18;
-  int iStack_14;
+  struct { undefined4 first; int second; } stack_pair_18;
+
   
   uStack_20 = *param_3;
-  uStack_18 = 0;
-  iStack_14 = 0;
-  fn_82517978(&uStack_18,*param_4,param_4[1],0);
+  stack_pair_18.first = 0;
+  stack_pair_18.second = 0;
+  fn_82517978(&stack_pair_18.first,*param_4,param_4[1],0);
   fn_823B8608(param_1 + 0xac,&uStack_20);
-  if (iStack_14 != 0) {
+  if (stack_pair_18.second != 0) {
     fn_822315A0();
   }
   return;

@@ -39,7 +39,7 @@ undefined4 * fn_82B46AC8(int param_1,int param_2,undefined8 param_3)
   undefined4 *puVar2;
   undefined4 uVar3;
   int iVar4;
-  undefined4 auStack_80 [32];
+  undefined4 auStack_80 [20];
   
   iVar4 = param_2 * 0x28;
   uVar1 = fn_82B468D0(param_1,param_2,*(uint *)(*(int *)(param_1 + 0xc) + iVar4) >> 3 & 0x3fff);

@@ -36,16 +36,16 @@ void fn_82251DB0(int param_1,undefined8 param_2,int param_3)
 {
   int *piVar1;
   undefined4 uStack_b0;
-  undefined4 auStack_ac [3];
-  undefined1 auStack_a0 [160];
+  undefined4 auStack_ac;
+  undefined1 auStack_a0 [128];
   
   fn_82250C58(auStack_a0);
   (**(code **)(**(int **)(param_1 + 0x68) + 0x14))(*(int **)(param_1 + 0x68),param_2,&uStack_b0);
-  (**(code **)(**(int **)(param_1 + 0x70) + 0x14))(*(int **)(param_1 + 0x70),param_2,auStack_ac);
+  (**(code **)(**(int **)(param_1 + 0x70) + 0x14))(*(int **)(param_1 + 0x70),param_2,&auStack_ac);
   (**(code **)(**(int **)(param_1 + 0x78) + 0x14))(*(int **)(param_1 + 0x78),param_2,auStack_a0);
   piVar1 = *(int **)(param_3 + 0x10);
   if (piVar1 != (int *)0x0) {
-    (**(code **)(*piVar1 + 4))(piVar1,uStack_b0,auStack_ac[0],auStack_a0);
+    (**(code **)(*piVar1 + 4))(piVar1,uStack_b0,auStack_ac,auStack_a0);
   }
   return;
 }

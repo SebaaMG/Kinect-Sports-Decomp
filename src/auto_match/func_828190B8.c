@@ -33,16 +33,16 @@ void fn_828190B8(void)
 
 {
   undefined *puVar1;
-  undefined *apuStack_10 [4];
+  undefined * apuStack_10;
   
   puVar1 = &lbl_8320A5DC;
   while( true ) {
-    fn_828223C8(puVar1,apuStack_10);
-    if (apuStack_10[0] == (undefined *)0x0) break;
-    puVar1 = apuStack_10[0];
-    if (*(code **)(*(int *)(apuStack_10[0] + 0x10) + 0x24) != (code *)0x0) {
-      (**(code **)(*(int *)(apuStack_10[0] + 0x10) + 0x24))();
-      puVar1 = apuStack_10[0];
+    fn_828223C8(puVar1,&apuStack_10);
+    if (apuStack_10 == (undefined *)0x0) break;
+    puVar1 = apuStack_10;
+    if (*(code **)(*(int *)(apuStack_10 + 0x10) + 0x24) != (code *)0x0) {
+      (**(code **)(*(int *)(apuStack_10 + 0x10) + 0x24))();
+      puVar1 = apuStack_10;
     }
   }
   return;

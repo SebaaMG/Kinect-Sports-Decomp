@@ -79,21 +79,21 @@ void fn_82462810(double param_1,int *param_2)
   undefined4 in_vr77;
   undefined4 uVar17;
   int aiStack_70 [4];
-  undefined4 uStack_60;
-  int iStack_5c;
+  struct { undefined4 first; int second; } stack_pair_60;
+
   int iStack_58;
   
   param_2[0x28] = param_2[0x89];
   param_2[0x44] = 1;
   iStack_58 = param_2[0x8b];
-  iStack_5c = param_2[0x8a];
-  puVar11 = (undefined4 *)((int)&uStack_60 + in_r0 & 0xfffffff0);
+  stack_pair_60.second = param_2[0x8a];
+  puVar11 = (undefined4 *)((int)&stack_pair_60.first + in_r0 & 0xfffffff0);
   *puVar11 = in_register_000104d0;
   puVar11[1] = in_register_000104d4;
   puVar11[2] = in_register_000104d8;
   puVar11[3] = in_vr77;
   param_2[0x44] = 1;
-  puVar11 = (undefined4 *)((int)&uStack_60 + in_r0 & 0xfffffff0);
+  puVar11 = (undefined4 *)((int)&stack_pair_60.first + in_r0 & 0xfffffff0);
   uVar14 = puVar11[1];
   uVar15 = puVar11[2];
   uVar16 = puVar11[3];
@@ -103,7 +103,7 @@ void fn_82462810(double param_1,int *param_2)
   puVar5[2] = uVar15;
   puVar5[3] = uVar16;
   uVar6 = fn_82F4EBC0(0);
-  fn_82F4EEC0(&uStack_60,uVar6);
+  fn_82F4EEC0(&stack_pair_60.first,uVar6);
   puVar5 = (undefined4 *)param_2[0xb];
   fVar1 = lbl_821CC160;
   for (puVar11 = (undefined4 *)param_2[10]; lbl_821CC160 = fVar1, puVar11 != puVar5;
@@ -217,8 +217,8 @@ LAB_82462ad8:
       return;
     }
     uVar6 = fn_82F4EBC0(0);
-    fn_82F4EEC0(&uStack_60,uVar6);
-    puVar11 = (undefined4 *)((int)&uStack_60 + iVar8 & 0xfffffff0);
+    fn_82F4EEC0(&stack_pair_60.first,uVar6);
+    puVar11 = (undefined4 *)((int)&stack_pair_60.first + iVar8 & 0xfffffff0);
     uVar14 = *puVar11;
     uVar15 = puVar11[1];
     uVar16 = puVar11[2];
@@ -280,10 +280,10 @@ switchD_824628f0_caseD_a:
     break;
   case 0xc:
     if (param_2[0x9e] != 0) {
-      uStack_60 = 0;
-      iStack_5c = 0;
+      stack_pair_60.first = 0;
+      stack_pair_60.second = 0;
       iStack_58 = 0;
-      fn_8251CF80(param_2 + 0x9e,0,&uStack_60);
+      fn_8251CF80(param_2 + 0x9e,0,&stack_pair_60.first);
       return;
     }
 LAB_82462a48:

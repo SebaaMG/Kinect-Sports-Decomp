@@ -41,7 +41,7 @@ undefined8 fn_82A88080(int *param_1,int *param_2,longlong param_3)
   char cVar2;
   undefined8 uVar1;
   undefined4 *puVar3;
-  undefined1 auStack_c0 [16];
+  undefined1 auStack_c0 [1];
   undefined4 auStack_b0 [4];
   undefined1 auStack_a0 [64];
   undefined1 auStack_60 [96];

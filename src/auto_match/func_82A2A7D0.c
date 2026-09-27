@@ -28,7 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 extern int fn_82A2A370();
 extern int fn_82A36078();
 extern int fn_82A362D0();
-extern int fn_82F691F0();
+extern int memset();
 
 
 undefined8 fn_82A2A7D0(int *param_1)
@@ -38,18 +38,18 @@ undefined8 fn_82A2A7D0(int *param_1)
   int iVar2;
   char cVar3;
   undefined8 uVar4;
-  int aiStack_40 [2];
+  int aiStack_40;
   longlong lStack_38;
   longlong lStack_30;
-  longlong alStack_28 [2];
+  longlong alStack_28 [1];
   
   uVar4 = 0;
-  iVar2 = fn_82A362D0(param_1,aiStack_40);
+  iVar2 = fn_82A362D0(param_1,&aiStack_40);
   if (iVar2 == 0) {
-    if (aiStack_40[0] == 0) {
+    if (aiStack_40 == 0) {
       param_1[0x15] = 0;
                     /* WARNING: Subroutine does not return */
-      fn_82F691F0(param_1 + 0x11,0,0x10);
+      memset(param_1 + 0x11,0,0x10);
     }
     KeQuerySystemTime(&lStack_38);
     if ((((*(short *)((int)param_1 + 0x46) != 0) && (*(short *)((int)param_1 + 0x9a) != 0)) &&

@@ -41,14 +41,14 @@ longlong fn_82A30700(undefined8 param_1,int param_2,undefined8 param_3)
   undefined4 uStack_40;
   undefined4 uStack_3c;
   undefined4 uStack_38;
-  undefined4 auStack_34 [13];
+  undefined4 auStack_34;
   
-  lVar1 = fn_82A30690(param_1,(ulonglong)*(ushort *)(param_2 + 0x36) << 6,&uStack_40,auStack_34,
+  lVar1 = fn_82A30690(param_1,(ulonglong)*(ushort *)(param_2 + 0x36) << 6,&uStack_40,&auStack_34,
                         &uStack_38,&uStack_3c);
   if (-1 < lVar1) {
     fn_82A2CBB0(param_2,param_3,uStack_40);
     *(byte *)(param_2 + 0x35) = *(byte *)(param_2 + 0x35) & 0xcf | 0x20;
-    fn_82A2CB08(param_1,auStack_34[0],uStack_38,uStack_3c);
+    fn_82A2CB08(param_1,auStack_34,uStack_38,uStack_3c);
   }
   return lVar1;
 }

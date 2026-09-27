@@ -40,7 +40,7 @@ undefined4 * fn_822FF2F0(undefined4 *param_1,float *param_2,float *param_3)
   undefined4 *puVar1;
   double dVar2;
   double dVar3;
-  undefined1 auStack_50 [56];
+  undefined1 auStack_50 [40];
   
   param_1[1] = 1;
   puVar1 = param_1 + 3;

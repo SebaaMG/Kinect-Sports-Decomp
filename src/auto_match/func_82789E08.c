@@ -58,8 +58,8 @@ void fn_82789E08(int param_1,undefined4 param_2,undefined4 param_3,undefined4 pa
   undefined4 uStack_a0;
   undefined4 uStack_9c;
   int iStack_98;
-  undefined4 uStack_90;
-  undefined4 uStack_8c;
+  struct { undefined4 first; undefined4 second; } stack_pair_90;
+
   undefined4 uStack_88;
   undefined4 uStack_84;
   undefined4 uStack_80;
@@ -91,8 +91,8 @@ void fn_82789E08(int param_1,undefined4 param_2,undefined4 param_3,undefined4 pa
   uStack_a0 = param_2;
   uStack_9c = param_3;
   iStack_98 = iVar1;
-  uStack_90 = param_2;
-  uStack_8c = param_3;
+  stack_pair_90.first = param_2;
+  stack_pair_90.second = param_3;
   uStack_88 = param_4;
   uStack_84 = param_2;
   uStack_80 = param_3;
@@ -107,7 +107,7 @@ void fn_82789E08(int param_1,undefined4 param_2,undefined4 param_3,undefined4 pa
   uStack_a0 = param_4;
   uStack_9c = param_2;
   fn_82789C80(iVar2,&uStack_a0);
-  fn_82789CF8(param_1 + 0x20,&uStack_90);
+  fn_82789CF8(param_1 + 0x20,&stack_pair_90.first);
   *(undefined4 *)(param_1 + 0x7c) = param_5;
   return;
 }

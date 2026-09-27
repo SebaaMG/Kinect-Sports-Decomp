@@ -30,7 +30,7 @@ extern int fn_82BE6BD8();
 extern int fn_82BF2298();
 extern int fn_82BF23F8();
 extern int fn_82BF26B0();
-extern int fn_82F691F0();
+extern int memset();
 
 
 void fn_82BF2880(int param_1,int param_2,int param_3)
@@ -43,7 +43,7 @@ void fn_82BF2880(int param_1,int param_2,int param_3)
     *(undefined4 *)(param_1 + 0x30) = 0;
     *(undefined4 *)(param_1 + 8) = 0;
                     /* WARNING: Subroutine does not return */
-    fn_82F691F0(*(undefined4 *)(param_1 + 0x20),0,*(undefined4 *)(param_1 + 0x2c));
+    memset(*(undefined4 *)(param_1 + 0x20),0,*(undefined4 *)(param_1 + 0x2c));
   }
   if ((param_3 != 0) && (param_2 != 0)) {
     if (*(int *)(param_1 + 0x30) == 0) {
@@ -67,6 +67,6 @@ void fn_82BF2880(int param_1,int param_2,int param_3)
   *(undefined4 *)(param_1 + 0x30) = 0;
   *(undefined4 *)(param_1 + 8) = 0;
                     /* WARNING: Subroutine does not return */
-  fn_82F691F0(*(undefined4 *)(param_1 + 0x20),0,*(undefined4 *)(param_1 + 0x2c));
+  memset(*(undefined4 *)(param_1 + 0x20),0,*(undefined4 *)(param_1 + 0x2c));
 }
 

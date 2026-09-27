@@ -50,11 +50,11 @@ void fn_826EB3A8(undefined8 param_1,uint *param_2,int *param_3,longlong param_4,
   char in_stack_00000057;
   uint *puStack_100;
   undefined1 uStack_fc;
-  undefined4 uStack_f8;
-  undefined4 uStack_f4;
+  struct { undefined4 first; undefined4 second; } stack_pair_f8;
+
   undefined4 uStack_f0;
   undefined1 auStack_e0 [4];
-  undefined1 auStack_dc [220];
+  undefined1 auStack_dc [140];
   
   piVar1 = *(int **)(*param_3 + 0xc);
   if (param_2[6] != 0) {
@@ -77,11 +77,11 @@ void fn_826EB3A8(undefined8 param_1,uint *param_2,int *param_3,longlong param_4,
         lVar5 = lVar5 + -1;
         puVar7 = puVar7 + 0x24;
       } while (-1 < lVar5);
-      uStack_f8 = 0;
-      uStack_f4 = 0;
+      stack_pair_f8.first = 0;
+      stack_pair_f8.second = 0;
       uStack_f0 = 0;
       if ((param_5 != 0) && (uVar3 = 0, *param_2 != 0)) {
-        puVar4 = &uStack_f8;
+        puVar4 = &stack_pair_f8.first;
         puVar7 = auStack_e0;
         puVar6 = param_2;
         do {
@@ -96,7 +96,7 @@ void fn_826EB3A8(undefined8 param_1,uint *param_2,int *param_3,longlong param_4,
           puVar4 = puVar4 + 1;
         } while (uVar3 < *param_2);
       }
-      (**(code **)(*piVar1 + 100))(piVar1,param_2[4],uStack_f8,uStack_f4,uStack_f0);
+      (**(code **)(*piVar1 + 100))(piVar1,param_2[4],stack_pair_f8.first,stack_pair_f8.second,uStack_f0);
     }
     puStack_100 = param_2 + 8;
     uStack_fc = 0;

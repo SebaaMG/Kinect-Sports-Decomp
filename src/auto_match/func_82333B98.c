@@ -51,7 +51,7 @@ void fn_82333B98(int param_1,undefined8 param_2,undefined8 param_3,uint *param_4
   undefined4 in_stack_0000005c;
   undefined4 *puStack_70;
   undefined4 *puStack_6c;
-  undefined1 auStack_68 [104];
+  undefined1 auStack_68 [1];
   
   uVar1 = *(undefined4 *)(param_1 + 0x80);
   puVar3 = (undefined4 *)fn_8265C9E0(0x88);

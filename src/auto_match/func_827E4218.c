@@ -28,7 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_50;
 extern unsigned int *auStack_60;
 extern int fn_82811438();
-extern int fn_82F691F0();
+extern int memset();
 extern unsigned int lbl_83156AA0;
 
 
@@ -39,7 +39,7 @@ void fn_827E4218(int *param_1,int *param_2)
   int iVar3;
   undefined8 uVar2;
   undefined4 auStack_60 [4];
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [32];
   
   auStack_60[0] = 0;
   fn_82811438(auStack_50,auStack_60,0x10);
@@ -57,6 +57,6 @@ void fn_827E4218(int *param_1,int *param_2)
   *(int *)(iVar3 + 0x1c) = iVar3 + 0x28;
   uVar2 = (**(code **)(*param_1 + 0x38))(param_1);
                     /* WARNING: Subroutine does not return */
-  fn_82F691F0(*(undefined4 *)(*param_2 + 0x1c),0,uVar2);
+  memset(*(undefined4 *)(*param_2 + 0x1c),0,uVar2);
 }
 

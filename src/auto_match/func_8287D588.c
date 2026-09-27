@@ -34,10 +34,10 @@ undefined4 fn_8287D588(longlong param_1,undefined4 param_2)
 
 {
   undefined4 uStack0000001c;
-  int aiStack_10 [4];
+  int aiStack_10;
   
   uStack0000001c = param_2;
-  fn_8287D6D8(aiStack_10,param_1 + 0xf0,&stack0x0000001c);
-  return *(undefined4 *)(aiStack_10[0] + 0xc0);
+  fn_8287D6D8(&aiStack_10,param_1 + 0xf0,&stack0x0000001c);
+  return *(undefined4 *)(aiStack_10 + 0xc0);
 }
 

@@ -42,7 +42,7 @@ undefined8 fn_8293D368(int param_1,int param_2)
   undefined8 uVar1;
   undefined8 uVar2;
   undefined1 auStack_40 [8];
-  uint auStack_38 [14];
+  uint auStack_38 [6];
   
   *(undefined4 *)(param_1 + 300) = 0;
   auStack_40[0] = 0;

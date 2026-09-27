@@ -46,7 +46,7 @@ void fn_822D9E80(int param_1)
   double dVar3;
   double dVar4;
   double dVar5;
-  undefined1 auStack_20 [8];
+  undefined1 auStack_20 [1];
   
   *(undefined4 *)(param_1 + 0x50) = 0;
   fn_822C6880(*(undefined4 *)(param_1 + 0x24));

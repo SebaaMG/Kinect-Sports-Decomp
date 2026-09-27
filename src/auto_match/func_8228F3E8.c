@@ -29,7 +29,7 @@ extern unsigned int *auStack_30;
 extern int fn_82536008();
 extern int fn_82536288();
 extern int fn_82536358();
-extern int fn_82F63CA0();
+extern int memmove();
 
 
 void fn_8228F3E8(int param_1)
@@ -39,21 +39,21 @@ void fn_8228F3E8(int param_1)
   char cVar2;
   ulonglong uVar3;
   uint *puVar4;
-  uint auStack_30 [12];
+  uint auStack_30;
   
   for (puVar4 = *(uint **)(param_1 + 0x38); puVar4 != *(uint **)(param_1 + 0x3c);
       puVar4 = puVar4 + 1) {
-    auStack_30[0] = *puVar4;
-    uVar3 = (ulonglong)auStack_30[0];
+    auStack_30 = *puVar4;
+    uVar3 = (ulonglong)auStack_30;
     cVar2 = fn_82536358(uVar3);
     if (cVar2 != '\0') {
       fn_82536008(uVar3);
-      fn_82536288(auStack_30);
+      fn_82536288(&auStack_30);
     }
   }
   iVar1 = *(int *)(param_1 + 0x38);
   if (iVar1 != *(int *)(param_1 + 0x3c)) {
-    fn_82F63CA0(iVar1,*(int *)(param_1 + 0x3c),0);
+    memmove(iVar1,*(int *)(param_1 + 0x3c),0);
     *(int *)(param_1 + 0x3c) = iVar1;
   }
   return;

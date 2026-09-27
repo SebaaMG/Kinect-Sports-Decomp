@@ -34,7 +34,7 @@ void fn_82833B80(int param_1,int param_2)
 
 {
   int iStack_10;
-  undefined1 auStack_c [12];
+  undefined1 auStack_c [1];
   
   if ((*(int *)(param_2 + 0x18) != 0) && (*(int *)(param_2 + 0x18) == *(int *)(param_1 + 0x2c8))) {
     iStack_10 = param_2;

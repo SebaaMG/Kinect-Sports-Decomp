@@ -38,11 +38,11 @@ ulonglong fn_82297198(longlong param_1,undefined1 param_2)
   ulonglong uVar1;
   undefined1 auStack_10 [2];
   ushort uStack_e;
-  undefined4 auStack_c [3];
+  undefined4 auStack_c;
   
-  auStack_c[0] = 0;
+  auStack_c = 0;
   auStack_10[0] = param_2;
-  iVar2 = fn_82F85C08(&uStack_e,auStack_10,1,auStack_c,param_1 + 0x18);
+  iVar2 = fn_82F85C08(&uStack_e,auStack_10,1,&auStack_c,param_1 + 0x18);
   uVar1 = 0xffffffffffffffff;
   if (-1 < iVar2) {
     uVar1 = (ulonglong)uStack_e;

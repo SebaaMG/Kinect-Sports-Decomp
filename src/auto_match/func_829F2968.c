@@ -52,24 +52,24 @@ void fn_829F2968(int param_1,undefined8 param_2,undefined8 param_3,undefined8 pa
   int iStack00000034;
   uint uStack00000038;
   int iStack_70;
-  int iStack_6c;
-  uint uStack_68;
+  struct { int first; uint second; } stack_pair_6c;
+
   
   iStack00000030 = (int)((ulonglong)param_4 >> 0x20);
   iVar1 = iStack00000030;
   iStack00000034 = (int)param_4;
   iVar2 = iStack00000034;
   uStack00000038 = (uint)((ulonglong)param_5 >> 0x20);
-  uStack_68 = uStack00000038;
+  stack_pair_6c.second = uStack00000038;
   puVar4 = (undefined4 *)(param_1 + 0x5c);
   piVar5 = (int *)&lbl_82079F74;
   _iStack00000030 = param_4;
   _uStack00000038 = param_5;
   do {
     iStack_70 = piVar5[-1] * param_7 + iVar1;
-    iStack_6c = *piVar5 * param_7 + iVar2;
-    fn_829F2758(&iStack_70,&iStack_6c);
-    uVar3 = fn_829F27B8(param_2,param_3,CONCAT44(iStack_70,iStack_6c),(ulonglong)uStack_68 << 0x20
+    stack_pair_6c.first = *piVar5 * param_7 + iVar2;
+    fn_829F2758(&iStack_70,&stack_pair_6c.first);
+    uVar3 = fn_829F27B8(param_2,param_3,CONCAT44(iStack_70,stack_pair_6c.first),(ulonglong)stack_pair_6c.second << 0x20
                           ,param_6,300,0x50,param_1);
     piVar5 = piVar5 + 2;
     puVar4 = puVar4 + 1;

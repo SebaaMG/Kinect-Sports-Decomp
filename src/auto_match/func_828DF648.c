@@ -39,18 +39,18 @@ longlong fn_828DF648(int param_1,undefined8 param_2)
   ulonglong uVar2;
   longlong lVar3;
   undefined1 auStack_30 [4];
-  uint auStack_2c [11];
+  uint auStack_2c;
   
   lVar3 = 0;
-  auStack_2c[0] = **(uint **)(param_1 + 4);
-  uVar2 = (ulonglong)auStack_2c[0];
+  auStack_2c = **(uint **)(param_1 + 4);
+  uVar2 = (ulonglong)auStack_2c;
   fn_828E0268(auStack_30);
   cVar1 = fn_828E02A0(uVar2 + 0xc,auStack_30);
   while (cVar1 != '\0') {
-    fn_828EA790(auStack_2c);
+    fn_828EA790(&auStack_2c);
     lVar3 = lVar3 + 1;
     fn_828E0268(auStack_30,param_2);
-    cVar1 = fn_828E02A0((ulonglong)auStack_2c[0] + 0xc,auStack_30);
+    cVar1 = fn_828E02A0((ulonglong)auStack_2c + 0xc,auStack_30);
   }
   return lVar3;
 }

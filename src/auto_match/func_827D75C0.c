@@ -32,15 +32,15 @@ undefined4 fn_827D75C0(int param_1,undefined8 param_2)
 
 {
   undefined4 uVar1;
-  int aiStack_30 [12];
+  int aiStack_30;
   
   RtlEnterCriticalSection(param_1 + 0x3c8);
-  fn_827E0658(aiStack_30,param_1 + 0x350,param_2);
-  if (aiStack_30[0] == *(int *)(param_1 + 0x354)) {
+  fn_827E0658(&aiStack_30,param_1 + 0x350,param_2);
+  if (aiStack_30 == *(int *)(param_1 + 0x354)) {
     uVar1 = *(undefined4 *)(param_1 + 0x400);
   }
   else {
-    uVar1 = *(undefined4 *)(aiStack_30[0] + 0xc);
+    uVar1 = *(undefined4 *)(aiStack_30 + 0xc);
   }
   RtlLeaveCriticalSection(param_1 + 0x3c8);
   return uVar1;

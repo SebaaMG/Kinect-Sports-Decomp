@@ -36,8 +36,8 @@ undefined1 fn_823ABB08(int param_1,int param_2)
 {
   undefined1 uVar1;
   undefined4 *puVar2;
-  int iStack_20;
-  int iStack_1c;
+  struct { int first; int second; } stack_pair_20;
+
   
   for (puVar2 = *(undefined4 **)(param_1 + 0x6c);
       (puVar2 != *(undefined4 **)(param_1 + 0x70) && (*(int *)*puVar2 != param_2));
@@ -52,9 +52,9 @@ undefined1 fn_823ABB08(int param_1,int param_2)
       return 0;
     }
   }
-  fn_82365BD8(&iStack_20,puVar2);
-  uVar1 = *(undefined1 *)(iStack_20 + 8);
-  if (iStack_1c != 0) {
+  fn_82365BD8(&stack_pair_20.first,puVar2);
+  uVar1 = *(undefined1 *)(stack_pair_20.first + 8);
+  if (stack_pair_20.second != 0) {
     fn_822315A0();
   }
   return uVar1;

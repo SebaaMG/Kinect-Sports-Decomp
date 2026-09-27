@@ -61,8 +61,7 @@ extern unsigned int uStack_8c;
 
 
 undefined4 *
-fn_8228E7E8(double param_1,undefined4 *param_2,undefined4 param_3,undefined8 param_4,
-             undefined4 *param_5,int *param_6,undefined8 param_7,undefined8 param_8)
+fn_8228E7E8(double param_1, undefined4 *param_2, undefined4 param_3, undefined8 param_4, undefined4 *param_5, int *param_6, undefined8 param_7, undefined8 param_8, undefined4 in_stack_00000054, undefined4 in_stack_0000005c, undefined4 in_stack_00000064, undefined4 in_stack_0000006c, undefined4 in_stack_00000074, undefined4 in_stack_0000007c, int in_stack_00000084)
 
 {
   uint uVar1;
@@ -71,18 +70,18 @@ fn_8228E7E8(double param_1,undefined4 *param_2,undefined4 param_3,undefined8 par
   undefined8 uVar2;
   longlong lVar5;
   undefined4 *puVar6;
-  undefined4 in_stack_00000054;
-  undefined4 in_stack_0000005c;
-  undefined4 in_stack_00000064;
-  undefined4 in_stack_0000006c;
-  undefined4 in_stack_00000074;
-  undefined4 in_stack_0000007c;
-  int in_stack_00000084;
+
+
+
+
+
+
+
   undefined **ppuStack_90;
   undefined4 uStack_8c;
   undefined1 auStack_88 [4];
   int iStack_84;
-  int aiStack_80 [32];
+  int aiStack_80 [4];
   
   param_2[4] = param_3;
   param_2[2] = 0;

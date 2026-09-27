@@ -35,15 +35,15 @@ undefined4 * fn_82517A50(undefined4 *param_1,undefined4 *param_2)
 
 {
   int iVar1;
-  undefined4 uStack_20;
-  undefined4 uStack_1c;
+  struct { undefined4 first; undefined4 second; } stack_pair_20;
+
   
-  uStack_20 = 0;
-  uStack_1c = 0;
-  fn_82517978(&uStack_20,*param_2,param_2[1],0);
+  stack_pair_20.first = 0;
+  stack_pair_20.second = 0;
+  fn_82517978(&stack_pair_20.first,*param_2,param_2[1],0);
   iVar1 = param_1[1];
-  param_1[1] = uStack_1c;
-  *param_1 = uStack_20;
+  param_1[1] = stack_pair_20.second;
+  *param_1 = stack_pair_20.first;
   if (iVar1 != 0) {
     fn_822315A0();
   }

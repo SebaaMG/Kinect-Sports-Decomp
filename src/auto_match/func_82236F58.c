@@ -44,7 +44,7 @@ void fn_82236F58(int *param_1,undefined8 param_2,int *param_3)
   undefined4 uVar7;
   undefined4 uVar8;
   undefined4 uVar9;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [1];
   
   if (param_3 != (int *)0x0) {
     if ((int *)*param_3 == (int *)0x0) {

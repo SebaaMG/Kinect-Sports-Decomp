@@ -25,7 +25,7 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int iStack_64;
 extern unsigned int iStack_68;
 
@@ -40,20 +40,20 @@ void fn_8243FDE0(int *param_1,int *param_2)
   int *piVar5;
   int *piVar6;
   int *piVar7;
-  int aiStack_b0 [18];
+  int aiStack_b0;
   int iStack_68;
   int iStack_64;
   
   piVar6 = param_1;
   while (piVar6 = piVar6 + 0x17, piVar6 != param_2) {
-    fn_82F68CC0(aiStack_b0,piVar6,0x5c);
+    memcpy(&aiStack_b0,piVar6,0x5c);
     iVar4 = iStack_64;
     iVar3 = iStack_68;
-    iVar2 = aiStack_b0[0];
+    iVar2 = aiStack_b0;
     if (iStack_64 == 1) {
       if (param_1[0x13] == 1) {
         if ((iStack_68 < param_1[0x12]) ||
-           ((iStack_68 == param_1[0x12] && (aiStack_b0[0] < *param_1)))) {
+           ((iStack_68 == param_1[0x12] && (aiStack_b0 < *param_1)))) {
           bVar1 = true;
         }
         else {
@@ -71,7 +71,7 @@ void fn_8243FDE0(int *param_1,int *param_2)
     piVar7 = piVar6;
     if (bVar1) {
       while (piVar5 = param_1, param_1 != piVar7) {
-        fn_82F68CC0(piVar7,piVar7 + -0x17,0x5c);
+        memcpy(piVar7,piVar7 + -0x17,0x5c);
         piVar7 = piVar7 + -0x17;
       }
     }
@@ -95,11 +95,11 @@ void fn_8243FDE0(int *param_1,int *param_2)
           bVar1 = false;
         }
         if (!bVar1) break;
-        fn_82F68CC0(piVar5,piVar7,0x5c);
+        memcpy(piVar5,piVar7,0x5c);
         piVar5 = piVar7;
       }
     }
-    fn_82F68CC0(piVar5,aiStack_b0,0x5c);
+    memcpy(piVar5,&aiStack_b0,0x5c);
   }
   return;
 }

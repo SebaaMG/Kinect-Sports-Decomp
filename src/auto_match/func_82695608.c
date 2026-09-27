@@ -37,7 +37,7 @@ bool fn_82695608(char *param_1,int param_2)
   bool bVar2;
   char cVar4;
   longlong lVar3;
-  double adStack_10 [2];
+  double adStack_10;
   
   cVar4 = *param_1;
   if (cVar4 == '\x05') {
@@ -47,7 +47,7 @@ bool fn_82695608(char *param_1,int param_2)
     if (6 < *(byte *)(param_2 + 0x7c)) {
       return true;
     }
-    cVar4 = fn_826951F0(adStack_10,**(undefined4 **)(param_1 + 4));
+    cVar4 = fn_826951F0(&adStack_10,**(undefined4 **)(param_1 + 4));
     if (cVar4 == '\0') {
       return false;
     }
@@ -74,15 +74,15 @@ bool fn_82695608(char *param_1,int param_2)
       }
       return iVar1 != 0;
     }
-    adStack_10[0] = *(double *)(param_1 + 8);
+    adStack_10 = *(double *)(param_1 + 8);
   }
-  if ((((ulonglong)adStack_10[0] & 0x7ff0000000000000) != 0x7ff0000000000000) ||
-     (bVar2 = true, ((ulonglong)adStack_10[0] & 0xfffffffffffff) == 0)) {
+  if ((((ulonglong)adStack_10 & 0x7ff0000000000000) != 0x7ff0000000000000) ||
+     (bVar2 = true, ((ulonglong)adStack_10 & 0xfffffffffffff) == 0)) {
     bVar2 = false;
   }
   if (bVar2) {
     return false;
   }
-  return adStack_10[0] != lbl_82005710;
+  return adStack_10 != lbl_82005710;
 }
 

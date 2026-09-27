@@ -42,21 +42,21 @@ void fn_828A0800(int param_1)
   undefined4 *puVar3;
   int iVar5;
   longlong lVar4;
-  undefined4 auStack_30 [12];
+  undefined4 auStack_30;
   
   iVar5 = fn_828A0638();
   fn_828A8160(*(undefined4 *)(iVar5 + 8),param_1);
   uVar1 = *(undefined4 *)(param_1 + 0xc);
   uVar2 = *(uint *)(param_1 + 0x50);
   lVar4 = (ulonglong)uVar2 + 0x1fc;
-  auStack_30[0] = uVar1;
+  auStack_30 = uVar1;
   if (*(char *)(param_1 + 0x26) == '\0') {
-    fn_8289F9C8(lVar4,auStack_30);
-    auStack_30[0] = uVar1;
-    fn_8289F9C8((ulonglong)uVar2 + 0x20c,auStack_30);
+    fn_8289F9C8(lVar4,&auStack_30);
+    auStack_30 = uVar1;
+    fn_8289F9C8((ulonglong)uVar2 + 0x20c,&auStack_30);
   }
   else {
-    fn_8289F9C8(lVar4,auStack_30);
+    fn_8289F9C8(lVar4,&auStack_30);
   }
   fn_828995F0(*(undefined4 *)(param_1 + 0x50),param_1);
   fn_828C3958(*(undefined4 *)(param_1 + 0x50),param_1);

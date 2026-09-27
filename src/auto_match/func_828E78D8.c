@@ -39,7 +39,7 @@ undefined4 * fn_828E78D8(undefined4 *param_1,int param_2,int *param_3,longlong p
   char cVar3;
   undefined4 *puVar2;
   longlong lVar4;
-  int *apiStack_50 [20];
+  int *apiStack_50 [4];
   
   lVar4 = param_4 + 0xc;
   if (*(int *)(param_2 + 8) == 0) {

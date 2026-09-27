@@ -39,24 +39,24 @@ extern unsigned int iStack_30;
 void fn_8288DDF8(longlong param_1,ulonglong param_2)
 
 {
-  int aiStack_40 [2];
+  int aiStack_40;
   undefined1 auStack_38 [8];
   int iStack_30;
   int iStack_2c;
   
   fn_828B5580(auStack_38,param_2 + 0x14);
-  aiStack_40[0] = fn_828B55F8(auStack_38);
-  fn_828A1C98(&iStack_30,param_1 + 0x6c,aiStack_40);
+  aiStack_40 = fn_828B55F8(auStack_38);
+  fn_828A1C98(&iStack_30,param_1 + 0x6c,&aiStack_40);
   fn_828B55B0(auStack_38);
-  aiStack_40[0] = iStack_30;
+  aiStack_40 = iStack_30;
   while( true ) {
-    if (aiStack_40[0] == iStack_2c) {
+    if (aiStack_40 == iStack_2c) {
       return;
     }
-    if ((ulonglong)*(uint *)(aiStack_40[0] + 0x10) == (param_2 & 0xffffffff)) break;
+    if ((ulonglong)*(uint *)(aiStack_40 + 0x10) == (param_2 & 0xffffffff)) break;
     fn_828EA790();
   }
-  fn_828872C8(aiStack_40,param_1 + 0x6c);
+  fn_828872C8(&aiStack_40,param_1 + 0x6c);
   return;
 }
 

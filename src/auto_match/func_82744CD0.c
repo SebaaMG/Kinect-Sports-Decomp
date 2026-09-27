@@ -46,7 +46,7 @@ undefined4 * fn_82744CD0(undefined4 *param_1,uint *param_2)
   longlong lVar1;
   undefined1 uStack_40;
   undefined1 auStack_3f [3];
-  int aiStack_3c [3];
+  int aiStack_3c;
   undefined1 auStack_30 [8];
   undefined4 uStack_28;
   
@@ -59,12 +59,12 @@ undefined4 * fn_82744CD0(undefined4 *param_1,uint *param_2)
   auStack_3f[0] = 2;
   auStack_30[0] = 4;
   uStack_28 = 0;
-  fn_82681728(aiStack_3c,(ulonglong)*param_2 + 0x254,0xffffffff82006680);
-  fn_826C1FF8(param_1 + 4,param_2,aiStack_3c,auStack_30,auStack_3f);
-  lVar1 = (ulonglong)*(uint *)(aiStack_3c[0] + 8) - 1;
-  *(int *)(aiStack_3c[0] + 8) = (int)lVar1;
+  fn_82681728(&aiStack_3c,(ulonglong)*param_2 + 0x254,0xffffffff82006680);
+  fn_826C1FF8(param_1 + 4,param_2,&aiStack_3c,auStack_30,auStack_3f);
+  lVar1 = (ulonglong)*(uint *)(aiStack_3c + 8) - 1;
+  *(int *)(aiStack_3c + 8) = (int)lVar1;
   if (lVar1 == 0) {
-    fn_826944C8(aiStack_3c[0]);
+    fn_826944C8(aiStack_3c);
   }
   fn_82696330(auStack_30);
   return param_1;

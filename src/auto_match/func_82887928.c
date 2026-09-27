@@ -39,7 +39,7 @@ undefined4 * fn_82887928(undefined4 *param_1,int param_2,int *param_3,int param_
   int iVar3;
   int iVar4;
   undefined4 *puVar5;
-  int *apiStack_50 [20];
+  int * apiStack_50;
   
   if (*(int *)(param_2 + 8) == 0) {
     fn_828DF458(param_1,param_2,1,*(undefined4 *)(param_2 + 4),param_4);
@@ -57,17 +57,17 @@ undefined4 * fn_82887928(undefined4 *param_1,int param_2,int *param_3,int param_
       iVar3 = *(int *)(param_4 + 0xc);
       iVar4 = param_3[3];
       if ((iVar3 < iVar4) &&
-         (apiStack_50[0] = param_3, fn_8288A4B0(apiStack_50), apiStack_50[0][3] < iVar3)) {
-        cVar1 = *(char *)(apiStack_50[0][2] + 0x15);
+         (apiStack_50 = param_3, fn_8288A4B0(&apiStack_50), apiStack_50[3] < iVar3)) {
+        cVar1 = *(char *)(apiStack_50[2] + 0x15);
         piVar2 = param_3;
-        param_3 = apiStack_50[0];
+        param_3 = apiStack_50;
       }
       else {
         if ((iVar3 <= iVar4) ||
-           ((apiStack_50[0] = param_3, fn_828EA790(apiStack_50), apiStack_50[0] != piVar2 &&
-            (apiStack_50[0][3] <= iVar3)))) goto LAB_82887aac;
+           ((apiStack_50 = param_3, fn_828EA790(&apiStack_50), apiStack_50 != piVar2 &&
+            (apiStack_50[3] <= iVar3)))) goto LAB_82887aac;
         cVar1 = *(char *)(param_3[2] + 0x15);
-        piVar2 = apiStack_50[0];
+        piVar2 = apiStack_50;
       }
       if (cVar1 == '\0') {
         fn_828DF458(param_1,param_2,1,piVar2,param_4);
@@ -82,7 +82,7 @@ undefined4 * fn_82887928(undefined4 *param_1,int param_2,int *param_3,int param_
     }
   }
 LAB_82887aac:
-  puVar5 = (undefined4 *)fn_82887688(apiStack_50,param_2,param_4,0);
+  puVar5 = (undefined4 *)fn_82887688(&apiStack_50,param_2,param_4,0);
   *param_1 = *puVar5;
   return param_1;
 }

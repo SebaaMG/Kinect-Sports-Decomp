@@ -45,7 +45,7 @@ extern int fn_82528BF8();
 extern int fn_82528EE0();
 extern int fn_82F4EBE8();
 extern int fn_82F52188();
-extern int fn_82F691F0();
+extern int memset();
 extern unsigned int iStack_690;
 extern unsigned int lbl_820E975C;
 extern unsigned int uStack_440;
@@ -84,8 +84,8 @@ void fn_8229BE10(int param_1)
   undefined4 in_vr77;
   undefined1 auStack_6f0 [4];
   float fStack_6ec;
-  float fStack_6e8;
-  float fStack_6e4;
+  struct { float first; float second; } stack_pair_6e8;
+
   undefined4 auStack_6dc [3];
   float afStack_6d0 [2];
   float fStack_6c8;
@@ -122,8 +122,8 @@ void fn_8229BE10(int param_1)
   puVar7 = auStack_6dc;
   fVar1 = *pfVar10;
   fStack_6ec = pfVar10[1];
-  fStack_6e8 = pfVar10[2];
-  fStack_6e4 = pfVar10[3];
+  stack_pair_6e8.first = pfVar10[2];
+  stack_pair_6e8.second = pfVar10[3];
   do {
     piVar6 = (int *)fn_82F4EBE8(uVar13);
     if ((piVar6 != (int *)0x0) && (iVar5 = (**(code **)(*piVar6 + 4))(piVar6), iVar5 != 0)) {
@@ -153,7 +153,7 @@ void fn_8229BE10(int param_1)
   if (*(int *)(param_1 + 0x10) == 0) {
     lVar15 = 1;
     if ((iVar14 == 2) && (fStack_6c8 < fStack_698)) {
-      pfVar10 = &fStack_6e8;
+      pfVar10 = &stack_pair_6e8.first;
       puVar11 = auStack_6b8;
       lVar16 = 6;
       do {
@@ -168,7 +168,7 @@ void fn_8229BE10(int param_1)
     lVar15 = 2;
     if ((iVar14 == 2) && (afStack_6d0[0] < fStack_6a0)) {
       puVar11 = auStack_678;
-      pfVar10 = &fStack_6e8;
+      pfVar10 = &stack_pair_6e8.first;
       lVar16 = 6;
       do {
         pfVar10 = pfVar10 + 2;
@@ -176,7 +176,7 @@ void fn_8229BE10(int param_1)
         *puVar11 = *(undefined8 *)pfVar10;
         lVar16 = lVar16 + -1;
       } while (lVar16 != 0);
-      pfVar10 = &fStack_6e8;
+      pfVar10 = &stack_pair_6e8.first;
       puVar11 = auStack_6b8;
       lVar16 = 6;
       do {
@@ -201,9 +201,9 @@ void fn_8229BE10(int param_1)
     piVar8 = aiStack_6c0;
     do {
       if (piVar8[-7] != 0) {
-        if ((float)piVar8[-4] <= fStack_6e8) {
+        if ((float)piVar8[-4] <= stack_pair_6e8.first) {
           if (fVar1 <= (float)piVar8[-4]) {
-            if ((float)piVar8[-2] <= fStack_6e4) {
+            if ((float)piVar8[-2] <= stack_pair_6e8.second) {
               if (fStack_6ec <= (float)piVar8[-2]) goto LAB_8229c068;
               iVar5 = 5;
             }
@@ -267,9 +267,9 @@ LAB_8229c068:
       }
       else {
         uStack_640 = ((((U64)(uStack_640)) & (~(((U64)0xFFFF) << 0))) | ((((U64)(lbl_820E975C)) & ((U64)0xFFFF)) << 0));
-        fn_82F691F0((undefined2 *)((int)&uStack_640 + 2),0,0x1fe);
+        memset((undefined2 *)((int)&uStack_640 + 2),0,0x1fe);
         uStack_440 = ((((U64)(uStack_440)) & (~(((U64)0xFFFF) << 0))) | ((((U64)(uVar4)) & ((U64)0xFFFF)) << 0));
-        fn_82F691F0((undefined2 *)((int)&uStack_440 + 2),0,0x1fe);
+        memset((undefined2 *)((int)&uStack_440 + 2),0,0x1fe);
         puVar7 = (undefined4 *)(param_1 + 0x70);
         if (7 < *(uint *)(param_1 + 0x84)) {
           puVar7 = (undefined4 *)*puVar7;

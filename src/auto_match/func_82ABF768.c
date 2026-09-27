@@ -45,7 +45,7 @@ undefined8 fn_82ABF768(double param_1,uint *param_2)
   uint uVar9;
   double extraout_f1;
   uint auStack_60 [4];
-  undefined8 auStack_50 [10];
+  undefined8 auStack_50 [4];
   
   if ((*param_2 & 0xe000000) == 0) {
 LAB_82abf78c:

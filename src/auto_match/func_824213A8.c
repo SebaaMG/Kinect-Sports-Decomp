@@ -59,7 +59,7 @@ void fn_824213A8(void)
   undefined4 uVar14;
   undefined4 uVar15;
   undefined1 auStack_90 [16];
-  undefined1 auStack_80 [128];
+  undefined1 auStack_80 [32];
   
   iVar5 = fn_82F6DA24();
   if (*(int *)(iVar5 + 0x44) != 0) {

@@ -81,8 +81,8 @@ void fn_824118B0(double param_1,int param_2)
   undefined4 uVar22;
   undefined4 uVar23;
   int aiStack_b0 [4];
-  undefined4 uStack_a0;
-  undefined4 uStack_9c;
+  struct { undefined4 first; undefined4 second; } stack_pair_a0;
+
   undefined4 uStack_98;
   float fStack_90;
   float fStack_8c;
@@ -204,19 +204,19 @@ LAB_824119a8:
         return;
       }
       *(undefined4 *)(param_2 + 0xc) = 0;
-      uStack_a0 = 0;
-      uStack_9c = 0;
+      stack_pair_a0.first = 0;
+      stack_pair_a0.second = 0;
       uStack_98 = 0;
       *(int **)(param_2 + 0x20) = piVar14;
       *(undefined4 *)(param_2 + 0x1c) = 1;
       fStack_90 = 0.0;
       fStack_8c = 0.0;
       fStack_88 = 0.0;
-      fn_82417FC0(piVar9,&uStack_a0);
+      fn_82417FC0(piVar9,&stack_pair_a0.first);
       aiStack_b0[0] = *piVar14;
       piVar9 = (int *)fn_825354B8(aiStack_b0,uVar13 + 0x50,0,
-                                        **(undefined4 **)(*piVar9 + 0x2b58),&fStack_90,&uStack_a0);
-      fn_822C18B8(&uStack_a0);
+                                        **(undefined4 **)(*piVar9 + 0x2b58),&fStack_90,&stack_pair_a0.first);
+      fn_822C18B8(&stack_pair_a0.first);
       fn_822CD140(&fStack_90);
       *(int **)(param_2 + 0x18) = piVar9;
       dVar16 = (double)fn_82539560(dVar15,(double)*(float *)(**(int **)(param_2 + 0x24) + 0x8bc),
@@ -265,19 +265,19 @@ LAB_824119a8:
           (**(code **)*puVar3)();
         }
         fn_82536288(piVar9);
-        uStack_a0 = 0;
-        uStack_9c = 0;
+        stack_pair_a0.first = 0;
+        stack_pair_a0.second = 0;
         uStack_98 = 0;
         uVar1 = *(uint *)(param_2 + 0x28);
         fStack_90 = 0.0;
         fStack_8c = 0.0;
         fStack_88 = 0.0;
         piVar2 = *(int **)(param_2 + 0x24);
-        fn_82417FC0(piVar2,&uStack_a0);
+        fn_82417FC0(piVar2,&stack_pair_a0.first);
         aiStack_b0[0] = *piVar14;
         iVar8 = fn_825354B8(aiStack_b0,(ulonglong)uVar1 + 0x50,0,
-                                  **(undefined4 **)(*piVar2 + 0x2b58),&fStack_90,&uStack_a0);
-        fn_822C18B8(&uStack_a0);
+                                  **(undefined4 **)(*piVar2 + 0x2b58),&fStack_90,&stack_pair_a0.first);
+        fn_822C18B8(&stack_pair_a0.first);
         fn_822CD140(&fStack_90);
         *piVar9 = iVar8;
         *(int **)(param_2 + 0x20) = piVar14;

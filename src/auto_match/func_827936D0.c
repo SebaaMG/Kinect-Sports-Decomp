@@ -82,10 +82,10 @@ void fn_827936D0(undefined8 param_1,ulonglong param_2,ulonglong param_3,longlong
   uint auStack_138 [2];
   int *piStack_130;
   int iStack_12c;
-  undefined **appuStack_120 [8];
+  undefined ** appuStack_120;
   undefined1 auStack_100 [48];
   undefined1 auStack_d0 [48];
-  undefined1 auStack_a0 [160];
+  undefined1 auStack_a0 [96];
   
   uVar12 = param_5 - param_4;
   fn_82791070(&piStack_130,param_1,param_4,auStack_138);
@@ -147,11 +147,11 @@ void fn_827936D0(undefined8 param_1,ulonglong param_2,ulonglong param_3,longlong
           fn_8278BD68(&ppuStack_150);
         }
         else {
-          uVar3 = fn_8278C6C0(appuStack_120,*(int *)(iVar2 + 0xc),&ppuStack_150);
+          uVar3 = fn_8278C6C0(&appuStack_120,*(int *)(iVar2 + 0xc),&ppuStack_150);
           fn_8278BD68(&ppuStack_150,uVar3);
-          appuStack_120[0] = &lbl_82010C6C;
-          fn_8278B290(appuStack_120);
-          fn_8267C488(appuStack_120);
+          appuStack_120 = &lbl_82010C6C;
+          fn_8278B290(&appuStack_120);
+          fn_8267C488(&appuStack_120);
         }
       }
       uVar12 = uVar12 - uVar13;

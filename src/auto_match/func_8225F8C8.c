@@ -36,7 +36,7 @@ extern unsigned int uStack_3c;
 void fn_8225F8C8(void)
 
 {
-  undefined4 **appuStack_50 [5];
+  undefined4 **appuStack_50 [1];
   uint uStack_3c;
   undefined1 auStack_30 [32];
   

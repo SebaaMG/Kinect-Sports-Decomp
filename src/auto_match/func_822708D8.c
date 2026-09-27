@@ -44,7 +44,7 @@ void fn_822708D8(double param_1,uint param_2,undefined8 param_3,undefined4 param
   undefined4 in_register_00010028;
   undefined4 in_vr2;
   undefined4 *puStack_50;
-  undefined4 *apuStack_4c [13];
+  undefined4 *apuStack_4c [1];
   
   iVar2 = fn_82270B70();
   puVar1 = (undefined4 *)(*(undefined4 **)(iVar2 + 0xe8))[1];

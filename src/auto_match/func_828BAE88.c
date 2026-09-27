@@ -50,7 +50,7 @@ int * fn_828BAE88(undefined8 param_1,int *param_2)
   undefined4 uStack_44;
   undefined1 auStack_40 [4];
   char cStack_3c;
-  char acStack_38 [56];
+  char acStack_38;
   
   uVar5 = 0;
   fn_8223FD30(auStack_40,param_2);
@@ -66,10 +66,10 @@ int * fn_828BAE88(undefined8 param_1,int *param_2)
     iVar4 = *(int *)(*param_2 + 4);
     uStack_44 = *(undefined4 *)((int)param_2 + iVar4 + 0x38);
     (**(code **)(*piVar2 + 0xc))
-              (param_1,acStack_38,piVar2,CONCAT44(uVar1,uStack_44) & 0xffffffffffffff,
+              (param_1,&acStack_38,piVar2,CONCAT44(uVar1,uStack_44) & 0xffffffffffffff,
                (int)param_2 + iVar4,*(undefined1 *)((int)param_2 + iVar4 + 0x40),*piVar2,iVar4,iVar4
               );
-    if (acStack_38[0] != '\0') {
+    if (acStack_38 != '\0') {
       uVar5 = 4;
     }
   }

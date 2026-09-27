@@ -42,18 +42,18 @@ void fn_82514888(uint *param_1)
   char cVar2;
   longlong lVar3;
   ulonglong uVar4;
-  uint uStack_40;
-  undefined4 uStack_3c;
+  struct { uint first; undefined4 second; } stack_pair_40;
+
   undefined4 uStack_38;
   
-  uStack_40 = 0;
-  uStack_3c = 0;
+  stack_pair_40.first = 0;
+  stack_pair_40.second = 0;
   lbl_83265A54 = 1;
   uStack_38 = 0;
-  cVar2 = fn_82248AE8(&uStack_40,(int)(param_1[1] - *param_1) >> 3);
+  cVar2 = fn_82248AE8(&stack_pair_40.first,(int)(param_1[1] - *param_1) >> 3);
   if (cVar2 != '\0') {
     uVar1 = param_1[1];
-    uVar4 = (ulonglong)uStack_40;
+    uVar4 = (ulonglong)stack_pair_40.first;
     if ((ulonglong)*param_1 != (ulonglong)uVar1) {
       lVar3 = *param_1 - uVar4;
       do {
@@ -63,9 +63,9 @@ void fn_82514888(uint *param_1)
         uVar4 = uVar4 + 8;
       } while ((lVar3 + uVar4 & 0xffffffff) != (ulonglong)uVar1);
     }
-    uStack_3c = (undefined4)uVar4;
+    stack_pair_40.second = (undefined4)uVar4;
   }
-  fn_8251CF80(0xffffffff8326597c,0,&uStack_40);
+  fn_8251CF80(0xffffffff8326597c,0,&stack_pair_40.first);
   fn_822314E8(param_1);
   return;
 }

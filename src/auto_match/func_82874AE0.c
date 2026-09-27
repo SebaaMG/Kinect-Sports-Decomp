@@ -44,8 +44,8 @@ float * fn_82874AE0(float *param_1,int param_2,undefined8 param_3)
   ulonglong uVar4;
   double dVar5;
   double dVar6;
-  float fStack_60;
-  float fStack_5c;
+  struct { float first; float second; } stack_pair_60;
+
   float fStack_58;
   
   fVar2 = lbl_821CA1A8;
@@ -63,12 +63,12 @@ float * fn_82874AE0(float *param_1,int param_2,undefined8 param_3)
     fVar1 = lbl_821CA1A8;
     if (uVar4 != *(uint *)(param_2 + 0x1c)) {
       do {
-        fn_82810328(param_3,uVar4,&fStack_60);
-        dVar5 = (double)(fStack_60 * fStack_60 + fStack_58 * fStack_58 + fStack_5c * fStack_5c);
+        fn_82810328(param_3,uVar4,&stack_pair_60.first);
+        dVar5 = (double)(stack_pair_60.first * stack_pair_60.first + fStack_58 * fStack_58 + stack_pair_60.second * stack_pair_60.second);
         if (dVar5 < dVar6) {
           dVar6 = dVar5;
-          fVar3 = fStack_60;
-          fVar2 = fStack_5c;
+          fVar3 = stack_pair_60.first;
+          fVar2 = stack_pair_60.second;
           fVar1 = fStack_58;
         }
         uVar4 = uVar4 + 0xc;

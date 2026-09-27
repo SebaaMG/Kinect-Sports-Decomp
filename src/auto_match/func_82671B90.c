@@ -47,7 +47,7 @@ void fn_82671B90(int param_1,undefined8 param_2)
   ulonglong uVar4;
   undefined1 auStack_90 [16];
   undefined1 auStack_80 [32];
-  undefined1 auStack_60 [96];
+  undefined1 auStack_60 [64];
   
   fn_8266EC60();
   iVar3 = fn_8266C738();

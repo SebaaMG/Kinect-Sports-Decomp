@@ -62,8 +62,8 @@ longlong fn_828DA2A8(undefined8 param_1,undefined8 param_2)
   longlong lVar9;
   double dVar10;
   double dVar11;
-  int iStack_50;
-  int iStack_4c;
+  struct { int first; int second; } stack_pair_50;
+
   
   lVar9 = 1;
   bVar3 = true;
@@ -92,11 +92,11 @@ longlong fn_828DA2A8(undefined8 param_1,undefined8 param_2)
   if (uVar5 == 0) {
     uVar5 = fn_828A17A0();
   }
-  fn_828D0D98(&iStack_50,uVar5);
-  if (iStack_50 != 0) {
-    iVar1 = *(int *)(iStack_50 + 0x7c);
+  fn_828D0D98(&stack_pair_50.first,uVar5);
+  if (stack_pair_50.first != 0) {
+    iVar1 = *(int *)(stack_pair_50.first + 0x7c);
     if ((((iVar1 - 1U < 5) && (iVar1 != 1)) && (iVar1 != 2)) && ((iVar1 != 3 && (iVar1 == 4)))) {
-      bVar2 = *(int *)(iStack_50 + 0x80) == 1;
+      bVar2 = *(int *)(stack_pair_50.first + 0x80) == 1;
     }
     else {
       bVar2 = false;
@@ -117,7 +117,7 @@ LAB_828da400:
     fn_82886518(iVar7,0xffffffffffffffff,0xffffffffffffffff);
   }
   fn_828BE158(param_1,iVar7,param_2,!bVar3);
-  if (iStack_4c != 0) {
+  if (stack_pair_50.second != 0) {
     fn_822315A0();
   }
   return lVar9;

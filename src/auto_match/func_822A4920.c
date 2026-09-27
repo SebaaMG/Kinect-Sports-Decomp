@@ -72,8 +72,8 @@ void fn_822A4920(int *param_1,undefined8 param_2)
   undefined4 uStack_1d0;
   undefined4 uStack_1cc;
   double dStack_1c8;
-  undefined4 uStack_1c0;
-  undefined4 uStack_1bc;
+  struct { undefined4 first; undefined4 second; } stack_pair_1c0;
+
   undefined1 *puStack_1b8;
   undefined4 uStack_1b0;
   undefined4 uStack_1ac;
@@ -173,10 +173,10 @@ LAB_822a4a88:
       fn_82273C88(&uStack_1d0);
       if (uVar5 == *(uint *)(*param_1 + 0xbc)) {
         puStack_1b8 = auStack_e0;
-        uStack_1c0 = 0;
-        uStack_1bc = 5;
-        fn_82290458(&iStack_1e0,&uStack_1c0);
-        puVar1 = &uStack_1c0;
+        stack_pair_1c0.first = 0;
+        stack_pair_1c0.second = 5;
+        fn_82290458(&iStack_1e0,&stack_pair_1c0.first);
+        puVar1 = &stack_pair_1c0.first;
       }
       else {
         puStack_1a8 = &lbl_820E975C;

@@ -43,7 +43,7 @@ void fn_828140F0(longlong param_1)
   uint *puVar5;
   char in_RESERVE;
   byte bVar6;
-  undefined1 auStack_20 [16];
+  undefined1 auStack_20 [1];
   
   iVar2 = (int)param_1;
   if (*(char *)(iVar2 + 0x30) == '\0') {

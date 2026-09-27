@@ -36,7 +36,7 @@ longlong fn_8288F948(longlong param_1,int param_2)
 {
   uint *puVar1;
   int iStack0000001c;
-  undefined1 auStack_10 [16];
+  undefined1 auStack_10 [1];
   
   if (param_2 == 0x8000) {
     return param_1 + 4;

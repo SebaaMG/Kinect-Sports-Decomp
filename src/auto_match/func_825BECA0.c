@@ -60,7 +60,7 @@ undefined4 * fn_825BECA0(int param_1,undefined8 param_2)
   undefined4 uStack_a8;
   int aiStack_a4 [5];
   undefined1 auStack_90 [32];
-  undefined1 auStack_70 [112];
+  undefined1 auStack_70 [48];
   
   aiStack_a4[1] = 0;
   puVar6 = (undefined4 *)fn_827D96A0(param_2);

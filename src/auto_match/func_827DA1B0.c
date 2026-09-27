@@ -37,7 +37,7 @@ undefined4 * fn_827DA1B0(undefined4 *param_1,ulonglong param_2)
 {
   int iVar1;
   undefined8 uVar2;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [32];
   
   *param_1 = &lbl_8201BB38;
   fn_8256D798(param_1 + 0xd,1,0);

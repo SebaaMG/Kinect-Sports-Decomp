@@ -32,14 +32,14 @@ extern int fn_82837D98();
 undefined4 fn_82553D38(int param_1)
 
 {
-  undefined4 auStack_10 [4];
+  undefined4 auStack_10;
   
   if (*(int *)(param_1 + 0x4664) == 0) {
-    auStack_10[0] = 0;
+    auStack_10 = 0;
   }
   else {
-    fn_82837D98(*(undefined4 *)(*(int *)(param_1 + 0x4664) + 0x14),0,auStack_10);
+    fn_82837D98(*(undefined4 *)(*(int *)(param_1 + 0x4664) + 0x14),0,&auStack_10);
   }
-  return auStack_10[0];
+  return auStack_10;
 }
 

@@ -54,7 +54,7 @@ void fn_82B633C8(undefined1 *param_1,int param_2,longlong param_3,int param_4)
   uint uVar14;
   longlong lVar15;
   double dVar16;
-  longlong alStack_80 [2];
+  longlong alStack_80;
   undefined8 uStack_70;
   byte bStack_68;
   byte bStack_67;
@@ -100,7 +100,7 @@ void fn_82B633C8(undefined1 *param_1,int param_2,longlong param_3,int param_4)
     } while (iVar10 < param_4);
   }
   uVar2 = (uint)(fVar4 * lbl_82005CCC + lbl_82002C5C);
-  alStack_80[0] = (longlong)(int)uVar2;
+  alStack_80 = (longlong)(int)uVar2;
   uVar12 = (uint)(fVar5 * lbl_82005CCC + lbl_82002C5C);
   bVar1 = (int)uVar12 < (int)uVar2;
   uVar14 = uVar12;
@@ -126,12 +126,12 @@ void fn_82B633C8(undefined1 *param_1,int param_2,longlong param_3,int param_4)
       uVar14 = uVar2 - 1;
     }
   }
-  fn_82B63208(alStack_80,uVar13 & 0xff,uVar14 & 0xff);
+  fn_82B63208(&alStack_80,uVar13 & 0xff,uVar14 & 0xff);
   iVar10 = 0;
   do {
     iVar9 = 0;
     do {
-      uVar8 = fn_82B63290((double)*(float *)((iVar10 + iVar9) * 4 + param_2),alStack_80);
+      uVar8 = fn_82B63290((double)*(float *)((iVar10 + iVar9) * 4 + param_2),&alStack_80);
       *(undefined1 *)((int)&uStack_70 + iVar9 + iVar10) = uVar8;
       iVar9 = iVar9 + 1;
     } while (iVar9 < 4);
@@ -142,8 +142,8 @@ void fn_82B633C8(undefined1 *param_1,int param_2,longlong param_3,int param_4)
   param_1[5] = ((char)uStack_70 << 3 | (((U64)(uStack_70) >> 48) & 0xFF)) << 2 | (((U64)(uStack_70) >> 40) & 0xFF) >> 1;
   param_1[4] = (bStack_66 << 3 | bStack_67) << 3 | bStack_68;
   param_1[3] = ((((U64)(uStack_70) >> 16) & 0xFF) << 3 | (((U64)(uStack_70) >> 8) & 0xFF)) << 3 | (((U64)(uStack_70) >> 0) & 0xFF);
-  param_1[1] = (char)((ulonglong)alStack_80[0] >> 0x38);
-  *param_1 = (char)((ulonglong)alStack_80[0] >> 0x28);
+  param_1[1] = (char)((ulonglong)alStack_80 >> 0x38);
+  *param_1 = (char)((ulonglong)alStack_80 >> 0x28);
   param_1[7] = ((bStack_63 << 3 | bStack_64) << 3 | bStack_65) << 1 | bStack_66 >> 2;
   param_1[6] = (cStack_61 << 3 | bStack_62) << 2 | bStack_63 >> 1;
   return;

@@ -54,19 +54,19 @@ undefined8 fn_824F6278(int param_1,int param_2)
   longlong lVar6;
   undefined4 uVar7;
   undefined4 uVar8;
-  undefined4 uStack_40;
-  undefined4 uStack_3c;
+  struct { undefined4 first; undefined4 second; } stack_pair_40;
+
   undefined4 uStack_38;
   undefined4 uStack_34;
   
-  uStack_40 = lbl_82195E18;
-  uStack_3c = lbl_82195E1C;
+  stack_pair_40.first = lbl_82195E18;
+  stack_pair_40.second = lbl_82195E1C;
   uStack_38 = lbl_82195E20;
   uStack_34 = 0;
   fn_82561778(param_1 + 0x80,0xffffffff821c1ff8,2);
   fn_825603C8(0,param_1 + 0x80,1);
   *(undefined4 *)(param_1 + 0x150) = 1;
-  puVar3 = (undefined4 *)((int)&uStack_40 + in_r0 & 0xfffffff0);
+  puVar3 = (undefined4 *)((int)&stack_pair_40.first + in_r0 & 0xfffffff0);
   uVar2 = puVar3[1];
   uVar7 = puVar3[2];
   uVar8 = puVar3[3];

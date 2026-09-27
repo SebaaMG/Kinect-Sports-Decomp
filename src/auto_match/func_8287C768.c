@@ -26,7 +26,7 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_82A1E968();
-extern int fn_82F6B030();
+extern int __u64tod();
 extern unsigned int lbl_82005F78;
 
 
@@ -34,10 +34,10 @@ double fn_8287C768(void)
 
 {
   double dVar1;
-  longlong alStack_10 [2];
+  longlong alStack_10;
   
-  fn_82A1E968(alStack_10);
-  dVar1 = (double)fn_82F6B030((ulonglong)(alStack_10[0] * 0x4e2) / 0xf38b);
+  fn_82A1E968(&alStack_10);
+  dVar1 = (double)__u64tod((ulonglong)(alStack_10 * 0x4e2) / 0xf38b);
   return (double)(float)(dVar1 * lbl_82005F78);
 }
 

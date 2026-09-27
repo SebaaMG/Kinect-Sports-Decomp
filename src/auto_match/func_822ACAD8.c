@@ -34,7 +34,7 @@ void fn_822ACAD8(undefined8 param_1,int param_2,undefined8 param_3)
 {
   char cVar1;
   char *pcVar2;
-  char acStack_90 [128];
+  char acStack_90 [112];
   char acStack_10 [16];
   
   pcVar2 = acStack_90;

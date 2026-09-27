@@ -51,8 +51,8 @@ undefined4 * fn_824D3760(undefined4 *param_1,undefined8 param_2)
   longlong lVar8;
   char in_RESERVE;
   byte bVar10;
-  undefined4 uStack_40;
-  undefined4 uStack_3c;
+  struct { undefined4 first; undefined4 second; } stack_pair_40;
+
   
   puVar6 = (undefined4 *)fn_8265C9E0(0x10);
   if (puVar6 == (undefined4 *)0x0) {
@@ -74,10 +74,10 @@ undefined4 * fn_824D3760(undefined4 *param_1,undefined8 param_2)
     *puVar4 = &lbl_821C0DB8;
     puVar4[2] = 1;
   }
-  uStack_40 = 0;
-  uStack_3c = 0;
-  fn_82517978(&uStack_40,puVar6,uVar5,0);
-  fn_82F541C8(param_2,&uStack_40);
+  stack_pair_40.first = 0;
+  stack_pair_40.second = 0;
+  fn_82517978(&stack_pair_40.first,puVar6,uVar5,0);
+  fn_82F541C8(param_2,&stack_pair_40.first);
   *param_1 = 0;
   param_1[1] = 0;
   if ((uVar5 & 0xffffffff) != 0) {

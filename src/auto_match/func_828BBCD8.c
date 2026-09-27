@@ -43,7 +43,7 @@ undefined8 fn_828BBCD8(undefined8 param_1,undefined4 *param_2)
 {
   undefined *puStack_b0;
   undefined1 auStack_ac [76];
-  undefined **appuStack_60 [18];
+  undefined **appuStack_60 [10];
   
   puStack_b0 = &lbl_821AA8E0;
   appuStack_60[0] = &lbl_82020F40;

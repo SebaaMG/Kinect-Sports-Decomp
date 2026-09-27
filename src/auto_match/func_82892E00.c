@@ -55,7 +55,7 @@ void fn_82892E00(int param_1,int param_2)
   int iVar4;
   int iVar5;
   int iStack0000001c;
-  int aiStack_80 [2];
+  int aiStack_80;
   undefined1 auStack_78 [8];
   undefined1 auStack_70 [8];
   undefined1 auStack_68 [8];
@@ -83,9 +83,9 @@ void fn_82892E00(int param_1,int param_2)
   fn_828B5580(auStack_48,auStack_60);
   iStack_40 = param_2;
   fn_828B5580(auStack_68,iVar5);
-  aiStack_80[0] = fn_828B55F8(auStack_68);
-  if (aiStack_80[0] != 0x8000) {
-    piVar2 = (int *)fn_8288DFB8(auStack_78,param_1 + 0x14,aiStack_80);
+  aiStack_80 = fn_828B55F8(auStack_68);
+  if (aiStack_80 != 0x8000) {
+    piVar2 = (int *)fn_8288DFB8(auStack_78,param_1 + 0x14,&aiStack_80);
     iVar4 = *piVar2 + 0x10;
   }
   iVar1 = fn_8224EFC8(iVar4);
@@ -93,7 +93,7 @@ void fn_82892E00(int param_1,int param_2)
     fn_828B5580(iVar1 + 0xc,auStack_48);
     *(int *)(iVar1 + 0x14) = iStack_40;
   }
-  fn_828901B8(aiStack_80,iVar4,iVar1,0);
+  fn_828901B8(&aiStack_80,iVar4,iVar1,0);
   fn_828B55B0(auStack_68);
   fn_828B55B0(auStack_48);
   fn_828B55B0(auStack_60);

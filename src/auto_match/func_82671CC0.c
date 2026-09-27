@@ -34,7 +34,7 @@ undefined8 fn_82671CC0(int param_1,int param_2)
 {
   int iVar1;
   int iVar2;
-  undefined1 auStack_10 [16];
+  undefined1 auStack_10 [1];
   
   iVar2 = param_1 + 0x34;
   for (iVar1 = *(int *)(param_1 + 0x34); iVar1 != *(int *)(param_1 + 0x38); iVar1 = iVar1 + 8) {

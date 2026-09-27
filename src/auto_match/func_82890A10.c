@@ -61,7 +61,7 @@ undefined1 * fn_82890A10(undefined1 *param_1,int param_2,ulonglong param_3)
   uint auStack_260 [4];
   undefined4 uStack_250;
   uint uStack_24c;
-  char acStack_240 [576];
+  char acStack_240 [560];
   
   iVar1 = *(int *)(param_2 + 0x34);
   if ((param_3 & 0xff) == 0) {

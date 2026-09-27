@@ -47,8 +47,8 @@ void fn_827B5330(undefined4 *param_1)
   int iVar1;
   uint uVar2;
   uint *puVar3;
-  int iStack_70;
-  int iStack_6c;
+  struct { int first; int second; } stack_pair_70;
+
   undefined4 uStack_60;
   undefined4 uStack_5c;
   undefined4 uStack_58;
@@ -83,10 +83,10 @@ void fn_827B5330(undefined4 *param_1)
       fn_827B5240(param_1,0,0);
       if (uVar2 < (uint)param_1[2]) {
         iVar1 = param_1[9];
-        iStack_70 = iVar1;
+        stack_pair_70.first = iVar1;
         fn_827B51A8(param_1);
-        iStack_6c = param_1[9] - iVar1;
-        fn_827B4F80(param_1 + 0xd,&iStack_70);
+        stack_pair_70.second = param_1[9] - iVar1;
+        fn_827B4F80(param_1 + 0xd,&stack_pair_70.first);
       }
     } while ((uint)param_1[2] < *puVar3);
   }

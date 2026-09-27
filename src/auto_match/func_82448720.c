@@ -45,8 +45,8 @@ void fn_82448720(int param_1,int param_2,uint param_3,uint param_4)
   float fVar3;
   undefined8 uVar4;
   ulonglong uVar5;
-  float fStack_30;
-  float fStack_2c;
+  struct { float first; float second; } stack_pair_30;
+
   float fStack_28;
   
   if (param_2 < 0) {
@@ -78,11 +78,11 @@ LAB_824487b0:
   }
   iVar1 = *(int *)(iVar2 + 0x8c0);
   if (iVar1 != 0) {
-    fn_82552F88(uVar5,&fStack_30);
-    fStack_30 = fStack_30 * lbl_8218E8FC;
-    fStack_2c = fStack_2c * lbl_8218E8FC;
+    fn_82552F88(uVar5,&stack_pair_30.first);
+    stack_pair_30.first = stack_pair_30.first * lbl_8218E8FC;
+    stack_pair_30.second = stack_pair_30.second * lbl_8218E8FC;
     fStack_28 = fStack_28 * lbl_8218E8FC;
-    fn_8252CBF8((double)lbl_821CA460,iVar2,&fStack_30);
+    fn_8252CBF8((double)lbl_821CA460,iVar2,&stack_pair_30.first);
     fVar3 = lbl_821CC160;
     if (*(float *)(iVar1 + 0x68) == lbl_821CC160) {
       *(float *)(iVar1 + 0x6c) = lbl_821CC160;

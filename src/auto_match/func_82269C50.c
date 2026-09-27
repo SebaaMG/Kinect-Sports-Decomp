@@ -57,7 +57,7 @@ void fn_82269C50(int *param_1,ulonglong param_2)
   undefined4 uStack_470;
   undefined4 uStack_46c;
   undefined1 auStack_464 [1012];
-  undefined1 auStack_70 [112];
+  undefined1 auStack_70 [32];
   
   if (param_1[0xda] != 0) {
     for (puVar1 = (undefined4 *)**(undefined4 **)param_1[0xb3];

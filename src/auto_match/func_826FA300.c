@@ -59,7 +59,7 @@ longlong fn_826FA300(int param_1)
   longlong lVar10;
   int iStack_80;
   undefined1 auStack_7c [32];
-  undefined1 auStack_5c [28];
+  undefined1 auStack_5c [12];
   uint uStack_40;
   uint uStack_3c;
   

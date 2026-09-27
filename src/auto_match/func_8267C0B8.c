@@ -30,7 +30,7 @@ extern int fn_8267BC00();
 extern int fn_826912E0();
 extern int fn_826913D8();
 extern int fn_82692630();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 int fn_8267C0B8(longlong param_1,char *param_2,undefined4 param_3,uint *param_4)
@@ -82,7 +82,7 @@ int fn_8267C0B8(longlong param_1,char *param_2,undefined4 param_3,uint *param_4)
       *(uint *)(iVar9 + 8) = uVar6;
       *(undefined4 *)(iVar9 + 0xc) = 1;
       *(undefined4 *)(iVar9 + 0x14) = 0;
-      fn_82F68CC0(iVar9 + 0x18,param_4,0x20);
+      memcpy(iVar9 + 0x18,param_4,0x20);
       *(undefined4 *)(iVar9 + 0x38) = param_3;
       *(int *)(iVar9 + 0x3c) = (int)(lVar7 + 0x298);
       *(byte *)(iVar9 + 100) = ~(byte)*param_4 & 1;
@@ -94,7 +94,7 @@ int fn_8267C0B8(longlong param_1,char *param_2,undefined4 param_3,uint *param_4)
         cVar1 = *pcVar11;
         pcVar11 = pcVar11 + 1;
       } while (cVar1 != '\0');
-      fn_82F68CC0(lVar7 + 0x298,param_2,(int)pcVar11 - (int)param_2);
+      memcpy(lVar7 + 0x298,param_2,(int)pcVar11 - (int)param_2);
       return iVar9;
     }
     fn_826913D8(param_1 + 0x118,lVar7,uVar6);

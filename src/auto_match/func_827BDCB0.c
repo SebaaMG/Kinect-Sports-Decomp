@@ -30,7 +30,7 @@ typedef struct { U64 lo, hi; } V16;
 int fn_827BDCB0(int *param_1,undefined8 param_2,undefined8 param_3)
 
 {
-  int aiStack_30 [12];
+  int aiStack_30;
   
   if (param_1[5] != 0xcd) {
     *(undefined4 *)(*param_1 + 0x14) = 0x14;
@@ -43,15 +43,15 @@ int fn_827BDCB0(int *param_1,undefined8 param_2,undefined8 param_3)
       *(int *)(param_1[2] + 8) = param_1[0x18];
       (**(code **)param_1[2])(param_1);
     }
-    aiStack_30[0] = 0;
-    (**(code **)(param_1[0x61] + 4))(param_1,param_2,aiStack_30,param_3);
-    param_1[0x1e] = aiStack_30[0] + param_1[0x1e];
+    aiStack_30 = 0;
+    (**(code **)(param_1[0x61] + 4))(param_1,param_2,&aiStack_30,param_3);
+    param_1[0x1e] = aiStack_30 + param_1[0x1e];
   }
   else {
     *(undefined4 *)(*param_1 + 0x14) = 0x7b;
     (**(code **)(*param_1 + 4))(param_1,0xffffffffffffffff);
-    aiStack_30[0] = 0;
+    aiStack_30 = 0;
   }
-  return aiStack_30[0];
+  return aiStack_30;
 }
 

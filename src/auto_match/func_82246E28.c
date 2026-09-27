@@ -36,7 +36,7 @@ extern int fn_82517DC8();
 extern int fn_8265C9E0();
 extern int fn_8289C940();
 extern int fn_82F565A0();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int iStack_b4;
 extern unsigned int iStack_b8;
 extern unsigned int lbl_82002B04;
@@ -54,8 +54,8 @@ undefined4 * fn_82246E28(undefined4 *param_1,int param_2)
   undefined4 uVar1;
   undefined4 *puVar2;
   ulonglong uVar3;
-  int iStack_b8;
-  int iStack_b4;
+  struct { int first; int second; } stack_pair_b8;
+
   undefined **ppuStack_b0;
   undefined4 uStack_ac;
   undefined1 auStack_a0 [16];
@@ -74,21 +74,21 @@ undefined4 * fn_82246E28(undefined4 *param_1,int param_2)
   if (uVar3 == 0) {
     uVar3 = fn_82511928();
   }
-  fn_82513A80(&iStack_b8,uVar3,uVar1);
-  if (iStack_b8 != 0) {
-    *(undefined4 **)(iStack_b8 + 0x38) = param_1;
+  fn_82513A80(&stack_pair_b8.first,uVar3,uVar1);
+  if (stack_pair_b8.first != 0) {
+    *(undefined4 **)(stack_pair_b8.first + 0x38) = param_1;
   }
   uStack_60 = 0x8224891000000000;
   puStack_58 = param_1;
   puVar2 = (undefined4 *)fn_8265C9E0(0x40);
   if (puVar2 != (undefined4 *)0x0) {
     *puVar2 = &lbl_82197AB4;
-    fn_82F68CC0(puVar2 + 2,&uStack_60,0x38);
+    memcpy(puVar2 + 2,&uStack_60,0x38);
     puStack_90 = puVar2;
     fn_82F565A0(auStack_80,auStack_a0);
     fn_8289C940((ulonglong)(uint)param_1[0xd] + 0x144,auStack_80);
     fn_82359C18(auStack_a0);
-    if (iStack_b4 != 0) {
+    if (stack_pair_b8.second != 0) {
       fn_822315A0();
     }
     return param_1;

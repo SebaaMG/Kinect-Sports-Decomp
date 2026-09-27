@@ -33,7 +33,7 @@ extern int fn_82810090();
 void fn_827FA848(longlong param_1,undefined8 param_2,undefined8 param_3,undefined8 param_4)
 
 {
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
   
   fn_8280E418(param_1 + 0x54,auStack_30);
   fn_82810090(auStack_30,param_2,param_3,param_4);

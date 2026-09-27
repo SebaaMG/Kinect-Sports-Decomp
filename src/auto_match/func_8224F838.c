@@ -83,8 +83,8 @@ void fn_8224F838(double param_1,int param_2)
   undefined1 auStack_64 [4];
   undefined1 auStack_60 [4];
   undefined1 auStack_5c [4];
-  int iStack_58;
-  int iStack_54;
+  struct { int first; int second; } stack_pair_58;
+
   int iStack_50;
   int iStack_4c;
   
@@ -93,8 +93,8 @@ void fn_8224F838(double param_1,int param_2)
   if (uVar9 == 0) {
     uVar9 = fn_82511928();
   }
-  fn_825138E0(&iStack_58,uVar9,uVar2);
-  fn_82522588(&iStack_50,&iStack_58);
+  fn_825138E0(&stack_pair_58.first,uVar9,uVar2);
+  fn_82522588(&iStack_50,&stack_pair_58.first);
   bVar3 = true;
   *(undefined4 *)(iStack_50 + 0x4c) = *(undefined4 *)(param_2 + 0x30);
   *(undefined1 *)(iStack_50 + 0x51) = 1;
@@ -102,21 +102,21 @@ void fn_8224F838(double param_1,int param_2)
   if (iVar6 != 0) {
     *(undefined4 *)(iVar6 + 100) = 2;
   }
-  cVar8 = fn_828AD740(*(undefined4 *)(iStack_58 + 8));
+  cVar8 = fn_828AD740(*(undefined4 *)(stack_pair_58.first + 8));
   if (cVar8 == '\0') goto LAB_8224fb48;
-  iVar6 = fn_8289F0B8(*(undefined4 *)(iStack_58 + 8));
+  iVar6 = fn_8289F0B8(*(undefined4 *)(stack_pair_58.first + 8));
   if ((iVar6 == 2) && (cVar8 = fn_82246A40(iStack_50), cVar8 != '\0')) {
     fn_822471C8(*(undefined4 *)(iStack_50 + 0x38),1);
     goto LAB_8224fb48;
   }
-  iVar6 = fn_8289F020(*(undefined4 *)(iStack_58 + 8));
+  iVar6 = fn_8289F020(*(undefined4 *)(stack_pair_58.first + 8));
   if (((iVar6 != 1) ||
       (fVar1 = (float)((double)*(float *)(param_2 + 0x4c) + param_1),
       *(float *)(param_2 + 0x4c) = fVar1, fVar1 < *(float *)(param_2 + 0x50))) ||
-     (cVar8 = (**(code **)(**(int **)(iStack_58 + 0x18) + 0xc))(), cVar8 != '\0'))
+     (cVar8 = (**(code **)(**(int **)(stack_pair_58.first + 0x18) + 0xc))(), cVar8 != '\0'))
   goto LAB_8224fb48;
   bVar10 = false;
-  fn_828C3D70(auStack_64,*(undefined4 *)(*(int *)(*(int *)(iStack_58 + 0x18) + 4) + 8));
+  fn_828C3D70(auStack_64,*(undefined4 *)(*(int *)(*(int *)(stack_pair_58.first + 0x18) + 4) + 8));
   cVar8 = fn_828B62F0(auStack_64);
   if (cVar8 == '\0') {
 LAB_8224f998:
@@ -124,7 +124,7 @@ LAB_8224f998:
   }
   else {
     bVar10 = true;
-    fn_828C3D70(auStack_68,*(undefined4 *)(*(int *)(*(int *)(iStack_58 + 0x18) + 4) + 8));
+    fn_828C3D70(auStack_68,*(undefined4 *)(*(int *)(*(int *)(stack_pair_58.first + 0x18) + 4) + 8));
     fn_828C4360(auStack_68);
     iVar6 = fn_828B6720();
     bVar4 = true;
@@ -135,12 +135,12 @@ LAB_8224f998:
   }
   fn_828B6380(auStack_64);
   if (bVar4) {
-    fn_828C3D70(auStack_60,*(undefined4 *)(*(int *)(*(int *)(iStack_58 + 0x18) + 4) + 8));
+    fn_828C3D70(auStack_60,*(undefined4 *)(*(int *)(*(int *)(stack_pair_58.first + 0x18) + 4) + 8));
     uVar5 = fn_828C4360(auStack_60);
     fn_828B6758(&puStack_70,uVar5);
     fn_828B6380(auStack_60);
     while( true ) {
-      fn_828C3D70(auStack_6c,*(undefined4 *)(*(int *)(*(int *)(iStack_58 + 0x18) + 4) + 8));
+      fn_828C3D70(auStack_6c,*(undefined4 *)(*(int *)(*(int *)(stack_pair_58.first + 0x18) + 4) + 8));
       uVar5 = fn_828C4360(auStack_6c);
       puVar7 = (undefined4 *)fn_828B6768(auStack_5c,uVar5);
       bVar10 = (undefined4 *)*puVar7 == puStack_70;
@@ -148,15 +148,15 @@ LAB_8224f998:
       puVar7 = puStack_70;
       if (bVar10) break;
       uVar2 = *puStack_70;
-      uVar5 = fn_828A1B60(*(undefined4 *)(iStack_58 + 8));
+      uVar5 = fn_828A1B60(*(undefined4 *)(stack_pair_58.first + 8));
       cVar8 = fn_828B8F60(uVar2,uVar5);
       if (cVar8 == '\0') {
         uVar2 = *puVar7;
-        uVar5 = fn_828A1B80(*(undefined4 *)(iStack_58 + 8));
+        uVar5 = fn_828A1B80(*(undefined4 *)(stack_pair_58.first + 8));
         cVar8 = fn_828B8F68(uVar2,uVar5);
         if (cVar8 == '\0') {
           uVar2 = *puVar7;
-          uVar5 = fn_828A1B70(*(undefined4 *)(iStack_58 + 8));
+          uVar5 = fn_828A1B70(*(undefined4 *)(stack_pair_58.first + 8));
           cVar8 = fn_828B8F58(uVar2,uVar5);
           if (cVar8 == '\0') {
             **(undefined4 **)(param_2 + 0x28) = 3;
@@ -193,7 +193,7 @@ LAB_8224fb48:
   if (iStack_4c != 0) {
     fn_822315A0();
   }
-  if (iStack_54 != 0) {
+  if (stack_pair_58.second != 0) {
     fn_822315A0();
   }
   return;

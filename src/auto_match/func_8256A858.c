@@ -33,7 +33,7 @@ extern int fn_8256B658();
 extern int fn_8256B720();
 extern int fn_8259C738();
 extern int fn_82A1BB18();
-extern int fn_82F63CA0();
+extern int memmove();
 
 
 void fn_8256A858(void)
@@ -43,7 +43,7 @@ void fn_8256A858(void)
   int iVar2;
   int iVar3;
   int *piVar4;
-  undefined4 auStack_30 [12];
+  undefined4 auStack_30 [4];
   
   uVar1 = fn_82569B10();
   fn_82549610(auStack_30,uVar1);
@@ -64,7 +64,7 @@ void fn_8256A858(void)
   iVar3 = fn_82569B10();
   iVar2 = *(int *)(iVar3 + 0x44);
   if (iVar2 != *(int *)(iVar3 + 0x48)) {
-    fn_82F63CA0(iVar2,*(int *)(iVar3 + 0x48),0);
+    memmove(iVar2,*(int *)(iVar3 + 0x48),0);
     *(int *)(iVar3 + 0x48) = iVar2;
   }
   fn_82A1BB18();

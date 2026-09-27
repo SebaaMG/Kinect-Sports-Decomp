@@ -25,7 +25,7 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int lbl_82089AB0;
 extern unsigned int lbl_82089AC0;
 extern unsigned int lbl_8208E054;
@@ -53,8 +53,8 @@ void fn_82A49DF8(ushort *param_1,int param_2,ushort param_3,ushort param_4,int p
   undefined4 uVar7;
   longlong lVar8;
   ushort in_stack_00000056;
-  uint uStack_50;
-  undefined4 uStack_4c;
+  struct { uint first; undefined4 second; } stack_pair_50;
+
   undefined4 uStack_48;
   undefined4 uStack_44;
   
@@ -106,9 +106,9 @@ void fn_82A49DF8(ushort *param_1,int param_2,ushort param_3,ushort param_4,int p
     *param_1 = 0xfffe;
     uStack_48 = lbl_8208E058;
     uStack_44 = lbl_8208E05C;
-    uStack_4c = lbl_8208E054;
-    uStack_50 = (uint)param_3;
-    fn_82F68CC0(param_1 + 0xc,&uStack_50,0x10);
+    stack_pair_50.second = lbl_8208E054;
+    stack_pair_50.first = (uint)param_3;
+    memcpy(param_1 + 0xc,&stack_pair_50.first,0x10);
     if (param_7 == 0) {
       param_7 = (ushort)param_6;
     }

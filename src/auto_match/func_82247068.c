@@ -35,19 +35,19 @@ longlong fn_82247068(int *param_1,int param_2)
   undefined4 uVar2;
   int iVar3;
   longlong lVar4;
-  undefined4 *apuStack_30 [12];
+  undefined4 * apuStack_30;
   
   lVar4 = 0;
   puVar1 = *(undefined4 **)(param_1[4] + 0x230);
-  apuStack_30[0] = (undefined4 *)*puVar1;
-  while (apuStack_30[0] != puVar1) {
-    uVar2 = apuStack_30[0][4];
+  apuStack_30 = (undefined4 *)*puVar1;
+  while (apuStack_30 != puVar1) {
+    uVar2 = apuStack_30[4];
     iVar3 = (**(code **)(*param_1 + 4))(param_1);
     iVar3 = (**(code **)(*(int *)(iVar3 + 0x9c) + 0x38))((int *)(iVar3 + 0x9c),uVar2);
     if ((lVar4 != 0) || (lVar4 = 0, param_2 <= iVar3)) {
       lVar4 = 1;
     }
-    fn_82381BC0(apuStack_30);
+    fn_82381BC0(&apuStack_30);
     puVar1 = *(undefined4 **)(param_1[4] + 0x230);
   }
   return lVar4;

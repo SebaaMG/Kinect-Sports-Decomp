@@ -66,7 +66,7 @@ int fn_822C3C70(int param_1,undefined8 param_2)
   int iStack_78;
   undefined4 uStack_74;
   undefined8 uStack_70;
-  undefined1 auStack_60 [96];
+  undefined1 auStack_60 [64];
   
   iVar5 = 0;
   uVar2 = fn_8251F720(param_2,0);

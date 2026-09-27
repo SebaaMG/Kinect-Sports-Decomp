@@ -44,17 +44,17 @@ bool fn_827EC428(double param_1,undefined8 param_2,undefined8 param_3,undefined8
 {
   double dVar1;
   undefined1 auStack_40 [16];
-  float fStack_30;
-  float fStack_2c;
+  struct { float first; float second; } stack_pair_30;
+
   float fStack_28;
   undefined1 auStack_20 [16];
   
-  fStack_30 = (float)((double)*param_5 + param_1);
-  fStack_2c = (float)((double)param_5[1] + param_1);
+  stack_pair_30.first = (float)((double)*param_5 + param_1);
+  stack_pair_30.second = (float)((double)param_5[1] + param_1);
   fStack_28 = (float)((double)param_5[2] + param_1);
   fn_82810328(param_2,param_4,auStack_40);
   fn_8281CAE8(param_6,auStack_40,auStack_40);
-  fn_827EF590(&fStack_30,auStack_20);
+  fn_827EF590(&stack_pair_30.first,auStack_20);
   fn_827EF608(auStack_20,auStack_40,auStack_40);
   dVar1 = (double)fn_82810308(auStack_40);
   return dVar1 <= (double)lbl_82002AE0;

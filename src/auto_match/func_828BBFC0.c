@@ -100,7 +100,7 @@ undefined8 fn_828BBFC0(undefined8 param_1,int param_2,char param_3)
   undefined1 auStack_210 [32];
   undefined *puStack_1f0;
   undefined1 auStack_1ec [76];
-  undefined **appuStack_1a0 [20];
+  undefined ** appuStack_1a0;
   undefined *puStack_150;
   undefined1 auStack_14c [76];
   undefined **appuStack_100 [20];
@@ -113,8 +113,8 @@ undefined8 fn_828BBFC0(undefined8 param_1,int param_2,char param_3)
   *(undefined ***)(auStack_14c + *(int *)(puStack_150 + 4) + -4) = &lbl_82021284;
   fn_8223CF38(auStack_14c,2);
   puStack_1f0 = &lbl_821AA8E0;
-  appuStack_1a0[0] = &lbl_82020F40;
-  fn_8223CD08(appuStack_1a0,auStack_1ec,0);
+  appuStack_1a0 = &lbl_82020F40;
+  fn_8223CD08(&appuStack_1a0,auStack_1ec,0);
   *(undefined ***)(auStack_1ec + *(int *)(puStack_1f0 + 4) + -4) = &lbl_82021284;
   fn_8223CF38(auStack_1ec,2);
   iVar3 = *(int *)(param_2 + 0x18);
@@ -229,9 +229,9 @@ undefined8 fn_828BBFC0(undefined8 param_1,int param_2,char param_3)
     uStack_23c = 0xf;
   }
   fn_822403C8(param_1,auStack_14c);
-  fn_8223DBE8(appuStack_1a0);
-  appuStack_1a0[0] = &lbl_82020F30;
-  fn_82F62F60(appuStack_1a0);
+  fn_8223DBE8(&appuStack_1a0);
+  appuStack_1a0 = &lbl_82020F30;
+  fn_82F62F60(&appuStack_1a0);
   fn_8223DBE8(appuStack_100);
   appuStack_100[0] = &lbl_82020F30;
   fn_82F62F60(appuStack_100);

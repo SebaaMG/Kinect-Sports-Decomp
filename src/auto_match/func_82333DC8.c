@@ -41,7 +41,7 @@ undefined4 * fn_82333DC8(undefined4 *param_1,float *param_2)
   undefined4 *puVar1;
   undefined4 *puVar2;
   double dVar3;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [32];
   
   puVar1 = (undefined4 *)fn_8265C9E0(0x30);
   if (puVar1 == (undefined4 *)0x0) {

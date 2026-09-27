@@ -86,8 +86,8 @@ ulonglong fn_82883480(int param_1,undefined8 param_2,undefined8 param_3,int para
   int *piVar17;
   int *piStack_b0;
   int *piStack_ac;
-  undefined4 uStack_a8;
-  int iStack_a4;
+  struct { undefined4 first; int second; } stack_pair_a8;
+
   longlong lStack_a0;
   longlong lStack_98;
   undefined1 auStack_90 [16];
@@ -191,13 +191,13 @@ ulonglong fn_82883480(int param_1,undefined8 param_2,undefined8 param_3,int para
         if (*(char *)(param_1 + 5) != '\0') {
           uVar3 = lbl_831599F4;
         }
-        iStack_a4 = *(int *)(param_6 + 0x10);
-        if (iStack_a4 == 0) {
-          iStack_a4 = *(int *)(param_6 + 0x18);
+        stack_pair_a8.second = *(int *)(param_6 + 0x10);
+        if (stack_pair_a8.second == 0) {
+          stack_pair_a8.second = *(int *)(param_6 + 0x18);
         }
-        uStack_a8 = fn_823AA970(param_6);
+        stack_pair_a8.first = fn_823AA970(param_6);
         piStack_b0 = (int *)fn_823AA970(param_6);
-        iVar7 = fn_82CE0B38(uVar3,&uStack_a8,1,&piStack_b0,0,iVar7 + 0x24,0x10,0);
+        iVar7 = fn_82CE0B38(uVar3,&stack_pair_a8.first,1,&piStack_b0,0,iVar7 + 0x24,0x10,0);
         if (iVar7 != 0) {
           fn_82CE0BB0();
         }

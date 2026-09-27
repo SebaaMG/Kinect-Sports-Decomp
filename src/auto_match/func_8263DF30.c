@@ -38,8 +38,8 @@ void fn_8263DF30(int param_1,undefined8 param_2,undefined4 *param_3)
   int iVar1;
   bool bVar2;
   int iVar3;
-  undefined4 uStack_20;
-  undefined4 uStack_1c;
+  struct { undefined4 first; undefined4 second; } stack_pair_20;
+
   int iStack_18;
   int iStack_14;
   
@@ -49,8 +49,8 @@ void fn_8263DF30(int param_1,undefined8 param_2,undefined4 *param_3)
     if (iVar1 == 0) {
       iVar3 = *(int *)(param_1 + 0x3158);
     }
-    uStack_20 = 0;
-    uStack_1c = 0;
+    stack_pair_20.first = 0;
+    stack_pair_20.second = 0;
     iStack_18 = (*(uint *)(iVar3 + 0x24) >> 0x12) + 1;
     iStack_14 = (*(uint *)(iVar3 + 0x24) >> 3 & 0x7fff) + 1;
     if ((*(byte *)(param_1 + 0x2abc) & 0x10) == 0) {
@@ -77,7 +77,7 @@ void fn_8263DF30(int param_1,undefined8 param_2,undefined4 *param_3)
       iStack_18 = *(int *)(param_1 + 0x342c);
       iStack_14 = *(int *)(param_1 + 0x3430);
     }
-    param_3 = &uStack_20;
+    param_3 = &stack_pair_20.first;
   }
   fn_8263D7F0(param_1,param_2,param_3);
   return;

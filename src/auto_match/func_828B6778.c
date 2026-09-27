@@ -39,20 +39,20 @@ undefined8 fn_828B6778(int param_1,undefined8 param_2,undefined4 *param_3)
   undefined4 uVar1;
   undefined8 uVar2;
   bool bVar3;
-  int iStack_30;
-  int iStack_2c;
+  struct { int first; int second; } stack_pair_30;
+
   
   if ((*(char *)(param_1 + 0x4c) != '\0') || (bVar3 = true, *(int *)(param_1 + 0x20) != 0)) {
     bVar3 = false;
   }
   uVar2 = 0;
   if (bVar3) {
-    fn_828BB690(&iStack_30,*(undefined4 *)(param_1 + 0x14),param_2);
-    uVar1 = *(undefined4 *)(iStack_30 + 8);
+    fn_828BB690(&stack_pair_30.first,*(undefined4 *)(param_1 + 0x14),param_2);
+    uVar1 = *(undefined4 *)(stack_pair_30.first + 8);
     uVar2 = fn_8236D498(*param_3);
     uVar2 = fn_828EDC90(*(undefined4 *)(param_1 + 0x50),uVar1,uVar2);
-    if (iStack_2c != 0) {
-      fn_822315A0(iStack_2c);
+    if (stack_pair_30.second != 0) {
+      fn_822315A0(stack_pair_30.second);
     }
   }
   if (param_3[1] != 0) {

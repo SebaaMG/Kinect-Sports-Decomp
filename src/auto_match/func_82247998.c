@@ -41,16 +41,16 @@ void fn_82247998(undefined8 param_1,undefined8 param_2,undefined8 param_3)
 {
   int iVar1;
   int iStack_410;
-  undefined4 auStack_40c [3];
+  undefined4 auStack_40c;
   undefined1 auStack_400 [1000];
   
-  auStack_40c[0] = 0;
+  auStack_40c = 0;
   iStack_410 = 0;
-  iVar1 = fn_82A1BB50(0,0,0,auStack_40c);
+  iVar1 = fn_82A1BB50(0,0,0,&auStack_40c);
   if (-1 < iVar1) {
     iStack_410 = 1000;
-    fn_82A1BB28(auStack_40c[0],auStack_400,&iStack_410,param_3,1000);
-    fn_82A1BC70(auStack_40c[0]);
+    fn_82A1BB28(auStack_40c,auStack_400,&iStack_410,param_3,1000);
+    fn_82A1BC70(auStack_40c);
     iVar1 = iStack_410;
     fn_8223C478(param_2,0x20,0);
     fn_828E9DB8(param_2,iVar1,0x20);

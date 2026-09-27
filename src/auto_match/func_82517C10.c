@@ -28,13 +28,12 @@ typedef struct { U64 lo, hi; } V16;
 extern int fn_8223B688();
 
 
-int fn_82517C10(int param_1,undefined8 param_2,undefined4 param_3,undefined4 param_4,
-                 undefined4 param_5,undefined4 param_6,undefined4 param_7,undefined4 param_8)
+int fn_82517C10(int param_1, undefined8 param_2, undefined4 param_3, undefined4 param_4, undefined4 param_5, undefined4 param_6, undefined4 param_7, undefined4 param_8, int in_stack_00000054)
 
 {
   undefined4 uVar1;
   int iVar2;
-  int in_stack_00000054;
+
   
   fn_8223B688();
   *(undefined4 *)(param_1 + 0x1c) = param_3;

@@ -42,7 +42,7 @@ ulonglong fn_829C7DE0(int param_1,uint param_2,longlong param_3,undefined4 *para
   uint uVar2;
   ulonglong uVar3;
   int iVar4;
-  undefined4 auStack_90 [5];
+  undefined4 auStack_90;
   undefined4 uStack_7c;
   undefined4 uStack_34;
   
@@ -72,8 +72,8 @@ ulonglong fn_829C7DE0(int param_1,uint param_2,longlong param_3,undefined4 *para
             return uVar3;
           }
           uStack_7c = 0;
-          auStack_90[0] = 0x24;
-          iVar4 = fn_829C9BB0(auStack_90);
+          auStack_90 = 0x24;
+          iVar4 = fn_829C9BB0(&auStack_90);
           if (-1 < iVar4) {
             *param_4 = uStack_34;
           }

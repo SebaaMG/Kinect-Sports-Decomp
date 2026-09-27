@@ -48,7 +48,7 @@ undefined8 fn_828C7600(int param_1)
   int *piVar7;
   undefined8 uVar5;
   double dVar9;
-  undefined1 auStack_20 [8];
+  undefined1 auStack_20 [1];
   
   iVar6 = fn_8289F350(*(undefined4 *)(param_1 + 0x6c),*(undefined4 *)(param_1 + 0x8c));
   if ((*(char *)(param_1 + 0xa4) == '\0') || (bVar3 = true, iVar6 == 0)) {

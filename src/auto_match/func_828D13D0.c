@@ -37,7 +37,7 @@ void fn_828D13D0(uint *param_1,ulonglong param_2)
 {
   uint uVar1;
   undefined1 uStack_30;
-  undefined1 auStack_2c [44];
+  undefined1 auStack_2c [1];
   
   uVar1 = (int)(param_1[1] - *param_1) / 0xc4;
   if ((param_2 & 0xffffffff) < (ulonglong)uVar1) {

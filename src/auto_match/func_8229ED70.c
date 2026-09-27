@@ -48,7 +48,7 @@ void fn_8229ED70(undefined4 *param_1,undefined8 param_2,undefined4 param_3,undef
   undefined4 uStack_38;
   undefined1 auStack_30 [8];
   undefined4 uStack_28;
-  undefined1 auStack_20 [32];
+  undefined1 auStack_20 [1];
   
   fn_8229EC50();
   if (param_1[4] == 0) {

@@ -42,23 +42,23 @@ longlong fn_82A34310(longlong param_1,int param_2)
   longlong lVar3;
   longlong lVar4;
   longlong lVar5;
-  undefined4 uStack_40;
-  undefined4 uStack_3c;
+  struct { undefined4 first; undefined4 second; } stack_pair_40;
+
   undefined4 uStack_38;
   
-  uStack_40 = 0;
+  stack_pair_40.first = 0;
   uStack_38 = 0;
   if (*(int *)(param_2 + 4) == 0) {
-    uStack_3c = 0x80000;
+    stack_pair_40.second = 0x80000;
   }
   else {
-    uStack_3c = *(undefined4 *)(*(int *)(param_2 + 4) + 4);
+    stack_pair_40.second = *(undefined4 *)(*(int *)(param_2 + 4) + 4);
   }
   lVar2 = fn_82A37F58(param_1 + 0x50,*(undefined4 *)(param_2 + 0x1c));
   uVar1 = *(uint *)(param_2 + 0x20);
   lVar3 = fn_82A37600(param_1 + 0xc4,*(undefined4 *)(param_2 + 0x18));
   lVar4 = fn_82A371C0(param_1 + 0x10c,*(undefined4 *)(param_2 + 0x14));
-  lVar5 = fn_82A1BBE8(1,&uStack_40,0xffffffff80000000);
+  lVar5 = fn_82A1BBE8(1,&stack_pair_40.first,0xffffffff80000000);
   return lVar5 + lVar4 + lVar3 + (ulonglong)uVar1 + lVar2;
 }
 

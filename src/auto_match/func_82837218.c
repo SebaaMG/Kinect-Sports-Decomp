@@ -47,22 +47,22 @@ void fn_82837218(void)
 
 {
   double dVar1;
-  undefined4 uStack_40;
-  undefined4 uStack_3c;
+  struct { undefined4 first; undefined4 second; } stack_pair_40;
+
   undefined4 uStack_38;
   undefined4 uStack_34;
   undefined4 uStack_30;
   float fStack_2c;
   
   if (lbl_8320A8B4 == 0) {
-    uStack_40 = 0;
-    uStack_3c = 0;
+    stack_pair_40.first = 0;
+    stack_pair_40.second = 0;
     dVar1 = (double)lbl_82002AE0;
     uStack_38 = lbl_8320A890;
     fStack_2c = lbl_82002AE0;
     uStack_34 = lbl_8320A88C;
     uStack_30 = lbl_821AAD20;
-    fn_82639EA8(lbl_8320A898,&uStack_40);
+    fn_82639EA8(lbl_8320A898,&stack_pair_40.first);
     fn_8263DE70(dVar1,lbl_8320A898,0,0,-(lbl_8320A884 != 0) & 0xfU | 0x30,lbl_8320A888,0xf,0,0
                      );
   }

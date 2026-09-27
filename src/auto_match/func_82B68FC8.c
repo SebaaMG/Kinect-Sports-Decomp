@@ -43,7 +43,7 @@ void fn_82B68FC8(int param_1,int param_2,int param_3,int param_4)
   undefined4 auStack_70 [4];
   undefined1 auStack_60 [16];
   undefined1 auStack_50 [16];
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [16];
   
   puVar3 = auStack_70;
   lVar5 = 4;

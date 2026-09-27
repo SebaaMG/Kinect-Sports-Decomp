@@ -47,7 +47,7 @@ undefined4 * fn_823B9F98(undefined4 *param_1,int param_2,int *param_3,int *param
   undefined4 uVar10;
   int iVar11;
   undefined1 auStack_50 [8];
-  undefined8 auStack_48 [9];
+  undefined8 auStack_48 [1];
   
   while (*(int *)(param_2 + 8) != param_3[2]) {
     iVar1 = param_3[2];

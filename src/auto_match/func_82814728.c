@@ -45,7 +45,7 @@ undefined8 fn_82814728(int param_1,char param_2)
   longlong lVar9;
   uint *puVar10;
   uint uStack_70;
-  int aiStack_6c [27];
+  int aiStack_6c;
   
   iVar1 = *(int *)(param_1 + 0x1c);
   iVar2 = *(int *)(param_1 + 0x20);
@@ -77,14 +77,14 @@ LAB_828147e0:
       if (param_2 == '\0') {
         lVar8 = lVar9 + 0x44;
       }
-      fn_828142D8((ulonglong)*(uint *)(param_1 + 0x34) + (ulonglong)*puVar10,aiStack_6c);
-      if (aiStack_6c[0] == 0) {
+      fn_828142D8((ulonglong)*(uint *)(param_1 + 0x34) + (ulonglong)*puVar10,&aiStack_6c);
+      if (aiStack_6c == 0) {
         *(uint *)(param_1 + 0xc) = *(uint *)(param_1 + 0xc) | 0x800;
 LAB_828148a0:
         uVar6 = 1;
         break;
       }
-      iVar3 = (**(code **)(aiStack_6c[0] + 0xc))
+      iVar3 = (**(code **)(aiStack_6c + 0xc))
                         (*(undefined4 *)(param_1 + 0x18),lVar8 + uVar5,
                          1 << (*(byte *)(puVar10 + 1) & 0x3f),lVar8);
       *(int *)((int)puVar10 + 0xd) = iVar3;

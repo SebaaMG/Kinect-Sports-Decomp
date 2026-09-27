@@ -39,7 +39,7 @@ uint fn_82C0B820(int param_1,undefined2 *param_2,undefined2 *param_3,undefined8 
   undefined2 *puVar3;
   uint uVar4;
   undefined4 *puVar5;
-  uint auStack_40 [16];
+  uint auStack_40 [8];
   
   auStack_40[0] = 0;
   if ((((param_1 == 0) || (iVar2 = *(int *)(param_1 + 0x248), iVar2 == 0)) ||

@@ -39,7 +39,7 @@ void fn_826CE770(int *param_1,undefined8 param_2,undefined4 param_3)
   uint uVar1;
   int iVar2;
   byte bStack_40;
-  byte abStack_3f [63];
+  byte abStack_3f;
   
   (**(code **)(*param_1 + 0x1c))(param_1,0xffffffff821cc86c);
   uVar3 = fn_826F66D8(param_1);
@@ -61,29 +61,29 @@ void fn_826CE770(int *param_1,undefined8 param_2,undefined4 param_3)
     return;
   }
   if (cVar4 == '\x01') {
-    (**(code **)(*param_1 + 0x28))(abStack_3f,param_1);
-    if ((abStack_3f[0] & 4) != 0) {
+    (**(code **)(*param_1 + 0x28))(&abStack_3f,param_1);
+    if ((abStack_3f & 4) != 0) {
       *(int **)(uVar1 + 0x14) = param_1;
     }
-    if ((abStack_3f[0] & 8) != 0) {
+    if ((abStack_3f & 8) != 0) {
       *(int **)(uVar1 + 0x18) = param_1;
     }
-    if ((abStack_3f[0] & 0x20) != 0) {
+    if ((abStack_3f & 0x20) != 0) {
       *(int **)(uVar1 + 0x1c) = param_1;
     }
-    if ((abStack_3f[0] & 0x80) != 0) {
+    if ((abStack_3f & 0x80) != 0) {
       *(int **)(uVar1 + 0x20) = param_1;
     }
-    if ((abStack_3f[0] & 1) != 0) {
+    if ((abStack_3f & 1) != 0) {
       *(int **)(uVar1 + 0x24) = param_1;
     }
-    if ((abStack_3f[0] & 0x40) != 0) {
+    if ((abStack_3f & 0x40) != 0) {
       *(int **)(uVar1 + 0x28) = param_1;
     }
-    if ((abStack_3f[0] & 0x10) != 0) {
+    if ((abStack_3f & 0x10) != 0) {
       *(int **)(uVar1 + 0x2c) = param_1;
     }
-    if ((abStack_3f[0] & 2) == 0) {
+    if ((abStack_3f & 2) == 0) {
       return;
     }
     *(int **)(uVar1 + 0x30) = param_1;

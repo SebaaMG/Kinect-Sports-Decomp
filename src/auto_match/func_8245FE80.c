@@ -45,8 +45,8 @@ void fn_8245FE80(int param_1)
   undefined4 uVar7;
   undefined4 uVar8;
   undefined4 uVar9;
-  undefined4 uStack_20;
-  undefined4 uStack_1c;
+  struct { undefined4 first; undefined4 second; } stack_pair_20;
+
   undefined4 uStack_18;
   
   uVar3 = lbl_821CC160;
@@ -72,10 +72,10 @@ void fn_8245FE80(int param_1)
     piVar4 = piVar4 + 0x10;
     lVar5 = lVar5 + -1;
   } while (lVar5 != 0);
-  uStack_20 = 0;
-  uStack_1c = 0;
+  stack_pair_20.first = 0;
+  stack_pair_20.second = 0;
   uStack_18 = 0;
-  fn_82514888(&uStack_20);
+  fn_82514888(&stack_pair_20.first);
   return;
 }
 

@@ -41,7 +41,7 @@ undefined8 fn_825BEF80(int param_1,int *param_2,undefined8 param_3)
   uint uVar2;
   longlong lVar3;
   undefined4 auStack_60 [4];
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [32];
   
   iVar1 = fn_82A1E650(*(undefined4 *)(param_1 + 0x1b4),0);
   if ((iVar1 != 0x102) && (uVar2 = 0, *(int *)(*(int *)(param_1 + 0x5c) + 8) != 0)) {

@@ -64,8 +64,8 @@ void fn_8277EA70(int param_1,uint param_2,uint param_3,int param_4,undefined4 pa
   uint uStack_9c;
   float fStack_98;
   undefined4 uStack_94;
-  int iStack_90;
-  undefined4 uStack_8c;
+  struct { int first; undefined4 second; } stack_pair_90;
+
   undefined4 uStack_88;
   undefined4 uStack_84;
   int iStack_80;
@@ -107,8 +107,8 @@ void fn_8277EA70(int param_1,uint param_2,uint param_3,int param_4,undefined4 pa
   }
   uStack_74 = 0;
   uStack_70 = 0;
-  iStack_90 = *(int *)((uVar1 >> 8 & 0xfffffc) + *(int *)(param_1 + 0x5c)) + (uVar1 & 0x3ff) * 0x10;
-  uStack_8c = lbl_821AAD20;
+  stack_pair_90.first = *(int *)((uVar1 >> 8 & 0xfffffc) + *(int *)(param_1 + 0x5c)) + (uVar1 & 0x3ff) * 0x10;
+  stack_pair_90.second = lbl_821AAD20;
   uStack_84 = lbl_821AAD20;
   uStack_6c = 0;
   uStack_88 = lbl_821AAD20;
@@ -119,7 +119,7 @@ void fn_8277EA70(int param_1,uint param_2,uint param_3,int param_4,undefined4 pa
   iStack_80 = param_4;
   uStack_7c = param_5;
   uStack_78 = param_6;
-  fn_8277E700(param_1 + 0x60,&iStack_90);
+  fn_8277E700(param_1 + 0x60,&stack_pair_90.first);
   return;
 }
 

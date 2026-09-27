@@ -33,7 +33,7 @@ extern int fn_824C1BF8();
 extern int fn_8265C9E0();
 extern int fn_82A1EFC0();
 extern int fn_82BA02A8();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int lbl_821A8C90;
 extern unsigned int lbl_821CC160;
 
@@ -46,11 +46,11 @@ void fn_8247E810(undefined4 *param_1,int *param_2,undefined4 param_3,undefined8 
   undefined8 uVar2;
   undefined4 uVar3;
   int *piVar4;
-  undefined1 auStack_60 [96];
+  undefined1 auStack_60 [32];
   
   param_1[5] = 0;
   *param_1 = &lbl_821A8C90;
-  fn_82F68CC0(param_1 + 6,param_2,0x30);
+  memcpy(param_1 + 6,param_2,0x30);
   param_1[0x12] = param_3;
   param_1[0x13] = 0;
   param_1[0x14] = 0;

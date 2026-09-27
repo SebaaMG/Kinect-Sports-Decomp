@@ -28,7 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 extern int fn_829D47B0();
 extern int fn_829E18D0();
 extern int fn_82A28E60();
-extern int fn_82F691F0();
+extern int memset();
 extern unsigned int *lbl_832179FC;
 
 
@@ -42,7 +42,7 @@ void fn_829D5298(void)
   longlong lVar5;
   int *piVar6;
   int *piVar7;
-  int aiStack_50 [20];
+  int aiStack_50;
   
   if ((lbl_832179FC[0x23d35] & 1U) != 0) {
     piVar4 = lbl_832179FC + 0x9260;
@@ -62,7 +62,7 @@ void fn_829D5298(void)
         piVar7[0x3530] = iVar2;
         if (piVar6[2] == 0) {
                     /* WARNING: Subroutine does not return */
-          fn_82F691F0(piVar7,0,0xd4c0);
+          memset(piVar7,0,0xd4c0);
         }
         lVar5 = lVar5 + -1;
         piVar7 = piVar7 + 0x3534;
@@ -74,10 +74,10 @@ void fn_829D5298(void)
       *(undefined8 *)(lbl_832179FC + 0x926a) = uVar1;
       iVar2 = XamGetCurrentTitleId();
       lbl_832179FC[0x9268] = iVar2;
-      fn_829D47B0(aiStack_50,0xaf000);
-      if (aiStack_50[0] != 0) {
-        fn_829E18D0(lbl_832179FC + 0x9268,aiStack_50[0],0xaf000);
-        fn_82A28E60(lbl_832179FC[0x23d33],0,aiStack_50[0]);
+      fn_829D47B0(&aiStack_50,0xaf000);
+      if (aiStack_50 != 0) {
+        fn_829E18D0(lbl_832179FC + 0x9268,aiStack_50,0xaf000);
+        fn_82A28E60(lbl_832179FC[0x23d33],0,aiStack_50);
       }
     }
   }

@@ -35,7 +35,7 @@ longlong fn_826E9D40(int *param_1,int *param_2,longlong param_3)
   longlong lVar2;
   longlong lVar3;
   longlong lVar4;
-  undefined1 auStack_4030 [16432];
+  undefined1 auStack_4030 [16368];
   
   lVar3 = 0;
   do {

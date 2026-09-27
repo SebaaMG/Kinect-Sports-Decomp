@@ -37,7 +37,7 @@ void fn_8265FA58(undefined4 param_1,undefined4 param_2)
 {
   undefined4 uStack00000014;
   undefined4 uStack0000001c;
-  undefined1 auStack_10 [16];
+  undefined1 auStack_10 [1];
   
   uStack00000014 = param_1;
   uStack0000001c = param_2;

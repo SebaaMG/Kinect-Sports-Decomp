@@ -46,8 +46,8 @@ undefined8 fn_82508160(int param_1,int param_2,int param_3,int param_4)
   undefined4 uVar4;
   int *piVar5;
   bool bVar6;
-  int iStack_70;
-  undefined4 uStack_6c;
+  struct { int first; undefined4 second; } stack_pair_70;
+
   undefined4 uStack_68;
   
   lVar2 = fn_82520780((double)*(float *)(param_2 + 0x84),0xffffffff83265a28);
@@ -71,16 +71,16 @@ LAB_825081cc:
          (((int)lVar2 != (int)lVar2 + -1 + (uint)(lVar2 == 0) && ((uint)LZCOUNT(uVar4) >> 5 != 0))))
       {
         if ((bVar6) && (bVar1)) {
-          iStack_70 = 0;
-          uStack_6c = 0;
+          stack_pair_70.first = 0;
+          stack_pair_70.second = 0;
           uStack_68 = 0;
           fn_82552788(*(undefined4 *)(param_1 + 0x14),param_1 + 4,param_2,
-                            *(int *)(param_1 + 0x50),*(int *)(param_1 + 0x50) != 0,0,0,&iStack_70);
-          fn_822CD140(&iStack_70);
+                            *(int *)(param_1 + 0x50),*(int *)(param_1 + 0x50) != 0,0,0,&stack_pair_70.first);
+          fn_822CD140(&stack_pair_70.first);
           *(undefined4 *)(param_1 + 0x10) = lbl_8218E8E8;
-          uStack_6c = *(undefined4 *)(param_2 + 0x94);
-          iStack_70 = param_2;
-          fn_824BF8A8(param_1 + 0x3c,&iStack_70);
+          stack_pair_70.second = *(undefined4 *)(param_2 + 0x94);
+          stack_pair_70.first = param_2;
+          fn_824BF8A8(param_1 + 0x3c,&stack_pair_70.first);
           return 1;
         }
         if ((*(int *)(param_1 + 0x24) != 0) && (param_4 != 0)) {

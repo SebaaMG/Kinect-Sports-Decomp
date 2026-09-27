@@ -43,7 +43,7 @@ void fn_827CE6E8(int param_1,int param_2,int param_3,short *param_4,int param_5,
   float *pfVar7;
   longlong lVar8;
   double dVar9;
-  float afStack_140 [80];
+  float afStack_140 [64];
   
   pcVar2 = *(code **)(*(int *)(param_1 + 0x158) + 0x1c);
   iVar3 = *(int *)((*(int *)(param_2 + 0x10) + 8) * 4 + *(int *)(param_1 + 0x158));

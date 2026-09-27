@@ -29,8 +29,8 @@ extern unsigned int *auStack_6c;
 extern int fn_82645110();
 extern int fn_826453A0();
 extern int fn_82651080();
-extern int fn_82F691F0();
-extern int fn_8314276C();
+extern int memset();
+extern int VdQueryVideoMode();
 
 
 void fn_826517A0(int param_1,ulonglong param_2,int param_3,undefined8 param_4,undefined8 param_5,
@@ -50,12 +50,12 @@ void fn_826517A0(int param_1,ulonglong param_2,int param_3,undefined8 param_4,un
   *(int *)(param_1 + 0x5598) = (int)param_8;
   *(undefined4 *)(param_1 + 0x559c) = in_stack_00000054;
   if ((param_2 & 8) != 0) {
-    fn_8314276C(param_1 + 0x55a0);
+    VdQueryVideoMode(param_1 + 0x55a0);
   }
   if ((*(uint *)(param_1 + 0x54f8) & 0x40000000) != 0) {
     if ((param_3 != 0) || ((*(byte *)(param_1 + 0x2abd) & 2) != 0)) {
                     /* WARNING: Subroutine does not return */
-      fn_82F691F0(auStack_6c,0,0x18);
+      memset(auStack_6c,0,0x18);
     }
     uVar1 = fn_82651080(param_1,param_4,param_5,param_6,param_7,param_8,in_stack_00000054);
     uVar3 = (ulonglong)*(uint *)(param_1 + 0x30);

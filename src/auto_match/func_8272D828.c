@@ -40,11 +40,11 @@ void fn_8272D828(int *param_1,uint param_2,undefined4 *param_3)
 
 {
   int iVar1;
-  undefined4 uStack_50;
-  undefined4 uStack_4c;
+  struct { undefined4 first; undefined4 second; } stack_pair_50;
+
   undefined4 uStack_48;
   undefined4 uStack_44;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [32];
   
   iVar1 = (**(code **)(*param_1 + 0x40))();
   if (iVar1 != 0) {
@@ -54,11 +54,11 @@ void fn_8272D828(int *param_1,uint param_2,undefined4 *param_3)
     else {
       iVar1 = 0;
     }
-    uStack_4c = *(undefined4 *)(iVar1 + 0x18);
-    uStack_50 = *(undefined4 *)(iVar1 + 0x14);
+    stack_pair_50.second = *(undefined4 *)(iVar1 + 0x18);
+    stack_pair_50.first = *(undefined4 *)(iVar1 + 0x14);
     fn_8268CC00(auStack_40);
     fn_8269A240(param_1,auStack_40);
-    fn_8268D008(auStack_40,&uStack_48,&uStack_50);
+    fn_8268D008(auStack_40,&uStack_48,&stack_pair_50.first);
     if (param_3 != (undefined4 *)0x0) {
       *param_3 = uStack_48;
       param_3[1] = uStack_44;

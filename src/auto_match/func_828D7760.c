@@ -46,7 +46,7 @@ void fn_828D7760(int param_1,undefined8 param_2,undefined8 param_3,longlong para
   ulonglong uVar2;
   undefined8 uVar3;
   int *piVar5;
-  undefined1 auStack_80 [128];
+  undefined1 auStack_80 [80];
   
   iVar4 = fn_8289D8D0(*(undefined4 *)(param_1 + 4));
   if ((iVar4 != 0) && (uVar2 = fn_828D7538(param_1,param_2,0), (uVar2 & 0xffffffff) != 0)) {

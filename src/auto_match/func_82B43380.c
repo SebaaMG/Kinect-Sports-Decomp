@@ -60,7 +60,7 @@ void fn_82B43380(int param_1)
   undefined8 *puVar21;
   ulonglong uVar22;
   uint uVar23;
-  undefined1 auStack_60 [96];
+  undefined1 auStack_60 [1];
   
   uVar18 = 0;
   if (*(int *)(param_1 + 0x10) != 0) {

@@ -53,7 +53,7 @@ undefined4 * fn_824E4A90(undefined4 *param_1,undefined4 *param_2)
 {
   undefined8 uVar1;
   undefined4 uVar2;
-  undefined1 auStack_50 [4];
+  undefined1 auStack_50 [1];
   undefined4 uStack_4c;
   undefined1 auStack_48 [4];
   undefined1 auStack_44 [4];

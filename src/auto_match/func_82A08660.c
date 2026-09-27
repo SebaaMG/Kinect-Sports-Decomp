@@ -26,7 +26,7 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_82A056D0();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int iStack_5c;
 extern unsigned int iStack_60;
 extern unsigned int *lbl_83218C34;
@@ -52,7 +52,7 @@ void fn_82A08660(int param_1,int param_2,undefined8 param_3,longlong param_4,int
                         (lbl_83218C34,*(undefined4 *)(param_1 + 0x4144),param_2,param_3,param_6,
                          &iStack_5c,&iStack_60,0), iVar1 != 0)) {
     if (iStack_5c != 0) {
-      fn_82F68CC0(iStack_5c,param_5,(param_6 & 0x3fffffff) << 2);
+      memcpy(iStack_5c,param_5,(param_6 & 0x3fffffff) << 2);
     }
     if ((iStack_60 != 0) && ((param_6 & 0xffffffff) != 0)) {
       lVar4 = 0;

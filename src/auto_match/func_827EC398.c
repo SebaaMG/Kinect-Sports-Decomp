@@ -42,7 +42,7 @@ void fn_827EC398(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefi
   undefined1 auStack_70 [16];
   undefined1 auStack_60 [12];
   undefined1 auStack_54 [12];
-  undefined1 auStack_48 [72];
+  undefined1 auStack_48 [8];
   
   fn_82810328(param_1,param_4,auStack_60);
   fn_82810328(param_2,param_4,auStack_54);

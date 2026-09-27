@@ -51,7 +51,7 @@ void fn_825AA7C8(undefined4 *param_1)
   undefined4 *puVar6;
   undefined4 *puStack_40;
   undefined4 *puStack_3c;
-  undefined1 auStack_38 [56];
+  undefined1 auStack_38 [8];
   
   *param_1 = &lbl_821C80A0;
   param_1[0x1a] = &lbl_821C8110;

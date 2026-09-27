@@ -41,24 +41,24 @@ void fn_8284C1F8(int param_1)
 {
   undefined4 uVar1;
   int iStack00000014;
-  undefined4 uStack_2c;
-  undefined4 uStack_28;
+  struct { undefined4 first; undefined4 second; } stack_pair_2c;
+
   undefined4 uStack_24;
   undefined1 auStack_20 [4];
   undefined4 uStack_1c;
   undefined4 *puStack_18;
   undefined4 uStack_14;
   
-  uStack_2c = *(undefined4 *)(param_1 + 4);
+  stack_pair_2c.first = *(undefined4 *)(param_1 + 4);
   iStack00000014 = param_1;
-  uStack_1c = uStack_2c;
-  fn_82BA02A8(&uStack_2c,param_1);
-  uVar1 = uStack_2c;
+  uStack_1c = stack_pair_2c.first;
+  fn_82BA02A8(&stack_pair_2c.first,param_1);
+  uVar1 = stack_pair_2c.first;
   puStack_18 = *(undefined4 **)(iStack00000014 + 4);
   uStack_24 = *puStack_18;
   uStack_14 = uStack_24;
   fn_82BA02A8(&uStack_24,iStack00000014);
-  uStack_28 = uStack_24;
+  stack_pair_2c.second = uStack_24;
   fn_8284C020(auStack_20,iStack00000014,uStack_24,uVar1);
   return;
 }

@@ -72,10 +72,10 @@ void fn_828308B8(int param_1,int param_2)
   int iVar16;
   undefined1 auStack_c0 [4];
   int iStack_bc;
-  undefined4 auStack_b8 [2];
+  undefined4 auStack_b8;
   undefined1 auStack_b0 [16];
-  int iStack_a0;
-  int iStack_9c;
+  struct { int first; int second; } stack_pair_a0;
+
   undefined4 uStack_98;
   undefined4 uStack_94;
   undefined1 uStack_90;
@@ -103,10 +103,10 @@ void fn_828308B8(int param_1,int param_2)
       fn_82829A80(param_2,lVar1,
                         (ulonglong)
                         *(uint *)((uint)*(byte *)(piVar5 + 3) * 0x21 + *(int *)(param_1 + 0x114) +
-                                 -0x21) + (ulonglong)*(uint *)(param_1 + 200),auStack_b8,iVar10);
+                                 -0x21) + (ulonglong)*(uint *)(param_1 + 200),&auStack_b8,iVar10);
       if (*(int *)(iVar14 + *(int *)(param_1 + 0xe8) + 8) != 0) {
         iVar6 = iVar14 + *(int *)(param_1 + 0xe8);
-        fn_82829758(auStack_b8[0],iVar2,*(undefined4 *)(iVar6 + 4),*(undefined4 *)(iVar6 + 8),
+        fn_82829758(auStack_b8,iVar2,*(undefined4 *)(iVar6 + 4),*(undefined4 *)(iVar6 + 8),
                           iVar10,1);
       }
       uVar9 = uVar9 + 1;
@@ -197,14 +197,14 @@ void fn_828308B8(int param_1,int param_2)
               iVar16 = iVar2 << 4;
               do {
                 puVar7 = (undefined4 *)(iVar16 + *(int *)(param_1 + 0x11c));
-                iStack_9c = puVar7[1];
+                stack_pair_a0.second = puVar7[1];
                 uStack_8f = *(undefined1 *)((int)puVar7 + 0xd);
                 uStack_90 = *(undefined1 *)(puVar7 + 3);
                 uStack_8e = *(undefined2 *)((int)puVar7 + 0xe);
                 uStack_98 = *puVar7;
                 uStack_94 = puVar7[2];
-                iStack_a0 = *(int *)(*(int *)(iStack_bc + 0x24) + 0x44) + iStack_9c;
-                fn_828311B0(auStack_b0,*(undefined4 *)(iStack_bc + 0x28),&iStack_a0);
+                stack_pair_a0.first = *(int *)(*(int *)(iStack_bc + 0x24) + 0x44) + stack_pair_a0.second;
+                fn_828311B0(auStack_b0,*(undefined4 *)(iStack_bc + 0x28),&stack_pair_a0.first);
                 iVar6 = *(int *)(param_1 + 0x118);
                 uVar13 = uVar13 + 1;
                 iVar2 = iVar2 + 1;

@@ -43,7 +43,7 @@ undefined8 fn_823818A0(int *param_1,undefined8 param_2,undefined8 param_3,undefi
   undefined4 ***apppuStack_e0 [5];
   uint uStack_cc;
   undefined1 auStack_c0 [4];
-  undefined1 auStack_bc [188];
+  undefined1 auStack_bc [124];
   
   fn_8223CFC0(auStack_c0,2,1);
   uVar1 = fn_82240158(auStack_c0,param_2);

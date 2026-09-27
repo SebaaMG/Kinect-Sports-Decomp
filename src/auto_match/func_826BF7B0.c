@@ -39,11 +39,11 @@ undefined8 fn_826BF7B0(longlong param_1,int param_2,uint *param_3,undefined8 par
 
 {
   undefined8 uVar1;
-  undefined1 auStack_50 [8];
+  undefined1 auStack_50;
   int iStack_48;
   int iStack_44;
   byte bStack_40;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [32];
   
   uVar1 = fn_82696B20(&iStack_48,param_4,0);
   fn_826C3768(param_1 + 4,uVar1);
@@ -55,10 +55,10 @@ undefined8 fn_826BF7B0(longlong param_1,int param_2,uint *param_3,undefined8 par
     fn_826824B0();
   }
   iStack_44 = 0;
-  auStack_50[0] = 3;
+  auStack_50 = 3;
   auStack_30[0] = 10;
   (**(code **)(*(int *)(param_2 + 0x10) + 0x28))
-            (param_2 + 0x10,param_3,(ulonglong)*param_3 + 0x138,auStack_30,auStack_50);
+            (param_2 + 0x10,param_3,(ulonglong)*param_3 + 0x138,auStack_30,&auStack_50);
   fn_82696330(auStack_30);
   return 1;
 }

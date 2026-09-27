@@ -38,15 +38,15 @@ extern int fn_82863790();
 void fn_8285D2C0(undefined8 param_1)
 
 {
-  undefined4 auStack_60 [4];
+  undefined4 auStack_60;
   undefined1 auStack_50 [48];
   float fStack_20;
   float fStack_1c;
   float fStack_18;
   
-  auStack_60[0] = 0;
-  fn_82863790(auStack_60);
-  fn_82862080(auStack_60[0],auStack_50);
+  auStack_60 = 0;
+  fn_82863790(&auStack_60);
+  fn_82862080(auStack_60,auStack_50);
   fn_828105C8((double)fStack_20,(double)fStack_1c,(double)fStack_18,param_1);
   return;
 }

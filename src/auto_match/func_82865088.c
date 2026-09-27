@@ -35,7 +35,7 @@ undefined8 fn_82865088(int param_1)
 
 {
   undefined8 uVar1;
-  undefined4 **appuStack_30 [5];
+  undefined4 **appuStack_30 [1];
   uint uStack_1c;
   
   if (*(int *)(param_1 + 0x10) == 0) {

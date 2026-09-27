@@ -54,7 +54,7 @@ uint fn_82BBF178(undefined8 param_1,float *param_2,undefined8 param_3)
   longlong lVar16;
   longlong lStack_168;
   float afStack_15c [15];
-  float afStack_120 [72];
+  float afStack_120 [60];
   
   if ((int)param_3 != 0) {
     plVar13 = &lStack_168;

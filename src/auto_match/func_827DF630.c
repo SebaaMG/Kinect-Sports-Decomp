@@ -43,7 +43,7 @@ int fn_827DF630(int param_1)
   int iStack00000014;
   undefined1 uStack_70;
   undefined1 uStack_6f;
-  undefined1 auStack_6e [14];
+  undefined1 auStack_6e [1];
   undefined1 auStack_60 [32];
   undefined1 auStack_40 [40];
   

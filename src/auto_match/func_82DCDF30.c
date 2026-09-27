@@ -33,7 +33,7 @@ void fn_82DCDF30(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefi
                   undefined8 param_5)
 
 {
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [64];
   
   fn_82DCADF8(auStack_50,param_1,param_2,param_3,param_5,param_5);
   return;

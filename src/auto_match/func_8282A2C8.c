@@ -36,15 +36,15 @@ void fn_8282A2C8(int param_1)
   undefined4 *puVar2;
   int iVar3;
   longlong lVar4;
-  int aiStack_30 [12];
+  int aiStack_30;
   
   iVar1 = param_1 + 0x2fc;
-  while (fn_828223C8(iVar1,aiStack_30), aiStack_30[0] != 0) {
-    iVar1 = aiStack_30[0];
-    if ((*(int *)(aiStack_30[0] + 0xc) != *(int *)(param_1 + 0x3d8)) &&
-       (*(char *)(aiStack_30[0] + 0x54) != '\0')) {
-      puVar2 = (undefined4 *)(aiStack_30[0] + 0x48);
-      iVar3 = ((*(int **)(aiStack_30[0] + 0x48))[1] - **(int **)(aiStack_30[0] + 0x48)) / 0x14;
+  while (fn_828223C8(iVar1,&aiStack_30), aiStack_30 != 0) {
+    iVar1 = aiStack_30;
+    if ((*(int *)(aiStack_30 + 0xc) != *(int *)(param_1 + 0x3d8)) &&
+       (*(char *)(aiStack_30 + 0x54) != '\0')) {
+      puVar2 = (undefined4 *)(aiStack_30 + 0x48);
+      iVar3 = ((*(int **)(aiStack_30 + 0x48))[1] - **(int **)(aiStack_30 + 0x48)) / 0x14;
       lVar4 = (longlong)iVar3;
       if (iVar3 != 0) {
         iVar3 = 0;
@@ -55,7 +55,7 @@ void fn_8282A2C8(int param_1)
                         0xffffffff8282a170);
           lVar4 = lVar4 + -1;
           iVar3 = iVar3 + 0x14;
-          iVar1 = aiStack_30[0];
+          iVar1 = aiStack_30;
         } while (lVar4 != 0);
       }
     }

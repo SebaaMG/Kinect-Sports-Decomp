@@ -48,8 +48,8 @@ undefined8 fn_829D2750(int param_1,float *param_2)
   ulonglong uVar2;
   int *piVar3;
   ulonglong uVar4;
-  float fStack_50;
-  float fStack_4c;
+  struct { float first; float second; } stack_pair_50;
+
   float fStack_48;
   undefined4 uStack_44;
   undefined4 uStack_40;
@@ -58,13 +58,13 @@ undefined8 fn_829D2750(int param_1,float *param_2)
     uVar1 = 0xffffffff8000ffff;
   }
   else {
-    fStack_50 = lbl_82002C5C;
-    fStack_4c = lbl_82002C5C;
+    stack_pair_50.first = lbl_82002C5C;
+    stack_pair_50.second = lbl_82002C5C;
     fStack_48 = lbl_82002C5C;
     uStack_44 = lbl_82005718;
     uStack_40 = lbl_8205743C;
     if (param_2 == (float *)0x0) {
-      param_2 = &fStack_50;
+      param_2 = &stack_pair_50.first;
     }
     uVar2 = (ulonglong)lbl_832178F0;
     if (uVar2 == 0) {

@@ -39,7 +39,7 @@ void fn_82BB9DD0(undefined8 param_1)
 
 {
   char cVar1;
-  undefined1 auStack_b0 [36];
+  undefined1 auStack_b0 [4];
   undefined1 auStack_8c [24];
   undefined1 auStack_74 [24];
   undefined1 auStack_5c [76];

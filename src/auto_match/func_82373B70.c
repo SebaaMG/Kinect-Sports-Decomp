@@ -40,7 +40,7 @@ void fn_82373B70(int param_1)
   int *piVar6;
   int iVar7;
   double dVar8;
-  int aiStack_50 [20];
+  int aiStack_50 [1];
   
   piVar5 = *(int **)(param_1 + 0x184);
   if (piVar5 != *(int **)(param_1 + 0x188)) {

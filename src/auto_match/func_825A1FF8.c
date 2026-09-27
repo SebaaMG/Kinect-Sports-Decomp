@@ -45,7 +45,7 @@ void fn_825A1FF8(int param_1)
   longlong lVar5;
   undefined1 in_vs32 [16];
   undefined1 in_vs33 [16];
-  undefined1 auStack_90 [144];
+  undefined1 auStack_90 [32];
   
   piVar1 = *(int **)(param_1 + 0x7b0);
   if ((piVar1 != (int *)0x0) && (*(int *)(param_1 + 0x7b8) != 0)) {

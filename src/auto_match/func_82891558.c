@@ -40,7 +40,7 @@ void fn_82891558(int param_1,undefined8 param_2,undefined8 param_3,longlong para
 {
   int iVar1;
   undefined8 uVar2;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [16];
   
   iVar1 = *(int *)(param_1 + 8);
   uVar2 = fn_82897B18(param_5);

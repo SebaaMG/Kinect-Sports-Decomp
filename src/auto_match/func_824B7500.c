@@ -41,8 +41,7 @@ extern int fn_828EA5F8();
 extern int fn_828EA610();
 
 
-void fn_824B7500(undefined8 param_1,uint param_2,uint param_3,undefined4 param_4,
-                  undefined2 param_5,undefined2 param_6,undefined2 param_7,undefined2 param_8)
+void fn_824B7500(undefined8 param_1, uint param_2, uint param_3, undefined4 param_4, undefined2 param_5, undefined2 param_6, undefined2 param_7, undefined2 param_8, undefined2 in_stack_00000056, undefined2 in_stack_0000005e, undefined2 in_stack_00000066, undefined2 in_stack_0000006e, undefined2 in_stack_00000076, undefined2 in_stack_0000007e, undefined2 in_stack_00000086)
 
 {
   int iVar1;
@@ -50,14 +49,14 @@ void fn_824B7500(undefined8 param_1,uint param_2,uint param_3,undefined4 param_4
   int iVar2;
   undefined1 uVar4;
   uint uVar5;
-  undefined2 in_stack_00000056;
-  undefined2 in_stack_0000005e;
-  undefined2 in_stack_00000066;
-  undefined2 in_stack_0000006e;
-  undefined2 in_stack_00000076;
-  undefined2 in_stack_0000007e;
-  undefined2 in_stack_00000086;
-  undefined2 auStack_60 [48];
+
+
+
+
+
+
+
+  undefined2 auStack_60;
   
   uVar5 = 4;
   if ((int)param_3 < 2) {
@@ -85,30 +84,30 @@ void fn_824B7500(undefined8 param_1,uint param_2,uint param_3,undefined4 param_4
         fn_8245B050(iVar1,uVar5 & 0xff,4);
         fn_8245B050(iVar1,param_3 & 0xff,4);
         fn_8245B100(iVar1);
-        auStack_60[0] = param_6;
-        fn_8245B168(iVar1,auStack_60,2);
-        auStack_60[0] = param_8;
-        fn_8245B168(iVar1,auStack_60,2);
-        auStack_60[0] = in_stack_0000007e;
-        fn_8245B168(iVar1,auStack_60,2);
-        auStack_60[0] = in_stack_0000005e;
-        fn_8245B168(iVar1,auStack_60,2);
-        auStack_60[0] = in_stack_0000006e;
-        fn_8245B168(iVar1,auStack_60,2);
-        auStack_60[0] = (undefined2)param_4;
-        fn_8245B168(iVar1,auStack_60,2);
-        auStack_60[0] = param_7;
-        fn_8245B168(iVar1,auStack_60,2);
-        auStack_60[0] = in_stack_00000056;
-        fn_8245B168(iVar1,auStack_60,2);
-        auStack_60[0] = in_stack_00000086;
-        fn_8245B168(iVar1,auStack_60,2);
-        auStack_60[0] = in_stack_00000066;
-        fn_8245B168(iVar1,auStack_60,2);
-        auStack_60[0] = in_stack_00000076;
-        fn_8245B168(iVar1,auStack_60,2);
-        auStack_60[0] = param_5;
-        fn_8245B168(iVar1,auStack_60,2);
+        auStack_60 = param_6;
+        fn_8245B168(iVar1,&auStack_60,2);
+        auStack_60 = param_8;
+        fn_8245B168(iVar1,&auStack_60,2);
+        auStack_60 = in_stack_0000007e;
+        fn_8245B168(iVar1,&auStack_60,2);
+        auStack_60 = in_stack_0000005e;
+        fn_8245B168(iVar1,&auStack_60,2);
+        auStack_60 = in_stack_0000006e;
+        fn_8245B168(iVar1,&auStack_60,2);
+        auStack_60 = (undefined2)param_4;
+        fn_8245B168(iVar1,&auStack_60,2);
+        auStack_60 = param_7;
+        fn_8245B168(iVar1,&auStack_60,2);
+        auStack_60 = in_stack_00000056;
+        fn_8245B168(iVar1,&auStack_60,2);
+        auStack_60 = in_stack_00000086;
+        fn_8245B168(iVar1,&auStack_60,2);
+        auStack_60 = in_stack_00000066;
+        fn_8245B168(iVar1,&auStack_60,2);
+        auStack_60 = in_stack_00000076;
+        fn_8245B168(iVar1,&auStack_60,2);
+        auStack_60 = param_5;
+        fn_8245B168(iVar1,&auStack_60,2);
         fn_824B70F0();
         fn_8245AFC0(iVar1,0,0);
       }

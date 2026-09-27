@@ -28,7 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 extern int fn_8267BE38();
 extern int fn_8267BF50();
 extern int fn_8268B368();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int lbl_831E7E64;
 extern U64 storeWordConditionalIndexed();
 
@@ -86,7 +86,7 @@ void fn_8268BA10(uint *param_1,uint *param_2)
     uVar1 = *(uint *)uVar3;
     uVar4 = uVar1 & 0x7fffffff;
     lVar6 = fn_8268B368(param_1,uVar8,uVar4,uVar1 & 0x80000000);
-    fn_82F68CC0(lVar6 + 8,uVar3 + 8,uVar4);
+    memcpy(lVar6 + 8,uVar3 + 8,uVar4);
     *param_1 = (uint)lVar6 | *param_1 & 3;
   }
   lVar6 = ((ulonglong)uVar2 & 0xfffffffc) + 4;

@@ -44,7 +44,7 @@ void fn_82446C88(int *param_1,undefined8 param_2,uint *param_3)
   undefined4 uVar7;
   undefined4 uVar8;
   undefined4 uVar9;
-  undefined **appuStack_1d0 [104];
+  undefined ** appuStack_1d0;
   undefined1 auStack_30 [48];
   
   if (param_3 != (uint *)0x0) {
@@ -62,8 +62,8 @@ void fn_82446C88(int *param_1,undefined8 param_2,uint *param_3)
   }
   lVar6 = 0;
 LAB_82446cf4:
-  fn_823BE2A8(appuStack_1d0,lVar6);
-  appuStack_1d0[0] = &lbl_821B9B9C;
+  fn_823BE2A8(&appuStack_1d0,lVar6);
+  appuStack_1d0 = &lbl_821B9B9C;
   puVar2 = (undefined4 *)((int)lVar6 + 0x1a0U & 0xfffffff0);
   uVar7 = puVar2[1];
   uVar8 = puVar2[2];
@@ -74,7 +74,7 @@ LAB_82446cf4:
   puVar3[1] = uVar7;
   puVar3[2] = uVar8;
   puVar3[3] = uVar9;
-  (*pcVar1)(param_1,param_2,appuStack_1d0);
+  (*pcVar1)(param_1,param_2,&appuStack_1d0);
   return;
 }
 

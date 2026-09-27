@@ -49,7 +49,7 @@ void fn_82726BA8(int param_1)
   int iVar6;
   int iVar7;
   undefined **appuStack_80 [8];
-  undefined1 auStack_60 [96];
+  undefined1 auStack_60 [48];
   
   if (*(int **)(param_1 + 8) != (int *)0x0) {
     iVar5 = (**(code **)(**(int **)(param_1 + 8) + 8))();

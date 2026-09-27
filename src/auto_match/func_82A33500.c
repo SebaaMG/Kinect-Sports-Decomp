@@ -54,7 +54,7 @@ ulonglong fn_82A33500(undefined4 *param_1,undefined8 param_2,undefined8 param_3,
   ushort uStack_50;
   ushort uStack_4e;
   char *pcStack_4c;
-  uint auStack_48 [2];
+  uint auStack_48;
   undefined4 uStack_40;
   ushort *puStack_3c;
   undefined4 uStack_38;
@@ -85,10 +85,10 @@ ulonglong fn_82A33500(undefined4 *param_1,undefined8 param_2,undefined8 param_3,
     if (((uVar2 == 3) && (*pcStack_4c == '*')) && (pcStack_4c[1] == '.')) {
       uStack_50 = -(ushort)(pcStack_4c[2] != '*') & uStack_4e;
     }
-    uVar1 = NtOpenFile(auStack_60,0x100001,&uStack_40,auStack_48,3,0x4021);
+    uVar1 = NtOpenFile(auStack_60,0x100001,&uStack_40,&auStack_48,3,0x4021);
     if (-1 < (int)uVar1) {
       uVar1 = (**(code **)(lbl_8315D3D0 + 0x18))
-                        (auStack_60[0],0,0,0,auStack_48,param_2,param_3,&uStack_50);
+                        (auStack_60[0],0,0,0,&auStack_48,param_2,param_3,&uStack_50);
       if ((longlong)uVar1 < 0) {
         NtClose(auStack_60[0]);
       }
@@ -99,7 +99,7 @@ ulonglong fn_82A33500(undefined4 *param_1,undefined8 param_2,undefined8 param_3,
         else {
           *param_4 = auStack_60[0];
         }
-        uVar1 = (ulonglong)auStack_48[0];
+        uVar1 = (ulonglong)auStack_48;
       }
     }
   }

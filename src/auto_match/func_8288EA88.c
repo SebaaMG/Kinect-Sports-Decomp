@@ -54,7 +54,7 @@ void fn_8288EA88(int param_1,undefined8 param_2,undefined8 param_3,int param_4,u
   undefined8 uVar7;
   undefined4 uStack_50;
   undefined1 auStack_4c [4];
-  undefined1 auStack_48 [72];
+  undefined1 auStack_48 [8];
   
   iVar1 = *(int *)(param_1 + 8);
   uVar7 = 0;

@@ -44,7 +44,7 @@ void fn_82333AB0(int param_1,ulonglong param_2,uint *param_3,int param_4)
   char *pcVar3;
   char *pcVar4;
   undefined1 auStack_80 [32];
-  undefined1 auStack_60 [96];
+  undefined1 auStack_60 [48];
   
   if ((param_2 & 0xffffffff) != 0) {
     pcVar4 = (char *)(param_1 + 0x40);

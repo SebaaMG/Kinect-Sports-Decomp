@@ -27,17 +27,17 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_30;
 extern int fn_82A28E60();
-extern int fn_8314222C();
+extern int XamXlfsUninitializeUploadQueue();
 extern unsigned int lbl_832179FC;
 
 
 void fn_829E0300(undefined1 *param_1)
 
 {
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [1];
   
   if (*(int *)(param_1 + 0x14) != 0) {
-    fn_8314222C(*(int *)(param_1 + 0x14),auStack_30);
+    XamXlfsUninitializeUploadQueue(*(int *)(param_1 + 0x14),auStack_30);
     *(undefined4 *)(param_1 + 0x14) = 0;
   }
   if (*(int *)(param_1 + 0x10) != 0) {

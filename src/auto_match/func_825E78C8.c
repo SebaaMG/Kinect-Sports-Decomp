@@ -41,7 +41,7 @@ undefined8 fn_825E78C8(uint *param_1,uint param_2)
   uint uVar8;
   longlong lVar9;
   int iVar10;
-  int aiStack_a8 [36];
+  int aiStack_a8 [16];
   
   uVar8 = *param_1;
   uVar4 = (ulonglong)uVar8;

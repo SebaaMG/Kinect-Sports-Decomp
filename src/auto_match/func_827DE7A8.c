@@ -41,18 +41,18 @@ longlong fn_827DE7A8(int param_1,undefined4 *param_2)
   undefined8 uVar1;
   uint *puVar2;
   ulonglong uVar3;
-  uint auStack_70 [4];
+  uint auStack_70;
   undefined1 auStack_60 [32];
   undefined4 auStack_40 [2];
   undefined1 auStack_38 [32];
   
-  fn_827E0658(auStack_70,param_1,param_2);
-  uVar3 = (ulonglong)auStack_70[0];
+  fn_827E0658(&auStack_70,param_1,param_2);
+  uVar3 = (ulonglong)auStack_70;
   if (uVar3 == *(uint *)(param_1 + 4)) {
     uVar1 = fn_827D9658(auStack_60);
     auStack_40[0] = *param_2;
     fn_827D9630(auStack_38,uVar1);
-    puVar2 = (uint *)fn_827DE748(auStack_70,param_1,auStack_40);
+    puVar2 = (uint *)fn_827DE748(&auStack_70,param_1,auStack_40);
     uVar3 = (ulonglong)*puVar2;
   }
   return uVar3 + 0x10;

@@ -62,7 +62,7 @@ void fn_8231EC40(int param_1)
   undefined4 in_register_000104d4;
   undefined4 in_register_000104d8;
   undefined4 in_vr77;
-  longlong alStack_40 [2];
+  longlong alStack_40 [1];
   undefined1 auStack_30 [48];
   
   fVar4 = lbl_821CC160;

@@ -52,7 +52,7 @@ void fn_828A4E50(int param_1,undefined4 param_2)
   undefined4 uStack_48;
   undefined4 uStack_44;
   int iStack_40;
-  undefined1 auStack_38 [56];
+  undefined1 auStack_38 [40];
   
   uStack_58 = *(undefined4 *)(param_1 + 0x240);
   uStack_54 = 0;

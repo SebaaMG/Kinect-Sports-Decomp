@@ -39,7 +39,7 @@ void fn_826EF508(int param_1,char param_2)
   undefined1 uVar4;
   undefined1 *puVar5;
   uint uVar6;
-  undefined4 auStack_30 [12];
+  undefined4 auStack_30;
   
   if ((*(int *)(param_1 + 4) != 0) &&
      (piVar1 = *(int **)(*(int *)(param_1 + 4) + 0x14), piVar1 != (int *)0x0)) {
@@ -61,8 +61,8 @@ void fn_826EF508(int param_1,char param_2)
         uVar6 = 0;
       }
       else {
-        auStack_30[0] = 0;
-        fn_826BD398(uVar6,auStack_30,iVar2);
+        auStack_30 = 0;
+        fn_826BD398(uVar6,&auStack_30,iVar2);
       }
     }
     *(uint *)(param_1 + 0x18) = uVar6;

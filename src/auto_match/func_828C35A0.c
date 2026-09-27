@@ -59,7 +59,7 @@ int fn_828C35A0(int param_1,int param_2)
   undefined1 auStack_50 [16];
   undefined4 uStack_40;
   undefined4 uStack_3c;
-  undefined1 auStack_34 [52];
+  undefined1 auStack_34 [20];
   
   uVar2 = fn_828C2110();
   if (uVar2 != *(uint *)(param_1 + 4)) {

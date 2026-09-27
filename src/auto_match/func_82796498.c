@@ -40,7 +40,7 @@ int fn_82796498(int param_1,ulonglong param_2)
   char cVar1;
   int iVar2;
   int iVar3;
-  int aiStack_40 [16];
+  int aiStack_40;
   
   iVar3 = 0;
   if (*(int *)(param_1 + 0x10) != 0) {
@@ -53,11 +53,11 @@ int fn_82796498(int param_1,ulonglong param_2)
     iVar3 = iVar3 + iVar2;
   }
   fn_82794B88(param_1);
-  aiStack_40[0] = fn_82794C10();
-  fn_82796170((int *)(param_1 + 0xc),aiStack_40);
-  iVar2 = aiStack_40[0];
-  if (aiStack_40[0] != 0) {
-    fn_82794B38(aiStack_40[0]);
+  aiStack_40 = fn_82794C10();
+  fn_82796170((int *)(param_1 + 0xc),&aiStack_40);
+  iVar2 = aiStack_40;
+  if (aiStack_40 != 0) {
+    fn_82794B38(aiStack_40);
     fn_8267BE38(iVar2);
   }
   iVar2 = *(int *)(*(int *)(param_1 + 0x10) * 4 + *(int *)(param_1 + 0xc) + -4);

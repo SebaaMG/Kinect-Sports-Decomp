@@ -38,7 +38,7 @@ ulonglong fn_82B4B6F0(undefined8 param_1,undefined8 param_2,undefined8 param_3,u
 {
   int iVar2;
   ulonglong uVar1;
-  undefined1 auStack_a0 [160];
+  undefined1 auStack_a0 [112];
   
   iVar2 = fn_82B45880();
   uVar1 = fn_82B4A3D8(param_1,0xffffffffffffffff,0,*(undefined4 *)(iVar2 + 0x18),param_3,param_4,

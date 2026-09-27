@@ -25,7 +25,7 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F691F0();
+extern int memset();
 
 
 void fn_82B439A0(int param_1,uint param_2)
@@ -37,7 +37,7 @@ void fn_82B439A0(int param_1,uint param_2)
     uVar1 = param_2 >> 5;
     if ((ulonglong)uVar1 != 0) {
                     /* WARNING: Subroutine does not return */
-      fn_82F691F0(param_1,0xff,(ulonglong)uVar1 << 2);
+      memset(param_1,0xff,(ulonglong)uVar1 << 2);
     }
     if ((param_2 & 0xffffffe0) != param_2) {
       *(int *)(uVar1 * 4 + param_1) = (1 << (param_2 - (param_2 & 0xffffffe0) & 0x3f)) + -1;

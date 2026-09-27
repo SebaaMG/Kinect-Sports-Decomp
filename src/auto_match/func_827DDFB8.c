@@ -39,7 +39,7 @@ void fn_827DDFB8(undefined8 param_1,undefined8 param_2)
 {
   undefined4 uVar2;
   undefined8 uVar1;
-  undefined1 auStack_70 [16];
+  undefined1 auStack_70 [1];
   undefined1 auStack_60 [32];
   undefined4 auStack_40 [2];
   undefined1 auStack_38 [56];

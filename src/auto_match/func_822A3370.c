@@ -44,21 +44,21 @@ void fn_822A3370(undefined8 param_1)
   undefined4 *puVar1;
   undefined1 auStack_30 [4];
   int iStack_2c;
-  undefined4 uStack_20;
-  undefined4 uStack_1c;
+  struct { undefined4 first; undefined4 second; } stack_pair_20;
+
   int iStack_18;
   
   fn_8227BA18();
-  uStack_20 = 0;
-  uStack_1c = 0;
-  fn_82273CD8(&uStack_20,5);
+  stack_pair_20.first = 0;
+  stack_pair_20.second = 0;
+  fn_82273CD8(&stack_pair_20.first,5);
   iStack_18 = (int)param_1 + 0x1188;
   puVar1 = (undefined4 *)fn_82279C58(auStack_30,param_1);
-  fn_82672C20(*puVar1,0xffffffff821abff8,&uStack_20,1);
+  fn_82672C20(*puVar1,0xffffffff821abff8,&stack_pair_20.first,1);
   if (iStack_2c != 0) {
     fn_822315A0();
   }
-  fn_82273C88(&uStack_20);
+  fn_82273C88(&stack_pair_20.first);
   return;
 }
 

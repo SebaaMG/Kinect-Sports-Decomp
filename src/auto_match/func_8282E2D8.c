@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_82518FF0();
 extern int fn_828223C8();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int iStack_3c;
 extern unsigned int iStack_40;
 
@@ -42,7 +42,7 @@ void fn_8282E2D8(int param_1)
   int *piVar5;
   int iStack_40;
   int iStack_3c;
-  int aiStack_38 [14];
+  int aiStack_38;
   
   fn_828223C8(param_1 + 0x2f4,&iStack_3c);
   if (iStack_3c != 0) {
@@ -54,17 +54,17 @@ void fn_8282E2D8(int param_1)
         if (*(char *)(iStack_40 + 0x28) == *(char *)(iVar2 + 0x14)) {
           piVar5 = (int *)(iStack_40 + 0x3c);
           piVar1 = *(int **)(*(int *)(iStack_40 + 0x3c) + 4);
-          aiStack_38[0] = *piVar1;
-          if ((int *)aiStack_38[0] != piVar1) {
+          aiStack_38 = *piVar1;
+          if ((int *)aiStack_38 != piVar1) {
             puVar4 = (uint *)(iStack_40 + 0x24);
             do {
-              fn_82F68CC0((ulonglong)*(uint *)(aiStack_38[0] + 0x18) +
+              memcpy((ulonglong)*(uint *)(aiStack_38 + 0x18) +
                            (ulonglong)*(uint *)(iVar2 + 0x20) + (ulonglong)*puVar4,
-                           *(undefined4 *)(aiStack_38[0] + 0xc),
-                           *(undefined4 *)(aiStack_38[0] + 0x10));
-              fn_82518FF0(aiStack_38);
+                           *(undefined4 *)(aiStack_38 + 0xc),
+                           *(undefined4 *)(aiStack_38 + 0x10));
+              fn_82518FF0(&aiStack_38);
               iVar3 = iStack_40;
-            } while (aiStack_38[0] != *(int *)(*piVar5 + 4));
+            } while (aiStack_38 != *(int *)(*piVar5 + 4));
           }
         }
       }

@@ -42,9 +42,9 @@ void fn_82AB0450(ulonglong param_1,int param_2,ulonglong param_3,uint param_4,un
   uint *puVar3;
   uint uVar4;
   uint uStack_70;
-  uint uStack_6c;
-  uint uStack_68;
-  uint auStack_64 [25];
+  struct { uint first; uint second; } stack_pair_6c;
+
+  uint auStack_64;
   
   puVar3 = (uint *)*param_8;
   if (0xd < param_2) {
@@ -84,16 +84,16 @@ void fn_82AB0450(ulonglong param_1,int param_2,ulonglong param_3,uint param_4,un
   }
   *(undefined4 *)((int)((param_1 + 4 & 0xffffffff) << 3) + *(int *)(param_7 + 0x10)) = 0xc;
   *(uint *)((int)((param_1 & 0xffffffff) << 3) + *(int *)(param_7 + 0x10) + 0x1c) = (uint)param_1;
-  fn_82AB0350(param_6,param_5,auStack_64,&uStack_68,&uStack_6c,&uStack_70);
-  if ((((param_4 == 0) && (auStack_64[0] == 3)) && (uStack_68 == 3)) &&
-     ((uStack_6c == 3 && (uStack_70 == 3)))) {
+  fn_82AB0350(param_6,param_5,&auStack_64,&stack_pair_6c.second,&stack_pair_6c.first,&uStack_70);
+  if ((((param_4 == 0) && (auStack_64 == 3)) && (stack_pair_6c.second == 3)) &&
+     ((stack_pair_6c.first == 3 && (uStack_70 == 3)))) {
     *puVar3 = uVar4;
   }
   else {
     *puVar3 = uVar4 | 0x80000000;
     puVar3 = puVar3 + 1;
-    *puVar3 = ((((param_4 & 1) << 2 | uStack_70 & 3) << 2 | uStack_6c & 3) << 2 | uStack_68 & 3) <<
-              2 | auStack_64[0] & 3;
+    *puVar3 = ((((param_4 & 1) << 2 | uStack_70 & 3) << 2 | stack_pair_6c.first & 3) << 2 | stack_pair_6c.second & 3) <<
+              2 | auStack_64 & 3;
   }
   puVar3[1] = (uint)param_1 & 0xffff | 0xc0000;
   *param_8 = (int)(puVar3 + 2);

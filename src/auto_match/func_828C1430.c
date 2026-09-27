@@ -39,7 +39,7 @@ fn_828C1430(undefined4 *param_1,undefined8 param_2,undefined4 *param_3,undefined
 {
   int *piVar1;
   undefined4 *puVar2;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [16];
   
   piVar1 = (int *)fn_825089A0();
   puVar2 = (undefined4 *)(**(code **)(*piVar1 + 0x24))(piVar1,0x98,2);

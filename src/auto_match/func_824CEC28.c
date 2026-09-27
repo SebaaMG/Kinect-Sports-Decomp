@@ -49,7 +49,7 @@ void fn_824CEC28(int *param_1)
   int *piVar5;
   undefined8 uVar2;
   undefined8 uVar3;
-  undefined4 *apuStack_40 [4];
+  undefined4 * apuStack_40;
   undefined1 auStack_30 [4];
   undefined4 *puStack_2c;
   
@@ -89,9 +89,9 @@ LAB_824ceca4:
     uVar3 = fn_828A12E8(iVar4);
     uVar2 = fn_8288F948(uVar3,uVar2);
     fn_8224E928(auStack_30,uVar2);
-    apuStack_40[0] = (undefined4 *)*puStack_2c;
-    while (apuStack_40[0] != puStack_2c) {
-      piVar5 = (int *)apuStack_40[0][5];
+    apuStack_40 = (undefined4 *)*puStack_2c;
+    while (apuStack_40 != puStack_2c) {
+      piVar5 = (int *)apuStack_40[5];
       iVar4 = (**(code **)(*piVar5 + 8))(piVar5);
       iVar4 = (**(code **)(*(int *)(iVar4 + 0x978) + 0x3c))();
       if (iVar4 == param_1[6]) {
@@ -103,9 +103,9 @@ LAB_824ceca4:
           break;
         }
       }
-      fn_82248B90(apuStack_40);
+      fn_82248B90(&apuStack_40);
     }
-    fn_8224ED20(apuStack_40,auStack_30,*puStack_2c);
+    fn_8224ED20(&apuStack_40,auStack_30,*puStack_2c);
     fn_8265CA20(puStack_2c);
   }
   return;

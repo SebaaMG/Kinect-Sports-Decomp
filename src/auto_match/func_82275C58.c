@@ -39,21 +39,21 @@ undefined4 * fn_82275C58(undefined4 *param_1,ulonglong param_2,uint param_3,int 
 {
   int iVar1;
   int iVar2;
-  undefined4 uStack_50;
-  undefined4 uStack_4c;
+  struct { undefined4 first; undefined4 second; } stack_pair_50;
+
   undefined4 uStack_48;
   undefined4 uStack_44;
   int iStack_40;
   
   iVar1 = param_4[4];
-  uStack_50 = 0;
-  uStack_4c = 0;
+  stack_pair_50.first = 0;
+  stack_pair_50.second = 0;
   uStack_48 = 0;
   uStack_44 = 0;
   iStack_40 = iVar1;
   if ((param_2 & 0xffffffff) != (ulonglong)param_3) {
     do {
-      fn_822760B0(&uStack_50,param_2);
+      fn_822760B0(&stack_pair_50.first,param_2);
       param_2 = param_2 + 8;
     } while ((param_2 & 0xffffffff) != (ulonglong)param_3);
   }

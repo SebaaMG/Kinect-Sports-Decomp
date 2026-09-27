@@ -34,11 +34,11 @@ longlong fn_82830860(undefined8 param_1,undefined8 param_2,undefined8 param_3,un
 
 {
   longlong lVar1;
-  undefined4 auStack_30 [12];
+  undefined4 auStack_30;
   
-  lVar1 = fn_8282D230(param_2,auStack_30);
+  lVar1 = fn_8282D230(param_2,&auStack_30);
   if (lVar1 == 0) {
-    fn_82830670(param_1,auStack_30[0],param_3,param_4,1);
+    fn_82830670(param_1,auStack_30,param_3,param_4,1);
   }
   return lVar1;
 }

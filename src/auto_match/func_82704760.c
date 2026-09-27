@@ -39,24 +39,24 @@ void fn_82704760(undefined8 param_1,undefined4 param_2)
 
 {
   ulonglong uVar1;
-  undefined4 uStack_30;
-  int iStack_2c;
+  struct { undefined4 first; int second; } stack_pair_30;
+
   int iStack_28;
   undefined4 uStack_24;
   undefined4 uStack_20;
   
-  iStack_2c = (int)param_1 + 0xa2c;
-  uStack_30 = 0;
+  stack_pair_30.second = (int)param_1 + 0xa2c;
+  stack_pair_30.first = 0;
   uStack_24 = 0;
   iStack_28 = 0;
   uStack_20 = param_2;
   while( true ) {
-    uVar1 = fn_82703B00(&uStack_30);
+    uVar1 = fn_82703B00(&stack_pair_30.first);
     if ((uVar1 & 0xffffffff) == 0) break;
     fn_826F75B8(uVar1,param_1);
   }
   if (iStack_28 != 0) {
-    fn_82703910(iStack_2c);
+    fn_82703910(stack_pair_30.second);
   }
   return;
 }

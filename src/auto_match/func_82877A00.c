@@ -50,7 +50,7 @@ undefined8 fn_82877A00(double param_1,int param_2)
   undefined8 uVar2;
   undefined8 uVar3;
   double dVar4;
-  undefined1 auStack_a0 [32];
+  undefined1 auStack_a0 [1];
   undefined1 auStack_80 [32];
   undefined1 auStack_60 [32];
   undefined1 auStack_40 [40];

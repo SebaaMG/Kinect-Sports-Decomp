@@ -58,7 +58,7 @@ void fn_826ADE60(int param_1,char *param_2,undefined8 param_3,undefined8 param_4
   undefined4 uStack_130;
   char *pcStack_12c;
   undefined4 uStack_128;
-  char acStack_120 [288];
+  char acStack_120 [272];
   
   iVar2 = *(int *)(param_1 + 0xa0);
   uStack00000020 = param_3;

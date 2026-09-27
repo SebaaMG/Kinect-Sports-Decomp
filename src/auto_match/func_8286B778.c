@@ -35,7 +35,7 @@ extern int fn_8286B448();
 void fn_8286B778(undefined8 param_1,longlong param_2)
 
 {
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [32];
   
   fn_82240378(auStack_40,param_2 + -0x1c);
   fn_822402F8(param_2 + -0x1c,param_1);

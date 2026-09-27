@@ -39,8 +39,7 @@ extern unsigned int lbl_83156AA0;
 
 
 undefined4 *
-fn_827E3DE0(double param_1,double param_2,double param_3,undefined4 *param_4,undefined1 param_5,
-             byte param_6,undefined4 param_7,undefined4 param_8)
+fn_827E3DE0(double param_1, double param_2, double param_3, undefined4 *param_4, undefined1 param_5, byte param_6, undefined4 param_7, undefined4 param_8, undefined4 in_stack_00000054, undefined1 in_stack_0000005f)
 
 {
   undefined8 uVar1;
@@ -51,10 +50,10 @@ fn_827E3DE0(double param_1,double param_2,double param_3,undefined4 *param_4,und
   undefined4 *puVar6;
   int iVar7;
   undefined4 *puStack00000014;
-  undefined4 in_stack_00000054;
-  undefined1 in_stack_0000005f;
+
+
   undefined1 auStack_80 [16];
-  undefined1 auStack_70 [112];
+  undefined1 auStack_70 [32];
   
   puStack00000014 = param_4;
   uVar1 = fn_827DE048(auStack_70);

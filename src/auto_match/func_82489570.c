@@ -41,8 +41,8 @@ void fn_82489570(void)
 
 {
   undefined1 auStack_40 [16];
-  undefined4 uStack_30;
-  undefined4 uStack_2c;
+  struct { undefined4 first; undefined4 second; } stack_pair_30;
+
   undefined4 uStack_28;
   
   if (lbl_832810F0 != 0) {
@@ -54,10 +54,10 @@ void fn_82489570(void)
     lbl_83276741 = '\x01';
   }
   fn_82520158(0xffffffff821c2274,auStack_40,0);
-  uStack_30 = 0;
-  uStack_2c = 0;
+  stack_pair_30.first = 0;
+  stack_pair_30.second = 0;
   uStack_28 = 0;
-  fn_8251CF80(auStack_40,0,&uStack_30);
+  fn_8251CF80(auStack_40,0,&stack_pair_30.first);
   return;
 }
 

@@ -38,7 +38,7 @@ undefined4 * fn_827DCD28(void)
   int iVar1;
   undefined8 uVar2;
   undefined4 *puVar3;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [48];
   
   iVar1 = *(int *)lbl_83156AA0;
   uVar2 = fn_82811400(auStack_40,4);

@@ -40,7 +40,7 @@ undefined8 fn_827F6BA8(undefined8 param_1,undefined8 param_2,undefined8 param_3)
 {
   undefined4 uStack_40;
   undefined4 uStack_3c;
-  undefined1 auStack_38 [56];
+  undefined1 auStack_38 [8];
   
   fn_827F98C8(param_2,param_3,&uStack_3c);
   fn_827F9450(param_2,param_3,&uStack_40);

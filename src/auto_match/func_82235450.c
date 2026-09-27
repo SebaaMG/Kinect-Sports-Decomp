@@ -47,7 +47,7 @@ undefined8 fn_82235450(undefined8 param_1,undefined8 param_2,undefined8 param_3,
   uint uVar4;
   undefined1 auStack_d0 [16];
   undefined1 auStack_c0 [4];
-  undefined1 auStack_bc [188];
+  undefined1 auStack_bc [140];
   
   fn_8223CFC0(auStack_c0,2,1);
   iVar3 = param_4 + 8;

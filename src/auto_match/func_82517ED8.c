@@ -40,7 +40,7 @@ int fn_82517ED8(int param_1,int param_2,uint param_3)
   undefined4 *puVar5;
   undefined4 **ppuVar6;
   undefined4 *puStack_30;
-  undefined4 *apuStack_2c [11];
+  undefined4 *apuStack_2c [1];
   
   puStack_30 = *(undefined4 **)(param_2 + 0x28);
   iVar2 = fn_82518120();

@@ -33,10 +33,10 @@ bool fn_8267FC60(undefined4 param_1,undefined8 param_2)
 
 {
   int iVar1;
-  undefined4 auStack_10 [4];
+  undefined4 auStack_10;
   
-  auStack_10[0] = param_1;
-  iVar1 = fn_8267FA50(auStack_10,1,param_2);
+  auStack_10 = param_1;
+  iVar1 = fn_8267FA50(&auStack_10,1,param_2);
   return iVar1 == 0;
 }
 

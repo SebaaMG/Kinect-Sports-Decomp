@@ -37,21 +37,21 @@ undefined8 fn_822CF260(int param_1,int param_2)
 {
   undefined4 uVar1;
   int iVar2;
-  int iStack_30;
-  int iStack_2c;
+  struct { int first; int second; } stack_pair_30;
+
   
   uVar1 = *(undefined4 *)(param_1 + 0x1c0);
   iVar2 = fn_82372C00(uVar1);
   if (param_1 == iVar2) {
-    fn_82374520(&iStack_30,uVar1);
-    if (((iStack_30 != 0) && (iVar2 = *(int *)(iStack_30 + 0x2148), 4 < iVar2)) &&
+    fn_82374520(&stack_pair_30.first,uVar1);
+    if (((stack_pair_30.first != 0) && (iVar2 = *(int *)(stack_pair_30.first + 0x2148), 4 < iVar2)) &&
        (((iVar2 < 8 || (iVar2 == 0xf)) || ((iVar2 == 0x12 && (param_2 == 0)))))) {
-      if (iStack_2c != 0) {
+      if (stack_pair_30.second != 0) {
         fn_822315A0();
       }
       return 1;
     }
-    if (iStack_2c != 0) {
+    if (stack_pair_30.second != 0) {
       fn_822315A0();
     }
   }

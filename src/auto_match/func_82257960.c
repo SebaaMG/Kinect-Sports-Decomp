@@ -34,18 +34,18 @@ extern unsigned int uStack_30;
 void fn_82257960(int param_1,undefined8 param_2)
 
 {
-  undefined4 uStack_30;
-  int iStack_2c;
-  undefined1 auStack_28 [40];
+  struct { undefined4 first; int second; } stack_pair_30;
+
+  undefined1 auStack_28 [8];
   
-  uStack_30 = 0;
-  iStack_2c = 0;
+  stack_pair_30.first = 0;
+  stack_pair_30.second = 0;
   (**(code **)(**(int **)(param_1 + 0x68) + 0x14))(*(int **)(param_1 + 0x68),param_2,auStack_28);
-  (**(code **)(**(int **)(param_1 + 0x70) + 0x14))(*(int **)(param_1 + 0x70),param_2,&uStack_30);
+  (**(code **)(**(int **)(param_1 + 0x70) + 0x14))(*(int **)(param_1 + 0x70),param_2,&stack_pair_30.first);
   if (*(int *)(param_1 + 0x60) != 0) {
-    (**(code **)(**(int **)(param_1 + 0x60) + 4))(*(int **)(param_1 + 0x60),auStack_28,&uStack_30);
+    (**(code **)(**(int **)(param_1 + 0x60) + 4))(*(int **)(param_1 + 0x60),auStack_28,&stack_pair_30.first);
   }
-  if (iStack_2c != 0) {
+  if (stack_pair_30.second != 0) {
     fn_822315A0();
   }
   return;

@@ -49,8 +49,8 @@ undefined8 fn_827A4240(int param_1,uint param_2)
   ulonglong uVar10;
   uint uStack_50;
   undefined2 uStack_4c;
-  uint uStack_48;
-  undefined4 uStack_44;
+  struct { uint first; undefined4 second; } stack_pair_48;
+
   undefined2 uStack_40;
   
   if ((param_2 == 0) || (uVar1 = *(ushort *)(param_1 + 0x68), (uVar1 >> 5 & 1) != 0)) {
@@ -80,10 +80,10 @@ undefined8 fn_827A4240(int param_1,uint param_2)
       goto LAB_827a4300;
     }
   }
-  uStack_44 = (undefined4)uVar10;
-  uStack_48 = uVar4;
+  stack_pair_48.second = (undefined4)uVar10;
+  stack_pair_48.first = uVar4;
   uStack_40 = (short)param_2;
-  lVar6 = fn_8279C910(*(undefined4 *)(param_1 + 8),5,&uStack_48);
+  lVar6 = fn_8279C910(*(undefined4 *)(param_1 + 8),5,&stack_pair_48.first);
   uVar7 = uVar9;
   if ((uVar10 & 0xffffffff) <= (ulonglong)uVar4) {
     uVar7 = uVar10;

@@ -51,7 +51,7 @@ undefined8 fn_829BB848(int param_1)
   int iVar18;
   int *piVar19;
   undefined4 uStack_74;
-  int aiStack_70 [28];
+  int aiStack_70 [1];
   
   iVar1 = *(int *)(param_1 + 0x1b0);
   iVar18 = 0;

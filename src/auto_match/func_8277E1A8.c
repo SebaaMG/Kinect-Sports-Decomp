@@ -45,24 +45,24 @@ void fn_8277E1A8(int param_1,uint param_2,undefined1 param_3)
   int iVar7;
   int iVar8;
   int *piVar9;
-  int iStack_60;
-  int iStack_5c;
+  struct { int first; int second; } stack_pair_60;
+
   undefined4 uStack_58;
   
   uVar1 = *(uint *)(param_1 + 0x28);
   if (uVar1 <= param_2) {
     if (*(uint *)(param_1 + 0x2c) <= param_2) {
-      iStack_60 = 0;
-      iStack_5c = 0;
+      stack_pair_60.first = 0;
+      stack_pair_60.second = 0;
       uStack_58 = 0;
-      fn_8277CAA0(&iStack_60,*(undefined4 *)(param_1 + 0x28),0);
-      iVar3 = iStack_60;
+      fn_8277CAA0(&stack_pair_60.first,*(undefined4 *)(param_1 + 0x28),0);
+      iVar3 = stack_pair_60.first;
       piVar9 = (int *)(param_1 + 0x24);
       uVar6 = 0;
-      iVar8 = iStack_5c;
+      iVar8 = stack_pair_60.second;
       if (*(int *)(param_1 + 0x28) != 0) {
         do {
-          puVar5 = (undefined1 *)(iVar8 + iStack_60);
+          puVar5 = (undefined1 *)(iVar8 + stack_pair_60.first);
           iVar8 = iVar8 + 1;
           puVar4 = (undefined1 *)(*piVar9 + uVar6);
           uVar6 = uVar6 + 1;

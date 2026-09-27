@@ -43,7 +43,7 @@ fn_828180A8(int *param_1,int param_2,char *param_3,undefined8 param_4,ulonglong 
   char *pcVar7;
   char *pcVar8;
   char *pcVar9;
-  int aiStack_60 [24];
+  int aiStack_60 [4];
   
   pcVar9 = (char *)0x0;
   if ((param_1 != (int *)0x0) && (param_6 != (int *)0x0)) {

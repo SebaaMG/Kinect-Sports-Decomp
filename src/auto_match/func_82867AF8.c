@@ -62,7 +62,7 @@ undefined8 fn_82867AF8(longlong param_1,undefined8 param_2)
   undefined1 auStack_d0 [32];
   undefined1 auStack_b0 [32];
   undefined1 auStack_90 [32];
-  undefined1 auStack_70 [4];
+  undefined1 auStack_70 [1];
   undefined1 auStack_6c [44];
   undefined1 auStack_40 [64];
   

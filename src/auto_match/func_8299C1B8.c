@@ -59,7 +59,7 @@ undefined8 fn_8299C1B8(int param_1,uint param_2,int param_3)
   undefined4 uStack_94;
   int aiStack_90 [7];
   undefined4 uStack_74;
-  int aiStack_70 [28];
+  int aiStack_70 [8];
   
   uVar10 = 0;
   uVar7 = param_2;

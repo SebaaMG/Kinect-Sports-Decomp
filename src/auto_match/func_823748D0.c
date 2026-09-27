@@ -43,7 +43,7 @@ void fn_823748D0(int param_1,int param_2)
   ulonglong uVar4;
   undefined1 auStack_40 [4];
   int iStack_3c;
-  undefined1 auStack_38 [56];
+  undefined1 auStack_38 [1];
   
   for (uVar4 = (ulonglong)*(uint *)(param_1 + 0x30);
       (uVar4 & 0xffffffff) != (ulonglong)*(uint *)(param_1 + 0x34); uVar4 = uVar4 + 8) {

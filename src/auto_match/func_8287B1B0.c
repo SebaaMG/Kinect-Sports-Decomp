@@ -37,7 +37,7 @@ undefined8 fn_8287B1B0(undefined8 param_1)
 
 {
   undefined1 auStack_b0 [4];
-  undefined1 auStack_ac [156];
+  undefined1 auStack_ac [140];
   
   fn_8223CFC0(auStack_b0,2,1);
   fn_82240158(auStack_b0,0xffffffff82022bad);

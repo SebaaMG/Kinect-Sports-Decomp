@@ -35,16 +35,16 @@ undefined4 * fn_824E06E0(undefined4 *param_1)
 
 {
   undefined4 uStack_20;
-  undefined4 uStack_1c;
-  undefined4 uStack_18;
+  struct { undefined4 first; undefined4 second; } stack_pair_1c;
+
   
   uStack_20 = 0;
-  uStack_1c = 0;
-  uStack_18 = (uint)(((U64)(uStack_18) >> 16) & 0xFFFF);
-  fn_824DCB30(&uStack_20,&uStack_1c,&uStack_18);
+  stack_pair_1c.first = 0;
+  stack_pair_1c.second = (uint)(((U64)(stack_pair_1c.second) >> 16) & 0xFFFF);
+  fn_824DCB30(&uStack_20,&stack_pair_1c.first,&stack_pair_1c.second);
   *param_1 = uStack_20;
-  param_1[1] = uStack_1c;
-  param_1[2] = uStack_18;
+  param_1[1] = stack_pair_1c.first;
+  param_1[2] = stack_pair_1c.second;
   return param_1;
 }
 

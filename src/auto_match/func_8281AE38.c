@@ -34,11 +34,11 @@ undefined8 fn_8281AE38(int param_1,undefined8 param_2,longlong param_3)
 {
   int iVar1;
   int iVar2;
-  int aiStack_30 [12];
+  int aiStack_30;
   
   iVar2 = *(int *)(param_1 + 0x7c);
-  fn_828233A8(param_1 + 0x88,aiStack_30,0xffffffff828192c8,param_2);
-  iVar1 = (int)(short)(aiStack_30[0] - iVar2 >> 6);
+  fn_828233A8(param_1 + 0x88,&aiStack_30,0xffffffff828192c8,param_2);
+  iVar1 = (int)(short)(aiStack_30 - iVar2 >> 6);
   iVar2 = iVar1 * 0x40 + iVar2;
   if (((*(byte *)(iVar2 + 0x36) & 1) == 0) ||
      (iVar1 = fn_8281A3C8(param_1,iVar1,param_3 - (ulonglong)*(uint *)(iVar2 + 0x28)), iVar1 == 0)

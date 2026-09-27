@@ -73,7 +73,7 @@ void fn_828E4768(int *param_1,undefined8 param_2,undefined4 *param_3)
   undefined4 uStack_80;
   undefined4 uStack_7c;
   undefined1 auStack_70 [24];
-  undefined1 auStack_58 [88];
+  undefined1 auStack_58 [56];
   
   uVar3 = (**(code **)(*param_1 + 0xc))();
   uStack_c4 = 0;

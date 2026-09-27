@@ -37,13 +37,13 @@ undefined8 fn_82331D28(double param_1,int param_2)
 
 {
   undefined8 uVar1;
-  float fStack_20;
-  float fStack_1c;
+  struct { float first; float second; } stack_pair_20;
+
   
-  fn_825321B0(&stack0x00000020,&fStack_20,*(undefined4 *)(param_2 + 0x74));
-  fStack_1c = fStack_1c - *(float *)(param_2 + 0xa4);
-  fStack_20 = fStack_20 - *(float *)(param_2 + 0xa0);
-  if ((param_1 < (double)SQRT(fStack_20 * fStack_20 + fStack_1c * fStack_1c)) ||
+  fn_825321B0(&stack0x00000020,&stack_pair_20.first,*(undefined4 *)(param_2 + 0x74));
+  stack_pair_20.second = stack_pair_20.second - *(float *)(param_2 + 0xa4);
+  stack_pair_20.first = stack_pair_20.first - *(float *)(param_2 + 0xa0);
+  if ((param_1 < (double)SQRT(stack_pair_20.first * stack_pair_20.first + stack_pair_20.second * stack_pair_20.second)) ||
      (uVar1 = 1, *(float *)(param_2 + 0xd0) <= *(float *)(param_2 + 0xbc))) {
     uVar1 = 0;
   }

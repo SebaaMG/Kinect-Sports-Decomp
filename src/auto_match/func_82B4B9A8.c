@@ -41,7 +41,7 @@ ulonglong fn_82B4B9A8(int param_1,uint *param_2)
   ulonglong uVar3;
   uint *puVar4;
   undefined1 auStack_20 [8];
-  undefined1 auStack_18 [24];
+  undefined1 auStack_18 [8];
   
   uVar1 = param_2[1];
   uVar2 = uVar1 & 3;

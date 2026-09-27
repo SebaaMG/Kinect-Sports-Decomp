@@ -29,7 +29,7 @@ typedef struct { U64 lo, hi; } V16;
 extern int fn_82644568();
 extern int fn_82646E80();
 extern int fn_82646F48();
-extern int fn_8314270C();
+extern int KeLockL2();
 extern unsigned int iStack_6c;
 extern unsigned int uStack_4c;
 extern unsigned int uStack_50;
@@ -54,8 +54,8 @@ void fn_8264DE30(int param_1,int param_2,ulonglong param_3)
   ulonglong uVar11;
   uint *puVar12;
   longlong lVar13;
-  uint uStack_70;
-  int iStack_6c;
+  struct { uint first; int second; } stack_pair_70;
+
   int aiStack_60 [3];
   undefined4 uStack_54;
   undefined4 uStack_50;
@@ -68,7 +68,7 @@ void fn_8264DE30(int param_1,int param_2,ulonglong param_3)
   }
   uVar6 = (param_3 & 1) << 1 | 1;
   uVar11 = 0x7f100000;
-  fn_8314270C(0,0x7f100000,lVar10,uVar6,uVar6);
+  KeLockL2(0,0x7f100000,lVar10,uVar6,uVar6);
   do {
     dataCacheBlockClearToZero(uVar11);
     dataCacheBlockClearToZero(uVar11 + 0x80);
@@ -121,9 +121,9 @@ void fn_8264DE30(int param_1,int param_2,ulonglong param_3)
     lVar13 = lVar13 + -1;
   } while (lVar13 != 0);
   uVar7 = *(uint *)(param_1 + 0x2ec8);
-  iStack_6c = ((uVar7 >> 0x14) + 0x200 & 0x1000) + (uVar7 & 0x1fffffff);
-  uStack_70 = (int)((int)puVar8 - uVar7) >> 2 & 0xffffffU | 0x81000000;
-  fn_82644568(param_1,&uStack_70,1);
+  stack_pair_70.second = ((uVar7 >> 0x14) + 0x200 & 0x1000) + (uVar7 & 0x1fffffff);
+  stack_pair_70.first = (int)((int)puVar8 - uVar7) >> 2 & 0xffffffU | 0x81000000;
+  fn_82644568(param_1,&stack_pair_70.first,1);
   uVar7 = 0;
   puVar12 = (uint *)(param_1 + 0x2c48);
   do {

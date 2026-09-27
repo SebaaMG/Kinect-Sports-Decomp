@@ -46,7 +46,7 @@ void fn_82896AD8(int param_1)
   uint uVar5;
   undefined4 uStack_50;
   int iStack_4c;
-  undefined1 auStack_48 [72];
+  undefined1 auStack_48 [8];
   
   iStack_4c = **(int **)(param_1 + 0x98);
   if ((int *)iStack_4c != *(int **)(param_1 + 0x98)) {

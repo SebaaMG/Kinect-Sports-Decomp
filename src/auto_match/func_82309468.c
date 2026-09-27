@@ -49,7 +49,7 @@ void fn_82309468(undefined8 param_1,int param_2)
   char cVar7;
   undefined8 uVar8;
   int iVar9;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [32];
   
   iVar9 = *(int *)(param_2 + 0x10);
   iVar4 = *(int *)(iVar9 + 0x9a0);

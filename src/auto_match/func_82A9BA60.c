@@ -54,7 +54,7 @@ void fn_82A9BA60(int param_1,int *param_2,uint *param_3)
   uint *puVar8;
   double dVar9;
   uint *puStack00000024;
-  undefined1 auStack_b0 [176];
+  undefined1 auStack_b0 [80];
   
   if ((param_3[1] != 0) || (*(int *)(param_1 + 0x7c) != 0)) {
     puStack00000024 = param_3;

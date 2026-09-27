@@ -26,7 +26,7 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_82230110();
-extern int fn_82F63EC8();
+extern int atexit();
 extern unsigned int lbl_832117E0;
 
 
@@ -36,7 +36,7 @@ undefined8 fn_8286AE10(void)
   if ((lbl_832117E0 & 1) == 0) {
     lbl_832117E0 = lbl_832117E0 | 1;
     fn_82230110(0xffffffff832117c4,0xffffffff820212b8);
-    fn_82F63EC8(0xffffffff83140120);
+    atexit(0xffffffff83140120);
   }
   return 0xffffffff832117c4;
 }

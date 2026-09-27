@@ -42,7 +42,7 @@ longlong fn_827D6880(int param_1)
   undefined4 *puVar5;
   longlong lVar6;
   int iVar7;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [16];
   
   iVar7 = param_1 + 0x88;
   lVar6 = 0;

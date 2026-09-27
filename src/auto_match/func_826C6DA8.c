@@ -35,25 +35,25 @@ void fn_826C6DA8(int param_1,undefined8 param_2,ulonglong param_3,ulonglong para
 {
   int iVar1;
   uint uVar2;
-  int iStack_40;
-  uint uStack_3c;
+  struct { int first; uint second; } stack_pair_40;
+
   
   if (param_1 != 0) {
     *(int *)(param_1 + 4) = *(int *)(param_1 + 4) + 1;
   }
   if ((param_3 & 0xffffffff) <= (param_4 & 0xffffffff)) {
     do {
-      (**(code **)(**(int **)(param_1 + 0x9c) + 0x2c))(&iStack_40,*(int **)(param_1 + 0x9c),param_3)
+      (**(code **)(**(int **)(param_1 + 0x9c) + 0x2c))(&stack_pair_40.first,*(int **)(param_1 + 0x9c),param_3)
       ;
       uVar2 = 0;
-      if (uStack_3c != 0) {
+      if (stack_pair_40.second != 0) {
         iVar1 = 0;
         do {
-          (**(code **)(**(int **)(iVar1 + iStack_40) + 0x18))
-                    (*(int **)(iVar1 + iStack_40),param_2,param_3);
+          (**(code **)(**(int **)(iVar1 + stack_pair_40.first) + 0x18))
+                    (*(int **)(iVar1 + stack_pair_40.first),param_2,param_3);
           uVar2 = uVar2 + 1;
           iVar1 = iVar1 + 4;
-        } while (uVar2 < uStack_3c);
+        } while (uVar2 < stack_pair_40.second);
       }
       param_3 = param_3 + 1;
     } while ((param_3 & 0xffffffff) <= (param_4 & 0xffffffff));

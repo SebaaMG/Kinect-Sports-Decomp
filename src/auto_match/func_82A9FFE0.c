@@ -37,7 +37,7 @@ void fn_82A9FFE0(undefined8 param_1,int *param_2)
   ulonglong uVar2;
   int iVar3;
   int iVar4;
-  undefined1 auStack_60 [96];
+  undefined1 auStack_60 [48];
   
   if (((param_2 != (int *)0x0) && (iVar1 = (**(code **)(*param_2 + 0xc))(param_2), iVar1 != 0)) &&
      (uVar2 = (ulonglong)*(uint *)(iVar1 + 0xc), uVar2 != 0)) {

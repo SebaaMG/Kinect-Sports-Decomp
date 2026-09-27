@@ -34,15 +34,15 @@ undefined8 fn_827558F0(undefined8 param_1,int param_2,uint param_3,uint param_4,
 
 {
   ulonglong uVar1;
-  int aiStack_40 [16];
+  int aiStack_40;
   
   fn_8268B330();
-  aiStack_40[0] = (*(uint *)(param_2 + 0xc) & 0xfffffffc) + 8;
+  aiStack_40 = (*(uint *)(param_2 + 0xc) & 0xfffffffc) + 8;
   while( true ) {
     if (param_4 <= param_3) {
       return param_1;
     }
-    uVar1 = fn_826BD078(aiStack_40);
+    uVar1 = fn_826BD078(&aiStack_40);
     if (uVar1 == 0) break;
     if ((uVar1 & 0xffffffff) == 10) {
       if (param_5 != '\0') {

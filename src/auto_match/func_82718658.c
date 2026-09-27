@@ -43,7 +43,7 @@ float * fn_82718658(float *param_1,int *param_2,undefined8 param_3,int param_4)
   int iVar9;
   int iVar10;
   ulonglong uVar11;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [1];
   
   fVar1 = lbl_821AAD20;
   iVar9 = param_2[0x27];

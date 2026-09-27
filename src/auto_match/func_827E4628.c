@@ -36,17 +36,17 @@ extern unsigned int uStack_20;
 void fn_827E4628(int param_1)
 
 {
-  undefined4 uStack_20;
-  undefined4 uStack_1c;
+  struct { undefined4 first; undefined4 second; } stack_pair_20;
+
   
   if (*(int *)(param_1 + 0x24) == 0) {
     fn_827D50C0(*(undefined4 *)(param_1 + 0x14));
     if (*(int *)(param_1 + 0xc) != 0) {
-      uStack_20 = 0;
-      uStack_1c = 0;
-      fn_82517978(&uStack_20,*(undefined4 *)(param_1 + 0x14),*(undefined4 *)(param_1 + 0x18),0
+      stack_pair_20.first = 0;
+      stack_pair_20.second = 0;
+      fn_82517978(&stack_pair_20.first,*(undefined4 *)(param_1 + 0x14),*(undefined4 *)(param_1 + 0x18),0
                        );
-      (**(code **)(param_1 + 0xc))(&uStack_20,*(undefined4 *)(param_1 + 0x10));
+      (**(code **)(param_1 + 0xc))(&stack_pair_20.first,*(undefined4 *)(param_1 + 0x10));
     }
     if (*(int *)(param_1 + 8) != 0) {
       fn_827D9E70();

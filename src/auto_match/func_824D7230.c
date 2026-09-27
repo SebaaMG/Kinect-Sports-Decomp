@@ -50,7 +50,7 @@ void fn_824D7230(int param_1,int *param_2,int *param_3)
   byte in_cr0;
   undefined4 uStack_30;
   int iStack_2c;
-  undefined1 auStack_28 [4];
+  undefined1 auStack_28 [1];
   int *piStack_24;
   
   if (*param_3 == 0) {

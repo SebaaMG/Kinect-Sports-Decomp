@@ -54,8 +54,8 @@ void fn_829CD0A8(int param_1,uint param_2,int param_3)
   uint *puVar8;
   char in_RESERVE;
   byte in_cr0;
-  int iStack_60;
-  uint uStack_5c;
+  struct { int first; uint second; } stack_pair_60;
+
   
   uVar3 = uRam832154c0;
   bVar1 = false;
@@ -85,10 +85,10 @@ void fn_829CD0A8(int param_1,uint param_2,int param_3)
     }
   }
   else {
-    uStack_5c = 0;
-    iStack_60 = param_1;
-    uVar6 = XamXStudioRequest(0x1004,&iStack_60);
-    uVar6 = ((uVar6 & 0xffffffff) >> 0x1f) - 1 & (ulonglong)uStack_5c;
+    stack_pair_60.second = 0;
+    stack_pair_60.first = param_1;
+    uVar6 = XamXStudioRequest(0x1004,&stack_pair_60.first);
+    uVar6 = ((uVar6 & 0xffffffff) >> 0x1f) - 1 & (ulonglong)stack_pair_60.second;
     if (lbl_8321507C != (uint *)0x0) {
       *lbl_8321507C = *lbl_8321507C & 0xfffffffb;
       bVar1 = (*lbl_8321507C & 0x20) == 0x20;

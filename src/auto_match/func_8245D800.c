@@ -30,7 +30,7 @@ extern int fn_82631830();
 extern int fn_82631BF8();
 extern int fn_8263C910();
 extern int fn_828F0DD0();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int lbl_832765A0;
 extern unsigned int lbl_832765A4;
 extern unsigned int uRam8327659c;
@@ -67,8 +67,8 @@ ulonglong fn_8245D800(void)
   longlong lVar3;
   char *pcVar4;
   int *apiStack_e30 [4];
-  undefined4 uStack_e20;
-  undefined4 uStack_e1c;
+  struct { undefined4 first; undefined4 second; } stack_pair_e20;
+
   undefined4 uStack_e18;
   undefined4 uStack_e14;
   undefined2 uStack_e10;
@@ -91,16 +91,16 @@ ulonglong fn_8245D800(void)
   char acStack_9f0 [1024];
   char acStack_5f0 [1520];
   
-  fn_82F68CC0(acStack_de0,0xffffffff821baed8,0xd6);
-  fn_82F68CC0(acStack_5f0,0xffffffff821bafb0,0x5bc);
-  fn_82F68CC0(acStack_9f0,0xffffffff821bb570,0x3f6);
-  fn_82F68CC0(acStack_d00,0xffffffff821bb968,0x304);
-  uStack_e20 = 0;
-  uStack_e1c = 0xffffffff;
+  memcpy(acStack_de0,0xffffffff821baed8,0xd6);
+  memcpy(acStack_5f0,0xffffffff821bafb0,0x5bc);
+  memcpy(acStack_9f0,0xffffffff821bb570,0x3f6);
+  memcpy(acStack_d00,0xffffffff821bb968,0x304);
+  stack_pair_e20.first = 0;
+  stack_pair_e20.second = 0xffffffff;
   uStack_e18 = 0;
   uStack_e14 = 0;
-  uRam832765b4 = fn_8263C910(0x140,0x1e0,0x18280186,0,&uStack_e20);
-  uStack_e20 = 0xff0000;
+  uRam832765b4 = fn_8263C910(0x140,0x1e0,0x18280186,0,&stack_pair_e20.first);
+  stack_pair_e20.first = 0xff0000;
   uVar2 = (ushort)uStack_e18;
   uStack_e0c = 0x1a23a6;
   uStack_e00 = 0x1a23a6;

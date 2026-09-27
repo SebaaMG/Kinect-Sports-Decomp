@@ -65,7 +65,7 @@ void fn_82745760(int param_1)
   undefined4 *puStack_68;
   undefined4 *puStack_64;
   int aiStack_60 [4];
-  undefined1 auStack_50 [16];
+  undefined1 auStack_50 [1];
   undefined1 auStack_40 [16];
   undefined1 auStack_30 [16];
   undefined1 auStack_20 [8];

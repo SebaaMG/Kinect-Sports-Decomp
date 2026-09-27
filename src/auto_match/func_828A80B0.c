@@ -37,7 +37,7 @@ void fn_828A80B0(undefined4 *param_1,int param_2)
 {
   ulonglong uVar1;
   undefined8 uVar2;
-  undefined4 auStack_30 [12];
+  undefined4 auStack_30;
   
   RtlEnterCriticalSection(param_1 + 3);
   if (*(int *)*param_1 == param_2) {
@@ -51,8 +51,8 @@ void fn_828A80B0(undefined4 *param_1,int param_2)
       }
       fn_828E38D8(param_1,uVar2);
     }
-    auStack_30[0] = *(undefined4 *)**(undefined4 **)*param_1;
-    fn_828A7138(param_1,1,auStack_30,0);
+    auStack_30 = *(undefined4 *)**(undefined4 **)*param_1;
+    fn_828A7138(param_1,1,&auStack_30,0);
   }
   RtlLeaveCriticalSection(param_1 + 3);
   return;

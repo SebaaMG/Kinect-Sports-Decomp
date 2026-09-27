@@ -53,10 +53,10 @@ void fn_828B4F98(int param_1)
   uint uVar12;
   int *piVar13;
   int iVar14;
-  undefined4 uStack_80;
-  undefined4 uStack_7c;
+  struct { undefined4 first; undefined4 second; } stack_pair_80;
+
   uint uStack_78;
-  undefined1 auStack_70 [112];
+  undefined1 auStack_70 [32];
   
   if ((*(char *)(param_1 + 0x38) != '\0') && (*(int *)(param_1 + 0x18) != 0)) {
     piVar13 = *(int **)(param_1 + 8);
@@ -93,13 +93,13 @@ void fn_828B4F98(int param_1)
           if (cVar10 == '\0') break;
         }
       }
-      uStack_80 = 0;
-      uStack_7c = 0;
+      stack_pair_80.first = 0;
+      stack_pair_80.second = 0;
       if ((piVar13 != (int *)0x0) && ((undefined4 *)*piVar13 != (undefined4 *)0x0)) {
-        uStack_80 = *(undefined4 *)*piVar13;
+        stack_pair_80.first = *(undefined4 *)*piVar13;
       }
       uStack_78 = uVar1;
-      puVar9 = (undefined4 *)fn_828B4C28(auStack_70,param_1 + 8,&uStack_80);
+      puVar9 = (undefined4 *)fn_828B4C28(auStack_70,param_1 + 8,&stack_pair_80.first);
       if ((piVar13 != (int *)*puVar9) &&
          (puVar5 = *(undefined4 **)*puVar9, puVar5 != (undefined4 *)0x0)) {
         piVar13 = (int *)*puVar5;

@@ -48,7 +48,7 @@ void fn_82893C48(undefined4 *param_1)
   undefined8 uVar3;
   int iVar4;
   char cVar5;
-  int aiStack_30 [12];
+  int aiStack_30;
   
   *param_1 = &lbl_82023898;
   uVar3 = fn_828CB310();
@@ -62,16 +62,16 @@ void fn_82893C48(undefined4 *param_1)
     cVar5 = *(char *)(iVar4 + 0x26);
   }
   if ((cVar5 != '\0') && (*(char *)((int)param_1 + 0x5e) != '\0')) {
-    aiStack_30[0] = **(int **)(param_1[4] + 0x230);
-    if ((int *)aiStack_30[0] != *(int **)(param_1[4] + 0x230)) {
+    aiStack_30 = **(int **)(param_1[4] + 0x230);
+    if ((int *)aiStack_30 != *(int **)(param_1[4] + 0x230)) {
       do {
-        uVar1 = *(undefined4 *)(aiStack_30[0] + 0x10);
+        uVar1 = *(undefined4 *)(aiStack_30 + 0x10);
         iVar4 = fn_82A4AAA8(uVar1);
         if (iVar4 == 1) {
           fn_8288EE68(param_1,uVar1);
         }
-        fn_82381BC0(aiStack_30);
-      } while (aiStack_30[0] != *(int *)(param_1[4] + 0x230));
+        fn_82381BC0(&aiStack_30);
+      } while (aiStack_30 != *(int *)(param_1[4] + 0x230));
     }
   }
   *(undefined1 *)((int)param_1 + 0x5d) = 0;

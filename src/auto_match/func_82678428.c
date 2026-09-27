@@ -42,26 +42,26 @@ void fn_82678428(int param_1)
   ulonglong *puVar1;
   undefined4 uVar2;
   undefined4 uVar3;
-  undefined4 uStack_30;
-  undefined4 uStack_2c;
+  struct { undefined4 first; undefined4 second; } stack_pair_30;
+
   undefined4 uStack_28;
   undefined4 uStack_24;
   undefined4 uStack_20;
   undefined4 uStack_1c;
   
-  uStack_30 = *(undefined4 *)(param_1 + 0x104);
-  uStack_2c = *(undefined4 *)(param_1 + 0x108);
+  stack_pair_30.first = *(undefined4 *)(param_1 + 0x104);
+  stack_pair_30.second = *(undefined4 *)(param_1 + 0x108);
   uStack_28 = *(undefined4 *)(param_1 + 0x10c);
   uStack_24 = *(undefined4 *)(param_1 + 0x110);
   uStack_20 = *(undefined4 *)(param_1 + 0x114);
   uStack_1c = *(undefined4 *)(param_1 + 0x118);
-  fn_8268CEC0(&uStack_30);
+  fn_8268CEC0(&stack_pair_30.first);
   uVar3 = lbl_821AAD20;
   uVar2 = lbl_82002AE0;
   puVar1 = *(ulonglong **)(param_1 + 0xd8);
-  *(undefined4 *)(puVar1 + 0xf0) = uStack_30;
+  *(undefined4 *)(puVar1 + 0xf0) = stack_pair_30.first;
   *(undefined4 *)(puVar1 + 0xf1) = uVar3;
-  *(undefined4 *)((int)puVar1 + 0x784) = uStack_2c;
+  *(undefined4 *)((int)puVar1 + 0x784) = stack_pair_30.second;
   *(undefined4 *)((int)puVar1 + 0x78c) = uStack_28;
   *puVar1 = *puVar1 | 0x8000000000000000;
   puVar1 = *(ulonglong **)(param_1 + 0xd8);

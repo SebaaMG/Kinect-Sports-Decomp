@@ -37,14 +37,14 @@ void fn_8251FD50(undefined4 *param_1,int *param_2)
 
 {
   undefined4 *puVar1;
-  undefined4 uStack_20;
-  undefined4 uStack_1c;
+  struct { undefined4 first; undefined4 second; } stack_pair_20;
+
   
   if (param_2[4] != 0) {
-    uStack_20 = 0;
-    uStack_1c = 0;
-    fn_82517978(&uStack_20,*param_1,param_1[1],0);
-    (*(code *)param_2[4])(&uStack_20,param_2[5]);
+    stack_pair_20.first = 0;
+    stack_pair_20.second = 0;
+    fn_82517978(&stack_pair_20.first,*param_1,param_1[1],0);
+    (*(code *)param_2[4])(&stack_pair_20.first,param_2[5]);
   }
   puVar1 = (undefined4 *)*param_2;
   if (puVar1 != (undefined4 *)0x0) {

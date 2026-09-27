@@ -39,7 +39,7 @@ uint fn_82358DB8(int param_1,undefined4 *param_2,undefined4 *param_3)
   int *piVar6;
   int *piVar7;
   uint uVar8;
-  int aiStack_64 [25];
+  int aiStack_64 [3];
   
   uVar8 = 0;
   piVar7 = *(int **)(param_1 + 0x20);

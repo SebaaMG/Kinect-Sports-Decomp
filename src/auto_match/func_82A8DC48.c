@@ -38,7 +38,7 @@ void fn_82A8DC48(undefined8 param_1,int param_2,undefined8 param_3,longlong para
 {
   undefined1 auStack_40 [4];
   undefined1 auStack_3c [4];
-  undefined1 auStack_38 [56];
+  undefined1 auStack_38 [8];
   
   fn_82A8C620(param_3,param_4,*(undefined4 *)(param_2 + 0x28),auStack_40);
   param_4 = param_4 + (ulonglong)*(uint *)(param_2 + 0x28);

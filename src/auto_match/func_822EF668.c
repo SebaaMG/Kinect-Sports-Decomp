@@ -41,7 +41,7 @@ undefined8 fn_822EF668(int *param_1,char param_2)
   int iVar3;
   undefined4 *puVar4;
   uint uVar5;
-  int aiStack_30 [12];
+  int aiStack_30;
   
   iVar2 = *(int *)(*param_1 + 4) + (int)param_1;
   if (*(int *)(iVar2 + 0xc) == 0) {
@@ -50,9 +50,9 @@ undefined8 fn_822EF668(int *param_1,char param_2)
     }
     if ((param_2 == '\0') && ((*(uint *)((int)param_1 + *(int *)(*param_1 + 4) + 0x14) & 1) != 0)) {
       iVar2 = **(int **)((int)param_1 + *(int *)(*param_1 + 4) + 0x30);
-      aiStack_30[0] = iVar2;
+      aiStack_30 = iVar2;
       fn_8223F508(iVar2);
-      iVar3 = fn_8223CBE8(aiStack_30);
+      iVar3 = fn_8223CBE8(&aiStack_30);
       if ((iVar2 != 0) &&
          (puVar4 = (undefined4 *)fn_8223F5A0(iVar2), puVar4 != (undefined4 *)0x0)) {
         (**(code **)*puVar4)(puVar4,1);

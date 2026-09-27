@@ -34,7 +34,7 @@ void fn_825114C8(int param_1,uint param_2)
   undefined4 *puVar1;
   undefined4 **ppuVar2;
   undefined4 *puStack_10;
-  undefined4 *apuStack_c [3];
+  undefined4 *apuStack_c [1];
   
   puStack_10 = *(undefined4 **)(param_1 + 4);
   puVar1 = (undefined4 *)(*(undefined4 **)(param_1 + 4))[1];

@@ -42,7 +42,7 @@ extern unsigned int uStack_24;
 void fn_82701CA0(undefined8 param_1)
 
 {
-  undefined1 auStack_40 [16];
+  undefined1 auStack_40;
   int aiStack_30 [3];
   undefined4 uStack_24;
   undefined4 uStack_20;
@@ -62,8 +62,8 @@ void fn_82701CA0(undefined8 param_1)
   uStack_20 = lbl_821AAD20;
   uStack_14 = 0;
   uStack_1c = lbl_821AAD20;
-  auStack_40[0] = 0x80;
-  fn_82701088(param_1,9,5,auStack_40,aiStack_30);
+  auStack_40 = 0x80;
+  fn_82701088(param_1,9,5,&auStack_40,aiStack_30);
   fn_826FE548(param_1,aiStack_30);
   if (aiStack_30[0] != 0) {
     fn_8267C498();

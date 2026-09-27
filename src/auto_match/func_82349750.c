@@ -47,7 +47,7 @@ void fn_82349750(double param_1,int param_2)
   undefined4 uVar9;
   undefined4 uVar10;
   undefined4 uVar11;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [1];
   
   iVar5 = **(int **)(param_2 + 0xc);
   iVar6 = *(int *)(*(int *)(iVar5 + 0x1a0) + 0x180);

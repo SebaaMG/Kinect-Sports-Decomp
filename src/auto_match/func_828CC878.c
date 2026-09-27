@@ -70,7 +70,7 @@ undefined8 fn_828CC878(undefined8 param_1,int param_2,undefined8 param_3)
   uint uStack_fc;
   undefined *puStack_f0;
   undefined1 auStack_ec [76];
-  undefined **appuStack_a0 [40];
+  undefined **appuStack_a0 [24];
   
   puStack_f0 = &lbl_821AA8E0;
   appuStack_a0[0] = &lbl_82020F40;

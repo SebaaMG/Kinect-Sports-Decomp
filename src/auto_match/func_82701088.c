@@ -107,8 +107,8 @@ void fn_82701088(undefined8 param_1,short param_2,int param_3,byte *param_4,unde
   float fStack_188;
   float fStack_184;
   longlong alStack_180 [2];
-  float fStack_170;
-  float fStack_16c;
+  struct { float first; float second; } stack_pair_170;
+
   float fStack_168;
   float fStack_164;
   float fStack_160;
@@ -118,7 +118,7 @@ void fn_82701088(undefined8 param_1,short param_2,int param_3,byte *param_4,unde
   undefined1 auStack_150 [32];
   undefined1 auStack_130 [32];
   undefined1 auStack_110 [16];
-  undefined1 auStack_100 [256];
+  undefined1 auStack_100 [1];
   
   iVar10 = fn_82F6A510();
   if ((param_3 == 5) &&
@@ -235,11 +235,11 @@ void fn_82701088(undefined8 param_1,short param_2,int param_3,byte *param_4,unde
             fn_8268CC00(auStack_100);
             fn_8269A2C8(piVar2,auStack_100);
             uVar9 = (**(code **)(*piVar2 + 0xd4))(auStack_110,piVar2);
-            fStack_170 = (float)dVar29;
-            fStack_16c = (float)dVar29;
+            stack_pair_170.first = (float)dVar29;
+            stack_pair_170.second = (float)dVar29;
             fStack_168 = (float)dVar29;
             fStack_164 = (float)dVar29;
-            fn_8268D280(auStack_100,&fStack_170,uVar9);
+            fn_8268D280(auStack_100,&stack_pair_170.first,uVar9);
             dVar21 = (double)fStack_190;
             bVar12 = false;
             dVar36 = (double)fStack_188;
@@ -255,8 +255,8 @@ void fn_82701088(undefined8 param_1,short param_2,int param_3,byte *param_4,unde
             dVar18 = (double)fStack_18c;
             dVar38 = (double)fStack_168;
             dVar22 = (double)fStack_184;
-            dVar23 = (double)fStack_16c;
-            dVar37 = (double)fStack_170;
+            dVar23 = (double)stack_pair_170.second;
+            dVar37 = (double)stack_pair_170.first;
             if ((((dVar20 < dVar18) || (dVar22 < dVar23)) || (dVar19 < dVar37)) ||
                (bVar7 = true, dVar38 < dVar35)) {
               bVar7 = false;
@@ -354,8 +354,8 @@ LAB_82701bec:
                           goto LAB_82701c18;
                         }
 LAB_82701c04:
-                        dVar31 = (double)fStack_170;
-                        dVar32 = (double)fStack_16c;
+                        dVar31 = (double)stack_pair_170.first;
+                        dVar32 = (double)stack_pair_170.second;
                         dVar30 = (double)fStack_168;
                         dVar17 = (double)fStack_164;
                         goto LAB_82701c14;

@@ -59,7 +59,7 @@ void fn_8243A6D0(int param_1,undefined8 param_2,int param_3)
   longlong lVar13;
   int *piVar14;
   undefined1 auStack_280 [64];
-  undefined1 auStack_240 [576];
+  undefined1 auStack_240 [512];
   
   if (param_3 == 4) {
     iVar6 = *(int *)(*(int *)(param_1 + 0x40) + 0x1d8);

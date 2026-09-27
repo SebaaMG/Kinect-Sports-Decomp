@@ -54,7 +54,7 @@ void fn_828A5328(void)
   ulonglong uVar2;
   double dVar3;
   double dVar4;
-  int *apiStack_30 [6];
+  int * apiStack_30;
   
   piVar1 = (int *)fn_825089A0();
   dVar4 = (double)(**(code **)(*piVar1 + 8))();
@@ -73,12 +73,12 @@ void fn_828A5328(void)
     fn_828B2BF8();
     fn_828B2C98();
     fn_8288A350(lbl_83213EFC);
-    apiStack_30[0] = (int *)*lbl_83213F04;
-    if (apiStack_30[0] != lbl_83213F04) {
+    apiStack_30 = (int *)*lbl_83213F04;
+    if (apiStack_30 != lbl_83213F04) {
       do {
-        fn_828A4660(dVar4,apiStack_30[0][4]);
-        fn_828EA790(apiStack_30);
-      } while (apiStack_30[0] != lbl_83213F04);
+        fn_828A4660(dVar4,apiStack_30[4]);
+        fn_828EA790(&apiStack_30);
+      } while (apiStack_30 != lbl_83213F04);
     }
     if (lbl_83213F8C == 0) {
       fn_828A1660();

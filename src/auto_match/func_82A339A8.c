@@ -28,7 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 extern unsigned int __imp__ExLoadedCommandLine;
 
 
-undefined4 fn_82A339A8(void)
+undefined4 GetCommandLineA(void)
 
 {
   return __imp__ExLoadedCommandLine;

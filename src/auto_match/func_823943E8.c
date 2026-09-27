@@ -34,7 +34,7 @@ void fn_823943E8(int *param_1,undefined8 param_2,undefined8 param_3)
 
 {
   longlong lVar1;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
   
   lVar1 = fn_82394228(param_3);
   if (lVar1 == 0) {

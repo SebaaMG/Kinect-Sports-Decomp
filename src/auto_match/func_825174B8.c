@@ -37,19 +37,19 @@ extern unsigned int uStack_30;
 undefined8 fn_825174B8(undefined8 param_1,undefined4 *param_2,undefined4 *param_3)
 
 {
-  undefined4 uStack_30;
-  int iStack_2c;
+  struct { undefined4 first; int second; } stack_pair_30;
+
   undefined4 uStack_28;
   int iStack_24;
   
   uStack_28 = 0;
   iStack_24 = 0;
   fn_82517978(&uStack_28,*param_3,param_3[1],0);
-  uStack_30 = 0;
-  iStack_2c = 0;
-  fn_82517978(&uStack_30,*param_2,param_2[1],0);
-  fn_82517608(param_1,&uStack_30,&uStack_28);
-  if (iStack_2c != 0) {
+  stack_pair_30.first = 0;
+  stack_pair_30.second = 0;
+  fn_82517978(&stack_pair_30.first,*param_2,param_2[1],0);
+  fn_82517608(param_1,&stack_pair_30.first,&uStack_28);
+  if (stack_pair_30.second != 0) {
     fn_822315A0();
   }
   if (iStack_24 != 0) {

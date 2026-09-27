@@ -52,7 +52,7 @@ longlong fn_82796838(int *param_1,char *param_2,char *param_3,int param_4,int pa
   int iVar11;
   undefined2 *puVar12;
   ulonglong uVar13;
-  char *apcStack_90 [36];
+  char * apcStack_90;
   
   pcVar8 = param_2;
   if (param_3 == (char *)0xffffffff) {
@@ -98,13 +98,13 @@ longlong fn_82796838(int *param_1,char *param_2,char *param_3,int param_4,int pa
     }
     uVar13 = 0;
     iVar11 = -1;
-    apcStack_90[0] = param_2;
+    apcStack_90 = param_2;
     iVar2 = iVar11;
     if (pcVar8 <= param_2) break;
     do {
       iVar2 = iVar11;
       if (iVar11 == 0) break;
-      iVar2 = fn_826BD078(apcStack_90);
+      iVar2 = fn_826BD078(&apcStack_90);
       if (((param_4 == 0) && (iVar3 == 0xd)) && ((uVar13 & 0xffffffff) == 0)) {
         iVar3 = -1;
         if (iVar2 != 10) goto LAB_827969a8;
@@ -118,7 +118,7 @@ LAB_827969a8:
         iVar11 = iVar2;
       }
       iVar2 = iVar11;
-    } while (apcStack_90[0] < pcVar8);
+    } while (apcStack_90 < pcVar8);
     if ((iVar2 == 10) || (iVar2 == 0xd)) {
 LAB_827969dc:
       uVar13 = uVar13 + 1;
@@ -126,24 +126,24 @@ LAB_827969dc:
     if ((uVar13 & 0xffffffff) != 0) {
       iVar3 = fn_82792F70(iVar4,param_1[2],uVar6,uVar13);
       iVar2 = -1;
-      apcStack_90[0] = param_2;
+      apcStack_90 = param_2;
       if (param_2 < pcVar8) {
         puVar12 = (undefined2 *)(iVar3 + -2);
         while (bVar1 = iVar2 != 0, iVar2 = 0, bVar1) {
-          iVar2 = fn_826BD078(apcStack_90);
+          iVar2 = fn_826BD078(&apcStack_90);
           if ((iVar2 == 0xd) || (iVar2 == 10)) {
             iVar2 = (-(uint)((*(byte *)(param_1 + 8) & 2) != 0) & 3) + 10;
           }
           puVar12 = puVar12 + 1;
           *puVar12 = (short)iVar2;
           if ((iVar2 == (-(uint)((*(byte *)(param_1 + 8) & 2) != 0) & 3) + 10) ||
-             (pcVar8 <= apcStack_90[0])) break;
+             (pcVar8 <= apcStack_90)) break;
         }
       }
       fn_82795C78(iVar4,param_1[2],param_5,uVar6,0xffffffffffffffff);
       lVar9 = uVar13 + lVar9;
       uVar7 = uVar13 + uVar6 + uVar7;
-      param_2 = apcStack_90[0];
+      param_2 = apcStack_90;
     }
     if ((pcVar8 <= param_2) || (iVar3 = iVar2, iVar2 == 0)) break;
   }

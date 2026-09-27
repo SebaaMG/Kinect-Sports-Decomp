@@ -55,7 +55,7 @@ undefined4 * fn_82749BC0(undefined4 *param_1,int param_2)
   uint auStack_5c [3];
   int iStack_50;
   undefined1 uStack_4c;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [16];
   
   uStack_4c = 8;
   iStack_50 = param_2;

@@ -30,7 +30,7 @@ extern int fn_82696330();
 extern int fn_826A1A28();
 extern int fn_826A1F38();
 extern int fn_826C0BA8();
-extern int fn_82F66A80();
+extern int isdigit();
 
 
 undefined8 fn_826A22E0(longlong param_1,undefined8 param_2,undefined4 *param_3)
@@ -39,15 +39,15 @@ undefined8 fn_826A22E0(longlong param_1,undefined8 param_2,undefined4 *param_3)
   int iVar3;
   longlong lVar1;
   undefined8 uVar2;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30;
   
   if ((((undefined4 *)*param_3)[4] != 0) &&
-     (iVar3 = fn_82F66A80(**(undefined1 **)*param_3), iVar3 != 0)) {
+     (iVar3 = isdigit(**(undefined1 **)*param_3), iVar3 != 0)) {
     lVar1 = fn_826A1A28(param_3);
     if (-1 < lVar1) {
-      auStack_30[0] = 0;
-      fn_826A1F38(param_1 + -0x10,lVar1,auStack_30);
-      fn_82696330(auStack_30);
+      auStack_30 = 0;
+      fn_826A1F38(param_1 + -0x10,lVar1,&auStack_30);
+      fn_82696330(&auStack_30);
       return 1;
     }
     return 0;

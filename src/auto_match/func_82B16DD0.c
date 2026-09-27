@@ -41,22 +41,22 @@ fn_82B16DD0(undefined8 param_1,int param_2,ulonglong param_3,uint *param_4,uint 
   undefined8 uVar3;
   uint uStack00000024;
   int iStack_30;
-  int aiStack_2c [11];
+  int aiStack_2c;
   
   uStack00000024 = (uint)param_3;
   if ((*(uint *)(param_2 + 8) & 0x3f80) == 0x80) {
     while( true ) {
       puVar1 = *(uint **)(param_2 + 0x30);
       if ((*(uint *)(puVar1[3] + 8) & 0x3f80) == 16000) break;
-      fn_82B82D28(*(undefined4 *)(param_2 + 0x2c),param_3,aiStack_2c,&stack0x00000024,
+      fn_82B82D28(*(undefined4 *)(param_2 + 0x2c),param_3,&aiStack_2c,&stack0x00000024,
                         &iStack_30,0,param_2,0);
       if (iStack_30 != 0) goto LAB_82b16e04;
-      for (iVar2 = *(int *)(aiStack_2c[0] + 4); iVar2 != 0; iVar2 = *(int *)(iVar2 + 8)) {
+      for (iVar2 = *(int *)(aiStack_2c + 4); iVar2 != 0; iVar2 = *(int *)(iVar2 + 8)) {
         if ((*(int *)(iVar2 + 0x10) != 0) && (*(int *)(iVar2 + 0x10) != param_2)) goto LAB_82b16e04;
       }
-      if ((*(uint *)(aiStack_2c[0] + 8) & 0x3f80) != 0x80) goto LAB_82b16e04;
+      if ((*(uint *)(aiStack_2c + 8) & 0x3f80) != 0x80) goto LAB_82b16e04;
       param_3 = (ulonglong)uStack00000024;
-      param_2 = aiStack_2c[0];
+      param_2 = aiStack_2c;
     }
     *param_4 = puVar1[3];
     uVar3 = 1;

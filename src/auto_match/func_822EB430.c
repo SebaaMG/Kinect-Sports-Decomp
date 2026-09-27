@@ -41,7 +41,7 @@ fn_822EB430(undefined4 *param_1,undefined4 param_2,undefined4 param_3,undefined4
 {
   undefined4 uVar1;
   int iVar2;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [16];
   
   iVar2 = fn_82365BD8(auStack_50,param_6);
   param_1[2] = param_2;

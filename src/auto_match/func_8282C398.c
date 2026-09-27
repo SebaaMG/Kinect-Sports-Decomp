@@ -45,7 +45,7 @@ undefined8 fn_8282C398(int param_1,byte *param_2,undefined4 *param_3)
   ulonglong uVar11;
   uint *puVar12;
   ulonglong uVar13;
-  uint auStack_60 [24];
+  uint auStack_60;
   
   if ((*(char *)(param_1 + 0x52) == '\0') ||
      (bVar3 = true, *(uint *)(param_1 + 0x58) <= *(uint *)(param_1 + 0x68))) {
@@ -127,8 +127,8 @@ LAB_8282c558:
         if ((iVar6 != 0) || (iVar6 = (*(code *)param_3[2])(*param_3,uVar9,uVar13), iVar6 != 0))
         goto LAB_8282c43c;
         if (((bVar3) || (bVar4)) && ((uVar9 & 0xffffffff) != 0)) {
-          auStack_60[0] = puVar12[uVar10 * 5];
-          fn_8282F2A0(uVar13,(puVar12 + uVar10 * 5)[4],uVar11,auStack_60);
+          auStack_60 = puVar12[uVar10 * 5];
+          fn_8282F2A0(uVar13,(puVar12 + uVar10 * 5)[4],uVar11,&auStack_60);
         }
       }
       uVar10 = uVar10 + 1;

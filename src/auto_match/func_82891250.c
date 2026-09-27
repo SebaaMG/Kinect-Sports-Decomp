@@ -46,19 +46,19 @@ void fn_82891250(undefined4 *param_1,undefined8 param_2,longlong param_3,undefin
   undefined1 uStack0000002f;
   undefined4 uStack_30;
   undefined4 uStack_2c;
-  undefined4 uStack_28;
-  undefined4 uStack_24;
+  struct { undefined4 first; undefined4 second; } stack_pair_28;
+
   undefined1 auStack_20 [8];
   
   uStack0000002f = param_4;
   lVar1 = fn_82890020();
   uStack_30 = *param_1;
   uStack_2c = 0;
-  uStack_24 = 0;
-  uStack_28 = uStack_30;
+  stack_pair_28.second = 0;
+  stack_pair_28.first = uStack_30;
   puVar2 = (undefined8 *)fn_8288BE40(auStack_20,&uStack_30,lVar1 + param_3);
   uVar3 = *puVar2;
-  puVar2 = (undefined8 *)fn_8288BE40(&uStack_30,&uStack_28,lVar1);
+  puVar2 = (undefined8 *)fn_8288BE40(&uStack_30,&stack_pair_28.first,lVar1);
   fn_8288C798(*puVar2,uVar3,&stack0x0000002f);
   return;
 }

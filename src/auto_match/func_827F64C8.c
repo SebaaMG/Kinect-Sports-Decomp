@@ -35,11 +35,11 @@ double fn_827F64C8(longlong param_1,undefined8 param_2)
 {
   float fVar1;
   float *pfStack_10;
-  undefined4 auStack_c [3];
+  undefined4 auStack_c;
   
-  auStack_c[0] = 0;
+  auStack_c = 0;
   pfStack_10 = (float *)0x0;
-  fn_82800648(param_1 + 0x24,3,param_2,auStack_c,&pfStack_10);
+  fn_82800648(param_1 + 0x24,3,param_2,&auStack_c,&pfStack_10);
   fVar1 = lbl_821AAD20;
   if (pfStack_10 != (float *)0x0) {
     fVar1 = *pfStack_10;

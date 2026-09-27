@@ -40,7 +40,7 @@ undefined4 * fn_82396000(undefined4 *param_1,int param_2)
   undefined8 uVar2;
   undefined8 uVar3;
   undefined4 uVar4;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [16];
   
   fn_82520158(0xffffffff821b2700,auStack_40,0);
   uVar4 = *(undefined4 *)(param_2 + 0x178);

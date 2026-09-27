@@ -39,7 +39,7 @@ ulonglong fn_822AE460(undefined4 *param_1)
   ulonglong uVar4;
   ulonglong uVar5;
   int *piVar6;
-  undefined4 *apuStack_40 [16];
+  undefined4 * apuStack_40;
   
   piVar6 = (int *)*param_1;
   uVar4 = 1;
@@ -49,16 +49,16 @@ ulonglong fn_822AE460(undefined4 *param_1)
     }
     uVar5 = 1;
     puVar1 = *(undefined4 **)(*(int *)(((int *)*piVar6)[4] * 4 + *(int *)*piVar6) + 4);
-    apuStack_40[0] = (undefined4 *)*puVar1;
-    while (apuStack_40[0] != puVar1) {
-      iVar2 = apuStack_40[0][4];
+    apuStack_40 = (undefined4 *)*puVar1;
+    while (apuStack_40 != puVar1) {
+      iVar2 = apuStack_40[4];
       if ((*(int *)(iVar2 + 0x168) == 0) ||
          ((cVar3 = fn_8288B760(), cVar3 != '\0' &&
           (cVar3 = fn_8288D868(*(undefined4 *)(iVar2 + 0x168)), cVar3 == '\0')))) {
         uVar5 = 0;
         break;
       }
-      fn_82381BC0(apuStack_40);
+      fn_82381BC0(&apuStack_40);
     }
     piVar6 = piVar6 + 1;
     uVar4 = uVar5 & uVar4;

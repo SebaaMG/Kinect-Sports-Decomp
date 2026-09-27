@@ -28,7 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_60;
 extern int fn_8239DD40();
 extern int fn_82536690();
-extern int fn_82F65390();
+extern int strncmp();
 
 
 undefined4 * fn_8255FD70(undefined4 *param_1,int *param_2,char *param_3)
@@ -42,7 +42,7 @@ undefined4 * fn_8255FD70(undefined4 *param_1,int *param_2,char *param_3)
   ulonglong uVar6;
   ulonglong uVar7;
   ulonglong uVar8;
-  uint auStack_60 [24];
+  uint auStack_60;
   
   uVar4 = (ulonglong)(uint)param_2[1];
   pcVar3 = param_3;
@@ -55,7 +55,7 @@ undefined4 * fn_8255FD70(undefined4 *param_1,int *param_2,char *param_3)
   while (0 < iVar2) {
     uVar7 = (longlong)((int)uVar8 >> 1) + (ulonglong)((int)uVar8 < 0 && (uVar8 & 1) != 0);
     lVar5 = uVar7 * 0x5c + uVar4;
-    iVar2 = fn_82F65390(lVar5,param_3,pcVar3 + (-1 - (int)param_3));
+    iVar2 = strncmp(lVar5,param_3,pcVar3 + (-1 - (int)param_3));
     if (iVar2 < 0) {
       uVar4 = lVar5 + 0x5c;
       uVar7 = (uVar8 - uVar7) - 1;
@@ -74,7 +74,7 @@ undefined4 * fn_8255FD70(undefined4 *param_1,int *param_2,char *param_3)
   while (0 < iVar2) {
     uVar6 = (longlong)((int)uVar7 >> 1) + (ulonglong)((int)uVar7 < 0 && (uVar7 & 1) != 0);
     lVar5 = uVar6 * 0x5c + uVar8;
-    iVar2 = fn_82F65390(param_3,lVar5,pcVar3 + (-1 - (int)param_3));
+    iVar2 = strncmp(param_3,lVar5,pcVar3 + (-1 - (int)param_3));
     if (-1 < iVar2) {
       uVar8 = lVar5 + 0x5c;
       uVar6 = (uVar7 - uVar6) - 1;
@@ -86,12 +86,12 @@ undefined4 * fn_8255FD70(undefined4 *param_1,int *param_2,char *param_3)
   param_1[1] = 0;
   param_1[2] = 0;
   fn_8239DD40(param_1,(int)((int)uVar8 - (uint)uVar4) / 0x5c);
-  auStack_60[0] = (uint)uVar4;
+  auStack_60 = (uint)uVar4;
   if ((uVar4 & 0xffffffff) < (uVar8 & 0xffffffff)) {
     do {
-      fn_82536690(param_1,auStack_60);
-      auStack_60[0] = auStack_60[0] + 0x5c;
-    } while ((ulonglong)auStack_60[0] < (uVar8 & 0xffffffff));
+      fn_82536690(param_1,&auStack_60);
+      auStack_60 = auStack_60 + 0x5c;
+    } while ((ulonglong)auStack_60 < (uVar8 & 0xffffffff));
   }
   return param_1;
 }

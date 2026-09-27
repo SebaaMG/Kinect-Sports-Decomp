@@ -64,7 +64,7 @@ void fn_822A91E0(undefined4 *param_1)
   ulonglong uVar9;
   int iVar10;
   undefined1 auStack_c0 [48];
-  undefined1 auStack_90 [144];
+  undefined1 auStack_90 [96];
   
   piVar6 = param_1 + 0x23;
   *param_1 = &lbl_821AC454;

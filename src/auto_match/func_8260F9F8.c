@@ -33,7 +33,7 @@ void fn_8260F9F8(void)
 
 {
   int in_r7;
-  undefined1 auStack_38 [56];
+  undefined1 auStack_38 [40];
   
   if ((in_r7 != 0) && (in_r7 != 1)) {
     return;

@@ -63,8 +63,8 @@ fn_829F5FF8(int param_1,int param_2,undefined8 param_3,undefined8 param_4,undefi
   undefined4 in_register_000103f4;
   undefined4 in_register_000103f8;
   undefined4 in_vr63;
-  int iStack_a0;
-  undefined4 uStack_9c;
+  struct { int first; undefined4 second; } stack_pair_a0;
+
   undefined4 uStack_98;
   undefined1 auStack_90 [8];
   undefined8 uStack_88;
@@ -84,8 +84,8 @@ fn_829F5FF8(int param_1,int param_2,undefined8 param_3,undefined8 param_4,undefi
   if (lbl_83218C34 != (int *)0x0) {
     (**(code **)(*lbl_83218C34 + 0x30))(lbl_83218C34,param_4);
   }
-  iStack_a0 = *(int *)(param_2 + 0xb8);
-  uStack_9c = *(undefined4 *)(param_2 + 0xbc);
+  stack_pair_a0.first = *(int *)(param_2 + 0xb8);
+  stack_pair_a0.second = *(undefined4 *)(param_2 + 0xbc);
   uStack_98 = *(undefined4 *)(param_2 + 0xc0);
   if (lbl_83218C34 != (int *)0x0) {
     (**(code **)(*lbl_83218C34 + 4))(lbl_83218C34,2);
@@ -97,7 +97,7 @@ fn_829F5FF8(int param_1,int param_2,undefined8 param_3,undefined8 param_4,undefi
   puVar3 = (undefined4 *)(param_2 + 0xc4);
   uVar1 = fn_82A0CB88(param_1 + 0xd0,param_5,param_6,param_2 + 0xb8,puVar3,param_2 + 0xd0,
                             param_7,param_3);
-  piVar2 = &iStack_a0;
+  piVar2 = &stack_pair_a0.first;
   lVar4 = 3;
   do {
     if (*piVar2 == 2) {

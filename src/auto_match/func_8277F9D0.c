@@ -54,8 +54,8 @@ void fn_8277F9D0(int param_1,int param_2,ulonglong param_3)
   ulonglong uVar9;
   uint uVar10;
   uint *puVar11;
-  undefined4 uStack_90;
-  undefined4 uStack_8c;
+  struct { undefined4 first; undefined4 second; } stack_pair_90;
+
   uint *puStack_80;
   uint uStack_7c;
   undefined4 uStack_78;
@@ -67,13 +67,13 @@ void fn_8277F9D0(int param_1,int param_2,ulonglong param_3)
   undefined1 uStack_60;
   
   iVar1 = *(int *)(param_2 + 4);
-  puStack_70 = &uStack_90;
+  puStack_70 = &stack_pair_90.first;
   puVar11 = (uint *)(param_1 + 0x144);
   iVar2 = *(int *)(iVar1 + 0x14);
   iVar3 = *(int *)(iVar1 + 0x10);
   *(undefined4 *)(iVar1 + 0x14) = 0;
-  uStack_8c = *(undefined4 *)(param_2 + 4);
-  uStack_90 = *(undefined4 *)(iVar2 + 8);
+  stack_pair_90.second = *(undefined4 *)(param_2 + 4);
+  stack_pair_90.first = *(undefined4 *)(iVar2 + 8);
   uStack_74 = *(undefined4 *)(iVar2 + 0xc);
   uStack_6c = *(uint *)(iVar2 + 8);
   iStack_64 = *(int *)(iVar2 + 4);

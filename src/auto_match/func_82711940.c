@@ -40,27 +40,27 @@ undefined8 fn_82711940(int param_1)
   char cVar2;
   int iVar1;
   undefined8 uVar3;
-  undefined4 uStack_30;
-  undefined4 uStack_2c;
+  struct { undefined4 first; undefined4 second; } stack_pair_30;
+
   double dStack_28;
   
   if (**(int **)(param_1 + 0xc) == 0) {
     uVar3 = 0;
   }
   else {
-    uStack_30 = 0;
-    uStack_2c = 0;
+    stack_pair_30.first = 0;
+    stack_pair_30.second = 0;
     cVar2 = (**(code **)(*(int *)**(undefined4 **)(param_1 + 0xc) + 0x44))
-                      ((int *)**(undefined4 **)(param_1 + 0xc),&uStack_30,0xffffffff8200ea00);
+                      ((int *)**(undefined4 **)(param_1 + 0xc),&stack_pair_30.first,0xffffffff8200ea00);
     if (cVar2 == '\0') {
-      fn_82273CD8(&uStack_30,3);
+      fn_82273CD8(&stack_pair_30.first,3);
       dStack_28 = lbl_82005710;
     }
     iVar1 = fn_826F6FA8(**(undefined4 **)(param_1 + 0xc),9999);
     if ((iVar1 == 0) || (uVar3 = 1, dStack_28 != lbl_82002C40)) {
       uVar3 = 0;
     }
-    fn_82273C88(&uStack_30);
+    fn_82273C88(&stack_pair_30.first);
   }
   return uVar3;
 }

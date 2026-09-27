@@ -37,15 +37,15 @@ undefined4 fn_8279AD50(int *param_1,undefined4 param_2,undefined4 param_3,uint *
   uint uVar1;
   int iVar2;
   int iVar3;
-  undefined4 uStack_30;
-  undefined4 uStack_2c;
+  struct { undefined4 first; undefined4 second; } stack_pair_30;
+
   
-  uStack_30 = param_2;
-  uStack_2c = param_3;
-  uVar1 = fn_8279A860(param_1,0,param_1[1],&uStack_30,0xffffffff82799ad8);
+  stack_pair_30.first = param_2;
+  stack_pair_30.second = param_3;
+  uVar1 = fn_8279A860(param_1,0,param_1[1],&stack_pair_30.first,0xffffffff82799ad8);
   if (uVar1 < (uint)param_1[1]) {
     iVar3 = uVar1 * 0x30 + *param_1;
-    iVar2 = fn_82799A18(uStack_30,uStack_2c,iVar3,*(undefined1 *)(iVar3 + 0x2c),0);
+    iVar2 = fn_82799A18(stack_pair_30.first,stack_pair_30.second,iVar3,*(undefined1 *)(iVar3 + 0x2c),0);
     if (iVar2 == 0) {
       if (param_4 != (uint *)0x0) {
         *param_4 = (uint)*(byte *)(iVar3 + 0x2c);

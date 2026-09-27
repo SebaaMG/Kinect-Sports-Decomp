@@ -33,15 +33,15 @@ int * fn_828C4410(int param_1,int *param_2,undefined8 param_3)
 {
   char cVar2;
   int iVar1;
-  char acStack_30 [48];
+  char acStack_30;
   
   cVar2 = (**(code **)(*param_2 + 8))(param_2);
   while( true ) {
     if (cVar2 != '\0') {
       return param_2;
     }
-    iVar1 = fn_8223C610(param_3,1,acStack_30,1);
-    if (acStack_30[0] == '\0') break;
+    iVar1 = fn_8223C610(param_3,1,&acStack_30,1);
+    if (acStack_30 == '\0') break;
     if (iVar1 == 0) {
       param_2 = (int *)param_2[4];
     }

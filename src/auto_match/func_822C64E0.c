@@ -35,7 +35,7 @@ void fn_822C64E0(int param_1,int param_2)
 {
   int iVar1;
   undefined8 uVar2;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
   
   iVar1 = *(int *)(param_1 + 4);
   uVar2 = fn_82365BD8(auStack_30);

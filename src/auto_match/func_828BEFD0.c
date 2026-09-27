@@ -44,7 +44,7 @@ void fn_828BEFD0(undefined8 param_1,undefined8 param_2)
   undefined8 uVar2;
   uint uVar4;
   undefined1 auStack_30 [8];
-  undefined1 auStack_28 [40];
+  undefined1 auStack_28 [8];
   
   if ((int)param_1 == 0x19) {
     fn_8288A398();

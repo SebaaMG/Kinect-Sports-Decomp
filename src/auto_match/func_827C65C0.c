@@ -28,7 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_68;
 extern int fn_827C62D8();
 extern int fn_827C64D0();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int iStack_50;
 extern unsigned int uStack_6c;
 extern unsigned int uStack_70;
@@ -44,19 +44,19 @@ undefined8 fn_827C65C0(int param_1,int param_2)
   int iVar5;
   int *piVar6;
   undefined4 *puVar7;
-  undefined4 uStack_70;
-  undefined4 uStack_6c;
+  struct { undefined4 first; undefined4 second; } stack_pair_70;
+
   undefined1 auStack_68 [8];
   int aiStack_60 [4];
   int iStack_50;
   
   iVar1 = *(int *)(param_1 + 0x15c);
-  uStack_70 = **(undefined4 **)(param_1 + 0x18);
-  uStack_6c = (*(undefined4 **)(param_1 + 0x18))[1];
-  fn_82F68CC0(auStack_68,iVar1 + 0xc,0x18);
+  stack_pair_70.first = **(undefined4 **)(param_1 + 0x18);
+  stack_pair_70.second = (*(undefined4 **)(param_1 + 0x18))[1];
+  memcpy(auStack_68,iVar1 + 0xc,0x18);
   iStack_50 = param_1;
   if (((*(int *)(param_1 + 0xbc) != 0) && (*(int *)(iVar1 + 0x24) == 0)) &&
-     (cVar4 = fn_827C64D0(&uStack_70,*(undefined4 *)(iVar1 + 0x28)), cVar4 == '\0')) {
+     (cVar4 = fn_827C64D0(&stack_pair_70.first,*(undefined4 *)(iVar1 + 0x28)), cVar4 == '\0')) {
     return 0;
   }
   iVar5 = 0;
@@ -66,7 +66,7 @@ undefined8 fn_827C65C0(int param_1,int param_2)
     do {
       iVar2 = *piVar6;
       iVar3 = *(int *)((iVar2 + 0x3a) * 4 + param_1);
-      cVar4 = fn_827C62D8(&uStack_70,puVar7[1],aiStack_60[iVar2],
+      cVar4 = fn_827C62D8(&stack_pair_70.first,puVar7[1],aiStack_60[iVar2],
                             *(undefined4 *)((*(int *)(iVar3 + 0x14) + 0xb) * 4 + iVar1),
                             *(undefined4 *)((*(int *)(iVar3 + 0x18) + 0xf) * 4 + iVar1));
       if (cVar4 == '\0') {
@@ -79,9 +79,9 @@ undefined8 fn_827C65C0(int param_1,int param_2)
       aiStack_60[iVar2] = (int)*(short *)*puVar7;
     } while (iVar5 < iVar3);
   }
-  **(undefined4 **)(param_1 + 0x18) = uStack_70;
-  *(undefined4 *)(*(int *)(param_1 + 0x18) + 4) = uStack_6c;
-  fn_82F68CC0(iVar1 + 0xc,auStack_68,0x18);
+  **(undefined4 **)(param_1 + 0x18) = stack_pair_70.first;
+  *(undefined4 *)(*(int *)(param_1 + 0x18) + 4) = stack_pair_70.second;
+  memcpy(iVar1 + 0xc,auStack_68,0x18);
   if (*(int *)(param_1 + 0xbc) != 0) {
     if (*(int *)(iVar1 + 0x24) == 0) {
       *(int *)(iVar1 + 0x24) = *(int *)(param_1 + 0xbc);

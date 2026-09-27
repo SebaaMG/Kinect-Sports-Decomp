@@ -36,7 +36,7 @@ undefined8 fn_827E2408(undefined8 param_1,ulonglong param_2)
 {
   int iVar1;
   undefined8 uVar2;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [32];
   
   fn_827E1950();
   if ((param_2 & 1) != 0) {

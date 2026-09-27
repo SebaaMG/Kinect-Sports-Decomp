@@ -49,9 +49,9 @@ fn_826E0920(undefined4 *param_1,int param_2,uint *param_3,undefined8 param_4,und
   int iVar3;
   int iVar4;
   undefined8 uVar2;
-  uint auStack_70 [2];
-  int iStack_68;
-  int iStack_64;
+  uint auStack_70;
+  struct { int first; int second; } stack_pair_68;
+
   int *piStack_60;
   undefined4 uStack_5c;
   
@@ -74,11 +74,11 @@ fn_826E0920(undefined4 *param_1,int param_2,uint *param_3,undefined8 param_4,und
     if ((*param_3 & 0xfff0000) == 0x60000) {
       *(undefined4 *)(iVar4 + 0x18) = 3;
     }
-    auStack_70[0] = *param_3;
+    auStack_70 = *param_3;
     uVar2 = fn_826F3CF0(&piStack_60,iVar4);
-    uVar2 = fn_826F47F0(&iStack_68,param_2,auStack_70,uVar2);
+    uVar2 = fn_826F47F0(&stack_pair_68.first,param_2,&auStack_70,uVar2);
     fn_826D6290(param_1,uVar2);
-    if ((iStack_68 == 0) && (iStack_64 != 0)) {
+    if ((stack_pair_68.first == 0) && (stack_pair_68.second != 0)) {
       fn_82687270();
     }
     if (piStack_60 != (int *)0x0) {

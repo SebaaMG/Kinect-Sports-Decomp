@@ -36,7 +36,7 @@ void fn_829DBF20(void)
 {
   undefined1 auStack_30 [4];
   undefined1 auStack_2c [4];
-  undefined1 auStack_28 [40];
+  undefined1 auStack_28 [24];
   
   fn_824DCB30(auStack_28,auStack_2c,auStack_30);
   return;

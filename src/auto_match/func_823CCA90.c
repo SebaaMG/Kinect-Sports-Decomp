@@ -47,7 +47,7 @@ void fn_823CCA90(int param_1,undefined8 param_2,undefined8 param_3)
   undefined4 *puVar3;
   undefined1 auStack_a0 [4];
   int iStack_9c;
-  undefined1 auStack_90 [144];
+  undefined1 auStack_90 [112];
   
   lbl_83265A28 = lbl_83265A28 * 0x19660d + 0x3c6ef35f;
   uVar1 = (-lbl_83265A28 & ~lbl_83265A28) >> 0x1f;

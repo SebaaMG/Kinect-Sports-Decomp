@@ -29,7 +29,7 @@ extern int fn_8265CA20();
 extern int fn_82825AD0();
 extern int fn_82829120();
 extern int fn_82A1C0F0();
-extern int fn_82F63CA0();
+extern int memmove();
 extern unsigned int iStack_40;
 
 
@@ -74,7 +74,7 @@ void fn_8225D580(int param_1,int param_2)
     }
   }
   if (piVar4 != *(int **)(param_1 + 0x24)) {
-    fn_82F63CA0(piVar4,*(int **)(param_1 + 0x24),0);
+    memmove(piVar4,*(int **)(param_1 + 0x24),0);
     *(int **)(param_1 + 0x24) = piVar4;
   }
   return;

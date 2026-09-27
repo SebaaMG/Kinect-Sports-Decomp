@@ -65,7 +65,7 @@ void fn_823A1208(int *param_1,int param_2)
   undefined4 in_register_00010014;
   undefined4 in_register_00010018;
   undefined4 in_vr1;
-  float afStack_a0 [4];
+  float afStack_a0;
   int *apiStack_90 [4];
   undefined4 ***apppuStack_80 [5];
   uint uStack_6c;
@@ -110,16 +110,16 @@ void fn_823A1208(int *param_1,int param_2)
   iStack_54 = (int)*(char *)(iVar1 + 0x5a);
   if (fStack_4c == lbl_821954E8) {
     lbl_83265A28 = lbl_83265A28 * 0x19660d + 0x3c6ef35f;
-    afStack_a0[0] = (float)(lbl_83265A28 & 0x7fffff | 0x3f800000);
-    fStack_4c = afStack_a0[0] - lbl_821CA460;
+    afStack_a0 = (float)(lbl_83265A28 & 0x7fffff | 0x3f800000);
+    fStack_4c = afStack_a0 - lbl_821CA460;
   }
   uStack_40 = *(undefined4 *)(iVar1 + 0x50);
   fn_8252D2F8(param_1[2],0,&uStack_60,iVar1 + 0x40);
-  afStack_a0[0] = *(float *)(*param_1 + 8);
-  afStack_a0[0] =
-       (float)fn_825354B8(afStack_a0,&stack0x00000020,0,*(undefined4 *)(param_2 + 0x84c),
+  afStack_a0 = *(float *)(*param_1 + 8);
+  afStack_a0 =
+       (float)fn_825354B8(&afStack_a0,&stack0x00000020,0,*(undefined4 *)(param_2 + 0x84c),
                                 0xffffffff83296bc0,0xffffffff83296bd0);
-  fn_82536288(afStack_a0);
+  fn_82536288(&afStack_a0);
   fn_8265CA20(apiStack_90[0]);
   fn_82230300(apppuStack_80,1,0);
   return;

@@ -46,7 +46,7 @@ int fn_828FB948(int param_1,char *param_2,undefined4 *param_3)
   char *pcVar10;
   char *pcVar11;
   char *pcVar12;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [32];
   
   pcVar8 = *(char **)(param_1 + 4);
   if (pcVar8 <= param_2) {

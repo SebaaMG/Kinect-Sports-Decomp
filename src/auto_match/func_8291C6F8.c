@@ -25,7 +25,7 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F672D8();
+extern int strncpy();
 
 
 ulonglong fn_8291C6F8(int param_1,char *param_2,char *param_3)
@@ -36,7 +36,7 @@ ulonglong fn_8291C6F8(int param_1,char *param_2,char *param_3)
   char *pcVar3;
   
   if (param_2 < (char *)0x80000000) {
-    fn_82F672D8(param_1,param_3,param_2);
+    strncpy(param_1,param_3,param_2);
     param_2[param_1 + -1] = '\0';
     pcVar3 = param_3;
     do {

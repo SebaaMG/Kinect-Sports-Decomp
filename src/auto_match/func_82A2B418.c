@@ -41,8 +41,8 @@ bool fn_82A2B418(undefined2 *param_1,undefined4 *param_2)
 
 {
   char cVar1;
-  undefined4 uStack_30;
-  undefined4 uStack_2c;
+  struct { undefined4 first; undefined4 second; } stack_pair_30;
+
   undefined2 uStack_20;
   undefined2 uStack_1e;
   undefined2 uStack_1c;
@@ -58,10 +58,10 @@ bool fn_82A2B418(undefined2 *param_1,undefined4 *param_2)
   uStack_18 = param_1[5];
   uStack_16 = param_1[6];
   uStack_14 = param_1[7];
-  cVar1 = RtlTimeFieldsToTime(&uStack_20,&uStack_30);
+  cVar1 = RtlTimeFieldsToTime(&uStack_20,&stack_pair_30.first);
   if (cVar1 != '\0') {
-    param_2[1] = uStack_2c;
-    *param_2 = uStack_30;
+    param_2[1] = stack_pair_30.second;
+    *param_2 = stack_pair_30.first;
   }
   else {
     fn_82A2B760(0xffffffffc000000d);

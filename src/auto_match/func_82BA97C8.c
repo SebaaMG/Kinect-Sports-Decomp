@@ -38,7 +38,7 @@ int fn_82BA97C8(int param_1,undefined4 param_2,undefined8 param_3,undefined8 par
   longlong lVar3;
   byte *pbVar4;
   longlong lVar5;
-  undefined4 auStack_30 [12];
+  undefined4 auStack_30 [4];
   
   auStack_30[0] = *(undefined4 *)(param_1 + 0x80);
   iVar2 = 0;

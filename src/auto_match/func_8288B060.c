@@ -38,7 +38,7 @@ void fn_8288B060(int param_1,undefined1 param_2)
   undefined4 *puVar4;
   undefined4 *puVar5;
   uint uVar6;
-  undefined4 *apuStack_40 [16];
+  undefined4 * apuStack_40;
   
   uVar6 = 0;
   do {
@@ -69,8 +69,8 @@ void fn_8288B060(int param_1,undefined1 param_2)
         puVar4[3] = uVar6;
         *(undefined1 *)(puVar4 + 4) = 0;
       }
-      fn_8288A9B8(apuStack_40,param_1 + 0x124,puVar5,puVar4);
-      puVar5 = apuStack_40[0];
+      fn_8288A9B8(&apuStack_40,param_1 + 0x124,puVar5,puVar4);
+      puVar5 = apuStack_40;
     }
     uVar6 = uVar6 + 1;
     *(undefined1 *)(puVar5 + 4) = param_2;

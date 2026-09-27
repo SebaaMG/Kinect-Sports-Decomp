@@ -49,7 +49,7 @@ undefined8 fn_8295E918(int *param_1)
   undefined4 uStack_4c;
   undefined4 uStack_48;
   undefined4 uStack_44;
-  undefined4 auStack_40 [16];
+  undefined4 auStack_40;
   
   if (param_1[0xd] == 0) {
     uVar6 = 0xffffffff80004001;
@@ -116,11 +116,11 @@ undefined8 fn_8295E918(int *param_1)
           uVar6 = (**(code **)(*param_1 + 0x14c))
                             (param_1,((longlong)iVar3 * (longlong)(int)uVar7 & 0x3fffffffU) * 4 +
                                      (ulonglong)*(uint *)(param_1[0x41] + 8),iVar3,uStack_4c,
-                             auStack_40);
+                             &auStack_40);
           if ((int)uVar6 < 0) {
             return uVar6;
           }
-          uVar6 = (**(code **)(*param_1 + 0x13c))(param_1,uStack_50,auStack_40[0],uStack_44);
+          uVar6 = (**(code **)(*param_1 + 0x13c))(param_1,uStack_50,auStack_40,uStack_44);
           if ((int)uVar6 < 0) {
             return uVar6;
           }

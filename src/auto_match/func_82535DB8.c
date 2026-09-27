@@ -28,7 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_50;
 extern int fn_8265CA20();
 extern int fn_82864E90();
-extern int fn_82F63CA0();
+extern int memmove();
 extern unsigned int *lbl_8327F86C;
 
 
@@ -41,7 +41,7 @@ void fn_82535DB8(int param_1,int param_2,int param_3)
   char cVar4;
   int *piVar5;
   int *piVar6;
-  undefined4 auStack_50 [20];
+  undefined4 auStack_50;
   
   piVar2 = lbl_8327F86C;
   piVar6 = (int *)*lbl_8327F86C;
@@ -55,10 +55,10 @@ void fn_82535DB8(int param_1,int param_2,int param_3)
         piVar3 = (int *)(**(code **)(*piVar3 + 0x1c))();
         cVar4 = (**(code **)(*piVar3 + 0x38))(piVar3,*(undefined4 *)(iVar1 + 4));
         if (cVar4 != '\0') {
-          auStack_50[0] = 0;
-          (**(code **)(**(int **)(iVar1 + 4) + 0x50))(*(int **)(iVar1 + 4),auStack_50);
+          auStack_50 = 0;
+          (**(code **)(**(int **)(iVar1 + 4) + 0x50))(*(int **)(iVar1 + 4),&auStack_50);
         }
-        fn_82F63CA0(piVar6,piVar5,(piVar2[1] - (int)piVar5 >> 2) << 2);
+        memmove(piVar6,piVar5,(piVar2[1] - (int)piVar5 >> 2) << 2);
         piVar2[1] = piVar2[1] + -4;
         fn_8265CA20(iVar1);
       }

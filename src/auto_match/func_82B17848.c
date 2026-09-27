@@ -42,7 +42,7 @@ undefined8 fn_82B17848(undefined8 param_1,int param_2,undefined8 param_3,int par
   uint uVar6;
   undefined4 uStack_30;
   int iStack_2c;
-  int aiStack_28 [10];
+  int aiStack_28;
   
   if ((*(uint *)(param_2 + 8) & 0x3f80) == 0x3b00) {
     param_2 = *(int *)(*(int *)(param_2 + 0x30) + 0xc);
@@ -65,13 +65,13 @@ LAB_82b178d8:
     uStack_30 = 0;
     iStack_2c = param_2;
     do {
-      fn_82B82D28(*(undefined4 *)(param_2 + 0x2c),uStack_30,&iStack_2c,&uStack_30,aiStack_28,0
+      fn_82B82D28(*(undefined4 *)(param_2 + 0x2c),uStack_30,&iStack_2c,&uStack_30,&aiStack_28,0
                         ,0,0);
       param_2 = iStack_2c;
       if ((*(uint *)(iStack_2c + 8) & 0x3f80) != 0x3380) break;
       cVar3 = fn_82B17248(iStack_2c,param_1);
     } while (cVar3 != '\0');
-    if ((param_2 == *(int *)(param_4 + 0x30)) && (aiStack_28[0] == 0)) {
+    if ((param_2 == *(int *)(param_4 + 0x30)) && (aiStack_28 == 0)) {
       return 1;
     }
   }

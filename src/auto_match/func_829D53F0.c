@@ -50,7 +50,7 @@ undefined8 fn_829D53F0(uint param_1,uint param_2,int *param_3,uint *param_4,int 
   int iStack_80;
   undefined4 uStack_7c;
   undefined4 auStack_78 [2];
-  undefined1 auStack_70 [112];
+  undefined1 auStack_70 [16];
   
   uVar9 = 0x18 - ((0x17 < param_2) + 0x18) & param_1;
   if (((0x32000 < param_2) || (iVar6 = 0x32000 - param_2, uVar9 == 0)) ||

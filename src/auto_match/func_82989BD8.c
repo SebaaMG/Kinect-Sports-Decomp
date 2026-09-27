@@ -48,7 +48,7 @@ ulonglong fn_82989BD8(int param_1,int *param_2,int param_3,int *param_4,int *par
   ulonglong uVar1;
   int iVar3;
   double adStack_60 [2];
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [48];
   
   if (param_3 != 0) {
     if ((*(int *)(param_3 + 0x18) * *(int *)(param_3 + 0x14) == 1) &&

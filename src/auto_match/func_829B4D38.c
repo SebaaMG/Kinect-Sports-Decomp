@@ -39,7 +39,7 @@ int fn_829B4D38(undefined8 param_1,int *param_2)
   int iVar2;
   int iVar3;
   int iVar4;
-  int aiStack_40 [16];
+  int aiStack_40 [4];
   
   if (*(int *)(*param_2 + 4) == 3) {
     uVar1 = fn_82930318(0x14);

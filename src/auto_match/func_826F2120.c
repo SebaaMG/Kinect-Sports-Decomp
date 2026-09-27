@@ -28,8 +28,8 @@ typedef struct { U64 lo, hi; } V16;
 extern int fn_8268D210();
 extern int fn_826F0610();
 extern int fn_826F16C0();
-extern int fn_82F65390();
-extern int fn_82F66A80();
+extern int strncmp();
+extern int isdigit();
 extern unsigned int iStack_70;
 extern unsigned int iStack_80;
 extern unsigned int iStack_8c;
@@ -73,8 +73,8 @@ void fn_826F2120(int param_1,int *param_2)
   uint uStack_9c;
   byte *pbStack_98;
   uint uStack_94;
-  int iStack_90;
-  int iStack_8c;
+  struct { int first; int second; } stack_pair_90;
+
   longlong lStack_88;
   int iStack_80;
   undefined1 uStack_7c;
@@ -112,7 +112,7 @@ void fn_826F2120(int param_1,int *param_2)
     }
     pbStack_c0 = pbVar2 + uVar6;
     uStack_bc = uStack_bc - uVar6;
-    iVar3 = fn_82F66A80(*pbVar2);
+    iVar3 = isdigit(*pbVar2);
     if (iVar3 == 0) {
       bVar1 = *pbVar2;
       if (bVar1 < 0x48) {
@@ -227,7 +227,7 @@ LAB_826f2420:
         pbStack_c0 = pbStack_c0 + uVar8;
         goto LAB_826f2518;
       }
-      iVar3 = fn_82F65390(pbVar2,0xffffffff8200dad8,3);
+      iVar3 = strncmp(pbVar2,0xffffffff8200dad8,3);
       if (iVar3 == 0) {
         uVar8 = 0;
         if (uStack_bc == 0) goto LAB_826f2518;
@@ -256,10 +256,10 @@ LAB_826f2518:
         if (uVar8 < uVar7) {
           uVar7 = uVar8;
         }
-        iStack_8c = uVar8 - uVar7;
-        iStack_90 = uVar7 + *param_2;
-        if (iStack_8c != 0) {
-          (**(code **)(*piVar4 + 8))(piVar4,&iStack_90);
+        stack_pair_90.second = uVar8 - uVar7;
+        stack_pair_90.first = uVar7 + *param_2;
+        if (stack_pair_90.second != 0) {
+          (**(code **)(*piVar4 + 8))(piVar4,&stack_pair_90.first);
         }
         fn_826F0610(*(undefined4 *)(param_1 + 4),param_1,piVar4,1);
       }

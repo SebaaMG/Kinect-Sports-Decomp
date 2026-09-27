@@ -50,15 +50,15 @@ byte fn_8247E6E8(int param_1)
   ulonglong uVar5;
   byte bVar6;
   int iStack_2c;
-  int iStack_28;
-  int iStack_24;
+  struct { int first; int second; } stack_pair_28;
+
   
   uVar5 = (ulonglong)lbl_83297810;
   if (uVar5 == 0) {
     uVar5 = fn_82511928();
   }
-  fn_825138E0(&iStack_28,uVar5,1);
-  if (iStack_28 == 0) {
+  fn_825138E0(&stack_pair_28.first,uVar5,1);
+  if (stack_pair_28.first == 0) {
     fn_8225F160();
     if (lbl_83265988 == 0) {
       bVar6 = 0;
@@ -68,12 +68,12 @@ byte fn_8247E6E8(int param_1)
 LAB_8247e7e0:
       bVar6 = *(byte *)(*(int *)(iVar3 + 8) + 8) >> 4 & 1;
     }
-    if (iStack_24 != 0) {
+    if (stack_pair_28.second != 0) {
       fn_822315A0();
     }
   }
   else {
-    uVar1 = *(undefined4 *)(iStack_28 + 8);
+    uVar1 = *(undefined4 *)(stack_pair_28.first + 8);
     uVar2 = fn_828A12E8(uVar1);
     iVar3 = fn_8288F948(uVar2,1);
     iStack_2c = **(int **)(iVar3 + 4);
@@ -91,7 +91,7 @@ LAB_8247e7e0:
       }
       fn_82248B90(&iStack_2c);
     }
-    if (iStack_24 != 0) {
+    if (stack_pair_28.second != 0) {
       fn_822315A0();
     }
     bVar6 = 0;

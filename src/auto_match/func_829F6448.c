@@ -47,7 +47,7 @@ ulonglong fn_829F6448(uint *param_1,uint *param_2)
   uint *puVar3;
   uint *puVar4;
   longlong lVar5;
-  undefined4 auStack_40 [16];
+  undefined4 auStack_40;
   
   puVar4 = param_2 + -1;
   lVar5 = 7;
@@ -58,11 +58,11 @@ ulonglong fn_829F6448(uint *param_1,uint *param_2)
     *puVar3 = *puVar4;
     lVar5 = lVar5 + -1;
   } while (lVar5 != 0);
-  auStack_40[0] = 0;
+  auStack_40 = 0;
   *param_1 = *param_2;
   uVar1 = param_2[1];
   param_1[0x4190] = uVar1;
-  fn_82648AF0(uVar1,auStack_40);
+  fn_82648AF0(uVar1,&auStack_40);
   puVar4 = param_1 + 0x4191;
   uVar2 = fn_82647308(0,2,0,0,0,puVar4);
   if ((-1 < (int)uVar2) && (uVar2 = fn_829F5478(param_1 + 4), (uVar2 & 0xffffffff) == 0)) {

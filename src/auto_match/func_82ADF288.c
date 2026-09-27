@@ -45,7 +45,7 @@ ulonglong fn_82ADF288(undefined8 param_1,int param_2,int param_3,undefined8 para
   ulonglong uVar8;
   longlong lVar9;
   uint *in_stack_00000054;
-  uint auStack_70 [28];
+  uint auStack_70;
   
   if ((*(uint *)(param_2 + 0xc0) & 0x40000000) == 0) {
     param_8[1] = 0;
@@ -101,13 +101,13 @@ ulonglong fn_82ADF288(undefined8 param_1,int param_2,int param_3,undefined8 para
 LAB_82adf43c:
   uVar2 = fn_82AD00E0(param_8,uVar8,param_5,4);
   if ((int)uVar2 != -1) {
-    fn_82ADEED8(auStack_70,param_2,param_3,param_4,param_5,param_6,param_7,uVar2);
-    if ((auStack_70[0] & 0x300) == 0) {
+    fn_82ADEED8(&auStack_70,param_2,param_3,param_4,param_5,param_6,param_7,uVar2);
+    if ((auStack_70 & 0x300) == 0) {
       if ((*(uint *)(param_2 + 0xc0) & 0x40000000) != 0) goto code_r0x82adf40c;
       goto LAB_82adf434;
     }
-    uVar2 = (ulonglong)(auStack_70[0] >> 10) & 0xf | uVar2 & 0xfffffffffffffff0;
-    *in_stack_00000054 = auStack_70[0];
+    uVar2 = (ulonglong)(auStack_70 >> 10) & 0xf | uVar2 & 0xfffffffffffffff0;
+    *in_stack_00000054 = auStack_70;
   }
   return uVar2;
 code_r0x82adf40c:

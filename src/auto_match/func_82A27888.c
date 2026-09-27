@@ -32,7 +32,7 @@ extern unsigned int uStack0000003c;
 
 
 undefined8
-fn_82A27888(undefined2 *param_1,undefined2 *param_2,byte param_3,undefined4 param_4,
+RtlpInitializeHeapSegment(undefined2 *param_1,undefined2 *param_2,byte param_3,undefined4 param_4,
              undefined2 *param_5,uint param_6,uint param_7)
 
 {
@@ -44,7 +44,7 @@ fn_82A27888(undefined2 *param_1,undefined2 *param_2,byte param_3,undefined4 para
   undefined2 uVar6;
   int iVar7;
   uint uStack0000003c;
-  int aiStack_60 [24];
+  int aiStack_60;
   
   uVar4 = param_7 - (int)param_5;
   uVar1 = (int)param_2 + 0x57U & 0xfffffff0;
@@ -87,12 +87,12 @@ LAB_82a27940:
   }
   else {
     if (uVar1 + 0x10 < param_7) {
-      aiStack_60[0] = (uVar1 - param_6) + 0x10;
+      aiStack_60 = (uVar1 - param_6) + 0x10;
       uStack0000003c = param_6;
       iVar3 = NtAllocateVirtualMemory
-                        (&stack0x0000003c,aiStack_60,0x60001000,4,*(undefined4 *)(param_1 + 0x2c8));
+                        (&stack0x0000003c,&aiStack_60,0x60001000,4,*(undefined4 *)(param_1 + 0x2c8));
       if (-1 < iVar3) {
-        param_6 = aiStack_60[0] + uStack0000003c;
+        param_6 = aiStack_60 + uStack0000003c;
         goto LAB_82a27940;
       }
     }

@@ -43,7 +43,7 @@ void fn_8288DB98(int *param_1,undefined8 param_2,undefined8 param_3)
   char cVar5;
   int iVar4;
   ulonglong uVar6;
-  undefined4 auStack_40 [16];
+  undefined4 auStack_40;
   
   iVar2 = (**(code **)(*param_1 + 8))();
   uVar6 = 0;
@@ -53,8 +53,8 @@ void fn_8288DB98(int *param_1,undefined8 param_2,undefined8 param_3)
       iVar3 = fn_82897620(iVar2,uVar6);
       cVar5 = fn_82897BA8(*(undefined4 *)(iVar3 + 0x18));
       if (cVar5 == '\0') {
-        auStack_40[0] = fn_8289CB70(iVar3,param_2,1,0);
-        fn_8288CBD8(param_3,auStack_40);
+        auStack_40 = fn_8289CB70(iVar3,param_2,1,0);
+        fn_8288CBD8(param_3,&auStack_40);
         if (((*(int **)(iVar3 + 0x20) == (int *)0x0) ||
             (iVar4 = (**(code **)(**(int **)(iVar3 + 0x20) + 4))(), iVar4 == 0)) &&
            ((*(int **)(iVar3 + 0x20) == (int *)0x0 ||

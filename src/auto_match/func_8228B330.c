@@ -76,9 +76,9 @@ void fn_8228B330(undefined4 *param_1,int param_2,undefined8 param_3)
   ulonglong uVar12;
   longlong lVar13;
   double dVar14;
-  int aiStack_b0 [4];
-  undefined4 uStack_a0;
-  undefined4 uStack_9c;
+  int aiStack_b0;
+  struct { undefined4 first; undefined4 second; } stack_pair_a0;
+
   float fStack_98;
   undefined4 uStack_94;
   undefined4 uStack_90;
@@ -93,11 +93,11 @@ void fn_8228B330(undefined4 *param_1,int param_2,undefined8 param_3)
   undefined4 uStack_6c;
   
   piVar2 = *(int **)(param_1[param_2 * 6 + 0x187] + 0xb4);
-  fn_82520158(0xffffffff821a9670,aiStack_b0,0);
+  fn_82520158(0xffffffff821a9670,&aiStack_b0,0);
   if ((param_1[param_2 * 6 + 0x188] == 0) || (param_1[param_2 * 6 + 0x189] == 0)) {
-    uStack_9c = lbl_821CA460;
+    stack_pair_a0.second = lbl_821CA460;
     fStack_98 = lbl_821CC160;
-    uStack_a0 = 0x4d697850;
+    stack_pair_a0.first = 0x4d697850;
     fStack_8c = lbl_821CC160;
     uStack_94 = 0x20;
     uStack_90 = lbl_821917C0;
@@ -109,17 +109,17 @@ void fn_8228B330(undefined4 *param_1,int param_2,undefined8 param_3)
     uStack_6c = 0;
     uStack_78 = 0;
     uStack_74 = 0;
-    fn_8252D2F8(param_3,0,&uStack_a0,aiStack_b0);
+    fn_8252D2F8(param_3,0,&stack_pair_a0.first,&aiStack_b0);
     fn_8252D370(param_3);
     fn_8252D6E0(param_3,*param_1);
   }
-  else if (aiStack_b0[0] != 0) {
+  else if (aiStack_b0 != 0) {
     dVar14 = (double)lbl_821CC160;
     fStack_98 = lbl_821CC160;
-    uStack_a0 = 0x4d697850;
+    stack_pair_a0.first = 0x4d697850;
     fStack_8c = lbl_821CC160;
     uStack_94 = 0x20;
-    uStack_9c = lbl_821CA460;
+    stack_pair_a0.second = lbl_821CA460;
     uStack_88 = 0;
     uStack_90 = lbl_821917C0;
     uStack_84 = 0x40;
@@ -129,7 +129,7 @@ void fn_8228B330(undefined4 *param_1,int param_2,undefined8 param_3)
     uStack_6c = 0;
     uStack_78 = 0;
     uStack_74 = 0;
-    fn_82554860(param_1[param_2 * 6 + 0x189],0,aiStack_b0,&uStack_a0);
+    fn_82554860(param_1[param_2 * 6 + 0x189],0,&aiStack_b0,&stack_pair_a0.first);
     fn_827EF828(dVar14,param_1[param_2 * 6 + 0x188]);
     fn_827EFFE8(param_1[param_2 * 6 + 0x188]);
     puVar7 = (undefined4 *)(**(code **)(*piVar2 + 0xa8))(piVar2,param_1[param_2 * 6 + 0x18a]);

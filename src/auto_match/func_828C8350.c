@@ -62,7 +62,7 @@ void fn_828C8350(int param_1,undefined8 param_2,ulonglong param_3,undefined8 par
   char cVar8;
   undefined4 *puVar7;
   int iStack0000002c;
-  int aiStack_60 [24];
+  int aiStack_60 [4];
   
   iStack0000002c = (int)param_4;
   piVar3 = (int *)fn_8289F2E0();

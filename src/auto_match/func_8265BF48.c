@@ -39,7 +39,7 @@ ulonglong fn_8265BF48(byte *param_1,byte param_2)
   byte *pbVar4;
   byte *pbVar5;
   int iVar6;
-  undefined1 auStack_4f [79];
+  undefined1 auStack_4f [47];
   
   bVar1 = *param_1;
   if (bVar1 == 0) {

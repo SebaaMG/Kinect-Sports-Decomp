@@ -40,7 +40,7 @@ undefined8 fn_82871230(undefined8 param_1)
 {
   undefined1 auStack_d0 [32];
   undefined1 auStack_b0 [4];
-  undefined1 auStack_ac [156];
+  undefined1 auStack_ac [140];
   
   fn_8223CFC0(auStack_b0,2,1);
   fn_822403C8(auStack_d0,auStack_ac);

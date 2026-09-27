@@ -37,7 +37,7 @@ int * fn_824C5838(int param_1)
   int *piVar5;
   int *piVar6;
   int *piStack_40;
-  int *apiStack_3c [15];
+  int *apiStack_3c [1];
   
   piVar1 = *(int **)(param_1 + 0x2c);
   piVar2 = *(int **)(param_1 + 0x28);

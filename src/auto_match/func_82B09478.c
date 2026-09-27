@@ -45,7 +45,7 @@ void fn_82B09478(undefined8 param_1,uint *param_2,undefined8 param_3)
   int *piVar9;
   uint uVar10;
   int iVar11;
-  int aiStack_64 [25];
+  int aiStack_64 [1];
   
   while (((param_2[1] & 1) == 0 && (param_2[1] != 0))) {
     puVar5 = (uint *)(*param_2 & 0xfffffffe);

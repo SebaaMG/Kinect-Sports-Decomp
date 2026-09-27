@@ -75,7 +75,7 @@ longlong fn_8299C670(int param_1,int *param_2)
   int *piStack0000001c;
   int iStack_140;
   int aiStack_134 [15];
-  undefined4 auStack_f8 [5];
+  undefined4 auStack_f8 [1];
   uint auStack_e4 [57];
   
   iStack_140 = 0;

@@ -41,8 +41,8 @@ extern unsigned int uStack_40;
 undefined4 * fn_8267DA58(undefined4 *param_1,undefined4 param_2,undefined4 param_3)
 
 {
-  undefined4 uStack_40;
-  undefined4 uStack_3c;
+  struct { undefined4 first; undefined4 second; } stack_pair_40;
+
   undefined4 uStack_38;
   undefined4 uStack_34;
   undefined4 uStack_30;
@@ -50,15 +50,15 @@ undefined4 * fn_8267DA58(undefined4 *param_1,undefined4 param_2,undefined4 param
   
   fn_8267EA40(param_1,1);
   param_1[3] = &lbl_82002ACC;
-  uStack_40 = 0;
+  stack_pair_40.first = 0;
   *param_1 = &lbl_82005670;
   param_1[3] = &lbl_8200565C;
-  uStack_3c = 0;
+  stack_pair_40.second = 0;
   uStack_30 = 0;
   uStack_2c = 3;
   uStack_38 = param_2;
   uStack_34 = param_3;
-  fn_8267D608(param_1,&uStack_40);
+  fn_8267D608(param_1,&stack_pair_40.first);
   return param_1;
 }
 

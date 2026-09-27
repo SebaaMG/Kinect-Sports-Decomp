@@ -77,8 +77,8 @@ void fn_824B4798(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefi
   float fStack_a8;
   float fStack_a4;
   float fStack_a0;
-  float fStack_98;
-  float fStack_94;
+  struct { float first; float second; } stack_pair_98;
+
   float fStack_90;
   float fStack_88;
   float fStack_84;
@@ -104,7 +104,7 @@ void fn_824B4798(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefi
     fStack_a4 = lbl_821CA1A4;
     fStack_a0 = lbl_821CA1A8;
     (**(code **)(*piVar4 + 4))(param_2,uVar7,&iStack_c0);
-    fn_824B49D8(&fStack_98,iStack_c0,param_3,param_4);
+    fn_824B49D8(&stack_pair_98.first,iStack_c0,param_3,param_4);
     uVar7 = uVar7 + 1;
     dVar12 = (double)lbl_82193CC0;
     uStack_b0 = (ulonglong)*(uint *)(iStack_c0 + 0x48);
@@ -117,7 +117,7 @@ void fn_824B4798(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefi
       do {
         (**(code **)(*piVar4 + 4))(param_2,uVar7,&iStack_c0);
         fn_824B49D8(&fStack_a8,iStack_c0,param_3,param_4);
-        fn_8255A868(&fStack_88,&fStack_a8,&fStack_98);
+        fn_8255A868(&fStack_88,&fStack_a8,&stack_pair_98.first);
         uStack_b0 = (ulonglong)*(uint *)(iStack_c0 + 0x48);
         dVar8 = (double)(float)((double)(float)((double)uStack_b0 * dVar12) - dVar8);
         if (dVar11 < dVar8) {
@@ -136,8 +136,8 @@ void fn_824B4798(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefi
           dVar14 = (double)(float)(dVar14 + dVar9);
         }
         uVar7 = uVar7 + 1;
-        fStack_98 = fStack_a8;
-        fStack_94 = fStack_a4;
+        stack_pair_98.first = fStack_a8;
+        stack_pair_98.second = fStack_a4;
         fStack_90 = fStack_a0;
         dVar8 = (double)(float)((double)uStack_b0 * dVar12);
       } while ((uVar7 & 0xffffffff) <= (ulonglong)uStack_bc);

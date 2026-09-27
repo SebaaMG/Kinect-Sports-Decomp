@@ -42,7 +42,7 @@ undefined8 fn_827D6968(int param_1,undefined8 param_2,int param_3)
   char cVar2;
   int iVar3;
   ulonglong uVar4;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [16];
   
   fn_8256DE08(auStack_50,0);
   iVar3 = param_1 + 0x6c;

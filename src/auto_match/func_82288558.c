@@ -40,39 +40,39 @@ void fn_82288558(int param_1,undefined4 *param_2)
 
 {
   undefined4 uVar1;
-  undefined4 uStack_40;
-  int iStack_3c;
+  struct { undefined4 first; int second; } stack_pair_40;
+
   
-  uStack_40 = 0;
-  iStack_3c = 0;
+  stack_pair_40.first = 0;
+  stack_pair_40.second = 0;
   uVar1 = **(undefined4 **)(*(int *)(param_1 + 0x61c) + 0xb0);
-  fn_82517978(&uStack_40,*param_2,param_2[1],0);
-  fn_826728E8(uStack_40,lbl_831CEE78,uVar1);
-  if (iStack_3c != 0) {
+  fn_82517978(&stack_pair_40.first,*param_2,param_2[1],0);
+  fn_826728E8(stack_pair_40.first,lbl_831CEE78,uVar1);
+  if (stack_pair_40.second != 0) {
     fn_822315A0();
   }
-  uStack_40 = 0;
-  iStack_3c = 0;
+  stack_pair_40.first = 0;
+  stack_pair_40.second = 0;
   uVar1 = **(undefined4 **)(*(int *)(param_1 + 0x634) + 0xb0);
-  fn_82517978(&uStack_40,*param_2,param_2[1],0);
-  fn_826728E8(uStack_40,lbl_831CEE7C,uVar1);
-  if (iStack_3c != 0) {
+  fn_82517978(&stack_pair_40.first,*param_2,param_2[1],0);
+  fn_826728E8(stack_pair_40.first,lbl_831CEE7C,uVar1);
+  if (stack_pair_40.second != 0) {
     fn_822315A0();
   }
-  uStack_40 = 0;
-  iStack_3c = 0;
+  stack_pair_40.first = 0;
+  stack_pair_40.second = 0;
   uVar1 = **(undefined4 **)(*(int *)(param_1 + 0x64c) + 0xb0);
-  fn_82517978(&uStack_40,*param_2,param_2[1],0);
-  fn_826728E8(uStack_40,lbl_831CEE80,uVar1);
-  if (iStack_3c != 0) {
+  fn_82517978(&stack_pair_40.first,*param_2,param_2[1],0);
+  fn_826728E8(stack_pair_40.first,lbl_831CEE80,uVar1);
+  if (stack_pair_40.second != 0) {
     fn_822315A0();
   }
-  uStack_40 = 0;
-  iStack_3c = 0;
+  stack_pair_40.first = 0;
+  stack_pair_40.second = 0;
   uVar1 = **(undefined4 **)(*(int *)(param_1 + 0x664) + 0xb0);
-  fn_82517978(&uStack_40,*param_2,param_2[1],0);
-  fn_826728E8(uStack_40,lbl_831CEE84,uVar1);
-  if (iStack_3c != 0) {
+  fn_82517978(&stack_pair_40.first,*param_2,param_2[1],0);
+  fn_826728E8(stack_pair_40.first,lbl_831CEE84,uVar1);
+  if (stack_pair_40.second != 0) {
     fn_822315A0();
   }
   if (param_2[1] != 0) {

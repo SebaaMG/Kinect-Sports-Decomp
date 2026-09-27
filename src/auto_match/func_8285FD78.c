@@ -36,7 +36,7 @@ extern int fn_82862308();
 void fn_8285FD78(int param_1,undefined8 param_2,int param_3,undefined8 param_4)
 
 {
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
   
   if (*(int *)(param_1 + 0x44) != 0) {
     fn_828105C8((double)*(float *)(param_3 + 0x30),(double)*(float *)(param_3 + 0x34),

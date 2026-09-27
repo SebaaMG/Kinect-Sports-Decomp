@@ -34,17 +34,17 @@ extern unsigned int uStack_30;
 void fn_828346D0(undefined4 *param_1,int param_2,undefined8 param_3)
 
 {
-  undefined4 uStack_30;
-  undefined4 uStack_2c;
+  struct { undefined4 first; undefined4 second; } stack_pair_30;
+
   undefined4 uStack_28;
   
-  uStack_30 = *(undefined4 *)(param_2 + -0xc);
-  uStack_2c = *(undefined4 *)(param_2 + -8);
+  stack_pair_30.first = *(undefined4 *)(param_2 + -0xc);
+  stack_pair_30.second = *(undefined4 *)(param_2 + -8);
   uStack_28 = *(undefined4 *)(param_2 + -4);
   *(undefined4 *)(param_2 + -0xc) = *param_1;
   *(undefined4 *)(param_2 + -8) = param_1[1];
   *(undefined4 *)(param_2 + -4) = param_1[2];
-  fn_82834388(param_1,0,((param_2 - (int)param_1) + -0xc) / 0xc,&uStack_30,param_3);
+  fn_82834388(param_1,0,((param_2 - (int)param_1) + -0xc) / 0xc,&stack_pair_30.first,param_3);
   return;
 }
 

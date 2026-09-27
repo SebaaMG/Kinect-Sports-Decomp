@@ -46,7 +46,7 @@ void fn_8247D1F0(int param_1,int param_2)
   undefined8 uVar1;
   undefined8 uVar2;
   undefined8 uVar3;
-  undefined1 auStack_470 [32];
+  undefined1 auStack_470 [1];
   undefined4 uStack_450;
   undefined4 uStack_44c;
   undefined1 auStack_444 [1012];

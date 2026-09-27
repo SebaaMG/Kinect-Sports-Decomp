@@ -45,7 +45,7 @@ void fn_8241D080(double param_1,int *param_2)
   int iVar9;
   uint uVar10;
   double dVar11;
-  short asStack_80 [64];
+  short asStack_80 [8];
   
   dVar11 = (double)lbl_821CC160;
   if (((double)(float)param_2[0x8c] <= dVar11) &&

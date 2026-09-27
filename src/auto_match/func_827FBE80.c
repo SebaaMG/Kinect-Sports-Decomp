@@ -32,7 +32,7 @@ extern int fn_827F6950();
 void fn_827FBE80(undefined8 param_1)
 
 {
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [64];
   
                     /* WARNING: Subroutine does not return */
   fn_827F6950(param_1,auStack_50);

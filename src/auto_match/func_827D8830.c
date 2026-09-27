@@ -30,7 +30,7 @@ extern unsigned int *auStack_5c;
 extern int fn_827DC858();
 extern int fn_827DE048();
 extern int fn_82811400();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int uStack_60;
 
 
@@ -39,13 +39,13 @@ undefined8 fn_827D8830(undefined8 param_1)
 {
   undefined4 *puVar1;
   undefined4 uStack_60;
-  undefined1 auStack_5c [28];
+  undefined1 auStack_5c [12];
   undefined1 auStack_40 [40];
   
   puVar1 = (undefined4 *)fn_827DE048(auStack_40);
   fn_82811400(auStack_5c,0x10);
   uStack_60 = *puVar1;
-  fn_82F68CC0(auStack_5c,puVar1 + 1,0x18);
+  memcpy(auStack_5c,puVar1 + 1,0x18);
   fn_827DC858(param_1,&uStack_60);
   return param_1;
 }

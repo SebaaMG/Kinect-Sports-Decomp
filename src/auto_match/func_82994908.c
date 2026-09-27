@@ -44,7 +44,7 @@ extern int fn_82994480();
 extern int fn_82994508();
 extern int fn_82994768();
 extern int fn_82BA02A8();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int iStack_150;
 extern unsigned int lbl_82005710;
 extern unsigned int uStack_100;
@@ -107,12 +107,12 @@ longlong fn_82994908(int *param_1)
   undefined4 uStack_10c;
   undefined4 uStack_108;
   undefined4 uStack_104;
-  undefined4 uStack_100;
-  undefined4 uStack_fc;
+  struct { undefined4 first; undefined4 second; } stack_pair_100;
+
   undefined4 uStack_f8;
   undefined4 uStack_f4;
   int aiStack_f0 [16];
-  int aiStack_b0 [44];
+  int aiStack_b0 [12];
   
   puVar1 = (uint *)param_1[0x41];
   iVar11 = 0;
@@ -476,10 +476,10 @@ LAB_82994e00:
       lVar26 = fn_82963A30(uVar10,uVar20 & 0xfffff | 0x10000000,uVar20,
                                  *(undefined4 *)(param_1[0x41] + 0xc),0);
       if ((-1 < lVar26) && (lVar26 = fn_829632F0(uVar10,param_1[0x41]), -1 < lVar26)) {
-        fn_82F68CC0(*(undefined4 *)(uVar10 + 0x10),aiStack_b0,*(int *)(param_1[0x41] + 0xc) << 2);
-        fn_82F68CC0(*(undefined4 *)(uVar10 + 8),*(undefined4 *)(param_1[0x41] + 8),
+        memcpy(*(undefined4 *)(uVar10 + 0x10),aiStack_b0,*(int *)(param_1[0x41] + 0xc) << 2);
+        memcpy(*(undefined4 *)(uVar10 + 8),*(undefined4 *)(param_1[0x41] + 8),
                      *(int *)(param_1[0x41] + 4) << 2);
-        fn_82F68CC0(*(undefined4 *)(param_1[0x41] + 8),aiStack_b0,*(int *)(param_1[0x41] + 4) << 2)
+        memcpy(*(undefined4 *)(param_1[0x41] + 8),aiStack_b0,*(int *)(param_1[0x41] + 4) << 2)
         ;
         lVar26 = fn_829644B8(param_1,uVar10);
         if (-1 < lVar26) goto LAB_82994eac;
@@ -571,7 +571,7 @@ LAB_8299503c:
                     uStack_10c = 0xffffffff;
                     uStack_108 = 0xffffffff;
                     uStack_104 = 0xffffffff;
-                    uStack_fc = 0xffffffff;
+                    stack_pair_100.second = 0xffffffff;
                     uStack_f8 = 0xffffffff;
                     uStack_f4 = 0xffffffff;
                     puVar13[8] = 0;
@@ -611,7 +611,7 @@ LAB_829952ac:
           if ((-1 < lVar26) &&
              (lVar26 = fn_82953940(param_1,auStack_110,uVar22,4), -1 < lVar26)) {
             uVar14 = 4;
-            puVar13 = &uStack_100;
+            puVar13 = &stack_pair_100.first;
             goto LAB_829952ac;
           }
         }

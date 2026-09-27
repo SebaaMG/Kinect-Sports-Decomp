@@ -95,8 +95,8 @@ void fn_82728090(int *param_1,int *param_2)
   ulonglong uStack_c8;
   ulonglong uStack_c0;
   longlong lStack_b8;
-  int iStack_b0;
-  int iStack_ac;
+  struct { int first; int second; } stack_pair_b0;
+
   int iStack_a8;
   int iStack_a4;
   
@@ -220,9 +220,9 @@ LAB_827282c8:
                 fn_82761DE8();
               }
               *(int *)(iVar5 + 8) = (int)uVar18;
-              (**(code **)(**(int **)(iVar4 + 0xc) + 0x14))(&iStack_b0);
-              lStack_d8 = (longlong)((iStack_a4 - iStack_ac) * 0x14);
-              lStack_d0 = (longlong)((iStack_a8 - iStack_b0) * 0x14);
+              (**(code **)(**(int **)(iVar4 + 0xc) + 0x14))(&stack_pair_b0.first);
+              lStack_d8 = (longlong)((iStack_a4 - stack_pair_b0.second) * 0x14);
+              lStack_d0 = (longlong)((iStack_a8 - stack_pair_b0.first) * 0x14);
               dVar25 = (double)lStack_d8;
               fVar8 = (float)lStack_d0;
               if (piVar22[5] != 0) {

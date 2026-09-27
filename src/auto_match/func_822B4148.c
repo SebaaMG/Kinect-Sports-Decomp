@@ -40,7 +40,7 @@ int fn_822B4148(int param_1,uint param_2)
   undefined4 in_register_00010014;
   undefined4 in_register_00010018;
   undefined4 in_vr1;
-  undefined1 auStack_20 [16];
+  undefined1 auStack_20 [1];
   
   puVar1 = (undefined4 *)((uint)(auStack_20 + in_r0) & 0xfffffff0);
   *puVar1 = in_register_00010010;

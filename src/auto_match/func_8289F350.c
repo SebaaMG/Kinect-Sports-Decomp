@@ -34,13 +34,13 @@ undefined4 fn_8289F350(int param_1,undefined4 param_2)
 {
   undefined4 uVar1;
   undefined4 uStack_20;
-  int aiStack_1c [3];
+  int aiStack_1c;
   
   uStack_20 = param_2;
-  fn_8289F160(aiStack_1c,param_1 + 0x21c,&uStack_20);
+  fn_8289F160(&aiStack_1c,param_1 + 0x21c,&uStack_20);
   uVar1 = 0;
-  if (aiStack_1c[0] != *(int *)(param_1 + 0x220)) {
-    uVar1 = *(undefined4 *)(aiStack_1c[0] + 0x10);
+  if (aiStack_1c != *(int *)(param_1 + 0x220)) {
+    uVar1 = *(undefined4 *)(aiStack_1c + 0x10);
   }
   return uVar1;
 }

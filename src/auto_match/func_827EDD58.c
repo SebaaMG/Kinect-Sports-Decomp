@@ -48,24 +48,24 @@ fn_827EDD58(double param_1,undefined8 param_2,undefined8 param_3,undefined8 para
 {
   int iVar2;
   undefined8 uVar1;
-  float fStack_70;
-  float fStack_6c;
+  struct { float first; float second; } stack_pair_70;
+
   float fStack_68;
   undefined1 auStack_60 [16];
   undefined1 auStack_50 [16];
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [16];
   
-  fStack_70 = (float)((double)*param_7 + param_1);
-  fStack_6c = (float)((double)param_7[1] + param_1);
+  stack_pair_70.first = (float)((double)*param_7 + param_1);
+  stack_pair_70.second = (float)((double)param_7[1] + param_1);
   fStack_68 = (float)((double)param_7[2] + param_1);
   fn_82810328(param_3,param_6,auStack_50);
   fn_82810328(param_5,param_9,auStack_60);
   fn_8281CAE8(param_8,auStack_50,auStack_50);
   fn_8281CAE8(param_8,auStack_60,auStack_60);
-  iVar2 = fn_8280A5E8((double)fStack_70);
-  if (((iVar2 == 0) && (iVar2 = fn_8280A5E8((double)fStack_6c), iVar2 == 0)) &&
+  iVar2 = fn_8280A5E8((double)stack_pair_70.first);
+  if (((iVar2 == 0) && (iVar2 = fn_8280A5E8((double)stack_pair_70.second), iVar2 == 0)) &&
      (iVar2 = fn_8280A5E8((double)fStack_68), iVar2 == 0)) {
-    fn_827EF590(&fStack_70,auStack_40);
+    fn_827EF590(&stack_pair_70.first,auStack_40);
     fn_827EF608(auStack_40,auStack_50,auStack_50);
     fn_827EF608(auStack_40,auStack_60,auStack_60);
     uVar1 = fn_827E9A68((double)lbl_82002AE0,param_2,auStack_50,auStack_60);

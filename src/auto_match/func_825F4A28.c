@@ -35,7 +35,7 @@ void fn_825F4A28(int param_1)
 
 {
   int iVar1;
-  int aiStack_30 [12];
+  int aiStack_30 [4];
   
   if (*(int *)(param_1 + 0x8dc) == 0) {
     return;

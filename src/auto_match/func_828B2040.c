@@ -32,14 +32,14 @@ bool fn_828B2040(int param_1,undefined8 param_2,undefined8 *param_3)
 {
   int *piVar1;
   int iVar2;
-  int aiStack_10 [4];
+  int aiStack_10;
   
   piVar1 = *(int **)(param_1 + 4);
   if (piVar1 != (int *)0x0) {
-    aiStack_10[0] = 0x2a;
-    iVar2 = (**(code **)(*piVar1 + 0x58))(piVar1,*param_3,param_2,aiStack_10);
+    aiStack_10 = 0x2a;
+    iVar2 = (**(code **)(*piVar1 + 0x58))(piVar1,*param_3,param_2,&aiStack_10);
     if (iVar2 == 0) {
-      return aiStack_10[0] != 0;
+      return aiStack_10 != 0;
     }
   }
   return true;

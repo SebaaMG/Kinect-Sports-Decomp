@@ -144,8 +144,8 @@ void fn_82353230(int *param_1)
   int iStack_21ec;
   undefined1 auStack_21c8 [2048];
   undefined1 auStack_19c8 [2184];
-  int iStack_1140;
-  int iStack_113c;
+  struct { int first; int second; } stack_pair_1140;
+
   undefined1 auStack_1118 [2048];
   undefined1 auStack_918 [2328];
   
@@ -524,27 +524,27 @@ LAB_823538d8:
       if (puStack_228c != (undefined4 *)0x0) {
         fn_822315A0();
       }
-      fn_8226D2A8(&iStack_1140);
+      fn_8226D2A8(&stack_pair_1140.first);
       iVar6 = param_1[0xf4];
       iVar7 = *piVar18;
       iVar16 = 0;
-      iStack_1140 = 0;
+      stack_pair_1140.first = 0;
       if ((iVar6 != 0) && (cVar10 = fn_8223AAC0(iVar6), cVar10 != '\0')) {
         iVar16 = iVar6;
-        iStack_1140 = iVar7;
+        stack_pair_1140.first = iVar7;
       }
-      bVar1 = iStack_113c != 0;
-      iStack_113c = iVar16;
+      bVar1 = stack_pair_1140.second != 0;
+      stack_pair_1140.second = iVar16;
       if (bVar1) {
         fn_822315A0();
       }
       fn_82528BF8(lbl_8327672C,0xffffffff821b22cc,auStack_1118,0x400,0,1);
       fn_82528BF8(lbl_8327672C,0xffffffff821b22d8,auStack_918,0x400,0,1);
-      iVar6 = fn_8226D388(&iStack_1140);
+      iVar6 = fn_8226D388(&stack_pair_1140.first);
       param_1[0xf5] = iVar6;
       fn_82270110(1);
       fn_8228D3D0(*piVar18,param_1[0x8c]);
-      if (iStack_113c != 0) {
+      if (stack_pair_1140.second != 0) {
         fn_822315A0();
       }
     }

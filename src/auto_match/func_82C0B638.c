@@ -35,11 +35,11 @@ void fn_82C0B638(undefined8 param_1,undefined4 param_2,undefined8 param_3)
 
 {
   undefined4 uStack0000001c;
-  undefined4 auStack_10 [4];
+  undefined4 auStack_10;
   
-  auStack_10[0] = 0;
+  auStack_10 = 0;
   uStack0000001c = param_2;
-  fn_82C0ACE0(param_1,&stack0x0000001c,auStack_10,param_3,0,0);
+  fn_82C0ACE0(param_1,&stack0x0000001c,&auStack_10,param_3,0,0);
   return;
 }
 

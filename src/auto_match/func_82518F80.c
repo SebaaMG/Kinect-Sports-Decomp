@@ -35,7 +35,7 @@ void fn_82518F80(undefined8 param_1,int *param_2)
 {
   char cVar1;
   int *piVar2;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
   
   cVar1 = *(char *)((int)param_2 + 0x21);
   while (cVar1 == '\0') {

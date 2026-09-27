@@ -36,12 +36,12 @@ void fn_82881D60(undefined4 param_1)
 {
   int iVar1;
   undefined4 uStack_20;
-  int aiStack_1c [3];
+  int aiStack_1c;
   
   uStack_20 = param_1;
-  fn_8289F160(aiStack_1c,0xffffffff83212a00,&uStack_20);
-  if (aiStack_1c[0] != lbl_83212A04) {
-    iVar1 = *(int *)(aiStack_1c[0] + 0x10);
+  fn_8289F160(&aiStack_1c,0xffffffff83212a00,&uStack_20);
+  if (aiStack_1c != lbl_83212A04) {
+    iVar1 = *(int *)(aiStack_1c + 0x10);
     if (iVar1 != 0) {
       fn_8288C540(iVar1 + 0x10,*(undefined4 *)(*(int *)(iVar1 + 0x14) + 4));
       *(int *)(*(int *)(iVar1 + 0x14) + 4) = *(int *)(iVar1 + 0x14);

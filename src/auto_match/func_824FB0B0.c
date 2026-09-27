@@ -39,16 +39,16 @@ void fn_824FB0B0(int param_1,undefined8 param_2,undefined8 param_3,undefined8 pa
 
 {
   int iVar1;
-  undefined4 uStack_20;
-  undefined4 uStack_1c;
+  struct { undefined4 first; undefined4 second; } stack_pair_20;
+
   undefined4 uStack_18;
   
   if (*(int *)(param_1 + 0x1c0) != 0) {
-    uStack_20 = lbl_821CC160;
-    uStack_1c = lbl_821CC160;
+    stack_pair_20.first = lbl_821CC160;
+    stack_pair_20.second = lbl_821CC160;
     uStack_18 = lbl_821CC160;
     iVar1 = fn_82528FA8((double)lbl_821CA460,param_2,param_1 + 0x1c0,0xffffffff821962c0,
-                              &uStack_20,param_5,0);
+                              &stack_pair_20.first,param_5,0);
     if (iVar1 != 0) {
       *(int *)(param_1 + 0x1b8) = iVar1;
       *(undefined4 *)(iVar1 + 0x2b0) = lbl_82005748;

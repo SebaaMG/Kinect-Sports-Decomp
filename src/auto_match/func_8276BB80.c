@@ -153,8 +153,8 @@ void fn_8276BB80(int param_1,int param_2,int *param_3)
   float fStack_208;
   float fStack_204;
   char cStack_200;
-  undefined4 uStack_1f0;
-  undefined4 uStack_1ec;
+  struct { undefined4 first; undefined4 second; } stack_pair_1f0;
+
   undefined4 uStack_1e8;
   undefined4 uStack_1e4;
   ulonglong uStack_1e0;
@@ -615,12 +615,12 @@ void fn_8276BB80(int param_1,int param_2,int *param_3)
         uVar26 = uVar26 + 1;
       } while ((uVar26 & 0xffffffff) < (ulonglong)uVar27);
     }
-    uStack_1f0 = lbl_821AAD20;
-    uStack_1ec = lbl_821AAD20;
+    stack_pair_1f0.first = lbl_821AAD20;
+    stack_pair_1f0.second = lbl_821AAD20;
     uStack_1e8 = lbl_821AAD20;
     uStack_1e4 = lbl_821AAD20;
     for (uVar26 = (ulonglong)*(uint *)(param_1 + 0x68); uVar26 != 0; uVar26 = uVar26 - 1) {
-      fn_826E8FF0(iVar35,&uStack_1f0);
+      fn_826E8FF0(iVar35,&stack_pair_1f0.first);
     }
     *(undefined1 *)(iVar35 + 0x15) = 0;
     if (*(int *)(iVar35 + 0x30) - *(int *)(iVar35 + 0x2c) < 2) {

@@ -68,7 +68,7 @@ undefined8 fn_82A71F08(int param_1,int param_2,uint param_3,uint param_4,uint pa
   double dVar29;
   double dVar30;
   int iStack_d4;
-  uint auStack_d0 [52];
+  uint auStack_d0 [20];
   
   iVar14 = *(int *)(param_1 + 0x11c);
   if (param_4 != 0) {

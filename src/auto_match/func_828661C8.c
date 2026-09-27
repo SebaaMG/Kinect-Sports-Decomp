@@ -31,12 +31,11 @@ extern unsigned int lbl_82020F10;
 /* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
 
 undefined8
-fn_828661C8(int param_1,undefined4 param_2,undefined4 param_3,undefined4 param_4,
-             undefined4 param_5,undefined4 param_6,undefined4 param_7,undefined4 param_8)
+fn_828661C8(int param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4, undefined4 param_5, undefined4 param_6, undefined4 param_7, undefined4 param_8, undefined4 in_stack_00000054, undefined4 in_stack_0000005c)
 
 {
-  undefined4 in_stack_00000054;
-  undefined4 in_stack_0000005c;
+
+
   
   *(undefined4 *)(param_1 + 0x24) = lbl_82020F10;
   *(undefined4 *)(param_1 + 4) = param_2;

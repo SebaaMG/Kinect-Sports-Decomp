@@ -39,7 +39,7 @@ undefined8 fn_82296B18(int *param_1,int *param_2)
   undefined4 *puVar1;
   int iVar2;
   bool bVar3;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [48];
   
   bVar3 = false;
   if ((param_1 != (int *)0x0) && (*param_1 == 0)) {

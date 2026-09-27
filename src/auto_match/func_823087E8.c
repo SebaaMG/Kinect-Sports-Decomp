@@ -41,7 +41,7 @@ void fn_823087E8(int param_1)
   undefined4 uVar6;
   undefined4 uVar7;
   undefined4 uVar8;
-  undefined1 auStack_30 [24];
+  undefined1 auStack_30 [8];
   
   *(undefined4 *)(param_1 + 0x40) = 0;
   *(undefined4 *)(param_1 + 0x14) = 0;

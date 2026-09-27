@@ -30,7 +30,7 @@ extern int fn_82ABE9F0();
 extern int fn_82B4B9A8();
 extern int fn_82B85298();
 extern int fn_82B8AB60();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int uStack_40;
 
 
@@ -49,7 +49,7 @@ void fn_82B4BEF8(int param_1,ulonglong *param_2)
   uint uVar10;
   int iVar11;
   undefined8 uStack_40;
-  undefined1 auStack_38 [56];
+  undefined1 auStack_38 [1];
   
   uVar10 = (uint)*param_2;
   if ((uVar10 & 3) != 0) {
@@ -77,7 +77,7 @@ void fn_82B4BEF8(int param_1,ulonglong *param_2)
       if (uVar8 < uVar9) {
         iVar11 = uVar9 * 8 + 0xc;
         iVar3 = fn_82ABE9F0(param_1,iVar11,0x20);
-        fn_82F68CC0(iVar3,iVar4,iVar11);
+        memcpy(iVar3,iVar4,iVar11);
         uVar10 = 0;
         if ((*(uint *)(iVar3 + 8) & 0xfffc000) != 0) {
           iVar4 = iVar3 + 0xc;

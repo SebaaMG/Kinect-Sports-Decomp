@@ -34,7 +34,7 @@ extern int fn_82357530();
 extern int fn_82522ED8();
 extern int fn_8265C9E0();
 extern int fn_82A1E740();
-extern int fn_82F63CA0();
+extern int memmove();
 
 
 void fn_8258BC60(int *param_1)
@@ -54,7 +54,7 @@ void fn_8258BC60(int *param_1)
   uint uVar12;
   int iVar13;
   undefined4 auStack_80 [4];
-  undefined1 auStack_70 [112];
+  undefined1 auStack_70 [32];
   
   piVar11 = (int *)*param_1;
   if (piVar11 != (int *)param_1[1]) {
@@ -127,7 +127,7 @@ LAB_8258bdac:
           }
           (*pcVar5)(piVar4,puVar7);
         }
-        fn_82F63CA0(piVar11,piVar10,(param_1[1] - (int)piVar10 >> 2) << 2);
+        memmove(piVar11,piVar10,(param_1[1] - (int)piVar10 >> 2) << 2);
         param_1[1] = param_1[1] + -4;
         fn_82522ED8(*(undefined4 *)(iVar1 + 0x20c));
         fn_82522ED8(iVar1);

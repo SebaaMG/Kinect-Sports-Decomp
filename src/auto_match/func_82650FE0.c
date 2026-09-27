@@ -40,8 +40,8 @@ void fn_82650FE0(undefined4 param_1)
   int *piVar1;
   int iVar2;
   longlong lStack_30;
-  undefined4 uStack_28;
-  undefined4 uStack_24;
+  struct { undefined4 first; undefined4 second; } stack_pair_28;
+
   undefined4 uStack_20;
   
   iVar2 = KeGetCurrentProcessType();
@@ -50,12 +50,12 @@ void fn_82650FE0(undefined4 param_1)
     piVar1 = __imp__VdGlobalXamDevice;
   }
   iVar2 = *piVar1;
-  uStack_28 = param_1;
+  stack_pair_28.first = param_1;
   fn_82A1E968(&lStack_30);
-  uStack_24 = (undefined4)(lStack_30 >> 10);
+  stack_pair_28.second = (undefined4)(lStack_30 >> 10);
   uStack_20 = *(undefined4 *)(iVar2 + 0x5584);
   if (*__imp__KeDebugMonitorData != 0) {
-    (**(code **)(*__imp__KeDebugMonitorData + 0x18))(0x5d,&uStack_28);
+    (**(code **)(*__imp__KeDebugMonitorData + 0x18))(0x5d,&stack_pair_28.first);
   }
   return;
 }

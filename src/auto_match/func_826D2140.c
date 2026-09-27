@@ -52,8 +52,8 @@ void fn_826D2140(int param_1)
   undefined8 uVar3;
   ulonglong uVar4;
   int iVar5;
-  undefined4 uStack_50;
-  undefined4 uStack_4c;
+  struct { undefined4 first; undefined4 second; } stack_pair_50;
+
   undefined2 uStack_48;
   undefined1 uStack_46;
   undefined1 uStack_45;
@@ -65,14 +65,14 @@ void fn_826D2140(int param_1)
   undefined4 uStack_34;
   
   iVar5 = 0;
-  uStack_4c = 0;
-  uStack_50 = 1;
+  stack_pair_50.second = 0;
+  stack_pair_50.first = 1;
   uStack_48 = 0;
   uStack_46 = 0;
   uStack_45 = 0xff;
   uStack_44 = 0;
   uStack_43 = 0;
-  cVar2 = fn_8269EA50(param_1,&uStack_50);
+  cVar2 = fn_8269EA50(param_1,&stack_pair_50.first);
   uVar3 = 4;
   uStack_3c = 0;
   uStack_38 = 0xff;

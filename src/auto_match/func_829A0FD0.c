@@ -41,7 +41,7 @@ undefined8 fn_829A0FD0(int *param_1)
   undefined8 uVar4;
   undefined4 uStack_30;
   uint uStack_2c;
-  undefined4 auStack_28 [10];
+  undefined4 auStack_28;
   
   uVar1 = *(uint *)param_1[0x41];
   uVar4 = fn_8295D0A8(param_1,0x42);
@@ -55,13 +55,13 @@ undefined8 fn_829A0FD0(int *param_1)
       iVar2 = *(int *)(param_1[0x41] + 8);
       uVar4 = (**(code **)(*param_1 + 0x148))
                         (param_1,*(undefined4 *)(*(int *)(iVar3 + iVar2) * 4 + param_1[5]),
-                         &uStack_30,auStack_28);
+                         &uStack_30,&auStack_28);
       if (-1 < (int)uVar4) {
         uVar4 = (**(code **)(*param_1 + 0x14c))
                           (param_1,iVar3 + iVar2,uVar1 & 0xfffff,0xf0000,&uStack_2c);
         if ((-1 < (int)uVar4) &&
            (uVar4 = (**(code **)(*param_1 + 0x13c))
-                              (param_1,uStack_30,uStack_2c | 0x9000000,auStack_28[0]),
+                              (param_1,uStack_30,uStack_2c | 0x9000000,auStack_28),
            -1 < (int)uVar4)) {
           uVar4 = (**(code **)(*param_1 + 0x134))(param_1);
           if ((-1 < (int)uVar4) && (uVar4 = fn_829548C8(param_1), -1 < (int)uVar4)) {

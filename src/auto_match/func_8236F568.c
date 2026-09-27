@@ -44,7 +44,7 @@ undefined8 fn_8236F568(int param_1,undefined8 param_2,int param_3)
   undefined8 uVar2;
   int iVar3;
   undefined4 *puStack_40;
-  int aiStack_3c [15];
+  int aiStack_3c [1];
   
   puStack_40 = (undefined4 *)fn_8265C9E0(0x10);
   iVar3 = 0;

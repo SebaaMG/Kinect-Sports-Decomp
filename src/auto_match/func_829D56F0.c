@@ -48,7 +48,7 @@ void fn_829D56F0(int *param_1)
   longlong lVar9;
   uint auStack_a4 [3];
   undefined8 uStack_98;
-  uint auStack_90 [14];
+  uint auStack_90 [6];
   undefined8 uStack_58;
   int aiStack_50 [16];
   

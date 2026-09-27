@@ -49,7 +49,7 @@ ulonglong fn_82636580(int param_1,int param_2)
   undefined4 *puVar6;
   int iVar7;
   int iVar8;
-  int aiStack_80 [4];
+  int aiStack_80;
   undefined1 auStack_70 [8];
   undefined8 uStack_68;
   undefined8 uStack_60;
@@ -76,8 +76,8 @@ ulonglong fn_82636580(int param_1,int param_2)
       iVar7 = *(int *)(param_1 + 0x4dc8) << 2;
       if (iVar7 != 0) {
         uStack_60 = CONCAT44(*(int *)(param_2 + 0x18) - iVar4,(((U64)(uStack_60) >> 32) & 0xFFFFFFFF));
-        aiStack_80[0] = iVar7;
-        fn_82631E78(iVar8,aiStack_80,4);
+        aiStack_80 = iVar7;
+        fn_82631E78(iVar8,&aiStack_80,4);
         fn_82631E78(iVar8,*(undefined4 *)(param_1 + 0x4dc4),iVar7);
       }
       puVar6 = (undefined4 *)((int)&uStack_60 + 4);

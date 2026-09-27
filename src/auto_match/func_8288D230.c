@@ -28,7 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 extern int fn_822B27D8();
 extern int fn_8265CA20();
 extern int fn_82F622A8();
-extern int fn_82F63CA0();
+extern int memmove();
 
 
 void fn_8288D230(int *param_1,ulonglong param_2,ulonglong param_3,undefined4 *param_4)
@@ -77,8 +77,8 @@ void fn_8288D230(int *param_1,ulonglong param_2,ulonglong param_3,undefined4 *pa
           uVar7 = uVar7 - 1;
         } while (uVar7 != 0);
       }
-      fn_82F63CA0(lVar8,*param_1,(iVar2 - *param_1 >> 2) << 2);
-      fn_82F63CA0(((longlong)(int)uVar1 + param_3 & 0x3fffffff) * 4 + lVar8,param_2,
+      memmove(lVar8,*param_1,(iVar2 - *param_1 >> 2) << 2);
+      memmove(((longlong)(int)uVar1 + param_3 & 0x3fffffff) * 4 + lVar8,param_2,
                    (param_1[1] - iVar2 >> 2) << 2);
       iVar2 = *param_1;
       iVar3 = param_1[1];
@@ -95,7 +95,7 @@ void fn_8288D230(int *param_1,ulonglong param_2,ulonglong param_3,undefined4 *pa
       uVar5 = (int)(uVar1 - iVar2) >> 2;
       if ((ulonglong)uVar5 < (param_3 & 0xffffffff)) {
         lVar8 = (param_3 & 0x3fffffff) * 4;
-        fn_82F63CA0(lVar8 + param_2,param_2,uVar5 << 2);
+        memmove(lVar8 + param_2,param_2,uVar5 << 2);
         uVar12 = param_3 - (longlong)(param_1[1] - iVar2 >> 2);
         if (uVar12 != 0) {
           puVar9 = (undefined4 *)(param_1[1] + -4);
@@ -121,10 +121,10 @@ void fn_8288D230(int *param_1,ulonglong param_2,ulonglong param_3,undefined4 *pa
         lVar8 = uVar12 + (param_3 & 0x3fffffff) * -4;
         iVar3 = (int)lVar8;
         iVar11 = ((int)(uVar1 - iVar3) >> 2) * 4;
-        iVar6 = fn_82F63CA0(uVar12,lVar8,iVar11);
+        iVar6 = memmove(uVar12,lVar8,iVar11);
         param_1[1] = iVar6 + iVar11;
         uVar7 = (ulonglong)(uint)(iVar3 - iVar2 >> 2) & 0x3fffffff;
-        fn_82F63CA0(uVar12 + uVar7 * -4,param_2,uVar7 * 4);
+        memmove(uVar12 + uVar7 * -4,param_2,uVar7 * 4);
         uVar12 = (param_3 & 0x3fffffff) * 4 + param_2;
         if ((param_2 & 0xffffffff) != (uVar12 & 0xffffffff)) {
           do {

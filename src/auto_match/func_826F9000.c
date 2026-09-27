@@ -52,8 +52,8 @@ void fn_826F9000(int *param_1,char param_2)
   float fVar1;
   int *piVar2;
   int iVar3;
-  undefined4 uStack_70;
-  undefined4 uStack_6c;
+  struct { undefined4 first; undefined4 second; } stack_pair_70;
+
   float fStack_68;
   float fStack_64;
   undefined4 uStack_60;
@@ -85,9 +85,9 @@ void fn_826F9000(int *param_1,char param_2)
       uStack_2c = uStack_4c;
     }
     iVar3 = (**(code **)(*piVar2 + 0x40))(piVar2);
-    uStack_6c = *(undefined4 *)(iVar3 + 0x95c);
-    uStack_70 = *(undefined4 *)(iVar3 + 0x958);
-    fn_8268D008(&uStack_40,&fStack_68,&uStack_70);
+    stack_pair_70.second = *(undefined4 *)(iVar3 + 0x95c);
+    stack_pair_70.first = *(undefined4 *)(iVar3 + 0x958);
+    fn_8268D008(&uStack_40,&fStack_68,&stack_pair_70.first);
     fVar1 = (float)piVar2[0x16];
     param_1[6] = (int)((float)piVar2[0x13] - fStack_68);
     param_1[7] = (int)(fVar1 - fStack_64);

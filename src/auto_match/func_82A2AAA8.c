@@ -40,8 +40,8 @@ extern unsigned int uStack_30;
 undefined8 fn_82A2AAA8(undefined4 *param_1,undefined2 *param_2)
 
 {
-  undefined4 uStack_30;
-  undefined4 uStack_2c;
+  struct { undefined4 first; undefined4 second; } stack_pair_30;
+
   undefined2 uStack_20;
   undefined2 uStack_1e;
   undefined2 uStack_1c;
@@ -51,9 +51,9 @@ undefined8 fn_82A2AAA8(undefined4 *param_1,undefined2 *param_2)
   undefined2 uStack_14;
   undefined2 uStack_12;
   
-  uStack_2c = param_1[1];
-  uStack_30 = *param_1;
-  RtlTimeToTimeFields(&uStack_30,&uStack_20);
+  stack_pair_30.second = param_1[1];
+  stack_pair_30.first = *param_1;
+  RtlTimeToTimeFields(&stack_pair_30.first,&uStack_20);
   *param_2 = uStack_20;
   param_2[1] = uStack_1e;
   param_2[3] = uStack_1c;

@@ -41,8 +41,8 @@ void fn_82647950(int param_1)
   undefined8 uVar2;
   int iVar3;
   int iVar4;
-  undefined4 uStack_30;
-  undefined4 uStack_2c;
+  struct { undefined4 first; undefined4 second; } stack_pair_30;
+
   undefined4 uStack_28;
   
   uVar2 = KfAcquireSpinLock(param_1 + 0x4220);
@@ -71,13 +71,13 @@ void fn_82647950(int param_1)
     } while (iVar4 != *(int *)(param_1 + 0x4218));
   }
   if (*(code **)(param_1 + 0x4174) != (code *)0x0) {
-    uStack_2c = *(undefined4 *)(param_1 + 0x4190);
-    uStack_30 = *(undefined4 *)(param_1 + 0x4178);
+    stack_pair_30.second = *(undefined4 *)(param_1 + 0x4190);
+    stack_pair_30.first = *(undefined4 *)(param_1 + 0x4178);
     uStack_28 = 0;
-    (**(code **)(param_1 + 0x4174))(&uStack_30);
+    (**(code **)(param_1 + 0x4174))(&stack_pair_30.first);
   }
-  fn_82A1E968(&uStack_30);
-  *(int *)(param_1 + 0x5584) = (int)(CONCAT44(uStack_30,uStack_2c) >> 10);
+  fn_82A1E968(&stack_pair_30.first);
+  *(int *)(param_1 + 0x5584) = (int)(CONCAT44(stack_pair_30.first,stack_pair_30.second) >> 10);
   KfReleaseSpinLock(param_1 + 0x4220,uVar2);
   return;
 }

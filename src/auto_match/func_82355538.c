@@ -71,7 +71,7 @@ void fn_82355538(int param_1)
   ulonglong uVar10;
   undefined4 uVar12;
   int *piVar13;
-  undefined4 auStack_40 [16];
+  undefined4 auStack_40;
   
   *(undefined4 *)(param_1 + 0x10) = 0;
   fn_8252DC18(1);
@@ -166,16 +166,16 @@ void fn_82355538(int param_1)
   fn_823546D0(param_1);
   fn_82356E38(param_1);
   if (lbl_832765BC != 0) {
-    auStack_40[0] = 0;
-    fn_824601C0(lbl_832765BC,auStack_40);
-    uVar12 = auStack_40[0];
-    cVar9 = fn_82534820(auStack_40[0]);
+    auStack_40 = 0;
+    fn_824601C0(lbl_832765BC,&auStack_40);
+    uVar12 = auStack_40;
+    cVar9 = fn_82534820(auStack_40);
     if (cVar9 != '\0') {
-      auStack_40[0] = uVar12;
-      auStack_40[0] =
-           fn_82535298(auStack_40,*(undefined4 *)(*(int *)(param_1 + 0x14) + 0x84c),
+      auStack_40 = uVar12;
+      auStack_40 =
+           fn_82535298(&auStack_40,*(undefined4 *)(*(int *)(param_1 + 0x14) + 0x84c),
                              0xffffffff83296bc0,0xffffffff83296bd0);
-      fn_82536288(auStack_40);
+      fn_82536288(&auStack_40);
     }
   }
   *(undefined4 *)(param_1 + 0x37c) = 0;

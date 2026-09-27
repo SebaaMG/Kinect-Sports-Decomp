@@ -37,13 +37,13 @@ void fn_827215B0(int param_1,uint *param_2,undefined8 param_3)
   char cVar3;
   int iVar1;
   int iVar2;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30;
   
-  auStack_30[0] = 0;
+  auStack_30 = 0;
   cVar3 = (**(code **)(*(int *)(param_1 + 0x10) + 0x2c))
-                    (param_1 + 0x10,param_2,(ulonglong)*param_2 + 0x140,auStack_30);
+                    (param_1 + 0x10,param_2,(ulonglong)*param_2 + 0x140,&auStack_30);
   if (cVar3 != '\0') {
-    iVar1 = fn_82696958(auStack_30,param_3);
+    iVar1 = fn_82696958(&auStack_30,param_3);
     if ((iVar1 == 0) ||
        (iVar2 = (**(code **)(*(int *)(iVar1 + 0x10) + 8))(iVar1 + 0x10), iVar2 != 7)) {
       if (*(int *)(param_1 + 0x38) != 0) {
@@ -59,7 +59,7 @@ void fn_827215B0(int param_1,uint *param_2,undefined8 param_3)
       *(int *)(param_1 + 0x38) = iVar1;
     }
   }
-  fn_82696330(auStack_30);
+  fn_82696330(&auStack_30);
   return;
 }
 

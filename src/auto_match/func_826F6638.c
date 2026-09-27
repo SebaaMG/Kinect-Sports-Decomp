@@ -34,7 +34,7 @@ void fn_826F6638(int param_1,longlong param_2)
 
 {
   int aiStack_50 [4];
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [32];
   
   aiStack_50[0] = param_1 + 5;
   aiStack_50[2] = 0;

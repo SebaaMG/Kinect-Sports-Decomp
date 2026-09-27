@@ -44,7 +44,7 @@ undefined4 * fn_828E7708(undefined4 *param_1,int param_2,int param_3,char param_
   char cVar7;
   undefined4 *puVar6;
   longlong lVar8;
-  undefined4 *apuStack_60 [24];
+  undefined4 *apuStack_60 [4];
   
   puVar6 = (undefined4 *)(*(undefined4 **)(param_2 + 4))[1];
   lVar8 = 1;

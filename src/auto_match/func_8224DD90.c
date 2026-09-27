@@ -48,7 +48,7 @@ longlong fn_8224DD90(int param_1,undefined8 *param_2)
   ulonglong uVar6;
   longlong lVar7;
   int aiStack_50 [2];
-  undefined8 auStack_48 [9];
+  undefined8 auStack_48;
   
   lVar7 = 0;
   uVar6 = 0;
@@ -73,10 +73,10 @@ LAB_8224de2c:
       if ((bVar1) || (bVar1 = false, iVar4 == 0)) {
         bVar1 = true;
       }
-      auStack_48[0] = *param_2;
+      auStack_48 = *param_2;
       aiStack_50[0] = 0;
       uVar2 = fn_823AB478(iVar3);
-      fn_82A1BFB0(uVar2,auStack_48,1,aiStack_50,0);
+      fn_82A1BFB0(uVar2,&auStack_48,1,aiStack_50,0);
       if ((bVar1) || ((iVar4 == 1 && (aiStack_50[0] == 0)))) {
         lVar7 = 1;
       }

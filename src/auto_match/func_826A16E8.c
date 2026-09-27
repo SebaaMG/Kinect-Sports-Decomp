@@ -39,8 +39,8 @@ void fn_826A16E8(undefined8 param_1,uint *param_2,undefined8 param_3)
   uint uVar1;
   uint uVar2;
   uint uVar3;
-  uint uStack_50;
-  uint uStack_4c;
+  struct { uint first; uint second; } stack_pair_50;
+
   uint uStack_48;
   uint uStack_44;
   
@@ -55,12 +55,12 @@ void fn_826A16E8(undefined8 param_1,uint *param_2,undefined8 param_3)
     if (uVar1 != 0) {
       do {
         if ((*param_2 & uVar3) != 0) {
-          uStack_4c = param_2[1];
+          stack_pair_50.second = param_2[1];
           uStack_48 = param_2[2];
           uStack_44 = param_2[3];
           uVar2 = uVar2 + 1;
-          uStack_50 = uVar3;
-          fn_826A15C8(param_1,&uStack_50,param_3);
+          stack_pair_50.first = uVar3;
+          fn_826A15C8(param_1,&stack_pair_50.first,param_3);
         }
         uVar3 = uVar3 << 1;
       } while (uVar2 < uVar1);

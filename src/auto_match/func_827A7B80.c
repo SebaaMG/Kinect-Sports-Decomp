@@ -52,8 +52,8 @@ undefined8 fn_827A7B80(undefined4 param_1,undefined8 param_2,undefined8 param_3)
   undefined8 uVar1;
   undefined **ppuStack_60;
   undefined4 uStack_5c;
-  undefined4 uStack_58;
-  undefined4 uStack_54;
+  struct { undefined4 first; undefined4 second; } stack_pair_58;
+
   undefined4 uStack_50;
   undefined4 uStack_40;
   undefined4 uStack_3c;
@@ -79,13 +79,13 @@ undefined8 fn_827A7B80(undefined4 param_1,undefined8 param_2,undefined8 param_3)
   uStack_20 = 0;
   uStack_1c = 0;
   uStack_1b = 0;
-  uStack_58 = 0;
-  uStack_54 = 0;
+  stack_pair_58.first = 0;
+  stack_pair_58.second = 0;
   uStack_50 = 0;
   uStack_5c = param_1;
-  uVar1 = fn_827A75A8(&uStack_40,param_2,param_3,&ppuStack_60,&uStack_58);
+  uVar1 = fn_827A75A8(&uStack_40,param_2,param_3,&ppuStack_60,&stack_pair_58.first);
   ppuStack_60 = &lbl_82015C38;
-  fn_8267BE38(uStack_58);
+  fn_8267BE38(stack_pair_58.first);
   fn_8267BE38(uStack_28);
   return uVar1;
 }

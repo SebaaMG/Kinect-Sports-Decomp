@@ -47,7 +47,7 @@ void fn_8229CB40(undefined4 *param_1,undefined4 param_2,undefined4 param_3)
   undefined4 uStack_38;
   undefined1 auStack_30 [8];
   undefined4 uStack_28;
-  undefined1 auStack_20 [32];
+  undefined1 auStack_20 [1];
   
   puVar1 = auStack_4c;
   lVar3 = 2;

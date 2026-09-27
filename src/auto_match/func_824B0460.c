@@ -39,19 +39,19 @@ undefined8 fn_824B0460(int param_1)
   float fVar1;
   undefined1 in_vs32 [16];
   undefined1 in_vs45 [16];
-  float afStack_20 [4];
+  float afStack_20;
   
   if (*(int *)(*(int *)(param_1 + 0x3c) + 0x14) != 0) {
     vectorSubtractFloatingPoint(in_vs32,in_vs45);
-    afStack_20[0] = lbl_821CC160;
-    fn_82559FF0(afStack_20);
+    afStack_20 = lbl_821CC160;
+    fn_82559FF0(&afStack_20);
     fVar1 = *(float *)(*(int *)(param_1 + 0x3c) + 0x74);
     if (*(int *)(*(int *)(param_1 + 0x3c) + 0x34) == 0) {
-      if (afStack_20[0] * lbl_821956D4 < lbl_8219587C - fVar1) {
+      if (afStack_20 * lbl_821956D4 < lbl_8219587C - fVar1) {
         return 1;
       }
     }
-    else if (fVar1 + lbl_82191578 < afStack_20[0] * lbl_821956D4) {
+    else if (fVar1 + lbl_82191578 < afStack_20 * lbl_821956D4) {
       return 1;
     }
   }

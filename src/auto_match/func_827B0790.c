@@ -44,7 +44,7 @@ longlong fn_827B0790(longlong param_1,longlong param_2)
   uint uVar5;
   undefined1 auStack_40 [4];
   uint uStack_3c;
-  undefined1 auStack_38 [56];
+  undefined1 auStack_38 [8];
   
   param_1 = param_1 + 0xc;
   lVar1 = fn_82766450(param_1,param_2,auStack_40);

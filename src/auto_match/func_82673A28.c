@@ -35,8 +35,8 @@ void fn_82673A28(int param_1,undefined4 param_2,int param_3)
 {
   int iVar1;
   int iVar2;
-  undefined4 uStack_30;
-  int iStack_2c;
+  struct { undefined4 first; int second; } stack_pair_30;
+
   
   iVar2 = param_1 + 0x124;
   if (iVar2 != 0) {
@@ -45,9 +45,9 @@ void fn_82673A28(int param_1,undefined4 param_2,int param_3)
   for (iVar1 = *(int *)(param_1 + 0x14); iVar1 != *(int *)(param_1 + 0x18); iVar1 = iVar1 + 8) {
     if (*(int *)(iVar1 + 4) == param_3) goto LAB_82673a88;
   }
-  uStack_30 = param_2;
-  iStack_2c = param_3;
-  fn_826738F0(param_1 + 0x14,&uStack_30);
+  stack_pair_30.first = param_2;
+  stack_pair_30.second = param_3;
+  fn_826738F0(param_1 + 0x14,&stack_pair_30.first);
 LAB_82673a88:
   if (iVar2 != 0) {
     RtlLeaveCriticalSection(iVar2);

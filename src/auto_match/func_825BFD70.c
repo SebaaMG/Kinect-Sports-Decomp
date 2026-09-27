@@ -44,13 +44,13 @@ int fn_825BFD70(int *param_1,int param_2,undefined4 param_3)
   undefined4 in_vr1;
   undefined4 uStack_50;
   undefined4 uStack_4c;
-  undefined4 uStack_48;
-  int iStack_44;
-  undefined1 auStack_40 [40];
+  struct { undefined4 first; int second; } stack_pair_48;
+
+  undefined1 auStack_40 [24];
   
-  iStack_44 = *(int *)(param_2 + 0x34);
-  if (iStack_44 == -2) {
-    fn_82A1EFC0(&uStack_48,0,0x18);
+  stack_pair_48.second = *(int *)(param_2 + 0x34);
+  if (stack_pair_48.second == -2) {
+    fn_82A1EFC0(&stack_pair_48.first,0,0x18);
     uStack_50 = 0x1e;
     uStack_4c = 0x20;
     puVar1 = (undefined4 *)((uint)(auStack_40 + in_r0) & 0xfffffff0);
@@ -58,10 +58,10 @@ int fn_825BFD70(int *param_1,int param_2,undefined4 param_3)
     puVar1[1] = in_register_00010014;
     puVar1[2] = in_register_00010018;
     puVar1[3] = in_vr1;
-    iStack_44 = -1;
-    uStack_48 = param_3;
+    stack_pair_48.second = -1;
+    stack_pair_48.first = param_3;
     (**(code **)(*param_1 + 0xc))(param_1,&uStack_50);
   }
-  return iStack_44;
+  return stack_pair_48.second;
 }
 

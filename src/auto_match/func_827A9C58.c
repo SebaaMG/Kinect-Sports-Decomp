@@ -34,7 +34,7 @@ int * fn_827A9C58(longlong param_1,undefined8 param_2,uint param_3,ulonglong par
 
 {
   int *piVar1;
-  int *apiStack_30 [12];
+  int * apiStack_30;
   
   piVar1 = (int *)fn_827A8420(param_1 + 0xc0,
                                 (((ulonglong)param_3 & 0x1fffffff) * 8 +
@@ -50,8 +50,8 @@ int * fn_827A9C58(longlong param_1,undefined8 param_2,uint param_3,ulonglong par
     else {
       piVar1[1] = param_3;
     }
-    apiStack_30[0] = piVar1;
-    fn_827A9B08(param_1,param_2,apiStack_30);
+    apiStack_30 = piVar1;
+    fn_827A9B08(param_1,param_2,&apiStack_30);
   }
   return piVar1;
 }

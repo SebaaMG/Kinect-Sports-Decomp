@@ -35,27 +35,27 @@ extern unsigned int uStack_20;
 void fn_8229EB38(int param_1,int param_2)
 
 {
-  undefined4 uStack_20;
-  undefined4 uStack_1c;
+  struct { undefined4 first; undefined4 second; } stack_pair_20;
+
   char *pcStack_18;
   
-  uStack_20 = 0;
-  uStack_1c = 0;
+  stack_pair_20.first = 0;
+  stack_pair_20.second = 0;
   if (param_2 != *(int *)(param_1 + 4)) {
     *(int *)(param_1 + 4) = param_2;
     if (param_2 == 0) {
-      fn_82273CD8(&uStack_20,4);
+      fn_82273CD8(&stack_pair_20.first,4);
       pcStack_18 = "single";
     }
     else {
       if (param_2 != 1) goto code_r0x8229ebbc;
-      fn_82273CD8(&uStack_20,4);
+      fn_82273CD8(&stack_pair_20.first,4);
       pcStack_18 = "versus";
     }
-    fn_82672C20(*(undefined4 *)(param_1 + 8),0xffffffff821ab578,&uStack_20,1);
+    fn_82672C20(*(undefined4 *)(param_1 + 8),0xffffffff821ab578,&stack_pair_20.first,1);
   }
 code_r0x8229ebbc:
-  fn_82273C88(&uStack_20);
+  fn_82273C88(&stack_pair_20.first);
   return;
 }
 

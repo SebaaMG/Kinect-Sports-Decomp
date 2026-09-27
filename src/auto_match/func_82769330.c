@@ -39,15 +39,15 @@ double fn_82769330(int param_1,int param_2)
   undefined8 uVar3;
   uint uVar4;
   int iVar5;
-  undefined4 auStack_40 [2];
+  undefined4 auStack_40;
   short sStack_38;
   short sStack_36;
   short sStack_34;
   short sStack_32;
   
-  auStack_40[0] = *(undefined4 *)(param_1 + 8);
+  auStack_40 = *(undefined4 *)(param_1 + 8);
   uVar3 = fn_82767170();
-  fn_827671F0(auStack_40,uVar3);
+  fn_827671F0(&auStack_40,uVar3);
   if ((sStack_34 <= sStack_38) || (bVar2 = true, sStack_32 <= sStack_36)) {
     bVar2 = false;
   }

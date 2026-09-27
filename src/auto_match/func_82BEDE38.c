@@ -38,7 +38,7 @@ void fn_82BEDE38(int *param_1,int *param_2)
   int *piVar2;
   undefined4 uVar3;
   int iStack_30;
-  int aiStack_2c [11];
+  int aiStack_2c;
   
   if (param_1[0x14] == 2) {
     return;
@@ -60,8 +60,8 @@ void fn_82BEDE38(int *param_1,int *param_2)
       iVar1 = *(int *)(param_2[4] + 0x10);
     }
     if (iVar1 != 0) {
-      aiStack_2c[0] = 0;
-      iVar1 = fn_82BF7540(param_1 + 3,&iStack_30,aiStack_2c);
+      aiStack_2c = 0;
+      iVar1 = fn_82BF7540(param_1 + 3,&iStack_30,&aiStack_2c);
       if (iVar1 == 0) goto LAB_82bedf6c;
       if (param_2[4] == 0) {
         iVar1 = 0;
@@ -69,8 +69,8 @@ void fn_82BEDE38(int *param_1,int *param_2)
       else {
         iVar1 = *(int *)(param_2[4] + 0x10);
       }
-      if (*(int *)(aiStack_2c[0] + 0x18) == *(int *)(iVar1 + 0xc)) {
-        piVar2 = (int *)(**(code **)(*param_1 + 8))(param_1,*(undefined4 *)(aiStack_2c[0] + 0xc));
+      if (*(int *)(aiStack_2c + 0x18) == *(int *)(iVar1 + 0xc)) {
+        piVar2 = (int *)(**(code **)(*param_1 + 8))(param_1,*(undefined4 *)(aiStack_2c + 0xc));
         if (piVar2 == (int *)0x0) goto LAB_82bedf6c;
         if (param_2[4] == 0) {
           uVar3 = 0;

@@ -40,7 +40,7 @@ undefined4 fn_82BEC9C8(int param_1,code *param_2,undefined8 param_3,int param_4)
   undefined4 uVar3;
   undefined4 *puVar4;
   int iStack_50;
-  int aiStack_4c [19];
+  int aiStack_4c [2];
   
   if ((*(int *)(param_1 + 0x50) == 2) || (param_2 == (code *)0x0)) {
     uVar3 = 0;

@@ -34,7 +34,7 @@ void fn_825A86A8(int param_1,int param_2)
 {
   uint uVar1;
   uint uVar2;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [1];
   
   uVar1 = *(uint *)(param_1 + 0x748);
   for (uVar2 = *(uint *)(param_1 + 0x744); uVar2 < uVar1; uVar2 = uVar2 + 0x10) {

@@ -32,15 +32,15 @@ uint fn_82BD62B8(undefined4 *param_1)
 
 {
   int iVar1;
-  uint auStack_10 [4];
+  uint auStack_10;
   
-  iVar1 = XamUserGetDeviceContext(*param_1,1,auStack_10);
+  iVar1 = XamUserGetDeviceContext(*param_1,1,&auStack_10);
   if (iVar1 < 0) {
-    auStack_10[0] = 0;
+    auStack_10 = 0;
   }
   else {
-    auStack_10[0] = auStack_10[0] & 0xf0000000;
+    auStack_10 = auStack_10 & 0xf0000000;
   }
-  return auStack_10[0];
+  return auStack_10;
 }
 

@@ -46,7 +46,7 @@ void fn_82742240(int param_1)
   int iVar4;
   ulonglong uVar6;
   undefined1 auStack_60 [32];
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [32];
   
   cVar5 = fn_82695468(param_1,0xf);
   if (cVar5 == '\0') {

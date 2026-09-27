@@ -38,7 +38,7 @@ undefined4 * fn_828E4988(undefined4 *param_1,int *param_2)
 {
   undefined8 uVar1;
   undefined1 auStack_30 [4];
-  undefined4 auStack_2c [11];
+  undefined4 auStack_2c;
   
   param_1[1] = *(undefined4 *)(*param_2 + 4);
   param_1[2] = 0;
@@ -48,9 +48,9 @@ undefined4 * fn_828E4988(undefined4 *param_1,int *param_2)
   param_1[5] = 0;
   fn_82517978(param_1 + 4,*param_2,param_2[1],0);
   fn_828A2240(param_1 + 6,auStack_30,auStack_30);
-  auStack_2c[0] = 0;
+  auStack_2c = 0;
   uVar1 = (**(code **)(*(int *)*param_2 + 0xc))();
-  fn_828E3548(param_1 + 10,uVar1,auStack_2c);
+  fn_828E3548(param_1 + 10,uVar1,&auStack_2c);
   return param_1;
 }
 

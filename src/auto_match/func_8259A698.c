@@ -34,7 +34,7 @@ extern int fn_825BF428();
 extern int fn_8265CA20();
 extern int fn_827D55A0();
 extern int fn_827D9A90();
-extern int fn_82F63CA0();
+extern int memmove();
 extern unsigned int lbl_821C7BA0;
 
 
@@ -46,14 +46,14 @@ void fn_8259A698(undefined4 *param_1)
   int iVar3;
   int *piVar4;
   int iVar5;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [16];
   
   puVar1 = (undefined4 *)param_1[0x2b];
   *param_1 = &lbl_821C7BA0;
   if (puVar1 != (undefined4 *)param_1[0x2c]) {
     do {
       fn_827D55A0(param_1[0x1d],*puVar1,0);
-      fn_82F63CA0(puVar1,puVar1 + 1,(param_1[0x2c] - (int)(puVar1 + 1) >> 2) << 2);
+      memmove(puVar1,puVar1 + 1,(param_1[0x2c] - (int)(puVar1 + 1) >> 2) << 2);
       param_1[0x2c] = param_1[0x2c] + -4;
     } while (puVar1 != (undefined4 *)param_1[0x2c]);
   }

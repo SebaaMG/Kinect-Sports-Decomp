@@ -89,8 +89,8 @@ ulonglong fn_826671A8(int param_1,short param_2,code *param_3,undefined4 param_4
   undefined1 uStack_4d;
   undefined1 uStack_4c;
   int iStack_48;
-  undefined4 uStack_44;
-  uint uStack_40;
+  struct { undefined4 first; uint second; } stack_pair_44;
+
   uint uStack_3c;
   uint uStack_38;
   uint uStack_34;
@@ -115,13 +115,13 @@ ulonglong fn_826671A8(int param_1,short param_2,code *param_3,undefined4 param_4
       uVar1 = 0xffffffffffffffff;
     }
     else {
-      uStack_44 = fn_82A29DE8(iStack00000014,0xffffffff80000000,1,0,3,0x8000080,0);
-      fn_82662C68(auStack_500,&uStack_44);
+      stack_pair_44.first = fn_82A29DE8(iStack00000014,0xffffffff80000000,1,0,3,0x8000080,0);
+      fn_82662C68(auStack_500,&stack_pair_44.first);
       piVar2 = (int *)fn_82F92208(auStack_500);
       if (*piVar2 == -1) {
-        uStack_40 = 0xffffffff;
+        stack_pair_44.second = 0xffffffff;
         fn_82662C98(auStack_500);
-        uVar1 = (ulonglong)uStack_40;
+        uVar1 = (ulonglong)stack_pair_44.second;
       }
       else {
         if (sStack0000001e != 0) {

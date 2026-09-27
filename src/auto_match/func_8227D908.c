@@ -37,8 +37,8 @@ extern unsigned int uStack_30;
 void fn_8227D908(int param_1,int param_2)
 
 {
-  undefined4 uStack_30;
-  undefined4 uStack_2c;
+  struct { undefined4 first; undefined4 second; } stack_pair_30;
+
   double dStack_28;
   
   fn_8266F640(*(undefined4 *)(param_1 + 0x3c),1);
@@ -46,12 +46,12 @@ void fn_8227D908(int param_1,int param_2)
   *(undefined4 *)(param_1 + 0x30) = 0;
   *(undefined4 *)(param_1 + 0x34) = 0;
   *(undefined4 *)(param_1 + 0x38) = 0;
-  uStack_30 = 0;
-  uStack_2c = 0;
-  fn_82273CD8(&uStack_30,3);
+  stack_pair_30.first = 0;
+  stack_pair_30.second = 0;
+  fn_82273CD8(&stack_pair_30.first,3);
   dStack_28 = (double)(longlong)param_2;
-  fn_82672C20(*(undefined4 *)(param_1 + 0x3c),0xffffffff821a8724,&uStack_30,1);
-  fn_82273C88(&uStack_30);
+  fn_82672C20(*(undefined4 *)(param_1 + 0x3c),0xffffffff821a8724,&stack_pair_30.first,1);
+  fn_82273C88(&stack_pair_30.first);
   return;
 }
 

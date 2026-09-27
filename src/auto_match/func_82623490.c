@@ -37,23 +37,23 @@ void fn_82623490(int param_1,uint param_2,undefined4 *param_3)
 
 {
   undefined4 uVar1;
-  undefined4 auStack_40 [2];
-  uint uStack_38;
-  uint uStack_34;
+  undefined4 auStack_40;
+  struct { uint first; uint second; } stack_pair_38;
+
   undefined4 uStack_30;
   
-  auStack_40[0] = *param_3;
-  uStack_38 = fn_825E9F70(*(undefined4 *)(param_1 + 0xc),~param_2 & 1,auStack_40);
-  uVar1 = auStack_40[0];
-  uStack_30 = auStack_40[0];
-  if (uStack_38 == 0) {
-    uStack_38 = 0;
+  auStack_40 = *param_3;
+  stack_pair_38.first = fn_825E9F70(*(undefined4 *)(param_1 + 0xc),~param_2 & 1,&auStack_40);
+  uVar1 = auStack_40;
+  uStack_30 = auStack_40;
+  if (stack_pair_38.first == 0) {
+    stack_pair_38.first = 0;
   }
   else {
-    uStack_34 = ~param_2 & 1;
-    fn_82512E18(param_1 + 0x10,&uStack_38);
+    stack_pair_38.second = ~param_2 & 1;
+    fn_82512E18(param_1 + 0x10,&stack_pair_38.first);
   }
-  if (uStack_38 == 0) {
+  if (stack_pair_38.first == 0) {
     *param_3 = 0;
   }
   else {

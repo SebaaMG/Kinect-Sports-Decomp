@@ -52,7 +52,7 @@ void fn_828DB2F8(int param_1)
   undefined8 uVar4;
   undefined8 uVar5;
   undefined8 uVar7;
-  int aiStack_50 [2];
+  int aiStack_50;
   undefined4 uStack_48;
   undefined1 uStack_44;
   undefined1 uStack_43;
@@ -65,11 +65,11 @@ void fn_828DB2F8(int param_1)
     uVar3 = fn_828D2EE0(param_1);
     if (0x5dc < uVar3) {
       iVar1 = *(int *)(param_1 + 8);
-      aiStack_50[0] = **(int **)(iVar1 + 0x210);
+      aiStack_50 = **(int **)(iVar1 + 0x210);
       uVar7 = *(undefined8 *)(*(int *)(iVar1 + 0x8c) + 0x50);
-      if (aiStack_50[0] != *(int *)(iVar1 + 0x210)) {
+      if (aiStack_50 != *(int *)(iVar1 + 0x210)) {
         do {
-          uVar2 = *(undefined4 *)(aiStack_50[0] + 0x10);
+          uVar2 = *(undefined4 *)(aiStack_50 + 0x10);
           uVar3 = fn_8265C9E0(0x98);
           if ((uVar3 & 0xffffffff) == 0) {
             uVar4 = 0;
@@ -84,8 +84,8 @@ void fn_828DB2F8(int param_1)
           uStack_44 = 0;
           uStack_43 = 0;
           fn_828DB208(param_1 + 0x18,&uStack_48);
-          fn_82381BC0(aiStack_50);
-        } while (aiStack_50[0] != *(int *)(*(int *)(param_1 + 8) + 0x210));
+          fn_82381BC0(&aiStack_50);
+        } while (aiStack_50 != *(int *)(*(int *)(param_1 + 8) + 0x210));
       }
       fn_828D2DB8(param_1,5);
     }

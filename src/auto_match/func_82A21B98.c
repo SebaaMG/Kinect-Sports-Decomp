@@ -30,8 +30,8 @@ extern int fn_82A1DDC0();
 extern int fn_82A20370();
 extern int fn_82A208A8();
 extern int fn_82A20988();
-extern int fn_82F691F0();
-extern int fn_82F6DF30();
+extern int memset();
+extern int tolower();
 
 
 undefined8 fn_82A21B98(int param_1,char *param_2,longlong param_3)
@@ -51,23 +51,23 @@ undefined8 fn_82A21B98(int param_1,char *param_2,longlong param_3)
   char *pcVar12;
   ulonglong uVar13;
   char *pcStack_50;
-  int aiStack_4c [19];
+  int aiStack_4c;
   
-  aiStack_4c[0] = (int)param_3;
+  aiStack_4c = (int)param_3;
   uVar11 = 0xffffffff;
   pcStack_50 = param_2;
-  fn_82A20370(&pcStack_50,aiStack_4c,0x3a);
-  iVar5 = aiStack_4c[0];
+  fn_82A20370(&pcStack_50,&aiStack_4c,0x3a);
+  iVar5 = aiStack_4c;
   pcVar12 = pcStack_50;
-  if ((aiStack_4c[0] != 0) && (*pcStack_50 == '\\')) {
-    iVar5 = aiStack_4c[0] + -1;
+  if ((aiStack_4c != 0) && (*pcStack_50 == '\\')) {
+    iVar5 = aiStack_4c + -1;
     pcVar12 = pcStack_50 + 1;
   }
   uVar3 = CONCAT44(iVar5,iVar5);
   for (; iVar5 != 0; iVar5 = iVar5 + -1) {
     cVar1 = *pcVar12;
     pcVar12 = pcVar12 + 1;
-    uVar13 = fn_82F6DF30(cVar1);
+    uVar13 = tolower(cVar1);
     uVar3 = (uVar13 ^ (uVar3 & 0xff) * 0x11) & 0xffffffff;
   }
   uVar2 = *(ushort *)(param_1 + 6);
@@ -126,6 +126,6 @@ undefined8 fn_82A21B98(int param_1,char *param_2,longlong param_3)
   *(undefined2 *)(iVar5 + 0x12) = 0;
   *(short *)(iVar5 + 0x10) = ((short)iVar5 + 0x10) - (short)param_1;
                     /* WARNING: Subroutine does not return */
-  fn_82F691F0(iVar5 + 0x14,0,(ulonglong)*(ushort *)(param_1 + 6) - 4);
+  memset(iVar5 + 0x14,0,(ulonglong)*(ushort *)(param_1 + 6) - 4);
 }
 

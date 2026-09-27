@@ -57,7 +57,7 @@ undefined8 fn_823D0C80(int param_1,undefined8 param_2)
   undefined4 in_register_000104d4;
   undefined4 in_register_000104d8;
   undefined4 in_vr77;
-  undefined1 auStack_f0 [4];
+  undefined1 auStack_f0 [1];
   int iStack_ec;
   undefined1 auStack_e0 [80];
   undefined1 auStack_90 [16];

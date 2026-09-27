@@ -51,8 +51,8 @@ void fn_82849D18(int param_1)
   int iStack_80;
   undefined4 *puStack_7c;
   undefined1 auStack_70 [28];
-  int iStack_54;
-  int iStack_50;
+  struct { int first; int second; } stack_pair_54;
+
   undefined1 auStack_4c [4];
   undefined4 *puStack_48;
   undefined4 *puStack_44;
@@ -65,14 +65,14 @@ void fn_82849D18(int param_1)
   fn_8284A7C0(&iStack_80,lbl_832112EC,auStack_70);
   fn_82230300(auStack_70,1,0);
   iStack_18 = lbl_832112EC;
-  iStack_54 = *(int *)(lbl_832112EC + 4);
-  iStack_1c = iStack_54;
-  fn_82BA02A8(&iStack_54,lbl_832112EC);
-  if (iStack_54 != iStack_80) {
+  stack_pair_54.first = *(int *)(lbl_832112EC + 4);
+  iStack_1c = stack_pair_54.first;
+  fn_82BA02A8(&stack_pair_54.first,lbl_832112EC);
+  if (stack_pair_54.first != iStack_80) {
     puStack_7c = *(undefined4 **)(iStack_80 + 0x28);
     puStack_7c[1] = puStack_7c[1] + -1;
     if (puStack_7c[1] == 0) {
-      iStack_50 = iStack_80;
+      stack_pair_54.second = iStack_80;
       fn_8284ADC8(auStack_4c,lbl_832112EC,iStack_80);
       puStack_44 = puStack_7c;
       puStack_48 = puStack_7c;

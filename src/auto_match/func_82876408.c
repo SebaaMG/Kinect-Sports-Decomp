@@ -42,7 +42,7 @@ fn_82876408(int param_1,undefined8 param_2,undefined8 param_3,undefined8 param_4
   int iVar2;
   undefined4 uVar3;
   undefined4 auStack_140 [4];
-  undefined1 auStack_130 [304];
+  undefined1 auStack_130 [256];
   
   if ((*param_5 == '\0') && (*(char *)(param_1 + 0x420) != '\0')) {
     uVar1 = 1;

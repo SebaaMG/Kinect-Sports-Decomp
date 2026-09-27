@@ -40,7 +40,7 @@ void fn_82526008(void)
   undefined8 in_r8;
   undefined8 in_r9;
   undefined1 auStack_b0 [64];
-  undefined1 auStack_70 [112];
+  undefined1 auStack_70 [80];
   
   fn_8280ACD8(auStack_b0);
   fn_8280B1E8((double)*in_r6,(double)in_r6[1],(double)in_r6[2],auStack_b0);

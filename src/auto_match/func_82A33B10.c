@@ -27,13 +27,13 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *__imp__XexExecutableModuleHandle;
 extern unsigned int *auStack_50;
-extern int fn_82A27F98();
-extern int fn_82A370D0();
+extern int RtlCreateHeap();
+extern int XapiInitDebugHeap();
 extern unsigned int lbl_8329EB48;
 extern unsigned int uStack_58;
 
 
-bool fn_82A33B10(void)
+bool XapiInitHeap(void)
 
 {
   int *piVar1;
@@ -42,7 +42,7 @@ bool fn_82A33B10(void)
   bool bVar4;
   longlong lVar5;
   undefined8 uStack_58;
-  undefined4 auStack_50 [14];
+  undefined4 auStack_50;
   
   iVar3 = 0x100000;
   if (((*__imp__XexExecutableModuleHandle == 0) ||
@@ -56,11 +56,11 @@ bool fn_82A33B10(void)
       *puVar2 = 0;
       lVar5 = lVar5 + -1;
     } while (lVar5 != 0);
-    auStack_50[0] = 0x30;
+    auStack_50 = 0x30;
     if (lbl_8329EB48 == 0) {
-      lbl_8329EB48 = fn_82A27F98(2,0,iVar3,0x1000,0,auStack_50);
+      lbl_8329EB48 = RtlCreateHeap(2,0,iVar3,0x1000,0,&auStack_50);
     }
-    fn_82A370D0();
+    XapiInitDebugHeap();
     bVar4 = lbl_8329EB48 != 0;
   }
   else {

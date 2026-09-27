@@ -37,8 +37,8 @@ void fn_826DF328(int param_1,undefined8 param_2,undefined4 param_3,undefined8 pa
 
 {
   int iVar1;
-  undefined4 uStack_50;
-  int iStack_4c;
+  struct { undefined4 first; int second; } stack_pair_50;
+
   int *piStack_48;
   int iStack_44;
   
@@ -48,11 +48,11 @@ void fn_826DF328(int param_1,undefined8 param_2,undefined4 param_3,undefined8 pa
     iVar1 = param_1;
   }
   fn_826DEF90(param_1 + 0xcc,param_2,param_4);
-  uStack_50 = (undefined4)param_2;
-  fn_826D9530(&piStack_48,param_1 + 0xcc,&uStack_50);
-  iStack_4c = iStack_44 * 0x14 + *piStack_48 + 0x10;
-  uStack_50 = param_3;
-  fn_826DD060(param_1 + 0xd0,param_1 + 0xd0,&uStack_50);
+  stack_pair_50.first = (undefined4)param_2;
+  fn_826D9530(&piStack_48,param_1 + 0xcc,&stack_pair_50.first);
+  stack_pair_50.second = iStack_44 * 0x14 + *piStack_48 + 0x10;
+  stack_pair_50.first = param_3;
+  fn_826DD060(param_1 + 0xd0,param_1 + 0xd0,&stack_pair_50.first);
   if (iVar1 != 0) {
     RtlLeaveCriticalSection(iVar1 + 0xac);
   }

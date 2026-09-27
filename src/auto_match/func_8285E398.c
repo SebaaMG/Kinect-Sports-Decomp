@@ -33,19 +33,18 @@ extern int fn_8285D080();
 extern int fn_8285D200();
 extern int fn_8285D258();
 extern int fn_8285DF00();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int lbl_832115A4;
 extern unsigned int lbl_832115A5;
 
 
-void fn_8285E398(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefined8 param_4,
-                  undefined8 param_5,undefined8 param_6,float *param_7,undefined8 param_8)
+void fn_8285E398(undefined8 param_1, undefined8 param_2, undefined8 param_3, undefined8 param_4, undefined8 param_5, undefined8 param_6, float *param_7, undefined8 param_8, undefined4 in_stack_00000054)
 
 {
-  undefined4 in_stack_00000054;
+
   undefined1 auStack_f0 [8];
   undefined1 auStack_e8 [8];
-  undefined1 auStack_e0 [224];
+  undefined1 auStack_e0 [160];
   
   if (lbl_832115A5 == '\0') {
     fn_8285D200(param_1,param_2);
@@ -55,12 +54,12 @@ void fn_8285E398(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefi
     if (lbl_832115A4 == '\0') {
       fn_8285D080(param_1,param_2,param_7,param_5,param_4,param_6,param_8,in_stack_00000054);
     }
-    fn_82F68CC0(auStack_e0,0xffffffff83211408,0xa8);
+    memcpy(auStack_e0,0xffffffff83211408,0xa8);
     fn_8285D200(param_1,param_2);
     fn_82811898((double)*param_7,(double)param_7[1],auStack_f0);
     fn_82811898((double)(param_7[2] + *param_7),(double)(param_7[3] + param_7[1]),auStack_e8);
     fn_8285DF00(param_3,param_8,auStack_f0,auStack_e8,0);
-    fn_82F68CC0(0xffffffff83211408,auStack_e0,0xa8);
+    memcpy(0xffffffff83211408,auStack_e0,0xa8);
     fn_8285D258(0xffffffff83211380,0xffffffff83211408);
   }
   return;

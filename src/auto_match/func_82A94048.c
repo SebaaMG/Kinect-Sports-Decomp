@@ -32,7 +32,7 @@ extern unsigned int *auStack_5c;
 extern unsigned int *auStack_60;
 extern unsigned int *auStack_64;
 extern int fn_8263B958();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int uStack_20;
 extern unsigned int uStack_30;
 extern unsigned int uStack_70;
@@ -51,7 +51,7 @@ undefined4 fn_82A94048(undefined8 param_1,undefined8 param_2,undefined8 param_3)
   uint uStack_30;
   uint uStack_20;
   
-  fn_82F68CC0(auStack_50,param_1,0x34);
+  memcpy(auStack_50,param_1,0x34);
   uStack_30 = uStack_30 & 0xfff;
   uStack_20 = uStack_20 & 0xfff;
   fn_8263B958(auStack_50,param_2,param_3,auStack_54,auStack_58,auStack_5c,auStack_60,

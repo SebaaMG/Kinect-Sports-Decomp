@@ -43,7 +43,7 @@ bool fn_8296C668(int param_1)
   uint uVar10;
   int iVar11;
   longlong lVar12;
-  int *apiStack_40 [16];
+  int * apiStack_40;
   
   bVar5 = false;
   uVar10 = 0;
@@ -64,16 +64,16 @@ bool fn_8296C668(int param_1)
       puVar1 = *(uint **)(iVar9 + *(int *)(param_1 + 0x18));
       if ((*puVar1 & 0xfff00000) != 0) {
         lVar12 = 0;
-        while (uVar6 = fn_82963318(puVar1,lVar12,apiStack_40), (uVar6 & 0xffffffff) != 0) {
-          if (*(int *)(*(int *)(*apiStack_40[0] * 4 + *(int *)(param_1 + 0x14)) + 0x30) != -1) {
+        while (uVar6 = fn_82963318(puVar1,lVar12,&apiStack_40), (uVar6 & 0xffffffff) != 0) {
+          if (*(int *)(*(int *)(*apiStack_40 * 4 + *(int *)(param_1 + 0x14)) + 0x30) != -1) {
             uVar8 = 1;
-            piVar4 = apiStack_40[0];
+            piVar4 = apiStack_40;
             if (1 < (uVar6 & 0xffffffff)) {
               do {
                 iVar11 = piVar4[1] * 4;
                 if ((*(int *)(*(int *)(iVar11 + *(int *)(param_1 + 0x14)) + 0x30) == -1) ||
                    (iVar2 = *(int *)(param_1 + 0x14),
-                   *(int *)(*(int *)(*(int *)(*(int *)(iVar2 + *apiStack_40[0] * 4) + 0x30) * 4 +
+                   *(int *)(*(int *)(*(int *)(*(int *)(iVar2 + *apiStack_40 * 4) + 0x30) * 4 +
                                     iVar2) + 0xc) !=
                    *(int *)(*(int *)(*(int *)(*(int *)(iVar11 + iVar2) + 0x30) * 4 + iVar2) + 0xc)))
                 break;
@@ -85,9 +85,9 @@ bool fn_8296C668(int param_1)
             if ((uVar6 & 0xffffffff) != 0) {
               iVar11 = 0;
               do {
-                *(undefined4 *)(iVar11 + (int)apiStack_40[0]) =
+                *(undefined4 *)(iVar11 + (int)apiStack_40) =
                      *(undefined4 *)
-                      (*(int *)(*(int *)(iVar11 + (int)apiStack_40[0]) * 4 +
+                      (*(int *)(*(int *)(iVar11 + (int)apiStack_40) * 4 +
                                *(int *)(param_1 + 0x14)) + 0x30);
                 iVar11 = iVar11 + 4;
                 uVar6 = uVar6 - 1;

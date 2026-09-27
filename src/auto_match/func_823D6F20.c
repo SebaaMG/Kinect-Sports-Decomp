@@ -44,8 +44,8 @@ void fn_823D6F20(ulonglong param_1,ulonglong param_2,ulonglong param_3,undefined
   ulonglong uVar4;
   ulonglong uVar6;
   undefined8 *puVar7;
-  uint uStack_60;
-  uint uStack_5c;
+  struct { uint first; uint second; } stack_pair_60;
+
   undefined8 uStack_58;
   undefined8 auStack_50 [10];
   
@@ -57,13 +57,13 @@ void fn_823D6F20(ulonglong param_1,ulonglong param_2,ulonglong param_3,undefined
       iVar5 = (int)param_3;
       param_2 = uVar4;
       if (iVar5 < 1) break;
-      fn_823D70B0(&uStack_60,param_1,uVar4,param_4);
+      fn_823D70B0(&stack_pair_60.first,param_1,uVar4,param_4);
       param_3 = (longlong)(iVar5 >> 1) + (ulonglong)(iVar5 < 0 && (param_3 & 1) != 0);
       param_3 = (longlong)((int)param_3 >> 1) + (ulonglong)((int)param_3 < 0 && (param_3 & 1) != 0)
                 + param_3;
-      uVar6 = (ulonglong)uStack_5c;
-      param_2 = (ulonglong)uStack_60;
-      if ((int)(uStack_60 - (int)param_1 & 0xfffffff8) < (int)((int)uVar4 - uStack_5c & 0xfffffff8))
+      uVar6 = (ulonglong)stack_pair_60.second;
+      param_2 = (ulonglong)stack_pair_60.first;
+      if ((int)(stack_pair_60.first - (int)param_1 & 0xfffffff8) < (int)((int)uVar4 - stack_pair_60.second & 0xfffffff8))
       {
         fn_823D6F20(param_1,param_2,param_3,param_4);
         param_2 = uVar4;

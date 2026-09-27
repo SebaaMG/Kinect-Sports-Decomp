@@ -38,8 +38,8 @@ undefined2 fn_82768B78(int param_1)
 
 {
   undefined8 uVar1;
-  undefined4 uStack_20;
-  undefined4 uStack_1c;
+  struct { undefined4 first; undefined4 second; } stack_pair_20;
+
   undefined4 uStack_18;
   undefined4 uStack_14;
   
@@ -48,12 +48,12 @@ undefined2 fn_82768B78(int param_1)
   uStack_14 = lbl_821AAD20;
   uVar1 = (**(code **)(**(int **)(param_1 + 0xc) + 0xc))();
   if ((int)uVar1 == -1) {
-    uStack_1c = ((((U64)(uStack_1c)) & (~(((U64)0xFFFF) << 16))) | ((((U64)(0)) & ((U64)0xFFFF)) << 16));
+    stack_pair_20.second = ((((U64)(stack_pair_20.second)) & (~(((U64)0xFFFF) << 16))) | ((((U64)(0)) & ((U64)0xFFFF)) << 16));
   }
   else {
-    (**(code **)(**(int **)(param_1 + 0xc) + 0x30))(*(int **)(param_1 + 0xc),uVar1,&uStack_20);
-    uStack_1c = ((((U64)(uStack_1c)) & (~(((U64)0xFFFF) << 16))) | ((((U64)((undefined2)(longlong)-uStack_1c)) & ((U64)0xFFFF)) << 16));
+    (**(code **)(**(int **)(param_1 + 0xc) + 0x30))(*(int **)(param_1 + 0xc),uVar1,&stack_pair_20.first);
+    stack_pair_20.second = ((((U64)(stack_pair_20.second)) & (~(((U64)0xFFFF) << 16))) | ((((U64)((undefined2)(longlong)-stack_pair_20.second)) & ((U64)0xFFFF)) << 16));
   }
-  return (((U64)(uStack_1c) >> 16) & 0xFFFF);
+  return (((U64)(stack_pair_20.second) >> 16) & 0xFFFF);
 }
 

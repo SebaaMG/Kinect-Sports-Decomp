@@ -31,7 +31,7 @@ extern unsigned int *auStack_110;
 extern unsigned int *auStack_70;
 extern unsigned int *auStack_b0;
 extern int fn_82A1C120();
-extern int fn_82F691F0();
+extern int memset();
 
 
 void fn_8225F748(int param_1)
@@ -42,14 +42,14 @@ void fn_8225F748(int param_1)
   undefined1 auStack_10c [4];
   undefined1 auStack_108 [88];
   undefined1 auStack_b0 [64];
-  undefined1 auStack_70 [112];
+  undefined1 auStack_70 [80];
   
   *(undefined1 *)(param_1 + 2) = 1;
   iVar1 = fn_82A1C120(0xffffffff821a6764,auStack_70,0x40,auStack_110,auStack_108,auStack_10c,
                             auStack_b0,0x40);
   if (iVar1 != 0) {
                     /* WARNING: Subroutine does not return */
-    fn_82F691F0(param_1 + 3,0,0x24);
+    memset(param_1 + 3,0,0x24);
   }
   return;
 }

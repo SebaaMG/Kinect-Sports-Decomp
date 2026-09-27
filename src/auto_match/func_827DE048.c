@@ -29,7 +29,7 @@ extern unsigned int *auStack_30;
 extern unsigned int *auStack_50;
 extern int fn_827D94C0();
 extern int fn_82811400();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 undefined4 * fn_827DE048(undefined4 *param_1)
@@ -41,10 +41,10 @@ undefined4 * fn_827DE048(undefined4 *param_1)
   undefined1 auStack_30 [32];
   
   uVar1 = fn_82811400(auStack_30,0x10);
-  fn_82F68CC0(auStack_50,uVar1,0x18);
+  memcpy(auStack_50,uVar1,0x18);
   uVar2 = fn_827D94C0();
   *param_1 = uVar2;
-  fn_82F68CC0(param_1 + 1,auStack_50,0x18);
+  memcpy(param_1 + 1,auStack_50,0x18);
   return param_1;
 }
 

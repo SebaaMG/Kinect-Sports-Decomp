@@ -48,17 +48,17 @@ ulonglong fn_82A1F9D0(undefined4 param_1,longlong *param_2,int param_3,undefined
   longlong lStack_b0;
   undefined1 auStack_a8 [8];
   undefined1 auStack_a0 [8];
-  undefined4 uStack_98;
-  undefined4 uStack_94;
+  struct { undefined4 first; undefined4 second; } stack_pair_98;
+
   undefined4 uStack_90;
   undefined1 auStack_80 [32];
   longlong lStack_60;
   
-  uStack_98 = 0xfffffffd;
+  stack_pair_98.first = 0xfffffffd;
   uStack_90 = 0x40;
-  uStack_94 = param_1;
+  stack_pair_98.second = param_1;
   uVar3 = (**(code **)(lbl_83219B8C + 0xc))
-                    (param_4,0xffffffffc0100000,&uStack_98,auStack_a8,0,0,0,(param_3 != 0) + '\x02')
+                    (param_4,0xffffffffc0100000,&stack_pair_98.first,auStack_a8,0,0,0,(param_3 != 0) + '\x02')
   ;
   if ((uVar3 & 0xc0000000) != 0xc0000000) {
     do {

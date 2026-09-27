@@ -37,8 +37,8 @@ void fn_82359928(int param_1,int param_2)
 {
   int iVar1;
   ulonglong uVar2;
-  undefined4 uStack_30;
-  int iStack_2c;
+  struct { undefined4 first; int second; } stack_pair_30;
+
   
   if (*(int *)(param_1 + 0xb0) != param_2) {
     iVar1 = fn_8249ABC0();
@@ -49,10 +49,10 @@ void fn_82359928(int param_1,int param_2)
     }
     if (param_2 == 0) {
       iVar1 = *(int *)((int)uVar2 + 0x20);
-      uStack_30 = 0;
+      stack_pair_30.first = 0;
       *(int *)((int)uVar2 + 0x20) = iVar1 + 1;
-      iStack_2c = iVar1;
-      fn_824BF8A8(uVar2 + 0x10,&uStack_30);
+      stack_pair_30.second = iVar1;
+      fn_824BF8A8(uVar2 + 0x10,&stack_pair_30.first);
       *(int *)(param_1 + 0xb8) = iVar1;
     }
     *(int *)(param_1 + 0xb0) = param_2;

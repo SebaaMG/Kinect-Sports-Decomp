@@ -43,7 +43,7 @@ void fn_827629D8(int param_1,int param_2)
 
 {
   bool bVar1;
-  float afStack_50 [2];
+  float afStack_50;
   float fStack_48;
   float fStack_44;
   int aiStack_40 [4];
@@ -54,8 +54,8 @@ void fn_827629D8(int param_1,int param_2)
   char cStack_20;
   
   fn_8275FD58(aiStack_40,param_1);
-  fn_8275E130(aiStack_40,&fStack_48,afStack_50);
-  fn_82784708((double)fStack_48,(double)afStack_50[0],param_2,
+  fn_8275E130(aiStack_40,&fStack_48,&afStack_50);
+  fn_82784708((double)fStack_48,(double)afStack_50,param_2,
                     (ulonglong)*(uint *)(param_1 + 0x14) - 1,
                     (ulonglong)*(uint *)(param_1 + 0x18) - 1,
                     (ulonglong)*(uint *)(param_1 + 0x1c) - 1);

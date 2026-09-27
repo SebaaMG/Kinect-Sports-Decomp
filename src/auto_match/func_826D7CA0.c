@@ -36,27 +36,27 @@ int fn_826D7CA0(int *param_1,int param_2,int *param_3)
 
 {
   int iVar1;
-  int iStack_20;
-  int iStack_1c;
+  struct { int first; int second; } stack_pair_20;
+
   
   if (*param_1 == 0) {
     *param_3 = param_2;
     iVar1 = param_1[1];
   }
   else {
-    iStack_20 = 0;
-    iStack_1c = 0;
+    stack_pair_20.first = 0;
+    stack_pair_20.second = 0;
     if ((*(char *)(param_2 + 0x28) == '\0') || (*(uint *)(param_2 + 4) <= (uint)param_1[1])) {
-      fn_826F30F0(param_2,&iStack_20);
+      fn_826F30F0(param_2,&stack_pair_20.first);
     }
     else {
-      fn_82687F98(&iStack_20,
+      fn_82687F98(&stack_pair_20.first,
                         (ulonglong)*(uint *)(param_2 + 8) +
                         ((ulonglong)(uint)param_1[1] & 0x1fffffff) * 8);
     }
-    iVar1 = iStack_20;
-    *param_3 = iStack_1c;
-    if (iStack_20 != 0) {
+    iVar1 = stack_pair_20.first;
+    *param_3 = stack_pair_20.second;
+    if (stack_pair_20.first != 0) {
       fn_82687270();
     }
   }

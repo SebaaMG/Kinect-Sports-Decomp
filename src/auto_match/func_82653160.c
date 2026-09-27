@@ -34,8 +34,8 @@ extern int fn_8263A998();
 extern int fn_8263C7F0();
 extern int fn_8263C910();
 extern int fn_82655F40();
-extern int fn_82F68CC0();
-extern int fn_8314276C();
+extern int memcpy();
+extern int VdQueryVideoMode();
 extern unsigned int lbl_8218E8E8;
 extern unsigned int uStack_68c;
 extern unsigned int uStack_690;
@@ -63,7 +63,7 @@ undefined8 fn_82653160(int param_1,undefined4 *param_2)
   undefined4 uStack_68c;
   float fStack_67c;
   undefined1 auStack_660 [1022];
-  short asStack_262 [305];
+  short asStack_262 [265];
   
   uVar15 = param_2[0x10];
   uVar2 = *param_2;
@@ -101,7 +101,7 @@ LAB_826531fc:
       uVar14 = 0x36;
     }
   }
-  fn_8314276C(&uStack_690);
+  VdQueryVideoMode(&uStack_690);
   fStack_67c = fStack_67c + lbl_8218E8E8;
   *(undefined4 *)(param_1 + 0x5500) = uStack_690;
   *(undefined4 *)(param_1 + 0x5508) = uStack_690;
@@ -130,7 +130,7 @@ LAB_826532a0:
       *(int *)(param_1 + 0x3abc) = (int)lVar10;
       fn_8263A508(param_1);
     }
-    fn_82F68CC0(param_1 + 0x35bc,param_2,0x7c);
+    memcpy(param_1 + 0x35bc,param_2,0x7c);
     if ((uVar15 & 0x3ffc0000) != 0x24900000) {
       *(uint *)(param_1 + 0x35fc) = uVar7 | 0x28280100;
     }

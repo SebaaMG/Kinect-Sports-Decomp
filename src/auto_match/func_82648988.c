@@ -40,7 +40,7 @@ extern int fn_82645110();
 extern int fn_82647258();
 extern int fn_82647C20();
 extern int fn_82648160();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int lbl_821CA460;
 extern unsigned int lbl_821CEA40;
 extern unsigned int uStack_44;
@@ -61,8 +61,8 @@ void fn_82648988(int param_1)
   undefined4 uVar6;
   undefined4 uVar7;
   undefined1 auStack_60 [16];
-  undefined4 uStack_50;
-  undefined4 uStack_4c;
+  struct { undefined4 first; undefined4 second; } stack_pair_50;
+
   undefined4 uStack_48;
   undefined4 uStack_44;
   float fStack_40;
@@ -72,9 +72,9 @@ void fn_82648988(int param_1)
   float fStack_30;
   float fStack_2c;
   
-  fn_82F68CC0(&fStack_40,param_1 + 0x3218,0x1c);
-  uStack_50 = *(undefined4 *)(param_1 + 0x3234);
-  uStack_4c = *(undefined4 *)(param_1 + 0x3238);
+  memcpy(&fStack_40,param_1 + 0x3218,0x1c);
+  stack_pair_50.first = *(undefined4 *)(param_1 + 0x3234);
+  stack_pair_50.second = *(undefined4 *)(param_1 + 0x3238);
   uStack_48 = *(undefined4 *)(param_1 + 0x323c);
   uStack_44 = *(undefined4 *)(param_1 + 0x3240);
   fn_8263A1B8(param_1,0,*(undefined4 *)(param_1 + 0x3ac4));
@@ -97,7 +97,7 @@ void fn_82648988(int param_1)
   fn_82645110(param_1);
   fn_82637840((double)fStack_40,(double)fStack_3c,(double)fStack_38,(double)fStack_34,
                     (double)fStack_30,(double)fStack_2c,param_1);
-  fn_82639DB0(param_1,&uStack_50);
+  fn_82639DB0(param_1,&stack_pair_50.first);
   fn_82648160(param_1,*(undefined4 *)(param_1 + 0x3ac0),param_1 + 0x361c);
   return;
 }

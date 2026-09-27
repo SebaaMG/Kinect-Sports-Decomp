@@ -37,7 +37,7 @@ void fn_8232AC58(int *param_1,undefined8 param_2,uint *param_3)
   undefined8 uVar1;
   char cVar2;
   longlong lVar3;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
   
   if (param_3 != (uint *)0x0) {
     if ((int *)*param_3 == (int *)0x0) {

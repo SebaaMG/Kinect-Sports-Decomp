@@ -45,7 +45,7 @@ void fn_826DFFC0(int param_1)
   undefined8 uVar4;
   int iVar6;
   ulonglong uVar7;
-  uint auStack_40 [16];
+  uint auStack_40;
   
   uVar5 = fn_826A6A38();
   iVar6 = *(int *)(param_1 + 0x314);
@@ -72,8 +72,8 @@ void fn_826DFFC0(int param_1)
     uVar4 = fn_826DF848(param_1);
     uVar7 = (**(code **)(iVar2 + 0xc))(piVar1,uVar3,uVar4);
   }
-  auStack_40[0] = uVar5 & 0xffff;
-  fn_826F4A18(param_1,auStack_40,uVar7);
+  auStack_40 = uVar5 & 0xffff;
+  fn_826F4A18(param_1,&auStack_40,uVar7);
   if ((uVar7 & 0xffffffff) != 0) {
     fn_8267C498(uVar7);
   }

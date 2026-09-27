@@ -35,7 +35,7 @@ void fn_82CE3DC8(undefined8 param_1,undefined8 param_2,undefined *param_3)
 
 {
   char *pcVar1;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
   
   if ((param_3 != (undefined *)0x0) && (param_3 != &lbl_8323AB38)) {
     pcVar1 = (char *)fn_82CEE9F8(auStack_30,param_3);

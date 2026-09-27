@@ -38,7 +38,7 @@ fn_82865D68(undefined4 *param_1,int param_2,int param_3,undefined8 param_4,undef
   int iVar1;
   int iVar2;
   undefined4 *puVar3;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [32];
   
   fn_82865C68(auStack_40,param_4,param_5);
   puVar3 = param_1;

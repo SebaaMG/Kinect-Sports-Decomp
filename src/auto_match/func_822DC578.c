@@ -43,7 +43,7 @@ void fn_822DC578(int param_1,int param_2,undefined8 param_3)
   longlong lVar8;
   longlong lVar9;
   undefined4 uStack_64;
-  undefined1 auStack_60 [96];
+  undefined1 auStack_60 [16];
   
   iVar5 = param_1;
   iVar6 = param_1;

@@ -58,8 +58,8 @@ ulonglong fn_826CC9E8(int *param_1,int *param_2,uint *param_3)
   ulonglong uVar3;
   int iVar4;
   char cVar5;
-  undefined4 uStack_60;
-  undefined4 uStack_5c;
+  struct { undefined4 first; undefined4 second; } stack_pair_60;
+
   undefined2 uStack_58;
   undefined1 uStack_56;
   undefined1 uStack_55;
@@ -84,13 +84,13 @@ ulonglong fn_826CC9E8(int *param_1,int *param_2,uint *param_3)
     uVar3 = (**(code **)(*param_1 + 0x6c))();
     if (((*param_3 & 1) == 0) && (iVar4 = fn_826A7720(param_2), iVar4 != 0)) {
       uStack_58 = (undefined2)iVar4;
-      uStack_5c = 0;
+      stack_pair_60.second = 0;
       uStack_56 = 0;
-      uStack_60 = 0x20000;
+      stack_pair_60.first = 0x20000;
       uStack_55 = 0;
       uStack_54 = 0;
       uStack_53 = 0;
-      uVar3 = (**(code **)(*param_1 + 0x6c))(param_1,&uStack_60);
+      uVar3 = (**(code **)(*param_1 + 0x6c))(param_1,&stack_pair_60.first);
       if ((uVar3 & 0xff) != 0) {
         *param_3 = *param_3 | 1;
       }

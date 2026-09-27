@@ -61,8 +61,8 @@ void fn_82546930(void)
   bool bVar1;
   undefined4 uStack_6c;
   undefined4 uStack_64;
-  undefined4 uStack_60;
-  undefined4 uStack_5c;
+  struct { undefined4 first; undefined4 second; } stack_pair_60;
+
   undefined4 uStack_58;
   undefined4 uStack_54;
   undefined4 uStack_50;
@@ -75,8 +75,8 @@ void fn_82546930(void)
   undefined4 uStack_2c;
   
   if (uRam8326b480 != 0) {
-    uStack_60 = 0;
-    uStack_5c = 0;
+    stack_pair_60.first = 0;
+    stack_pair_60.second = 0;
     uStack_6c = (undefined4)(longlong)*(float *)(lbl_8320A898 + 0x3220);
     uStack_38 = uStack_6c;
     uStack_58 = lbl_8326B430;
@@ -91,7 +91,7 @@ void fn_82546930(void)
     uStack_3c = uStack_64;
     uStack_30 = uStack_50;
     uStack_2c = uStack_4c;
-    fn_82639EA8(lbl_8320A898,&uStack_60);
+    fn_82639EA8(lbl_8320A898,&stack_pair_60.first);
     fn_8263DE70((double)lbl_821CA460,lbl_8320A898,0,0,0xf,0);
     fn_82639EA8(lbl_8320A898,&uStack_40);
   }

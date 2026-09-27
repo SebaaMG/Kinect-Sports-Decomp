@@ -53,21 +53,21 @@ void fn_824B1D10(int param_1,int *param_2)
   undefined4 uVar10;
   undefined4 uVar11;
   undefined4 uVar12;
-  int iStack_60;
-  undefined4 uStack_5c;
+  struct { int first; undefined4 second; } stack_pair_60;
+
   undefined1 auStack_58 [8];
   undefined1 auStack_50 [16];
   undefined1 auStack_40 [16];
   float fStack_30;
   int iStack_2c;
   
-  (**(code **)*param_2)(param_2,auStack_58,&uStack_5c);
-  (**(code **)(*param_2 + 4))(param_2,uStack_5c,&iStack_60);
-  puVar2 = (undefined4 *)(*(int *)(iStack_60 + 0x40) + 0x150U & 0xfffffff0);
+  (**(code **)*param_2)(param_2,auStack_58,&stack_pair_60.second);
+  (**(code **)(*param_2 + 4))(param_2,stack_pair_60.second,&stack_pair_60.first);
+  puVar2 = (undefined4 *)(*(int *)(stack_pair_60.first + 0x40) + 0x150U & 0xfffffff0);
   uVar6 = puVar2[1];
   uVar7 = puVar2[2];
   uVar8 = puVar2[3];
-  puVar3 = (undefined4 *)(*(int *)(iStack_60 + 0x40) + 0x250U & 0xfffffff0);
+  puVar3 = (undefined4 *)(*(int *)(stack_pair_60.first + 0x40) + 0x250U & 0xfffffff0);
   uVar9 = *puVar3;
   uVar10 = puVar3[1];
   uVar11 = puVar3[2];
@@ -86,7 +86,7 @@ void fn_824B1D10(int param_1,int *param_2)
   dVar5 = (double)fn_82F4ED08();
   iVar1 = *(int *)(param_1 + 0x3c);
   fStack_30 = (float)dVar5;
-  iStack_2c = *(int *)(iStack_60 + 0x48);
+  iStack_2c = *(int *)(stack_pair_60.first + 0x48);
   if (*(int *)(iVar1 + 0x14) != 0) {
     iVar4 = *(int *)(iVar1 + 0x14) + -1;
     if ((*(int *)(iVar1 + 8) - *(int *)(iVar1 + 0xc)) / 0x30 <= iVar4) {

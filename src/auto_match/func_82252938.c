@@ -38,7 +38,7 @@ void fn_82252938(int param_1,undefined8 param_2,int param_3)
   undefined1 auStack_40 [4];
   undefined4 uStack_3c;
   undefined4 auStack_38 [2];
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
   
   (**(code **)(**(int **)(param_1 + 0x68) + 0x14))(*(int **)(param_1 + 0x68),param_2,auStack_40);
   (**(code **)(**(int **)(param_1 + 0x70) + 0x14))(*(int **)(param_1 + 0x70),param_2,auStack_38);

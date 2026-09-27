@@ -44,9 +44,9 @@ int fn_8286CEF8(int param_1)
   undefined4 *puVar4;
   bool bVar5;
   int iStack_40;
-  undefined1 auStack_3c [4];
-  float fStack_38;
-  float fStack_34;
+  undefined1 auStack_3c [1];
+  struct { float first; float second; } stack_pair_38;
+
   float fStack_30;
   
   if (*(char *)(param_1 + 4) != '\0') {
@@ -65,9 +65,9 @@ int fn_8286CEF8(int param_1)
           fn_8286D418(auStack_3c,puVar4,*(int *)*puVar4);
           fn_8286D3A0(puVar4,*puVar4,&iStack_40);
           if (*(char *)(iVar1 + 4) != '\0') {
-            fn_82810328(iVar1 + 0x14,iVar1 + 8,&fStack_38);
+            fn_82810328(iVar1 + 0x14,iVar1 + 8,&stack_pair_38.first);
             bVar5 = *(float *)(param_1 + 0x14) <
-                    fStack_38 * fStack_38 + fStack_30 * fStack_30 + fStack_34 * fStack_34;
+                    stack_pair_38.first * stack_pair_38.first + fStack_30 * fStack_30 + stack_pair_38.second * stack_pair_38.second;
             *(bool *)(iVar1 + 0x5a) = bVar5;
             if (!bVar5) {
               return iVar1;

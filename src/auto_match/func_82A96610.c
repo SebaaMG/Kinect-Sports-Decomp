@@ -44,9 +44,9 @@ void fn_82A96610(int param_1,int param_2)
   undefined4 in_register_00010014;
   undefined4 in_register_00010018;
   undefined4 in_vr1;
-  ushort auStack_50 [6];
+  ushort auStack_50;
   int iStack_44;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [16];
   
   piVar5 = (int *)(param_2 + 0xc);
   piVar3 = &iStack_44;
@@ -58,12 +58,12 @@ void fn_82A96610(int param_1,int param_2)
   puVar2[3] = in_vr1;
   do {
     piVar3 = piVar3 + 1;
-    auStack_50[0] = (ushort)(*piVar3 << (piVar5[8] & 0x3fU)) & (ushort)piVar5[4];
-    fn_82AA75B8(auStack_50,auStack_50,0x20001);
+    auStack_50 = (ushort)(*piVar3 << (piVar5[8] & 0x3fU)) & (ushort)piVar5[4];
+    fn_82AA75B8(&auStack_50,&auStack_50,0x20001);
     iVar1 = *piVar5;
     lVar4 = lVar4 + -1;
     piVar5 = piVar5 + 1;
-    *(ushort *)(iVar1 * 2 + param_1) = *(ushort *)(iVar1 * 2 + param_1) | auStack_50[0];
+    *(ushort *)(iVar1 * 2 + param_1) = *(ushort *)(iVar1 * 2 + param_1) | auStack_50;
   } while (lVar4 != 0);
   return;
 }

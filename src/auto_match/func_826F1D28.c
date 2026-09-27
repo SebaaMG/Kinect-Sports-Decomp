@@ -29,8 +29,8 @@ extern int fn_8268D210();
 extern int fn_826F0360();
 extern int fn_826F0610();
 extern int fn_826F16C0();
-extern int fn_82F65390();
-extern int fn_82F66A80();
+extern int strncmp();
+extern int isdigit();
 extern unsigned int iStack_70;
 extern unsigned int iStack_84;
 extern unsigned int iStack_88;
@@ -67,8 +67,8 @@ void fn_826F1D28(int param_1,int *param_2)
   uint uStack_94;
   byte *pbStack_90;
   uint uStack_8c;
-  int iStack_88;
-  int iStack_84;
+  struct { int first; int second; } stack_pair_88;
+
   undefined4 uStack_80;
   undefined1 uStack_7c;
   undefined4 uStack_78;
@@ -101,7 +101,7 @@ void fn_826F1D28(int param_1,int *param_2)
       }
       pbStack_b0 = pbVar2 + uVar7;
       uStack_ac = uStack_ac - uVar7;
-      iVar3 = fn_82F66A80(*pbVar2);
+      iVar3 = isdigit(*pbVar2);
       if (iVar3 == 0) {
         bVar1 = *pbVar2;
         if (bVar1 < 0x59) {
@@ -142,7 +142,7 @@ LAB_826f1e64:
           goto LAB_826f1df0;
         }
         if (bVar1 == 0x62) {
-          iVar3 = fn_82F65390(pbVar2,0xffffffff8200dad0,4);
+          iVar3 = strncmp(pbVar2,0xffffffff8200dad0,4);
           if (iVar3 == 0) {
             iVar3 = fn_826F0360(&pbStack_b0,10,0x3a);
             *(uint *)(param_1 + 0x1c) = iVar3 << 0x1b | *(uint *)(param_1 + 0x1c) & 0x7ffffff;
@@ -190,7 +190,7 @@ LAB_826f1e64:
             pbStack_b0 = pbStack_b0 + uVar8;
             break;
           }
-          iVar3 = fn_82F65390(pbVar2,0xffffffff8200dad8,3);
+          iVar3 = strncmp(pbVar2,0xffffffff8200dad8,3);
           if (iVar3 == 0) {
             uVar8 = 0;
             if (uStack_ac != 0) {
@@ -225,10 +225,10 @@ LAB_826f2034:
       if (uVar8 < uVar9) {
         uVar9 = uVar8;
       }
-      iStack_84 = uVar8 - uVar9;
-      iStack_88 = uVar9 + *param_2;
-      if (iStack_84 != 0) {
-        (**(code **)(*piVar4 + 8))(piVar4,&iStack_88);
+      stack_pair_88.second = uVar8 - uVar9;
+      stack_pair_88.first = uVar9 + *param_2;
+      if (stack_pair_88.second != 0) {
+        (**(code **)(*piVar4 + 8))(piVar4,&stack_pair_88.first);
       }
       fn_826F0610(*(undefined4 *)(param_1 + 4),param_1,piVar4,1);
     }

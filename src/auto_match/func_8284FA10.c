@@ -52,7 +52,7 @@ void fn_8284FA10(int param_1,undefined8 param_2,undefined8 param_3,undefined8 pa
   int iVar12;
   uint uVar13;
   uint *puStack_70;
-  undefined4 auStack_6c [27];
+  undefined4 auStack_6c;
   
   fn_8285AE70();
   iVar4 = fn_8285A830(param_1,param_2);
@@ -73,8 +73,8 @@ void fn_8284FA10(int param_1,undefined8 param_2,undefined8 param_3,undefined8 pa
             if (iVar5 == 0) {
               puVar6 = (uint *)fn_8285A7F8(piVar3,param_2);
               if (*puVar6 < *puStack_70) {
-                fn_82850A78(puStack_70,*puVar6,auStack_6c);
-                fn_82850D08(auStack_6c[0],1,param_4,0);
+                fn_82850A78(puStack_70,*puVar6,&auStack_6c);
+                fn_82850D08(auStack_6c,1,param_4,0);
                 if (piVar3[0x10] != 0) {
                   fn_8284F8A0(piVar3[0x10],param_2,param_3,param_4);
                 }

@@ -41,7 +41,7 @@ undefined4 * fn_823FC3B8(undefined4 *param_1,undefined4 *param_2,undefined8 para
   int iVar2;
   undefined4 uVar4;
   int iVar5;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [1];
   
   param_1[1] = 1;
   *param_1 = &lbl_821AD588;

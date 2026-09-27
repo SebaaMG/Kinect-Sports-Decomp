@@ -39,8 +39,8 @@ void fn_8264E070(int param_1)
   undefined4 uVar2;
   int iVar4;
   uint uVar5;
-  undefined4 uStack_30;
-  uint uStack_2c;
+  struct { undefined4 first; uint second; } stack_pair_30;
+
   undefined4 *puVar3;
   
   uVar1 = *(uint *)(param_1 + 0x30);
@@ -66,9 +66,9 @@ void fn_8264E070(int param_1)
   uVar2 = *puVar3;
   if (uVar5 != *(uint *)(param_1 + 0x164)) {
     *(uint *)(param_1 + 0x164) = uVar5;
-    uStack_30 = 0xc0006200;
-    uStack_2c = uVar5;
-    fn_82644450(uVar2,&uStack_30,2);
+    stack_pair_30.first = 0xc0006200;
+    stack_pair_30.second = uVar5;
+    fn_82644450(uVar2,&stack_pair_30.first,2);
   }
   return;
 }

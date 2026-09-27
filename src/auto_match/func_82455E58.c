@@ -42,7 +42,7 @@ void fn_82455E58(int param_1,ulonglong param_2)
   undefined4 uVar6;
   undefined4 uVar7;
   undefined4 uVar8;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [16];
   
   if ((param_2 & 0xffffffff) == 0) {
     pcVar1 = *(code **)(**(int **)(param_1 + 0x24) + 4);

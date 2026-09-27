@@ -34,7 +34,7 @@ extern int fn_82969030();
 extern int fn_8296CE60();
 extern int fn_829750C8();
 extern int fn_8297AE90();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 undefined8 fn_8297E440(int param_1)
@@ -54,7 +54,7 @@ undefined8 fn_8297E440(int param_1)
   ulonglong uVar12;
   ulonglong uVar13;
   int iVar14;
-  undefined1 auStack_b0 [176];
+  undefined1 auStack_b0 [96];
   
   lVar11 = 0;
   if (((*(uint *)(param_1 + 0x6c) & 0x10) == 0) && ((*(uint *)(param_1 + 0x6c) & 8) == 0)) {
@@ -74,7 +74,7 @@ undefined8 fn_8297E440(int param_1)
   }
   lVar11 = fn_8265C940(*(int *)(param_1 + 0xc) << 2,0x24810000);
   if (lVar11 != 0) {
-    fn_82F68CC0(lVar11,*(undefined4 *)(param_1 + 0x18),*(int *)(param_1 + 0xc) << 2);
+    memcpy(lVar11,*(undefined4 *)(param_1 + 0x18),*(int *)(param_1 + 0xc) << 2);
     uVar5 = fn_82966EC8(param_1);
     uVar13 = 0;
     uVar7 = 0;
@@ -93,14 +93,14 @@ undefined8 fn_8297E440(int param_1)
                   (piVar10 = (int *)(iVar14 + *(int *)(param_1 + 0x18)),
                   *(int *)(*piVar10 + 0x2c) == *(int *)(piVar10[-1] + 0x2c))))) &&
                 (iVar6 = fn_8297AE90(param_1,auStack_b0,0), -1 < iVar6)))) {
-              fn_82F68CC0(lVar11,*(undefined4 *)(param_1 + 0x18),iVar4 + 4);
+              memcpy(lVar11,*(undefined4 *)(param_1 + 0x18),iVar4 + 4);
               uVar5 = uVar7;
             }
             uVar12 = uVar12 - 1;
             iVar14 = iVar14 + -4;
             uVar2 = uVar12;
           }
-          fn_82F68CC0(*(undefined4 *)(param_1 + 0x18),lVar11,iVar4 + 4);
+          memcpy(*(undefined4 *)(param_1 + 0x18),lVar11,iVar4 + 4);
         }
         uVar7 = *(uint *)(param_1 + 0xc);
         uVar13 = uVar13 + 1;

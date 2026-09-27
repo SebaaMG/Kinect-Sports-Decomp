@@ -77,7 +77,7 @@ undefined8 fn_8287AE08(int *param_1,int *param_2,undefined4 *param_3)
   undefined1 auStack_d0 [32];
   undefined1 auStack_b0 [32];
   undefined1 auStack_90 [32];
-  undefined1 auStack_70 [112];
+  undefined1 auStack_70 [80];
   
   iVar1 = (param_2[1] - *param_2) / 0xc;
   if (iVar1 < 1) {

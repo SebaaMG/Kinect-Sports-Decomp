@@ -36,7 +36,7 @@ extern int fn_8251FA58();
 extern int fn_82520158();
 extern int fn_8265C9E0();
 extern int fn_82A1DD38();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int lbl_82002B04;
 extern unsigned int lbl_821916FC;
 extern unsigned int lbl_821917C0;
@@ -192,7 +192,7 @@ fn_82315250(undefined4 *param_1,int param_2,int param_3,undefined4 param_4,undef
   puVar4 = (undefined4 *)fn_8265C9E0(0x20);
   if (puVar4 != (undefined4 *)0x0) {
     *puVar4 = &lbl_821AF7B0;
-    fn_82F68CC0(puVar4 + 2,&uStack_70,0x18);
+    memcpy(puVar4 + 2,&uStack_70,0x18);
     puStack_60 = puVar4;
     fn_82511668(param_1 + 0x19a,&uStack_70);
     return param_1;

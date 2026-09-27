@@ -50,9 +50,9 @@ undefined4 fn_828E9A48(int param_1)
   undefined4 *puVar3;
   undefined1 uStack_40;
   int iStack_3c;
-  undefined1 auStack_38 [8];
-  undefined4 uStack_30;
-  undefined4 uStack_2c;
+  undefined1 auStack_38 [1];
+  struct { undefined4 first; undefined4 second; } stack_pair_30;
+
   undefined4 uStack_28;
   undefined1 auStack_24 [20];
   
@@ -60,9 +60,9 @@ undefined4 fn_828E9A48(int param_1)
   uStack_28 = *(undefined4 *)(*(int *)(param_1 + 4) + 0x28);
   fn_828B5580(auStack_24,auStack_38);
   uVar2 = fn_828E8EF8();
-  fn_828E6B10(&uStack_30,uVar2,&uStack_28);
+  fn_828E6B10(&stack_pair_30.first,uVar2,&uStack_28);
   iStack_3c = 0;
-  fn_828E6240(uStack_30,uStack_2c,&iStack_3c,uStack_40);
+  fn_828E6240(stack_pair_30.first,stack_pair_30.second,&iStack_3c,uStack_40);
   if (iStack_3c == 0) {
     uVar1 = *(undefined4 *)(param_1 + 4);
     uVar2 = fn_828B55F8(auStack_38);

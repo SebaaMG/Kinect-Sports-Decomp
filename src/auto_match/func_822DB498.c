@@ -49,8 +49,8 @@ void fn_822DB498(int param_1)
   char in_RESERVE;
   byte bVar10;
   double dVar11;
-  int iStack_40;
-  uint uStack_3c;
+  struct { int first; uint second; } stack_pair_40;
+
   
   puVar5 = (undefined4 *)fn_8265C9E0(0x1c);
   if (puVar5 == (undefined4 *)0x0) {
@@ -80,7 +80,7 @@ void fn_822DB498(int param_1)
   for (piVar8 = *(int **)(param_1 + 0x140); piVar8 != piVar2; piVar8 = piVar8 + 2) {
     uVar3 = piVar8[1];
     uVar9 = (ulonglong)uVar3;
-    iStack_40 = *piVar8;
+    stack_pair_40.first = *piVar8;
     if (uVar9 != 0) {
       do {
         puVar7 = (uint *)(uVar9 + 4);
@@ -92,11 +92,11 @@ void fn_822DB498(int param_1)
       } while (!(bool)(bVar10 >> 1 & 1));
     }
     iVar1 = *piVar8;
-    uStack_3c = uVar3;
+    stack_pair_40.second = uVar3;
     fn_82509648((double)*(float *)(iVar1 + 0x10),dVar11,(double)*(float *)(iVar1 + 0x18),
                     (double)*(float *)(iVar1 + 0x1c),*(undefined4 *)(param_1 + 0x150),
                     *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x9c) + 0x14) + 0x8c0),iVar1 + 4,
-                    iVar1 + 8,&iStack_40,*(undefined4 *)(iVar1 + 0x14));
+                    iVar1 + 8,&stack_pair_40.first,*(undefined4 *)(iVar1 + 0x14));
     if (uVar3 != 0) {
       fn_822315A0(uVar9);
     }

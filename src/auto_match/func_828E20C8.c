@@ -42,7 +42,7 @@ void fn_828E20C8(int param_1,undefined8 param_2,longlong param_3,uint param_4)
   int iVar5;
   uint uVar6;
   longlong lVar7;
-  undefined1 auStack_a0 [160];
+  undefined1 auStack_a0 [64];
   
   uVar4 = 0;
   if (*(int *)(param_1 + 8) != 0) {

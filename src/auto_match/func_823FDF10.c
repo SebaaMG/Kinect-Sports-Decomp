@@ -31,13 +31,12 @@ extern unsigned int lbl_821B742C;
 
 
 undefined4 *
-fn_823FDF10(undefined4 *param_1,int param_2,int param_3,int param_4,int param_5,int param_6,
-             int param_7,int param_8)
+fn_823FDF10(undefined4 *param_1, int param_2, int param_3, int param_4, int param_5, int param_6, int param_7, int param_8, int in_stack_00000054, int in_stack_0000005c, int in_stack_00000064)
 
 {
-  int in_stack_00000054;
-  int in_stack_0000005c;
-  int in_stack_00000064;
+
+
+
   
   param_1[1] = 0;
   *param_1 = &lbl_821B742C;

@@ -38,11 +38,11 @@ void fn_82891488(undefined8 param_1,undefined8 param_2,int *param_3)
   int iVar3;
   undefined8 uVar1;
   char cVar4;
-  int aiStack_30 [12];
+  int aiStack_30;
   
   iVar2 = fn_828A12E8(param_2);
-  aiStack_30[0] = **(int **)(iVar2 + 8);
-  while (iVar2 = aiStack_30[0], iVar3 = fn_828A12E8(param_2), iVar2 != *(int *)(iVar3 + 8)) {
+  aiStack_30 = **(int **)(iVar2 + 8);
+  while (iVar2 = aiStack_30, iVar3 = fn_828A12E8(param_2), iVar2 != *(int *)(iVar3 + 8)) {
     iVar2 = *(int *)(iVar2 + 0x14);
     fn_82897710(*(undefined4 *)(iVar2 + 0x34),param_3);
     if (*(char *)((int)param_3 + 0x26) == '\0') {
@@ -58,7 +58,7 @@ void fn_82891488(undefined8 param_1,undefined8 param_2,int *param_3)
         fn_8288EC98(iVar2,uVar1);
       }
     }
-    fn_82248B90(aiStack_30);
+    fn_82248B90(&aiStack_30);
   }
   return;
 }

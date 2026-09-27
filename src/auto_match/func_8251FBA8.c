@@ -42,20 +42,20 @@ longlong fn_8251FBA8(undefined8 param_1)
   longlong lVar2;
   longlong lVar3;
   undefined1 auStack_30 [8];
-  int iStack_28;
-  int iStack_24;
+  struct { int first; int second; } stack_pair_28;
+
   
   lVar3 = 0;
-  iStack_28 = 0;
-  iStack_24 = 0;
-  fn_827D5668(lbl_83265A24,param_1,auStack_30,&iStack_28);
-  iVar1 = iStack_28;
-  if (iStack_28 != 0) {
-    lVar3 = fn_827D50A0(iStack_28);
+  stack_pair_28.first = 0;
+  stack_pair_28.second = 0;
+  fn_827D5668(lbl_83265A24,param_1,auStack_30,&stack_pair_28.first);
+  iVar1 = stack_pair_28.first;
+  if (stack_pair_28.first != 0) {
+    lVar3 = fn_827D50A0(stack_pair_28.first);
     lVar2 = fn_827D5088(iVar1);
     lVar3 = lVar3 + lVar2;
   }
-  if (iStack_24 != 0) {
+  if (stack_pair_28.second != 0) {
     fn_822315A0();
   }
   return lVar3;

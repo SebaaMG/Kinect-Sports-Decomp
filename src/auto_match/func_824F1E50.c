@@ -62,7 +62,7 @@ void fn_824F1E50(undefined4 *param_1,undefined4 *param_2)
   undefined1 auStack_48 [4];
   undefined1 auStack_44 [4];
   undefined1 auStack_40 [16];
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
   
   param_1[1] = param_2;
   *param_1 = &lbl_821C1E18;

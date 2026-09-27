@@ -39,8 +39,8 @@ void fn_8269A4E8(int *param_1)
 
 {
   undefined8 uVar1;
-  undefined4 uStack_20;
-  undefined4 uStack_1c;
+  struct { undefined4 first; undefined4 second; } stack_pair_20;
+
   undefined2 uStack_18;
   undefined1 uStack_16;
   undefined1 uStack_15;
@@ -52,14 +52,14 @@ void fn_8269A4E8(int *param_1)
     fn_82703F00(uVar1,param_1);
   }
   if ((*(byte *)((int)param_1 + 0x66) & 0x10) == 0) {
-    uStack_1c = 0;
+    stack_pair_20.second = 0;
     uStack_18 = 0;
     uStack_16 = 0;
     uStack_14 = 0;
     uStack_13 = 0;
-    uStack_20 = 4;
+    stack_pair_20.first = 4;
     uStack_15 = 0xff;
-    (**(code **)(*param_1 + 0x6c))(param_1,&uStack_20);
+    (**(code **)(*param_1 + 0x6c))(param_1,&stack_pair_20.first);
     *(byte *)((int)param_1 + 0x66) = *(byte *)((int)param_1 + 0x66) | 0x10;
   }
   return;

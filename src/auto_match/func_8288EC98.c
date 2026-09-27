@@ -54,7 +54,7 @@ void fn_8288EC98(int *param_1,undefined8 param_2)
   undefined8 uVar3;
   undefined8 uVar4;
   int aiStack_60 [2];
-  undefined1 auStack_58 [88];
+  undefined1 auStack_58 [8];
   
   uVar2 = fn_8240D928(param_2);
   if ((ulonglong)(uint)param_1[0x13] <= (uVar2 & 0xffffffff)) {

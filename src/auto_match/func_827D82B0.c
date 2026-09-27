@@ -38,7 +38,7 @@ void fn_827D82B0(int param_1,undefined4 *param_2)
   int iVar1;
   longlong lVar2;
   undefined4 *puStack0000001c;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
   
   if (*(int *)(param_1 + 0x2c8) == 0) {
     *(undefined4 *)(param_1 + 0x2cc) = 1;

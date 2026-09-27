@@ -44,10 +44,10 @@ void fn_826CF648(int param_1,undefined8 param_2,char *param_3,ulonglong param_4,
   longlong lVar4;
   ulonglong uVar5;
   int iVar6;
-  char acStack_70 [4];
+  char acStack_70;
   int iStack_6c;
   int *apiStack_68 [2];
-  char acStack_60 [96];
+  char acStack_60 [16];
   
   uVar5 = (ulonglong)*(uint *)(param_1 + 0xac);
   if (uVar5 != 0) {
@@ -104,8 +104,8 @@ LAB_826cf828:
               fn_826CD488(param_2,apiStack_68);
             }
 LAB_826cf84c:
-            acStack_70[0] = *param_5;
-            (**(code **)(*piVar1 + 0xc4))(piVar1,param_2,param_3,param_4,acStack_70);
+            acStack_70 = *param_5;
+            (**(code **)(*piVar1 + 0xc4))(piVar1,param_2,param_3,param_4,&acStack_70);
             fn_8267C498(piVar1);
           }
         }

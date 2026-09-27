@@ -38,12 +38,12 @@ undefined8 fn_82B09C40(int param_1,int param_2,int param_3)
   char cVar3;
   int iVar2;
   undefined8 uVar1;
-  uint auStack_30 [12];
+  uint auStack_30;
   
   if (((((*(uint *)(param_2 + 8) ^ *(uint *)(param_3 + 8)) & 0x3f80) == 0) &&
       (cVar3 = fn_82AF6268(param_1,param_3), cVar3 == '\0')) &&
-     (iVar2 = fn_82B09BE0(param_1,param_3,param_2,auStack_30,0), iVar2 == 0)) {
-    if (auStack_30[0] <= *(uint *)(param_1 + 0x298)) {
+     (iVar2 = fn_82B09BE0(param_1,param_3,param_2,&auStack_30,0), iVar2 == 0)) {
+    if (auStack_30 <= *(uint *)(param_1 + 0x298)) {
       uVar1 = fn_82B006B0(param_1,param_3,param_2,0);
       return uVar1;
     }

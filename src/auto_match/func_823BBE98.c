@@ -39,7 +39,7 @@ void fn_823BBE98(int *param_1,undefined8 param_2,int *param_3)
   char cVar4;
   undefined4 *puVar3;
   int iVar5;
-  undefined8 auStack_30 [6];
+  undefined8 auStack_30;
   
   if (param_3 != (int *)0x0) {
     if ((int *)*param_3 == (int *)0x0) {
@@ -57,14 +57,14 @@ void fn_823BBE98(int *param_1,undefined8 param_2,int *param_3)
   iVar5 = 0;
 LAB_823bbf04:
   if (iVar5 == 0) {
-    (**(code **)(*param_1 + 0x14))(param_1,param_2,auStack_30);
+    (**(code **)(*param_1 + 0x14))(param_1,param_2,&auStack_30);
     puVar3 = (undefined4 *)fn_8265C9E0(0x10);
     if (puVar3 == (undefined4 *)0x0) {
       puVar3 = (undefined4 *)0x0;
     }
     else {
       *puVar3 = &lbl_821B5E58;
-      *(undefined8 *)(puVar3 + 2) = auStack_30[0];
+      *(undefined8 *)(puVar3 + 2) = auStack_30;
     }
     puVar1 = (undefined4 *)*param_3;
     *param_3 = (int)puVar3;

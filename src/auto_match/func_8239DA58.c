@@ -54,8 +54,8 @@ void fn_8239DA58(int param_1)
   float fStack_70;
   float afStack_6c [2];
   int iStack_64;
-  undefined4 uStack_60;
-  int iStack_5c;
+  struct { undefined4 first; int second; } stack_pair_60;
+
   undefined **ppuStack_50;
   int iStack_4c;
   undefined ***pppuStack_40;
@@ -65,14 +65,14 @@ void fn_8239DA58(int param_1)
   fStack_70 = *(float *)(param_1 + 0x8d0);
   dVar3 = (double)fStack_70;
   afStack_6c[1] = 1.4013e-45;
-  uStack_60 = 0;
-  fn_82365B38(&uStack_60,afStack_6c + 1,afStack_6c,&fStack_70);
-  fn_82365BD8(afStack_6c + 1,&uStack_60);
+  stack_pair_60.first = 0;
+  fn_82365B38(&stack_pair_60.first,afStack_6c + 1,afStack_6c,&fStack_70);
+  fn_82365BD8(afStack_6c + 1,&stack_pair_60.first);
   fn_82566018(param_1 + 0x8a8,afStack_6c + 1);
   if (iStack_64 != 0) {
     fn_822315A0();
   }
-  fn_82365BD8(afStack_6c + 1,&uStack_60);
+  fn_82365BD8(afStack_6c + 1,&stack_pair_60.first);
   fn_824C5748(param_1 + 0x880,afStack_6c + 1);
   if (iStack_64 != 0) {
     fn_822315A0();
@@ -99,7 +99,7 @@ void fn_8239DA58(int param_1)
   if (iVar1 != 0) {
     fn_822315A0();
   }
-  if (iStack_5c != 0) {
+  if (stack_pair_60.second != 0) {
     fn_822315A0();
   }
   return;

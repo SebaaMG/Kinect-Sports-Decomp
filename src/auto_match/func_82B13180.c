@@ -110,7 +110,7 @@ void fn_82B13180(int param_1,int param_2)
   double dVar39;
   double dVar40;
   int iStack0000001c;
-  int aiStack_c4 [2];
+  int aiStack_c4;
   undefined1 auStack_bc [4];
   undefined1 auStack_b8 [4];
   float fStack_b4;
@@ -146,9 +146,9 @@ LAB_82b13208:
   if ((uVar13 != 0x74) || ((*(uint *)(param_1 + 0x34) & 0x40000) == 0)) {
     if ((uVar13 == 0x68) &&
        ((puVar32[1] == 0 &&
-        (fn_82B8E778(puVar32[0xb],aiStack_c4,auStack_b8,auStack_bc,0), iVar4 = aiStack_c4[0],
-        (*(uint *)(aiStack_c4[0] + 8) & 0x3f80) == 0x3e00)))) {
-      uVar13 = *(uint *)(aiStack_c4[0] + 8);
+        (fn_82B8E778(puVar32[0xb],&aiStack_c4,auStack_b8,auStack_bc,0), iVar4 = aiStack_c4,
+        (*(uint *)(aiStack_c4 + 8) & 0x3f80) == 0x3e00)))) {
+      uVar13 = *(uint *)(aiStack_c4 + 8);
       iVar3 = fn_82ABDD90(param_1,uVar13 >> 7 & 0x7f,uVar13 >> 0x13 & 7,uVar13 >> 0xe & 7);
       if ((*(uint *)((*(uint *)(iVar3 + iVar4 + -8) & 0x7fff) * 0x28 + *(int *)(param_1 + 0xc) + 4)
           & 0x70) == 0x30) {

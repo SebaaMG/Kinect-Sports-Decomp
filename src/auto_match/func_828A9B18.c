@@ -37,20 +37,20 @@ int * fn_828A9B18(undefined8 param_1,longlong *param_2)
   undefined8 uVar2;
   int iVar4;
   longlong lVar3;
-  int aiStack_30 [12];
+  int aiStack_30;
   
   uVar2 = fn_828A12E8();
   iVar4 = fn_8288F948(uVar2,1);
-  aiStack_30[0] = **(int **)(iVar4 + 4);
-  if ((int *)aiStack_30[0] != *(int **)(iVar4 + 4)) {
+  aiStack_30 = **(int **)(iVar4 + 4);
+  if ((int *)aiStack_30 != *(int **)(iVar4 + 4)) {
     do {
-      piVar1 = *(int **)(aiStack_30[0] + 0x14);
+      piVar1 = *(int **)(aiStack_30 + 0x14);
       lVar3 = (**(code **)(*piVar1 + 0x48))(piVar1);
       if (lVar3 == *param_2) {
         return piVar1;
       }
-      fn_82248B90(aiStack_30);
-    } while (aiStack_30[0] != *(int *)(iVar4 + 4));
+      fn_82248B90(&aiStack_30);
+    } while (aiStack_30 != *(int *)(iVar4 + 4));
   }
   return (int *)0x0;
 }

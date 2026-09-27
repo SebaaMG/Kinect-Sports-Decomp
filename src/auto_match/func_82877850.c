@@ -37,7 +37,7 @@ undefined8 fn_82877850(int *param_1,uint *param_2)
   int iVar1;
   ulonglong uVar2;
   double dVar3;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [16];
   
   uVar2 = (ulonglong)*param_2;
   if (uVar2 != param_2[1]) {

@@ -42,17 +42,17 @@ void fn_828E91A8(int param_1)
 
 {
   undefined8 uVar1;
-  undefined1 auStack_40 [8];
-  undefined4 uStack_38;
-  undefined4 uStack_34;
+  undefined1 auStack_40 [1];
+  struct { undefined4 first; undefined4 second; } stack_pair_38;
+
   undefined4 uStack_30;
   undefined1 auStack_2c [44];
   
   uStack_30 = *(undefined4 *)(*(int *)(param_1 + 4) + 0x28);
   fn_828B5580(auStack_2c,param_1 + 0x38);
   uVar1 = fn_828E8EF8();
-  fn_828E6B10(&uStack_38,uVar1,&uStack_30);
-  fn_828E8448(auStack_40,uVar1,uStack_38,uStack_34);
+  fn_828E6B10(&stack_pair_38.first,uVar1,&uStack_30);
+  fn_828E8448(auStack_40,uVar1,stack_pair_38.first,stack_pair_38.second);
   fn_828B55B0(auStack_2c);
   fn_828B55B0(param_1 + 0x38);
   fn_828E4A20(param_1);

@@ -42,16 +42,16 @@ void fn_825BE738(int param_1)
   undefined4 *puVar1;
   undefined8 uVar2;
   undefined4 *puVar3;
-  undefined4 uStack_30;
-  undefined4 uStack_2c;
+  struct { undefined4 first; undefined4 second; } stack_pair_30;
+
   
   puVar1 = *(undefined4 **)(param_1 + 0x214);
   for (puVar3 = *(undefined4 **)(param_1 + 0x210); puVar3 != puVar1; puVar3 = puVar3 + 2) {
-    uStack_30 = 0;
-    uStack_2c = 0;
-    fn_82517978(&uStack_30,*puVar3,puVar3[1],0);
+    stack_pair_30.first = 0;
+    stack_pair_30.second = 0;
+    fn_82517978(&stack_pair_30.first,*puVar3,puVar3[1],0);
     uVar2 = fn_8256BF18();
-    fn_8256C5D0(uVar2,&uStack_30);
+    fn_8256C5D0(uVar2,&stack_pair_30.first);
   }
   if (*(int *)(param_1 + 0x5c) != 0) {
     fn_827DA660(*(undefined4 *)(param_1 + 0x34),*(int *)(param_1 + 0x5c),

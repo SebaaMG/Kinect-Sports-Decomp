@@ -44,17 +44,17 @@ undefined8 fn_82A8C8F0(int *param_1,int *param_2,longlong param_3)
   char cVar2;
   undefined8 uVar1;
   undefined1 *puVar3;
-  undefined4 uStack_a0;
-  undefined4 uStack_9c;
+  struct { undefined4 first; undefined4 second; } stack_pair_a0;
+
   undefined1 auStack_98 [4];
   undefined4 uStack_94;
   undefined4 uStack_90;
   undefined1 auStack_80 [48];
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [64];
   
   puVar3 = (undefined1 *)*param_1;
-  uStack_a0 = lbl_8201DCB8;
-  uStack_9c = lbl_8201DCB8;
+  stack_pair_a0.first = lbl_8201DCB8;
+  stack_pair_a0.second = lbl_8201DCB8;
   uStack_94 = lbl_8201DCB8;
   uStack_90 = lbl_8201DCB8;
   if (puVar3 == (undefined1 *)0x0) {
@@ -62,7 +62,7 @@ undefined8 fn_82A8C8F0(int *param_1,int *param_2,longlong param_3)
   }
   cVar2 = (**(code **)(*param_2 + 4))(param_2);
   if ((cVar2 == '\0') ||
-     (cVar2 = (**(code **)(*param_2 + 0x10))(param_2,auStack_80,0x29,&uStack_a0), cVar2 == '\0')) {
+     (cVar2 = (**(code **)(*param_2 + 0x10))(param_2,auStack_80,0x29,&stack_pair_a0.first), cVar2 == '\0')) {
     uVar1 = 0;
   }
   else {

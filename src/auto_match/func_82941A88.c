@@ -35,7 +35,7 @@ uint fn_82941A88(int *param_1,undefined8 param_2,undefined8 param_3,undefined8 p
 
 {
   uint uVar1;
-  undefined1 auStack_70 [112];
+  undefined1 auStack_70 [96];
   
   uVar1 = fn_82941178();
   if (-1 < (int)uVar1) {

@@ -37,24 +37,24 @@ void fn_8248F0A0(undefined8 param_1,int param_2,undefined8 param_3)
 {
   int iVar1;
   undefined4 *puVar2;
-  undefined4 uStack_40;
-  int iStack_3c;
+  struct { undefined4 first; int second; } stack_pair_40;
+
   
   iVar1 = (int)param_1;
   if (8 < (int)(param_2 - iVar1 & 0xfffffff8U)) {
     puVar2 = (undefined4 *)(param_2 + -8);
     do {
-      uStack_40 = 0;
-      iStack_3c = 0;
-      if (&uStack_40 != puVar2) {
-        iStack_3c = puVar2[1];
+      stack_pair_40.first = 0;
+      stack_pair_40.second = 0;
+      if (&stack_pair_40.first != puVar2) {
+        stack_pair_40.second = puVar2[1];
         puVar2[1] = 0;
-        uStack_40 = *puVar2;
+        stack_pair_40.first = *puVar2;
         *puVar2 = 0;
       }
       fn_823F2E20(puVar2,param_1);
-      fn_8248F390(param_1,0,(int)puVar2 - iVar1 >> 3,&uStack_40,param_3);
-      if (iStack_3c != 0) {
+      fn_8248F390(param_1,0,(int)puVar2 - iVar1 >> 3,&stack_pair_40.first,param_3);
+      if (stack_pair_40.second != 0) {
         fn_822315A0();
       }
       puVar2 = puVar2 + -2;

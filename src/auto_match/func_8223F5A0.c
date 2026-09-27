@@ -34,7 +34,7 @@ uint fn_8223F5A0(uint param_1)
 
 {
   int iVar1;
-  undefined1 auStack_20 [16];
+  undefined1 auStack_20 [1];
   
   fn_82F62680(auStack_20,0);
   iVar1 = *(int *)(param_1 + 4);

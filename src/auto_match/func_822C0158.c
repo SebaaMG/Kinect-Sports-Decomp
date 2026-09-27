@@ -63,7 +63,7 @@ void fn_822C0158(longlong param_1,int param_2)
   undefined4 *puVar7;
   undefined1 auStack_90 [16];
   undefined1 auStack_80 [32];
-  undefined1 auStack_60 [96];
+  undefined1 auStack_60 [16];
   
   iVar4 = (int)param_1;
   iVar1 = *(int *)(iVar4 + 0x118);

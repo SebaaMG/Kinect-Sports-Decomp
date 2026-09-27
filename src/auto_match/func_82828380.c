@@ -28,7 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_120;
 extern unsigned int *auStack_12c;
 extern int fn_82829530();
-extern int fn_82F672D8();
+extern int strncpy();
 
 
 undefined4 fn_82828380(int param_1,undefined8 param_2)
@@ -38,9 +38,9 @@ undefined4 fn_82828380(int param_1,undefined8 param_2)
   undefined4 uVar2;
   undefined1 *puStack_130;
   undefined1 auStack_12c [12];
-  undefined1 auStack_120 [272];
+  undefined1 auStack_120 [256];
   
-  fn_82F672D8(auStack_120,param_2,0xff);
+  strncpy(auStack_120,param_2,0xff);
   puStack_130 = auStack_120;
   piVar1 = (int *)fn_82829530(auStack_12c,*(undefined4 *)(param_1 + 0x2f0),&puStack_130);
   if (*piVar1 == *(int *)(*(int *)(param_1 + 0x2f0) + 4)) {

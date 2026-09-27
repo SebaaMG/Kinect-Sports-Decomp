@@ -67,7 +67,7 @@ undefined8 fn_82AD7330(int param_1,int param_2,int param_3,char param_4,int *par
   undefined1 auStack_b0 [4];
   undefined1 auStack_ac [8];
   undefined4 uStack_a4;
-  int aiStack_a0 [40];
+  int aiStack_a0 [4];
   
   if (((((*(uint *)(param_2 + 0x30) & 0x10000000) != 0) ||
        ((*(uint *)(param_3 + 0x30) & 0x10000000) != 0)) ||

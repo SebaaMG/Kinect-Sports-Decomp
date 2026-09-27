@@ -32,14 +32,13 @@ extern unsigned int lbl_82024198;
 
 
 undefined4 *
-fn_828D15E0(undefined4 *param_1,undefined4 param_2,undefined4 param_3,undefined4 param_4,
-             undefined4 param_5,undefined8 param_6,undefined4 param_7,undefined4 param_8)
+fn_828D15E0(undefined4 *param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4, undefined4 param_5, undefined8 param_6, undefined4 param_7, undefined4 param_8, undefined1 in_stack_00000057, undefined1 in_stack_0000005f, undefined4 in_stack_00000064, undefined1 in_stack_0000006f)
 
 {
-  undefined1 in_stack_00000057;
-  undefined1 in_stack_0000005f;
-  undefined4 in_stack_00000064;
-  undefined1 in_stack_0000006f;
+
+
+
+
   
   fn_828BDDA0();
   param_1[0x21] = param_2;

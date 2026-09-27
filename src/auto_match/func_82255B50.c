@@ -46,7 +46,7 @@ undefined8 fn_82255B50(undefined8 param_1,undefined8 param_2,undefined8 param_3,
   undefined1 *puVar3;
   undefined1 auStack_c0 [16];
   undefined1 auStack_b0 [4];
-  undefined1 auStack_ac [148];
+  undefined1 auStack_ac [132];
   
   fn_8223CFC0(auStack_b0,2,1);
   if (*(uint *)(param_4 + 0xc) < 5) {

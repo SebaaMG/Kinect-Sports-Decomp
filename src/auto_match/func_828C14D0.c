@@ -44,7 +44,7 @@ void fn_828C14D0(int param_1,ulonglong param_2,ulonglong *param_3,undefined8 par
   int *piVar7;
   undefined4 **ppuVar8;
   undefined4 *puStack_40;
-  undefined4 *apuStack_3c [15];
+  undefined4 *apuStack_3c [1];
   
   piVar5 = *(int **)(param_1 + 0x2c);
   piVar7 = (int *)*piVar5;

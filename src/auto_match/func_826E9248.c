@@ -34,7 +34,7 @@ extern unsigned int lbl_82005718;
 void fn_826E9248(undefined8 param_1,float *param_2)
 
 {
-  undefined1 auStack_210 [512];
+  undefined1 auStack_210 [496];
   
   fn_826BC900(auStack_210,0x200,0xffffffff8200d74c,(double)(*param_2 * lbl_82005718),
                     (double)(param_2[1] * lbl_82005718),(double)(param_2[2] * lbl_82005718),

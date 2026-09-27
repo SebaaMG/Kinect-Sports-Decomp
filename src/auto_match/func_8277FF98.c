@@ -73,8 +73,8 @@ void fn_8277FF98(int param_1,int param_2,int param_3)
   undefined4 uVar16;
   uint uVar17;
   bool bVar18;
-  undefined4 uStack_100;
-  undefined4 uStack_fc;
+  struct { undefined4 first; undefined4 second; } stack_pair_100;
+
   int iStack_f0;
   int iStack_ec;
   uint uStack_e8;
@@ -100,10 +100,10 @@ void fn_8277FF98(int param_1,int param_2,int param_3)
   iVar2 = *(int *)(iVar1 + 0x14);
   iVar3 = *(int *)(iVar1 + 0x10);
   *(undefined4 *)(iVar1 + 0x14) = 0;
-  puStack_b0 = &uStack_100;
+  puStack_b0 = &stack_pair_100.first;
   iStack_ec = *(int *)(param_3 + 0x10);
-  uStack_fc = *(undefined4 *)(param_2 + 4);
-  uStack_100 = *(undefined4 *)(iVar2 + 8);
+  stack_pair_100.second = *(undefined4 *)(param_2 + 4);
+  stack_pair_100.first = *(undefined4 *)(iVar2 + 8);
   uStack_e8 = *(uint *)(param_3 + 0x14);
   uStack_b8 = *(uint *)(iVar2 + 0x14);
   uStack_bc = *(uint *)(iVar2 + 0x10);

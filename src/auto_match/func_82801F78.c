@@ -45,15 +45,13 @@ extern int fn_82807AB8();
 extern int fn_82808638();
 
 
-void fn_82801F78(undefined8 param_1,int param_2,undefined8 param_3,undefined8 param_4,
-                  undefined8 param_5,ulonglong param_6,undefined8 param_7,undefined8 param_8,
-                  undefined8 param_9)
+void fn_82801F78(undefined8 param_1, int param_2, undefined8 param_3, undefined8 param_4, undefined8 param_5, ulonglong param_6, undefined8 param_7, undefined8 param_8, undefined8 param_9, undefined4 in_stack_0000005c)
 
 {
   int iVar1;
   undefined8 uVar2;
-  undefined4 in_stack_0000005c;
-  undefined1 auStack_b0 [176];
+
+  undefined1 auStack_b0 [96];
   
   fn_828079D8(auStack_b0);
   fn_82807A50(auStack_b0,param_9);

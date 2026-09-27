@@ -50,8 +50,8 @@ undefined8 fn_822773C8(undefined4 *param_1,float *param_2)
   longlong lVar4;
   bool bVar5;
   bool bVar6;
-  undefined4 uStack_60;
-  undefined4 uStack_5c;
+  struct { undefined4 first; undefined4 second; } stack_pair_60;
+
   undefined1 uStack_58;
   
   bVar6 = false;
@@ -86,11 +86,11 @@ undefined8 fn_822773C8(undefined4 *param_1,float *param_2)
     bVar5 = false;
     bVar6 = false;
   }
-  uStack_60 = 0;
-  uStack_5c = 0;
-  fn_82273CD8(&uStack_60,2);
+  stack_pair_60.first = 0;
+  stack_pair_60.second = 0;
+  fn_82273CD8(&stack_pair_60.first,2);
   uStack_58 = !bVar6;
-  fn_82672C20(param_1[1],0xffffffff821a8140,&uStack_60,1);
+  fn_82672C20(param_1[1],0xffffffff821a8140,&stack_pair_60.first,1);
   if (!bVar6) {
     uVar3 = 0;
     if (!bVar5) goto LAB_822775bc;
@@ -101,7 +101,7 @@ LAB_822775bc:
   if ((bVar6) || (uVar3 = 0, bVar5)) {
     uVar3 = 1;
   }
-  fn_82273C88(&uStack_60);
+  fn_82273C88(&stack_pair_60.first);
   return uVar3;
 }
 

@@ -40,18 +40,18 @@ float * fn_82769B98(int param_1,int param_2,float *param_3)
   int iVar3;
   int iVar4;
   int iVar5;
-  undefined4 auStack_50 [2];
+  undefined4 auStack_50;
   short sStack_48;
   short sStack_46;
   short sStack_44;
   short sStack_42;
   
   iVar5 = param_2 * 8 + *(int *)(param_1 + 0x10);
-  auStack_50[0] = *(undefined4 *)(param_1 + 8);
+  auStack_50 = *(undefined4 *)(param_1 + 8);
   iVar3 = iVar5 + 4;
   iVar1 = **(int **)(param_1 + 8);
   iVar4 = iVar1 + iVar3;
-  fn_827672A0(auStack_50,
+  fn_827672A0(&auStack_50,
                 CONCAT31(CONCAT21(CONCAT11(*(undefined1 *)(iVar4 + 3),*(undefined1 *)(iVar4 + 2)),
                                   *(undefined1 *)(iVar4 + 1)),*(undefined1 *)(iVar1 + iVar3)));
   if ((sStack_44 <= sStack_48) || (bVar2 = true, sStack_42 <= sStack_46)) {

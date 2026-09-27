@@ -35,7 +35,7 @@ void fn_8257CD70(int param_1)
   undefined4 *puVar1;
   int *piVar2;
   undefined4 *puVar3;
-  undefined1 auStack_28 [40];
+  undefined1 auStack_28 [24];
   
   if (*(int *)(param_1 + 0xc) != 0) {
                     /* WARNING: Subroutine does not return */

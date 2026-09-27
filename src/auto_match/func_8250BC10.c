@@ -43,7 +43,7 @@ void fn_8250BC10(int param_1,int param_2)
   longlong lVar8;
   longlong lVar9;
   undefined4 uStack_54;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [1];
   
   iVar5 = param_1;
   iVar7 = param_1;

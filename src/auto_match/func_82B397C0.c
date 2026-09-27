@@ -259,7 +259,7 @@ void fn_82B397C0(void)
   int iStack_274;
   uint uStack_270;
   int iStack_26c;
-  uint auStack_268 [2];
+  uint auStack_268;
   uint *puStack_260;
   uint uStack_25c;
   int *piStack_258;
@@ -280,8 +280,8 @@ void fn_82B397C0(void)
   int iStack_218;
   undefined4 uStack_214;
   int aiStack_210 [2];
-  int iStack_208;
-  int iStack_204;
+  struct { int first; int second; } stack_pair_208;
+
   undefined1 uStack_200;
   uint auStack_1f0 [4];
   double dStack_1e0;
@@ -311,7 +311,7 @@ void fn_82B397C0(void)
   ulonglong uStack_128;
   undefined1 auStack_120 [4];
   undefined1 auStack_11c [12];
-  undefined1 auStack_110 [272];
+  undefined1 auStack_110 [64];
   
   iVar12 = fn_82F6A52C();
   dVar63 = (double)lbl_82002AE0;
@@ -619,11 +619,11 @@ LAB_82b3a1d4:
             piVar28[0xf] = piVar28[0xf] | 2;
           }
         }
-        iStack_208 = piVar28[1];
+        stack_pair_208.first = piVar28[1];
         uStack_200 = 0;
         bVar54 = false;
-        iStack_204 = iStack_208;
-        iVar15 = fn_82B17340(&iStack_208);
+        stack_pair_208.second = stack_pair_208.first;
+        iVar15 = fn_82B17340(&stack_pair_208.first);
         if (iVar15 != 0) {
           uVar14 = uVar43 & 0x1f;
           iVar17 = ((uVar43 >> 5) + 0x15) * 4;
@@ -727,7 +727,7 @@ LAB_82b3a26c:
                 } while ((uVar43 & 1) == 0);
               }
             }
-            iVar15 = fn_82B17340(&iStack_208);
+            iVar15 = fn_82B17340(&stack_pair_208.first);
           } while (iVar15 != 0);
         }
         if (!bVar54) {
@@ -953,15 +953,15 @@ joined_r0x82b3a828:
               puVar25 = (uint *)*piVar28;
 LAB_82b3b7ac:
               if (puVar25 != (uint *)0x0) {
-                fn_82B82D28(puVar25,0,auStack_268,&uStack_248,&uStack_234,0,0,0);
-                uVar14 = *(uint *)(auStack_268[0] + 8) >> 7 & 0x7f;
+                fn_82B82D28(puVar25,0,&auStack_268,&uStack_248,&uStack_234,0,0,0);
+                uVar14 = *(uint *)(auStack_268 + 8) >> 7 & 0x7f;
                 if (uVar14 != 0x7d) {
                   iVar17 = ((uVar43 >> 5) + 0x15) * 4;
-                  if ((*(uint *)(*(int *)(auStack_268[0] + 0x1c) + iVar17) >> (uVar43 & 0x1f) & 1)
+                  if ((*(uint *)(*(int *)(auStack_268 + 0x1c) + iVar17) >> (uVar43 & 0x1f) & 1)
                       != 0) {
                     if (uVar14 == 1) {
-                      puVar19 = *(uint **)(auStack_268[0] + 0x2c);
-                      iVar26 = *(int *)(auStack_268[0] + 0x30);
+                      puVar19 = *(uint **)(auStack_268 + 0x2c);
+                      iVar26 = *(int *)(auStack_268 + 0x30);
                       if (((*(uint *)(puVar19[3] + 8) & 0x3f80) == 0x3800) &&
                          ((*(uint *)(*(int *)(iVar26 + 0xc) + 8) & 0x3f80) == 16000)) {
                         cVar32 = fn_82B8D038(iVar12,puVar19[3],&piStack_258,auStack_12c,
@@ -969,7 +969,7 @@ LAB_82b3b7ac:
                         if ((cVar32 != '\0') &&
                            (((piStack_258 == (int *)0x0 || (piStack_258 == piVar28)) &&
                             (iStack_220 == 0)))) {
-                          puVar31[0xd] = auStack_268[0];
+                          puVar31[0xd] = auStack_268;
                           uVar5 = fn_82B16A18(iVar26,uStack_248);
                           *(undefined8 *)(puVar31 + 10) = uVar5;
                           goto LAB_82b3bb14;
@@ -1050,7 +1050,7 @@ LAB_82b3bab0:;}
                   goto LAB_82b3bb08;
                 }
                 *puVar31 = *puVar31 | 1;
-                dVar56 = (double)fn_82B80EF8(auStack_268[0],uStack_248,uStack_234);
+                dVar56 = (double)fn_82B80EF8(auStack_268,uStack_248,uStack_234);
                 if (dVar56 < *(double *)(puVar31 + 2)) {
                   *(double *)(puVar31 + 2) = dVar56;
                 }
@@ -3277,7 +3277,7 @@ LAB_82b3bb10:
     bVar1 = true;
   }
   else {
-    puVar31[0xd] = auStack_268[0];
+    puVar31[0xd] = auStack_268;
     uVar5 = fn_82B16A18(iVar26,uStack_248);
     *(undefined8 *)(puVar31 + 10) = uVar5;
     if (dVar56 < *(double *)(puVar31 + 6)) {

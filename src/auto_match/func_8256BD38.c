@@ -36,7 +36,7 @@ int * fn_8256BD38(int *param_1,int param_2,uint *param_3)
   undefined4 *puVar3;
   undefined4 **ppuVar4;
   undefined4 *puStack_30;
-  undefined4 *apuStack_2c [11];
+  undefined4 *apuStack_2c [1];
   
   iVar2 = fn_8256BDE0(param_2,param_3);
   apuStack_2c[0] = *(undefined4 **)(param_2 + 4);

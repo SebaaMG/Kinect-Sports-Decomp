@@ -39,7 +39,7 @@ void fn_822A0BC8(double param_1,int param_2,int param_3,undefined8 param_4,undef
 {
   int iVar1;
   undefined1 auStack_1030 [2048];
-  undefined1 auStack_830 [2096];
+  undefined1 auStack_830 [2048];
   
   if ((param_3 < 1) || (5 < param_3)) {
     fn_822A0AD8(param_1,param_2,param_3);

@@ -35,7 +35,7 @@ bool fn_82CEB280(undefined8 param_1,undefined8 param_2)
 {
   int iVar1;
   undefined1 auStack_10 [4];
-  undefined1 auStack_c [12];
+  undefined1 auStack_c [1];
   
   iVar1 = fn_82CEB1F0(param_1,param_2,auStack_c,auStack_10);
   return iVar1 == 0;

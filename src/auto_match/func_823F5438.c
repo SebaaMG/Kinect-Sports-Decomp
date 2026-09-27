@@ -35,7 +35,7 @@ void fn_823F5438(int *param_1,undefined8 param_2,int *param_3)
   undefined8 uVar1;
   char cVar2;
   undefined2 *puVar3;
-  undefined2 auStack_30 [24];
+  undefined2 auStack_30;
   
   if (param_3 != (int *)0x0) {
     if ((int *)*param_3 == (int *)0x0) {
@@ -52,8 +52,8 @@ void fn_823F5438(int *param_1,undefined8 param_2,int *param_3)
   }
   puVar3 = (undefined2 *)0x0;
 LAB_823f54a4:
-  auStack_30[0] = *puVar3;
-  (**(code **)(*param_1 + 0x10))(param_1,param_2,auStack_30);
+  auStack_30 = *puVar3;
+  (**(code **)(*param_1 + 0x10))(param_1,param_2,&auStack_30);
   return;
 }
 

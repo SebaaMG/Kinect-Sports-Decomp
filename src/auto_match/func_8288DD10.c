@@ -36,7 +36,7 @@ longlong fn_8288DD10(longlong param_1,undefined4 param_2)
 {
   uint *puVar1;
   undefined4 uStack0000001c;
-  undefined1 auStack_10 [16];
+  undefined1 auStack_10 [1];
   
   uStack0000001c = param_2;
   puVar1 = (uint *)fn_8288CD40(auStack_10,param_1 + 0x94,&stack0x0000001c);

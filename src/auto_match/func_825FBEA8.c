@@ -32,9 +32,7 @@ extern int fn_82F6A590();
 extern unsigned int lbl_821CA460;
 
 
-void fn_825FBEA8(undefined8 param_1,double param_2,double param_3,double param_4,double param_5,
-                  undefined8 param_6,int param_7,undefined4 param_8,undefined8 param_9,
-                  undefined8 param_10,undefined4 param_11,int param_12,int param_13)
+void fn_825FBEA8(undefined8 param_1, double param_2, double param_3, double param_4, double param_5, undefined8 param_6, int param_7, undefined4 param_8, undefined8 param_9, undefined8 param_10, undefined4 param_11, int param_12, int param_13, undefined8 unused_arg_14, int in_stack_00000084, undefined8 unused_arg_16, undefined8 unused_arg_17, int in_stack_0000009c)
 
 {
   int iVar1;
@@ -49,8 +47,8 @@ void fn_825FBEA8(undefined8 param_1,double param_2,double param_3,double param_4
   int in_stack_00000064;
   int in_stack_0000006c;
   undefined4 in_stack_00000074;
-  int in_stack_00000084;
-  int in_stack_0000009c;
+
+
   
   iVar1 = fn_82F6A544();
   dVar6 = extraout_f1;

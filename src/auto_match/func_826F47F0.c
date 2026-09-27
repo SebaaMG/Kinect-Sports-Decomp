@@ -36,10 +36,10 @@ int fn_826F47F0(int param_1,int param_2,undefined4 *param_3,undefined8 param_4)
 {
   int iVar1;
   int iVar2;
-  undefined4 auStack_40 [16];
+  undefined4 auStack_40;
   
-  auStack_40[0] = *param_3;
-  fn_826DDD10(param_1,*(undefined4 *)(param_2 + 0x20),auStack_40);
+  auStack_40 = *param_3;
+  fn_826DDD10(param_1,*(undefined4 *)(param_2 + 0x20),&auStack_40);
   iVar1 = *(int *)(param_2 + 0x20);
   iVar2 = fn_826F44D0();
   if (iVar2 != 0) {

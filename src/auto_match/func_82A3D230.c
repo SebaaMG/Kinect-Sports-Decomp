@@ -48,7 +48,7 @@ fn_82A3D230(int param_1,longlong param_2,ulonglong param_3,uint param_4,uint *pa
   ulonglong uVar12;
   longlong lVar13;
   short sStack_882;
-  ushort auStack_880 [1088];
+  ushort auStack_880 [1024];
   
   *param_5 = (uint)param_3;
   if (param_6 != (uint *)0x0) {

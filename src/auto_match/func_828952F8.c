@@ -76,14 +76,14 @@ void fn_828952F8(undefined8 param_1,undefined8 param_2,int param_3)
   undefined1 auStack_80 [8];
   undefined1 auStack_78 [8];
   undefined1 auStack_70 [16];
-  uint uStack_60;
-  uint uStack_5c;
+  struct { uint first; uint second; } stack_pair_60;
+
   undefined4 uStack_58;
   
   iVar7 = fn_828A12E8(param_2);
   *(undefined1 *)(iVar7 + 0x90) = 1;
-  uStack_60 = 0;
-  uStack_5c = 0;
+  stack_pair_60.first = 0;
+  stack_pair_60.second = 0;
   uStack_58 = 0;
   iVar7 = fn_828A12E8(param_2);
   puStack_90 = (undefined4 *)**(undefined4 **)(iVar7 + 8);
@@ -93,11 +93,11 @@ void fn_828952F8(undefined8 param_1,undefined8 param_2,int param_3)
       iVar7 = fn_828A12E8(param_2);
       if (puVar13 == *(undefined4 **)(iVar7 + 8)) {
         iVar7 = fn_828A12E8(param_2);
-        uVar3 = uStack_5c;
-        uVar12 = (ulonglong)uStack_60;
+        uVar3 = stack_pair_60.second;
+        uVar12 = (ulonglong)stack_pair_60.first;
         *(undefined1 *)(iVar7 + 0x90) = 0;
         uVar5 = uVar12;
-        if (uVar12 != uStack_5c) {
+        if (uVar12 != stack_pair_60.second) {
           do {
             iVar7 = fn_828A12E8(param_2);
             puVar13 = (undefined4 *)(*(undefined4 **)(iVar7 + 8))[1];
@@ -169,14 +169,14 @@ LAB_82895578:
     }
     if ((*(char *)(param_3 + 0x26) != '\0') || (cVar10 = fn_828ACD00(param_2), cVar10 != '\0')) {
       fn_828B5580(auStack_70,piVar1 + 5);
-      fn_82892F98(&uStack_60,auStack_70);
+      fn_82892F98(&stack_pair_60.first,auStack_70);
       fn_828B55B0(auStack_70);
       goto LAB_82895578;
     }
     cVar10 = (**(code **)(*piVar1 + 0x14))(piVar1);
     if ((cVar10 == '\0') || (cVar10 = fn_8289EF40(param_2), cVar10 == '\0')) {
       fn_828B5580(auStack_78,piVar1 + 5);
-      fn_82892F98(&uStack_60,auStack_78);
+      fn_82892F98(&stack_pair_60.first,auStack_78);
       fn_828B55B0(auStack_78);
       fn_82248B90(&puStack_90);
     }
@@ -186,7 +186,7 @@ LAB_82895578:
       iVar8 = fn_823AA970(param_3);
       if (iVar7 == iVar8) {
         fn_828B5580(auStack_88,piVar1 + 5);
-        fn_82892F98(&uStack_60,auStack_88);
+        fn_82892F98(&stack_pair_60.first,auStack_88);
         fn_828B55B0(auStack_88);
         fn_82248B90(&puStack_90);
       }
@@ -203,7 +203,7 @@ LAB_82895578:
         }
         else {
           fn_828B5580(auStack_80,piVar1 + 5);
-          fn_82892F98(&uStack_60,auStack_80);
+          fn_82892F98(&stack_pair_60.first,auStack_80);
           fn_828B55B0(auStack_80);
           fn_82248B90(&puStack_90);
         }

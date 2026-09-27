@@ -36,18 +36,18 @@ extern unsigned int uStack_28;
 void fn_8276E568(longlong param_1,undefined4 param_2,undefined8 param_3)
 
 {
-  int iStack_30;
-  int iStack_2c;
+  struct { int first; int second; } stack_pair_30;
+
   undefined4 uStack_28;
   int *piStack_24;
   
-  iStack_30 = 0;
-  iStack_2c = 0;
-  fn_826D6290(&iStack_30,param_3);
-  piStack_24 = &iStack_30;
+  stack_pair_30.first = 0;
+  stack_pair_30.second = 0;
+  fn_826D6290(&stack_pair_30.first,param_3);
+  piStack_24 = &stack_pair_30.first;
   uStack_28 = param_2;
   fn_8276DD70(param_1 + 0x24,param_1 + 0x24,&uStack_28);
-  if ((iStack_30 == 0) && (iStack_2c != 0)) {
+  if ((stack_pair_30.first == 0) && (stack_pair_30.second != 0)) {
     fn_82687270();
   }
   return;

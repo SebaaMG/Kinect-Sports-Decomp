@@ -37,20 +37,20 @@ void fn_8266EC00(int param_1,int param_2)
 
 {
   uint uVar1;
-  undefined4 uStack_20;
-  undefined4 uStack_1c;
+  struct { undefined4 first; undefined4 second; } stack_pair_20;
+
   undefined4 uStack_18;
   int iStack_14;
   undefined4 *puStack_10;
   
-  uStack_20 = 0;
-  puStack_10 = &uStack_20;
+  stack_pair_20.first = 0;
+  puStack_10 = &stack_pair_20.first;
   uVar1 = (param_2 - param_1) / 0xc + 1;
-  uStack_1c = 0;
+  stack_pair_20.second = 0;
   uStack_18 = 0;
   iStack_14 = ((int)uVar1 >> 1) + (uint)((int)uVar1 < 0 && (uVar1 & 1) != 0);
   fn_8266E560();
-  fn_8266D440(&uStack_20);
+  fn_8266D440(&stack_pair_20.first);
   return;
 }
 

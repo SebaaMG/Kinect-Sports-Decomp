@@ -49,7 +49,7 @@ undefined4 * fn_82896520(undefined4 *param_1,int param_2,int *param_3)
   int *piVar9;
   int *piVar10;
   int *piStack00000024;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [16];
   
   piStack00000024 = param_3;
   if (*(char *)((int)param_3 + 0x21) != '\0') {

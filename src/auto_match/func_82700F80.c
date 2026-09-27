@@ -37,7 +37,7 @@ void fn_82700F80(int param_1,int *param_2,undefined8 param_3)
   int iVar2;
   uint uVar3;
   int iVar4;
-  int aiStack_30 [12];
+  int aiStack_30 [4];
   
   if (*(char *)(param_2 + 7) == '\0') {
     *(undefined2 *)(param_2 + 6) = *(undefined2 *)(param_1 + 0xae0);

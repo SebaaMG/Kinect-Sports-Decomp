@@ -26,7 +26,7 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_82A20370();
-extern int fn_82F6DF30();
+extern int tolower();
 extern unsigned int iStack0000002c;
 extern unsigned int stack0x00000024;
 extern unsigned int stack0x0000002c;
@@ -73,8 +73,8 @@ bool fn_82A203C0(char *param_1,char *param_2,undefined1 *param_3,int param_4)
       puStack00000024 = param_3;
       iStack0000002c = param_4;
       if (cVar1 != '?') {
-        iVar3 = fn_82F6DF30(uVar2);
-        iVar4 = fn_82F6DF30(cVar1);
+        iVar3 = tolower(uVar2);
+        iVar4 = tolower(cVar1);
         if (iVar3 != iVar4) {
           return false;
         }

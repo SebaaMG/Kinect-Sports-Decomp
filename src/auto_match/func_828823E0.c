@@ -44,20 +44,20 @@ void fn_828823E0(int param_1,undefined8 param_2)
   int *piVar3;
   undefined4 uStack_40;
   int iStack_3c;
-  int aiStack_38 [14];
+  int aiStack_38;
   
   iStack_3c = param_1;
-  fn_8289F160(aiStack_38,0xffffffff83212a00,&iStack_3c);
-  if ((aiStack_38[0] == lbl_83212A04) ||
-     (piVar3 = (int *)(*(int *)(aiStack_38[0] + 0x10) + 0x28), *(int *)(aiStack_38[0] + 0x10) == 0))
+  fn_8289F160(&aiStack_38,0xffffffff83212a00,&iStack_3c);
+  if ((aiStack_38 == lbl_83212A04) ||
+     (piVar3 = (int *)(*(int *)(aiStack_38 + 0x10) + 0x28), *(int *)(aiStack_38 + 0x10) == 0))
   {
     piVar3 = (int *)0x0;
   }
   if ((*piVar3 != 0) && (iVar2 = fn_82CE06F8(*piVar3), iVar2 != 3)) {
     fn_82CE06D8(*piVar3);
   }
-  aiStack_38[0] = param_1;
-  fn_8289F160(&iStack_3c,0xffffffff83212a00,aiStack_38);
+  aiStack_38 = param_1;
+  fn_8289F160(&iStack_3c,0xffffffff83212a00,&aiStack_38);
   if ((iStack_3c == lbl_83212A04) ||
      (lVar1 = (ulonglong)*(uint *)(iStack_3c + 0x10) + 0x34,
      (ulonglong)*(uint *)(iStack_3c + 0x10) == 0)) {

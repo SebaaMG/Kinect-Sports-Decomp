@@ -29,7 +29,7 @@ extern int fn_8265CF50();
 extern int fn_8266C340();
 extern int fn_82A29A38();
 extern int fn_82F68BF0();
-extern int fn_82F69290();
+extern int _CxxThrowException();
 extern unsigned int iStack00000014;
 extern unsigned int iStack_18;
 extern unsigned int iStack_20;
@@ -76,7 +76,7 @@ int fn_8266C138(int param_1)
     else if (iStack_18 == 3) {
       pcStack_1c = "Memory allocation failed!";
                     /* WARNING: Subroutine does not return */
-      fn_82F69290(&pcStack_1c,0xffffffff821ddad0);
+      _CxxThrowException(&pcStack_1c,0xffffffff821ddad0);
     }
   }
   return iStack_20;

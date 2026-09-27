@@ -39,7 +39,7 @@ void fn_8275BA90(undefined8 param_1,char *param_2,int *param_3)
   int *piVar3;
   int aiStack_70 [4];
   int iStack_60;
-  undefined1 auStack_5c [92];
+  undefined1 auStack_5c [28];
   
   piVar1 = *(int **)(*param_3 + 0xc);
   if (*param_2 == '\0') {

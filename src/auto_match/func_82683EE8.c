@@ -33,7 +33,7 @@ undefined1 fn_82683EE8(int param_1,undefined8 param_2)
 
 {
   undefined1 uVar1;
-  undefined1 auStack_10 [16];
+  undefined1 auStack_10 [1];
   
   if (*(int *)(param_1 + 4) == 0) {
     uVar1 = 0;

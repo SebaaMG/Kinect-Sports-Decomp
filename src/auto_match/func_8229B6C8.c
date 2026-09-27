@@ -62,9 +62,9 @@ void fn_8229B6C8(double param_1,double param_2,undefined4 *param_3,undefined8 pa
   float *pfVar8;
   ulonglong uVar9;
   double dVar10;
-  undefined4 uStack_260;
-  int iStack_25c;
-  undefined1 auStack_250 [592];
+  struct { undefined4 first; int second; } stack_pair_260;
+
+  undefined1 auStack_250 [496];
   
   fn_8229BA88();
   uVar9 = 0;
@@ -87,17 +87,17 @@ void fn_8229B6C8(double param_1,double param_2,undefined4 *param_3,undefined8 pa
   param_3[7] = 1;
   iVar5 = fn_8249ABC0();
   iVar5 = *(int *)(iVar5 + 0x110);
-  uStack_260 = 0;
+  stack_pair_260.first = 0;
   iVar1 = *(int *)(iVar5 + 0x20);
   *(int *)(iVar5 + 0x20) = iVar1 + 1;
-  iStack_25c = iVar1;
-  fn_824BF8A8(iVar5,&uStack_260);
+  stack_pair_260.second = iVar1;
+  fn_824BF8A8(iVar5,&stack_pair_260.first);
   param_3[0x14] = iVar1;
-  uStack_260 = 0;
+  stack_pair_260.first = 0;
   iVar1 = *(int *)(iVar5 + 0x20);
   *(int *)(iVar5 + 0x20) = iVar1 + 1;
-  iStack_25c = iVar1;
-  fn_824BF8A8(iVar5 + 0x10,&uStack_260);
+  stack_pair_260.second = iVar1;
+  fn_824BF8A8(iVar5 + 0x10,&stack_pair_260.first);
   param_3[0x15] = iVar1;
   if (param_6 != 0) {
     fn_8266EC60();

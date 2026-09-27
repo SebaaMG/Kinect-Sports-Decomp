@@ -38,7 +38,7 @@ void fn_822377F0(undefined8 param_1,undefined8 param_2,int param_3)
   undefined4 uVar3;
   undefined4 uVar4;
   undefined4 uVar5;
-  undefined1 auStack_20 [16];
+  undefined1 auStack_20 [1];
   
   fn_8223B610(param_2,auStack_20,0x10,0,0);
   if (param_3 != 0) {

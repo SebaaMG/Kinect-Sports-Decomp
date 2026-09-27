@@ -32,7 +32,7 @@ longlong fn_82823640(longlong param_1)
 
 {
   longlong lVar1;
-  int aiStack_30 [12];
+  int aiStack_30 [8];
   
   fn_82822510(0xffffffff8320a5dc,0xffffffff82823440,param_1,aiStack_30);
   if (aiStack_30[0] == 0) {

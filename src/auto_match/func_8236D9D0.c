@@ -37,21 +37,21 @@ void fn_8236D9D0(int *param_1)
   int iVar2;
   ulonglong uVar1;
   ulonglong uVar4;
-  int aiStack_30 [12];
+  int aiStack_30;
   
   if (param_1[0x20] != 0) {
     cVar3 = fn_8288B760();
     if (cVar3 != '\0') {
       iVar2 = (**(code **)(*param_1 + 8))(param_1);
       uVar4 = 1;
-      aiStack_30[0] = **(int **)(param_1[4] + 0x200);
-      if ((int *)aiStack_30[0] != *(int **)(param_1[4] + 0x200)) {
+      aiStack_30 = **(int **)(param_1[4] + 0x200);
+      if ((int *)aiStack_30 != *(int **)(param_1[4] + 0x200)) {
         do {
           uVar1 = (**(code **)(*(int *)(iVar2 + 0x48) + 0x38))
-                            ((int *)(iVar2 + 0x48),*(undefined4 *)(aiStack_30[0] + 0x10));
+                            ((int *)(iVar2 + 0x48),*(undefined4 *)(aiStack_30 + 0x10));
           uVar4 = uVar1 & 0xff & uVar4;
-          fn_82381BC0(aiStack_30);
-        } while (aiStack_30[0] != *(int *)(param_1[4] + 0x200));
+          fn_82381BC0(&aiStack_30);
+        } while (aiStack_30 != *(int *)(param_1[4] + 0x200));
       }
       if (uVar4 != 0) {
         fn_828AAF70(iVar2 + 0x9c,1);

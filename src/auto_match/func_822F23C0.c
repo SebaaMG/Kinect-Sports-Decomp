@@ -38,7 +38,7 @@ fn_822F23C0(undefined4 *param_1,undefined4 param_2,undefined4 param_3,undefined4
 
 {
   int iVar1;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [1];
   
   iVar1 = fn_82365BD8(auStack_50,param_7);
   param_1[1] = param_3;

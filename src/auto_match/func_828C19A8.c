@@ -69,7 +69,7 @@ void fn_828C19A8(int param_1)
   int *piStack_d0;
   undefined1 auStack_c1 [17];
   int *piStack_b0;
-  undefined8 auStack_a0 [20];
+  undefined8 auStack_a0 [14];
   
   uRam83159fdc = 0;
   if (*(int *)(param_1 + 0x28) != 0) {

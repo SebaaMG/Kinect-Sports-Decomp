@@ -47,7 +47,7 @@ void fn_8232F658(int param_1)
   undefined1 auStack_70 [16];
   undefined1 auStack_60 [16];
   undefined1 auStack_50 [16];
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [16];
   
   iVar1 = *(int *)(param_1 + 0xc);
   iVar2 = *(int *)(iVar1 + 0x24);

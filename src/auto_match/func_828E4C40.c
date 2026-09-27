@@ -37,7 +37,7 @@ void fn_828E4C40(int *param_1)
   int iVar2;
   int iVar3;
   bool bVar4;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [1];
   
   if (*param_1 != param_1[3]) {
     if (*param_1 != param_1[1]) {

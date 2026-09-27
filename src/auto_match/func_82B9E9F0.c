@@ -39,7 +39,7 @@ fn_82B9E9F0(ulonglong param_1,undefined8 param_2,float *param_3,code *param_4,ul
   uint uVar1;
   int iVar2;
   int iVar3;
-  undefined1 auStack_70 [112];
+  undefined1 auStack_70 [32];
   
   if ((param_1 & 0xffffffff) == 0) {
     fn_82AB15D0(0,0xffffffff820d2ea4,0xffffffff820d2ff0,0xffffffff820ddb08,0x1155);

@@ -32,7 +32,7 @@ extern int fn_8227CB30();
 extern int fn_82359C18();
 extern int fn_823CC9F0();
 extern int fn_8265C9E0();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int lbl_82002B04;
 extern unsigned int lbl_821B7864;
 extern unsigned int uStack_80;
@@ -59,11 +59,11 @@ void fn_823EB788(int param_1,undefined1 param_2,undefined8 param_3)
   ppuStack_c0 = (undefined **)fn_823CC9F0;
   uStack_90 = 0x823cc9f000000000;
   uStack_80 = param_2;
-  fn_82F68CC0(auStack_78,param_3,0x4c);
+  memcpy(auStack_78,param_3,0x4c);
   puVar1 = (undefined4 *)fn_8265C9E0(0x70);
   if (puVar1 != (undefined4 *)0x0) {
     *puVar1 = &lbl_821B7864;
-    fn_82F68CC0(puVar1 + 2,&uStack_90,0x68);
+    memcpy(puVar1 + 2,&uStack_90,0x68);
     puStack_a0 = puVar1;
     fn_8227CB30((ulonglong)*(uint *)(param_1 + 4) + 0xd10,auStack_b0);
     fn_82359C18(auStack_b0);

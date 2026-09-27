@@ -69,8 +69,8 @@ undefined8 fn_826CF350(int *param_1,float *param_2,ulonglong param_3)
   undefined8 uVar9;
   float fStack_120;
   float fStack_11c;
-  int iStack_110;
-  int iStack_10c;
+  struct { int first; int second; } stack_pair_110;
+
   undefined4 uStack_108;
   float fStack_100;
   float fStack_fc;
@@ -84,12 +84,12 @@ undefined8 fn_826CF350(int *param_1,float *param_2,ulonglong param_3)
   undefined1 auStack_d0 [32];
   undefined1 auStack_b0 [32];
   undefined1 auStack_90 [32];
-  undefined1 auStack_70 [112];
+  undefined1 auStack_70 [80];
   
   if (((uint)param_1[0x23] >> 0xb & 1) == 0) {
     if ((*(byte *)((int)param_1 + 0x66) & 1) == 0) {
       fn_8268CC00(auStack_70);
-      pfVar4 = (float *)(**(code **)(*param_1 + 0x28))(&iStack_110,param_1,auStack_70);
+      pfVar4 = (float *)(**(code **)(*param_1 + 0x28))(&stack_pair_110.first,param_1,auStack_70);
       if ((((pfVar4[2] < *param_2) || (*param_2 < *pfVar4)) || (pfVar4[3] < param_2[1])) ||
          (bVar2 = true, param_2[1] < pfVar4[1])) {
         bVar2 = false;
@@ -117,12 +117,12 @@ undefined8 fn_826CF350(int *param_1,float *param_2,ulonglong param_3)
           return 0;
         }
       }
-      iStack_110 = 0;
-      iStack_10c = 0;
+      stack_pair_110.first = 0;
+      stack_pair_110.second = 0;
       uStack_108 = 0;
-      fn_826CDE90(param_1,&iStack_110,param_2,param_3 & 1);
+      fn_826CDE90(param_1,&stack_pair_110.first,param_2,param_3 & 1);
       fn_8268CC00(&iStack_f0);
-      iVar3 = iStack_110;
+      iVar3 = stack_pair_110.first;
       fStack_120 = *param_2;
       fStack_11c = param_2[1];
       uVar8 = (ulonglong)uVar1 - 1;
@@ -131,7 +131,7 @@ undefined8 fn_826CF350(int *param_1,float *param_2,ulonglong param_3)
         do {
           piVar5 = *(int **)((int)lVar7 + param_1[0x2a]);
           if ((((param_3 & 2) == 0) || (cVar6 = (**(code **)(*piVar5 + 8))(piVar5), cVar6 != '\0'))
-             && ((iStack_10c == 0 ||
+             && ((stack_pair_110.second == 0 ||
                  ((*(char *)(iVar3 + (int)uVar8) != '\0' && (*(short *)(piVar5 + 0x19) == 0)))))) {
             iStack_f0 = piVar5[0x11];
             iStack_ec = piVar5[0x12];

@@ -46,15 +46,15 @@ void fn_82C3C218(int *param_1,int param_2)
   undefined *puVar6;
   int *piVar7;
   longlong lVar8;
-  int aiStack_30 [12];
+  int aiStack_30;
   
   iVar1 = *param_1;
   if (*(int *)(iVar1 + 0x330) == 0) {
-    iVar2 = fn_82C30370(param_1 + 0x38,1,aiStack_30);
+    iVar2 = fn_82C30370(param_1 + 0x38,1,&aiStack_30);
     if (iVar2 < 0) {
       return;
     }
-    if (aiStack_30[0] == 1) {
+    if (aiStack_30 == 1) {
       puVar6 = &lbl_820FA3B0;
       puVar5 = &lbl_820FAB90;
       puVar4 = &lbl_820FAD78;

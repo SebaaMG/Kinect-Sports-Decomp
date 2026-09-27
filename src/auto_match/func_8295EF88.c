@@ -43,39 +43,39 @@ undefined8 fn_8295EF88(int *param_1)
   ulonglong uVar2;
   uint uStack_30;
   undefined4 uStack_2c;
-  uint uStack_28;
-  undefined4 uStack_24;
+  struct { uint first; undefined4 second; } stack_pair_28;
+
   undefined4 uStack_20;
-  undefined4 auStack_1c [3];
+  undefined4 auStack_1c;
   
   uVar1 = fn_8295D0A8(param_1,1);
   if ((-1 < (int)uVar1) &&
      (uVar1 = (**(code **)(*param_1 + 0x140))
                         (param_1,*(undefined4 *)(**(int **)(param_1[0x41] + 0x10) * 4 + param_1[5]),
-                         &uStack_30,auStack_1c,&uStack_20), -1 < (int)uVar1)) {
+                         &uStack_30,&auStack_1c,&uStack_20), -1 < (int)uVar1)) {
     uVar1 = (**(code **)(*param_1 + 0x144))
                       (param_1,*(undefined4 *)(param_1[0x41] + 0x10),
                        *(undefined4 *)(param_1[0x41] + 0xc),&uStack_2c,uStack_20);
     if ((-1 < (int)uVar1) &&
-       ((uVar1 = (**(code **)(*param_1 + 0x138))(param_1,uStack_30,uStack_2c,auStack_1c[0]),
+       ((uVar1 = (**(code **)(*param_1 + 0x138))(param_1,uStack_30,uStack_2c,auStack_1c),
         -1 < (int)uVar1 &&
         (uVar1 = (**(code **)(*param_1 + 0x148))
                            (param_1,*(undefined4 *)(**(int **)(param_1[0x41] + 8) * 4 + param_1[5]),
-                            &uStack_30,&uStack_24), -1 < (int)uVar1)))) {
+                            &uStack_30,&stack_pair_28.second), -1 < (int)uVar1)))) {
       uVar1 = (**(code **)(*param_1 + 0x14c))
                         (param_1,*(undefined4 *)(param_1[0x41] + 8),
-                         *(undefined4 *)(param_1[0x41] + 0xc),uStack_2c,&uStack_28);
+                         *(undefined4 *)(param_1[0x41] + 0xc),uStack_2c,&stack_pair_28.first);
       if (-1 < (int)uVar1) {
         uVar2 = (ulonglong)uStack_30;
         if ((uStack_30 & 0xf000000) == 0xb000000) {
-          uStack_28 = uStack_28 | 0xc000000;
+          stack_pair_28.first = stack_pair_28.first | 0xc000000;
           uVar2 = (CONCAT44(uStack_30,uStack_30) & 0xfffffffffcffffff) << 0x20 |
                   (ulonglong)uStack_30 & 0xf4ffffff;
         }
         else {
-          uStack_28 = uStack_28 | 0x1000000;
+          stack_pair_28.first = stack_pair_28.first | 0x1000000;
         }
-        uVar1 = (**(code **)(*param_1 + 0x13c))(param_1,uVar2,uStack_28,uStack_24);
+        uVar1 = (**(code **)(*param_1 + 0x13c))(param_1,uVar2,stack_pair_28.first,stack_pair_28.second);
         if (((-1 < (int)uVar1) &&
             (uVar1 = (**(code **)(*param_1 + 0x134))(param_1), -1 < (int)uVar1)) &&
            (uVar1 = fn_829548C8(param_1), -1 < (int)uVar1)) {

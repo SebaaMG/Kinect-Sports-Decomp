@@ -32,13 +32,13 @@ extern int fn_827F1C50();
 undefined4 * fn_827F1CB0(undefined4 *param_1,int param_2,int *param_3)
 
 {
-  undefined4 auStack_30 [12];
+  undefined4 auStack_30;
   
   *(int *)(param_2 + 0xd8) = *(int *)(param_2 + 0xd8) + -1;
   if (*(int *)(*param_3 + 8) == *(int *)(param_2 + 0xd4)) {
-    fn_827F1C50(auStack_30);
+    fn_827F1C50(&auStack_30);
     *param_3 = *(int *)(param_2 + 0xd4);
-    *param_1 = auStack_30[0];
+    *param_1 = auStack_30;
   }
   else {
     *param_3 = *(int *)(*param_3 + 8);

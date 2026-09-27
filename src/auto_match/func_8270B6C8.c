@@ -35,28 +35,28 @@ ulonglong fn_8270B6C8(longlong param_1,undefined8 param_2,undefined8 param_3)
   ulonglong uVar1;
   char cVar2;
   longlong lVar3;
-  int aiStack_30 [12];
+  int aiStack_30;
   
   lVar3 = param_1 + 0x4c;
-  uVar1 = fn_8268F260(lVar3,param_2,param_3,aiStack_30);
+  uVar1 = fn_8268F260(lVar3,param_2,param_3,&aiStack_30);
   if ((uVar1 & 0xffffffff) == 0) {
     cVar2 = fn_8270B220(param_1,param_2,param_3);
     if (cVar2 == '\0') {
       return 0;
     }
-    uVar1 = fn_8268F260(lVar3,param_2,param_3,aiStack_30);
+    uVar1 = fn_8268F260(lVar3,param_2,param_3,&aiStack_30);
     if ((uVar1 & 0xffffffff) == 0) {
       cVar2 = fn_8270B220(param_1,param_2,param_3);
       if (cVar2 == '\0') {
         return 0;
       }
-      uVar1 = fn_8268F260(lVar3,param_2,param_3,aiStack_30);
+      uVar1 = fn_8268F260(lVar3,param_2,param_3,&aiStack_30);
       if ((uVar1 & 0xffffffff) == 0) {
         return uVar1;
       }
     }
   }
-  *(int *)(aiStack_30[0] + 0x18) = *(int *)(aiStack_30[0] + 0x18) + 1;
+  *(int *)(aiStack_30 + 0x18) = *(int *)(aiStack_30 + 0x18) + 1;
   return uVar1;
 }
 

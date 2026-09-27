@@ -35,7 +35,7 @@ undefined8 fn_82957DF8(int param_1)
 
 {
   undefined8 uVar1;
-  undefined1 auStack_130 [304];
+  undefined1 auStack_130 [272];
   
   if ((*(uint *)(param_1 + 0xcc) & 4) == 0) {
     uVar1 = fn_82969030(param_1);

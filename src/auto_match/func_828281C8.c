@@ -32,7 +32,7 @@ extern int fn_828252D0();
 extern int fn_82827980();
 extern int fn_82828B78();
 extern int fn_82829A80();
-extern int fn_82F672D8();
+extern int strncpy();
 
 
 ulonglong fn_828281C8(int param_1,char *param_2,int *param_3)
@@ -45,7 +45,7 @@ ulonglong fn_828281C8(int param_1,char *param_2,int *param_3)
   undefined8 uVar4;
   longlong lVar5;
   char *pcVar7;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [1];
   
   uVar3 = fn_82827980();
   if ((uVar3 & 0xff) == 0) {
@@ -58,7 +58,7 @@ ulonglong fn_828281C8(int param_1,char *param_2,int *param_3)
     } while (cVar1 != '\0');
     uVar4 = fn_828252D0((int)pcVar7 - (int)param_2);
     *(int *)(iVar6 + 8) = (int)uVar4;
-    fn_82F672D8(uVar4,param_2,(int)pcVar7 - (int)param_2);
+    strncpy(uVar4,param_2,(int)pcVar7 - (int)param_2);
     uVar2 = *(undefined1 *)(param_1 + 0x51);
     *(undefined4 *)(iVar6 + 0xc) = 0;
     *(undefined4 *)(iVar6 + 0x1c) = 0;

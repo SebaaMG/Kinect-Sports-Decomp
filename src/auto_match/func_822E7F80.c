@@ -43,7 +43,7 @@ fn_822E7F80(undefined4 *param_1,undefined4 param_2,undefined4 param_3,undefined4
   int iVar2;
   undefined4 *puVar3;
   undefined1 auStack_60 [8];
-  undefined1 auStack_58 [88];
+  undefined1 auStack_58 [8];
   
   param_1[1] = 1;
   *param_1 = &lbl_821AD588;

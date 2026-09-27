@@ -49,10 +49,10 @@ undefined8 fn_82717BD0(int *param_1,float *param_2,ulonglong param_3)
   uint uVar6;
   int iVar7;
   int iVar8;
-  undefined1 auStack_a0 [16];
+  undefined1 auStack_a0 [1];
   undefined1 auStack_90 [16];
-  int iStack_80;
-  int iStack_7c;
+  struct { int first; int second; } stack_pair_80;
+
   int iStack_78;
   int iStack_74;
   int iStack_70;
@@ -86,13 +86,13 @@ undefined8 fn_82717BD0(int *param_1,float *param_2,ulonglong param_3)
            ((piVar1 = *(int **)(param_1[0x29] + iVar7), piVar1 != (int *)0x0 &&
             (((param_3 & 2) == 0 || (cVar4 = (**(code **)(*piVar1 + 8))(piVar1), cVar4 != '\0'))))))
         {
-          iStack_80 = piVar1[0x11];
-          iStack_7c = piVar1[0x12];
+          stack_pair_80.first = piVar1[0x11];
+          stack_pair_80.second = piVar1[0x12];
           iStack_78 = piVar1[0x13];
           iStack_74 = piVar1[0x14];
           iStack_70 = piVar1[0x15];
           iStack_6c = piVar1[0x16];
-          fn_8268D008(&iStack_80,auStack_a0,param_2);
+          fn_8268D008(&stack_pair_80.first,auStack_a0,param_2);
           cVar4 = (**(code **)(*piVar1 + 0x30))(piVar1,auStack_a0,param_3);
           if (cVar4 != '\0') {
             return 1;

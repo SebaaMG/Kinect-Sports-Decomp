@@ -43,7 +43,7 @@ longlong fn_8282D0E0(undefined8 param_1,undefined8 param_2,int *param_3)
   undefined1 uVar4;
   undefined8 uVar1;
   longlong lVar5;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [32];
   
   iVar2 = *param_3;
   lVar5 = 0;

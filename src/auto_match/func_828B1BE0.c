@@ -92,7 +92,7 @@ void fn_828B1BE0(int *param_1,undefined8 param_2,ulonglong param_3,longlong para
   char acStack_a8 [4];
   undefined4 uStack_a4;
   undefined1 auStack_a0 [32];
-  undefined1 auStack_80 [128];
+  undefined1 auStack_80 [64];
   
   uStack0000001c = (undefined4)param_2;
   iStack_b0 = 0;

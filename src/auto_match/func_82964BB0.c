@@ -37,7 +37,7 @@ undefined8 fn_82964BB0(int param_1,int param_2,int param_3,int param_4)
   char *pcVar4;
   ulonglong uVar5;
   char *pcVar6;
-  char acStack_60 [96];
+  char acStack_60 [64];
   
   uVar5 = 0x40;
   pcVar6 = acStack_60;

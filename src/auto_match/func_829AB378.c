@@ -26,7 +26,7 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_829B4FF8();
-extern int fn_82F691F0();
+extern int memset();
 
 
 ulonglong fn_829AB378(ulonglong param_1)
@@ -38,7 +38,7 @@ ulonglong fn_829AB378(ulonglong param_1)
     lVar1 = fn_829B4FF8(2);
     if (lVar1 != 0) {
                     /* WARNING: Subroutine does not return */
-      fn_82F691F0(lVar1,0,0x40);
+      memset(lVar1,0,0x40);
     }
     param_1 = 0;
   }

@@ -32,8 +32,7 @@ extern int fn_82A29AC0();
 extern int fn_82A2A108();
 
 
-ulonglong fn_82A10378(undefined8 param_1,undefined8 param_2,undefined8 param_3,int *param_4,
-                       uint *param_5,uint *param_6,uint *param_7,int *param_8)
+ulonglong fn_82A10378(undefined8 param_1, undefined8 param_2, undefined8 param_3, int *param_4, uint *param_5, uint *param_6, uint *param_7, int *param_8, undefined8 unused_arg_9, int in_stack_0000005c, int in_stack_00000064, int in_stack_0000006c, int in_stack_00000074)
 
 {
   int iVar1;
@@ -46,11 +45,11 @@ ulonglong fn_82A10378(undefined8 param_1,undefined8 param_2,undefined8 param_3,i
   uint uVar8;
   uint uVar9;
   ushort *in_stack_00000054;
-  int in_stack_0000005c;
-  int in_stack_00000064;
-  int in_stack_0000006c;
-  int in_stack_00000074;
-  uint auStack_90 [36];
+
+
+
+
+  uint auStack_90;
   
   uVar5 = *param_6;
   uVar6 = 0x40000 - *param_8;
@@ -71,12 +70,12 @@ ulonglong fn_82A10378(undefined8 param_1,undefined8 param_2,undefined8 param_3,i
     else {
       uVar9 = 0x8000;
     }
-    auStack_90[0] = uVar9;
-    iVar1 = LDIDecompress(param_3,puVar7 + 1,uVar6,*param_4,auStack_90);
+    auStack_90 = uVar9;
+    iVar1 = LDIDecompress(param_3,puVar7 + 1,uVar6,*param_4,&auStack_90);
     if (iVar1 != 0) {
       return 0xffffffff80004005;
     }
-    if (auStack_90[0] != uVar9) {
+    if (auStack_90 != uVar9) {
       return 0xffffffff80004005;
     }
     *param_4 = *param_4 + uVar9;
@@ -154,9 +153,9 @@ ulonglong fn_82A10378(undefined8 param_1,undefined8 param_2,undefined8 param_3,i
         else {
           uVar5 = 0x8000;
         }
-        auStack_90[0] = uVar5;
-        iVar1 = LDIDecompress(param_3,in_stack_00000054 + 1,uVar8,*param_4,auStack_90);
-        if ((iVar1 == 0) && (auStack_90[0] == uVar5)) {
+        auStack_90 = uVar5;
+        iVar1 = LDIDecompress(param_3,in_stack_00000054 + 1,uVar8,*param_4,&auStack_90);
+        if ((iVar1 == 0) && (auStack_90 == uVar5)) {
           *param_4 = *param_4 + uVar5;
           *param_5 = *param_5 - uVar5;
           goto LAB_82a106f4;

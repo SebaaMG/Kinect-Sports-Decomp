@@ -37,7 +37,7 @@ int * fn_8259BB38(int *param_1,int param_2,uint *param_3)
   undefined4 *puVar4;
   undefined4 **ppuVar5;
   undefined4 *puStack_30;
-  undefined4 *apuStack_2c [11];
+  undefined4 *apuStack_2c [1];
   
   uVar1 = *(uint *)(param_2 + 0x20);
   uVar3 = fn_8256DBA0(param_2,param_3);

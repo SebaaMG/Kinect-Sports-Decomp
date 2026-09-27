@@ -41,25 +41,25 @@ void fn_8270D3E8(double param_1,int *param_2,int *param_3,ulonglong param_4,int 
 {
   int iVar1;
   int iVar2;
-  int iStack_60;
-  int iStack_5c;
+  struct { int first; int second; } stack_pair_60;
+
   int iStack_58;
   int iStack_54;
   int iStack_50;
   int iStack_4c;
   
-  iStack_60 = 0;
-  iStack_5c = 0;
+  stack_pair_60.first = 0;
+  stack_pair_60.second = 0;
   iStack_58 = 0;
   iStack_54 = 0;
   iStack_50 = 0;
   iStack_4c = 0;
-  (**(code **)(*param_3 + 0x10))(param_3,&iStack_60,0xffffffff8200e7fc,6);
-  iVar1 = iStack_60;
+  (**(code **)(*param_3 + 0x10))(param_3,&stack_pair_60.first,0xffffffff8200e7fc,6);
+  iVar1 = stack_pair_60.first;
   if (*param_2 != 0) {
     fn_8267C4F0();
   }
-  iVar2 = iStack_5c;
+  iVar2 = stack_pair_60.second;
   *param_2 = iVar1;
   if (param_2[2] != 0) {
     fn_8267C4F0();

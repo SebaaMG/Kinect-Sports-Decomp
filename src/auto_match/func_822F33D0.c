@@ -29,7 +29,7 @@ extern unsigned int *auStack_50;
 extern int fn_822315A0();
 extern int fn_822F6FE0();
 extern int fn_82365BD8();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int lbl_82196582;
 extern unsigned int lbl_821ADF3C;
 extern unsigned int lbl_821AE6B4;
@@ -50,7 +50,7 @@ fn_822F33D0(undefined4 *param_1,undefined4 param_2,undefined4 param_3,undefined4
   undefined4 in_register_000104d4;
   undefined4 in_register_000104d8;
   undefined4 in_vr77;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [1];
   
   iVar5 = fn_82365BD8(auStack_50,param_6);
   param_1[2] = param_2;
@@ -79,7 +79,7 @@ fn_822F33D0(undefined4 *param_1,undefined4 param_2,undefined4 param_3,undefined4
   param_1[0x14] = 0;
   param_1[0x15] = 0;
   param_1[0x16] = 0;
-  fn_82F68CC0(param_1 + 0x18,0xffffffff8329ead0,0x40);
+  memcpy(param_1 + 0x18,0xffffffff8329ead0,0x40);
   iVar5 = param_1[4];
   param_1[0x2e] = 0;
   param_1[0x31] = 0;

@@ -38,7 +38,7 @@ uint * fn_828E7BA8(uint *param_1)
 {
   uint auStack_60 [2];
   undefined1 auStack_58 [24];
-  undefined4 auStack_40 [10];
+  undefined4 auStack_40 [6];
   
   auStack_60[0] = 0;
   fn_828E68F8(auStack_60);

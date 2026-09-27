@@ -39,24 +39,24 @@ void fn_82687628(int param_1)
 
 {
   char cVar1;
-  undefined4 uStack_30;
-  undefined4 uStack_2c;
+  struct { undefined4 first; undefined4 second; } stack_pair_30;
+
   int *piStack_28;
   int iStack_24;
   
   RtlEnterCriticalSection(param_1 + 0xc);
   if ((ulonglong)*(uint *)(param_1 + 8) != 0) {
     fn_82768DE0(&piStack_28,(ulonglong)*(uint *)(param_1 + 8) + 0xc);
-    uStack_30 = 0;
-    uStack_2c = 0;
-    cVar1 = fn_826A8E58(&piStack_28,&uStack_30);
+    stack_pair_30.first = 0;
+    stack_pair_30.second = 0;
+    cVar1 = fn_826A8E58(&piStack_28,&stack_pair_30.first);
     if (cVar1 == '\0') {
-      uStack_30 = 0;
-      uStack_2c = 0;
+      stack_pair_30.first = 0;
+      stack_pair_30.second = 0;
       do {
         fn_82687270(*(undefined4 *)(iStack_24 * 8 + *piStack_28 + 0xc));
         fn_82766D88(&piStack_28);
-        cVar1 = fn_826A8E58(&piStack_28,&uStack_30);
+        cVar1 = fn_826A8E58(&piStack_28,&stack_pair_30.first);
       } while (cVar1 == '\0');
     }
     fn_82768F38((ulonglong)*(uint *)(param_1 + 8) + 0xc);

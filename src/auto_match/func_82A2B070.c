@@ -36,18 +36,18 @@ void fn_82A2B070(undefined4 param_1,undefined4 param_2,undefined4 param_3,undefi
                   undefined8 param_5)
 
 {
-  undefined4 uStack_20;
-  undefined4 uStack_1c;
+  struct { undefined4 first; undefined4 second; } stack_pair_20;
+
   undefined4 uStack_18;
   undefined4 uStack_14;
   undefined8 uStack_10;
   
-  uStack_20 = param_1;
-  uStack_1c = param_2;
+  stack_pair_20.first = param_1;
+  stack_pair_20.second = param_2;
   uStack_18 = param_3;
   uStack_14 = param_4;
   uStack_10 = param_5;
-  XMsgSystemProcessCall(0xfe,0x2c004,&uStack_20,0x18);
+  XMsgSystemProcessCall(0xfe,0x2c004,&stack_pair_20.first,0x18);
   return;
 }
 

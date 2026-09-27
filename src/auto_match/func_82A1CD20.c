@@ -36,7 +36,7 @@ void fn_82A1CD20(char *param_1,undefined8 param_2,char *param_3,undefined8 param
   undefined1 auStack_b0 [8];
   undefined1 auStack_a8 [8];
   char acStack_a0 [64];
-  char acStack_60 [96];
+  char acStack_60 [64];
   
   _snprintf(acStack_a0,0x40,param_1,param_2);
   RtlInitAnsiString(auStack_b0,acStack_a0);

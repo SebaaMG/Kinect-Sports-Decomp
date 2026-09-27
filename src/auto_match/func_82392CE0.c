@@ -63,7 +63,7 @@ int fn_82392CE0(double param_1,int param_2,undefined8 param_3,undefined8 param_4
   undefined1 auStack_120 [32];
   undefined1 auStack_100 [32];
   undefined1 auStack_e0 [32];
-  undefined1 auStack_c0 [192];
+  undefined1 auStack_c0 [64];
   
   uVar2 = fn_822C5B18(auStack_e0);
   uVar3 = fn_822C5B18(auStack_120,uVar2);

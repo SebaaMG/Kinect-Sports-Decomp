@@ -40,7 +40,7 @@ extern int fn_82643B08();
 extern int fn_82645110();
 extern int fn_82645EA8();
 extern int fn_8264EFE0();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int lbl_83000000;
 extern unsigned int uStack_64;
 extern unsigned int uStack_68;
@@ -67,8 +67,8 @@ void fn_82646858(int param_1,byte param_2)
   undefined4 uStack_7c;
   uint uStack_78;
   uint uStack_74;
-  undefined4 uStack_70;
-  undefined4 uStack_6c;
+  struct { undefined4 first; undefined4 second; } stack_pair_70;
+
   undefined4 uStack_68;
   undefined4 uStack_64;
   float fStack_60;
@@ -124,9 +124,9 @@ void fn_82646858(int param_1,byte param_2)
         piVar3 = piVar3 + 4;
       } while (uVar2 < *(uint *)(param_1 + 0x327c));
     }
-    fn_82F68CC0(&fStack_60,param_1 + 0x3218,0x1c);
-    uStack_70 = *(undefined4 *)(param_1 + 0x3234);
-    uStack_6c = *(undefined4 *)(param_1 + 0x3238);
+    memcpy(&fStack_60,param_1 + 0x3218,0x1c);
+    stack_pair_70.first = *(undefined4 *)(param_1 + 0x3234);
+    stack_pair_70.second = *(undefined4 *)(param_1 + 0x3238);
     uStack_68 = *(undefined4 *)(param_1 + 0x323c);
     uStack_64 = *(undefined4 *)(param_1 + 0x3240);
     fn_82639EA8(param_1,0xffffffff821cc030);
@@ -150,7 +150,7 @@ void fn_82646858(int param_1,byte param_2)
     fn_82645EA8(param_1,0);
     fn_82637840((double)fStack_60,(double)fStack_5c,(double)fStack_58,(double)fStack_54,
                       (double)fStack_50,(double)fStack_4c,param_1);
-    fn_82639DB0(param_1,&uStack_70);
+    fn_82639DB0(param_1,&stack_pair_70.first);
   }
   return;
 }

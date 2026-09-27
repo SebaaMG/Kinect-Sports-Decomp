@@ -26,7 +26,7 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 #define ZEXT48(x) ((U64)((U32)(x)))
-extern int fn_82F69148();
+extern int _blkmov();
 extern unsigned int lbl_82002AE0;
 
 
@@ -226,7 +226,7 @@ LAB_82a64ca4:
     } while (lVar32 != 0);
   }
   if ((int)uVar38 < 0) {
-    fn_82F69148((uVar38 & 0x3fffffff) * 4 + lVar34,
+    _blkmov((uVar38 & 0x3fffffff) * 4 + lVar34,
                  (uVar38 + uVar26 & 0x3fffffff) * 4 + ZEXT48(puVar20),(-uVar38 & 0x3fffffff) << 2);
   }
   return;

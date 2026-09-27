@@ -70,8 +70,8 @@ void fn_824D7F50(undefined8 param_1,double param_2,undefined8 param_3,undefined8
   int *in_stack_000000c4;
   undefined4 *in_stack_000000d4;
   undefined4 *in_stack_000000dc;
-  float fStack_100;
-  undefined4 uStack_fc;
+  struct { float first; undefined4 second; } stack_pair_100;
+
   undefined1 auStack_f0 [240];
   
   fn_82F6A548();
@@ -95,10 +95,10 @@ void fn_824D7F50(undefined8 param_1,double param_2,undefined8 param_3,undefined8
     }
     piVar1 = *(int **)((int)param_5 + 0xf4);
     iVar6 = (**(code **)(*piVar1 + 8))
-                      (piVar1,auStack_f0,&fStack_100,in_stack_000000d4,in_stack_000000dc);
+                      (piVar1,auStack_f0,&stack_pair_100.first,in_stack_000000d4,in_stack_000000dc);
     if ((iVar6 != 0) || (dVar10 < (double)*(float *)(iVar5 + 0x14))) {
       pcVar2 = *(code **)(**(int **)(iVar5 + 0x10) + 8);
-      (*pcVar2)(ABS(param_2),param_3,(double)fStack_100,*(int **)(iVar5 + 0x10),param_5,
+      (*pcVar2)(ABS(param_2),param_3,(double)stack_pair_100.first,*(int **)(iVar5 + 0x10),param_5,
                 in_stack_000000bc,pcVar2,in_r8,in_r9,*in_stack_000000dc,*in_stack_000000d4);
       *in_r10 = 1;
       if (iVar6 != 0) {
@@ -117,7 +117,7 @@ void fn_824D7F50(undefined8 param_1,double param_2,undefined8 param_3,undefined8
       puVar4[1] = uVar11;
       puVar4[2] = uVar12;
       puVar4[3] = uVar13;
-      fStack_100 = *(float *)(iVar6 + 0x50);
+      stack_pair_100.first = *(float *)(iVar6 + 0x50);
       *in_stack_000000d4 = *(undefined4 *)(iVar6 + 0x54);
       *in_stack_000000dc = *(undefined4 *)(iVar6 + 0x58);
       if ((1 < *(int *)(iVar6 + 0x10)) && (*(int *)(iVar6 + 0x78) == 0)) {
@@ -138,7 +138,7 @@ void fn_824D7F50(undefined8 param_1,double param_2,undefined8 param_3,undefined8
         puVar4[1] = uVar11;
         puVar4[2] = uVar12;
         puVar4[3] = uVar13;
-        *(undefined4 *)(iVar5 + 0x30) = uStack_fc;
+        *(undefined4 *)(iVar5 + 0x30) = stack_pair_100.second;
         puVar3 = (undefined4 *)(*in_stack_000000c4 * 0x30 + (int)in_r9 & 0xfffffff0);
         uVar11 = puVar3[1];
         uVar12 = puVar3[2];

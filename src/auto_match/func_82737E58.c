@@ -55,7 +55,7 @@ void fn_82737E58(int param_1)
   char in_RESERVE;
   byte bVar10;
   int iStack_40;
-  uint auStack_3c [15];
+  uint auStack_3c;
   
   cVar6 = fn_82695468(param_1,0x29);
   if (cVar6 == '\0') {
@@ -84,9 +84,9 @@ void fn_82737E58(int param_1)
       if ((uVar5 & 0xffffffff) <= (uVar4 & 0xffffffff)) {
         uVar5 = uVar4 + 1;
       }
-      fn_827558F0(auStack_3c,uVar9 + 0x30,uVar4,uVar5,uVar3);
+      fn_827558F0(&auStack_3c,uVar9 + 0x30,uVar4,uVar5,uVar3);
       fn_8269A190(&iStack_40,(ulonglong)*(uint *)(*(int *)(param_1 + 0x18) + 0x78) + 0x254,
-                        auStack_3c);
+                        &auStack_3c);
       fn_82681838(*(undefined4 *)(param_1 + 4),&iStack_40);
       lVar7 = (ulonglong)*(uint *)(iStack_40 + 8) - 1;
       bVar10 = (lVar7 == 0) << 1;
@@ -94,7 +94,7 @@ void fn_82737E58(int param_1)
       if (lVar7 == 0) {
         fn_826944C8();
       }
-      lVar7 = ((ulonglong)auStack_3c[0] & 0xfffffffc) + 4;
+      lVar7 = ((ulonglong)auStack_3c & 0xfffffffc) + 4;
       do {
         puVar8 = (uint *)lVar7;
         uVar9 = (ulonglong)*puVar8;

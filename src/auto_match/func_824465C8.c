@@ -42,7 +42,7 @@ void fn_824465C8(int param_1,undefined8 param_2,undefined8 param_3,undefined8 pa
   undefined8 uStack00000030;
   undefined8 uStack00000038;
   ulonglong auStack_50 [2];
-  undefined1 auStack_40 [40];
+  undefined1 auStack_40 [8];
   
   puVar1 = *(undefined4 **)(param_1 + 8);
   auStack_50[0] = (ulonglong)(uint)puVar1[1] + 0xff & 0xff;

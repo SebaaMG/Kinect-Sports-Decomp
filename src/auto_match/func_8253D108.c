@@ -40,8 +40,8 @@ void fn_8253D108(int *param_1,int param_2)
 {
   longlong lVar1;
   int *piVar2;
-  undefined4 uStack_20;
-  undefined4 uStack_1c;
+  struct { undefined4 first; undefined4 second; } stack_pair_20;
+
   
   if ((*(int *)(param_2 + 0x1f8) != 0) && (param_1[0x3c] == 0)) {
     param_1[0x3c] = 1;
@@ -54,9 +54,9 @@ void fn_8253D108(int *param_1,int param_2)
     }
     fn_8253C720(param_1[8],param_2);
     if (*param_1 != 0) {
-      uStack_20 = 0x3d;
-      uStack_1c = 8;
-      fn_8257C8F0(param_2,&uStack_20);
+      stack_pair_20.first = 0x3d;
+      stack_pair_20.second = 8;
+      fn_8257C8F0(param_2,&stack_pair_20.first);
       *param_1 = 0;
     }
   }

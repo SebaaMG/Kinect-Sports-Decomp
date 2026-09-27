@@ -53,7 +53,7 @@ void fn_82B28AC0(int param_1,uint param_2,uint *param_3,int param_4,uint param_5
   ulonglong uVar12;
   uint uStack_70;
   uint uStack_6c;
-  uint auStack_68 [26];
+  uint auStack_68;
   
   fn_82B25248(param_1,param_3[3],*(undefined4 *)(param_1 + 0x28c));
   uVar5 = *param_3;
@@ -86,10 +86,10 @@ void fn_82B28AC0(int param_1,uint param_2,uint *param_3,int param_4,uint param_5
         uVar7 = param_7;
         uVar5 = param_5;
         if ((int)uVar11 != param_4) {
-          fn_82B82D28(param_3,uVar11,auStack_68,&uStack_6c,&uStack_70,0,0,0);
+          fn_82B82D28(param_3,uVar11,&auStack_68,&uStack_6c,&uStack_70,0,0,0);
           uVar6 = (ulonglong)uStack_6c;
           uVar7 = (ulonglong)uStack_70;
-          uVar5 = auStack_68[0];
+          uVar5 = auStack_68;
         }
         uVar2 = fn_82AD1918(param_1,uVar5,uVar6,uVar7);
         uVar4 = fn_82AD1978(uVar3,uVar2);

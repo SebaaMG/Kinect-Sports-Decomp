@@ -44,8 +44,8 @@ void fn_827AF130(undefined8 param_1)
   longlong lVar7;
   int *piVar8;
   ulonglong uVar9;
-  int iStack_38;
-  int iStack_34;
+  struct { int first; int second; } stack_pair_38;
+
   int iStack_30;
   undefined1 uStack_2c;
   
@@ -53,8 +53,8 @@ void fn_827AF130(undefined8 param_1)
   if ((uint)piVar8[1] < (uint)piVar8[2]) {
     uVar9 = (ulonglong)*(uint *)(*piVar8 + 4);
     iStack_30 = 0;
-    iStack_34 = 0;
-    iStack_38 = 0;
+    stack_pair_38.second = 0;
+    stack_pair_38.first = 0;
     uStack_2c = 0;
     if (uVar9 != 0) {
       lVar6 = 0;
@@ -72,7 +72,7 @@ LAB_827af1d4:
           if (uVar3 + iVar2 <= uVar1) goto LAB_827af1d4;
         }
         if (bVar5) {
-          fn_827AED80(&iStack_38,lVar7 + 0x18);
+          fn_827AED80(&stack_pair_38.first,lVar7 + 0x18);
         }
         piVar8 = (int *)param_1;
         uVar9 = uVar9 - 1;
@@ -85,8 +85,8 @@ LAB_827af1d4:
     piVar8[6] = 0;
     piVar8[7] = 0;
     piVar8[8] = 0;
-    piVar8[9] = iStack_38;
-    piVar8[10] = iStack_34;
+    piVar8[9] = stack_pair_38.first;
+    piVar8[10] = stack_pair_38.second;
     piVar8[0xb] = iStack_30;
     *(undefined1 *)(piVar8 + 0xc) = uStack_2c;
     piVar8[7] = 1;

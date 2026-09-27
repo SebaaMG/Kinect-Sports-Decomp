@@ -29,7 +29,7 @@ extern unsigned int *auStack_450;
 extern int fn_824C1BF8();
 extern int fn_8265C9E0();
 extern int fn_82F64538();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int lbl_82197B50;
 
 
@@ -41,7 +41,7 @@ void fn_8224A4C8(int *param_1,undefined8 param_2,int *param_3)
   char cVar4;
   undefined4 *puVar3;
   int iVar5;
-  undefined1 auStack_450 [1104];
+  undefined1 auStack_450 [1072];
   
   if (param_3 != (int *)0x0) {
     if ((int *)*param_3 == (int *)0x0) {
@@ -67,7 +67,7 @@ LAB_8224a534:
     }
     else {
       *puVar3 = &lbl_82197B50;
-      fn_82F68CC0(puVar3 + 1,auStack_450,0x428);
+      memcpy(puVar3 + 1,auStack_450,0x428);
     }
     puVar1 = (undefined4 *)*param_3;
     *param_3 = (int)puVar3;

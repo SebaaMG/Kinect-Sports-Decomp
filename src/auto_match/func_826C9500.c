@@ -49,8 +49,8 @@ ulonglong fn_826C9500(int param_1,char param_2)
   bool bVar2;
   char cVar3;
   ulonglong uVar4;
-  undefined4 uStack_30;
-  undefined4 uStack_2c;
+  struct { undefined4 first; undefined4 second; } stack_pair_30;
+
   undefined2 uStack_28;
   undefined1 uStack_26;
   undefined1 uStack_25;
@@ -97,14 +97,14 @@ ulonglong fn_826C9500(int param_1,char param_2)
   }
   else {
     if (!bVar2) {
-      uStack_2c = 0;
+      stack_pair_30.second = 0;
       uStack_28 = 0;
-      uStack_30 = 2;
+      stack_pair_30.first = 2;
       uStack_26 = 0;
       uStack_25 = 0xff;
       uStack_24 = 0;
       uStack_23 = 0;
-      cVar3 = fn_826C7758(param_1,&uStack_30);
+      cVar3 = fn_826C7758(param_1,&stack_pair_30.first);
       if (cVar3 != '\0') {
         return 0;
       }

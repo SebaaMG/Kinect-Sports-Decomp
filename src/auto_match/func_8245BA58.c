@@ -44,7 +44,7 @@ undefined8 fn_8245BA58(int param_1)
   int iVar2;
   undefined4 uVar3;
   double dVar4;
-  undefined4 auStack_30 [12];
+  undefined4 auStack_30;
   
   RtlEnterCriticalSection();
   if (*(int *)(param_1 + 0x584) != 0) {
@@ -69,9 +69,9 @@ undefined8 fn_8245BA58(int param_1)
         if ((*(int *)(param_1 + 0x6a4) == 0) &&
            (*(double *)(param_1 + 0x670) < dVar4 - *(double *)(param_1 + 0x678))) {
           *(double *)(param_1 + 0x678) = dVar4;
-          auStack_30[0] = 0x20;
+          auStack_30 = 0x20;
           iVar2 = (**(code **)(**(int **)(param_1 + 0x6a0) + 8))
-                            (*(int **)(param_1 + 0x6a0),param_1 + 0x618,auStack_30);
+                            (*(int **)(param_1 + 0x6a0),param_1 + 0x618,&auStack_30);
           RtlEnterCriticalSection(param_1);
           if (iVar2 < 0) {
             uVar3 = 4;

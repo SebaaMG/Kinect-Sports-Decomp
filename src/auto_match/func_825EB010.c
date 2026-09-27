@@ -85,7 +85,7 @@ void fn_825EB010(int param_1)
   undefined1 auStack_a0 [16];
   undefined1 auStack_90 [16];
   undefined1 auStack_80 [16];
-  undefined1 auStack_70 [112];
+  undefined1 auStack_70 [16];
   
   iVar6 = 0;
   iVar5 = *(int *)((*(int *)(param_1 + 0x10) + 1) * 4 + *(int *)(param_1 + 8));

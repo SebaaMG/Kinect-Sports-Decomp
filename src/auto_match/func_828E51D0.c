@@ -52,8 +52,8 @@ void fn_828E51D0(undefined4 *param_1,undefined4 param_2,undefined4 param_3)
 {
   int *piVar1;
   undefined4 *puVar2;
-  int iStack_d0;
-  int iStack_cc;
+  struct { int first; int second; } stack_pair_d0;
+
   undefined1 *puStack_c8;
   int iStack_c4;
   undefined4 *puStack_c0;
@@ -75,11 +75,11 @@ void fn_828E51D0(undefined4 *param_1,undefined4 param_2,undefined4 param_3)
   iStack_bc = 0;
   RtlEnterCriticalSection(param_1 + 3);
   if ((param_1[1] != 0) && (*(int *)(param_1[1] + 4) == 1)) {
-    iStack_d0 = param_1[2];
-    if ((int *)iStack_d0 == (int *)**(undefined4 **)*param_1) {
-      iStack_d0 = *(int *)**(undefined4 **)*param_1;
+    stack_pair_d0.first = param_1[2];
+    if ((int *)stack_pair_d0.first == (int *)**(undefined4 **)*param_1) {
+      stack_pair_d0.first = *(int *)**(undefined4 **)*param_1;
     }
-    fn_828A7138(param_1,0,&iStack_d0,1);
+    fn_828A7138(param_1,0,&stack_pair_d0.first,1);
   }
   fn_828A22D0(&puStack_c0,param_1);
   RtlLeaveCriticalSection(param_1 + 3);
@@ -93,17 +93,17 @@ void fn_828E51D0(undefined4 *param_1,undefined4 param_2,undefined4 param_3)
   uStack_38 = 0;
   uStack_34 = 0;
   piVar1 = (int *)*puStack_c0;
-  iStack_d0 = *piVar1;
-  iStack_cc = iStack_d0;
-  iStack_c4 = iStack_d0;
-  fn_828E4C40(&iStack_d0);
+  stack_pair_d0.first = *piVar1;
+  stack_pair_d0.second = stack_pair_d0.first;
+  iStack_c4 = stack_pair_d0.first;
+  fn_828E4C40(&stack_pair_d0.first);
   puStack_a8 = auStack_a0;
   puStack_ac = *(undefined4 **)*puVar2;
   uStack_b0 = *puStack_ac;
   puStack_a4 = puStack_ac;
   fn_828E4C40(&uStack_b0);
   fn_828E4FC8(puVar2[2],CONCAT44(uStack_b0,puStack_ac),CONCAT44(puStack_a8,puStack_a4),
-                CONCAT44(iStack_d0,iStack_cc),CONCAT44(puStack_c8,iStack_c4));
+                CONCAT44(stack_pair_d0.first,stack_pair_d0.second),CONCAT44(puStack_c8,iStack_c4));
   if (uStack_38 < uStack_34) {
     fn_828A80B0(param_1,piVar1);
   }

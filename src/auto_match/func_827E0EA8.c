@@ -42,7 +42,7 @@ int * fn_827E0EA8(int *param_1,int param_2,uint *param_3,int *param_4)
   int *piVar4;
   undefined1 uVar5;
   undefined4 *puVar6;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [1];
   
   iVar2 = fn_827E0250(param_2,param_3);
   puVar6 = *(undefined4 **)(param_2 + 4);

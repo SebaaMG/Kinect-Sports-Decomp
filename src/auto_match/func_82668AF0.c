@@ -43,7 +43,7 @@ void fn_82668AF0(undefined4 param_1)
   undefined4 uStack00000014;
   undefined1 auStack_1c [4];
   undefined4 uStack_18;
-  undefined1 auStack_14 [4];
+  undefined1 auStack_14 [1];
   undefined1 auStack_10 [16];
   
   uStack00000014 = param_1;

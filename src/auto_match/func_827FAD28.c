@@ -36,7 +36,7 @@ void fn_827FAD28(undefined8 param_1)
   int iVar1;
   int *piVar3;
   undefined8 uVar2;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [32];
   
   piVar3 = (int *)fn_8262F6A8();
   iVar1 = *piVar3;

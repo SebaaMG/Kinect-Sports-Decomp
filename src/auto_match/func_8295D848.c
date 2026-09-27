@@ -39,7 +39,7 @@ undefined8 fn_8295D848(int *param_1,ulonglong param_2,undefined4 *param_3)
 {
   undefined8 uVar1;
   int iVar2;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [32];
   
   if (param_1[0x57] == 0) {
     uVar1 = fn_8295D0A8(param_1,0x30);

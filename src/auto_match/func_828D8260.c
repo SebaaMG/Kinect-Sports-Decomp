@@ -49,7 +49,7 @@ uint * fn_828D8260(uint *param_1,uint *param_2)
   ulonglong uVar9;
   uint uVar10;
   undefined1 uStack_40;
-  undefined1 auStack_3c [60];
+  undefined1 auStack_3c [1];
   
   if (param_1 != param_2) {
     uVar2 = *param_2;

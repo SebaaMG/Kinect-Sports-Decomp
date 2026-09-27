@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_50;
 extern int fn_829DE7F0();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int iStack_54;
 
 
@@ -40,7 +40,7 @@ void fn_829DEE48(int param_1,int param_2)
   ulonglong uVar4;
   int aiStack_60 [3];
   int iStack_54;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [16];
   
   uVar1 = (ulonglong)*(uint *)(param_1 + 0x6f40);
   if (uVar1 < 0xb) {
@@ -66,7 +66,7 @@ void fn_829DEE48(int param_1,int param_2)
     piVar3 = &iStack_54;
     do {
       piVar3 = piVar3 + 1;
-      fn_82F68CC0(param_2,*piVar3 * 0x590 + param_1,0x590);
+      memcpy(param_2,*piVar3 * 0x590 + param_1,0x590);
       uVar1 = uVar1 - 1;
       param_2 = param_2 + 0x590;
     } while (uVar1 != 0);

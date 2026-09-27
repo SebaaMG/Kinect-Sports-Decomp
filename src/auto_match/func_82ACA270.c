@@ -58,7 +58,7 @@ void fn_82ACA270(int param_1)
   uint uVar12;
   undefined4 auStack_50 [2];
   uint uStack_48;
-  uint auStack_44 [17];
+  uint auStack_44 [1];
   
   fn_82AC9FE8();
   auStack_44[0] = (uint)&uStack_48 | 1;

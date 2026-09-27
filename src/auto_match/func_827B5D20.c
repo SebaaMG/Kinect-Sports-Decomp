@@ -29,7 +29,7 @@ extern unsigned int *auStack_50;
 extern int fn_8267BED0();
 extern int fn_8267C498();
 extern int fn_826809F0();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 void fn_827B5D20(int param_1,int param_2,longlong param_3,int param_4,ulonglong param_5,
@@ -40,13 +40,13 @@ void fn_827B5D20(int param_1,int param_2,longlong param_3,int param_4,ulonglong 
   ulonglong uVar2;
   undefined4 uVar3;
   uint uVar4;
-  undefined4 auStack_50 [20];
+  undefined4 auStack_50;
   
   iVar1 = *(int *)(param_1 + 0x2d0);
   if (((iVar1 == 0) || ((ulonglong)*(uint *)(iVar1 + 0xc) < (param_5 & 0xffffffff))) ||
      ((ulonglong)*(uint *)(iVar1 + 0x10) < (param_6 & 0xffffffff))) {
-    auStack_50[0] = 3;
-    uVar2 = fn_8267BED0(param_1,0x30,auStack_50);
+    auStack_50 = 3;
+    uVar2 = fn_8267BED0(param_1,0x30,&auStack_50);
     if ((uVar2 & 0xffffffff) == 0) {
       uVar3 = 0;
     }
@@ -61,7 +61,7 @@ void fn_827B5D20(int param_1,int param_2,longlong param_3,int param_4,ulonglong 
   uVar4 = 0;
   if ((param_6 & 0xffffffff) != 0) {
     do {
-      fn_82F68CC0((longlong)*(int *)(*(int *)(param_1 + 0x2d0) + 0x14) * (longlong)(int)uVar4 +
+      memcpy((longlong)*(int *)(*(int *)(param_1 + 0x2d0) + 0x14) * (longlong)(int)uVar4 +
                    (ulonglong)*(uint *)(*(int *)(param_1 + 0x2d0) + 0x18),
                    (longlong)(int)(uVar4 + param_4) * (longlong)*(int *)(param_2 + 0x14) +
                    (ulonglong)*(uint *)(param_2 + 0x18) + param_3,param_5);

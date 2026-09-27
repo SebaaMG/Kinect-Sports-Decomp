@@ -37,14 +37,14 @@ undefined8 fn_826F9F90(int *param_1,undefined8 param_2,longlong param_3)
   char cVar4;
   int iVar3;
   ulonglong uVar2;
-  uint auStack_30 [12];
+  uint auStack_30;
   
   if (param_1[0x1a] != 0) {
-    auStack_30[0] = 0xffffffff;
+    auStack_30 = 0xffffffff;
     piVar1 = *(int **)(*(int *)(param_1[0x1b] + 0x1c) + 0xc);
-    cVar4 = (**(code **)(*piVar1 + 0x34))(piVar1,param_2,auStack_30,0);
+    cVar4 = (**(code **)(*piVar1 + 0x34))(piVar1,param_2,&auStack_30,0);
     if (cVar4 != '\0') {
-      (**(code **)(*param_1 + 0x10))(param_1,(ulonglong)auStack_30[0] + param_3);
+      (**(code **)(*param_1 + 0x10))(param_1,(ulonglong)auStack_30 + param_3);
       return 1;
     }
     param_1 = param_1 + 2;

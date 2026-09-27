@@ -50,7 +50,7 @@ void fn_827E9A68(undefined8 param_1,double param_2,undefined8 param_3,undefined8
   double dVar4;
   double dVar5;
   double dVar6;
-  undefined1 auStack_70 [16];
+  undefined1 auStack_70 [1];
   undefined1 auStack_60 [96];
   
   uVar1 = fn_82F6A544();

@@ -47,15 +47,15 @@ double fn_82817578(undefined8 param_1,undefined8 param_2,int param_3,undefined8 
   ushort uStack_20;
   ushort uStack_1e;
   ushort uStack_1c;
-  ushort auStack_1a [5];
+  ushort auStack_1a;
   
-  dVar2 = (double)fn_828171F8(param_1,param_2,auStack_1a,&uStack_1c,&uStack_1e,&uStack_20,param_4)
+  dVar2 = (double)fn_828171F8(param_1,param_2,&auStack_1a,&uStack_1c,&uStack_1e,&uStack_20,param_4)
   ;
   dVar6 = (double)*(float *)((uint)uStack_1e * 4 + param_3);
   dVar5 = (double)*(float *)((uint)uStack_1c * 4 + param_3);
   dVar7 = (double)*(float *)((uint)uStack_20 * 4 + param_3);
   dVar3 = (double)(float)(dVar6 - dVar5);
-  dVar4 = (double)*(float *)((uint)auStack_1a[0] * 4 + param_3);
+  dVar4 = (double)*(float *)((uint)auStack_1a * 4 + param_3);
   dVar1 = (double)lbl_82002C5C;
   return (double)(float)((double)(float)((double)(float)((double)(float)((double)(float)((double)(
                                                   float)(dVar7 - dVar4) - dVar3) * dVar1 - dVar3) *

@@ -70,8 +70,8 @@ undefined8 fn_8274DC30(int param_1,undefined4 *param_2)
   undefined8 uVar17;
   char in_RESERVE;
   byte bVar18;
-  int iStack_60;
-  uint uStack_5c;
+  struct { int first; uint second; } stack_pair_60;
+
   int iStack_58;
   int iStack_54;
   int *piStack_50;
@@ -86,8 +86,8 @@ undefined8 fn_8274DC30(int param_1,undefined4 *param_2)
   bVar5 = false;
   pcVar2 = *(char **)*param_2;
   if ((*pcVar2 == 'i') || (*pcVar2 == 'I')) {
-    fn_82695128(&iStack_60,param_2);
-    puVar9 = (undefined4 *)fn_826949A8(&iStack_58,&iStack_60,0,6);
+    fn_82695128(&stack_pair_60.first,param_2);
+    puVar9 = (undefined4 *)fn_826949A8(&iStack_58,&stack_pair_60.first,0,6);
     pcVar14 = "img://";
     pcVar15 = *(char **)*puVar9;
     do {
@@ -107,7 +107,7 @@ LAB_8274dd84:
       bVar5 = true;
     }
     else {
-      puVar9 = (undefined4 *)fn_826949A8(&iStack_54,&iStack_60,0,8);
+      puVar9 = (undefined4 *)fn_826949A8(&iStack_54,&stack_pair_60.first,0,8);
       pcVar14 = "imgps://";
       pcVar15 = *(char **)*puVar9;
       do {
@@ -124,19 +124,19 @@ LAB_8274dd84:
       }
       if (cVar12 == cVar1) goto LAB_8274dd84;
     }
-    lVar13 = (ulonglong)*(uint *)(iStack_60 + 8) - 1;
-    *(int *)(iStack_60 + 8) = (int)lVar13;
+    lVar13 = (ulonglong)*(uint *)(stack_pair_60.first + 8) - 1;
+    *(int *)(stack_pair_60.first + 8) = (int)lVar13;
     if (lVar13 == 0) {
-      fn_826944C8(iStack_60);
+      fn_826944C8(stack_pair_60.first);
     }
   }
   bVar18 = !bVar5 << 1;
   if (!bVar5) {
     piStack_50 = (int *)0x0;
     uStack_4c = 0;
-    fn_8268C510(&uStack_5c,*(undefined4 *)*param_2);
-    cVar12 = fn_826DB990(lVar6,&piStack_50,&uStack_5c);
-    lVar13 = ((ulonglong)uStack_5c & 0xfffffffc) + 4;
+    fn_8268C510(&stack_pair_60.second,*(undefined4 *)*param_2);
+    cVar12 = fn_826DB990(lVar6,&piStack_50,&stack_pair_60.second);
+    lVar13 = ((ulonglong)stack_pair_60.second & 0xfffffffc) + 4;
     do {
       puVar16 = (uint *)lVar13;
       uVar7 = (ulonglong)*puVar16;

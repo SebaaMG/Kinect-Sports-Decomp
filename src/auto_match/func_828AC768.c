@@ -41,7 +41,7 @@ void fn_828AC768(int param_1,undefined8 param_2)
   undefined4 *puVar4;
   longlong lVar5;
   undefined4 uStack_44;
-  uint auStack_40 [16];
+  uint auStack_40 [2];
   
   lVar5 = 2;
   puVar4 = &uStack_44;

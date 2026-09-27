@@ -76,11 +76,11 @@ void fn_82833CC8(int param_1,int param_2,undefined8 param_3)
   int iVar13;
   int *piVar14;
   byte in_xer_so;
-  undefined1 auStack_1c0 [4];
+  undefined1 auStack_1c0 [1];
   int iStack_1bc;
   undefined4 *puStack_1b8;
   int iStack_1b4;
-  int aiStack_1b0 [2];
+  int aiStack_1b0;
   int iStack_1a8;
   int *piStack_1a4;
   int iStack_1a0;
@@ -169,7 +169,7 @@ void fn_82833CC8(int param_1,int param_2,undefined8 param_3)
         do {
           iVar12 = iStack_19c;
           puVar11 = (uint *)(iStack_19c + 0xc);
-          fn_82833988(piVar9,aiStack_1b0,*(undefined2 *)(iStack_19c + 0x1e),&iStack_194,
+          fn_82833988(piVar9,&aiStack_1b0,*(undefined2 *)(iStack_19c + 0x1e),&iStack_194,
                         *(undefined4 *)(iStack_19c + 0xc),*(undefined4 *)(iStack_19c + 0x14),
                         1 << (*(byte *)(iStack_19c + 0x1c) & 0x3f),
                         1 << (*(byte *)(iStack_19c + 0x1d) & 0x3f));
@@ -197,7 +197,7 @@ void fn_82833CC8(int param_1,int param_2,undefined8 param_3)
               *(int *)(param_2 + 0x30) = *(int *)(param_2 + 0x30) + -1;
               *(undefined4 *)(iVar2 + 0x10) = *(undefined4 *)(*piVar9 + 0xc);
               *(int *)(iVar2 + 0x14) = iVar13 + iVar5;
-              *(int *)(iVar2 + 0x18) = iVar13 + aiStack_1b0[0];
+              *(int *)(iVar2 + 0x18) = iVar13 + aiStack_1b0;
               fn_82822F60(param_1 + 0x318,iVar2,0xffffffff8282b948,iVar2);
               *(int *)(param_1 + 0x30) = *(int *)(param_1 + 0x30) + 1;
               fn_8259BDA8(&puStack_1b8);
@@ -227,7 +227,7 @@ void fn_82833CC8(int param_1,int param_2,undefined8 param_3)
               *(undefined4 *)(iVar2 + 0x18) = *(undefined4 *)(*piVar9 + 0xc);
               *(undefined4 *)(iVar2 + 0x14) =
                    *(undefined4 *)(*(int *)(param_1 + 0x3d4) + *(int *)(iVar2 + 0x14) * 4 + -4);
-              **(int **)(iVar2 + 0x10) = iVar13 + aiStack_1b0[0];
+              **(int **)(iVar2 + 0x10) = iVar13 + aiStack_1b0;
               *(int *)(iVar2 + 0x20) = iVar13 + iVar5;
               fn_82822F60(param_1 + 0x344,iVar2,0xffffffff8282af50,iVar2);
               *(int *)(param_1 + 0x38) = *(int *)(param_1 + 0x38) + 1;
@@ -253,7 +253,7 @@ void fn_82833CC8(int param_1,int param_2,undefined8 param_3)
                                 in_xer_so) >> 3)) break;
               piVar1 = (int *)*puVar10;
               puVar10 = puVar10 + 3;
-              *piVar1 = (*puVar11 - *(int *)(iVar12 + 0x10)) + aiStack_1b0[0];
+              *piVar1 = (*puVar11 - *(int *)(iVar12 + 0x10)) + aiStack_1b0;
             } while (puVar10 != (undefined4 *)piStack_1a4[1]);
           }
           fn_82518FF0(&iStack_19c);

@@ -36,7 +36,7 @@ undefined8 fn_826A5280(int param_1,undefined8 param_2)
 {
   undefined4 uVar1;
   undefined8 uVar2;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [32];
   
   uVar1 = *(undefined4 *)(param_1 + 4);
   uVar2 = fn_826A3E68(auStack_40);

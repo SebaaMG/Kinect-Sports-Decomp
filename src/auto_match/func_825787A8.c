@@ -57,7 +57,7 @@ void fn_825787A8(int param_1,longlong param_2,int param_3)
   int iStack_68;
   undefined1 auStack_64 [4];
   undefined1 auStack_60 [4];
-  undefined1 auStack_5c [92];
+  undefined1 auStack_5c [1];
   
   uVar2 = fn_8251F720(param_2 + 0x104,0);
   *(undefined4 *)(param_1 + 100) = uVar2;

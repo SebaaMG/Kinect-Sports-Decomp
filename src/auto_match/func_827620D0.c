@@ -35,7 +35,7 @@ extern unsigned int lbl_8201489C;
 undefined4 * fn_827620D0(undefined4 *param_1)
 
 {
-  undefined8 auStack_30 [6];
+  undefined8 auStack_30;
   
   param_1[1] = 1;
   *param_1 = &lbl_8201489C;
@@ -50,8 +50,8 @@ undefined4 * fn_827620D0(undefined4 *param_1)
     param_1[0x24] = param_1[7];
     param_1[0x25] = param_1[8];
     param_1[0x26] = param_1[9];
-    fn_8275FD58(auStack_30,param_1 + 2);
-    *(undefined8 *)(param_1 + 0x1f) = auStack_30[0];
+    fn_8275FD58(&auStack_30,param_1 + 2);
+    *(undefined8 *)(param_1 + 0x1f) = auStack_30;
     fn_8275E130(param_1 + 0x1f,param_1 + 0x22,param_1 + 0x23);
   }
   return param_1;

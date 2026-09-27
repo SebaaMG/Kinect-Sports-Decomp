@@ -26,7 +26,7 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 #define CONCAT44(h,l) ((U64)((((U32)(h)) << 32) | ((U32)(l))))
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 undefined8 fn_829206C8(int *param_1)
@@ -85,7 +85,7 @@ undefined8 fn_829206C8(int *param_1)
       lVar12 = lVar10;
       if (uVar6 != 0) {
         do {
-          fn_82F68CC0(lVar12,lVar11,(longlong)(int)(uVar2 >> 2) * (longlong)iVar5);
+          memcpy(lVar12,lVar11,(longlong)(int)(uVar2 >> 2) * (longlong)iVar5);
           iVar3 = param_1[1];
           iVar7 = *param_1;
           uVar13 = uVar13 + 4;

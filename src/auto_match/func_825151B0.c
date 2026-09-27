@@ -38,7 +38,7 @@ undefined8 fn_825151B0(undefined8 param_1,uint param_2)
   undefined4 *puVar5;
   undefined4 **ppuVar6;
   undefined4 *puStack_20;
-  undefined4 *apuStack_1c [3];
+  undefined4 *apuStack_1c [1];
   
   iVar4 = fn_82518120();
   puVar2 = (undefined4 *)(*(undefined4 **)(iVar4 + 0x14))[1];

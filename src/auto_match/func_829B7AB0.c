@@ -26,7 +26,7 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_829C0738();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 void fn_829B7AB0(int *param_1)
@@ -57,7 +57,7 @@ void fn_829B7AB0(int *param_1)
 LAB_829b7b04:
         uVar13 = uVar12;
         if (((uVar14 + (uint)param_1[9]) - 0x106 & 0xffffffff) <= uVar11) {
-          fn_82F68CC0((ulonglong)(uint)param_1[0xc],(uint)param_1[0xc] + uVar14,uVar14);
+          memcpy((ulonglong)(uint)param_1[0xc],(uint)param_1[0xc] + uVar14,uVar14);
           uVar11 = (ulonglong)(uint)param_1[0x11];
           puVar10 = (ushort *)(param_1[0xf] + param_1[0x11] * 2);
           param_1[0x19] = param_1[0x19] - uVar1;
@@ -113,7 +113,7 @@ LAB_829b7b04:
         iVar7 = fn_829C0738(piVar2[0xc],*piVar2,uVar11);
         piVar2[0xc] = iVar7;
       }
-      fn_82F68CC0((ulonglong)uVar8 + (ulonglong)uVar3 + (ulonglong)uVar4,*piVar2,uVar11);
+      memcpy((ulonglong)uVar8 + (ulonglong)uVar3 + (ulonglong)uVar4,*piVar2,uVar11);
       *piVar2 = *piVar2 + iVar6;
       piVar2[2] = iVar6 + piVar2[2];
     }

@@ -26,7 +26,7 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_8268B368();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int lbl_831E7E64;
 
 
@@ -49,7 +49,7 @@ undefined4 * fn_8268C510(undefined4 *param_1,char *param_2)
     pcVar3 = pcVar3 + (-1 - (int)param_2);
   }
   lVar2 = fn_8268B368(param_1,lbl_831E7E64,pcVar3,0);
-  fn_82F68CC0(lVar2 + 8,param_2,pcVar3);
+  memcpy(lVar2 + 8,param_2,pcVar3);
   *param_1 = (int)lVar2;
   return param_1;
 }

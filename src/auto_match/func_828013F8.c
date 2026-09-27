@@ -46,7 +46,7 @@ void fn_828013F8(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefi
   undefined8 uVar2;
   undefined2 in_stack_00000056;
   undefined4 in_stack_0000005c;
-  undefined1 auStack_70 [112];
+  undefined1 auStack_70 [32];
   
   fn_828029E8(auStack_70);
   fn_82802A58(auStack_70,param_9);

@@ -42,7 +42,7 @@ undefined8 fn_82D1BCD8(undefined4 *param_1,undefined8 param_2)
   undefined8 uVar3;
   int iVar4;
   undefined1 auStack_50 [16];
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [32];
   
   if (3 < (int)param_1[1]) {
     fn_82D0D6E8(auStack_40);

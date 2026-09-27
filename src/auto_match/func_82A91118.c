@@ -51,14 +51,14 @@ fn_82A91118(int *param_1,int *param_2,int *param_3,longlong param_4,longlong par
   ulonglong uVar5;
   undefined4 *puVar6;
   uint uVar7;
-  undefined4 auStack_120 [4];
+  undefined4 auStack_120;
   undefined4 uStack_110;
   undefined4 uStack_10c;
   undefined4 uStack_108;
   undefined4 uStack_104;
   undefined4 uStack_fc;
   undefined1 auStack_f0 [80];
-  undefined1 auStack_a0 [160];
+  undefined1 auStack_a0 [96];
   
   uVar5 = param_5 - 1;
   if (-1 < (longlong)uVar5) {
@@ -77,7 +77,7 @@ fn_82A91118(int *param_1,int *param_2,int *param_3,longlong param_4,longlong par
   }
   puVar6 = (undefined4 *)*param_1;
   uStack_104 = 3;
-  auStack_120[0] = lbl_8201DCB8;
+  auStack_120 = lbl_8201DCB8;
   uStack_fc = lbl_8201DCB8;
   uStack_108 = lbl_82196284;
   uStack_110 = lbl_8201DCB8;
@@ -97,7 +97,7 @@ fn_82A91118(int *param_1,int *param_2,int *param_3,longlong param_4,longlong par
            (cVar2 = (**(code **)(*param_2 + 0x10))
                               (param_2,auStack_f0,
                                (longlong)((int)(uVar7 + iVar1 + 7) >> 3) -
-                               (longlong)((int)uVar7 >> 3),auStack_120), cVar2 == '\0')) {
+                               (longlong)((int)uVar7 >> 3),&auStack_120), cVar2 == '\0')) {
           return 0;
         }
       }

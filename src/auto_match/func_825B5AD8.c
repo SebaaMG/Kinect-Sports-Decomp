@@ -125,7 +125,7 @@ void fn_825B5AD8(int param_1,undefined4 *param_2,int param_3,undefined8 param_4,
   undefined1 auStack_c0 [16];
   undefined1 auStack_b0 [16];
   undefined1 auStack_a0 [16];
-  undefined1 auStack_90 [144];
+  undefined1 auStack_90 [112];
   
   fVar8 = lbl_821CC160;
   iVar17 = (int)in_r0;

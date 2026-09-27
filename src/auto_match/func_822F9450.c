@@ -51,14 +51,14 @@ double fn_822F9450(int param_1)
   int *piVar7;
   ulonglong uVar8;
   double dVar9;
-  int iStack_38;
-  int iStack_34;
+  struct { int first; int second; } stack_pair_38;
+
   undefined1 auStack_30 [4];
   int iStack_2c;
   
   bVar5 = false;
-  fn_822E5FA8(&iStack_38,*(undefined4 *)(param_1 + 8));
-  if (iStack_38 != 0) {
+  fn_822E5FA8(&stack_pair_38.first,*(undefined4 *)(param_1 + 8));
+  if (stack_pair_38.first != 0) {
     bVar5 = true;
     piVar7 = (int *)fn_822E5FA8(auStack_30,*(undefined4 *)(param_1 + 8));
     bVar6 = false;
@@ -89,7 +89,7 @@ LAB_822f94b4:
   dVar9 = (double)(fVar2 * ((fVar1 - fVar4) *
                             ((float)(lbl_83265A28 & 0x7fffff | 0x3f800000) - lbl_821CA460) + fVar4))
   ;
-  if (iStack_34 != 0) {
+  if (stack_pair_38.second != 0) {
     fn_822315A0();
   }
   return dVar9;

@@ -43,8 +43,8 @@ void fn_8279AC18(int param_1)
 
 {
   int iVar1;
-  undefined4 uStack_40;
-  undefined4 uStack_3c;
+  struct { undefined4 first; undefined4 second; } stack_pair_40;
+
   undefined4 uStack_38;
   undefined4 uStack_34;
   undefined4 uStack_30;
@@ -62,12 +62,12 @@ void fn_8279AC18(int param_1)
       uStack_34 = 0;
       uStack_30 = 0;
       uStack_20 = 0;
-      uStack_40 = 0;
-      uStack_3c = 0;
+      stack_pair_40.first = 0;
+      stack_pair_40.second = 0;
       uStack_28 = 0xff000000;
       uStack_1c = 0x18;
       uStack_24 = 0xffffffff;
-      fn_827AFE68(*(undefined4 *)(param_1 + 0x14),&uStack_40);
+      fn_827AFE68(*(undefined4 *)(param_1 + 0x14),&stack_pair_40.first);
     }
   }
   return;

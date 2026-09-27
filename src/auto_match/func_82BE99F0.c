@@ -46,7 +46,7 @@ void fn_82BE99F0(void)
   int iVar7;
   float *pfVar8;
   double dVar9;
-  undefined1 auStack_60 [72];
+  undefined1 auStack_60 [40];
   
   if (lbl_8322B22C != 0) {
     fn_82BEEC68(auStack_60,lbl_8322B22C + 0x18,lbl_8322B22C + 0x58);

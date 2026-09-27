@@ -34,7 +34,7 @@ extern int fn_829355B8();
 extern int fn_82958950();
 extern int fn_82975B00();
 extern int fn_82976860();
-extern int fn_82F63CA0();
+extern int memmove();
 
 
 longlong fn_8295A398(int param_1)
@@ -45,18 +45,18 @@ longlong fn_8295A398(int param_1)
   undefined8 uVar3;
   ulonglong uVar4;
   int iVar5;
-  int *apiStack_50 [4];
-  undefined1 auStack_40 [64];
+  int * apiStack_50;
+  undefined1 auStack_40 [16];
   
-  apiStack_50[0] = (int *)0x0;
+  apiStack_50 = (int *)0x0;
   fn_82935220(auStack_40,0x53455250);
   lVar1 = fn_82976860(param_1);
   if (-1 < lVar1) {
-    lVar1 = (**(code **)(**(int **)(param_1 + 0xe4) + 8))(*(int **)(param_1 + 0xe4),apiStack_50);
+    lVar1 = (**(code **)(**(int **)(param_1 + 0xe4) + 8))(*(int **)(param_1 + 0xe4),&apiStack_50);
     if (-1 < lVar1) {
       if ((int)lVar1 == 0) {
-        uVar2 = (**(code **)(*apiStack_50[0] + 0x10))();
-        uVar3 = (**(code **)(*apiStack_50[0] + 0xc))(apiStack_50[0]);
+        uVar2 = (**(code **)(*apiStack_50 + 0x10))();
+        uVar3 = (**(code **)(*apiStack_50 + 0xc))(apiStack_50);
         lVar1 = fn_829352D0(auStack_40,uVar3,uVar2,1,0,0);
         if (lVar1 < 0) goto LAB_8295a4f4;
       }
@@ -64,7 +64,7 @@ longlong fn_8295A398(int param_1)
       if ((uVar4 & 0xffffffff) < 0x8001) {
         lVar1 = fn_82958950(param_1,uVar4);
         if (-1 < lVar1) {
-          fn_82F63CA0((uVar4 + 1 & 0x3fffffff) * 4 + (ulonglong)*(uint *)(param_1 + 0x110),
+          memmove((uVar4 + 1 & 0x3fffffff) * 4 + (ulonglong)*(uint *)(param_1 + 0x110),
                        (ulonglong)*(uint *)(param_1 + 0x110) + 4,
                        ((ulonglong)*(uint *)(param_1 + 0x114) - 1 & 0x3fffffff) << 2);
           lVar1 = fn_829355B8(auStack_40,(ulonglong)*(uint *)(param_1 + 0x110) + 4,uVar4);
@@ -84,9 +84,9 @@ longlong fn_8295A398(int param_1)
     }
   }
 LAB_8295a4f4:
-  if (apiStack_50[0] != (int *)0x0) {
-    (**(code **)(*apiStack_50[0] + 8))();
-    apiStack_50[0] = (int *)0x0;
+  if (apiStack_50 != (int *)0x0) {
+    (**(code **)(*apiStack_50 + 8))();
+    apiStack_50 = (int *)0x0;
   }
   fn_82935258(auStack_40);
   return lVar1;

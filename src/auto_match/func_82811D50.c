@@ -38,7 +38,7 @@ void fn_82811D50(int param_1,undefined8 param_2,undefined8 param_3)
 {
   double dVar1;
   double dVar2;
-  undefined1 auStack_30 [24];
+  undefined1 auStack_30 [8];
   
   fn_82810328(param_3,param_2,auStack_30);
   dVar2 = (double)fn_82810BE8(auStack_30);

@@ -41,8 +41,8 @@ void fn_82864700(int param_1,undefined8 param_2)
 {
   undefined4 uStack_2c;
   undefined4 uStack_24;
-  undefined4 uStack_20;
-  undefined4 uStack_1c;
+  struct { undefined4 first; undefined4 second; } stack_pair_20;
+
   undefined4 uStack_18;
   undefined4 uStack_14;
   undefined4 uStack_10;
@@ -56,9 +56,9 @@ void fn_82864700(int param_1,undefined8 param_2)
   uStack_24 = (undefined4)(longlong)*(float *)(param_1 + 0xe8);
   uStack_10 = *(undefined4 *)(param_1 + 0xf4);
   uStack_c = *(undefined4 *)(param_1 + 0xf8);
-  uStack_20 = uStack_2c;
-  uStack_1c = uStack_24;
-  fn_82639EA8(param_2,&uStack_20);
+  stack_pair_20.first = uStack_2c;
+  stack_pair_20.second = uStack_24;
+  fn_82639EA8(param_2,&stack_pair_20.first);
   return;
 }
 

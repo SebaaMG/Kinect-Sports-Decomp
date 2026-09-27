@@ -51,7 +51,7 @@ void fn_823D1358(int param_1)
   undefined4 uVar8;
   undefined1 auStack_60 [4];
   int iStack_5c;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [32];
   
   iVar4 = *(int *)(param_1 + 0x9a0);
   puVar5 = (undefined4 *)(iVar4 + 0x80U & 0xfffffff0);

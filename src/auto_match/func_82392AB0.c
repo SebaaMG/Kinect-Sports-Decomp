@@ -29,7 +29,7 @@ extern unsigned int *auStack_60;
 extern unsigned int *auStack_70;
 extern unsigned int *auStack_8c;
 extern unsigned int *auStack_a0;
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int uStack_74;
 extern unsigned int uStack_78;
 extern unsigned int uStack_7c;
@@ -57,15 +57,15 @@ void fn_82392AB0(int param_1,undefined8 param_2,int param_3)
   undefined4 uStack_94;
   undefined4 uStack_90;
   undefined4 auStack_8c [3];
-  undefined4 uStack_80;
-  undefined4 uStack_7c;
+  struct { undefined4 first; undefined4 second; } stack_pair_80;
+
   undefined4 uStack_78;
   undefined4 uStack_74;
   undefined1 auStack_70 [16];
-  undefined1 auStack_60 [96];
+  undefined1 auStack_60 [64];
   
   (**(code **)(**(int **)(param_1 + 0x2c) + 0x14))(*(int **)(param_1 + 0x2c),param_2,auStack_60);
-  (**(code **)(**(int **)(param_1 + 0x34) + 0x14))(*(int **)(param_1 + 0x34),param_2,&uStack_80);
+  (**(code **)(**(int **)(param_1 + 0x34) + 0x14))(*(int **)(param_1 + 0x34),param_2,&stack_pair_80.first);
   (**(code **)(**(int **)(param_1 + 0x3c) + 0x14))(*(int **)(param_1 + 0x3c),param_2,&uStack_9c);
   (**(code **)(**(int **)(param_1 + 0x44) + 0x14))(*(int **)(param_1 + 0x44),param_2,auStack_70);
   (**(code **)(**(int **)(param_1 + 0x4c) + 0x14))(*(int **)(param_1 + 0x4c),param_2,&uStack_98);
@@ -74,10 +74,10 @@ void fn_82392AB0(int param_1,undefined8 param_2,int param_3)
   (**(code **)(**(int **)(param_1 + 100) + 0x14))(*(int **)(param_1 + 100),param_2,auStack_8c);
   (**(code **)(**(int **)(param_1 + 0x6c) + 0x14))(*(int **)(param_1 + 0x6c),param_2,auStack_a0);
   if (param_3 != 0) {
-    fn_82F68CC0(*(int *)(param_1 + 8) + param_3,auStack_60,0x40);
+    memcpy(*(int *)(param_1 + 8) + param_3,auStack_60,0x40);
     iVar4 = *(int *)(param_1 + 0xc) + param_3;
-    *(undefined4 *)(*(int *)(param_1 + 0xc) + param_3) = uStack_80;
-    *(undefined4 *)(iVar4 + 4) = uStack_7c;
+    *(undefined4 *)(*(int *)(param_1 + 0xc) + param_3) = stack_pair_80.first;
+    *(undefined4 *)(iVar4 + 4) = stack_pair_80.second;
     *(undefined4 *)(iVar4 + 8) = uStack_78;
     *(undefined4 *)(iVar4 + 0xc) = uStack_74;
     *(undefined4 *)(*(int *)(param_1 + 0x10) + param_3) = uStack_9c;

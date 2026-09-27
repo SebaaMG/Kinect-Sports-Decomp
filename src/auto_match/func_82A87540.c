@@ -41,7 +41,7 @@ undefined8 fn_82A87540(int *param_1,int *param_2)
   longlong lVar3;
   undefined1 auStack_70 [16];
   undefined1 auStack_60 [32];
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [32];
   
   cVar1 = (**(code **)(*param_2 + 4))(param_2);
   if ((cVar1 != '\0') &&

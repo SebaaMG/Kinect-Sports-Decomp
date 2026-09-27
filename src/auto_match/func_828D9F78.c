@@ -40,7 +40,7 @@ void fn_828D9F78(int param_1,undefined8 param_2)
   int iVar3;
   undefined4 uVar4;
   undefined8 uVar1;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
   
   iVar2 = fn_828E9DA8(param_2);
   iVar3 = fn_828E9D90(param_2);

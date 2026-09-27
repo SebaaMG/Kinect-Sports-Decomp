@@ -45,7 +45,7 @@ void fn_826A3298(int param_1)
   ulonglong uVar2;
   undefined8 uVar3;
   longlong lVar5;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
   
   cVar4 = fn_82695468(param_1,7);
   if (cVar4 == '\0') {

@@ -51,7 +51,7 @@ void fn_82274130(undefined8 param_1,int param_2,int param_3)
   double dStack_38;
   undefined1 auStack_30 [8];
   double dStack_28;
-  undefined1 auStack_20 [32];
+  undefined1 auStack_20 [16];
   
   puVar1 = (undefined4 *)((int)&uStack_50 + 4);
   lVar3 = 2;

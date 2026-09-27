@@ -44,7 +44,7 @@ void fn_82A9ACD0(undefined8 param_1,undefined8 param_2,uint *param_3,undefined8 
   undefined8 uVar2;
   uint *puVar3;
   uint *puVar4;
-  undefined1 auStack_a0 [160];
+  undefined1 auStack_a0 [112];
   
   fn_82A99BC8(param_2);
   fn_82A99B70(param_2,0xffffffff820d28b4,0xffffffff820d2940);

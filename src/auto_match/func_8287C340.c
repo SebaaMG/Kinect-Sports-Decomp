@@ -28,7 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 extern double sqrt(double);
 #define SQRT(x) sqrt(x)
 extern int fn_8287C2E8();
-extern int fn_82F6B030();
+extern int __u64tod();
 
 
 ulonglong fn_8287C340(ulonglong param_1)
@@ -42,7 +42,7 @@ ulonglong fn_8287C340(ulonglong param_1)
   if ((param_1 & 0xffffffff) != 0) {
     lVar1 = (param_1 & 0xffffffff) * (param_1 & 0xffffffff) * 5;
     lVar3 = lVar1 + -4;
-    dVar4 = (double)fn_82F6B030(lVar3);
+    dVar4 = (double)__u64tod(lVar3);
     if (((longlong)SQRT(dVar4) * (longlong)SQRT(dVar4) != lVar3) &&
        (cVar2 = fn_8287C2E8(lVar1 + 4), cVar2 == '\0')) {
       return 0;

@@ -30,7 +30,7 @@ extern int fn_8227D7E8();
 extern int fn_8227D908();
 extern int fn_822997C8();
 extern int fn_8265C9E0();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int lbl_821B7D68;
 extern unsigned int lbl_821B7D8C;
 extern unsigned int lbl_821CC160;
@@ -65,7 +65,7 @@ fn_82404F30(undefined4 *param_1,undefined4 param_2,undefined4 param_3,undefined4
   param_1[0x11] = uVar2;
   param_1[0x10] = uVar1;
   param_1[0x12] = 0;
-  fn_82F68CC0(param_1 + 0x13,param_6,0x54);
+  memcpy(param_1 + 0x13,param_6,0x54);
   param_1[0x28] = param_7;
   param_1[0x29] = 0;
   param_1[0x2a] = 0;

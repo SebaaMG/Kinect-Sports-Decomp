@@ -37,8 +37,8 @@ void fn_826C90C8(int param_1,ulonglong param_2)
   ulonglong uVar1;
   int iVar2;
   uint uVar3;
-  int iStack_30;
-  uint uStack_2c;
+  struct { int first; uint second; } stack_pair_30;
+
   
   if (param_1 != 0) {
     *(int *)(param_1 + 4) = *(int *)(param_1 + 4) + 1;
@@ -52,15 +52,15 @@ void fn_826C90C8(int param_1,ulonglong param_2)
   }
   if ((param_2 & 0xffffffff) < (uVar1 & 0xffffffff)) {
     fn_826C6E68(param_1,param_2);
-    (**(code **)(**(int **)(param_1 + 0x9c) + 0x2c))(&iStack_30,*(int **)(param_1 + 0x9c),param_2);
+    (**(code **)(**(int **)(param_1 + 0x9c) + 0x2c))(&stack_pair_30.first,*(int **)(param_1 + 0x9c),param_2);
     uVar3 = 0;
-    if (uStack_2c != 0) {
+    if (stack_pair_30.second != 0) {
       iVar2 = 0;
       do {
-        (**(code **)(**(int **)(iVar2 + iStack_30) + 8))(*(int **)(iVar2 + iStack_30),param_1,4);
+        (**(code **)(**(int **)(iVar2 + stack_pair_30.first) + 8))(*(int **)(iVar2 + stack_pair_30.first),param_1,4);
         uVar3 = uVar3 + 1;
         iVar2 = iVar2 + 4;
-      } while (uVar3 < uStack_2c);
+      } while (uVar3 < stack_pair_30.second);
     }
   }
   fn_8267C498(param_1);

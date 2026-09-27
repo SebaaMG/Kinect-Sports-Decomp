@@ -36,7 +36,7 @@ undefined8 fn_826F5C10(char *param_1,undefined4 *param_2,char param_3)
   char cVar1;
   undefined8 uVar2;
   undefined4 uStack_20;
-  undefined4 auStack_1c [3];
+  undefined4 auStack_1c;
   
   cVar1 = *param_1;
   if ((cVar1 < '0') || ('9' < cVar1)) {
@@ -54,9 +54,9 @@ undefined8 fn_826F5C10(char *param_1,undefined4 *param_2,char param_3)
 LAB_826f5d38:
         cVar1 = param_1[6];
         if (('/' < cVar1) && (cVar1 < ':')) {
-          auStack_1c[0] = 0;
-          uVar2 = fn_82F6A3E8(param_1 + 6,auStack_1c,10);
-          uStack_20 = auStack_1c[0];
+          auStack_1c = 0;
+          uVar2 = fn_82F6A3E8(param_1 + 6,&auStack_1c,10);
+          uStack_20 = auStack_1c;
           goto LAB_826f5c54;
         }
       }

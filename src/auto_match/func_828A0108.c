@@ -36,7 +36,7 @@ void fn_828A0108(int param_1,uint param_2)
 
 {
   int iVar1;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30;
   
   iVar1 = param_1;
   if (10 < param_2) {
@@ -44,10 +44,10 @@ void fn_828A0108(int param_1,uint param_2)
   }
   fn_8289EE78((ulonglong)*(uint *)(param_1 + 0x54),
                 ((ulonglong)*(uint *)(param_1 + 0x58) & 0x1fffffff) * 8 +
-                (ulonglong)*(uint *)(param_1 + 0x54),iVar1,auStack_30[0]);
+                (ulonglong)*(uint *)(param_1 + 0x54),iVar1,auStack_30);
   if (*(int *)(param_1 + 0x54) != 0) {
     if (*(int *)(param_1 + 0x58) != 0) {
-      fn_8289F270(param_1,*(int *)(param_1 + 0x58),auStack_30);
+      fn_8289F270(param_1,*(int *)(param_1 + 0x58),&auStack_30);
     }
     if (10 < *(uint *)(param_1 + 0x50)) {
       fn_8265CA20(*(undefined4 *)(param_1 + 0x54));

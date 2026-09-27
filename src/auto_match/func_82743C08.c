@@ -42,7 +42,7 @@ void fn_82743C08(int param_1,int param_2,undefined8 *param_3)
   undefined8 uVar4;
   undefined8 uVar5;
   undefined1 auStack_70 [16];
-  undefined1 auStack_60 [16];
+  undefined1 auStack_60 [1];
   undefined1 auStack_50 [16];
   undefined1 auStack_40 [64];
   

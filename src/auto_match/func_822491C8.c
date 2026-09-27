@@ -28,7 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_120;
 extern int fn_8265C9E0();
 extern int fn_82F64538();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int lbl_82197AD8;
 
 
@@ -40,7 +40,7 @@ void fn_822491C8(int *param_1,undefined8 param_2,int *param_3)
   char cVar4;
   undefined4 *puVar3;
   int iVar5;
-  undefined1 auStack_120 [288];
+  undefined1 auStack_120 [256];
   
   if (param_3 != (int *)0x0) {
     if ((int *)*param_3 == (int *)0x0) {
@@ -65,7 +65,7 @@ LAB_82249234:
     }
     else {
       *puVar3 = &lbl_82197AD8;
-      fn_82F68CC0(puVar3 + 1,auStack_120,0x100);
+      memcpy(puVar3 + 1,auStack_120,0x100);
     }
     puVar1 = (undefined4 *)*param_3;
     *param_3 = (int)puVar3;

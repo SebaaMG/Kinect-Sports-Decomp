@@ -48,7 +48,7 @@ void fn_8273EA00(longlong param_1,int param_2,int *param_3)
   undefined4 uStack_4c;
   int iStack_48;
   int *piStack_44;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [16];
   
   if (param_3 != (int *)0x0) {
     auStack_40[0] = 0;

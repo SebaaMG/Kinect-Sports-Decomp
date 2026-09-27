@@ -56,7 +56,7 @@ void fn_824A2128(int param_1)
   float fVar15;
   undefined4 auStack_60 [2];
   undefined4 uStack_58;
-  undefined1 auStack_50 [56];
+  undefined1 auStack_50 [24];
   
   iVar3 = (**(code **)(**(int **)(param_1 + 0xb8) + 4))();
   if (iVar3 == 0) {

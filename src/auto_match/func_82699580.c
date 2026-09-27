@@ -26,7 +26,7 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_82698C48();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 void fn_82699580(int *param_1,int *param_2)
@@ -37,12 +37,12 @@ void fn_82699580(int *param_1,int *param_2)
   int *piVar3;
   uint uVar4;
   char cVar5;
-  int aiStack_30 [12];
+  int aiStack_30;
   
   iVar1 = param_2[0x10];
   uVar2 = param_1[1];
-  aiStack_30[0] = iVar1;
-  uVar4 = fn_82698C48(param_1,0,uVar2,aiStack_30,0xffffffff82698c28);
+  aiStack_30 = iVar1;
+  uVar4 = fn_82698C48(param_1,0,uVar2,&aiStack_30,0xffffffff82698c28);
   if (uVar4 < uVar2) {
     piVar3 = *(int **)(uVar4 * 4 + *param_1);
     if (piVar3[5] == iVar1) {
@@ -50,7 +50,7 @@ void fn_82699580(int *param_1,int *param_2)
       cVar5 = (**(code **)(*piVar3 + 0x10))(piVar3);
       if (cVar5 != '\0') {
         if ((*(byte *)((int)param_2 + 0x4b) & 8) != 0) {
-          fn_82F68CC0(piVar3 + 9,param_2 + 1,0x20);
+          memcpy(piVar3 + 9,param_2 + 1,0x20);
           (**(code **)(*piVar3 + 4))(piVar3);
         }
         if ((*(byte *)((int)param_2 + 0x4b) & 4) != 0) {

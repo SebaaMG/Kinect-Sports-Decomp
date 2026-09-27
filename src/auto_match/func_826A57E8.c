@@ -66,13 +66,13 @@ void fn_826A57E8(int param_1)
   int iVar11;
   int iVar12;
   double dVar13;
-  int iStack_98;
-  int iStack_94;
+  struct { int first; int second; } stack_pair_98;
+
   byte bStack_90;
   int iStack_88;
   int iStack_84;
   byte bStack_80;
-  undefined1 auStack_70 [112];
+  undefined1 auStack_70 [80];
   
   cVar7 = fn_82695468(param_1,7);
   if (cVar7 == '\0') {
@@ -85,8 +85,8 @@ void fn_826A57E8(int param_1)
     }
     uVar10 = 0;
     bStack_90 = 0;
-    iStack_98 = 0;
-    iStack_94 = 0;
+    stack_pair_98.first = 0;
+    stack_pair_98.second = 0;
     if (0 < *(int *)(param_1 + 0x1c)) {
       pcVar4 = (char *)fn_826957D0(param_1,0);
       if ((*pcVar4 == '\b') || (bVar2 = false, *pcVar4 == '\v')) {
@@ -96,7 +96,7 @@ void fn_826A57E8(int param_1)
       if (bVar2) {
         uVar3 = fn_826957D0(param_1,0);
         uVar3 = fn_82696B20(&iStack_88,uVar3,uVar1);
-        fn_826C3768(&iStack_98,uVar3);
+        fn_826C3768(&stack_pair_98.first,uVar3);
         if (((bStack_80 & 2) == 0) && (iStack_88 != 0)) {
           fn_826824B0();
         }
@@ -111,7 +111,7 @@ void fn_826A57E8(int param_1)
         dVar13 = (double)fn_826972E0(uVar3,uVar1);
         uVar10 = (uint)dVar13;
       }
-      if ((iStack_98 != 0) && (1 < *(int *)(param_1 + 0x1c))) {
+      if ((stack_pair_98.first != 0) && (1 < *(int *)(param_1 + 0x1c))) {
         uVar1 = *(undefined4 *)(param_1 + 0x18);
         uVar3 = fn_826957D0(param_1,1);
         dVar13 = (double)fn_826972E0(uVar3,uVar1);
@@ -123,7 +123,7 @@ void fn_826A57E8(int param_1)
                               ,0xffffffffffffffff);
     if (iVar5 != 0) {
       fn_826A2D50(iVar5,iVar9);
-      fn_826A29C0(auStack_70,iVar5 + 0x10,uVar10,&iStack_98,*(undefined4 *)(param_1 + 0x18),
+      fn_826A29C0(auStack_70,iVar5 + 0x10,uVar10,&stack_pair_98.first,*(undefined4 *)(param_1 + 0x18),
                     *(undefined4 *)(iVar9 + 0x30));
       cVar7 = fn_826A5570(iVar5,auStack_70);
       if (cVar7 == '\0') {
@@ -161,11 +161,11 @@ void fn_826A57E8(int param_1)
       fn_826A2A40(auStack_70);
       fn_826824B0(iVar5);
     }
-    if (((bStack_90 & 2) == 0) && (iStack_98 != 0)) {
+    if (((bStack_90 & 2) == 0) && (stack_pair_98.first != 0)) {
       fn_826824B0();
     }
-    iStack_98 = 0;
-    if (((bStack_90 & 1) == 0) && (iStack_94 != 0)) {
+    stack_pair_98.first = 0;
+    if (((bStack_90 & 1) == 0) && (stack_pair_98.second != 0)) {
       fn_826824B0();
     }
   }

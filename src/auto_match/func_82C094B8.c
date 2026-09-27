@@ -49,19 +49,19 @@ undefined8 fn_82C094B8(int param_1,ulonglong param_2,longlong *param_3)
   undefined8 uVar1;
   int iVar2;
   ulonglong uVar3;
-  ushort auStack_80 [2];
+  ushort auStack_80;
   int iStack_7c;
   int iStack_78;
   int iStack_74;
   int iStack_70;
   uint auStack_6c [3];
-  longlong alStack_60 [12];
+  longlong alStack_60 [2];
   
   iStack_78 = 0;
   iStack_7c = 0;
   auStack_6c[0] = 0;
   iStack_70 = 0;
-  auStack_80[0] = 0;
+  auStack_80 = 0;
   auStack_6c[2] = 0;
   iStack_74 = 0;
   auStack_6c[1] = 0;
@@ -80,11 +80,11 @@ undefined8 fn_82C094B8(int param_1,ulonglong param_2,longlong *param_3)
                                &iStack_78);
           if ((int)uVar1 < 0) break;
           if (*(int *)(iStack_78 + 4) == 2) {
-            uVar1 = fn_82C078F0(param_1,0,auStack_80);
+            uVar1 = fn_82C078F0(param_1,0,&auStack_80);
             if ((int)uVar1 < 0) break;
             uVar3 = ((longlong)
                      (int)((int)(((longlong)*(int *)(*(int *)(iStack_78 + 8) + 8) *
-                                  (longlong)(int)(uint)auStack_80[0] & 0xffffffffU) >> 3) + 3U >> 2)
+                                  (longlong)(int)(uint)auStack_80 & 0xffffffffU) >> 3) + 3U >> 2)
                      * (longlong)*(int *)(*(int *)(iStack_78 + 8) + 0xc) & 0x3fffffffU) << 2;
           }
           else {

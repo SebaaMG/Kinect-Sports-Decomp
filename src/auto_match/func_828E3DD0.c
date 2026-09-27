@@ -48,7 +48,7 @@ undefined8 fn_828E3DD0(undefined8 param_1,int *param_2)
   undefined8 uVar2;
   undefined *puStack_b0;
   undefined1 auStack_ac [76];
-  undefined **appuStack_60 [18];
+  undefined **appuStack_60 [10];
   
   iVar3 = (**(code **)(*param_2 + 0x1c))(param_2);
   puStack_b0 = &lbl_821AA8E0;

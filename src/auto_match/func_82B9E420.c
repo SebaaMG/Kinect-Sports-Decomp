@@ -37,7 +37,7 @@ fn_82B9E420(ulonglong param_1,undefined8 param_2,float *param_3,code *param_4,ul
 
 {
   ulonglong uVar1;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [48];
   
   if ((param_1 & 0xffffffff) == 0) {
     fn_82AB15D0(param_1,0xffffffff820d2ea4,0xffffffff820d2ff0,0xffffffff820ddb08,0x1025);

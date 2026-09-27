@@ -53,7 +53,7 @@ void fn_82890C30(int *param_1,char param_2,undefined8 param_3,uint param_4,int *
   undefined4 *puVar5;
   int iVar6;
   ulonglong uVar7;
-  undefined1 auStack_70 [16];
+  undefined1 auStack_70 [1];
   undefined4 auStack_60 [5];
   uint uStack_4c;
   

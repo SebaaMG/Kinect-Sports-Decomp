@@ -95,7 +95,7 @@ undefined8 fn_825A3BB0(int param_1,int *param_2,int *param_3,int param_4)
   undefined1 auStack_130 [16];
   undefined1 auStack_120 [16];
   undefined1 auStack_110 [16];
-  undefined1 auStack_100 [16];
+  undefined1 auStack_100 [1];
   undefined1 auStack_f0 [240];
   
   uVar7 = ZEXT48(&stack0x00000000);

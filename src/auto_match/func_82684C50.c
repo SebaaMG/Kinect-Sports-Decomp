@@ -45,17 +45,17 @@ fn_82684C50(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefined8 
   ulonglong uVar5;
   uint *puVar6;
   char in_RESERVE;
-  uint auStack_40 [16];
+  uint auStack_40;
   
-  auStack_40[0] = 0;
+  auStack_40 = 0;
   lVar3 = fn_8267B890(lbl_831E7E64,0xc,0);
   if (lVar3 == 0) {
     uVar4 = 0;
   }
   else {
-    fn_8268C510(auStack_40,param_2);
-    uVar4 = fn_82693A48(lVar3,auStack_40,param_3,param_4);
-    lVar3 = ((ulonglong)auStack_40[0] & 0xfffffffc) + 4;
+    fn_8268C510(&auStack_40,param_2);
+    uVar4 = fn_82693A48(lVar3,&auStack_40,param_3,param_4);
+    lVar3 = ((ulonglong)auStack_40 & 0xfffffffc) + 4;
     bVar2 = false;
     do {
       puVar6 = (uint *)lVar3;

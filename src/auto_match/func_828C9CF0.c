@@ -34,7 +34,7 @@ extern int fn_828C9C30();
 undefined4 * fn_828C9CF0(undefined4 *param_1,undefined4 *param_2)
 
 {
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
   
   *param_1 = *param_2;
   fn_828C92E8(param_1 + 2,auStack_30,auStack_30);

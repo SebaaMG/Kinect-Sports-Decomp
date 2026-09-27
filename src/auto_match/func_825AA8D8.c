@@ -57,7 +57,7 @@ bool fn_825AA8D8(int *param_1)
   int iStack_58;
   int iStack_54;
   undefined1 auStack_50 [16];
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [32];
   
   iVar3 = lbl_83297800;
   if (lbl_83297800 == 0) {

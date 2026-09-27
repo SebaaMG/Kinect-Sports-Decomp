@@ -65,8 +65,8 @@ void fn_829E44C8(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefi
   float *in_stack_0000007c;
   float *in_stack_00000084;
   int aiStack_80 [3];
-  undefined4 uStack_74;
-  undefined4 uStack_70;
+  struct { undefined4 first; undefined4 second; } stack_pair_74;
+
   float fStack_6c;
   float fStack_68;
   float fStack_64;
@@ -79,7 +79,7 @@ void fn_829E44C8(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefi
     uVar4 = fn_829E60D0((double)*(float *)(iVar5 + 0x88),(double)*(float *)(iVar5 + 0xe4),
                               iVar5 + 0x24,iVar5 + 8,param_6,
                               (longlong)*(int *)(iVar5 + 0x78) * (longlong)*(int *)(iVar5 + 0x7c),
-                              param_7,&fStack_64,*(int *)(iVar5 + 0x7c),&uStack_74);
+                              param_7,&fStack_64,*(int *)(iVar5 + 0x7c),&stack_pair_74.first);
     if (((-1 < (int)uVar4) &&
         (uVar4 = fn_829E5A78(iVar5 + 0x24,aiStack_80 + 2,aiStack_80), -1 < (int)uVar4)) &&
        (uVar4 = fn_829E3D18(iVar5,&fStack_68,&fStack_6c), -1 < (int)uVar4)) {
@@ -111,8 +111,8 @@ void fn_829E44C8(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefi
           }
           uVar4 = 0;
           *in_stack_0000005c = fStack_60;
-          *in_stack_00000064 = uStack_74;
-          *in_stack_0000006c = uStack_70;
+          *in_stack_00000064 = stack_pair_74.first;
+          *in_stack_0000006c = stack_pair_74.second;
           *in_stack_00000074 = uVar6;
           *in_stack_0000007c = (float)dVar8;
           *in_stack_00000084 = fStack_6c;

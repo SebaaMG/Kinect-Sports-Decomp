@@ -42,17 +42,17 @@ void fn_827FE540(undefined8 param_1,undefined2 param_2,float *param_3)
 {
   int iStack_40;
   undefined4 uStack_3c;
-  undefined4 auStack_38 [2];
-  float fStack_30;
-  float fStack_2c;
+  undefined4 auStack_38;
+  struct { float first; float second; } stack_pair_30;
+
   float fStack_28;
   
   fn_82800E88(param_1,&uStack_3c);
   fn_827F9450(uStack_3c,param_2,&iStack_40);
-  fn_827F98C8(uStack_3c,param_2,auStack_38);
-  fn_827F94C8(auStack_38[0],iStack_40,&fStack_30);
-  *(float *)(iStack_40 + 0x30) = *param_3 - fStack_30;
-  *(float *)(iStack_40 + 0x34) = param_3[1] - fStack_2c;
+  fn_827F98C8(uStack_3c,param_2,&auStack_38);
+  fn_827F94C8(auStack_38,iStack_40,&stack_pair_30.first);
+  *(float *)(iStack_40 + 0x30) = *param_3 - stack_pair_30.first;
+  *(float *)(iStack_40 + 0x34) = param_3[1] - stack_pair_30.second;
   *(float *)(iStack_40 + 0x38) = param_3[2] - fStack_28;
   return;
 }

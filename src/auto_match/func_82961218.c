@@ -44,7 +44,7 @@ undefined8 fn_82961218(int *param_1,int param_2)
   int iStack0000001c;
   undefined4 uStack_30;
   undefined4 uStack_2c;
-  undefined4 auStack_28 [4];
+  undefined4 auStack_28;
   
   iVar2 = *(int *)(param_2 * 4 + param_1[5]);
   iStack0000001c = param_2;
@@ -64,7 +64,7 @@ undefined8 fn_82961218(int *param_1,int param_2)
         if ((int)uVar3 < 0) {
           return uVar3;
         }
-        uVar3 = (**(code **)(*param_1 + 0x148))(param_1,iVar2,auStack_28,&uStack_30);
+        uVar3 = (**(code **)(*param_1 + 0x148))(param_1,iVar2,&auStack_28,&uStack_30);
         if ((int)uVar3 < 0) {
           return uVar3;
         }
@@ -72,7 +72,7 @@ undefined8 fn_82961218(int *param_1,int param_2)
         if ((int)uVar3 < 0) {
           return uVar3;
         }
-        uVar3 = (**(code **)(*param_1 + 0x13c))(param_1,auStack_28[0],uStack_2c,uStack_30);
+        uVar3 = (**(code **)(*param_1 + 0x13c))(param_1,auStack_28,uStack_2c,uStack_30);
         if ((int)uVar3 < 0) {
           return uVar3;
         }

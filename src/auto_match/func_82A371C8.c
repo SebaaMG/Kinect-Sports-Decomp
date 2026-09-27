@@ -34,20 +34,20 @@ void fn_82A371C8(undefined4 *param_1,undefined4 *param_2,int param_3,undefined8 
 {
   longlong lVar1;
   int iVar2;
-  undefined4 uStack_30;
-  undefined4 uStack_2c;
+  struct { undefined4 first; undefined4 second; } stack_pair_30;
+
   
   param_1[param_3 * 10 + 1] = *param_2;
   param_1[param_3 * 10 + 2] = param_2[1];
   param_1[param_3 * 10 + 8] = param_2[1] * (int)param_4;
-  uStack_30 = param_1[param_3 * 10 + 9];
+  stack_pair_30.first = param_1[param_3 * 10 + 9];
   param_1[param_3 * 10 + 6] = 0x103;
-  uStack_2c = param_1[param_3 * 10 + 8];
+  stack_pair_30.second = param_1[param_3 * 10 + 8];
   lVar1 = (**(code **)(*(int *)*param_1 + 0x10))
                     (param_2[2],param_1[param_3 * 10 + 10],0,
                      -(uint)((param_1[param_3 * 10 + 10] & 1) == 0) &
                      (uint)(param_1 + param_3 * 10 + 6),param_1 + param_3 * 10 + 6,
-                     param_1[param_3 * 10 + 3],param_4,&uStack_30);
+                     param_1[param_3 * 10 + 3],param_4,&stack_pair_30.first);
   iVar2 = (int)lVar1;
   if (((-1 < lVar1) && (iVar2 != 0x103)) || (iVar2 == -0x3fffffef)) {
     param_1[param_3 * 10 + 4] = param_1[param_3 * 10 + 7];

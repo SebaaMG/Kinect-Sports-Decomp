@@ -46,8 +46,8 @@ void fn_826AC370(int param_1)
   int iVar6;
   ulonglong uVar4;
   uint uVar7;
-  uint uStack_40;
-  int iStack_3c;
+  struct { uint first; int second; } stack_pair_40;
+
   byte bStack_38;
   
   puVar1 = *(undefined1 **)(param_1 + 4);
@@ -74,17 +74,17 @@ void fn_826AC370(int param_1)
       if (uVar7 != 0) {
         *(uint *)(uVar7 + 8) = *(int *)(uVar7 + 8) + 1U & 0x8fffffff;
       }
-      iStack_3c = 0;
-      uStack_40 = uVar7;
-      fn_826964E0(*(undefined4 *)(param_1 + 4),&uStack_40);
-      if (((bStack_38 & 2) == 0) && (uStack_40 != 0)) {
+      stack_pair_40.second = 0;
+      stack_pair_40.first = uVar7;
+      fn_826964E0(*(undefined4 *)(param_1 + 4),&stack_pair_40.first);
+      if (((bStack_38 & 2) == 0) && (stack_pair_40.first != 0)) {
         fn_826824B0();
       }
-      uStack_40 = 0;
-      if (((bStack_38 & 1) == 0) && (iStack_3c != 0)) {
+      stack_pair_40.first = 0;
+      if (((bStack_38 & 1) == 0) && (stack_pair_40.second != 0)) {
         fn_826824B0();
       }
-      iStack_3c = 0;
+      stack_pair_40.second = 0;
       if (uVar7 != 0) {
         fn_826824B0(uVar7);
       }

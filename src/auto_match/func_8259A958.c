@@ -64,13 +64,13 @@ undefined8 fn_8259A958(int param_1,longlong param_2)
   longlong lVar3;
   undefined4 uStack_200;
   int iStack_1fc;
-  undefined4 auStack_1f8 [2];
+  undefined4 auStack_1f8;
   undefined4 uStack_1f0;
   undefined4 uStack_1ec;
   undefined8 uStack_1e8;
   int *piStack_1e0;
-  undefined4 uStack_1dc;
-  int iStack_1d8;
+  struct { undefined4 first; int second; } stack_pair_1dc;
+
   undefined4 uStack_1d4;
   code *pcStack_1d0;
   undefined1 auStack_1c0 [4];
@@ -80,8 +80,8 @@ undefined8 fn_8259A958(int param_1,longlong param_2)
   undefined1 auStack_170 [368];
   
   if (*(int *)(param_1 + 0x94) == 2) {
-    uStack_1dc = 0;
-    iStack_1d8 = 0;
+    stack_pair_1dc.first = 0;
+    stack_pair_1dc.second = 0;
     iVar1 = *(int *)lbl_83156AA0;
     uVar2 = fn_82811400(auStack_190,4);
     lVar3 = (**(code **)(iVar1 + 0xc))(lbl_83156AA0,0x1b8,uVar2);
@@ -89,11 +89,11 @@ undefined8 fn_8259A958(int param_1,longlong param_2)
       uVar2 = 0;
     }
     else {
-      auStack_1f8[0] = 0;
+      auStack_1f8 = 0;
       uStack_1e8 = 0;
       uStack_1f0 = 0;
       uStack_200 = 0;
-      uVar2 = fn_827D9670(auStack_1b0,&uStack_1f0,&uStack_1e8,auStack_1f8);
+      uVar2 = fn_827D9670(auStack_1b0,&uStack_1f0,&uStack_1e8,&auStack_1f8);
       uVar2 = fn_8259A3A8(lVar3,param_2,*(undefined4 *)(param_1 + 0x70),&uStack_200,uVar2,1);
     }
     uStack_1d4 = (undefined4)uVar2;
@@ -122,22 +122,22 @@ undefined8 fn_8259A958(int param_1,longlong param_2)
     }
     (**(code **)(*piStack_1e0 + 4))(piStack_1e0,2,0);
     uVar2 = fn_827D5158(auStack_1c0);
-    fn_823F2E20(&uStack_1dc,uVar2);
+    fn_823F2E20(&stack_pair_1dc.first,uVar2);
     if (iStack_1bc != 0) {
       fn_822315A0();
     }
     pcStack_1d0 = fn_8259B778;
     fn_8259BC00(param_1 + 0x78,&piStack_1e0);
-    if (iStack_1d8 != 0) {
+    if (stack_pair_1dc.second != 0) {
       fn_822315A0();
     }
     uVar2 = 1;
   }
   else {
     if (*(int *)(param_1 + 0x94) == 1) {
-      auStack_1f8[0] = 0;
-      fn_82F67FE8(param_2 + 0x108,0xffffffff821c557c,auStack_1f8);
-      uStack_200 = auStack_1f8[0];
+      auStack_1f8 = 0;
+      fn_82F67FE8(param_2 + 0x108,0xffffffff821c557c,&auStack_1f8);
+      uStack_200 = auStack_1f8;
                     /* WARNING: Subroutine does not return */
       fn_82A1EFC0(auStack_170,0,0x134);
     }

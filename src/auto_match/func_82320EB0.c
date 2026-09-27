@@ -32,7 +32,7 @@ void fn_82320EB0(int param_1,int param_2)
 
 {
   bool bVar1;
-  undefined4 auStack_10 [4];
+  undefined4 auStack_10;
   
   if (**(int **)(param_1 + 0xc) == 0) {
     if ((**(int **)(param_1 + 8) != *(int *)(*(int *)(param_1 + 4) + 0x28)) ||
@@ -43,9 +43,9 @@ void fn_82320EB0(int param_1,int param_2)
   }
   bVar1 = true;
 LAB_82320efc:
-  auStack_10[0] = **(undefined4 **)(param_1 + 8);
+  auStack_10 = **(undefined4 **)(param_1 + 8);
   (**(code **)(**(int **)(param_2 + 0x1b0) + 8))
-            (*(int **)(param_2 + 0x1b0),!bVar1 + '\x19',auStack_10);
+            (*(int **)(param_2 + 0x1b0),!bVar1 + '\x19',&auStack_10);
   return;
 }
 

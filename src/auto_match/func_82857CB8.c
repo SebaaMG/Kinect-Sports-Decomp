@@ -34,15 +34,15 @@ void fn_82857CB8(undefined4 *param_1,int param_2)
 {
   int iVar1;
   undefined4 *puVar2;
-  undefined4 auStack_30 [12];
+  undefined4 auStack_30;
   
-  fn_82851B40(param_1,*(undefined4 *)(param_2 + 0xc),auStack_30);
+  fn_82851B40(param_1,*(undefined4 *)(param_2 + 0xc),&auStack_30);
   iVar1 = 0;
   if (*(short *)(param_2 + 0x22) != 0) {
     puVar2 = (undefined4 *)(*(int *)(param_2 + 0x10) + 4);
     do {
       if ((code *)*puVar2 != (code *)0x0) {
-        (*(code *)*puVar2)(*param_1,auStack_30[0],*(undefined2 *)(puVar2 + 3),
+        (*(code *)*puVar2)(*param_1,auStack_30,*(undefined2 *)(puVar2 + 3),
                            *(undefined2 *)((int)puVar2 + 0xe),puVar2[2]);
       }
       iVar1 = iVar1 + 1;

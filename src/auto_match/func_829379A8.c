@@ -34,12 +34,12 @@ undefined8 fn_829379A8(longlong param_1,ulonglong param_2,undefined8 param_3)
 
 {
   undefined8 uVar1;
-  uint auStack_30 [12];
+  uint auStack_30;
   
   if ((param_2 & 0xffffffff) < 0x80000000) {
-    uVar1 = fn_829362F0(param_1,param_2,auStack_30);
+    uVar1 = fn_829362F0(param_1,param_2,&auStack_30);
     if (-1 < (int)uVar1) {
-      uVar1 = fn_82936290((ulonglong)auStack_30[0] + param_1,param_2 - auStack_30[0],param_3);
+      uVar1 = fn_82936290((ulonglong)auStack_30 + param_1,param_2 - auStack_30,param_3);
     }
   }
   else {

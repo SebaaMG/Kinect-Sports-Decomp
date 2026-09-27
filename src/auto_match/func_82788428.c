@@ -65,8 +65,8 @@ void fn_82788428(int param_1,int param_2,int param_3)
   double dVar16;
   float fStack_80;
   float fStack_7c;
-  undefined4 uStack_78;
-  undefined4 uStack_74;
+  struct { undefined4 first; undefined4 second; } stack_pair_78;
+
   float fStack_70;
   undefined4 uStack_68;
   undefined4 uStack_64;
@@ -110,8 +110,8 @@ void fn_82788428(int param_1,int param_2,int param_3)
               puVar9 = (undefined4 *)
                        (*(int *)((piVar14[2] + uVar13 >> 6 & 0x3fffffc) + *(int *)(*piVar14 + 0x14))
                        + ((piVar14[2] + uVar13) * 8 & 0x7f8));
-              uStack_78 = *puVar9;
-              uStack_74 = puVar9[1];
+              stack_pair_78.first = *puVar9;
+              stack_pair_78.second = puVar9[1];
               if (1 < uVar1) {
                 iVar2 = *(int *)((uVar1 - 1 >> 4 & 0xffffffc) + *(int *)(param_1 + 0x38));
                 pfVar10 = (float *)(*(int *)((uVar1 - 2 >> 4 & 0xffffffc) + *(int *)(param_1 + 0x38)
@@ -125,7 +125,7 @@ void fn_82788428(int param_1,int param_2,int param_3)
                   *puVar15 = *puVar15 - 1;
                 }
               }
-              fn_82779C60(puVar15,&uStack_78);
+              fn_82779C60(puVar15,&stack_pair_78.first);
               uVar13 = uVar13 + 1;
             } while (uVar13 < (uint)piVar14[1]);
           }

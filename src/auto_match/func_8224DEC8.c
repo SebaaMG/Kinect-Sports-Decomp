@@ -53,23 +53,23 @@ bool fn_8224DEC8(int *param_1,int *param_2)
   longlong lVar6;
   uint uVar7;
   longlong *plVar8;
-  int iStack_f60;
-  int iStack_f5c;
+  struct { int first; int second; } stack_pair_f60;
+
   undefined8 uStack_f58;
   undefined **ppuStack_f50;
   int *piStack_f4c;
   undefined ***pppuStack_f40;
   uint auStack_f30 [2];
-  longlong alStack_f28 [485];
+  longlong alStack_f28 [481];
   
   iVar3 = fn_8225F160();
-  iStack_f60 = *(int *)(iVar3 + 0x38);
-  piStack_f4c = &iStack_f60;
+  stack_pair_f60.first = *(int *)(iVar3 + 0x38);
+  piStack_f4c = &stack_pair_f60.first;
   pppuStack_f40 = &ppuStack_f50;
   ppuStack_f50 = &lbl_821985F4;
   uVar1 = fn_8225C590();
   fn_8225DB68(uVar1,&ppuStack_f50);
-  iVar3 = iStack_f60;
+  iVar3 = stack_pair_f60.first;
   iVar4 = fn_8225F160();
   if (*(int *)(iVar4 + 0x3c) <= iVar3) {
     iVar3 = *(int *)(iVar4 + 0x3c);
@@ -85,10 +85,10 @@ LAB_8224df30:
   else {
     if (iVar3 == 1) {
       uStack_f58 = (**(code **)(*param_2 + 0x48))(param_2);
-      iStack_f5c = 0;
+      stack_pair_f60.second = 0;
       uVar1 = (**(code **)(*param_1 + 0x44))(param_1);
-      fn_82A1BFB0(uVar1,&uStack_f58,1,&iStack_f5c,0);
-      if (iStack_f5c == 0) goto LAB_8224df30;
+      fn_82A1BFB0(uVar1,&uStack_f58,1,&stack_pair_f60.second,0);
+      if (stack_pair_f60.second == 0) goto LAB_8224df30;
     }
     fn_82CE3C88(auStack_f30);
     uVar7 = 0;

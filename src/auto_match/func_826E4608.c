@@ -46,7 +46,7 @@ int * fn_826E4608(int *param_1,int *param_2,int param_3,ulonglong param_4,int *p
   ulonglong uVar4;
   bool bVar5;
   int *piVar6;
-  uint auStack_50 [20];
+  uint auStack_50 [8];
   
   if ((param_2 != (int *)0x0) &&
      (((param_4 & 1) != 0 || (cVar2 = fn_826F35E8(param_3), cVar2 == '\0')))) {

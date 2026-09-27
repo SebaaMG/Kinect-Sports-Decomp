@@ -33,14 +33,14 @@ undefined8 fn_828EA368(undefined8 param_1,char param_2)
 {
   int iVar2;
   undefined8 uVar1;
-  int aiStack_10 [4];
+  int aiStack_10;
   
   if (param_2 == '\0') {
     return 0;
   }
-  aiStack_10[0] = 0;
-  iVar2 = fn_82A1BFB8(param_1,0xfe,aiStack_10);
-  if ((iVar2 != 0) || (uVar1 = 2, aiStack_10[0] == 0)) {
+  aiStack_10 = 0;
+  iVar2 = fn_82A1BFB8(param_1,0xfe,&aiStack_10);
+  if ((iVar2 != 0) || (uVar1 = 2, aiStack_10 == 0)) {
     uVar1 = 1;
   }
   return uVar1;

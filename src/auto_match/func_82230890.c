@@ -39,8 +39,8 @@ extern unsigned int uStack_30;
 void fn_82230890(undefined8 param_1)
 
 {
-  undefined4 uStack_30;
-  undefined4 uStack_2c;
+  struct { undefined4 first; undefined4 second; } stack_pair_30;
+
   undefined4 uStack_28;
   undefined4 uStack_24;
   undefined4 uStack_20;
@@ -48,15 +48,15 @@ void fn_82230890(undefined8 param_1)
   undefined4 uStack_18;
   undefined4 uStack_14;
   
-  uStack_30 = 0;
+  stack_pair_30.first = 0;
   uStack_28 = 0x4000;
-  uStack_2c = 0x10;
+  stack_pair_30.second = 0x10;
   uStack_24 = 0x4000;
   uStack_20 = 0x40000;
   uStack_1c = 0;
   uStack_18 = 1;
   uStack_14 = 0;
-  fn_8267C6C8(&uStack_30,param_1);
+  fn_8267C6C8(&stack_pair_30.first,param_1);
   return;
 }
 

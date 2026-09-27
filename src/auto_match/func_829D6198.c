@@ -51,18 +51,18 @@ fn_829D6198(undefined8 param_1,undefined8 param_2,int param_3,undefined8 param_4
   undefined4 uStack_58;
   uint uStack_54;
   undefined1 auStack_50 [8];
-  longlong alStack_48 [9];
+  longlong alStack_48;
   
   iVar2 = XamUserGetIndexFromXUID(param_1,1,&uStack_58);
   if ((iVar2 < 0) || (iVar2 = XamUserNuiGetEnrollmentIndex(uStack_58,auStack_50), iVar2 < 0)) {
     fn_829D47B0(&uStack_54,0x64000);
     uVar3 = (ulonglong)uStack_54;
     if (uVar3 != 0) {
-      alStack_48[0] = 0;
+      alStack_48 = 0;
       uStack_60 = 0x32000;
       uStack_5c = 0x32000;
-      iVar2 = fn_82A2B218(param_1,alStack_48,uVar3,&uStack_60,0);
-      if (((-1 < iVar2) && (alStack_48[0] != 0x80000000)) && (uStack_60 < 0x32001)) {
+      iVar2 = fn_82A2B218(param_1,&alStack_48,uVar3,&uStack_60,0);
+      if (((-1 < iVar2) && (alStack_48 != 0x80000000)) && (uStack_60 < 0x32001)) {
         *(char *)(param_3 + 0x21) = *(char *)(param_3 + 0x21) + '\x01';
         iVar2 = fn_82A2B130(1,0x10001,uVar3,uStack_60,0,&uStack_5c);
         if ((-1 < iVar2) &&

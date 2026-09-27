@@ -44,7 +44,7 @@ void fn_828BE070(int param_1,undefined8 param_2)
   undefined1 auStack_50 [8];
   undefined4 *puStack_48;
   int iStack_44;
-  undefined4 auStack_38 [14];
+  undefined4 auStack_38;
   
   fn_8288C2E0(&stack0x00000000 + -0x48,&stack0x00000000 + -0x50);
   puVar1 = (undefined4 *)
@@ -55,7 +55,7 @@ void fn_828BE070(int param_1,undefined8 param_2)
     fn_828BDB28(&stack0x00000000 + -0x48,*puStack_48,puVar1,*(undefined4 *)*puVar1);
   }
   fn_828B22F0(&stack0x00000000 + -0x38);
-  fn_8265CA20(auStack_38[0]);
+  fn_8265CA20(auStack_38);
   if (iStack_44 == 0) {
     fn_82886720(param_1,param_2);
   }

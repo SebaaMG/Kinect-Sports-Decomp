@@ -38,7 +38,7 @@ undefined8 fn_824CC7E8(undefined8 param_1,int param_2)
   undefined4 uVar4;
   undefined4 uVar5;
   undefined4 uVar6;
-  undefined1 auStack_20 [16];
+  undefined1 auStack_20 [1];
   
   iVar3 = (**(code **)(param_2 + 4))(auStack_20,*(undefined4 *)(param_2 + 8));
   puVar1 = (undefined4 *)(in_r0 + iVar3 & 0xfffffff0);

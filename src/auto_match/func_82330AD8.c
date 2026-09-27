@@ -29,7 +29,7 @@ extern int fn_8227D7E8();
 extern int fn_8227D908();
 extern int fn_8227D9B0();
 extern int fn_82528FA8();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int lbl_821B0970;
 extern unsigned int lbl_821CA460;
 extern unsigned int lbl_821CC160;
@@ -54,7 +54,7 @@ fn_82330AD8(undefined4 *param_1,undefined8 param_2,undefined8 param_3,undefined8
   param_1[0x1d] = (int)param_5;
   dVar4 = (double)lbl_821CC160;
   param_1[0x1c] = lbl_821CC160;
-  fn_82F68CC0(param_1 + 0x1e,param_3,0x18);
+  memcpy(param_1 + 0x1e,param_3,0x18);
   param_1[0x25] = (float)dVar4;
   param_1[0x24] = 0;
   uVar2 = 0xc;

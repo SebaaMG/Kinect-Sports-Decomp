@@ -39,14 +39,14 @@ undefined8 fn_82396DA8(int param_1)
 {
   int iStack_20;
   int iStack_1c;
-  int iStack_18;
-  int iStack_14;
+  struct { int first; int second; } stack_pair_18;
+
   
   fn_82359DB8(&iStack_20,param_1 + 0x40,*(undefined4 *)(param_1 + 0x54));
   if ((iStack_20 != 0) && (*(int *)(iStack_20 + 4) == 5)) {
-    fn_82522588(&iStack_18,&iStack_20);
-    if (*(int *)(iStack_18 + 0x20) == 2) {
-      if (iStack_14 != 0) {
+    fn_82522588(&stack_pair_18.first,&iStack_20);
+    if (*(int *)(stack_pair_18.first + 0x20) == 2) {
+      if (stack_pair_18.second != 0) {
         fn_822315A0();
       }
       if (iStack_1c != 0) {
@@ -54,7 +54,7 @@ undefined8 fn_82396DA8(int param_1)
       }
       return 1;
     }
-    if (iStack_14 != 0) {
+    if (stack_pair_18.second != 0) {
       fn_822315A0();
     }
   }

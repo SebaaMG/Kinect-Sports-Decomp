@@ -38,7 +38,7 @@ void fn_826830C8(int param_1,undefined8 param_2)
 {
   int iVar2;
   ulonglong uVar1;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [16];
   
   iVar2 = (**(code **)(**(int **)(param_1 + 0x68) + 0x5c))();
   uVar1 = fn_826B32D0(iVar2,*(undefined4 *)(*(int *)(iVar2 + 0x78) + 0x2a0),

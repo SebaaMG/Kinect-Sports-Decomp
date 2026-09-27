@@ -49,7 +49,7 @@ undefined4 * fn_8289B6F8(undefined4 *param_1,int param_2,int *param_3)
   int *piVar10;
   int *piVar11;
   int *piStack00000024;
-  int aiStack_50 [20];
+  int aiStack_50;
   
   piStack00000024 = param_3;
   if (*(char *)((int)param_3 + 0x1d) != '\0') {
@@ -205,11 +205,11 @@ LAB_8289ba20:
     *(undefined1 *)(piVar11 + 7) = 1;
   }
   if ((ulonglong)(uint)param_3[6] != 0) {
-    fn_822B1B90(aiStack_50,(ulonglong)(uint)param_3[6] + 4);
+    fn_822B1B90(&aiStack_50,(ulonglong)(uint)param_3[6] + 4);
     *(int *)(param_3[4] + 4) = param_3[5];
     *(int *)param_3[5] = param_3[4];
     sync(1);
-    *(undefined4 *)(aiStack_50[0] + 8) = 0;
+    *(undefined4 *)(aiStack_50 + 8) = 0;
   }
   piVar9 = (int *)fn_825089A0();
   (**(code **)(*piVar9 + 0x28))(piVar9,param_3);

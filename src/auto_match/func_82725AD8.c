@@ -59,8 +59,8 @@ void fn_82725AD8(int param_1)
   int iVar13;
   int *piVar14;
   float fStack_4c;
-  int iStack_48;
-  uint uStack_44;
+  struct { int first; uint second; } stack_pair_48;
+
   
   uVar8 = fn_826A6A38();
   iVar13 = *(int *)(param_1 + 0x314);
@@ -106,11 +106,11 @@ void fn_82725AD8(int param_1)
                       (double)(float)CONCAT31(CONCAT21(CONCAT11(uVar1,uVar2),uVar3),uVar4));
   }
   fStack_4c = (float)(uint)uVar8;
-  iStack_48 = 0;
-  uStack_44 = 0;
-  cVar9 = fn_826DC448(*(undefined4 *)(param_1 + 0x20),&iStack_48,&fStack_4c);
+  stack_pair_48.first = 0;
+  stack_pair_48.second = 0;
+  cVar9 = fn_826DC448(*(undefined4 *)(param_1 + 0x20),&stack_pair_48.first,&fStack_4c);
   if (cVar9 != '\0') {
-    piVar14 = (int *)(-(uint)(iStack_48 == 0) & uStack_44);
+    piVar14 = (int *)(-(uint)(stack_pair_48.first == 0) & stack_pair_48.second);
     if (piVar14 != (int *)0x0) {
       uVar5 = (**(code **)(*piVar14 + 8))(piVar14);
       if ((uVar5 & 0xff00) == 0x8300) {
@@ -124,7 +124,7 @@ void fn_82725AD8(int param_1)
       }
     }
   }
-  if ((iStack_48 == 0) && (uStack_44 != 0)) {
+  if ((stack_pair_48.first == 0) && (stack_pair_48.second != 0)) {
     fn_82687270();
   }
   return;

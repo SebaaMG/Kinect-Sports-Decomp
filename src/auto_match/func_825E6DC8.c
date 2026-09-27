@@ -29,7 +29,7 @@ extern unsigned int fStack_74;
 extern unsigned int fStack_84;
 extern int fn_825E6C70();
 extern int fn_825E7B28();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int lbl_821954F0;
 extern unsigned int lbl_821CA460;
 extern unsigned int uStack_64;
@@ -60,8 +60,8 @@ void fn_825E6DC8(undefined4 *param_1,int param_2,int param_3)
   double dVar9;
   double dVar10;
   double dVar11;
-  undefined4 uStack_90;
-  undefined4 uStack_8c;
+  struct { undefined4 first; undefined4 second; } stack_pair_90;
+
   undefined4 uStack_88;
   float fStack_84;
   undefined4 uStack_80;
@@ -104,8 +104,8 @@ void fn_825E6DC8(undefined4 *param_1,int param_2,int param_3)
         piVar2 = (int *)fn_825E7B28(param_1 + 5);
         dVar8 = (double)*(float *)(iVar4 + 0x4b0);
         dVar9 = (double)*(float *)(iVar4 + 0x4b4);
-        uStack_90 = *(undefined4 *)(iVar4 + 0x420);
-        uStack_8c = *(undefined4 *)(iVar4 + 0x424);
+        stack_pair_90.first = *(undefined4 *)(iVar4 + 0x420);
+        stack_pair_90.second = *(undefined4 *)(iVar4 + 0x424);
         uStack_88 = *(undefined4 *)(iVar4 + 0x428);
         uStack_80 = *(undefined4 *)(iVar4 + 0x430);
         uStack_7c = *(undefined4 *)(iVar4 + 0x434);
@@ -120,7 +120,7 @@ void fn_825E6DC8(undefined4 *param_1,int param_2,int param_3)
         *piVar2 = iVar7;
         fStack_74 = (float)(dVar8 / (double)(float)(dVar8 - dVar9));
         fStack_84 = (float)(dVar10 / (double)(float)(dVar8 - dVar9));
-        fn_82F68CC0(piVar2 + 1,&uStack_90,0x30);
+        memcpy(piVar2 + 1,&stack_pair_90.first,0x30);
         *(undefined4 *)(iVar4 + 0x4e0) = 0;
       }
 LAB_825e6f64:

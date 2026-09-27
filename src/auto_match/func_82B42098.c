@@ -49,7 +49,7 @@ void fn_82B42098(int param_1,longlong param_2,int param_3,int param_4,char param
   uint *puVar9;
   uint *puVar10;
   ulonglong uVar11;
-  undefined1 auStack_70 [112];
+  undefined1 auStack_70 [16];
   
   iVar5 = fn_82B4A218(param_2,param_3,param_1);
   uVar6 = fn_82B84C90(param_1,param_3,param_4,1,0x68,param_2,param_2 + 0x18U | 3);

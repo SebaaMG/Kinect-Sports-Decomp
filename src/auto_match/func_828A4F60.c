@@ -44,7 +44,7 @@ void fn_828A4F60(int param_1,undefined8 param_2)
   double dVar4;
   undefined1 auStack_30 [8];
   float fStack_28;
-  undefined1 auStack_24 [12];
+  undefined1 auStack_24 [1];
   
   uVar1 = fn_828B5580(auStack_30);
   cVar3 = fn_828A2C80(param_1,uVar1);

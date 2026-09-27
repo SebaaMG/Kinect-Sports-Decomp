@@ -35,12 +35,12 @@ fn_82A50CB0(int param_1,undefined8 param_2,undefined8 param_3,undefined8 param_4
              undefined8 param_5)
 
 {
-  undefined4 auStack_40 [16];
+  undefined4 auStack_40;
   
   (**(code **)(*(int *)(*(int *)(param_1 + 0x30) + 0x2c) + 8))(*(int *)(param_1 + 0x30) + 0x2c);
-  auStack_40[0] = fn_82A4FC50(*(undefined4 *)(param_1 + 0x34),param_2,param_3,param_4,param_5);
-  fn_82A40238(auStack_40);
+  auStack_40 = fn_82A4FC50(*(undefined4 *)(param_1 + 0x34),param_2,param_3,param_4,param_5);
+  fn_82A40238(&auStack_40);
   (**(code **)(*(int *)(*(int *)(param_1 + 0x30) + 0x2c) + 0x14))(*(int *)(param_1 + 0x30) + 0x2c);
-  return auStack_40[0];
+  return auStack_40;
 }
 

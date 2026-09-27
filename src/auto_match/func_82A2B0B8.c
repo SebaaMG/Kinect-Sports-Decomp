@@ -33,14 +33,14 @@ extern unsigned int uStack_20;
 void fn_82A2B0B8(undefined4 param_1,undefined4 param_2,undefined4 param_3)
 
 {
-  undefined4 uStack_20;
-  undefined4 uStack_1c;
+  struct { undefined4 first; undefined4 second; } stack_pair_20;
+
   undefined4 uStack_18;
   
-  uStack_20 = param_1;
-  uStack_1c = param_2;
+  stack_pair_20.first = param_1;
+  stack_pair_20.second = param_2;
   uStack_18 = param_3;
-  XMsgSystemProcessCall(0xfe,0x2c005,&uStack_20,0xc);
+  XMsgSystemProcessCall(0xfe,0x2c005,&stack_pair_20.first,0xc);
   return;
 }
 

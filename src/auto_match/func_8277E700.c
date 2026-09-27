@@ -26,7 +26,7 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_8277CD08();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 void fn_8277E700(uint *param_1,undefined8 param_2)
@@ -38,7 +38,7 @@ void fn_8277E700(uint *param_1,undefined8 param_2)
   if (param_1[1] <= uVar1) {
     fn_8277CD08(param_1,uVar1);
   }
-  fn_82F68CC0((ulonglong)*(uint *)(uVar1 * 4 + param_1[3]) + ((ulonglong)*param_1 & 0x3f) * 0x38,
+  memcpy((ulonglong)*(uint *)(uVar1 * 4 + param_1[3]) + ((ulonglong)*param_1 & 0x3f) * 0x38,
                param_2,0x38);
   *param_1 = *param_1 + 1;
   return;

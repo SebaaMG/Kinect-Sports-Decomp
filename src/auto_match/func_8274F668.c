@@ -115,7 +115,7 @@ void fn_8274F668(int param_1)
   int iStack_10c;
   int iStack_108;
   int iStack_104;
-  int aiStack_100 [4];
+  int aiStack_100;
   undefined1 auStack_f0 [16];
   undefined1 auStack_e0 [16];
   undefined1 auStack_d0 [16];
@@ -264,12 +264,12 @@ void fn_8274F668(int param_1)
   fn_82696330(auStack_f0);
   auStack_60[0] = 10;
   uStack_13e = 0;
-  fn_82681728(aiStack_100,(ulonglong)*puVar11 + 0x254,0xffffffff82013914);
-  (**(code **)(*piVar10 + 0x28))(piVar10,puVar11,aiStack_100,auStack_60,&uStack_13e);
-  lVar12 = (ulonglong)*(uint *)(aiStack_100[0] + 8) - 1;
-  *(int *)(aiStack_100[0] + 8) = (int)lVar12;
+  fn_82681728(&aiStack_100,(ulonglong)*puVar11 + 0x254,0xffffffff82013914);
+  (**(code **)(*piVar10 + 0x28))(piVar10,puVar11,&aiStack_100,auStack_60,&uStack_13e);
+  lVar12 = (ulonglong)*(uint *)(aiStack_100 + 8) - 1;
+  *(int *)(aiStack_100 + 8) = (int)lVar12;
   if (lVar12 == 0) {
-    fn_826944C8(aiStack_100[0]);
+    fn_826944C8(aiStack_100);
   }
   fn_82696330(auStack_60);
   auStack_c0[0] = 10;

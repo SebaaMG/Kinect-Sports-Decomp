@@ -45,7 +45,7 @@ void fn_82244C20(int *param_1)
   ulonglong uVar5;
   double dVar6;
   undefined8 uStack_30;
-  ulonglong auStack_28 [2];
+  ulonglong auStack_28 [1];
   
   uVar1 = fn_828B00A0((ulonglong)(uint)param_1[4] + 0x278);
   fn_8287FD98();

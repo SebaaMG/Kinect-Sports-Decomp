@@ -39,7 +39,7 @@ undefined4 * fn_8247B210(undefined4 *param_1,int param_2,uint param_3)
   undefined4 *puVar2;
   undefined4 **ppuVar3;
   undefined4 *puStack_30;
-  undefined4 *apuStack_2c [11];
+  undefined4 *apuStack_2c [1];
   
   puVar1 = (undefined4 *)(*(undefined4 **)(param_2 + 8))[1];
   puStack_30 = *(undefined4 **)(param_2 + 8);

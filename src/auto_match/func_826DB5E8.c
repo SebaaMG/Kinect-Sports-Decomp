@@ -52,8 +52,8 @@ undefined4 * fn_826DB5E8(undefined4 *param_1,int param_2,int *param_3,undefined4
   ulonglong uVar2;
   int *piVar3;
   undefined4 *puVar4;
-  undefined4 uStack_70;
-  undefined4 uStack_6c;
+  struct { undefined4 first; undefined4 second; } stack_pair_70;
+
   undefined4 uStack_68;
   undefined4 uStack_64;
   undefined4 uStack_60;
@@ -89,10 +89,10 @@ undefined4 * fn_826DB5E8(undefined4 *param_1,int param_2,int *param_3,undefined4
     uStack_58 = *(undefined4 *)(param_2 + 0x20);
     uStack_44 = 1;
     uStack_54 = *(undefined4 *)(param_2 + 0xc);
-    uStack_70 = 1;
+    stack_pair_70.first = 1;
     uStack_60 = 0;
     uStack_68 = 0;
-    uStack_6c = 1;
+    stack_pair_70.second = 1;
     uStack_64 = 1;
     uStack_48 = 0;
     uStack_5c = 0;
@@ -104,7 +104,7 @@ undefined4 * fn_826DB5E8(undefined4 *param_1,int param_2,int *param_3,undefined4
     uStack_48 = (**(code **)(*param_3 + 0x48))(param_3);
     piVar3 = (int *)(**(code **)(*piVar3 + 8))
                               (piVar3,param_1 + 6,*(undefined4 *)(*(int *)(param_2 + 8) + 0x10),
-                               &uStack_70);
+                               &stack_pair_70.first);
     if (param_1[7] != 0) {
       fn_8267C498(param_1[7]);
     }

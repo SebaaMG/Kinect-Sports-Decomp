@@ -42,9 +42,9 @@ undefined8 fn_823AB980(int *param_1,int param_2,ulonglong param_3)
   int *piVar2;
   undefined4 *puVar3;
   undefined4 *puVar4;
-  undefined1 auStack_50 [8];
-  int iStack_48;
-  int iStack_44;
+  undefined1 auStack_50 [1];
+  struct { int first; int second; } stack_pair_48;
+
   
   iVar1 = (**(code **)(*param_1 + 0x84))(param_1,param_3);
   if (iVar1 == 0) {
@@ -63,9 +63,9 @@ undefined8 fn_823AB980(int *param_1,int param_2,ulonglong param_3)
     if (puVar3 == (undefined4 *)param_1[0x20]) {
       return 0;
     }
-    fn_82365BD8(&iStack_48,puVar3);
-    if (*(char *)(iStack_48 + 8) != '\0') {
-      if (iStack_44 == 0) {
+    fn_82365BD8(&stack_pair_48.first,puVar3);
+    if (*(char *)(stack_pair_48.first + 8) != '\0') {
+      if (stack_pair_48.second == 0) {
         return 0;
       }
       fn_822315A0();
@@ -73,8 +73,8 @@ undefined8 fn_823AB980(int *param_1,int param_2,ulonglong param_3)
     }
   }
   else {
-    fn_82365BD8(&iStack_48,puVar4);
-    if (*(char *)(iStack_48 + 8) == '\0') goto LAB_823aba7c;
+    fn_82365BD8(&stack_pair_48.first,puVar4);
+    if (*(char *)(stack_pair_48.first + 8) == '\0') goto LAB_823aba7c;
     param_1[0x27] = 0;
     fn_8239FF60(*(undefined4 *)(param_2 + 0x2dc),0x1b);
     piVar2 = param_1 + 0x1b;
@@ -85,7 +85,7 @@ undefined8 fn_823AB980(int *param_1,int param_2,ulonglong param_3)
     param_1[1] = 2;
   }
 LAB_823aba7c:
-  if (iStack_44 != 0) {
+  if (stack_pair_48.second != 0) {
     fn_822315A0();
   }
   return 1;

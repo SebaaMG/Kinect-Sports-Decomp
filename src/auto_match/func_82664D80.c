@@ -63,7 +63,7 @@ undefined8 fn_82664D80(int param_1,int param_2,int param_3)
   int iStack00000014;
   int iStack0000001c;
   int iStack00000024;
-  undefined1 auStack_90 [88];
+  undefined1 auStack_90 [72];
   undefined1 *puStack_38;
   int *piStack_34;
   uint uStack_30;

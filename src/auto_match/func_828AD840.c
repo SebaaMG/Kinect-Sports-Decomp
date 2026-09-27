@@ -62,7 +62,7 @@ undefined8 fn_828AD840(undefined8 param_1,int param_2,undefined8 param_3)
   double dVar7;
   undefined *puStack_d0;
   undefined1 auStack_cc [76];
-  undefined **appuStack_80 [32];
+  undefined **appuStack_80 [16];
   
   puStack_d0 = &lbl_821AA8E0;
   appuStack_80[0] = &lbl_82020F40;

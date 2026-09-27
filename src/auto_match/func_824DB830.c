@@ -31,7 +31,7 @@ extern int fn_824DF9F8();
 extern int fn_8251F720();
 extern int fn_8251FA58();
 extern int fn_8265C9E0();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int iStack00000024;
 extern unsigned int lbl_82002B04;
 extern unsigned int lbl_821C0FC4;
@@ -61,7 +61,7 @@ int fn_824DB830(int param_1,longlong param_2,int param_3)
   
   iStack00000024 = param_3;
   uVar1 = fn_8251F720(&stack0x00000024,0);
-  fn_82F68CC0(param_1,uVar1,0xe4);
+  memcpy(param_1,uVar1,0xe4);
   fn_8251FA58(uVar1);
   dVar4 = (double)lbl_821CC160;
   *(float *)(param_1 + 0xe4) = lbl_821CC160;
@@ -160,7 +160,7 @@ int fn_824DB830(int param_1,longlong param_2,int param_3)
     *(int *)(param_1 + 0x470) = iVar2;
     *(int *)(param_1 + 0x46c) = iVar2 + 0x9240;
     if ((lbl_831C3C00 == 0) && (iStack00000024 != 0)) {
-      fn_82F68CC0(0xffffffff831c3c10,param_1,0xe4);
+      memcpy(0xffffffff831c3c10,param_1,0xe4);
       lbl_831C3C00 = 1;
     }
     return param_1;

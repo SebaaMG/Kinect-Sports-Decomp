@@ -43,7 +43,7 @@ void fn_828B2848(int param_1,int *param_2)
   ulonglong uVar3;
   int *piVar5;
   int *piVar6;
-  undefined8 auStack_40 [8];
+  undefined8 auStack_40 [2];
   
   auStack_40[0] = (**(code **)(*param_2 + 0x48))(param_2);
   piVar5 = (int *)(param_1 + 0xc);

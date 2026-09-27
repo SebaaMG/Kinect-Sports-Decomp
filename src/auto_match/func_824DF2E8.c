@@ -40,12 +40,12 @@ void fn_824DF2E8(double param_1,int *param_2)
   int *piVar1;
   int iVar2;
   float fStack0000001c;
-  int iStack_20;
-  float fStack_1c;
+  struct { int first; float second; } stack_pair_20;
+
   
-  iStack_20 = param_2[7];
+  stack_pair_20.first = param_2[7];
   fStack0000001c = (float)param_1;
-  fStack_1c = (float)param_1;
+  stack_pair_20.second = (float)param_1;
   if ((param_2[1] - *param_2 & 0xfffffff8U) != 0) {
     piVar1 = (int *)param_2[0xc];
     if (piVar1 == (int *)0x0) {
@@ -55,9 +55,9 @@ void fn_824DF2E8(double param_1,int *param_2)
     iVar2 = (**(code **)(*piVar1 + 4))(piVar1,param_2 + 6,&stack0x0000001c);
     if (iVar2 == 0) goto LAB_824df358;
   }
-  *(ulonglong *)(param_2 + 5) = CONCAT44(iStack_20,fStack_1c);
+  *(ulonglong *)(param_2 + 5) = CONCAT44(stack_pair_20.first,stack_pair_20.second);
 LAB_824df358:
-  fn_824BF8A8(param_2,&iStack_20);
+  fn_824BF8A8(param_2,&stack_pair_20.first);
   return;
 }
 

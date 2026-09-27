@@ -36,7 +36,7 @@ extern unsigned int lbl_821AFA70;
 undefined4 * fn_82320440(double param_1,double param_2,undefined4 *param_3,undefined4 param_4)
 
 {
-  undefined1 auStack_50 [56];
+  undefined1 auStack_50 [40];
   
   fn_82230110(auStack_50,0xffffffff821afa50);
   *param_3 = &lbl_821AFA08;

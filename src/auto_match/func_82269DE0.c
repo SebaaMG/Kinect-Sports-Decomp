@@ -50,10 +50,10 @@ void fn_82269DE0(int *param_1,int param_2)
   int iVar6;
   int iStack_470;
   undefined4 auStack_46c [3];
-  undefined4 uStack_460;
-  undefined4 uStack_45c;
+  struct { undefined4 first; undefined4 second; } stack_pair_460;
+
   undefined1 auStack_454 [1012];
-  undefined1 auStack_60 [96];
+  undefined1 auStack_60 [16];
   
   lVar2 = fn_8225C590();
   iVar6 = *param_1;
@@ -69,12 +69,12 @@ void fn_82269DE0(int *param_1,int param_2)
         iVar4 = 0;
 LAB_82269e50:
         iVar4 = *(int *)(iVar4 + 0xdc);
-        fn_82486B08(&uStack_460);
-        uStack_460 = 0;
-        uStack_45c = *(undefined4 *)(iVar6 + 0xd0);
+        fn_82486B08(&stack_pair_460.first);
+        stack_pair_460.first = 0;
+        stack_pair_460.second = *(undefined4 *)(iVar6 + 0xd0);
         uVar3 = (**(code **)(**(int **)(iVar4 + 0x8c0) + 100))();
         fn_82A1DD38(auStack_454,uVar3,1000);
-        fn_82A1DD38((ulonglong)(uint)param_1[0xe3] + lVar5 + 0x838,&uStack_460,0x420);
+        fn_82A1DD38((ulonglong)(uint)param_1[0xe3] + lVar5 + 0x838,&stack_pair_460.first,0x420);
         auStack_46c[0] = fn_8225DA18(lVar2,*(undefined4 *)(iVar6 + 0xd0));
         fn_82829120(&iStack_470,lVar2 + 0x48,auStack_46c);
         iVar4 = *(int *)(iStack_470 + 0x10);

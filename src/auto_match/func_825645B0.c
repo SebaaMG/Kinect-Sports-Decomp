@@ -31,19 +31,19 @@ extern int fn_8234D330();
 void fn_825645B0(undefined8 param_1,int *param_2,int param_3,int param_4)
 
 {
-  int aiStack_30 [12];
+  int aiStack_30;
   
-  (**(code **)(*param_2 + 4))(param_2,aiStack_30);
+  (**(code **)(*param_2 + 4))(param_2,&aiStack_30);
   while (param_3 != 0) {
     fn_8234D330(param_1,param_3 + 0x2e);
     if (*(ushort *)(param_3 + 0x2a) != 0xffff) {
-      fn_825645B0(param_1,param_2,(uint)*(ushort *)(param_3 + 0x2a) * 0x34 + aiStack_30[0],1);
+      fn_825645B0(param_1,param_2,(uint)*(ushort *)(param_3 + 0x2a) * 0x34 + aiStack_30,1);
     }
     if ((param_4 == 0) || (*(ushort *)(param_3 + 0x2c) == 0xffff)) {
       param_3 = 0;
     }
     else {
-      param_3 = (uint)*(ushort *)(param_3 + 0x2c) * 0x34 + aiStack_30[0];
+      param_3 = (uint)*(ushort *)(param_3 + 0x2c) * 0x34 + aiStack_30;
     }
   }
   return;

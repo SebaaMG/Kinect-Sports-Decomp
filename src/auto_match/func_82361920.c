@@ -46,19 +46,19 @@ void fn_82361920(int param_1,undefined8 param_2,undefined4 param_3)
 {
   undefined8 uVar1;
   undefined4 *puVar2;
-  undefined4 uStack_80;
-  undefined4 uStack_7c;
+  struct { undefined4 first; undefined4 second; } stack_pair_80;
+
   undefined **ppuStack_78;
   undefined4 uStack_74;
   undefined1 auStack_70 [32];
   undefined1 auStack_50 [28];
   undefined8 uStack_34;
   
-  uStack_7c = 0x40;
-  uStack_80 = param_3;
+  stack_pair_80.second = 0x40;
+  stack_pair_80.first = param_3;
   uVar1 = fn_82230110(auStack_70);
   fn_82240378(auStack_50,uVar1);
-  uStack_34 = CONCAT44(uStack_80,uStack_7c);
+  uStack_34 = CONCAT44(stack_pair_80.first,stack_pair_80.second);
   puVar2 = (undefined4 *)fn_8265C9E0(0x34);
   if (puVar2 != (undefined4 *)0x0) {
     *puVar2 = *(undefined4 *)(param_1 + 0xc);
@@ -70,7 +70,7 @@ void fn_82361920(int param_1,undefined8 param_2,undefined4 param_3)
       fn_82240378(puVar2 + 3,auStack_50);
       *(undefined8 *)(puVar2 + 10) = uStack_34;
     }
-    fn_824A3140(&uStack_80,param_1 + 8,puVar2);
+    fn_824A3140(&stack_pair_80.first,param_1 + 8,puVar2);
     fn_82230300(auStack_50,1,0);
     fn_82230300(auStack_70,1,0);
     return;

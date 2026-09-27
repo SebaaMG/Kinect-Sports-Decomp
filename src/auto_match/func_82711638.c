@@ -39,7 +39,7 @@ undefined4 * fn_82711638(undefined4 *param_1,int *param_2)
 {
   int iVar1;
   longlong lVar2;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30;
   
   fn_82711420();
   *param_1 = &lbl_8200E89C;
@@ -53,8 +53,8 @@ undefined4 * fn_82711638(undefined4 *param_1,int *param_2)
     fn_826944C8();
   }
   param_1[0xc] = iVar1;
-  auStack_30[0] = 1;
-  fn_826BF638(param_1 + 0xd,param_1,param_2,0xffffffff831562c0,auStack_30);
+  auStack_30 = 1;
+  fn_826BF638(param_1 + 0xd,param_1,param_2,0xffffffff831562c0,&auStack_30);
   return param_1;
 }
 

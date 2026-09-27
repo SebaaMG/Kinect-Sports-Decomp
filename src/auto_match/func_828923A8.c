@@ -38,19 +38,19 @@ undefined2 * fn_828923A8(undefined2 *param_1,undefined2 *param_2,undefined8 para
 {
   undefined2 uVar1;
   undefined8 uVar2;
-  undefined4 auStack_60 [5];
+  undefined4 auStack_60;
   uint uStack_4c;
   int iStack_2c;
   
   uVar1 = *param_2;
-  uVar2 = fn_82890120(auStack_60,param_3);
+  uVar2 = fn_82890120(&auStack_60,param_3);
   *param_1 = uVar1;
   fn_82890120(param_1 + 2,uVar2);
   if (iStack_2c != 0) {
     fn_822315A0();
   }
   if (0xf < uStack_4c) {
-    fn_8265CA20(auStack_60[0]);
+    fn_8265CA20(auStack_60);
   }
   return param_1;
 }

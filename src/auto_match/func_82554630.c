@@ -40,7 +40,7 @@ void fn_82554630(undefined4 *param_1)
   uint uVar2;
   int iVar3;
   undefined4 auStack_50 [4];
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [32];
   
   uVar2 = 0;
   *param_1 = &lbl_821C4CB8;

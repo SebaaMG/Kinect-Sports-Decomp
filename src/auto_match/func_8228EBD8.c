@@ -48,7 +48,7 @@ void fn_8228EBD8(undefined4 *param_1)
   int *piVar3;
   int *piVar4;
   undefined8 uVar5;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [16];
   
   *param_1 = &lbl_821A9C90;
   fn_8228ED20();

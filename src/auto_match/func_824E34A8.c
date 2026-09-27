@@ -32,7 +32,7 @@ extern int fn_82A1EFC0();
 void fn_824E34A8(void)
 
 {
-  undefined1 auStack_80 [128];
+  undefined1 auStack_80 [112];
   
                     /* WARNING: Subroutine does not return */
   fn_82A1EFC0(auStack_80,0,0x54);

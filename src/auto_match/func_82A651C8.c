@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 #define ZEXT48(x) ((U64)((U32)(x)))
 extern int fn_82A64E30();
-extern int fn_82F69148();
+extern int _blkmov();
 extern unsigned int lbl_82002AE0;
 extern unsigned int uStack_70;
 
@@ -204,7 +204,7 @@ LAB_82a65368:
     } while (lVar11 != 0);
   }
   if ((int)uVar15 < 0) {
-    fn_82F69148((uVar15 & 0x3fffffff) * 4 + lVar16,(uVar15 + uVar14 & 0x3fffffff) * 4 + uVar13,
+    _blkmov((uVar15 & 0x3fffffff) * 4 + lVar16,(uVar15 + uVar14 & 0x3fffffff) * 4 + uVar13,
                  (-uVar15 & 0x3fffffff) << 2);
   }
   return;

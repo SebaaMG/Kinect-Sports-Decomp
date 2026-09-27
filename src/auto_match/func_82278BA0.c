@@ -55,10 +55,10 @@ fn_82278BA0(undefined4 *param_1,undefined4 *param_2,int *param_3,char *param_4,u
   char cVar6;
   char *pcVar7;
   char cVar8;
-  undefined4 uStack_e0;
-  undefined4 uStack_dc;
+  struct { undefined4 first; undefined4 second; } stack_pair_e0;
+
   undefined1 uStack_d8;
-  undefined1 auStack_d0 [208];
+  undefined1 auStack_d0 [192];
   
   *param_1 = &lbl_821A8228;
   param_1[2] = 0;
@@ -97,14 +97,14 @@ fn_82278BA0(undefined4 *param_1,undefined4 *param_2,int *param_3,char *param_4,u
   *(undefined2 *)(param_1 + 0x69) = 0;
   do {
     if (param_3[1] == -1) {
-      uStack_e0 = 0;
-      uStack_dc = 0;
+      stack_pair_e0.first = 0;
+      stack_pair_e0.second = 0;
       fn_82526C70(auStack_d0,0x80,0xffffffff821a81d0);
-      fn_82273CD8(&uStack_e0,2);
+      fn_82273CD8(&stack_pair_e0.first,2);
       uStack_d8 = 0;
-      fn_82672C20(param_1[2],auStack_d0,&uStack_e0,1);
+      fn_82672C20(param_1[2],auStack_d0,&stack_pair_e0.first,1);
       param_1[0x89] = 0;
-      fn_82273C88(&uStack_e0);
+      fn_82273C88(&stack_pair_e0.first);
 code_r0x82278d40:
       uVar1 = lbl_821CC160;
       param_1[0x93] = lbl_821CC160;

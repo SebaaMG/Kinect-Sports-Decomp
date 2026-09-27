@@ -38,14 +38,14 @@ undefined4 fn_8289F9C8(undefined8 param_1,undefined8 param_2)
 
 {
   undefined1 uStack_30;
-  undefined4 uStack_2c;
-  undefined4 uStack_28;
+  struct { undefined4 first; undefined4 second; } stack_pair_2c;
+
   undefined4 uStack_24;
   
-  fn_828A1C98(&uStack_28,param_1,param_2);
-  uStack_2c = 0;
-  fn_8289EDA0(uStack_28,uStack_24,&uStack_2c,uStack_30);
-  fn_8289F4C8(&uStack_28,param_1,uStack_28,uStack_24);
-  return uStack_2c;
+  fn_828A1C98(&stack_pair_2c.second,param_1,param_2);
+  stack_pair_2c.first = 0;
+  fn_8289EDA0(stack_pair_2c.second,uStack_24,&stack_pair_2c.first,uStack_30);
+  fn_8289F4C8(&stack_pair_2c.second,param_1,stack_pair_2c.second,uStack_24);
+  return stack_pair_2c.first;
 }
 

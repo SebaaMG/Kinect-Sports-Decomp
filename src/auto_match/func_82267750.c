@@ -46,8 +46,8 @@ void fn_82267750(undefined4 *param_1,int param_2)
   undefined8 uVar6;
   undefined8 uVar7;
   int aiStack_50 [2];
-  undefined4 uStack_48;
-  int iStack_44;
+  struct { undefined4 first; int second; } stack_pair_48;
+
   
   piVar1 = (int *)*param_1;
   piVar2 = (int *)*piVar1;
@@ -81,9 +81,9 @@ void fn_82267750(undefined4 *param_1,int param_2)
     uVar6 = 6;
   }
   fn_82266628(iVar3,uVar6,uVar7);
-  uStack_48 = 1;
-  iStack_44 = param_2;
-  fn_824BF8A8((ulonglong)(uint)param_1[6] + 0x1c,&uStack_48);
+  stack_pair_48.first = 1;
+  stack_pair_48.second = param_2;
+  fn_824BF8A8((ulonglong)(uint)param_1[6] + 0x1c,&stack_pair_48.first);
   if (piVar2 != (int *)*param_1) {
     *(int *)piVar2[1] = *piVar2;
     *(int *)(*piVar2 + 4) = piVar2[1];

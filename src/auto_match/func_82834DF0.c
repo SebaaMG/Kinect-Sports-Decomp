@@ -34,14 +34,14 @@ undefined4 * fn_82834DF0(undefined4 *param_1,undefined8 param_2,undefined4 *para
 
 {
   int iVar1;
-  undefined4 auStack_30 [12];
+  undefined4 auStack_30;
   
   iVar1 = fn_82834458(param_2);
   if ((undefined4 *)(iVar1 + 0xc) != (undefined4 *)0x0) {
     *(undefined4 *)(iVar1 + 0xc) = *param_3;
   }
-  fn_82834750(auStack_30,param_2,iVar1,0);
-  *param_1 = auStack_30[0];
+  fn_82834750(&auStack_30,param_2,iVar1,0);
+  *param_1 = auStack_30;
   return param_1;
 }
 

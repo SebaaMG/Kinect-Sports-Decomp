@@ -56,8 +56,8 @@ void fn_82832C80(int param_1)
   undefined1 auStack_60 [4];
   int iStack_5c;
   undefined4 *apuStack_58 [2];
-  int iStack_50;
-  uint uStack_4c;
+  struct { int first; uint second; } stack_pair_50;
+
   uint uStack_48;
   
   iVar5 = param_1 + 0x2fc;
@@ -91,10 +91,10 @@ void fn_82832C80(int param_1)
             fn_82826498(param_1,iVar10,*(undefined4 *)(iVar9 + 8),0xffffffff828328b0,iVar9);
           }
           else if (1 < uVar1) {
-            iStack_50 = (*(uint *)(iVar10 + 0x10) / uVar1) * *(int *)(iVar9 + 0xc);
-            uStack_4c = uVar1;
+            stack_pair_50.first = (*(uint *)(iVar10 + 0x10) / uVar1) * *(int *)(iVar9 + 0xc);
+            stack_pair_50.second = uVar1;
             uStack_48 = uVar1;
-            piVar3 = (int *)fn_82833628(*piVar7,&iStack_50);
+            piVar3 = (int *)fn_82833628(*piVar7,&stack_pair_50.first);
             *piVar3 = *piVar3 + 1;
           }
           lVar8 = lVar8 + -1;

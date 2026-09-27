@@ -36,14 +36,14 @@ extern unsigned int uStack_24;
 undefined4 fn_82A36A88(undefined8 param_1,undefined8 param_2)
 
 {
-  undefined4 auStack_30 [2];
+  undefined4 auStack_30;
   undefined1 auStack_28 [4];
   undefined4 uStack_24;
   undefined4 uStack_20;
   
-  auStack_30[0] = 0;
+  auStack_30 = 0;
   fn_82A369B0(auStack_28,param_1);
-  fn_82A394B0(0,auStack_30,uStack_24,uStack_20,0x10,param_2);
-  return auStack_30[0];
+  fn_82A394B0(0,&auStack_30,uStack_24,uStack_20,0x10,param_2);
+  return auStack_30;
 }
 

@@ -34,10 +34,10 @@ void fn_82CE2498(undefined8 param_1,byte *param_2,undefined8 param_3)
 
 {
   int iVar1;
-  undefined4 auStack_30 [12];
+  undefined4 auStack_30;
   
-  auStack_30[0] = 2;
-  iVar1 = fn_82CE38A0(param_1,param_2,auStack_30);
+  auStack_30 = 2;
+  iVar1 = fn_82CE38A0(param_1,param_2,&auStack_30);
   if ((-1 < iVar1) && ((*param_2 & 0x40) != 0)) {
     fn_82CE3870(param_1,param_3);
   }

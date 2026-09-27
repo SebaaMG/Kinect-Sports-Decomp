@@ -47,13 +47,13 @@ void fn_828E5A80(int param_1,undefined4 *param_2)
   undefined4 *puVar6;
   char cVar7;
   undefined8 uVar5;
-  int aiStack_60 [24];
+  int aiStack_60;
   
   piVar1 = *(int **)(*(int *)(param_1 + 4) + 0x210);
-  aiStack_60[0] = *piVar1;
-  if ((int *)aiStack_60[0] != piVar1) {
+  aiStack_60 = *piVar1;
+  if ((int *)aiStack_60 != piVar1) {
     do {
-      iVar4 = aiStack_60[0];
+      iVar4 = aiStack_60;
       puVar6 = (undefined4 *)fn_8265C9E0(0x90);
       if (puVar6 == (undefined4 *)0x0) {
         puVar6 = (undefined4 *)0x0;
@@ -89,8 +89,8 @@ void fn_828E5A80(int param_1,undefined4 *param_2)
       uVar3 = *(undefined4 *)(param_1 + 4);
       uVar5 = fn_823AA970(*(undefined4 *)(iVar4 + 0x10));
       fn_828BE208(uVar3,puVar6,uVar5,0);
-      fn_82381BC0(aiStack_60);
-    } while (aiStack_60[0] != *(int *)(*(int *)(param_1 + 4) + 0x210));
+      fn_82381BC0(&aiStack_60);
+    } while (aiStack_60 != *(int *)(*(int *)(param_1 + 4) + 0x210));
   }
   return;
 }

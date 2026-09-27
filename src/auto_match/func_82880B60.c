@@ -34,17 +34,17 @@ longlong fn_82880B60(int param_1)
 {
   undefined4 *puVar1;
   longlong lVar2;
-  undefined4 *apuStack_30 [12];
+  undefined4 * apuStack_30;
   
   puVar1 = lbl_83212A04;
   lVar2 = 0;
   if (-1 < param_1) {
-    apuStack_30[0] = (undefined4 *)*lbl_83212A04;
-    while (apuStack_30[0] != puVar1) {
-      if ((apuStack_30[0][4] != 0) && (*(int *)(apuStack_30[0][4] + 8) == param_1)) {
+    apuStack_30 = (undefined4 *)*lbl_83212A04;
+    while (apuStack_30 != puVar1) {
+      if ((apuStack_30[4] != 0) && (*(int *)(apuStack_30[4] + 8) == param_1)) {
         lVar2 = lVar2 + 1;
       }
-      fn_828EA790(apuStack_30);
+      fn_828EA790(&apuStack_30);
     }
   }
   return lVar2;

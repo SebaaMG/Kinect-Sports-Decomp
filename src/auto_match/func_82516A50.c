@@ -43,8 +43,8 @@ void fn_82516A50(int param_1,undefined8 param_2,undefined8 param_3)
   int iVar2;
   undefined4 uVar3;
   uint *puVar4;
-  undefined4 uStack_40;
-  undefined4 uStack_3c;
+  struct { undefined4 first; undefined4 second; } stack_pair_40;
+
   
   uVar3 = lbl_83295F34;
   iVar1 = *(int *)(param_1 + 0xc);
@@ -62,10 +62,10 @@ void fn_82516A50(int param_1,undefined8 param_2,undefined8 param_3)
   puVar4 = *(uint **)(param_1 + 0x18);
   if (puVar4 != *(uint **)(param_1 + 0x1c)) {
     do {
-      uStack_40 = 0;
-      uStack_3c = 0;
-      fn_82517978(&uStack_40,puVar4[2],puVar4[3],0);
-      fn_828BBA90(param_2,(ulonglong)*puVar4 + 0xc,&uStack_40,param_3);
+      stack_pair_40.first = 0;
+      stack_pair_40.second = 0;
+      fn_82517978(&stack_pair_40.first,puVar4[2],puVar4[3],0);
+      fn_828BBA90(param_2,(ulonglong)*puVar4 + 0xc,&stack_pair_40.first,param_3);
       puVar4 = puVar4 + 4;
     } while (puVar4 != *(uint **)(param_1 + 0x1c));
   }

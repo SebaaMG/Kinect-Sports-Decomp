@@ -42,8 +42,8 @@ int * fn_8269B1E0(int *param_1,undefined8 param_2,char param_3,int *param_4)
   char cVar2;
   int iVar1;
   undefined1 auStack_50 [16];
-  int iStack_40;
-  int iStack_3c;
+  struct { int first; int second; } stack_pair_40;
+
   int iStack_38;
   int iStack_34;
   int iStack_30;
@@ -51,13 +51,13 @@ int * fn_8269B1E0(int *param_1,undefined8 param_2,char param_3,int *param_4)
   
   cVar2 = (**(code **)(*param_1 + 8))();
   if (cVar2 != '\0') {
-    iStack_40 = param_1[0x11];
-    iStack_3c = param_1[0x12];
+    stack_pair_40.first = param_1[0x11];
+    stack_pair_40.second = param_1[0x12];
     iStack_38 = param_1[0x13];
     iStack_34 = param_1[0x14];
     iStack_30 = param_1[0x15];
     iStack_2c = param_1[0x16];
-    fn_8268D008(&iStack_40,auStack_50,param_2);
+    fn_8268D008(&stack_pair_40.first,auStack_50,param_2);
     if ((*(short *)(param_1 + 0x19) == 0) &&
        (cVar2 = (**(code **)(*(int *)param_1[0x1a] + 0x14))
                           ((int *)param_1[0x1a],auStack_50,1,param_1), cVar2 != '\0')) {

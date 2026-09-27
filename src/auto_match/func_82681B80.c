@@ -34,14 +34,14 @@ undefined8 fn_82681B80(int *param_1,uint *param_2,undefined8 param_3,undefined8 
 {
   undefined8 uVar1;
   longlong lVar2;
-  int aiStack_30 [12];
+  int aiStack_30;
   
-  fn_82681728(aiStack_30,(ulonglong)*param_2 + 0x254);
-  uVar1 = (**(code **)(*param_1 + 0x2c))(param_1,param_2,aiStack_30,param_4);
-  lVar2 = (ulonglong)*(uint *)(aiStack_30[0] + 8) - 1;
-  *(int *)(aiStack_30[0] + 8) = (int)lVar2;
+  fn_82681728(&aiStack_30,(ulonglong)*param_2 + 0x254);
+  uVar1 = (**(code **)(*param_1 + 0x2c))(param_1,param_2,&aiStack_30,param_4);
+  lVar2 = (ulonglong)*(uint *)(aiStack_30 + 8) - 1;
+  *(int *)(aiStack_30 + 8) = (int)lVar2;
   if (lVar2 == 0) {
-    fn_826944C8(aiStack_30[0]);
+    fn_826944C8(aiStack_30);
   }
   return uVar1;
 }

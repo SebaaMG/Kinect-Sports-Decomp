@@ -60,7 +60,7 @@ fn_82AF8FA0(undefined8 param_1,int param_2,uint *param_3,uint *param_4,undefined
   uint uVar18;
   undefined8 uVar19;
   double dVar20;
-  undefined1 auStack_c0 [16];
+  undefined1 auStack_c0 [1];
   double adStack_b0 [22];
   
   uVar1 = param_3[3];

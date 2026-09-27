@@ -49,7 +49,7 @@ void fn_825BC7F0(int param_1,undefined8 param_2)
   undefined4 uVar3;
   int iVar5;
   int iVar6;
-  undefined1 auStack_60 [96];
+  undefined1 auStack_60 [32];
   
   fn_825200F0(auStack_60);
   cVar4 = fn_827D6968(lbl_83265A24,auStack_60,0xffffffffffffffff);

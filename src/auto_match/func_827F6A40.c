@@ -33,7 +33,7 @@ bool fn_827F6A40(undefined8 param_1,undefined8 param_2,undefined8 param_3)
 
 {
   longlong lVar1;
-  undefined1 auStack_10 [16];
+  undefined1 auStack_10 [1];
   
   lVar1 = fn_828008C0(param_1,1,param_2,param_3,auStack_10);
   return lVar1 != 0;

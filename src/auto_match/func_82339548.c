@@ -47,7 +47,7 @@ fn_82339548(undefined4 *param_1,undefined8 param_2,undefined8 param_3,undefined8
   undefined4 uVar4;
   undefined4 *puVar5;
   undefined1 auStack_50 [8];
-  undefined1 auStack_48 [72];
+  undefined1 auStack_48 [8];
   
   param_1[1] = 1;
   *param_1 = &lbl_821AD588;

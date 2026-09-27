@@ -64,8 +64,8 @@ void fn_82AA7460(undefined4 param_1,undefined4 param_2,undefined4 param_3,undefi
   undefined4 uStack_3c;
   code *pcStack_38;
   int iStack_34;
-  undefined4 uStack_30;
-  uint uStack_2c;
+  struct { undefined4 first; uint second; } stack_pair_30;
+
   undefined1 uStack_28;
   int iStack_24;
   int iStack_20;
@@ -81,23 +81,23 @@ void fn_82AA7460(undefined4 param_1,undefined4 param_2,undefined4 param_3,undefi
   uStack00000044 = param_7;
   uStack_40 = param_5;
   uStack_3c = param_6;
-  fn_82AA6110(param_3,&uStack_30);
+  fn_82AA6110(param_3,&stack_pair_30.first);
   do {
-    iStack_34 = fn_82AA6150(&uStack_30,puStack00000034,pcStack_38);
+    iStack_34 = fn_82AA6150(&stack_pair_30.first,puStack00000034,pcStack_38);
     if (iStack_34 == 0) {
-      iStack_24 = fn_82F6C150((ulonglong)uStack_2c + 0x470);
+      iStack_24 = fn_82F6C150((ulonglong)stack_pair_30.second + 0x470);
       iStack_20 = iStack_24;
       if (iStack_24 == 0) {
         uStack_28 = 1;
-        fn_82AA6F30(uStack_2c,puStack00000034,pcStack_38);
-        fn_82AA71F8(uStack_2c,uStack00000014,uStack0000001c,uStack_30,uStack0000002c,
+        fn_82AA6F30(stack_pair_30.second,puStack00000034,pcStack_38);
+        fn_82AA71F8(stack_pair_30.second,uStack00000014,uStack0000001c,stack_pair_30.first,uStack0000002c,
                       uStack00000044);
         break;
       }
-      iStack_34 = fn_82AA6DC0(&uStack_30);
+      iStack_34 = fn_82AA6DC0(&stack_pair_30.first);
     }
   } while (iStack_34 == 0);
-  fn_82AA6EA0(&uStack_30,iStack_34);
+  fn_82AA6EA0(&stack_pair_30.first,iStack_34);
   return;
 }
 

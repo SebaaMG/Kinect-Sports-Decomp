@@ -59,8 +59,8 @@ void fn_82580138(void)
 {
   undefined4 uStack_6c;
   undefined4 uStack_64;
-  undefined4 uStack_60;
-  undefined4 uStack_5c;
+  struct { undefined4 first; undefined4 second; } stack_pair_60;
+
   undefined4 uStack_58;
   undefined4 uStack_54;
   undefined4 uStack_50;
@@ -79,7 +79,7 @@ void fn_82580138(void)
     uStack_6c = (undefined4)(longlong)lbl_83296E14;
     uStack_54 = uStack_6c;
     uStack_64 = (undefined4)(longlong)lbl_832810F4;
-    uStack_60 = uStack_64;
+    stack_pair_60.first = uStack_64;
     uStack_64 = (undefined4)(longlong)*(float *)(lbl_8320A898 + 0x3218);
     uStack_40 = uStack_64;
     uStack_64 = (undefined4)(longlong)*(float *)(lbl_8320A898 + 0x3220);
@@ -92,9 +92,9 @@ void fn_82580138(void)
     uStack_6c = (undefined4)(longlong)*(float *)(lbl_8320A898 + 0x3224);
     uStack_30 = *(undefined4 *)(lbl_8320A898 + 0x3228);
     uStack_2c = *(undefined4 *)(lbl_8320A898 + 0x322c);
-    uStack_5c = uStack_64;
+    stack_pair_60.second = uStack_64;
     uStack_34 = uStack_6c;
-    fn_82639EA8(lbl_8320A898,&uStack_60);
+    fn_82639EA8(lbl_8320A898,&stack_pair_60.first);
     fn_82631920(lbl_8320A898,lbl_8327F8B8);
                     /* WARNING: Subroutine does not return */
     fn_82631578(lbl_8320A898,lbl_8327F94C);

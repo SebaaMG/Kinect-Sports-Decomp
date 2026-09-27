@@ -50,8 +50,8 @@ ulonglong fn_8259AD18(int param_1)
   int iVar11;
   undefined4 uStack_70;
   undefined4 uStack_6c;
-  undefined4 uStack_68;
-  undefined4 uStack_64;
+  struct { undefined4 first; undefined4 second; } stack_pair_68;
+
   
   if (*(int *)(param_1 + 0x94) != 2) {
     return 0;
@@ -69,10 +69,10 @@ ulonglong fn_8259AD18(int param_1)
         uVar3 = (**(code **)(*(int *)*piVar6 + 8))
                           ((int *)*piVar6,*(undefined4 *)(param_1 + 0x74),&uStack_70);
         if (uVar3 == 0) {
-          uStack_68 = 0;
-          uStack_64 = 0;
-          fn_82517978(&uStack_68,piVar7[-1],*piVar7,0);
-          (*(code *)piVar7[2])(&uStack_68,piVar7[1],*(undefined4 *)(param_1 + 0x70),param_1);
+          stack_pair_68.first = 0;
+          stack_pair_68.second = 0;
+          fn_82517978(&stack_pair_68.first,piVar7[-1],*piVar7,0);
+          (*(code *)piVar7[2])(&stack_pair_68.first,piVar7[1],*(undefined4 *)(param_1 + 0x70),param_1);
         }
         if (((uVar3 & 0xffffffff) == 0x3e5) || ((uVar3 & 0xffffffff) == 0x3e4)) {
           iVar5 = iVar5 + 1;

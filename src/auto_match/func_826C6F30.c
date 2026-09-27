@@ -41,21 +41,21 @@ void fn_826C6F30(int param_1,int param_2)
   uint uVar5;
   ulonglong uVar6;
   int iVar7;
-  int iStack_60;
-  uint uStack_5c;
+  struct { int first; uint second; } stack_pair_60;
+
   
   uVar6 = 0;
   piVar1 = *(int **)(*(int *)(param_2 + 0x1c) + 0xc);
   uVar3 = fn_826D7038(piVar1[8]);
   if (uVar3 != 0) {
     do {
-      iStack_60 = 0;
-      uStack_5c = 0;
-      cVar4 = (**(code **)(*piVar1 + 0x30))(piVar1,&iStack_60,uVar6);
-      if ((cVar4 != '\0') && (uVar5 = 0, uStack_5c != 0)) {
+      stack_pair_60.first = 0;
+      stack_pair_60.second = 0;
+      cVar4 = (**(code **)(*piVar1 + 0x30))(piVar1,&stack_pair_60.first,uVar6);
+      if ((cVar4 != '\0') && (uVar5 = 0, stack_pair_60.second != 0)) {
         iVar7 = 0;
         do {
-          piVar2 = *(int **)(iVar7 + iStack_60);
+          piVar2 = *(int **)(iVar7 + stack_pair_60.first);
           cVar4 = (**(code **)(*piVar2 + 0x14))(piVar2);
           if (cVar4 == '\0') {
             (**(code **)(*piVar2 + 8))(piVar2,param_1,0);
@@ -65,7 +65,7 @@ void fn_826C6F30(int param_1,int param_2)
           }
           uVar5 = uVar5 + 1;
           iVar7 = iVar7 + 4;
-        } while (uVar5 < uStack_5c);
+        } while (uVar5 < stack_pair_60.second);
       }
       uVar6 = uVar6 + 1;
     } while ((uVar6 & 0xffffffff) < (uVar3 & 0xffffffff));

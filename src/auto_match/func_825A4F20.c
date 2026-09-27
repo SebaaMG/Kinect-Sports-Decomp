@@ -55,7 +55,7 @@ void fn_825A4F20(int param_1)
   undefined8 uVar3;
   undefined4 *puVar7;
   int iVar8;
-  undefined1 auStack_e0 [16];
+  undefined1 auStack_e0 [1];
   undefined1 auStack_d0 [32];
   undefined1 auStack_b0 [176];
   

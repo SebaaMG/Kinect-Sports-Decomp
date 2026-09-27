@@ -50,7 +50,7 @@ void fn_827CC0D0(int param_1,int param_2,int param_3,int param_4,int param_5,int
   longlong lVar16;
   longlong lVar17;
   undefined4 uStack_274;
-  int aiStack_270 [156];
+  int aiStack_270 [124];
   
   puVar3 = &uStack_274;
   lVar16 = 0x80;

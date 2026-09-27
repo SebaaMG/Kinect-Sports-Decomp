@@ -37,7 +37,7 @@ undefined8 fn_825948E8(undefined8 param_1)
 {
   undefined8 uVar1;
   undefined1 auStack_b0 [75];
-  undefined1 auStack_65 [85];
+  undefined1 auStack_65 [69];
   
   fn_82558150(auStack_b0);
   uVar1 = fn_82587AC0(auStack_65);

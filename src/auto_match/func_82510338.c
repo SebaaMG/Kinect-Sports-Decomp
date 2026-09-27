@@ -46,7 +46,7 @@ void fn_82510338(int param_1,int *param_2)
   undefined4 uVar10;
   undefined4 uVar11;
   undefined4 uVar12;
-  undefined1 auStack_30 [24];
+  undefined1 auStack_30 [1];
   
   iVar1 = *param_2;
   if (*(int *)(param_1 + 0x18) != 0) {

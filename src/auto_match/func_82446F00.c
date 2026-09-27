@@ -47,7 +47,7 @@ void fn_82446F00(undefined8 param_1,undefined8 param_2,int param_3)
   int aiStack_58 [6];
   undefined **ppuStack_40;
   undefined4 uStack_3c;
-  int aiStack_38 [14];
+  int aiStack_38 [10];
   
   uStack_5c = 0;
   ppuStack_60 = &lbl_821B9BCC;

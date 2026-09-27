@@ -35,7 +35,7 @@ void fn_82552AD8(undefined8 param_1,int *param_2)
 {
   int iVar1;
   undefined8 uVar2;
-  undefined1 auStack_50 [56];
+  undefined1 auStack_50 [40];
   
   if ((int *)*param_2 != (int *)0x0) {
     iVar1 = *(int *)*param_2;

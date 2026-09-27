@@ -71,7 +71,7 @@ void fn_823E7870(undefined4 param_1,uint *param_2,int param_3,undefined4 *param_
   undefined4 auStack_280 [8];
   uint auStack_260 [9];
   int aiStack_23c [27];
-  undefined4 auStack_1d0 [116];
+  undefined4 auStack_1d0 [80];
   
   uVar4 = ZEXT48(&stack0x00000000);
   uVar5 = fn_823D2A18();

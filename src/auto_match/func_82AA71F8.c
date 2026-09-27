@@ -48,8 +48,8 @@ void fn_82AA71F8(int param_1,undefined8 param_2,undefined8 param_3,undefined8 pa
   undefined8 *puVar4;
   longlong lVar5;
   undefined8 uStack_78;
-  undefined4 uStack_70;
-  undefined4 uStack_6c;
+  struct { undefined4 first; undefined4 second; } stack_pair_70;
+
   undefined4 uStack_68;
   undefined4 uStack_64;
   undefined4 uStack_5c;
@@ -74,8 +74,8 @@ void fn_82AA71F8(int param_1,undefined8 param_2,undefined8 param_3,undefined8 pa
   } while (lVar5 != 0);
   *(undefined4 *)(puVar4 + 2) = 0;
   if (param_6 != (undefined4 *)0x0) {
-    uStack_70 = *param_6;
-    uStack_6c = param_6[1];
+    stack_pair_70.first = *param_6;
+    stack_pair_70.second = param_6[1];
     uStack_68 = param_6[2];
     uStack_5c = param_6[5];
   }
@@ -83,7 +83,7 @@ void fn_82AA71F8(int param_1,undefined8 param_2,undefined8 param_3,undefined8 pa
   if ((*(uint *)(param_1 + 0x30) & 0xffff0000) != 0xffff0000) {
     uVar3 = 0xfffffffffffe0000;
   }
-  fn_82AA6A30(param_1,uVar3,param_4,param_5,0,&uStack_70);
+  fn_82AA6A30(param_1,uVar3,param_4,param_5,0,&stack_pair_70.first);
   if (param_6 != (undefined4 *)0x0) {
     param_6[3] = uStack_64;
   }

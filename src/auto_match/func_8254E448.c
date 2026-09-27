@@ -81,8 +81,8 @@ void fn_8254E448(int param_1)
   float fStack_80;
   float fStack_7c;
   float fStack_78;
-  undefined4 uStack_70;
-  float fStack_6c;
+  struct { undefined4 first; float second; } stack_pair_70;
+
   undefined4 uStack_68;
   
   piVar15 = (int *)(param_1 + 8);
@@ -94,7 +94,7 @@ void fn_8254E448(int param_1)
   fVar22 = pfVar6[2];
   fVar23 = pfVar6[3];
   uVar1 = (*(int *)(param_1 + 0xc) - *(int *)(param_1 + 8)) / 0x60;
-  pfVar6 = (float *)((int)&uStack_70 + iVar14 & 0xfffffff0);
+  pfVar6 = (float *)((int)&stack_pair_70.first + iVar14 & 0xfffffff0);
   *pfVar6 = fVar20;
   pfVar6[1] = fVar21;
   pfVar6[2] = fVar22;
@@ -191,7 +191,7 @@ void fn_8254E448(int param_1)
     pfVar6[1] = fVar17;
     pfVar6[2] = fVar18;
     pfVar6[3] = fVar19;
-    pfVar6 = (float *)((int)&uStack_70 + iVar8 & 0xfffffff0);
+    pfVar6 = (float *)((int)&stack_pair_70.first + iVar8 & 0xfffffff0);
     *pfVar6 = fVar2;
     pfVar6[1] = fVar3;
     pfVar6[2] = fVar4;
@@ -202,8 +202,8 @@ void fn_8254E448(int param_1)
   }
   fStack_88 = fStack_80 + lbl_8218E8E8;
   fStack_84 = fStack_78 + lbl_8218E8E8;
-  uStack_90 = uStack_70;
-  *(float *)(param_1 + 0xd0) = fStack_6c - *(float *)(param_1 + 0xd8);
+  uStack_90 = stack_pair_70.first;
+  *(float *)(param_1 + 0xd0) = stack_pair_70.second - *(float *)(param_1 + 0xd8);
   *(float *)(param_1 + 0xd4) = *(float *)(param_1 + 0xd8) + fStack_7c;
   uStack_8c = uStack_68;
   uVar12 = fn_8254E1C8(param_1,&uStack_90,&fStack_88,*(undefined4 *)(param_1 + 0xcc),0,uVar1,0

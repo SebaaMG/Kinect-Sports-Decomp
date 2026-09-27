@@ -49,7 +49,7 @@ void fn_828940C0(int *param_1,undefined8 param_2,ulonglong param_3)
   char cVar7;
   undefined4 uVar8;
   bool bVar9;
-  char acStack_30 [4];
+  char acStack_30;
   undefined4 uStack_2c;
   
   piVar4 = (int *)fn_8289F2E0(param_1[4]);
@@ -79,11 +79,11 @@ void fn_828940C0(int *param_1,undefined8 param_2,ulonglong param_3)
   }
   else {
     uVar3 = fn_8240D928(piVar4);
-    puVar5 = (undefined4 *)fn_8288DF40(acStack_30,param_1 + 0xf,uVar3);
+    puVar5 = (undefined4 *)fn_8288DF40(&acStack_30,param_1 + 0xf,uVar3);
     bVar9 = (1 << (puVar5[1] & 0x3f) & *(uint *)*puVar5) != 0;
     if (bVar9) {
-      (**(code **)(*param_1 + 0x20))(acStack_30,param_1);
-      bVar9 = acStack_30[0] != '\0';
+      (**(code **)(*param_1 + 0x20))(&acStack_30,param_1);
+      bVar9 = acStack_30 != '\0';
       uVar8 = 0;
       if (!bVar9) {
         uVar8 = uStack_2c;

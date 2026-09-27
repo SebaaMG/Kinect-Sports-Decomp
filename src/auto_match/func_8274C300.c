@@ -37,14 +37,14 @@ extern unsigned int lbl_82013400;
 undefined4 * fn_8274C300(undefined4 *param_1,undefined8 param_2)
 
 {
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30;
   
   fn_826C35B8(param_1,param_2,0xffffffff8274c158);
   *param_1 = &lbl_82013400;
   param_1[4] = &lbl_820133A8;
-  auStack_30[0] = 10;
-  fn_826A79D8(param_1 + 4,param_2,0xffffffff8201339c,auStack_30);
-  fn_82696330(auStack_30);
+  auStack_30 = 10;
+  fn_826A79D8(param_1 + 4,param_2,0xffffffff8201339c,&auStack_30);
+  fn_82696330(&auStack_30);
   fn_826B1688(param_1 + 4,param_2,0xffffffff82013380,7);
   return param_1;
 }

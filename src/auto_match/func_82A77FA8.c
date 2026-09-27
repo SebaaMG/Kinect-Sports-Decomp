@@ -26,7 +26,7 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_82A774D8();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 ulonglong fn_82A77FA8(int param_1,ulonglong param_2,uint *param_3)
@@ -54,7 +54,7 @@ ulonglong fn_82A77FA8(int param_1,ulonglong param_2,uint *param_3)
       if ((param_2 & 0xffffffff) < (uVar5 & 0xffffffff)) {
         uVar5 = param_2;
       }
-      fn_82F68CC0(uVar3,(ulonglong)*(uint *)(param_1 + 0xbc),uVar5);
+      memcpy(uVar3,(ulonglong)*(uint *)(param_1 + 0xbc),uVar5);
       param_2 = param_2 - uVar5;
       *(int *)(param_1 + 0xbc) = *(int *)(param_1 + 0xbc) + (int)uVar5;
       uVar4 = uVar5 + uVar4;
@@ -67,7 +67,7 @@ ulonglong fn_82A77FA8(int param_1,ulonglong param_2,uint *param_3)
       *param_3 = uVar2;
     }
     else {
-      fn_82F68CC0(*param_3,(ulonglong)uVar2,param_2);
+      memcpy(*param_3,(ulonglong)uVar2,param_2);
     }
     *(int *)(param_1 + 0xbc) = *(int *)(param_1 + 0xbc) + (int)param_2;
     fn_82A774D8(param_1);

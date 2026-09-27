@@ -112,7 +112,7 @@ void fn_827F6C18(int param_1,undefined4 *param_2,float *param_3)
   undefined1 auStack_a0 [16];
   undefined1 auStack_90 [16];
   undefined1 auStack_80 [16];
-  undefined1 auStack_70 [112];
+  undefined1 auStack_70 [48];
   
   uVar2 = *(ushort *)(param_1 + 0x32);
   uVar8 = (ulonglong)uVar2;

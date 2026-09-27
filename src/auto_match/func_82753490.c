@@ -34,14 +34,13 @@ extern int fn_827532F0();
 extern unsigned int lbl_831E7E64;
 
 
-void fn_82753490(ulonglong param_1,undefined8 param_2,undefined8 param_3,undefined8 param_4,
-                  undefined8 param_5,undefined8 param_6,undefined8 param_7,undefined8 param_8)
+void fn_82753490(ulonglong param_1, undefined8 param_2, undefined8 param_3, undefined8 param_4, undefined8 param_5, undefined8 param_6, undefined8 param_7, undefined8 param_8, undefined4 in_stack_00000054)
 
 {
   undefined8 uVar1;
   ulonglong uVar2;
-  undefined4 in_stack_00000054;
-  uint auStack_60 [24];
+
+  uint auStack_60 [4];
   
   if ((param_1 & 0xffffffff) != 0) {
     fn_8268AFB0(auStack_60,lbl_831E7E64);

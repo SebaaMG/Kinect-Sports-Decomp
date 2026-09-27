@@ -40,7 +40,7 @@ void fn_82318788(int param_1,uint param_2,int param_3)
   longlong lVar5;
   uint uStack0000001c;
   undefined4 *puStack_20;
-  undefined4 *apuStack_1c [3];
+  undefined4 *apuStack_1c [1];
   
   puVar4 = (undefined4 *)(*(undefined4 **)(param_1 + 4))[1];
   puStack_20 = *(undefined4 **)(param_1 + 4);

@@ -35,7 +35,7 @@ void fn_82510EB8(int param_1,int *param_2)
 
 {
   int iVar1;
-  undefined1 auStack_30 [24];
+  undefined1 auStack_30 [8];
   
   iVar1 = *param_2;
   if (*(int *)(iVar1 + 0x10) != 0) {

@@ -43,7 +43,7 @@ undefined1 fn_82B36328(int param_1,int param_2)
   uint uVar6;
   uint uVar7;
   uint uVar8;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40;
   
   if ((*(uint *)(param_2 + 0x14) & 1) == 0) {
     uVar6 = *(uint *)(param_2 + 0x14);
@@ -76,7 +76,7 @@ undefined1 fn_82B36328(int param_1,int param_2)
     }
     iVar5 = iVar4;
   } while ((uVar6 & 1) == 0);
-  auStack_40[0] = 0;
+  auStack_40 = 0;
   puVar1 = (uint *)fn_82ABE250(param_1,8,0x26);
   *(uint **)(param_1 + 0x28c) = puVar1;
   puVar1[1] = (uint)puVar1 | 1;
@@ -104,7 +104,7 @@ LAB_82b3646c:
       if (uVar8 == 0) goto LAB_82b36514;
       do {
         if ((*(uint *)(uVar8 + 8) >> 0x1a & 1) == 0) {
-          cVar2 = fn_82B2B908(param_1,uVar8,auStack_40);
+          cVar2 = fn_82B2B908(param_1,uVar8,&auStack_40);
           if (cVar2 != '\0') goto LAB_82b36434;
         }
         uVar8 = *(uint *)((uVar8 & 0xfffffffe) + 0x28);
@@ -126,7 +126,7 @@ LAB_82b36514:
 LAB_82b365d4:
     fn_82ABE650(param_1,uVar6 >> 0xc & 1);
     *(undefined4 *)(param_1 + 0x28c) = 0;
-    return auStack_40[0];
+    return auStack_40;
   }
   if (uVar8 == 0) goto LAB_82b365d4;
   if ((uVar8 & 1) == 0) {
@@ -146,7 +146,7 @@ LAB_82b365d4:
   uVar7 = *(uint *)(uVar8 + 8);
   *(uint *)(uVar8 + 8) = uVar7 & 0xfbffffff;
   if (((uVar7 & 0x3f80) != 0x3980) && (*(int *)(uVar8 + 0x1c) == param_2)) {
-    fn_82B2B908(param_1,uVar8,auStack_40);
+    fn_82B2B908(param_1,uVar8,&auStack_40);
   }
   goto LAB_82b36514;
 LAB_82b36508:

@@ -53,7 +53,7 @@ void fn_824DB108(int *param_1)
   undefined4 uVar6;
   undefined4 uVar7;
   undefined4 uVar8;
-  undefined1 auStack_b0 [16];
+  undefined1 auStack_b0 [1];
   undefined1 auStack_a0 [16];
   undefined1 auStack_90 [16];
   undefined1 auStack_80 [16];

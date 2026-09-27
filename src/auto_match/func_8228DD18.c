@@ -44,8 +44,8 @@ void fn_8228DD18(int param_1)
   int *piVar2;
   undefined4 *puVar3;
   int *piVar4;
-  undefined4 uStack_40;
-  undefined4 uStack_3c;
+  struct { undefined4 first; undefined4 second; } stack_pair_40;
+
   undefined1 auStack_38 [4];
   int iStack_34;
   
@@ -61,9 +61,9 @@ void fn_8228DD18(int param_1)
     piVar2 = *(int **)(iVar1 + 0x10);
     if (piVar4 != piVar2) {
       do {
-        uStack_40 = 3;
-        uStack_3c = *(undefined4 *)(*piVar4 + 0x14);
-        fn_824BF8A8(iVar1 + 0x1c,&uStack_40);
+        stack_pair_40.first = 3;
+        stack_pair_40.second = *(undefined4 *)(*piVar4 + 0x14);
+        fn_824BF8A8(iVar1 + 0x1c,&stack_pair_40.first);
         piVar4 = piVar4 + 1;
       } while (piVar4 != piVar2);
     }

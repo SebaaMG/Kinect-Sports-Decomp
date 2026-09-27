@@ -65,7 +65,7 @@ void fn_8240EF10(void)
   undefined4 uVar12;
   undefined4 uVar13;
   undefined4 uVar14;
-  undefined1 auStack_90 [16];
+  undefined1 auStack_90 [1];
   undefined1 auStack_80 [128];
   
   iVar4 = fn_82F6DA24();

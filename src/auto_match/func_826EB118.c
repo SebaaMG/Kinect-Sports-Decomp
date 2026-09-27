@@ -38,11 +38,11 @@ fn_826EB118(undefined8 param_1,int *param_2,undefined8 param_3,undefined8 param_
   char cVar3;
   ulonglong uVar1;
   undefined8 uVar2;
-  undefined4 auStack_40 [16];
+  undefined4 auStack_40;
   
   if ((param_2 != (int *)0x0) && (cVar3 = (**(code **)(*param_2 + 0xc))(param_2), cVar3 != '\0')) {
-    auStack_40[0] = 2;
-    uVar1 = fn_8267BED0(param_1,0x1f8,auStack_40);
+    auStack_40 = 2;
+    uVar1 = fn_8267BED0(param_1,0x1f8,&auStack_40);
     if ((uVar1 & 0xffffffff) != 0) {
       uVar2 = fn_826EAF30(uVar1,param_2,param_3,param_4,param_5);
       return uVar2;

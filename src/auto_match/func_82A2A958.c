@@ -38,7 +38,7 @@ undefined8 fn_82A2A958(undefined8 param_1)
 
 {
   undefined8 uVar1;
-  undefined1 auStack_40 [4];
+  undefined1 auStack_40;
   undefined4 uStack_3c;
   undefined1 auStack_38 [8];
   undefined1 auStack_30 [8];
@@ -52,8 +52,8 @@ undefined8 fn_82A2A958(undefined8 param_1)
   uStack_20 = 0x40;
   uVar1 = NtOpenFile(&uStack_3c,0x10000,&uStack_28,auStack_30,7,0x4040);
   if (-1 < (int)uVar1) {
-    auStack_40[0] = 1;
-    uVar1 = NtSetInformationFile(uStack_3c,auStack_30,auStack_40,1,0xd);
+    auStack_40 = 1;
+    uVar1 = NtSetInformationFile(uStack_3c,auStack_30,&auStack_40,1,0xd);
     NtClose(uStack_3c);
     if (-1 < (int)uVar1) {
       return 1;

@@ -30,7 +30,7 @@ typedef struct { U64 lo, hi; } V16;
 void fn_82A2B2F0(uint param_1,undefined8 param_2)
 
 {
-  longlong alStack_20 [4];
+  longlong alStack_20 [3];
   
   alStack_20[1] = 0;
   alStack_20[2] = 0;

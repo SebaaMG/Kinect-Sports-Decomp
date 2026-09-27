@@ -38,7 +38,7 @@ undefined8 fn_8257A0B0(undefined8 param_1)
   char *pcVar2;
   int iVar3;
   char *pcVar4;
-  undefined8 auStack_20 [4];
+  undefined8 auStack_20;
   
   pcVar2 = (char *)fn_82579DB0();
   pcVar4 = pcVar2;
@@ -48,10 +48,10 @@ undefined8 fn_8257A0B0(undefined8 param_1)
       pcVar4 = pcVar4 + 1;
     } while (cVar1 != '\0');
     if ((int)pcVar4 - (int)pcVar2 != 1) {
-      auStack_20[0] = lbl_82195518;
-      iVar3 = fn_82F67FE8(pcVar2,0xffffffff821c5508,auStack_20);
+      auStack_20 = lbl_82195518;
+      iVar3 = fn_82F67FE8(pcVar2,0xffffffff821c5508,&auStack_20);
       if (iVar3 == 1) {
-        return auStack_20[0];
+        return auStack_20;
       }
     }
   }

@@ -44,7 +44,7 @@ void fn_82C00FB8(int *param_1,undefined8 param_2)
   byte bVar6;
   undefined2 *puVar7;
   longlong lVar8;
-  undefined2 auStack_50 [40];
+  undefined2 auStack_50 [1];
   
   puVar7 = auStack_50;
   auStack_50[0] = 0;

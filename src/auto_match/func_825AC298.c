@@ -42,7 +42,7 @@ extern int fn_8265CA20();
 extern int fn_828B00A0();
 extern int fn_828C4318();
 extern int fn_828E9D28();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int iStack_108;
 extern unsigned int iStack_d8;
 extern unsigned int uStack_100;
@@ -178,7 +178,7 @@ void fn_825AC298(int *param_1,ulonglong param_2,int param_3,int param_4,int para
     aiStack_130[2] = iVar6;
     iVar5 = fn_825ADE10(auStack_c8,aiStack_140,aiStack_130);
     if (*(int *)(iVar5 + 8) == iVar6) {
-      fn_82F68CC0(param_1 + 0x24,auStack_b0,0x50);
+      memcpy(param_1 + 0x24,auStack_b0,0x50);
       *(undefined1 *)(param_1 + 0x38) = 1;
       fn_828B00A0((ulonglong)(uint)param_1[4] + 0x278);
     }

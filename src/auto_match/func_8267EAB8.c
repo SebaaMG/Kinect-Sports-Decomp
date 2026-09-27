@@ -34,15 +34,15 @@ bool fn_8267EAB8(int param_1,undefined4 param_2,undefined4 param_3)
 
 {
   ulonglong uVar1;
-  undefined4 uStack_20;
-  undefined4 uStack_1c;
+  struct { undefined4 first; undefined4 second; } stack_pair_20;
+
   
   uVar1 = (ulonglong)*(uint *)(param_1 + 8);
   if (uVar1 != 0) {
-    uStack_20 = param_2;
-    uStack_1c = param_3;
+    stack_pair_20.first = param_2;
+    stack_pair_20.second = param_3;
     RtlEnterCriticalSection(uVar1 + 0x10);
-    fn_8267E910((ulonglong)*(uint *)(param_1 + 8) + 4,&uStack_20);
+    fn_8267E910((ulonglong)*(uint *)(param_1 + 8) + 4,&stack_pair_20.first);
     RtlLeaveCriticalSection(uVar1 + 0x10);
   }
   return uVar1 != 0;

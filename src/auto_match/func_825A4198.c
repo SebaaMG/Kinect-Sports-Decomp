@@ -48,7 +48,7 @@ void fn_825A4198(undefined8 param_1,int param_2,int param_3,int *param_4,int par
   undefined4 *puVar10;
   int iVar11;
   int iVar12;
-  undefined1 auStack_b0 [176];
+  undefined1 auStack_b0 [64];
   
   iVar2 = *(int *)(param_2 + 0x7c);
   iVar7 = 0;

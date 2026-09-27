@@ -49,20 +49,20 @@ void fn_82279AF0(undefined4 *param_1)
   undefined4 *puVar1;
   undefined8 uVar2;
   undefined4 *puVar3;
-  undefined4 uStack_160;
-  undefined4 uStack_15c;
+  struct { undefined4 first; undefined4 second; } stack_pair_160;
+
   undefined1 *puStack_158;
   undefined1 auStack_150 [32];
   undefined1 uStack_130;
-  undefined1 auStack_12f [303];
+  undefined1 auStack_12f [287];
   
   *param_1 = &lbl_821A82B8;
   if (0 < (int)param_1[0x35]) {
     uVar2 = fn_8266F6B8();
     fn_8266F600(param_1[2],uVar2,auStack_150,0x20);
-    uStack_160 = 0;
-    uStack_15c = 0;
-    fn_82273CD8(&uStack_160,4);
+    stack_pair_160.first = 0;
+    stack_pair_160.second = 0;
+    fn_82273CD8(&stack_pair_160.first,4);
     puStack_158 = auStack_150;
     uStack_130 = 0;
                     /* WARNING: Subroutine does not return */

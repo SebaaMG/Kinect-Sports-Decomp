@@ -34,7 +34,7 @@ void fn_827BA3C8(undefined4 *param_1,ulonglong param_2,longlong param_3)
 
 {
   undefined4 uVar1;
-  undefined4 auStack_30 [12];
+  undefined4 auStack_30;
   
   if ((ulonglong)(uint)param_1[2] < (param_2 & 0xffffffff)) {
     fn_8267BE38(*param_1);
@@ -44,8 +44,8 @@ void fn_827BA3C8(undefined4 *param_1,ulonglong param_2,longlong param_3)
       uVar1 = 0;
     }
     else {
-      auStack_30[0] = 2;
-      uVar1 = fn_8267BED0(param_1,(param_2 & 0x7fffffff) << 1,auStack_30);
+      auStack_30 = 2;
+      uVar1 = fn_8267BED0(param_1,(param_2 & 0x7fffffff) << 1,&auStack_30);
     }
     *param_1 = uVar1;
   }

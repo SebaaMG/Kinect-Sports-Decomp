@@ -88,8 +88,8 @@ void fn_82861380(undefined4 *param_1,undefined8 param_2,int param_3)
   undefined4 uStack_a4;
   undefined4 uStack_a0;
   float fStack_9c;
-  undefined4 uStack_98;
-  undefined4 uStack_94;
+  struct { undefined4 first; undefined4 second; } stack_pair_98;
+
   undefined4 uStack_90;
   undefined4 uStack_88;
   undefined4 uStack_84;
@@ -117,8 +117,8 @@ void fn_82861380(undefined4 *param_1,undefined8 param_2,int param_3)
   uStack_c4 = param_1[1];
   uStack_a4 = lbl_821AAD20;
   uStack_a0 = lbl_821AAD20;
-  uStack_98 = lbl_8200133C;
-  uStack_94 = lbl_821AAD20;
+  stack_pair_98.first = lbl_8200133C;
+  stack_pair_98.second = lbl_821AAD20;
   uStack_90 = lbl_821AAD20;
   uStack_88 = lbl_82002AE0;
   uStack_84 = lbl_821AAD20;
@@ -149,7 +149,7 @@ void fn_82861380(undefined4 *param_1,undefined8 param_2,int param_3)
     iVar2 = iVar2 + 1;
     puVar1 = puVar1 + 3;
   } while (iVar2 < 6);
-  puVar1 = &uStack_98;
+  puVar1 = &stack_pair_98.first;
   lVar3 = 6;
   iVar2 = param_3 + 0x48;
   do {

@@ -43,7 +43,7 @@ void fn_822CEA78(int param_1,int *param_2,undefined8 param_3,int param_4)
   undefined4 uVar6;
   undefined4 uVar7;
   undefined4 uVar8;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [1];
   
   if (param_4 == 0) {
     *(undefined4 *)(param_1 + 0x230) = 0;

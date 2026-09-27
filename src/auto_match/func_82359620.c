@@ -39,23 +39,23 @@ void fn_82359620(int param_1,undefined4 *param_2)
   undefined4 uVar3;
   int iVar4;
   char cVar5;
-  undefined4 uStack_30;
-  int iStack_2c;
+  struct { undefined4 first; int second; } stack_pair_30;
+
   
   iVar1 = param_2[1];
   uVar2 = *param_2;
-  uStack_30 = 0;
-  iStack_2c = 0;
-  uVar3 = uStack_30;
-  iVar4 = iStack_2c;
+  stack_pair_30.first = 0;
+  stack_pair_30.second = 0;
+  uVar3 = stack_pair_30.first;
+  iVar4 = stack_pair_30.second;
   if (((iVar1 != 0) &&
-      (cVar5 = fn_8223AAC0(iVar1), uVar3 = uStack_30, iVar4 = iStack_2c, cVar5 != '\0')) &&
-     (uVar3 = uVar2, iVar4 = iVar1, iStack_2c != 0)) {
+      (cVar5 = fn_8223AAC0(iVar1), uVar3 = stack_pair_30.first, iVar4 = stack_pair_30.second, cVar5 != '\0')) &&
+     (uVar3 = uVar2, iVar4 = iVar1, stack_pair_30.second != 0)) {
     fn_822315A0();
   }
-  iStack_2c = iVar4;
-  uStack_30 = uVar3;
-  (**(code **)(*(int *)(param_1 + 0x40) + 4))(param_1 + 0x40,&uStack_30);
+  stack_pair_30.second = iVar4;
+  stack_pair_30.first = uVar3;
+  (**(code **)(*(int *)(param_1 + 0x40) + 4))(param_1 + 0x40,&stack_pair_30.first);
   return;
 }
 

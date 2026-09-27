@@ -48,8 +48,8 @@ void fn_8247FF88(int param_1)
   int iVar4;
   float fStack_90;
   float fStack_8c;
-  float fStack_88;
-  float fStack_84;
+  struct { float first; float second; } stack_pair_88;
+
   undefined4 uStack_80;
   undefined4 uStack_7c;
   float fStack_70;
@@ -64,11 +64,11 @@ void fn_8247FF88(int param_1)
   iVar4 = 0;
   do {
     if (*(int *)(*(int *)(param_1 + 0x48) + iVar4 + 0x838) != 4) {
-      iVar2 = fn_82270220(&fStack_90,&fStack_88,lVar3);
+      iVar2 = fn_82270220(&fStack_90,&stack_pair_88.first,lVar3);
       if (iVar2 != 0) {
         uStack_80 = (undefined4)lVar3;
-        fStack_70 = fStack_88 - fStack_90;
-        fStack_6c = fStack_84 - fStack_8c;
+        fStack_70 = stack_pair_88.first - fStack_90;
+        fStack_6c = stack_pair_88.second - fStack_8c;
         uStack_7c = uStack_80;
         fn_8227E330(*(undefined4 *)(param_1 + 0xec),&uStack_80,param_1 + 0xd8);
       }

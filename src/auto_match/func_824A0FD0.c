@@ -43,7 +43,7 @@ void fn_824A0FD0(int param_1)
   longlong lVar3;
   int *piVar4;
   undefined4 auStack_60 [4];
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [48];
   
   bVar1 = false;
   piVar4 = (int *)(param_1 + 0xc);

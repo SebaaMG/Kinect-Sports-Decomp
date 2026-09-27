@@ -39,7 +39,7 @@ longlong fn_826A2738(int param_1,int param_2)
   uint uVar1;
   char cVar3;
   longlong lVar2;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [32];
   
   *(int *)(param_1 + 0x34) = *(int *)(param_1 + 0x34) + 1;
   cVar3 = fn_826A25C0(param_1 + -0x10);

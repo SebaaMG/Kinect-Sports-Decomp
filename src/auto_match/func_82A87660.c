@@ -39,7 +39,7 @@ undefined8 fn_82A87660(undefined8 param_1,int *param_2,longlong param_3)
   undefined8 uVar1;
   undefined1 auStack_40 [8];
   undefined1 auStack_38 [16];
-  undefined1 auStack_28 [16];
+  undefined1 auStack_28 [1];
   
   cVar2 = (**(code **)(*param_2 + 4))(param_2);
   if ((cVar2 == '\0') ||

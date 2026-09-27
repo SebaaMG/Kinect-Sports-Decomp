@@ -42,7 +42,7 @@ longlong fn_82508608(undefined8 param_1,int param_2)
   longlong lVar2;
   undefined4 auStack_70 [4];
   undefined1 auStack_60 [32];
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [32];
   
   auStack_70[0] = lbl_83283E3C;
   fn_825200F0(auStack_60,auStack_70);

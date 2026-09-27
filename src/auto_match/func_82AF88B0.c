@@ -42,9 +42,9 @@ void fn_82AF88B0(uint *param_1,int param_2)
   uint uVar7;
   uint uVar8;
   undefined8 extraout_f1;
-  uint auStack_40 [16];
+  uint auStack_40;
   
-  uVar4 = fn_82B86C90(param_1[3],param_2,auStack_40);
+  uVar4 = fn_82B86C90(param_1[3],param_2,&auStack_40);
   uVar1 = *param_1;
   uVar7 = 0;
   uVar2 = uVar1 & 0x1f;
@@ -55,7 +55,7 @@ void fn_82AF88B0(uint *param_1,int param_2)
       uVar3 = (ulonglong)((uVar1 >> 5 & 0xff) >> (uVar8 & 0x3f));
       iVar5 = (int)((uVar3 & 3) << 1);
       uVar4 = fn_82B80CD0(*(undefined8 *)((int)((uVar3 & 3) << 3) + param_2),uVar4,
-                                ((2 << (int)((uVar3 & 3) << 1) + 1) - 1U & auStack_40[0] &
+                                ((2 << (int)((uVar3 & 3) << 1) + 1) - 1U & auStack_40 &
                                 -1 << iVar5) >> iVar5,uVar2);
       puVar6 = puVar6 + 1;
       *puVar6 = extraout_f1;

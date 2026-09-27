@@ -33,16 +33,16 @@ int fn_82A41368(int param_1,undefined4 *param_2)
 
 {
   int *piVar1;
-  int aiStack_30 [12];
+  int aiStack_30;
   
   piVar1 = (int *)(param_1 + 0x2c);
   (**(code **)(*(int *)(param_1 + 0x2c) + 8))(piVar1);
-  aiStack_30[0] = fn_82A40CF0(param_1);
-  if (-1 < aiStack_30[0]) {
+  aiStack_30 = fn_82A40CF0(param_1);
+  if (-1 < aiStack_30) {
     *param_2 = *(undefined4 *)(param_1 + 0x98);
   }
   (**(code **)(*piVar1 + 0x14))(piVar1);
-  fn_82A40238(aiStack_30);
-  return aiStack_30[0];
+  fn_82A40238(&aiStack_30);
+  return aiStack_30;
 }
 

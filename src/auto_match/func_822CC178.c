@@ -34,13 +34,13 @@ extern unsigned int uStack_20;
 void fn_822CC178(undefined4 *param_1)
 
 {
-  undefined4 uStack_20;
-  undefined4 uStack_1c;
+  struct { undefined4 first; undefined4 second; } stack_pair_20;
+
   
-  uStack_20 = 0;
-  uStack_1c = 0;
-  fn_82517978(&uStack_20,*param_1,param_1[1],0);
-  fn_822CC3C0(param_1,&uStack_20,param_1 + 8,param_1 + 4,1);
+  stack_pair_20.first = 0;
+  stack_pair_20.second = 0;
+  fn_82517978(&stack_pair_20.first,*param_1,param_1[1],0);
+  fn_822CC3C0(param_1,&stack_pair_20.first,param_1 + 8,param_1 + 4,1);
   return;
 }
 

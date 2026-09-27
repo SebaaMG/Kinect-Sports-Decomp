@@ -30,7 +30,7 @@ extern int fn_8228FB60();
 extern int fn_8228FC38();
 extern int fn_82290070();
 extern int fn_82536288();
-extern int fn_82F63CA0();
+extern int memmove();
 
 
 void fn_8228FA78(undefined8 param_1,int param_2)
@@ -39,7 +39,7 @@ void fn_8228FA78(undefined8 param_1,int param_2)
   char cVar1;
   undefined4 *puVar2;
   undefined4 *puVar3;
-  int *apiStack_40 [16];
+  int *apiStack_40 [4];
   
   if (*(int *)(param_2 + 0x54) == 0) {
     fn_82290070();
@@ -57,7 +57,7 @@ void fn_8228FA78(undefined8 param_1,int param_2)
         }
         else {
           fn_82536288(apiStack_40);
-          fn_82F63CA0(puVar3,puVar2,(*(int *)(param_2 + 0x3c) - (int)puVar2 >> 2) << 2);
+          memmove(puVar3,puVar2,(*(int *)(param_2 + 0x3c) - (int)puVar2 >> 2) << 2);
           *(int *)(param_2 + 0x3c) = *(int *)(param_2 + 0x3c) + -4;
         }
       } while (puVar3 != *(undefined4 **)(param_2 + 0x3c));

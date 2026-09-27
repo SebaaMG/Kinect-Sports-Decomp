@@ -38,7 +38,7 @@ undefined8 fn_828297A0(int param_1,uint *param_2)
   int iVar3;
   int *piVar4;
   undefined1 auStack_50 [16];
-  uint auStack_40 [16];
+  uint auStack_40 [8];
   
   uVar1 = *param_2;
   if ((*(uint *)(param_1 + 0x18) <= uVar1) && (uVar1 <= *(uint *)(param_1 + 0x1c))) {

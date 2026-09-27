@@ -38,8 +38,8 @@ undefined8 fn_82689220(undefined8 param_1,undefined4 *param_2,undefined8 param_3
 {
   ulonglong uVar1;
   undefined8 uVar2;
-  undefined4 uStack_30;
-  undefined4 uStack_2c;
+  struct { undefined4 first; undefined4 second; } stack_pair_30;
+
   undefined4 uStack_28;
   undefined4 uStack_24;
   
@@ -48,11 +48,11 @@ undefined8 fn_82689220(undefined8 param_1,undefined4 *param_2,undefined8 param_3
     uVar2 = 0;
   }
   else {
-    uStack_30 = *param_2;
-    uStack_2c = param_2[1];
+    stack_pair_30.first = *param_2;
+    stack_pair_30.second = param_2[1];
     uStack_28 = param_2[2];
     uStack_24 = param_2[3];
-    uVar2 = fn_82689100(uVar1,param_1,&uStack_30);
+    uVar2 = fn_82689100(uVar1,param_1,&stack_pair_30.first);
   }
   return uVar2;
 }

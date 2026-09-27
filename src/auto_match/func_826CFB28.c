@@ -82,7 +82,7 @@ void fn_826CFB28(int param_1)
   float fStack_114;
   undefined1 auStack_110 [8];
   double dStack_108;
-  undefined1 auStack_100 [8];
+  undefined1 auStack_100;
   double dStack_f8;
   undefined1 auStack_f0 [8];
   double dStack_e8;
@@ -92,7 +92,7 @@ void fn_826CFB28(int param_1)
   undefined1 auStack_b0 [32];
   undefined1 auStack_90 [32];
   undefined1 auStack_70 [32];
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [48];
   
   piVar4 = (int *)fn_826C59F8();
   if (piVar4 != (int *)0x0) {
@@ -136,14 +136,14 @@ void fn_826CFB28(int param_1)
     }
     uStack_12f = 0;
     iVar7 = iVar6 + 0x10;
-    auStack_100[0] = 3;
+    auStack_100 = 3;
     puVar8 = (uint *)(*(int *)(param_1 + 0x18) + 0x78);
     dStack_f8 = (double)fStack_120 * lbl_82005720;
     dVar9 = lbl_82005720;
     (**(code **)(*(int *)(iVar6 + 0x10) + 0x28))
-              (iVar7,puVar8,(ulonglong)*(uint *)(*(int *)(param_1 + 0x18) + 0x78) + 500,auStack_100,
+              (iVar7,puVar8,(ulonglong)*(uint *)(*(int *)(param_1 + 0x18) + 0x78) + 500,&auStack_100,
                &uStack_12f);
-    fn_82696330(auStack_100);
+    fn_82696330(&auStack_100);
     dStack_108 = (double)fStack_118 * dVar9;
     auStack_110[0] = 3;
     auStack_12d[0] = 0;

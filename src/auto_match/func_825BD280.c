@@ -48,17 +48,17 @@ void fn_825BD280(int param_1)
   int iVar3;
   undefined8 uVar2;
   undefined4 *puVar4;
-  undefined4 uStack_30;
-  undefined4 uStack_2c;
+  struct { undefined4 first; undefined4 second; } stack_pair_30;
+
   
   fn_825BD360();
   puVar1 = *(undefined4 **)(param_1 + 0x220);
   for (puVar4 = *(undefined4 **)(param_1 + 0x21c); puVar4 != puVar1; puVar4 = puVar4 + 2) {
-    uStack_30 = 0;
-    uStack_2c = 0;
-    fn_82517978(&uStack_30,*puVar4,puVar4[1],0);
+    stack_pair_30.first = 0;
+    stack_pair_30.second = 0;
+    fn_82517978(&stack_pair_30.first,*puVar4,puVar4[1],0);
     uVar2 = fn_8256BF18();
-    fn_8256C5D0(uVar2,&uStack_30);
+    fn_8256C5D0(uVar2,&stack_pair_30.first);
   }
   while (iVar3 = fn_827D5670(lbl_83265A24,1), iVar3 != 0) {
     fn_827D5700(lbl_83265A24);

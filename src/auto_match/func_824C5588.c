@@ -42,7 +42,7 @@ int fn_824C5588(int param_1,int param_2)
   undefined4 uVar5;
   undefined4 uVar6;
   undefined4 uVar7;
-  undefined1 auStack_30 [24];
+  undefined1 auStack_30 [8];
   
   fn_8229D728();
   *(undefined4 *)(param_1 + 0x28) = 0;

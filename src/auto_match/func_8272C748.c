@@ -46,8 +46,8 @@ int * fn_8272C748(int *param_1,undefined8 param_2,char param_3,int *param_4)
   int iVar2;
   float fStack_50;
   float fStack_4c;
-  int iStack_40;
-  int iStack_3c;
+  struct { int first; int second; } stack_pair_40;
+
   int iStack_38;
   int iStack_34;
   int iStack_30;
@@ -55,13 +55,13 @@ int * fn_8272C748(int *param_1,undefined8 param_2,char param_3,int *param_4)
   
   if (((((uint)param_1[0x23] >> 0xb & 1) == 0) &&
       (cVar3 = (**(code **)(*param_1 + 8))(), cVar3 != '\0')) && (param_4 != param_1)) {
-    iStack_40 = param_1[0x11];
-    iStack_3c = param_1[0x12];
+    stack_pair_40.first = param_1[0x11];
+    stack_pair_40.second = param_1[0x12];
     iStack_38 = param_1[0x13];
     iStack_34 = param_1[0x14];
     iStack_30 = param_1[0x15];
     iStack_2c = param_1[0x16];
-    fn_8268D008(&iStack_40,&fStack_50,param_2);
+    fn_8268D008(&stack_pair_40.first,&fStack_50,param_2);
     if ((*(short *)(param_1 + 0x19) == 0) &&
        (cVar3 = (**(code **)(*param_1 + 0x30))(param_1,&fStack_50,1), cVar3 != '\0')) {
       if (param_3 != '\0') {

@@ -27,9 +27,9 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 #define ZEXT48(x) ((U64)((U32)(x)))
 extern unsigned int *auStack_a0;
-extern int fn_82A27888();
-extern int fn_82F63CA0();
-extern int fn_82F691F0();
+extern int RtlpInitializeHeapSegment();
+extern int memmove();
+extern int memset();
 extern unsigned int iStack_7c;
 extern unsigned int iStack_8c;
 extern unsigned int iStack_98;
@@ -54,7 +54,7 @@ extern unsigned int uStack_a8;
 
 
 undefined2 *
-fn_82A27F98(uint param_1,undefined2 *param_2,int param_3,int param_4,undefined4 *param_5,
+RtlCreateHeap(uint param_1,undefined2 *param_2,int param_3,int param_4,undefined4 *param_5,
              int *param_6)
 
 {
@@ -76,7 +76,7 @@ fn_82A27F98(uint param_1,undefined2 *param_2,int param_3,int param_4,undefined4 
   uint uStack0000002c;
   undefined4 *puStack00000034;
   undefined2 *puStack_d0;
-  undefined2 *apuStack_cc [3];
+  undefined2 * apuStack_cc;
   undefined2 *apuStack_c0 [4];
   int iStack_b0;
   undefined8 uStack_a8;
@@ -105,7 +105,7 @@ fn_82A27F98(uint param_1,undefined2 *param_2,int param_3,int param_4,undefined4 
   if ((param_6 != (int *)0x0) && (*param_6 == 0x30)) {
     uStack00000024 = param_3;
     uStack0000002c = param_4;
-    fn_82F63CA0(auStack_a0,param_6,0x30);
+    memmove(auStack_a0,param_6,0x30);
     param_3 = uStack00000024;
     param_4 = uStack0000002c;
   }
@@ -177,7 +177,7 @@ LAB_82a281b8:
     if (uStack0000002c == 0) {
       uStack0000002c = 0x10000;
     }
-    apuStack_cc[0] = (undefined2 *)0x0;
+    apuStack_cc = (undefined2 *)0x0;
   }
   else {
     if (iStack_7c != 0) {
@@ -194,7 +194,7 @@ LAB_82a281b8:
         return (undefined2 *)0x0;
       }
                     /* WARNING: Subroutine does not return */
-      fn_82F691F0(param_2,0,0x10000);
+      memset(param_2,0,0x10000);
     }
     iVar1 = NtQueryVirtualMemory(param_2,apuStack_c0,uVar9);
     if (iVar1 < 0) {
@@ -206,23 +206,23 @@ LAB_82a281b8:
     if (iStack_b0 == 0x10000) {
       return (undefined2 *)0x0;
     }
-    apuStack_cc[0] = apuStack_c0[0];
+    apuStack_cc = apuStack_c0[0];
     if (iStack_b0 == 0x1000) {
                     /* WARNING: Subroutine does not return */
-      fn_82F691F0(apuStack_c0[0],0,0x10000);
+      memset(apuStack_c0[0],0,0x10000);
     }
     uStack0000002c = 0x10000;
     uVar8 = 1;
     puStack_d0 = param_2;
   }
-  iVar1 = NtAllocateVirtualMemory(apuStack_cc,&stack0x0000002c,0x60001000,4,uVar9);
+  iVar1 = NtAllocateVirtualMemory(&apuStack_cc,&stack0x0000002c,0x60001000,4,uVar9);
   if (iVar1 < 0) {
     if (param_2 == (undefined2 *)0x0) {
       NtFreeVirtualMemory(&puStack_d0,&stack0x00000024,0x8000,uVar9);
     }
   }
   else {
-    iVar1 = (int)apuStack_cc[0] + uStack0000002c;
+    iVar1 = (int)apuStack_cc + uStack0000002c;
     lVar3 = lVar11 + 0x80;
     lVar12 = 8;
     puVar10 = (undefined4 *)((int)puStack_d0 + 0x59fU & 0xfffffff8);
@@ -266,8 +266,8 @@ LAB_82a281b8:
       param_5 = puVar10;
     }
     *(undefined4 **)(puStack_d0 + 0x2c0) = param_5;
-    iVar1 = fn_82A27888(ZEXT48(puStack_d0),(lVar3 + 0xfU & 0xfffffff0) + ZEXT48(puStack_d0),0,
-                          uVar8,apuStack_cc[0],iVar1,(int)apuStack_cc[0] + uStack00000024);
+    iVar1 = RtlpInitializeHeapSegment(ZEXT48(puStack_d0),(lVar3 + 0xfU & 0xfffffff0) + ZEXT48(puStack_d0),0,
+                          uVar8,apuStack_cc,iVar1,(int)apuStack_cc + uStack00000024);
     if (iVar1 != 0) {
       puStack_d0[0x1c] = 0;
       *(int *)(puStack_d0 + 0x10) = iStack_9c;

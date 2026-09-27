@@ -42,8 +42,8 @@ void fn_8260C710(int param_1,undefined8 param_2,ulonglong param_3,int param_4,un
   longlong lVar1;
   longlong lVar2;
   longlong lVar3;
-  undefined4 uStack_50;
-  int iStack_4c;
+  struct { undefined4 first; int second; } stack_pair_50;
+
   
   RtlEnterCriticalSection(param_1 + 0x1a0);
   *param_5 = (int)param_3;
@@ -58,11 +58,11 @@ void fn_8260C710(int param_1,undefined8 param_2,ulonglong param_3,int param_4,un
     if (lVar2 <= lVar3) goto LAB_8260c7d8;
   }
   *param_5 = (int)lVar1;
-  uStack_50 = 0;
-  iStack_4c = 0;
-  fn_82517978(&uStack_50,*(undefined4 *)(param_1 + 4),*(undefined4 *)(param_1 + 8),1);
-  fn_823F2E20(param_6,&uStack_50);
-  if (iStack_4c != 0) {
+  stack_pair_50.first = 0;
+  stack_pair_50.second = 0;
+  fn_82517978(&stack_pair_50.first,*(undefined4 *)(param_1 + 4),*(undefined4 *)(param_1 + 8),1);
+  fn_823F2E20(param_6,&stack_pair_50.first);
+  if (stack_pair_50.second != 0) {
     fn_822315A0();
   }
 LAB_8260c7d8:

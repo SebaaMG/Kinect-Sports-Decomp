@@ -37,19 +37,19 @@ void fn_824801F8(int param_1)
 
 {
   int iVar1;
-  int iStack_20;
-  int iStack_1c;
+  struct { int first; int second; } stack_pair_20;
+
   
   if (*(int *)(param_1 + 0x84) != 0) {
     fn_8226D6A0();
     *(undefined4 *)(param_1 + 0x84) = 0;
   }
   if (*(int *)(param_1 + 0x14) != 0) {
-    fn_822817E0(&iStack_20);
-    if (iStack_20 != 0) {
-      fn_82279CA0(iStack_20,0);
+    fn_822817E0(&stack_pair_20.first);
+    if (stack_pair_20.first != 0) {
+      fn_82279CA0(stack_pair_20.first,0);
     }
-    if (iStack_1c != 0) {
+    if (stack_pair_20.second != 0) {
       fn_822315A0();
     }
   }

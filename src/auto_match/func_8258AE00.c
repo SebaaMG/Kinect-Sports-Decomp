@@ -40,19 +40,19 @@ undefined4 * fn_8258AE00(undefined4 *param_1)
 {
   undefined4 uVar1;
   undefined8 uVar2;
-  undefined4 uStack_40;
-  undefined4 uStack_3c;
+  struct { undefined4 first; undefined4 second; } stack_pair_40;
+
   undefined1 auStack_30 [24];
   
   *param_1 = 0;
   param_1[1] = 0;
   fn_825200F0(auStack_30);
-  uStack_40 = 0;
-  uStack_3c = 0;
-  fn_8256DE08(&uStack_40,0);
+  stack_pair_40.first = 0;
+  stack_pair_40.second = 0;
+  fn_8256DE08(&stack_pair_40.first,0);
   uVar1 = lbl_83265A24;
   uVar2 = fn_8256BF18();
-  fn_8256C100(uVar2,auStack_30,uVar1,0,0,param_1,&uStack_40,1);
+  fn_8256C100(uVar2,auStack_30,uVar1,0,0,param_1,&stack_pair_40.first,1);
   return param_1;
 }
 

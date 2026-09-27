@@ -34,7 +34,7 @@ void fn_827EC838(double param_1,double param_2,undefined8 param_3,undefined8 par
                   undefined8 param_5,undefined8 param_6,undefined8 param_7)
 
 {
-  undefined1 auStack_30 [24];
+  undefined1 auStack_30 [8];
   
   fn_82810558(-(double)(float)(param_1 * param_2),param_7,param_6,param_6,auStack_30);
   fn_827EC7C0(param_3,param_4,auStack_30,param_7);

@@ -34,13 +34,13 @@ undefined8 fn_82A1F950(undefined4 *param_1,undefined8 param_2,int param_3)
 
 {
   int iVar1;
-  undefined4 uStack_20;
-  int iStack_1c;
+  struct { undefined4 first; int second; } stack_pair_20;
+
   undefined1 auStack_18 [8];
   
-  iStack_1c = param_3 << 0xc;
-  uStack_20 = 0;
-  iVar1 = NtWriteFile(*param_1,0,0,0,auStack_18,param_2,0x1000,&uStack_20);
+  stack_pair_20.second = param_3 << 0xc;
+  stack_pair_20.first = 0;
+  iVar1 = NtWriteFile(*param_1,0,0,0,auStack_18,param_2,0x1000,&stack_pair_20.first);
   if (iVar1 == 0x103) {
     NtWaitForSingleObjectEx(*param_1,1,0,0);
   }

@@ -42,7 +42,7 @@ undefined4 fn_82497F70(int param_1,int param_2,int param_3)
   int *piVar6;
   undefined4 *puVar7;
   int iStack_30;
-  undefined1 auStack_2c [44];
+  undefined1 auStack_2c [1];
   
   if (param_2 <= param_3) {
     do {

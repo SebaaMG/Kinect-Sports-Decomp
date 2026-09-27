@@ -34,7 +34,7 @@ undefined8 fn_82671A40(int param_1,int param_2)
 {
   int iVar1;
   int iVar2;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
   
   iVar2 = param_1 + 0x124;
   if (iVar2 != 0) {

@@ -33,10 +33,10 @@ extern int fn_8264D6C0();
 extern int fn_8265C940();
 extern int fn_8265C990();
 extern int fn_82A1E108();
-extern int fn_831425CC();
-extern int fn_831425EC();
-extern int fn_8314261C();
-extern int fn_8314262C();
+extern int VdSetSystemCommandBufferGpuIdentifierAddress();
+extern int KiApcNormalRoutineNop();
+extern int VdEnableRingBufferRPtrWriteBack();
+extern int VdInitializeRingBuffer();
 extern unsigned int lbl_821CC3F4;
 extern unsigned int uStack_a8;
 extern unsigned int uStack_ac;
@@ -68,8 +68,8 @@ undefined8 fn_826458F8(int param_1,int param_2)
   ulonglong uVar12;
   ulonglong uVar13;
   longlong lVar14;
-  undefined4 uStack_f0;
-  undefined4 uStack_ec;
+  struct { undefined4 first; undefined4 second; } stack_pair_f0;
+
   undefined4 uStack_e8;
   undefined4 auStack_e4 [9];
   undefined2 uStack_c0;
@@ -100,7 +100,7 @@ undefined8 fn_826458F8(int param_1,int param_2)
   *(undefined4 *)(param_1 + 0x3acc) = 0;
   *(undefined4 *)(param_1 + 0x30) = 0;
   *(undefined4 *)(param_1 + 0x34) = 0;
-  fn_831425CC(0);
+  VdSetSystemCommandBufferGpuIdentifierAddress(0);
   if (param_2 == 0) {
     uVar3 = 0;
   }
@@ -134,13 +134,13 @@ undefined8 fn_826458F8(int param_1,int param_2)
     }
     else {
       uVar3 = MmGetPhysicalAddress(uVar12);
-      fn_8314262C(uVar3,0x1c - LZCOUNT((uint)uVar11));
+      VdInitializeRingBuffer(uVar3,0x1c - LZCOUNT((uint)uVar11));
       uVar7 = 0x1f - LZCOUNT((uint)uVar11 >> 9);
       if (0x13 < (uVar7 & 0xffffffff)) {
         uVar7 = 0x13;
       }
       uVar10 = (ulonglong)*(uint *)(param_1 + 0x2a90) + 0x3c;
-      fn_8314261C((((uVar10 & 0xffffffff) >> 0x14) + 0x200 & 0x1000) + (uVar10 & 0x1fffffff),
+      VdEnableRingBufferRPtrWriteBack((((uVar10 & 0xffffffff) >> 0x14) + 0x200 & 0x1000) + (uVar10 & 0x1fffffff),
                       uVar7);
       iVar1 = ((uint)uVar13 & 0xfffffffc) + iVar4;
       uVar5 = (uint)(uVar13 / uVar9);
@@ -166,12 +166,12 @@ undefined8 fn_826458F8(int param_1,int param_2)
       **(int **)(param_1 + 0x2a90) = *(int *)(param_1 + 0x2a9c) + -2;
       *(uint *)(*(int *)(param_1 + 0x2a90) + 4) =
            *(uint *)(param_1 + 0x3b1c) & 3 | *(uint *)(param_1 + 0x30);
-      fn_831425CC((ulonglong)*(uint *)(param_1 + 0x2a90) + 8);
+      VdSetSystemCommandBufferGpuIdentifierAddress((ulonglong)*(uint *)(param_1 + 0x2a90) + 8);
       uStack_e8 = 0;
       lVar14 = 8;
       puVar8 = auStack_e4;
-      uStack_f0 = 0xc0114800;
-      uStack_ec = 0x3ff;
+      stack_pair_f0.first = 0xc0114800;
+      stack_pair_f0.second = 0x3ff;
       puVar6 = (undefined4 *)&lbl_821CC3F4;
       auStack_e4[0] = 0;
       do {
@@ -190,8 +190,8 @@ undefined8 fn_826458F8(int param_1,int param_2)
       uStack_b0 = 0;
       uStack_ac = 0;
       uStack_a8 = 0;
-      fn_831425EC(&uStack_f0,0x13);
-      fn_82644450(param_1,&uStack_f0,0x13);
+      KiApcNormalRoutineNop(&stack_pair_f0.first,0x13);
+      fn_82644450(param_1,&stack_pair_f0.first,0x13);
       uVar5 = *(uint *)(param_1 + 0x30);
       if (*(uint *)(param_1 + 0x38) < uVar5) {
         uVar5 = fn_82645110(param_1);

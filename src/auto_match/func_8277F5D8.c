@@ -38,20 +38,20 @@ longlong fn_8277F5D8(int param_1,undefined4 param_2)
 
 {
   uint uVar1;
-  undefined4 uStack_30;
-  undefined4 uStack_2c;
+  struct { undefined4 first; undefined4 second; } stack_pair_30;
+
   undefined4 uStack_28;
   undefined4 uStack_24;
   undefined4 uStack_20;
   undefined4 uStack_1c;
   
-  uStack_2c = 0xffffffff;
-  uStack_30 = 0;
+  stack_pair_30.second = 0xffffffff;
+  stack_pair_30.first = 0;
   uStack_28 = 0xffffffff;
   uStack_24 = 0xffffffff;
   uStack_1c = 0;
   uStack_20 = param_2;
-  fn_8277E928(param_1 + 0x154,&uStack_30);
+  fn_8277E928(param_1 + 0x154,&stack_pair_30.first);
   uVar1 = *(int *)(param_1 + 0x154) - 1;
   return (ulonglong)*(uint *)((uVar1 >> 4 & 0xffffffc) + *(int *)(param_1 + 0x160)) +
          ((ulonglong)uVar1 & 0x3f) * 0x18;

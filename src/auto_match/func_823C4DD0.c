@@ -34,28 +34,28 @@ void fn_823C4DD0(int param_1)
 
 {
   uint uVar1;
-  undefined4 auStack_10 [4];
+  undefined4 auStack_10;
   
   uVar1 = *(uint *)(param_1 + 0x1028);
   if (uVar1 == 0) {
-    auStack_10[0] = *(undefined4 *)(param_1 + 0x1014);
+    auStack_10 = *(undefined4 *)(param_1 + 0x1014);
   }
   else if (uVar1 == 1) {
-    auStack_10[0] = *(undefined4 *)(param_1 + 0x1018);
+    auStack_10 = *(undefined4 *)(param_1 + 0x1018);
   }
   else if (uVar1 < 3) {
-    auStack_10[0] = *(undefined4 *)(param_1 + 0x101c);
+    auStack_10 = *(undefined4 *)(param_1 + 0x101c);
   }
   else {
     if (uVar1 != 3) {
       return;
     }
-    auStack_10[0] = *(undefined4 *)(param_1 + 0x1020);
+    auStack_10 = *(undefined4 *)(param_1 + 0x1020);
   }
-  auStack_10[0] =
-       fn_82535298(auStack_10,**(undefined4 **)(param_1 + 0xfe0),0xffffffff83296bc0,
+  auStack_10 =
+       fn_82535298(&auStack_10,**(undefined4 **)(param_1 + 0xfe0),0xffffffff83296bc0,
                          0xffffffff83296bd0);
-  fn_82536288(auStack_10);
+  fn_82536288(&auStack_10);
   return;
 }
 

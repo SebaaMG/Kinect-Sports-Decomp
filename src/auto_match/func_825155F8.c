@@ -36,7 +36,7 @@ void fn_825155F8(int param_1,uint *param_2)
   undefined4 *puVar2;
   undefined4 *puVar3;
   undefined4 *puVar4;
-  undefined4 *apuStack_30 [12];
+  undefined4 * apuStack_30;
   
   puVar4 = *(undefined4 **)(param_1 + 4);
   puVar3 = puVar4;
@@ -62,7 +62,7 @@ void fn_825155F8(int param_1,uint *param_2)
   else {
     puVar2 = *(undefined4 **)(*(int *)(param_1 + 4) + 4);
   }
-  apuStack_30[0] = puVar4;
+  apuStack_30 = puVar4;
   if (*(char *)((int)puVar2 + 0x49) == '\0') {
     do {
       if (*param_2 < (uint)puVar2[3]) {
@@ -75,10 +75,10 @@ void fn_825155F8(int param_1,uint *param_2)
       puVar2 = puVar1;
     } while (*(char *)((int)puVar1 + 0x49) == '\0');
   }
-  while (apuStack_30[0] != puVar3) {
-    fn_822509A0(apuStack_30);
+  while (apuStack_30 != puVar3) {
+    fn_822509A0(&apuStack_30);
   }
-  fn_825158E0(apuStack_30,param_1,puVar4,puVar3);
+  fn_825158E0(&apuStack_30,param_1,puVar4,puVar3);
   return;
 }
 

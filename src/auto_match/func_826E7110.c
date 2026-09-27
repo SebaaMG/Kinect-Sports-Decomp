@@ -36,7 +36,7 @@ ulonglong fn_826E7110(int param_1,ulonglong param_2)
   int iVar1;
   int iVar2;
   longlong lVar3;
-  undefined1 auStack_1020 [4104];
+  undefined1 auStack_1020 [4088];
   
   iVar1 = *(int *)(param_1 + 0x40);
   iVar2 = (int)param_2;

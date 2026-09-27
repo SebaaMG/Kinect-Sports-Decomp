@@ -48,23 +48,23 @@ fn_82A41710(int param_1,int *param_2,ulonglong param_3,ulonglong param_4,undefin
   ulonglong uVar4;
   int *piVar5;
   int *piVar6;
-  undefined4 auStack_60 [24];
+  undefined4 auStack_60;
   
   piVar6 = (int *)(param_1 + 0x2c);
   (**(code **)(*(int *)(param_1 + 0x2c) + 8))(piVar6);
   piVar5 = (int *)(param_1 + 0x50);
   (**(code **)(*(int *)(param_1 + 0x50) + 8))(piVar5);
   lVar1 = fn_82A40CF0(param_1);
-  auStack_60[0] = (undefined4)lVar1;
+  auStack_60 = (undefined4)lVar1;
   if (lVar1 < 0) goto LAB_82a41948;
   if (*(uint *)(param_1 + 0x98) == 0) {
     lVar1 = -0x7769ffff;
-    auStack_60[0] = 0x88960001;
+    auStack_60 = 0x88960001;
   }
   if ((int)lVar1 < 0) goto LAB_82a41948;
   if ((ulonglong)*(uint *)(param_1 + 0x98) <= (param_6 & 0xffffffff)) {
     lVar1 = -0x7769ffff;
-    auStack_60[0] = 0x88960001;
+    auStack_60 = 0x88960001;
   }
   if ((int)lVar1 < 0) goto LAB_82a41948;
   if ((param_3 & 0xffffffff) == 0) {
@@ -92,17 +92,17 @@ fn_82A41710(int param_1,int *param_2,ulonglong param_3,ulonglong param_4,undefin
   }
   if (iVar2 == 0) {
     lVar1 = -0x7ff8fff2;
-    auStack_60[0] = 0x8007000e;
+    auStack_60 = 0x8007000e;
     goto LAB_82a41948;
   }
   lVar1 = fn_82A4A0A0(iVar2,param_5,param_6 * 0x42c + (ulonglong)*(uint *)(param_1 + 0x9c),
                           param_7);
-  auStack_60[0] = (undefined4)lVar1;
+  auStack_60 = (undefined4)lVar1;
   if (-1 < lVar1) {
     if (*(int *)(param_1 + 0xa4) != 0) {
       lVar1 = (**(code **)(**(int **)(param_1 + 0xb0) + 0x38))
                         (*(int **)(param_1 + 0xb0),*(undefined4 *)(param_1 + 0x214),param_1 + 0xac);
-      auStack_60[0] = (undefined4)lVar1;
+      auStack_60 = (undefined4)lVar1;
       if (lVar1 < 0) goto LAB_82a41908;
       *(undefined4 *)(param_1 + 0xa8) = 2;
     }
@@ -111,11 +111,11 @@ fn_82A41710(int param_1,int *param_2,ulonglong param_3,ulonglong param_4,undefin
       lVar1 = 0;
       *param_2 = iVar2;
       *(int *)(param_1 + 0x244) = iVar2;
-      auStack_60[0] = 0;
+      auStack_60 = 0;
       goto LAB_82a41948;
     }
     lVar1 = -0x7ff8fff2;
-    auStack_60[0] = 0x8007000e;
+    auStack_60 = 0x8007000e;
   }
 LAB_82a41908:
   fn_82A406A0(param_1,1);
@@ -128,7 +128,7 @@ LAB_82a41948:
   if ((int)lVar1 < 0) {
     fn_82A403F0(param_1);
   }
-  fn_82A40238(auStack_60);
-  return auStack_60[0];
+  fn_82A40238(&auStack_60);
+  return auStack_60;
 }
 

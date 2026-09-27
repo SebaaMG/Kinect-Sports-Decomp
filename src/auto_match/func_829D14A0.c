@@ -27,8 +27,8 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_70;
 extern int fn_829D0440();
-extern int fn_82F691F0();
-extern int fn_831429CC();
+extern int memset();
+extern int ObCreateObject();
 
 
 undefined8 fn_829D14A0(void)
@@ -39,7 +39,7 @@ undefined8 fn_829D14A0(void)
   
   RtlEnterCriticalSection(0xffffffff8315c428);
   auStack_70[0] = 0;
-  iVar1 = fn_831429CC(0xffffffff8315c408,0,0x7c,auStack_70);
+  iVar1 = ObCreateObject(0xffffffff8315c408,0,0x7c,auStack_70);
   if (iVar1 < 0) {
     fn_829D0440(auStack_70[0],1);
     ObDereferenceObject(auStack_70[0]);
@@ -47,6 +47,6 @@ undefined8 fn_829D14A0(void)
     return 0xffffffff8007000e;
   }
                     /* WARNING: Subroutine does not return */
-  fn_82F691F0(auStack_70[0],0,0x7c);
+  memset(auStack_70[0],0,0x7c);
 }
 

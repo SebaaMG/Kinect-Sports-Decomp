@@ -54,7 +54,7 @@ void fn_827447A0(int param_1)
   double dStack_58;
   double dStack_50;
   double dStack_48;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [32];
   
   uVar3 = fn_8267B890(*(undefined4 *)(*(int *)(*(int *)(param_1 + 0x18) + 0x78) + 0x288),0x30,
                             0);

@@ -69,8 +69,8 @@ void fn_826D0C88(int *param_1,char param_2)
   undefined1 uStack_45;
   undefined1 uStack_44;
   undefined1 uStack_43;
-  undefined4 uStack_40;
-  undefined4 uStack_3c;
+  struct { undefined4 first; undefined4 second; } stack_pair_40;
+
   undefined2 uStack_38;
   undefined1 uStack_36;
   undefined1 uStack_35;
@@ -106,9 +106,9 @@ void fn_826D0C88(int *param_1,char param_2)
     iVar1 = param_1[0x2f];
     fn_826C6C90(param_1);
     if (param_1[0x2f] == iVar1) {
-      uStack_3c = 0;
-      uStack_40 = 2;
-      puVar4 = &uStack_40;
+      stack_pair_40.second = 0;
+      stack_pair_40.first = 2;
+      puVar4 = &stack_pair_40.first;
       uStack_38 = 0;
       uStack_36 = 0;
       uStack_35 = 0xff;

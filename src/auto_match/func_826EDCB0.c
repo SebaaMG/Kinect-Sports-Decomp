@@ -42,11 +42,11 @@ void fn_826EDCB0(int param_1,int *param_2)
   int iVar6;
   ulonglong uVar7;
   ulonglong uVar8;
-  undefined4 auStack_40 [16];
+  undefined4 auStack_40;
   
   if (*(int *)(param_1 + 0x6c) == 0) {
-    auStack_40[0] = 2;
-    puVar2 = (undefined4 *)fn_8267BED0(param_1,0xc,auStack_40);
+    auStack_40 = 2;
+    puVar2 = (undefined4 *)fn_8267BED0(param_1,0xc,&auStack_40);
     if (puVar2 == (undefined4 *)0x0) {
       puVar2 = (undefined4 *)0x0;
     }

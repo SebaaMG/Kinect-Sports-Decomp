@@ -39,18 +39,18 @@ undefined8 fn_827E2E50(int param_1,undefined8 param_2)
   undefined8 uVar1;
   int iVar3;
   undefined8 uVar2;
-  undefined4 uStack_30;
-  undefined4 uStack_2c;
+  struct { undefined4 first; undefined4 second; } stack_pair_30;
+
   
   if (*(int *)(param_1 + 0x4c) == 0) {
     uVar1 = 2;
   }
   else {
-    uStack_30 = 0;
-    uStack_2c = 0;
-    fn_82517978(&uStack_30,*(undefined4 *)(param_1 + 0xc),*(undefined4 *)(param_1 + 0x10),0);
+    stack_pair_30.first = 0;
+    stack_pair_30.second = 0;
+    fn_82517978(&stack_pair_30.first,*(undefined4 *)(param_1 + 0xc),*(undefined4 *)(param_1 + 0x10),0);
     uVar1 = (**(code **)(**(int **)(param_1 + 0x4c) + 8))
-                      (*(int **)(param_1 + 0x4c),param_2,&uStack_30);
+                      (*(int **)(param_1 + 0x4c),param_2,&stack_pair_30.first);
     iVar3 = (int)uVar1;
     if ((iVar3 != 0x3e5) && (iVar3 != 0x3e4)) {
       if (iVar3 == 0) {

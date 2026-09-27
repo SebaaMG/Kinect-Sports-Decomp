@@ -50,7 +50,7 @@ void fn_822CAA28(int param_1)
   undefined1 auStack_b0 [32];
   undefined1 auStack_90 [32];
   undefined1 auStack_70 [32];
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [32];
   
   fn_82230110(auStack_b0,0xffffffff821ad048);
   *(undefined4 *)(param_1 + 0xa8) = 0;

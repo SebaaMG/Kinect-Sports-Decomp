@@ -48,7 +48,7 @@ undefined8 fn_82878F88(int *param_1,int *param_2,uint *param_3)
   int iVar7;
   ulonglong uVar6;
   double dVar8;
-  undefined1 auStack_100 [28];
+  undefined1 auStack_100 [1];
   float fStack_e4;
   undefined1 auStack_e0 [48];
   undefined1 auStack_b0 [28];

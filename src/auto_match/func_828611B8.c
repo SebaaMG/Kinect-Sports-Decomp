@@ -71,8 +71,8 @@ void fn_828611B8(float *param_1,undefined8 param_2,ulonglong param_3,ulonglong p
   float fVar1;
   float fVar2;
   float fVar3;
-  float fStack_b0;
-  float fStack_ac;
+  struct { float first; float second; } stack_pair_b0;
+
   float fStack_a8;
   float fStack_a4;
   float fStack_a0;
@@ -113,8 +113,8 @@ void fn_828611B8(float *param_1,undefined8 param_2,ulonglong param_3,ulonglong p
   fVar3 = fVar2 / fVar1;
   if ((param_3 & 0x80) != 0) {
     fStack_a8 = -fVar2;
-    fStack_b0 = param_1[2] * fVar3;
-    fStack_ac = *param_1 * fVar3;
+    stack_pair_b0.first = param_1[2] * fVar3;
+    stack_pair_b0.second = *param_1 * fVar3;
   }
   if ((param_3 & 0x40) != 0) {
     fStack_9c = -fVar2;
@@ -171,7 +171,7 @@ void fn_828611B8(float *param_1,undefined8 param_2,ulonglong param_3,ulonglong p
     uStack_14 = lbl_821AAD20;
     fStack_10 = fVar1;
   }
-  fn_82861078(&fStack_b0);
+  fn_82861078(&stack_pair_b0.first);
   return;
 }
 

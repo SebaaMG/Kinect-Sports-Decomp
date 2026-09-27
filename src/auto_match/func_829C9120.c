@@ -34,13 +34,13 @@ ulonglong fn_829C9120(undefined8 param_1)
 {
   int iVar2;
   ulonglong uVar1;
-  undefined4 uStack_20;
-  uint uStack_1c;
+  struct { undefined4 first; uint second; } stack_pair_20;
+
   
-  uStack_20 = (undefined4)param_1;
-  iVar2 = XamXStudioRequest(0x1003,&uStack_20);
+  stack_pair_20.first = (undefined4)param_1;
+  iVar2 = XamXStudioRequest(0x1003,&stack_pair_20.first);
   if (-1 < iVar2) {
-    return (ulonglong)uStack_1c;
+    return (ulonglong)stack_pair_20.second;
   }
   uVar1 = PsCamDeviceRequest(param_1);
   return uVar1;

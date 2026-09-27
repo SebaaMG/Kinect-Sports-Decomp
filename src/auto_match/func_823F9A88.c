@@ -46,29 +46,29 @@ void fn_823F9A88(int param_1,undefined8 param_2,int param_3)
   undefined4 uVar5;
   undefined4 uVar6;
   undefined1 uStack_50;
-  undefined1 auStack_4f [3];
+  undefined1 auStack_4f;
   undefined4 uStack_4c;
   undefined4 auStack_48 [2];
-  undefined4 uStack_40;
-  undefined4 uStack_3c;
+  struct { undefined4 first; undefined4 second; } stack_pair_40;
+
   undefined4 uStack_38;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
   
   (**(code **)(**(int **)(param_1 + 0x20) + 0x14))(*(int **)(param_1 + 0x20),param_2,&uStack_4c);
   (**(code **)(**(int **)(param_1 + 0x28) + 0x14))(*(int **)(param_1 + 0x28),param_2,auStack_48);
-  (**(code **)(**(int **)(param_1 + 0x30) + 0x14))(*(int **)(param_1 + 0x30),param_2,&uStack_40);
+  (**(code **)(**(int **)(param_1 + 0x30) + 0x14))(*(int **)(param_1 + 0x30),param_2,&stack_pair_40.first);
   (**(code **)(**(int **)(param_1 + 0x38) + 0x14))(*(int **)(param_1 + 0x38),param_2,&uStack_50);
-  (**(code **)(**(int **)(param_1 + 0x40) + 0x14))(*(int **)(param_1 + 0x40),param_2,auStack_4f);
+  (**(code **)(**(int **)(param_1 + 0x40) + 0x14))(*(int **)(param_1 + 0x40),param_2,&auStack_4f);
   (**(code **)(**(int **)(param_1 + 0x48) + 0x14))(*(int **)(param_1 + 0x48),param_2,auStack_30);
   if (param_3 != 0) {
     *(undefined4 *)(*(int *)(param_1 + 8) + param_3) = uStack_4c;
     *(undefined4 *)(*(int *)(param_1 + 0xc) + param_3) = auStack_48[0];
     iVar3 = *(int *)(param_1 + 0x10) + param_3;
-    *(undefined4 *)(*(int *)(param_1 + 0x10) + param_3) = uStack_40;
-    *(undefined4 *)(iVar3 + 4) = uStack_3c;
+    *(undefined4 *)(*(int *)(param_1 + 0x10) + param_3) = stack_pair_40.first;
+    *(undefined4 *)(iVar3 + 4) = stack_pair_40.second;
     *(undefined4 *)(iVar3 + 8) = uStack_38;
     *(undefined1 *)(*(int *)(param_1 + 0x14) + param_3) = uStack_50;
-    *(undefined1 *)(*(int *)(param_1 + 0x18) + param_3) = auStack_4f[0];
+    *(undefined1 *)(*(int *)(param_1 + 0x18) + param_3) = auStack_4f;
     puVar1 = (undefined4 *)((uint)(auStack_30 + in_r0) & 0xfffffff0);
     uVar4 = puVar1[1];
     uVar5 = puVar1[2];

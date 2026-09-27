@@ -38,7 +38,7 @@ extern int fn_82370F38();
 extern int fn_824CD030();
 extern int fn_824D2AE8();
 extern int fn_82508078();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int iStack_13c;
 extern unsigned int iStack_140;
 extern unsigned int lbl_8218E8E8;
@@ -121,7 +121,7 @@ LAB_822dfaf8:
       if (lbl_8218E8E8 <= *(float *)(param_1 + 0x38)) {
         iVar7 = iStack_140 + 0x280;
       }
-      fn_82F68CC0(auStack_120,iVar7,0xa4);
+      memcpy(auStack_120,iVar7,0xa4);
       if (*(int *)(*(int *)(param_1 + 0x10) + 0x204) == 0) {
         fn_82508078(*(undefined4 *)(*(int *)(param_1 + 0x10) + 0xa4),auStack_bc,0);
       }

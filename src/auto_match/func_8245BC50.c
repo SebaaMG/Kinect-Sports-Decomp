@@ -39,7 +39,7 @@ extern int fn_82A1BB50();
 extern int fn_82A1BC70();
 extern int fn_82A1DD38();
 extern int fn_82F64020();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int iStack_272;
 extern unsigned int iStack_2c0;
 extern unsigned int uStack_265;
@@ -88,7 +88,7 @@ void fn_8245BC50(int param_1,longlong param_2,undefined8 param_3,undefined8 para
   undefined4 uStack_26d;
   undefined4 uStack_269;
   undefined2 uStack_265;
-  char acStack_260 [608];
+  char acStack_260 [544];
   
   *(undefined4 *)(param_1 + 0x698) = 0;
   *(undefined4 *)(*(int *)(param_1 + 0x560) + 8) = 0;
@@ -112,7 +112,7 @@ void fn_8245BC50(int param_1,longlong param_2,undefined8 param_3,undefined8 para
     lVar13 = lVar13 + 1;
     puVar14 = puVar14 + 1;
   } while ((int)lVar13 < 4);
-  fn_82F68CC0(auStack_29b,param_1 + 0x590,0x28);
+  memcpy(auStack_29b,param_1 + 0x590,0x28);
   uStack_29f = *(undefined2 *)(param_1 + 0x65c);
   uStack_29d = *(undefined2 *)(param_1 + 0x65e);
   uStack_265 = *(undefined2 *)(param_1 + 0x690);

@@ -45,7 +45,7 @@ undefined8 fn_824C97F0(int param_1,char *param_2)
   ulonglong uVar3;
   uint auStack_70 [4];
   undefined1 auStack_60 [32];
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [32];
   
   if (*param_2 == '*') {
     if (*(int *)(param_1 + 0xa8) != 0) {

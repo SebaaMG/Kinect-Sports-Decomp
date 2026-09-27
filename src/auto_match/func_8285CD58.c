@@ -40,19 +40,19 @@ void fn_8285CD58(longlong param_1,undefined8 param_2,undefined8 param_3,float *p
 
 {
   ulonglong uVar1;
-  float fStack_50;
-  float fStack_4c;
+  struct { float first; float second; } stack_pair_50;
+
   float fStack_44;
   
   if (lbl_83211588 != 0) {
     uVar1 = 0;
     do {
-      fn_8280AE70(param_2,uVar1 * 0x10 + param_1,&fStack_50);
-      fStack_50 = *param_4 * fStack_50;
-      fStack_4c = fStack_4c * param_4[1];
+      fn_8280AE70(param_2,uVar1 * 0x10 + param_1,&stack_pair_50.first);
+      stack_pair_50.first = *param_4 * stack_pair_50.first;
+      stack_pair_50.second = stack_pair_50.second * param_4[1];
       fn_8280A5D8((double)fStack_44);
-      fn_82811828(&fStack_50,&fStack_50);
-      fn_828116D8(&fStack_50,param_3,uVar1 * 8 + param_5);
+      fn_82811828(&stack_pair_50.first,&stack_pair_50.first);
+      fn_828116D8(&stack_pair_50.first,param_3,uVar1 * 8 + param_5);
       uVar1 = uVar1 + 1 & 0xffff;
     } while (uVar1 < lbl_83211588);
   }

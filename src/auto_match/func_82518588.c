@@ -37,7 +37,7 @@ longlong fn_82518588(int param_1,uint *param_2)
   undefined4 *puVar3;
   undefined4 *puVar4;
   longlong lVar5;
-  undefined4 *apuStack_30 [12];
+  undefined4 * apuStack_30;
   
   puVar4 = *(undefined4 **)(param_1 + 4);
   puVar3 = puVar4;
@@ -76,12 +76,12 @@ longlong fn_82518588(int param_1,uint *param_2)
     } while (*(char *)((int)puVar1 + 0x69) == '\0');
   }
   lVar5 = 0;
-  apuStack_30[0] = puVar4;
-  while (apuStack_30[0] != puVar3) {
+  apuStack_30 = puVar4;
+  while (apuStack_30 != puVar3) {
     lVar5 = lVar5 + 1;
-    fn_825159C8(apuStack_30);
+    fn_825159C8(&apuStack_30);
   }
-  fn_825188C8(apuStack_30,param_1,puVar4,puVar3);
+  fn_825188C8(&apuStack_30,param_1,puVar4,puVar3);
   return lVar5;
 }
 

@@ -63,7 +63,7 @@ void fn_826CFE38(int param_1)
   undefined4 uStack_74;
   undefined4 uStack_70;
   undefined4 uStack_6c;
-  undefined1 auStack_60 [96];
+  undefined1 auStack_60 [48];
   
   iVar3 = fn_826C59F8();
   if ((iVar3 != 0) && (0 < *(int *)(param_1 + 0x1c))) {

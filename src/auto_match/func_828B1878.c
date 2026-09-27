@@ -56,8 +56,7 @@ extern int fn_828DB600();
 extern int fn_830B4CB8();
 
 
-void fn_828B1878(int param_1,longlong param_2,undefined8 param_3,int param_4,undefined4 param_5,
-                  undefined8 param_6,undefined8 param_7,undefined8 param_8)
+void fn_828B1878(int param_1, longlong param_2, undefined8 param_3, int param_4, undefined4 param_5, undefined8 param_6, undefined8 param_7, undefined8 param_8, undefined4 in_stack_00000054, undefined4 in_stack_0000005c, undefined4 in_stack_00000064, int in_stack_0000006c)
 
 {
   char cVar7;
@@ -67,12 +66,12 @@ void fn_828B1878(int param_1,longlong param_2,undefined8 param_3,int param_4,und
   int *piVar4;
   undefined2 uVar5;
   undefined2 uVar6;
-  undefined4 in_stack_00000054;
-  undefined4 in_stack_0000005c;
-  undefined4 in_stack_00000064;
-  int in_stack_0000006c;
+
+
+
+
   undefined4 auStack_80 [4];
-  undefined1 auStack_70 [112];
+  undefined1 auStack_70 [32];
   
   auStack_80[0] = 0;
   cVar7 = fn_828ACC50();

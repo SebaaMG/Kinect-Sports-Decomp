@@ -43,7 +43,7 @@ void fn_8228AEA0(int param_1,int param_2)
   undefined4 uVar3;
   undefined4 uStack_420;
   undefined4 auStack_41c [3];
-  undefined1 auStack_410 [1040];
+  undefined1 auStack_410 [992];
   
   if (param_1 == 2) {
     *(undefined4 *)(param_2 + 0x11f8) = 0;

@@ -38,7 +38,7 @@ longlong fn_822489C8(int param_1)
   char cVar5;
   int iVar4;
   longlong lVar6;
-  undefined4 *apuStack_30 [12];
+  undefined4 * apuStack_30;
   
   if ((*(int *)(param_1 + 0x38) == 0) || (cVar5 = fn_8288B760(), cVar5 == '\0')) {
     lVar6 = 0;
@@ -47,8 +47,8 @@ longlong fn_822489C8(int param_1)
     piVar1 = *(int **)(param_1 + 0x38);
     lVar6 = 1;
     puVar2 = *(undefined4 **)(piVar1[4] + 0x220);
-    apuStack_30[0] = (undefined4 *)*puVar2;
-    while (puVar3 = apuStack_30[0], apuStack_30[0] != puVar2) {
+    apuStack_30 = (undefined4 *)*puVar2;
+    while (puVar3 = apuStack_30, apuStack_30 != puVar2) {
       if (lVar6 == 0) {
 LAB_82248a48:
         lVar6 = 0;
@@ -59,7 +59,7 @@ LAB_82248a48:
         lVar6 = 1;
         if (cVar5 == '\0') goto LAB_82248a48;
       }
-      fn_82381BC0(apuStack_30);
+      fn_82381BC0(&apuStack_30);
       piVar1 = *(int **)(param_1 + 0x38);
       puVar2 = *(undefined4 **)(piVar1[4] + 0x220);
     }

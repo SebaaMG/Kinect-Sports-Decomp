@@ -33,7 +33,7 @@ extern unsigned int *auStack_b0;
 extern unsigned int *auStack_d0;
 extern unsigned int *auStack_f0;
 extern int fn_82551D80();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 uint * fn_82551528(uint *param_1,uint param_2,uint param_3)
@@ -60,7 +60,7 @@ uint * fn_82551528(uint *param_1,uint param_2,uint param_3)
   undefined1 auStack_d0 [32];
   undefined1 auStack_b0 [32];
   undefined1 auStack_90 [32];
-  undefined1 auStack_70 [112];
+  undefined1 auStack_70 [16];
   
   iVar12 = param_3 - 0x18;
   uVar14 = (int)(param_3 - param_2) / 0x18;
@@ -161,9 +161,9 @@ LAB_825517cc:
             }
             if ((((~(ulonglong)uVar14 & 0xffffffff) >> 0x1f) + (ulonglong)bVar15 & 1) != 0) break;
             uVar13 = uVar13 - 0x18;
-            fn_82F68CC0(auStack_90,uVar13,0x18);
-            fn_82F68CC0(uVar13,puVar3 + -4,0x18);
-            fn_82F68CC0(puVar3 + -4,auStack_90,0x18);
+            memcpy(auStack_90,uVar13,0x18);
+            memcpy(uVar13,puVar3 + -4,0x18);
+            memcpy(puVar3 + -4,auStack_90,0x18);
           }
           uVar10 = uVar10 - 0x18;
           puVar3 = puVar3 + -6;
@@ -176,13 +176,13 @@ LAB_825517cc:
           return param_1;
         }
         if (uVar9 != uVar6) {
-          fn_82F68CC0(auStack_d0,uVar13,0x18);
-          fn_82F68CC0(uVar13,uVar9,0x18);
-          fn_82F68CC0(uVar9,auStack_d0,0x18);
+          memcpy(auStack_d0,uVar13,0x18);
+          memcpy(uVar13,uVar9,0x18);
+          memcpy(uVar9,auStack_d0,0x18);
         }
         uVar14 = uVar13 + 0x18;
-        fn_82F68CC0(auStack_130,uVar13,0x18);
-        fn_82F68CC0(uVar13,uVar6,0x18);
+        memcpy(auStack_130,uVar13,0x18);
+        memcpy(uVar13,uVar6,0x18);
         puVar2 = auStack_130;
         uVar13 = uVar6;
         uVar9 = uVar9 + 0x18;
@@ -191,8 +191,8 @@ LAB_825517cc:
       else {
         if (uVar6 != param_3) {
           uVar10 = uVar10 - 0x18;
-          fn_82F68CC0(auStack_70,uVar6,0x18);
-          fn_82F68CC0(uVar6,uVar10,0x18);
+          memcpy(auStack_70,uVar6,0x18);
+          memcpy(uVar6,uVar10,0x18);
           puVar2 = auStack_70;
           uVar14 = uVar13;
           uVar13 = uVar10;
@@ -202,17 +202,17 @@ LAB_825517cc:
         uVar10 = uVar10 - 0x18;
         uVar14 = uVar13 - 0x18;
         if (uVar10 != uVar14) {
-          fn_82F68CC0(auStack_f0,uVar10,0x18);
-          fn_82F68CC0(uVar10,uVar14,0x18);
-          fn_82F68CC0(uVar14,auStack_f0,0x18);
+          memcpy(auStack_f0,uVar10,0x18);
+          memcpy(uVar10,uVar14,0x18);
+          memcpy(uVar14,auStack_f0,0x18);
         }
         uVar13 = uVar9 - 0x18;
-        fn_82F68CC0(auStack_b0,uVar14,0x18);
-        fn_82F68CC0(uVar14,uVar13,0x18);
+        memcpy(auStack_b0,uVar14,0x18);
+        memcpy(uVar14,uVar13,0x18);
         puVar2 = auStack_b0;
         uVar9 = uVar13;
       }
-      fn_82F68CC0(uVar13,puVar2,0x18);
+      memcpy(uVar13,puVar2,0x18);
       goto LAB_825517c4;
     }
     uVar13 = *(uint *)(uVar14 + 0x10);
@@ -237,12 +237,12 @@ LAB_825517cc:
       if ((((~(ulonglong)uVar13 & 0xffffffff) >> 0x1f) + (ulonglong)bVar15 & 1) != 0)
       goto LAB_825517cc;
       uVar8 = uVar9 + 0x18;
-      fn_82F68CC0(auStack_110,uVar9,0x18);
-      fn_82F68CC0(uVar9,uVar6,0x18);
+      memcpy(auStack_110,uVar9,0x18);
+      memcpy(uVar9,uVar6,0x18);
       puVar2 = auStack_110;
       uVar13 = uVar6;
 LAB_825517b8:
-      fn_82F68CC0(uVar13,puVar2,0x18);
+      memcpy(uVar13,puVar2,0x18);
       uVar9 = uVar8;
     }
     uVar6 = uVar6 + 0x18;

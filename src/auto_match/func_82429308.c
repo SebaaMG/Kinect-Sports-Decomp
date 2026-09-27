@@ -49,16 +49,16 @@ void fn_82429308(undefined8 param_1,undefined8 param_2,int param_3)
   undefined1 auStack_80 [32];
   undefined **ppuStack_60;
   undefined4 uStack_5c;
-  int aiStack_58 [6];
+  int aiStack_58;
   undefined **ppuStack_40;
   undefined4 uStack_3c;
   int aiStack_38 [14];
   
   uStack_5c = 0;
   ppuStack_60 = &lbl_821B8BAC;
-  fn_828ABF58(aiStack_58,0,0,3);
+  fn_828ABF58(&aiStack_58,0,0,3);
   ppuStack_90 = *(undefined ***)(param_3 + 8);
-  (**(code **)(aiStack_58[0] + 0x10))(aiStack_58,param_2,&ppuStack_90);
+  (**(code **)(aiStack_58 + 0x10))(&aiStack_58,param_2,&ppuStack_90);
   fn_828ABF58(auStack_80,0,0xe,0x18);
   fn_828AC330(auStack_80,param_2,param_3 + 0xc);
   if (*(int *)(param_3 + 8) == 1) {

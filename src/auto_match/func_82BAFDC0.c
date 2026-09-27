@@ -36,7 +36,7 @@ void fn_82BAFDC0(int param_1)
 
 {
   int iVar1;
-  undefined1 auStack_30 [16];
+  undefined1 auStack_30 [1];
   undefined4 *puStack_20;
   undefined4 *puStack_1c;
   

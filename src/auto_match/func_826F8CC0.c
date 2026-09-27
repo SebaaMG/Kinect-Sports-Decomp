@@ -52,7 +52,7 @@ void fn_826F8CC0(int param_1)
   byte bVar5;
   uint uStack_30;
   uint auStack_2c [2];
-  undefined1 auStack_24 [4];
+  undefined1 auStack_24 [1];
   undefined1 auStack_20 [8];
   
   auStack_2c[1] = 6;

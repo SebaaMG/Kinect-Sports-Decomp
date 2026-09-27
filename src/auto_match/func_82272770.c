@@ -46,7 +46,7 @@ undefined4 fn_82272770(int param_1)
   undefined4 uVar6;
   int iVar7;
   bool bVar8;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [1];
   
   uVar6 = *(undefined4 *)(param_1 + 0xa0);
   if (*(int *)(param_1 + 0x98) != 0) {

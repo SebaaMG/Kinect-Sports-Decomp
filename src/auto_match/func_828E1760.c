@@ -30,15 +30,14 @@ extern int fn_828E07B0();
 extern int fn_828E08A0();
 
 
-void fn_828E1760(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefined8 param_4,
-                  undefined8 param_5,undefined1 param_6,undefined8 param_7,undefined1 param_8)
+void fn_828E1760(undefined8 param_1, undefined8 param_2, undefined8 param_3, undefined8 param_4, undefined8 param_5, undefined1 param_6, undefined8 param_7, undefined1 param_8, undefined1 in_stack_00000057, undefined4 in_stack_0000005c, undefined1 in_stack_00000067, undefined1 in_stack_0000006f)
 
 {
   undefined4 uVar1;
-  undefined1 in_stack_00000057;
-  undefined4 in_stack_0000005c;
-  undefined1 in_stack_00000067;
-  undefined1 in_stack_0000006f;
+
+
+
+
   
   fn_828E07B0(param_1,0,param_2,0x24);
   fn_828E07B0(param_1,1,param_3,8);

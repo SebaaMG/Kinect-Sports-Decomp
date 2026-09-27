@@ -35,14 +35,14 @@ ulonglong fn_828ED288(int param_1,undefined8 param_2,uint param_3)
 {
   ulonglong uVar1;
   uint auStack_20 [2];
-  undefined8 auStack_18 [3];
+  undefined8 auStack_18;
   
   if (*(int *)(param_1 + 0x10) == 0) {
     return 0;
   }
   auStack_20[0] = param_3 & 0xff;
-  auStack_18[0] = param_2;
-  uVar1 = fn_82CE1628(*(undefined4 *)(param_1 + 0x58),1,auStack_18,auStack_20,0);
+  auStack_18 = param_2;
+  uVar1 = fn_82CE1628(*(undefined4 *)(param_1 + 0x58),1,&auStack_18,auStack_20,0);
   if ((uVar1 & 0xffffffff) == 0x65b) {
     uVar1 = thunk_FUN_82a2b798();
   }

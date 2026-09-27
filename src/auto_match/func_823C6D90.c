@@ -53,7 +53,7 @@ void fn_823C6D90(int param_1,int param_2,int param_3,int param_4,undefined8 para
   float fStack_78;
   float afStack_70 [2];
   float fStack_68;
-  undefined1 auStack_60 [96];
+  undefined1 auStack_60 [16];
   
   fn_823CB830(param_2,*(undefined4 *)(param_1 + 0x2a0),afStack_70,auStack_60,afStack_80,
                     param_5);

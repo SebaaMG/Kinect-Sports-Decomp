@@ -48,12 +48,12 @@ ulonglong fn_82A251D0(undefined4 *param_1,int *param_2)
   int iVar3;
   int iVar4;
   ulonglong uVar5;
-  int aiStack_a0 [2];
+  int aiStack_a0;
   undefined1 auStack_98 [8];
   undefined4 uStack_90;
   undefined1 *puStack_8c;
   undefined4 uStack_88;
-  undefined1 auStack_80 [128];
+  undefined1 auStack_80 [80];
   
   puVar2 = (undefined4 *)fn_8265C940(8,lbl_8315D2EC);
   if (puVar2 == (undefined4 *)0x0) {
@@ -69,11 +69,11 @@ ulonglong fn_82A251D0(undefined4 *param_1,int *param_2)
     iVar3 = NtQueryFullAttributesFile(&uStack_90,auStack_80);
     uVar1 = lbl_83219C28;
     if (-1 < iVar3) {
-      aiStack_a0[0] = 0;
+      aiStack_a0 = 0;
       uVar5 = 0;
-      iVar4 = fn_82A21078(aiStack_a0,puVar2);
-      iVar3 = aiStack_a0[0];
-      if (((iVar4 != 0) || (iVar4 = fn_82A23028(aiStack_a0[0],uVar1), iVar4 != 0)) ||
+      iVar4 = fn_82A21078(&aiStack_a0,puVar2);
+      iVar3 = aiStack_a0;
+      if (((iVar4 != 0) || (iVar4 = fn_82A23028(aiStack_a0,uVar1), iVar4 != 0)) ||
          (iVar4 = fn_82A21508(iVar3,0xffffffff82a24520,puVar2), iVar4 != 0)) {
         uVar5 = 0xffffffffc0000098;
       }

@@ -33,14 +33,14 @@ void fn_82248A88(int param_1,undefined8 param_2,undefined4 *param_3)
 {
   undefined4 *puVar1;
   longlong lVar2;
-  undefined4 auStack_40 [16];
+  undefined4 auStack_40;
   
   lVar2 = 3;
   puVar1 = param_3;
   do {
-    (**(code **)(**(int **)(param_1 + 8) + 0x14))(*(int **)(param_1 + 8),param_2,auStack_40);
+    (**(code **)(**(int **)(param_1 + 8) + 0x14))(*(int **)(param_1 + 8),param_2,&auStack_40);
     if (param_3 != (undefined4 *)0x0) {
-      *puVar1 = auStack_40[0];
+      *puVar1 = auStack_40;
     }
     lVar2 = lVar2 + -1;
     puVar1 = puVar1 + 1;

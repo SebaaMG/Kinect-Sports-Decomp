@@ -36,16 +36,16 @@ void fn_82564518(undefined8 param_1,int *param_2,int param_3)
 {
   int iVar1;
   int iStack_30;
-  uint auStack_2c [11];
+  uint auStack_2c;
   
   (**(code **)(*param_2 + 4))(param_2,&iStack_30);
   iVar1 = param_3 * 0x34 + iStack_30;
-  (**(code **)(*param_2 + 4))(param_2,auStack_2c);
+  (**(code **)(*param_2 + 4))(param_2,&auStack_2c);
   if (iVar1 != 0) {
     fn_8234D330(param_1,iVar1 + 0x2e);
     if ((ulonglong)*(ushort *)(iVar1 + 0x2a) != 0xffff) {
       fn_825645B0(param_1,param_2,
-                        (ulonglong)*(ushort *)(iVar1 + 0x2a) * 0x34 + (ulonglong)auStack_2c[0],1);
+                        (ulonglong)*(ushort *)(iVar1 + 0x2a) * 0x34 + (ulonglong)auStack_2c,1);
     }
   }
   return;

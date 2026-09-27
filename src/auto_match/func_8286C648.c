@@ -25,7 +25,7 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 undefined8 fn_8286C648(void)
@@ -33,7 +33,7 @@ undefined8 fn_8286C648(void)
 {
   undefined8 in_r6;
   
-  fn_82F68CC0(in_r6,0xffffffff820214e4,0x18);
+  memcpy(in_r6,0xffffffff820214e4,0x18);
   return 0x20280000;
 }
 

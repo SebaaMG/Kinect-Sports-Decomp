@@ -42,7 +42,7 @@ undefined8 fn_82B857D8(int *param_1,int *param_2)
   uint uVar7;
   uint *puVar8;
   ulonglong uVar9;
-  uint auStack_30 [12];
+  uint auStack_30 [4];
   
   uVar9 = 0;
   for (puVar1 = (uint *)*param_1; puVar1 != (uint *)0x0; puVar1 = (uint *)puVar1[1]) {

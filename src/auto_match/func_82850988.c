@@ -35,13 +35,13 @@ undefined8 fn_82850988(int param_1,undefined8 param_2,undefined8 param_3)
 
 {
   int iVar1;
-  undefined4 auStack_30 [12];
+  undefined4 auStack_30;
   
   if (*(int *)(param_1 + 0x144) != 0) {
     iVar1 = fn_82817B08();
     if ((-1 < (int)param_2) && ((int)param_2 < iVar1)) {
-      fn_82817B50(*(undefined4 *)(param_1 + 0x144),param_2,auStack_30);
-      fn_82817BC8(auStack_30[0],param_3);
+      fn_82817B50(*(undefined4 *)(param_1 + 0x144),param_2,&auStack_30);
+      fn_82817BC8(auStack_30,param_3);
       return 1;
     }
   }

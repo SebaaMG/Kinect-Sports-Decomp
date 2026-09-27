@@ -25,7 +25,7 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F691F0();
+extern int memset();
 
 
 undefined8 fn_82A2C1E8(int param_1)
@@ -36,7 +36,7 @@ undefined8 fn_82A2C1E8(int param_1)
   lVar1 = ExAllocatePoolTypeWithTag(0x78,0x63467453,(param_1 == 0) + '\x01');
   if (lVar1 != 0) {
                     /* WARNING: Subroutine does not return */
-    fn_82F691F0(lVar1,0,0x78);
+    memset(lVar1,0,0x78);
   }
   return 0;
 }

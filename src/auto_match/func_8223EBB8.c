@@ -57,7 +57,7 @@ fn_8223EBB8(undefined8 param_1,int *param_2,undefined8 param_3,int param_4,undef
   uint uStack_a0;
   uint uStack_9c;
   undefined1 auStack_90 [32];
-  undefined1 auStack_70 [112];
+  undefined1 auStack_70 [32];
   
   if ((*(uint *)(param_4 + 0x14) & 0x4000) == 0) {
     (**(code **)(*param_2 + 0x1c))();

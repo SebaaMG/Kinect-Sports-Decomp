@@ -58,10 +58,10 @@ undefined8 fn_8291CB98(undefined4 *param_1,byte *param_2,uint param_3)
   uint uVar13;
   bool bVar14;
   uint uStack_260;
-  int aiStack_25c [6];
+  int aiStack_25c;
   float fStack_244;
   undefined1 auStack_240 [256];
-  undefined1 auStack_140 [320];
+  undefined1 auStack_140 [256];
   
   if (3 < param_3) {
     pbVar8 = &lbl_8202E47C;
@@ -108,7 +108,7 @@ undefined8 fn_8291CB98(undefined4 *param_1,byte *param_2,uint param_3)
 LAB_8291cc70:
     if (uVar13 != 0) {
       fn_8291C6F8(auStack_240,uVar13 + 1,param_2);
-      iVar3 = fn_82F67F88(auStack_240,0xffffffff8202e470,aiStack_25c,&uStack_260,auStack_140);
+      iVar3 = fn_82F67F88(auStack_240,0xffffffff8202e470,&aiStack_25c,&uStack_260,auStack_140);
       if (iVar3 == 2) {
         uVar12 = (param_3 - uVar13) - 1;
         param_2 = param_2 + uVar13 + 1;
@@ -131,16 +131,16 @@ LAB_8291ccf8:
             iVar3 = fn_82F67F88(auStack_240,0xffffffff8202e468,&fStack_244,auStack_140);
             if ((iVar3 == 1) &&
                (bVar14 = fStack_244 < lbl_821AAD20,
-               (((uint)LZCOUNT(iVar11) >> 4 & 2) + 1) * aiStack_25c[0] * uStack_260 * 4 <=
+               (((uint)LZCOUNT(iVar11) >> 4 & 2) + 1) * aiStack_25c * uStack_260 * 4 <=
                (uVar12 - uVar9) - 1)) {
-              param_1[3] = aiStack_25c[0];
+              param_1[3] = aiStack_25c;
               param_1[4] = uStack_260;
               param_1[5] = 1;
-              param_1[0xc] = aiStack_25c[0] << 4;
+              param_1[0xc] = aiStack_25c << 4;
               *param_1 = 0x1a22aaa6;
               param_1[0xd] = 0;
               param_1[0xe] = 1;
-              iVar4 = fn_8265C940((longlong)(aiStack_25c[0] << 4) * (longlong)(int)uStack_260,
+              iVar4 = fn_8265C940((longlong)(aiStack_25c << 4) * (longlong)(int)uStack_260,
                                         0x24810000);
               param_1[1] = iVar4;
               iVar3 = lbl_82002AE0;
@@ -149,8 +149,8 @@ LAB_8291ccf8:
                 if (-1 < lVar5) {
                   param_2 = param_2 + (uVar9 - 3);
                   do {
-                    piVar10 = (int *)((int)lVar5 * aiStack_25c[0] * 0x10 + param_1[1]);
-                    piVar6 = piVar10 + aiStack_25c[0] * 4;
+                    piVar10 = (int *)((int)lVar5 * aiStack_25c * 0x10 + param_1[1]);
+                    piVar6 = piVar10 + aiStack_25c * 4;
                     if (iVar11 == 0) {
                       if (bVar14) {
                         for (; piVar10 != piVar6; piVar10 = piVar10 + 4) {

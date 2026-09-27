@@ -36,18 +36,18 @@ undefined8 fn_82824640(longlong param_1,undefined4 param_2,undefined4 param_3,in
 
 {
   undefined8 uVar1;
-  int aiStack_20 [2];
+  int aiStack_20;
   undefined4 uStack_18;
   undefined4 uStack_14;
   
   _uStack_18 = CONCAT44(param_2,param_3);
-  fn_828233A8(param_1 + 0x38c,aiStack_20,0xffffffff82824558,&uStack_18);
-  if (aiStack_20[0] == 0) {
+  fn_828233A8(param_1 + 0x38c,&aiStack_20,0xffffffff82824558,&uStack_18);
+  if (aiStack_20 == 0) {
     uVar1 = 0xe;
   }
   else {
     uVar1 = 0;
-    *param_4 = (int)(*(uint *)(aiStack_20[0] + 0x14) << 5 | *(uint *)(aiStack_20[0] + 0x14) >> 0x1b)
+    *param_4 = (int)(*(uint *)(aiStack_20 + 0x14) << 5 | *(uint *)(aiStack_20 + 0x14) >> 0x1b)
                >> 5;
   }
   return uVar1;

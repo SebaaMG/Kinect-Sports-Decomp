@@ -53,7 +53,7 @@ undefined8 fn_828791E8(int param_1,undefined8 param_2,undefined8 param_3)
   undefined1 auStack_a0 [32];
   undefined1 auStack_80 [32];
   undefined1 auStack_60 [32];
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [32];
   
   uVar1 = *(undefined4 *)(param_1 + 0x3c);
   uVar2 = fn_828647D8(param_3);

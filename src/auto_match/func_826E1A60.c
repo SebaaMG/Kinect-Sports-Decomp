@@ -46,7 +46,7 @@ void fn_826E1A60(int param_1,undefined4 *param_2)
   int iVar2;
   int *piVar3;
   uint auStack_70 [4];
-  undefined1 auStack_60 [96];
+  undefined1 auStack_60 [48];
   
   uVar1 = fn_826A6A38();
   fn_826A9280(param_1 + 0x14,0xffffffff8200cfb8,uVar1 & 0xffff);

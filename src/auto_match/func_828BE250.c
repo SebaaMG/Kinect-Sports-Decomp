@@ -36,7 +36,7 @@ void fn_828BE250(undefined8 param_1,longlong param_2,int *param_3)
 
 {
   int iVar1;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
   
   fn_828B5580(auStack_30,param_3 + 5);
   fn_828B55C0(param_2 + 0x60,auStack_30);

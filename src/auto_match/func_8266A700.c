@@ -47,8 +47,8 @@ void fn_8266A700(int param_1)
   int iVar1;
   uint uVar2;
   int iStack00000014;
-  undefined4 uStack_1c;
-  int iStack_18;
+  struct { undefined4 first; int second; } stack_pair_1c;
+
   undefined4 uStack_14;
   
   iStack00000014 = param_1;
@@ -57,15 +57,15 @@ void fn_8266A700(int param_1)
   }
   iVar1 = fn_8266A628(iStack00000014);
   if ((iVar1 == 0) && (uVar2 = fn_8265ED50(iStack00000014), uVar2 != 0)) {
-    iStack_18 = fn_8265C9E0(0x1c);
-    if (iStack_18 == 0) {
+    stack_pair_1c.second = fn_8265C9E0(0x1c);
+    if (stack_pair_1c.second == 0) {
       uStack_14 = 0;
     }
     else {
-      uStack_14 = fn_8265D7D0(iStack_18,iStack00000014);
+      uStack_14 = fn_8265D7D0(stack_pair_1c.second,iStack00000014);
     }
-    uStack_1c = uStack_14;
-    fn_8265F608(0xffffffff831e7af8,&uStack_1c);
+    stack_pair_1c.first = uStack_14;
+    fn_8265F608(0xffffffff831e7af8,&stack_pair_1c.first);
     iVar1 = fn_8265DED8((ulonglong)uVar2 + 0x3c);
     if ((iVar1 != 0) &&
        (iVar1 = fn_8265F598((ulonglong)uVar2 + 0x3c,lbl_83153FD8), iVar1 != 0)) {

@@ -37,17 +37,17 @@ undefined4 * fn_8288DF40(undefined4 *param_1,undefined4 *param_2,uint param_3)
 {
   undefined4 uVar1;
   undefined4 *puVar2;
-  undefined4 uStack_20;
-  undefined4 uStack_1c;
+  struct { undefined4 first; undefined4 second; } stack_pair_20;
+
   undefined1 auStack_18 [8];
   
   if ((uint)param_2[4] <= param_3) {
                     /* WARNING: Subroutine does not return */
     fn_82F622E0(0xffffffff82023604);
   }
-  uStack_20 = *param_2;
-  uStack_1c = 0;
-  puVar2 = (undefined4 *)fn_8288BE40(auStack_18,&uStack_20);
+  stack_pair_20.first = *param_2;
+  stack_pair_20.second = 0;
+  puVar2 = (undefined4 *)fn_8288BE40(auStack_18,&stack_pair_20.first);
   uVar1 = puVar2[1];
   *param_1 = *puVar2;
   param_1[1] = uVar1;

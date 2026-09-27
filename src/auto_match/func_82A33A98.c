@@ -28,7 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 extern unsigned int lbl_83150000;
 
 
-void fn_82A33A98(void)
+void _rtinit(void)
 
 {
   int iVar1;

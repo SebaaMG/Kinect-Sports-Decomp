@@ -28,7 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 extern int fn_8265C940();
 extern int fn_8265C990();
 extern int fn_82A29A38();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 undefined8 fn_82AACC70(undefined4 *param_1,uint param_2)
@@ -65,7 +65,7 @@ LAB_82aacd44:
         lVar2 = fn_8265C940(uVar5,0x24870000);
         if (lVar2 != 0) {
           if (param_1[2] != 0) {
-            fn_82F68CC0(lVar2,*param_1,(longlong)(int)param_1[1] * (longlong)(int)param_1[2]);
+            memcpy(lVar2,*param_1,(longlong)(int)param_1[1] * (longlong)(int)param_1[2]);
             fn_8265C990(*param_1,0x24870000);
           }
           *param_1 = (int)lVar2;

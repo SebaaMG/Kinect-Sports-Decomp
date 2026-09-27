@@ -66,7 +66,7 @@ undefined4 * fn_82716DB8(undefined4 *param_1,uint *param_2)
   undefined1 auStack_70 [16];
   undefined1 auStack_60 [16];
   undefined1 auStack_50 [16];
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40;
   
   fn_82716738();
   *param_1 = &lbl_8200F6CC;
@@ -97,9 +97,9 @@ undefined4 * fn_82716DB8(undefined4 *param_1,uint *param_2)
   fn_826A1CC8(puVar1,param_2,0xffffffff82006700,auStack_50,&uStack_9b);
   fn_82696330(auStack_50);
   auStack_9a[0] = 2;
-  auStack_40[0] = 10;
-  fn_826A1CC8(puVar1,param_2,0xffffffff82006724,auStack_40,auStack_9a);
-  fn_82696330(auStack_40);
+  auStack_40 = 10;
+  fn_826A1CC8(puVar1,param_2,0xffffffff82006724,&auStack_40,auStack_9a);
+  fn_82696330(&auStack_40);
   return param_1;
 }
 

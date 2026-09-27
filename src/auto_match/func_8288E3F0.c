@@ -25,7 +25,7 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F63CA0();
+extern int memmove();
 
 
 /* WARNING: Removing unreachable block (ram,0x8288e410) */
@@ -43,7 +43,7 @@ void fn_8288E3F0(uint *param_1,uint param_2)
   if (((ulonglong)uVar3 < (ulonglong)(uint)((int)(uVar1 - *param_1) >> 2)) &&
      (uVar4 = (ulonglong)uVar3 * 4 + (ulonglong)*param_1, (uVar4 & 0xffffffff) != (ulonglong)uVar1))
   {
-    fn_82F63CA0(uVar4,(ulonglong)uVar1,0);
+    memmove(uVar4,(ulonglong)uVar1,0);
     param_1[1] = (uint)uVar4;
   }
   param_1[4] = param_2;

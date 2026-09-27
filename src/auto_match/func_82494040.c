@@ -39,7 +39,7 @@ void fn_82494040(undefined8 param_1,int param_2,undefined8 param_3,undefined8 pa
   int *piVar3;
   int *piVar4;
   double dVar5;
-  int *apiStack_50 [20];
+  int * apiStack_50;
   
   piVar4 = *(int **)(*(int *)(*(int *)(param_2 + 0x14) + 0x80) + 0xdc);
   if (piVar4 != (int *)0x0) {
@@ -56,14 +56,14 @@ void fn_82494040(undefined8 param_1,int param_2,undefined8 param_3,undefined8 pa
         if (piVar3 == *(int **)(param_2 + 8)) {
           uVar2 = fn_8248F890(0x240);
           if ((uVar2 & 0xffffffff) == 0) {
-            apiStack_50[0] = (int *)0x0;
+            apiStack_50 = (int *)0x0;
           }
           else {
-            apiStack_50[0] =
+            apiStack_50 =
                  (int *)fn_824978B8(uVar2,piVar4,*(undefined4 *)(param_2 + 0x14),param_4);
           }
-          (**(code **)(*apiStack_50[0] + 0xc))(param_1);
-          fn_82494B00(param_2 + 4,apiStack_50);
+          (**(code **)(*apiStack_50 + 0xc))(param_1);
+          fn_82494B00(param_2 + 4,&apiStack_50);
         }
         else {
           (**(code **)(*(int *)*piVar3 + 0xc))(param_1);

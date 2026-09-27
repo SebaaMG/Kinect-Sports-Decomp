@@ -45,7 +45,7 @@ void fn_823276B8(undefined8 param_1,int *param_2)
   int iVar3;
   undefined **ppuStack_70;
   undefined4 uStack_6c;
-  undefined1 auStack_68 [104];
+  undefined1 auStack_68 [56];
   
   fn_828B5580(auStack_68,in_r7);
   lVar2 = (**(code **)(*param_2 + 0x50))(param_2);

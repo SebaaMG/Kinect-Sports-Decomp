@@ -39,15 +39,15 @@ void fn_826AD910(longlong param_1,undefined4 *param_2)
 {
   undefined2 uVar2;
   undefined8 uVar1;
-  undefined4 auStack_30 [12];
+  undefined4 auStack_30;
   
   uVar2 = fn_826A6A38();
   fn_826A9280(param_1 + 0x14,0xffffffff820074cc,*param_2);
   fn_826A9318(param_1 + 0x14,0xffffffff820074a8,uVar2);
   uVar1 = fn_826AA530(param_1);
   fn_826AA890(uVar1,param_1);
-  auStack_30[0] = (undefined4)uVar1;
-  fn_826AA460(param_1 + 0x308,auStack_30);
+  auStack_30 = (undefined4)uVar1;
+  fn_826AA460(param_1 + 0x308,&auStack_30);
   return;
 }
 

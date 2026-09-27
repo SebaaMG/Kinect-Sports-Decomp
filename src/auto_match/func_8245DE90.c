@@ -44,8 +44,8 @@ longlong fn_8245DE90(int param_1,undefined4 param_2)
 
 {
   longlong lVar1;
-  undefined4 uStack_50;
-  undefined4 uStack_4c;
+  struct { undefined4 first; undefined4 second; } stack_pair_50;
+
   undefined4 uStack_48;
   undefined4 uStack_44;
   undefined4 uStack_40;
@@ -64,13 +64,13 @@ longlong fn_8245DE90(int param_1,undefined4 param_2)
     if (lVar1 == 0) {
       uStack_38 = *(undefined4 *)(param_1 + 8);
       uStack_34 = *(undefined4 *)(param_1 + 0x14);
-      uStack_4c = 0x1e;
-      uStack_50 = 0x28001e0;
+      stack_pair_50.second = 0x1e;
+      stack_pair_50.first = 0x28001e0;
       uStack_48 = 4000;
       uStack_44 = 0xfe;
       uStack_3c = 0;
       uStack_40 = 4;
-      lVar1 = fn_82E23478(&uStack_50,param_1 + 4);
+      lVar1 = fn_82E23478(&stack_pair_50.first,param_1 + 4);
       if ((lVar1 == 0) &&
          (lVar1 = fn_82E23100(param_1 + 4,*(undefined4 *)(param_1 + 8),
                                *(undefined4 *)(param_1 + 0x14),0,param_1 + 0x5c), lVar1 == 0)) {

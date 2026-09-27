@@ -38,15 +38,15 @@ fn_826C3C70(undefined4 *param_1,undefined8 param_2,undefined8 param_3,undefined8
              char param_5)
 
 {
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30;
   
   fn_826C2928();
   *param_1 = &lbl_8200B8E4;
   param_1[4] = &lbl_8200B890;
   param_1[0xc] = &lbl_8200B88C;
   if (param_5 != '\0') {
-    auStack_30[0] = 1;
-    fn_826BF638(param_1 + 0xc,param_1,param_2,0xffffffff8200b734,auStack_30);
+    auStack_30 = 1;
+    fn_826BF638(param_1 + 0xc,param_1,param_2,0xffffffff8200b734,&auStack_30);
   }
   return param_1;
 }

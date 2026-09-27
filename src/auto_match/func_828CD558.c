@@ -56,7 +56,7 @@ fn_828CD558(undefined4 *param_1,undefined8 param_2,undefined4 param_3,undefined4
   undefined4 *puStack_78;
   undefined4 uStack_74;
   undefined8 uStack_70;
-  undefined1 auStack_60 [96];
+  undefined1 auStack_60 [48];
   
   fn_828BDDA0();
   param_1[0x25] = param_3;

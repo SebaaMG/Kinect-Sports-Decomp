@@ -34,13 +34,13 @@ ulonglong fn_82691F08(int param_1,undefined8 param_2)
 {
   ulonglong uVar1;
   char acStack_30 [4];
-  int aiStack_2c [11];
+  int aiStack_2c;
   
   acStack_30[0] = '\0';
   do {
-    uVar1 = fn_8270BEF0(param_1 + 0x14,param_2,aiStack_2c);
+    uVar1 = fn_8270BEF0(param_1 + 0x14,param_2,&aiStack_2c);
     if ((uVar1 & 0xffffffff) != 0) {
-      *(int *)(aiStack_2c[0] + 0x10) = *(int *)(aiStack_2c[0] + 0x10) + 1;
+      *(int *)(aiStack_2c + 0x10) = *(int *)(aiStack_2c + 0x10) + 1;
       return uVar1;
     }
     fn_82691E98(param_1,param_2,(ulonglong)*(uint *)(param_1 + 0x10) + 1,acStack_30);

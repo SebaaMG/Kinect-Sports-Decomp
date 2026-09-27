@@ -50,7 +50,7 @@ bool fn_824BC468(undefined8 param_1,int param_2)
   int iVar9;
   undefined1 uVar11;
   int iVar10;
-  undefined4 auStack_70 [28];
+  undefined4 auStack_70;
   
   iVar8 = *(int *)(param_2 + 0x100);
   uVar1 = *(undefined4 *)(iVar8 + 0x8e8);
@@ -74,14 +74,14 @@ bool fn_824BC468(undefined8 param_1,int param_2)
     fn_8245B050(iVar8,uVar4 & 0xff,4);
     fn_8245B050(iVar8,uVar6 & 0xff,4);
     fn_8245B100(iVar8);
-    auStack_70[0] = uVar1;
-    fn_8245B168(iVar8,auStack_70,4);
-    auStack_70[0] = uVar2;
-    fn_8245B168(iVar8,auStack_70,4);
-    auStack_70[0] = uVar3;
-    fn_8245B168(iVar8,auStack_70,4);
-    auStack_70[0] = uVar7;
-    fn_8245B168(iVar8,auStack_70,4);
+    auStack_70 = uVar1;
+    fn_8245B168(iVar8,&auStack_70,4);
+    auStack_70 = uVar2;
+    fn_8245B168(iVar8,&auStack_70,4);
+    auStack_70 = uVar3;
+    fn_8245B168(iVar8,&auStack_70,4);
+    auStack_70 = uVar7;
+    fn_8245B168(iVar8,&auStack_70,4);
     iVar10 = fn_8245AFC0(iVar8,0xffffffff824b8538,param_1);
   }
   return iVar10 == 0;

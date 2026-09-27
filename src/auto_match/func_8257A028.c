@@ -37,7 +37,7 @@ double fn_8257A028(double param_1)
   char *pcVar2;
   int iVar3;
   char *pcVar4;
-  float afStack_20 [8];
+  float afStack_20;
   
   pcVar2 = (char *)fn_82579DB0();
   pcVar4 = pcVar2;
@@ -47,10 +47,10 @@ double fn_8257A028(double param_1)
       pcVar4 = pcVar4 + 1;
     } while (cVar1 != '\0');
     if ((int)pcVar4 - (int)pcVar2 != 1) {
-      afStack_20[0] = lbl_821CC160;
-      iVar3 = fn_82F67FE8(pcVar2,0xffffffff821c5504,afStack_20);
+      afStack_20 = lbl_821CC160;
+      iVar3 = fn_82F67FE8(pcVar2,0xffffffff821c5504,&afStack_20);
       if (iVar3 == 1) {
-        param_1 = (double)afStack_20[0];
+        param_1 = (double)afStack_20;
       }
     }
   }

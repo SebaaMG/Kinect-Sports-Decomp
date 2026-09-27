@@ -38,7 +38,7 @@ void fn_828DC8A0(int param_1,undefined8 param_2)
   int iVar1;
   int iVar2;
   ulonglong uVar3;
-  undefined1 auStack_60 [96];
+  undefined1 auStack_60 [48];
   
   uVar3 = (ulonglong)*(uint *)(param_1 + 0x88);
   if (uVar3 != *(uint *)(param_1 + 0x8c)) {

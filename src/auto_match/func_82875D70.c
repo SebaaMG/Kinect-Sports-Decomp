@@ -54,7 +54,7 @@ undefined8 fn_82875D70(longlong param_1)
   undefined8 uVar2;
   undefined8 uVar3;
   int *piVar4;
-  undefined1 auStack_110 [16];
+  undefined1 auStack_110 [1];
   undefined4 **appuStack_100 [5];
   uint uStack_ec;
   undefined4 **appuStack_e0 [5];

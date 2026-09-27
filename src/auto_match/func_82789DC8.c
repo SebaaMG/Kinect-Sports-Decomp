@@ -34,14 +34,14 @@ extern unsigned int uStack_20;
 void fn_82789DC8(undefined8 param_1,undefined4 *param_2)
 
 {
-  undefined4 uStack_20;
-  undefined4 uStack_1c;
+  struct { undefined4 first; undefined4 second; } stack_pair_20;
+
   undefined4 uStack_18;
   
-  uStack_20 = *param_2;
-  uStack_1c = param_2[1];
+  stack_pair_20.first = *param_2;
+  stack_pair_20.second = param_2[1];
   uStack_18 = 0x80ffffff;
-  fn_82789C08(param_1,&uStack_20);
+  fn_82789C08(param_1,&stack_pair_20.first);
   return;
 }
 

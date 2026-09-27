@@ -34,21 +34,21 @@ void fn_828DE078(int param_1,undefined8 param_2,undefined8 param_3,undefined8 pa
 
 {
   char cVar1;
-  int aiStack_50 [20];
+  int aiStack_50;
   
   cVar1 = fn_828AD488();
   if ((cVar1 != '\0') &&
-     (aiStack_50[0] = **(int **)(param_1 + 0x1c4),
-     (int *)aiStack_50[0] != *(int **)(param_1 + 0x1c4))) {
+     (aiStack_50 = **(int **)(param_1 + 0x1c4),
+     (int *)aiStack_50 != *(int **)(param_1 + 0x1c4))) {
     do {
-      cVar1 = (**(code **)(**(int **)(aiStack_50[0] + 0xc) + 0x14))
-                        (*(int **)(aiStack_50[0] + 0xc),param_3,param_4,param_5,param_6,param_7,
+      cVar1 = (**(code **)(**(int **)(aiStack_50 + 0xc) + 0x14))
+                        (*(int **)(aiStack_50 + 0xc),param_3,param_4,param_5,param_6,param_7,
                          param_8,param_2);
       if (cVar1 != '\0') {
         return;
       }
-      fn_828A0E20(aiStack_50);
-    } while (aiStack_50[0] != *(int *)(param_1 + 0x1c4));
+      fn_828A0E20(&aiStack_50);
+    } while (aiStack_50 != *(int *)(param_1 + 0x1c4));
   }
   return;
 }

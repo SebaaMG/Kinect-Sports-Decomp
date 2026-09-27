@@ -39,7 +39,7 @@ undefined8 fn_82A8E918(int *param_1,undefined4 *param_2)
   undefined8 uVar1;
   undefined1 auStack_80 [16];
   undefined1 auStack_70 [48];
-  undefined1 auStack_40 [40];
+  undefined1 auStack_40 [24];
   
   *param_2 = 0;
   cVar2 = (**(code **)(*param_1 + 4))();

@@ -39,8 +39,8 @@ ulonglong fn_8278A1E0(uint *param_1,ulonglong param_2,uint param_3,ulonglong par
   float fVar2;
   float *pfVar3;
   uint uVar4;
-  float fStack_30;
-  float fStack_2c;
+  struct { float first; float second; } stack_pair_30;
+
   float fStack_28;
   
   uVar1 = param_1[3];
@@ -59,14 +59,14 @@ ulonglong fn_8278A1E0(uint *param_1,ulonglong param_2,uint param_3,ulonglong par
         pfVar3[2] = (float)((uint)fVar2 & 0xff000000 | uVar4 | 0x18000000);
       }
       else {
-        fStack_30 = *pfVar3;
-        fStack_2c = pfVar3[1];
+        stack_pair_30.first = *pfVar3;
+        stack_pair_30.second = pfVar3[1];
         fStack_28 = pfVar3[2];
-        param_2 = fn_82788DD0((double)fStack_30,(double)fStack_2c,param_1,uVar4);
+        param_2 = fn_82788DD0((double)stack_pair_30.first,(double)stack_pair_30.second,param_1,uVar4);
         if ((int)param_2 < 0) {
           param_2 = (ulonglong)*param_1;
           fStack_28 = (float)((uint)fVar2 & 0xff000000 | uVar4 | 0x10000000);
-          fn_82789C08(param_1,&fStack_30);
+          fn_82789C08(param_1,&stack_pair_30.first);
         }
       }
     }

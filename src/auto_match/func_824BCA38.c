@@ -45,7 +45,7 @@ void fn_824BCA38(int param_1)
   undefined8 uVar3;
   undefined4 *puVar4;
   longlong lVar5;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
   
   *(undefined4 *)(param_1 + 4) = 0;
   *(undefined4 *)(param_1 + 8) = 0;

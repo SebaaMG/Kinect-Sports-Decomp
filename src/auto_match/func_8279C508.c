@@ -37,14 +37,14 @@ void fn_8279C508(int param_1,int param_2)
 {
   int iVar2;
   undefined8 uVar1;
-  int iStack_20;
-  uint uStack_1c;
+  struct { int first; uint second; } stack_pair_20;
+
   
   iVar2 = fn_8279AD50(param_1,param_2,*(undefined1 *)(param_2 + 0x2c),0);
   if (iVar2 == 0) {
-    uStack_1c = (uint)*(byte *)(param_2 + 0x2c);
-    iStack_20 = param_2;
-    uVar1 = fn_8279A860(param_1,0,*(undefined4 *)(param_1 + 4),&iStack_20,0xffffffff82799a98);
+    stack_pair_20.second = (uint)*(byte *)(param_2 + 0x2c);
+    stack_pair_20.first = param_2;
+    uVar1 = fn_8279A860(param_1,0,*(undefined4 *)(param_1 + 4),&stack_pair_20.first,0xffffffff82799a98);
     fn_8279C440(param_1,uVar1,param_2);
   }
   return;

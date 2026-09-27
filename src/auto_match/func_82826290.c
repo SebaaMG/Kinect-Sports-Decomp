@@ -47,8 +47,8 @@ void fn_82826290(int *param_1,int *param_2,int *param_3,char param_4)
   int iVar3;
   char cVar4;
   int iVar5;
-  int iStack_50;
-  int iStack_4c;
+  struct { int first; int second; } stack_pair_50;
+
   int iStack_48;
   
   iVar5 = 0;
@@ -92,13 +92,13 @@ void fn_82826290(int *param_1,int *param_2,int *param_3,char param_4)
     param_1[2] = iVar2 + iVar3;
   }
   else {
-    iStack_50 = param_1[1];
-    iStack_4c = param_1[2];
+    stack_pair_50.first = param_1[1];
+    stack_pair_50.second = param_1[2];
     cVar4 = fn_82824320();
     if (cVar4 != '\0') {
       iStack_48 = *(int *)(param_1[1] + 0x10) + -1;
     }
-    fn_82835208(param_1[3],&iStack_50);
+    fn_82835208(param_1[3],&stack_pair_50.first);
     param_1[1] = **(int **)(*param_1 + 0x388) + *(int *)param_1[1] * 0x20;
     cVar4 = fn_82824400();
     if (cVar4 == '\0') {

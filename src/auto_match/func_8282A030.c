@@ -40,16 +40,16 @@ void fn_8282A030(int param_1,undefined4 param_2)
   int iVar1;
   int iStack_30;
   int iStack_2c;
-  undefined4 uStack_28;
-  undefined4 uStack_24;
+  struct { undefined4 first; undefined4 second; } stack_pair_28;
+
   char cStack_20;
   
-  uStack_28 = param_2;
-  fn_828299A8(&uStack_28,param_1,&iStack_2c);
+  stack_pair_28.first = param_2;
+  fn_828299A8(&stack_pair_28.first,param_1,&iStack_2c);
   if (cStack_20 != '\0') {
     iStack_30 = fn_828252E8(param_1,0x1c);
     *(undefined4 *)(iStack_30 + 0x14) = *(undefined4 *)(iStack_2c + 0xc);
-    *(undefined4 *)(iStack_30 + 0x18) = uStack_24;
+    *(undefined4 *)(iStack_30 + 0x18) = stack_pair_28.second;
     *(undefined4 *)(iStack_30 + 0x10) = param_2;
     iVar1 = fn_82822F60(param_1 + 0x36c,iStack_30,0xffffffff82829f30,&iStack_30);
     if (iVar1 != 0) {

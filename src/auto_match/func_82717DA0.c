@@ -53,8 +53,8 @@ int * fn_82717DA0(int *param_1,undefined8 param_2,undefined8 param_3,int *param_
   uint uVar6;
   undefined1 auStack_80 [8];
   undefined1 auStack_78 [8];
-  int iStack_70;
-  int iStack_6c;
+  struct { int first; int second; } stack_pair_70;
+
   int iStack_68;
   int iStack_64;
   int iStack_60;
@@ -68,13 +68,13 @@ int * fn_82717DA0(int *param_1,undefined8 param_2,undefined8 param_3,int *param_
   
   cVar2 = (**(code **)(*param_1 + 8))();
   if ((cVar2 != '\0') && (param_4 != param_1)) {
-    iStack_70 = param_1[0x11];
-    iStack_6c = param_1[0x12];
+    stack_pair_70.first = param_1[0x11];
+    stack_pair_70.second = param_1[0x12];
     iStack_68 = param_1[0x13];
     iStack_64 = param_1[0x14];
     iStack_60 = param_1[0x15];
     iStack_5c = param_1[0x16];
-    fn_8268D008(&iStack_70,auStack_80,param_2);
+    fn_8268D008(&stack_pair_70.first,auStack_80,param_2);
     iVar3 = param_1[0x27];
     uVar6 = 0;
     if (*(int *)(iVar3 + 0x1c) != 0) {

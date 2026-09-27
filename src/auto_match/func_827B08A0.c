@@ -47,7 +47,7 @@ undefined8 fn_827B08A0(longlong param_1,int param_2,longlong param_3,int param_4
   uint uStack_60;
   uint uStack_5c;
   byte abStack_58 [16];
-  byte abStack_48 [72];
+  byte abStack_48 [8];
   
   iVar2 = fn_827664B0(param_1 + 0xc,param_2,&uStack_5c);
   iVar2 = iVar2 + param_2;

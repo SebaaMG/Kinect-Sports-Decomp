@@ -66,8 +66,8 @@ void fn_8277AFA8(int param_1,int param_2,int param_3,undefined8 param_4,ulonglon
   undefined4 uStack_88;
   undefined4 uStack_84;
   float fStack_80;
-  undefined4 uStack_78;
-  undefined4 uStack_74;
+  struct { undefined4 first; undefined4 second; } stack_pair_78;
+
   float fStack_70;
   
   *(undefined4 *)(param_1 + 0x18) = 0;
@@ -142,8 +142,8 @@ void fn_8277AFA8(int param_1,int param_2,int param_3,undefined8 param_4,ulonglon
               puVar9 = (undefined4 *)
                        (*(int *)((piVar14[2] + uVar13 >> 6 & 0x3fffffc) + *(int *)(*piVar14 + 0x14))
                        + ((piVar14[2] + uVar13) * 8 & 0x7f8));
-              uStack_78 = *puVar9;
-              uStack_74 = puVar9[1];
+              stack_pair_78.first = *puVar9;
+              stack_pair_78.second = puVar9[1];
               if (1 < uVar1) {
                 pfVar11 = (float *)(*(int *)((uVar1 - 2 >> 4 & 0xffffffc) + *(int *)(param_1 + 0x24)
                                             ) + (uVar1 - 2 & 0x3f) * 0xc);
@@ -157,7 +157,7 @@ void fn_8277AFA8(int param_1,int param_2,int param_3,undefined8 param_4,ulonglon
                   *puVar15 = *puVar15 - 1;
                 }
               }
-              fn_82779C60(puVar15,&uStack_78);
+              fn_82779C60(puVar15,&stack_pair_78.first);
               uVar13 = uVar13 + 1;
             } while (uVar13 < (uint)piVar14[1]);
           }

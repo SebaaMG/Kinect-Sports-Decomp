@@ -37,7 +37,7 @@ void fn_82BFB3E0(int param_1)
   char *pcVar1;
   int iVar2;
   undefined4 uVar3;
-  undefined1 auStack_20 [16];
+  undefined1 auStack_20 [1];
   
   fn_82BFA8D8(auStack_20);
   pcVar1 = *(char **)(param_1 + 0xc);

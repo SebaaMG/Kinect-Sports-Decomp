@@ -30,7 +30,7 @@ extern unsigned int lbl_83150010;
 extern unsigned int lbl_83153538;
 
 
-undefined8 fn_82A339B8(void)
+undefined8 _cinit(void)
 
 {
   code *pcVar1;

@@ -43,7 +43,7 @@ undefined8 fn_82A8E9C8(int *param_1,int *param_2,longlong param_3)
   undefined1 auStack_90 [4];
   undefined4 uStack_8c;
   undefined1 auStack_80 [48];
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [48];
   
   puVar3 = (undefined1 *)*param_1;
   uStack_8c = 5;

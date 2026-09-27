@@ -34,7 +34,7 @@ void fn_822AB000(int *param_1,uint param_2)
   undefined4 *puVar1;
   int iVar2;
   uint uVar3;
-  undefined4 *apuStack_40 [16];
+  undefined4 * apuStack_40;
   
   uVar3 = 0;
   param_1[4] = param_2;
@@ -42,17 +42,17 @@ void fn_822AB000(int *param_1,uint param_2)
     iVar2 = 0;
     do {
       puVar1 = *(undefined4 **)(*(int *)(iVar2 + *param_1) + 4);
-      apuStack_40[0] = (undefined4 *)*puVar1;
+      apuStack_40 = (undefined4 *)*puVar1;
       if (uVar3 == param_2) {
-        while (apuStack_40[0] != puVar1) {
-          *(undefined4 *)(*(int *)(apuStack_40[0][4] + 0x14) + 0x1d0) = 0;
-          fn_82381BC0(apuStack_40);
+        while (apuStack_40 != puVar1) {
+          *(undefined4 *)(*(int *)(apuStack_40[4] + 0x14) + 0x1d0) = 0;
+          fn_82381BC0(&apuStack_40);
         }
       }
       else {
-        while (apuStack_40[0] != puVar1) {
-          *(undefined4 *)(*(int *)(apuStack_40[0][4] + 0x14) + 0x1d0) = 1;
-          fn_82381BC0(apuStack_40);
+        while (apuStack_40 != puVar1) {
+          *(undefined4 *)(*(int *)(apuStack_40[4] + 0x14) + 0x1d0) = 1;
+          fn_82381BC0(&apuStack_40);
         }
       }
       uVar3 = uVar3 + 1;

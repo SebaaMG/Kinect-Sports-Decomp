@@ -72,8 +72,8 @@ void fn_8270F580(int param_1,undefined1 param_2)
   int iStack_70;
   int iStack_6c;
   longlong lStack_68;
-  int iStack_60;
-  int iStack_5c;
+  struct { int first; int second; } stack_pair_60;
+
   byte bStack_58;
   
   puVar1 = *(undefined1 **)(param_1 + 4);
@@ -96,16 +96,16 @@ void fn_8270F580(int param_1,undefined1 param_2)
       else {
         uVar3 = *(uint *)(param_1 + 0x18);
         uVar6 = fn_826957D0(param_1,0);
-        uVar6 = fn_82696B20(&iStack_60,uVar6,(ulonglong)uVar3);
+        uVar6 = fn_82696B20(&stack_pair_60.first,uVar6,(ulonglong)uVar3);
         iVar8 = fn_8270EF90(lVar13,uVar6,(ulonglong)uVar3 + 0x78);
-        if (((bStack_58 & 2) == 0) && (iStack_60 != 0)) {
+        if (((bStack_58 & 2) == 0) && (stack_pair_60.first != 0)) {
           fn_826824B0();
         }
-        iStack_60 = 0;
-        if (((bStack_58 & 1) == 0) && (iStack_5c != 0)) {
+        stack_pair_60.first = 0;
+        if (((bStack_58 & 1) == 0) && (stack_pair_60.second != 0)) {
           fn_826824B0();
         }
-        iStack_5c = 0;
+        stack_pair_60.second = 0;
       }
     }
     else {

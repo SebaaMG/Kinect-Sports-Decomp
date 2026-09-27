@@ -60,7 +60,7 @@ void fn_82279FA0(int param_1,int param_2)
   undefined4 auStack_130 [2];
   undefined1 auStack_128 [24];
   undefined1 auStack_110 [48];
-  undefined1 auStack_e0 [48];
+  undefined1 auStack_e0 [16];
   undefined1 auStack_b0 [176];
   
   *(undefined4 *)(param_1 + 0xf4) = 1;

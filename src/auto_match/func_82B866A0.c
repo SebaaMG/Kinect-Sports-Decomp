@@ -64,8 +64,8 @@ fn_82B866A0(double param_1,double param_2,double param_3,double param_4,ulonglon
   float fStack0000003c;
   float fStack00000044;
   undefined4 uStack_6c;
-  float fStack_60;
-  float fStack_5c;
+  struct { float first; float second; } stack_pair_60;
+
   float fStack_58;
   float fStack_54;
   
@@ -73,16 +73,16 @@ fn_82B866A0(double param_1,double param_2,double param_3,double param_4,ulonglon
   fStack0000003c = (float)param_3;
   fStack00000044 = (float)param_4;
   fStack0000002c = (float)param_1;
-  fStack_60 = (float)param_1;
+  stack_pair_60.first = (float)param_1;
   fStack_58 = (float)param_3;
-  fStack_5c = (float)param_2;
+  stack_pair_60.second = (float)param_2;
   fStack_54 = (float)param_4;
   iVar11 = ((uint)((int)fStack00000044 + (int)fStack0000003c + (int)fStack00000034 +
                   (int)fStack0000002c) % 7 + 0xf) * 4;
   iVar1 = *(int *)(iVar11 + param_6);
   do {
     if (iVar1 == 0) {
-      iVar2 = fn_82B86348(param_6,param_7,&fStack_60,0);
+      iVar2 = fn_82B86348(param_6,param_7,&stack_pair_60.first,0);
       *(undefined4 *)(iVar2 + 0x20) = *(undefined4 *)(iVar11 + param_6);
       *(int *)(iVar11 + param_6) = iVar2;
       iVar1 = *(int *)(param_6 + 0x58);
@@ -102,7 +102,7 @@ fn_82B866A0(double param_1,double param_2,double param_3,double param_4,ulonglon
           do {
             uVar8 = 0;
             uVar9 = 0;
-            pfVar7 = &fStack_60;
+            pfVar7 = &stack_pair_60.first;
             lVar13 = 4;
             do {
               if (*pfVar5 == *pfVar7) {

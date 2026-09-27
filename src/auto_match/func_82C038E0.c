@@ -42,7 +42,7 @@ undefined8 fn_82C038E0(int *param_1,ulonglong param_2,uint *param_3)
   undefined8 uVar5;
   int *piStack00000014;
   uint *puStack00000024;
-  undefined1 auStack_4c [76];
+  undefined1 auStack_4c [12];
   
   uVar5 = 0;
   *param_3 = 0;

@@ -37,7 +37,7 @@ undefined4 * fn_828313D0(int param_1,uint *param_2)
   undefined4 *puVar2;
   undefined4 *puVar3;
   undefined1 auStack_20 [8];
-  uint auStack_18 [6];
+  uint auStack_18 [2];
   
   puVar3 = *(undefined4 **)(param_1 + 4);
   if (*(char *)((int)puVar3[1] + 0x15) == '\0') {

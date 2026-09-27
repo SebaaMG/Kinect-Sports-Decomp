@@ -52,7 +52,7 @@ undefined8 fn_8282F5A8(undefined8 param_1,int param_2)
   uint *puVar9;
   int iStack_60;
   undefined4 uStack_5c;
-  int aiStack_58 [22];
+  int aiStack_58;
   
   uVar1 = (ulonglong)*(uint *)(param_2 + 0xb4) +
           ((ulonglong)*(uint *)(param_2 + 0xb0) & 0x7fffffff) * 2 & 0x3fffffff;
@@ -80,8 +80,8 @@ undefined8 fn_8282F5A8(undefined8 param_1,int param_2)
             puVar6 = puVar6 + 1;
             *(undefined4 *)(iStack_60 + 0x18) = *puVar6;
             fn_82826568(param_2,*(undefined4 *)(iStack_60 + 0x14),&uStack_5c);
-            fn_828295A8(uStack_5c,aiStack_58);
-            *(int *)(iStack_60 + 0x10) = *(int *)(iStack_60 + 0x18) + aiStack_58[0];
+            fn_828295A8(uStack_5c,&aiStack_58);
+            *(int *)(iStack_60 + 0x10) = *(int *)(iStack_60 + 0x18) + aiStack_58;
             fn_82822F60(param_2 + 0x36c,iStack_60,0xffffffff82829f30,&iStack_60);
             uVar4 = *puVar9;
             uVar7 = uVar7 + 1;

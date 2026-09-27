@@ -48,7 +48,7 @@ void fn_824B8200(undefined8 param_1,uint param_2,uint param_3,uint param_4,undef
   char cVar3;
   int iVar2;
   undefined1 uVar4;
-  undefined2 auStack_50 [40];
+  undefined2 auStack_50;
   
   if ((1 < (int)param_3) || (0 < (int)param_4)) {
     param_2 = 4;
@@ -74,10 +74,10 @@ void fn_824B8200(undefined8 param_1,uint param_2,uint param_3,uint param_4,undef
       fn_8245B050(iVar1,param_3 & 0xff,4);
       fn_8245B050(iVar1,param_4 & 0xff,4);
       fn_8245B100(iVar1);
-      auStack_50[0] = (undefined2)param_5;
-      fn_8245B168(iVar1,auStack_50,2);
-      auStack_50[0] = (undefined2)param_6;
-      fn_8245B168(iVar1,auStack_50,2);
+      auStack_50 = (undefined2)param_5;
+      fn_8245B168(iVar1,&auStack_50,2);
+      auStack_50 = (undefined2)param_6;
+      fn_8245B168(iVar1,&auStack_50,2);
       fn_824B70F0();
       fn_8245AFC0(iVar1,0,0);
     }

@@ -35,13 +35,13 @@ extern unsigned int uStack_20;
 void fn_82574110(undefined4 *param_1,undefined8 param_2,undefined8 param_3)
 
 {
-  undefined4 uStack_20;
-  undefined4 uStack_1c;
+  struct { undefined4 first; undefined4 second; } stack_pair_20;
+
   
-  uStack_20 = 0;
-  uStack_1c = 0;
-  fn_82517978(&uStack_20,*param_1,param_1[1],0);
-  fn_82573F30(&uStack_20,param_3);
+  stack_pair_20.first = 0;
+  stack_pair_20.second = 0;
+  fn_82517978(&stack_pair_20.first,*param_1,param_1[1],0);
+  fn_82573F30(&stack_pair_20.first,param_3);
   if (param_1[1] != 0) {
     fn_822315A0();
   }

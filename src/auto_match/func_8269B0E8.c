@@ -38,7 +38,7 @@ uint fn_8269B0E8(int param_1,undefined8 param_2,undefined8 param_3,undefined8 pa
   longlong lVar1;
   uint uVar2;
   undefined4 auStack_90 [4];
-  int aiStack_80 [32];
+  int aiStack_80 [28];
   
   lVar1 = fn_826BD928((ulonglong)*(uint *)(param_1 + 0x20) + 0x68);
   if (((lVar1 != 0) && (-1 < (int)param_3)) && ((int)param_3 < 0x7efffffe)) {

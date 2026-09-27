@@ -45,8 +45,8 @@ void fn_82514E00(int param_1)
   undefined4 *puVar2;
   int iStack_50;
   uint uStack_4c;
-  undefined4 uStack_48;
-  int iStack_44;
+  struct { undefined4 first; int second; } stack_pair_48;
+
   undefined1 auStack_40 [4];
   int iStack_3c;
   
@@ -59,15 +59,15 @@ void fn_82514E00(int param_1)
     do {
       iVar1 = iStack_50;
       puVar2 = (undefined4 *)(**(code **)(iStack_50 + 0x4c))(auStack_40);
-      uStack_48 = *puVar2;
-      iStack_44 = puVar2[1];
+      stack_pair_48.first = *puVar2;
+      stack_pair_48.second = puVar2[1];
       *puVar2 = 0;
       puVar2[1] = 0;
       fn_82897060(iVar1 + 0x18,*(uint *)(iVar1 + 0x34) & 0xffff,
                         *(uint *)(iVar1 + 0x38) & 0xffff,*(undefined4 *)(iVar1 + 0x48),
-                        *(undefined4 *)(iVar1 + 0x40),*(undefined4 *)(iVar1 + 0x44),&uStack_48,
+                        *(undefined4 *)(iVar1 + 0x40),*(undefined4 *)(iVar1 + 0x44),&stack_pair_48.first,
                         param_1);
-      if (iStack_44 != 0) {
+      if (stack_pair_48.second != 0) {
         fn_822315A0();
       }
       if (iStack_3c != 0) {

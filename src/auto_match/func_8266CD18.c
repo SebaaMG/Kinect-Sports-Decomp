@@ -34,7 +34,7 @@ extern int fn_82679FA8();
 extern int fn_8267B890();
 extern int fn_8267C4F0();
 extern int fn_82684FA8();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int iStack_7c;
 extern unsigned int iStack_80;
 extern unsigned int iStack_8c;
@@ -64,8 +64,8 @@ undefined8 fn_8266CD18(int *param_1,undefined8 param_2,int param_3,int param_4)
   int *piVar4;
   ulonglong uVar1;
   double dVar5;
-  int iStack_90;
-  int iStack_8c;
+  struct { int first; int second; } stack_pair_90;
+
   undefined4 uStack_88;
   undefined4 uStack_84;
   int iStack_80;
@@ -194,7 +194,7 @@ undefined8 fn_8266CD18(int *param_1,undefined8 param_2,int param_3,int param_4)
               *puVar2 = &lbl_82002BC8;
             }
             (**(code **)(*param_1 + 8))(param_1,9,puVar2);
-            iStack_8c = param_1[0x35];
+            stack_pair_90.second = param_1[0x35];
             uStack_88 = 0;
             uStack_84 = 0;
             uStack_60 = 0;
@@ -205,13 +205,13 @@ undefined8 fn_8266CD18(int *param_1,undefined8 param_2,int param_3,int param_4)
             uStack_74 = 0;
             fStack_68 = lbl_82002AE0;
             uStack_78 = 0;
-            iStack_90 = param_1[0x34];
+            stack_pair_90.first = param_1[0x34];
             param_1[0x3e] = 1;
-            iStack_80 = iStack_90;
-            iStack_7c = iStack_8c;
-            fn_82F68CC0(param_1 + 0x3f,&iStack_90,0x34);
-            iStack_90 = param_1[0x34];
-            iStack_8c = param_1[0x35];
+            iStack_80 = stack_pair_90.first;
+            iStack_7c = stack_pair_90.second;
+            memcpy(param_1 + 0x3f,&stack_pair_90.first,0x34);
+            stack_pair_90.first = param_1[0x34];
+            stack_pair_90.second = param_1[0x35];
             fStack_64 = (float)dVar5;
             fStack_68 = (float)dVar5;
             uStack_88 = 0;
@@ -222,9 +222,9 @@ undefined8 fn_8266CD18(int *param_1,undefined8 param_2,int param_3,int param_4)
             uStack_74 = 0;
             uStack_78 = 0;
             param_1[0x4c] = 1;
-            iStack_80 = iStack_90;
-            iStack_7c = iStack_8c;
-            fn_82F68CC0(param_1 + 0x4d,&iStack_90,0x34);
+            iStack_80 = stack_pair_90.first;
+            iStack_7c = stack_pair_90.second;
+            memcpy(param_1 + 0x4d,&stack_pair_90.first,0x34);
             if (puVar2 != (undefined4 *)0x0) {
               fn_8267C4F0(puVar2);
             }

@@ -26,7 +26,7 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_828EC900();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 void fn_828EE0E8(int param_1,undefined4 param_2,int param_3,undefined8 param_4,undefined8 param_5,
@@ -69,8 +69,8 @@ void fn_828EE0E8(int param_1,undefined4 param_2,int param_3,undefined8 param_4,u
     *puVar1 = *puVar2;
     lVar3 = lVar3 + -1;
   } while (lVar3 != 0);
-  fn_82F68CC0(param_1 + 0x1f0,param_4,0x10);
-  fn_82F68CC0(param_1 + 0x200,param_5,0x24);
+  memcpy(param_1 + 0x1f0,param_4,0x10);
+  memcpy(param_1 + 0x200,param_5,0x24);
   *(undefined1 *)(param_1 + 0x228) = in_stack_0000008f;
   *(undefined1 *)(param_1 + 0x229) = in_stack_00000097;
   fn_828EC900(param_1);

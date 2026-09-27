@@ -32,7 +32,7 @@ extern int fn_8251F720();
 extern int fn_8251FA58();
 extern int fn_8251FBA8();
 extern int fn_82F65350();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 void fn_82424630(int param_1,int *param_2)
@@ -47,7 +47,7 @@ void fn_82424630(int param_1,int *param_2)
   ulonglong uVar7;
   longlong lVar8;
   uint uVar9;
-  undefined1 auStack_230 [560];
+  undefined1 auStack_230 [496];
   
   if (*param_2 != 0) {
     lVar2 = fn_8251F720(param_2,0);
@@ -83,9 +83,9 @@ void fn_82424630(int param_1,int *param_2)
         }
         lVar2 = (uVar4 - (longlong)(int)((uVar4 & 0xffffffff) / (ulonglong)uVar9) *
                          (longlong)(int)uVar9) * 0x1f0 + uVar3;
-        fn_82F68CC0(auStack_230,uVar7,0x1f0);
-        fn_82F68CC0(uVar7,lVar2,0x1f0);
-        fn_82F68CC0(lVar2,auStack_230,0x1f0);
+        memcpy(auStack_230,uVar7,0x1f0);
+        memcpy(uVar7,lVar2,0x1f0);
+        memcpy(lVar2,auStack_230,0x1f0);
         uVar9 = uVar9 + 1;
       }
     }

@@ -39,7 +39,7 @@ bool fn_82580E60(undefined4 *param_1,undefined4 *param_2)
   undefined4 *puVar3;
   undefined8 uVar1;
   longlong lVar2;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [1];
   
   puVar3 = param_1;
   if (0xf < (uint)param_1[5]) {

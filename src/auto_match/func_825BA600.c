@@ -62,7 +62,7 @@ void fn_825BA600(int param_1,int param_2)
   int iStack_5c;
   undefined1 auStack_58 [4];
   int iStack_54;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [16];
   
   uVar7 = *(undefined4 *)(param_2 + 0xd48);
   if (*(int *)(param_1 + 0x34) != 0) {

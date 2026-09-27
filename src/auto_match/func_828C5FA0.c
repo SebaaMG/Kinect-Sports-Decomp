@@ -41,7 +41,7 @@ void fn_828C5FA0(int param_1,undefined8 param_2,ulonglong param_3)
   char *pcVar5;
   char *pcVar6;
   ulonglong uVar7;
-  char acStack_130 [304];
+  char acStack_130 [256];
   
   acStack_130[0] = '\0';
   if ((param_3 & 0xffffffff) != 0) {

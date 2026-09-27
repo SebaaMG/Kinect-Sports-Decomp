@@ -38,8 +38,8 @@ void fn_823BBC20(int *param_1,undefined8 param_2,int *param_3)
   undefined8 uVar1;
   char cVar2;
   undefined4 *puVar3;
-  undefined4 uStack_30;
-  int iStack_2c;
+  struct { undefined4 first; int second; } stack_pair_30;
+
   
   if (param_3 != (int *)0x0) {
     if ((int *)*param_3 == (int *)0x0) {
@@ -56,11 +56,11 @@ void fn_823BBC20(int *param_1,undefined8 param_2,int *param_3)
   }
   puVar3 = (undefined4 *)0x0;
 LAB_823bbc90:
-  uStack_30 = 0;
-  iStack_2c = 0;
-  fn_82517978(&uStack_30,*puVar3,puVar3[1],0);
-  (**(code **)(*param_1 + 0x10))(param_1,param_2,&uStack_30);
-  if (iStack_2c != 0) {
+  stack_pair_30.first = 0;
+  stack_pair_30.second = 0;
+  fn_82517978(&stack_pair_30.first,*puVar3,puVar3[1],0);
+  (**(code **)(*param_1 + 0x10))(param_1,param_2,&stack_pair_30.first);
+  if (stack_pair_30.second != 0) {
     fn_822315A0();
   }
   return;

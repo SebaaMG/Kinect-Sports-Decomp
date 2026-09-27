@@ -40,7 +40,7 @@ int * fn_8257AB78(int *param_1,int param_2,undefined4 *param_3)
   undefined4 *puVar6;
   undefined4 **ppuVar7;
   undefined4 *puStack_40;
-  undefined4 *apuStack_3c [15];
+  undefined4 *apuStack_3c [1];
   
   iVar2 = fn_8257AC80(param_2,param_3);
   puVar1 = *(undefined4 **)(iVar2 * 8 + *(int *)(param_2 + 0x10));

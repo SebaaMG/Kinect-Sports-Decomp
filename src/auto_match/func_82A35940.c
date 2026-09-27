@@ -29,7 +29,7 @@ extern int fn_8265C940();
 extern int fn_8265C990();
 extern int fn_82A34310();
 extern int fn_82A35648();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 longlong fn_82A35940(int param_1,ulonglong param_2)
@@ -38,7 +38,7 @@ longlong fn_82A35940(int param_1,ulonglong param_2)
   undefined8 uVar1;
   longlong lVar2;
   longlong lVar3;
-  int aiStack_50 [20];
+  int aiStack_50 [9];
   
   if ((param_2 & 0xffffffff) == 0) {
     aiStack_50[3] = 4;
@@ -51,7 +51,7 @@ longlong fn_82A35940(int param_1,ulonglong param_2)
     aiStack_50[8] = 0x40000;
   }
   else {
-    fn_82F68CC0(aiStack_50,param_2,0x24);
+    memcpy(aiStack_50,param_2,0x24);
     if (aiStack_50[0] != 0) goto code_r0x82a359b4;
   }
   aiStack_50[0] = 1;

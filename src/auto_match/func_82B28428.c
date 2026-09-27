@@ -37,7 +37,7 @@ void fn_82B28428(undefined8 param_1,int param_2,ulonglong param_3,int param_4,un
   char cVar3;
   int *piVar4;
   double dStack_40;
-  double adStack_38 [7];
+  double adStack_38;
   
   uVar2 = param_4 << ((uint)((param_3 & 0xffffffff) << 2) & 0x3c);
   if ((*(uint *)(param_2 + 0xc) & uVar2 & 0xffff) != uVar2) {
@@ -49,14 +49,14 @@ void fn_82B28428(undefined8 param_1,int param_2,ulonglong param_3,int param_4,un
         piVar4 = (int *)piVar4[1];
       } while (piVar4 != (int *)0x0);
       if ((piVar4 != (int *)0x0) &&
-         (cVar3 = fn_82B80F70(param_3,&dStack_40,adStack_38), cVar3 != '\0')) {
+         (cVar3 = fn_82B80F70(param_3,&dStack_40,&adStack_38), cVar3 != '\0')) {
         iVar1 = (int)((param_3 + 1 & 0xffffffff) << 3);
         if (*(double *)(iVar1 + (int)piVar4) < dStack_40) {
           *(double *)(iVar1 + (int)piVar4) = dStack_40;
         }
         iVar1 = (int)((param_3 + 5 & 0xffffffff) << 3);
-        if (adStack_38[0] < *(double *)(iVar1 + (int)piVar4)) {
-          *(double *)(iVar1 + (int)piVar4) = adStack_38[0];
+        if (adStack_38 < *(double *)(iVar1 + (int)piVar4)) {
+          *(double *)(iVar1 + (int)piVar4) = adStack_38;
         }
       }
     }

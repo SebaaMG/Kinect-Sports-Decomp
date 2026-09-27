@@ -49,7 +49,7 @@ int fn_8279B6A8(int param_1)
   uint uVar8;
   undefined2 uVar9;
   int iVar10;
-  undefined1 auStack_60 [96];
+  undefined1 auStack_60 [48];
   
   iVar10 = param_1 + 0x4c;
   iVar3 = fn_82791FD0(iVar10);

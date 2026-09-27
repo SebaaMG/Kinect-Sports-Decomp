@@ -46,8 +46,8 @@ void fn_82BC5D48(int param_1)
   int iVar6;
   uint uVar7;
   int iVar8;
-  undefined4 uStack_70;
-  undefined4 uStack_6c;
+  struct { undefined4 first; undefined4 second; } stack_pair_70;
+
   undefined4 uStack_68;
   undefined4 uStack_64;
   
@@ -63,11 +63,11 @@ void fn_82BC5D48(int param_1)
         for (uVar7 = 1; uVar7 <= *(uint *)(*(int *)(iVar6 + 0x38) + 4); uVar7 = uVar7 + 1) {
           iVar4 = *(int *)(*(int *)(*(int *)(iVar6 + 0x38) + 8) + iVar8);
           puVar2 = *(undefined4 **)(iVar4 + 0x3c);
-          uStack_70 = *puVar2;
-          uStack_6c = puVar2[1];
+          stack_pair_70.first = *puVar2;
+          stack_pair_70.second = puVar2[1];
           uStack_68 = puVar2[2];
           uStack_64 = puVar2[3];
-          fn_82BC0000(&uStack_70,iVar6);
+          fn_82BC0000(&stack_pair_70.first,iVar6);
           if (*(int *)(*(int *)(iVar4 + 0x3c) + 4) == 0) {
             bVar5 = true;
           }

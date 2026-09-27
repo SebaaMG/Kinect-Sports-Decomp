@@ -35,15 +35,15 @@ double fn_82769420(int param_1)
 {
   bool bVar1;
   undefined8 uVar2;
-  undefined4 auStack_30 [2];
+  undefined4 auStack_30;
   short sStack_28;
   short sStack_26;
   short sStack_24;
   short sStack_22;
   
-  auStack_30[0] = *(undefined4 *)(param_1 + 8);
+  auStack_30 = *(undefined4 *)(param_1 + 8);
   uVar2 = fn_82767170();
-  fn_827671F0(auStack_30,uVar2);
+  fn_827671F0(&auStack_30,uVar2);
   if ((sStack_24 <= sStack_28) || (bVar1 = true, sStack_22 <= sStack_26)) {
     bVar1 = false;
   }

@@ -50,7 +50,7 @@ ulonglong fn_827050F0(int param_1,int *param_2,undefined8 param_3,ulonglong para
   ulonglong uVar5;
   uint *puVar6;
   undefined1 auStack_80 [16];
-  undefined1 auStack_70 [112];
+  undefined1 auStack_70 [16];
   
   if (param_2 != (int *)0x0) {
     lVar2 = fn_82693410();

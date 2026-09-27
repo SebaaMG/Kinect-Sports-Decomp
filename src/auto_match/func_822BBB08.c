@@ -47,7 +47,7 @@ void fn_822BBB08(int param_1)
   undefined8 uVar3;
   undefined4 *puStack_40;
   undefined4 *puStack_3c;
-  undefined1 auStack_38 [56];
+  undefined1 auStack_38 [8];
   
   uVar1 = *(undefined4 *)(param_1 + 0x220);
   uVar2 = *(undefined4 *)(param_1 + 0x114);

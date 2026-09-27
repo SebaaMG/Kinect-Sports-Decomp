@@ -44,7 +44,7 @@ undefined4 * fn_822929D0(undefined4 *param_1)
   ulonglong uVar3;
   undefined8 uVar4;
   double dVar5;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [16];
   
   *param_1 = 0;
   param_1[1] = 0;

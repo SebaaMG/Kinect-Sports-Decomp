@@ -47,7 +47,7 @@ void fn_82476360(int param_1)
   int iVar3;
   undefined8 uVar2;
   double dVar4;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [16];
   
   if (*(int *)(param_1 + 0x160) != 0) {
     fn_82529320(*(int *)(param_1 + 0x160),0);

@@ -60,14 +60,14 @@ bool fn_82BF8418(int param_1,int param_2)
   char *pcStack_44;
   char *pcStack_40;
   int iStack_3c;
-  undefined8 auStack_38 [7];
+  undefined8 auStack_38;
   
   if (param_2 != 0) {
     uStack_60 = *(undefined4 *)(param_1 + 8);
     pcVar8 = (char *)0x0;
     uStack_5c = 0;
     uVar2 = *(uint *)(param_2 + 0xc);
-    auStack_38[0] = fn_82BA02A8(*(undefined8 *)(param_1 + 0x10));
+    auStack_38 = fn_82BA02A8(*(undefined8 *)(param_1 + 0x10));
     uStack_58 = *(undefined4 *)(param_1 + 0x18);
     uStack_54 = *(undefined4 *)(param_1 + 0x1c);
     uStack_50 = *(undefined4 *)(param_1 + 0x20);
@@ -99,7 +99,7 @@ bool fn_82BF8418(int param_1,int param_2)
               )) && (iVar5 = fn_82BF6FC0(param_2,*(undefined4 *)(param_2 + 0xc),&uStack_60,4),
                     iVar5 != 0)) &&
             ((iVar5 = fn_82BF6FC0(param_2,*(undefined4 *)(param_2 + 0xc),&uStack_60,4), iVar5 != 0
-             && (iVar5 = fn_82BF6FC0(param_2,*(undefined4 *)(param_2 + 0xc),auStack_38,8),
+             && (iVar5 = fn_82BF6FC0(param_2,*(undefined4 *)(param_2 + 0xc),&auStack_38,8),
                 iVar5 != 0)))) &&
            ((iVar5 = fn_82BF6FC0(param_2,*(undefined4 *)(param_2 + 0xc),&uStack_58,4), iVar5 != 0
             && ((iVar5 = fn_82BF6FC0(param_2,*(undefined4 *)(param_2 + 0xc),&uStack_54,4),

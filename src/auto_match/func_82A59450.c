@@ -39,7 +39,7 @@ void fn_82A59450(undefined2 *param_1,undefined8 param_2,undefined8 param_3)
   ulonglong uVar1;
   undefined8 uVar2;
   undefined8 uVar3;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [32];
   
   fn_82A59558(param_1,auStack_50);
   uVar1 = fn_82A58F78(param_1,param_2);

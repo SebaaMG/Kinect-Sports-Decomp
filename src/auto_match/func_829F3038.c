@@ -60,8 +60,8 @@ void fn_829F3038(undefined8 param_1,undefined8 param_2,int param_3,int param_4,i
   int aiStack_c0 [2];
   int iStack_b8;
   int iStack_b4;
-  int iStack_b0;
-  int iStack_ac;
+  struct { int first; int second; } stack_pair_b0;
+
   undefined4 uStack_a8;
   int iStack_a0;
   int iStack_9c;
@@ -102,10 +102,10 @@ void fn_829F3038(undefined8 param_1,undefined8 param_2,int param_3,int param_4,i
       iStack_b4 = iStack_b4 + iVar1;
       iVar3 = iVar9;
       aiStack_c0[0] = iVar8;
-      iStack_b0 = iVar11;
+      stack_pair_b0.first = iVar11;
       if (iVar12 == 5) {
         iVar3 = iVar9 + 1;
-        iStack_b0 = 1;
+        stack_pair_b0.first = 1;
         aiStack_c0[0] = 10;
       }
       uStack_98 = 1;
@@ -115,25 +115,25 @@ void fn_829F3038(undefined8 param_1,undefined8 param_2,int param_3,int param_4,i
       iStack_b8 = iVar3;
       if (iVar3 < 1) {
         iStack_b8 = 1;
-        iStack_b0 = (iStack_b0 - iVar3) + 1;
+        stack_pair_b0.first = (stack_pair_b0.first - iVar3) + 1;
         aiStack_c0[0] = iVar3 + aiStack_c0[0] + -1;
       }
       if (0x4e < iStack_b8 + aiStack_c0[0]) {
         aiStack_c0[0] = 0x4e - iStack_b8;
       }
       if (0 < iStack_b4) {
-        iStack_ac = iVar11;
-        fn_829F2E18(param_1,&stack0x0000001c,iVar7,&iStack_b0,&iStack_b8,&uStack_98,&iStack_a0,
+        stack_pair_b0.second = iVar11;
+        fn_829F2E18(param_1,&stack0x0000001c,iVar7,&stack_pair_b0.first,&iStack_b8,&uStack_98,&iStack_a0,
                       aiStack_c0);
       }
       iVar4 = iVar6 + iVar12;
       iVar10 = iVar12 + 6;
       iVar3 = iVar9;
       aiStack_c0[0] = iVar8;
-      iStack_b0 = iVar11;
+      stack_pair_b0.first = iVar11;
       if (iVar12 == 5) {
         iVar3 = iVar9 + 1;
-        iStack_b0 = 1;
+        stack_pair_b0.first = 1;
         aiStack_c0[0] = 10;
       }
       uStack_98 = 1;
@@ -143,7 +143,7 @@ void fn_829F3038(undefined8 param_1,undefined8 param_2,int param_3,int param_4,i
       iStack_b8 = iVar3;
       if (iVar3 < 1) {
         iStack_b8 = 1;
-        iStack_b0 = (iStack_b0 - iVar3) + 1;
+        stack_pair_b0.first = (stack_pair_b0.first - iVar3) + 1;
         aiStack_c0[0] = iVar3 + aiStack_c0[0] + -1;
       }
       if (0x4e < iStack_b8 + aiStack_c0[0]) {
@@ -151,16 +151,16 @@ void fn_829F3038(undefined8 param_1,undefined8 param_2,int param_3,int param_4,i
       }
       if (iVar4 < 0x3c) {
         iStack_b4 = iVar4;
-        iStack_ac = iVar10;
-        fn_829F2E18(param_1,&stack0x0000001c,iVar7,&iStack_b0,&iStack_b8,&uStack_98,&iStack_a0,
+        stack_pair_b0.second = iVar10;
+        fn_829F2E18(param_1,&stack0x0000001c,iVar7,&stack_pair_b0.first,&iStack_b8,&uStack_98,&iStack_a0,
                       aiStack_c0);
       }
       iVar3 = iVar4;
       aiStack_c0[0] = iVar8;
-      iStack_ac = iVar10;
+      stack_pair_b0.second = iVar10;
       if (iVar12 == 5) {
         iVar3 = iVar4 + -1;
-        iStack_ac = 10;
+        stack_pair_b0.second = 10;
         aiStack_c0[0] = 10;
       }
       uStack_98 = 0;
@@ -173,21 +173,21 @@ void fn_829F3038(undefined8 param_1,undefined8 param_2,int param_3,int param_4,i
       iStack_b4 = iVar3;
       if (0x3a < iVar3) {
         iStack_b4 = 0x3a;
-        iStack_ac = (iStack_ac - iVar3) + 0x3a;
+        stack_pair_b0.second = (stack_pair_b0.second - iVar3) + 0x3a;
         aiStack_c0[0] = (aiStack_c0[0] - iVar3) + 0x3a;
       }
       if (0 < iVar9) {
         iStack_b8 = iVar9;
-        iStack_b0 = iVar11;
-        fn_829F2E18(param_1,&stack0x0000001c,iVar7,&iStack_b0,&iStack_b8,&uStack_98,&iStack_a0,
+        stack_pair_b0.first = iVar11;
+        fn_829F2E18(param_1,&stack0x0000001c,iVar7,&stack_pair_b0.first,&iStack_b8,&uStack_98,&iStack_a0,
                       aiStack_c0);
       }
       iStack_b8 = iVar5 + iVar12;
       aiStack_c0[0] = iVar8;
-      iStack_ac = iVar10;
+      stack_pair_b0.second = iVar10;
       if (iVar12 == 5) {
         iVar4 = iVar4 + -1;
-        iStack_ac = 10;
+        stack_pair_b0.second = 10;
         aiStack_c0[0] = 10;
       }
       uStack_98 = 0;
@@ -200,12 +200,12 @@ void fn_829F3038(undefined8 param_1,undefined8 param_2,int param_3,int param_4,i
       iStack_b4 = iVar4;
       if (0x3a < iVar4) {
         iStack_b4 = 0x3a;
-        iStack_ac = (iStack_ac - iVar4) + 0x3a;
+        stack_pair_b0.second = (stack_pair_b0.second - iVar4) + 0x3a;
         aiStack_c0[0] = (aiStack_c0[0] - iVar4) + 0x3a;
       }
       if (iStack_b8 < 0x50) {
-        iStack_b0 = iVar10;
-        fn_829F2E18(param_1,&stack0x0000001c,iVar7,&iStack_b0,&iStack_b8,&uStack_98,&iStack_a0,
+        stack_pair_b0.first = iVar10;
+        fn_829F2E18(param_1,&stack0x0000001c,iVar7,&stack_pair_b0.first,&iStack_b8,&uStack_98,&iStack_a0,
                       aiStack_c0);
       }
       iVar12 = iVar12 + 1;

@@ -46,7 +46,7 @@ void fn_82242A30(int param_1)
   longlong lVar6;
   undefined1 auStack_80 [24];
   undefined8 uStack_68;
-  undefined1 auStack_60 [72];
+  undefined1 auStack_60 [56];
   
   *(undefined1 *)(param_1 + 0x18) = 0;
   *(undefined1 *)(param_1 + 0x19) = 0;

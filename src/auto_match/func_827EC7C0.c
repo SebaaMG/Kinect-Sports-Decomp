@@ -37,7 +37,7 @@ undefined8 fn_827EC7C0(double param_1,undefined8 param_2,undefined8 param_3,unde
 {
   double dVar1;
   double dVar2;
-  undefined1 auStack_30 [32];
+  undefined1 auStack_30 [1];
   
   fn_82810328(param_2,param_3,auStack_30);
   dVar1 = (double)fn_82810280(auStack_30,param_4);

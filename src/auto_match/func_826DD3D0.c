@@ -69,8 +69,8 @@ void fn_826DD3D0(int param_1,int *param_2,uint param_3,int param_4,char param_5)
   byte bVar16;
   uint uStack_80;
   uint uStack_7c;
-  int iStack_78;
-  undefined4 uStack_74;
+  struct { int first; undefined4 second; } stack_pair_78;
+
   int iStack_70;
   undefined4 uStack_6c;
   
@@ -149,21 +149,21 @@ void fn_826DD3D0(int param_1,int *param_2,uint param_3,int param_4,char param_5)
             bVar16 = (cVar10 == '\0') << 1;
             if (cVar10 != '\0') {
               iVar8 = *(int *)(param_3 + 0x1c);
-              iStack_78 = 0;
-              uStack_74 = 0;
+              stack_pair_78.first = 0;
+              stack_pair_78.second = 0;
               bVar1 = *(char *)(iVar8 + 0x40) == '\0';
               bVar16 = bVar1 << 1;
               if ((bVar1) || (*(uint *)(iVar8 + 0x1c) <= *(uint *)(iVar6 + 8))) {
-                fn_826F30F0(iVar8 + 0x18,&iStack_78);
+                fn_826F30F0(iVar8 + 0x18,&stack_pair_78.first);
               }
               else {
-                fn_82687F98(&iStack_78,
+                fn_82687F98(&stack_pair_78.first,
                                   (ulonglong)*(uint *)(iVar8 + 0x20) +
                                   ((ulonglong)*(uint *)(iVar6 + 8) & 0x1fffffff) * 8);
               }
-              if ((iStack_78 != 0) &&
-                 (fn_826F3210(param_1 + 0x18,*(undefined4 *)(iVar2 + 8),&iStack_78),
-                 iStack_78 != 0)) {
+              if ((stack_pair_78.first != 0) &&
+                 (fn_826F3210(param_1 + 0x18,*(undefined4 *)(iVar2 + 8),&stack_pair_78.first),
+                 stack_pair_78.first != 0)) {
                 fn_82687270();
               }
               break;

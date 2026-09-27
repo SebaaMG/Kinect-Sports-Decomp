@@ -33,11 +33,11 @@ void fn_8266C9B0(undefined8 param_1)
 
 {
   undefined4 *puVar1;
-  int aiStack_10 [4];
+  int aiStack_10;
   
-  puVar1 = (undefined4 *)fn_8266C8A0(aiStack_10,param_1);
+  puVar1 = (undefined4 *)fn_8266C8A0(&aiStack_10,param_1);
   (**(code **)(*(int *)*puVar1 + 0x94))();
-  if (aiStack_10[0] != 0) {
+  if (aiStack_10 != 0) {
     fn_8267C4F0();
   }
   return;

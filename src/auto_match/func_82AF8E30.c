@@ -40,7 +40,7 @@ longlong fn_82AF8E30(undefined8 param_1,int param_2,int param_3,ulonglong *param
   ulonglong uVar5;
   ulonglong uVar6;
   ulonglong uVar7;
-  ulonglong auStack_40 [8];
+  ulonglong auStack_40 [2];
   
   *(uint *)(param_4 + 1) = *(uint *)(param_4 + 1) & 0xffffffe0;
   uVar5 = 0;

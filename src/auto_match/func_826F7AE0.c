@@ -43,7 +43,7 @@ void fn_826F7AE0(int param_1,int param_2)
   int iVar5;
   ulonglong uVar6;
   undefined1 auStack_90 [32];
-  undefined1 auStack_70 [112];
+  undefined1 auStack_70 [32];
   
   uVar6 = (ulonglong)*(uint *)(param_1 + 0xa90);
   uVar1 = *(undefined4 *)(param_2 + 0x40);

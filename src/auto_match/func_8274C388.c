@@ -41,15 +41,15 @@ undefined8 fn_8274C388(undefined8 param_1,int param_2,undefined8 param_3,undefin
   int iVar3;
   undefined8 uVar2;
   longlong lVar5;
-  int aiStack_40 [16];
+  int aiStack_40;
   
   bVar1 = *(byte *)(param_2 + 0x7c);
-  fn_82681728(aiStack_40,(ulonglong)*(uint *)(param_2 + 0x78) + 0x254,0xffffffff8201339c);
-  cVar4 = fn_8271D378(aiStack_40,param_3,-(6 < bVar1) & 1);
-  lVar5 = (ulonglong)*(uint *)(aiStack_40[0] + 8) - 1;
-  *(int *)(aiStack_40[0] + 8) = (int)lVar5;
+  fn_82681728(&aiStack_40,(ulonglong)*(uint *)(param_2 + 0x78) + 0x254,0xffffffff8201339c);
+  cVar4 = fn_8271D378(&aiStack_40,param_3,-(6 < bVar1) & 1);
+  lVar5 = (ulonglong)*(uint *)(aiStack_40 + 8) - 1;
+  *(int *)(aiStack_40 + 8) = (int)lVar5;
   if (lVar5 == 0) {
-    fn_826944C8(aiStack_40[0]);
+    fn_826944C8(aiStack_40);
   }
   if (cVar4 == '\0') {
     uVar2 = fn_82713EE8(param_1,param_2,param_3,param_4);

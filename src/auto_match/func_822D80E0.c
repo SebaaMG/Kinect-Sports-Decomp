@@ -46,16 +46,16 @@ void fn_822D80E0(int param_1)
   undefined4 in_register_000104d4;
   undefined4 in_register_000104d8;
   undefined4 in_vr77;
-  undefined4 *apuStack_30 [12];
+  undefined4 * apuStack_30;
   
   puVar2 = (undefined4 *)(param_1 + 0x5c);
   if (0xf < *(uint *)(param_1 + 0x70)) {
     puVar2 = (undefined4 *)*puVar2;
   }
-  fn_8255FD70(apuStack_30,*(undefined4 *)(*(int *)(*(int *)(param_1 + 0x54) + 0x118) + 0x24),
+  fn_8255FD70(&apuStack_30,*(undefined4 *)(*(int *)(*(int *)(param_1 + 0x54) + 0x118) + 0x24),
                     puVar2);
-  fn_822B83D0(*(undefined4 *)(*(int *)(param_1 + 0x54) + 0x118),*apuStack_30[0]);
-  iVar1 = fn_82365BD8(apuStack_30,param_1 + 0x78);
+  fn_822B83D0(*(undefined4 *)(*(int *)(param_1 + 0x54) + 0x118),*apuStack_30);
+  iVar1 = fn_82365BD8(&apuStack_30,param_1 + 0x78);
   fn_82376640(param_1 + 0x30,iVar1);
   if (*(int *)(iVar1 + 4) != 0) {
     fn_822315A0();
@@ -69,7 +69,7 @@ void fn_822D80E0(int param_1)
   puVar2[1] = in_register_000104d4;
   puVar2[2] = in_register_000104d8;
   puVar2[3] = in_vr77;
-  fn_8265CA20(apuStack_30[0]);
+  fn_8265CA20(apuStack_30);
   return;
 }
 

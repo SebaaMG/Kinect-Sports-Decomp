@@ -52,7 +52,7 @@ undefined8 fn_82A6E738(int *param_1)
   ulonglong uVar11;
   uint uVar12;
   uint uStack_90;
-  int aiStack_8c [35];
+  int aiStack_8c;
   
   iVar1 = *param_1;
   uVar8 = 0;
@@ -240,14 +240,14 @@ LAB_82a6ecd4:
               else {
                 uVar12 = uVar12 >> (*(uint *)(iVar1 + 0x1c8) & 0x3f);
               }
-              fn_82A69BD8(iVar1,aiStack_8c);
+              fn_82A69BD8(iVar1,&aiStack_8c);
               if (*(int *)(iVar1 + 0x184) < *(int *)(iVar1 + 0x188)) {
-                aiStack_8c[0] = (*(int *)(iVar1 + 0x184) - *(int *)(iVar1 + 0x188)) + aiStack_8c[0];
+                aiStack_8c = (*(int *)(iVar1 + 0x184) - *(int *)(iVar1 + 0x188)) + aiStack_8c;
               }
-              if ((int)uVar12 <= aiStack_8c[0]) {
-                if ((int)(aiStack_8c[0] - uVar12) < iVar2) {
+              if ((int)uVar12 <= aiStack_8c) {
+                if ((int)(aiStack_8c - uVar12) < iVar2) {
                   *(longlong *)(param_1 + 0x2e) =
-                       *(longlong *)(param_1 + 0x2e) - (longlong)(int)(aiStack_8c[0] - uVar12);
+                       *(longlong *)(param_1 + 0x2e) - (longlong)(int)(aiStack_8c - uVar12);
                 }
                 else {
                   *(longlong *)(param_1 + 0x2e) = *(longlong *)(param_1 + 0x2e) - lVar9;

@@ -40,7 +40,7 @@ fn_82B80B40(int param_1,ulonglong param_2,undefined8 param_3,int param_4,int par
   uint *puVar2;
   ulonglong uStack00000020;
   undefined8 uStack00000028;
-  undefined1 auStack_80 [104];
+  undefined1 auStack_80 [24];
   
   uVar1 = 0;
   if (*(uint *)(param_1 + 0x218) != 0) {

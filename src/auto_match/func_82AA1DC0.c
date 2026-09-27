@@ -47,7 +47,7 @@ void fn_82AA1DC0(longlong *param_1,uint *param_2,char param_3,undefined8 param_4
   ulonglong uVar10;
   ulonglong uVar11;
   ulonglong uVar12;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [1];
   
   if ((param_3 == '\0') && (uVar1 = param_2[1], (1 << (uVar1 >> 0xc & 0xf) & 0x607eU) != 0)) {
     uVar2 = *param_2;

@@ -35,7 +35,7 @@ void fn_82820680(int param_1)
   int iVar2;
   uint uVar3;
   int iVar4;
-  int aiStack_40 [16];
+  int aiStack_40;
   
   iVar1 = *(int *)(param_1 + 0x20);
   uVar3 = 0;
@@ -45,9 +45,9 @@ void fn_82820680(int param_1)
       if (*(char *)(*(int *)(iVar1 + 0x28) + uVar3) == '\0') {
         iVar2 = *(int *)(param_1 + 0x30);
         fn_828142D8((ulonglong)*(uint *)(param_1 + 0x34) + (ulonglong)*(uint *)(iVar2 + iVar4)
-                          ,aiStack_40);
-        if (aiStack_40[0] != 0) {
-          (**(code **)(aiStack_40[0] + 0x10))
+                          ,&aiStack_40);
+        if (aiStack_40 != 0) {
+          (**(code **)(aiStack_40 + 0x10))
                     (*(undefined4 *)(param_1 + 0x18),*(undefined4 *)(iVar2 + iVar4 + 0xd));
         }
       }

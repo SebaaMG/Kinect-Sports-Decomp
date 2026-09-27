@@ -46,23 +46,23 @@ void fn_822EA610(uint *param_1,uint *param_2)
   ulonglong uVar6;
   uint uStack_50;
   int iStack_4c;
-  uint uStack_48;
-  int iStack_44;
+  struct { uint first; int second; } stack_pair_48;
+
   
   uVar1 = param_1[1];
   for (uVar5 = (ulonglong)*param_1; (uVar5 & 0xffffffff) != (ulonglong)uVar1; uVar5 = uVar5 + 8) {
-    fn_82365BD8(&uStack_48,uVar5);
+    fn_82365BD8(&stack_pair_48.first,uVar5);
     uVar2 = param_2[1];
     for (uVar6 = (ulonglong)*param_2; (uVar6 & 0xffffffff) != (ulonglong)uVar2; uVar6 = uVar6 + 8) {
       fn_82365BD8(&uStack_50,uVar6);
       uVar4 = (ulonglong)uStack_50;
-      uVar3 = fn_822C7578((ulonglong)uStack_48 + 0x40,uVar4 + 4);
+      uVar3 = fn_822C7578((ulonglong)stack_pair_48.first + 0x40,uVar4 + 4);
       fn_82230218(uVar3,uVar4 + 4,0,0xffffffffffffffff);
       if (iStack_4c != 0) {
         fn_822315A0();
       }
     }
-    if (iStack_44 != 0) {
+    if (stack_pair_48.second != 0) {
       fn_822315A0();
     }
   }

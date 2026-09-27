@@ -26,7 +26,7 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_8263FB88();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 void fn_82640058(int param_1,undefined8 param_2,int param_3,undefined8 param_4,int param_5)
@@ -36,7 +36,7 @@ void fn_82640058(int param_1,undefined8 param_2,int param_3,undefined8 param_4,i
   
   iVar1 = fn_8263FB88();
   if (iVar1 != 0) {
-    fn_82F68CC0(iVar1,param_4,(longlong)param_3 * (longlong)param_5);
+    memcpy(iVar1,param_4,(longlong)param_3 * (longlong)param_5);
     *(undefined4 *)(param_1 + 0x30) = *(undefined4 *)(param_1 + 0x3554);
   }
   return;

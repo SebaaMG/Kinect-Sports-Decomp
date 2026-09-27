@@ -40,14 +40,14 @@ void fn_8269F440(int param_1,int *param_2)
   uint uVar2;
   ulonglong uVar3;
   undefined4 uVar4;
-  undefined4 auStack_30 [12];
+  undefined4 auStack_30;
   
   if (*(int *)(*param_2 + 0x10) != 0) {
     *(uint *)(param_1 + 0x8c) = *(uint *)(param_1 + 0x8c) & 0xffffbfff;
   }
   if (*(int *)(param_1 + 0x80) == 0) {
-    auStack_30[0] = 0x143;
-    uVar3 = fn_8267BED0(param_1,0x14,auStack_30);
+    auStack_30 = 0x143;
+    uVar3 = fn_8267BED0(param_1,0x14,&auStack_30);
     if ((uVar3 & 0xffffffff) == 0) {
       uVar4 = 0;
     }

@@ -31,25 +31,24 @@ extern int fn_82A76B88();
 extern unsigned int uStack_30;
 
 
-void fn_82A5B318(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefined4 *param_4,
-                  undefined8 param_5,undefined8 param_6,undefined8 param_7,undefined8 param_8)
+void fn_82A5B318(undefined8 param_1, undefined8 param_2, undefined8 param_3, undefined4 *param_4, undefined8 param_5, undefined8 param_6, undefined8 param_7, undefined8 param_8, undefined4 in_stack_00000054, undefined4 in_stack_0000005c, undefined4 in_stack_00000064, undefined4 in_stack_0000006c)
 
 {
   int iVar1;
-  undefined4 in_stack_00000054;
-  undefined4 in_stack_0000005c;
-  undefined4 in_stack_00000064;
-  undefined4 in_stack_0000006c;
+
+
+
+
   undefined4 uStack_30;
-  undefined4 auStack_2c [11];
+  undefined4 auStack_2c;
   
   uStack_30 = 0;
-  auStack_2c[0] = 0;
+  auStack_2c = 0;
   iVar1 = fn_82A76B88(param_2,param_5,param_6,param_7,param_8,in_stack_00000054,&uStack_30);
   if ((-1 < iVar1) &&
      (iVar1 = fn_82A5B238(param_1,in_stack_00000064,param_3,uStack_30,in_stack_0000005c,
-                            in_stack_0000006c,auStack_2c), -1 < iVar1)) {
-    *param_4 = auStack_2c[0];
+                            in_stack_0000006c,&auStack_2c), -1 < iVar1)) {
+    *param_4 = auStack_2c;
   }
   return;
 }

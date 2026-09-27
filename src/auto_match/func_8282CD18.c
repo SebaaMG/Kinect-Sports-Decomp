@@ -40,7 +40,7 @@ undefined8 fn_8282CD18(int param_1,undefined4 *param_2)
   uint *puVar5;
   uint uVar6;
   longlong lVar7;
-  undefined4 auStack_40 [16];
+  undefined4 auStack_40;
   
   if ((*(byte *)(param_1 + 0x134) & 4) == 0) {
     lVar4 = 0;
@@ -85,9 +85,9 @@ LAB_8282ce3c:
             if (iVar2 != 0) {
               return 3;
             }
-            auStack_40[0] = *(undefined4 *)(iVar1 + 9);
+            auStack_40 = *(undefined4 *)(iVar1 + 9);
             fn_8282F2A0(((ulonglong)*(uint *)(iVar1 + 9) - (ulonglong)*(uint *)(iVar1 + 0x1d)) +
-                            lVar4 + 0x80,(ulonglong)*(uint *)(iVar1 + 0x1d),lVar4,auStack_40);
+                            lVar4 + 0x80,(ulonglong)*(uint *)(iVar1 + 0x1d),lVar4,&auStack_40);
           }
           *(int *)(iVar1 + 0xd) = (int)lVar4;
         }

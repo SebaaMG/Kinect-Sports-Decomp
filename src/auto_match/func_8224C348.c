@@ -32,10 +32,10 @@ undefined8 fn_8224C348(int *param_1)
 
 {
   int iVar1;
-  undefined8 auStack_10 [2];
+  undefined8 auStack_10;
   
   iVar1 = (**(code **)(*param_1 + 4))();
-  (**(code **)(*(int *)(iVar1 + 0x48) + 0x40))((int *)(iVar1 + 0x48),auStack_10);
-  return auStack_10[0];
+  (**(code **)(*(int *)(iVar1 + 0x48) + 0x40))((int *)(iVar1 + 0x48),&auStack_10);
+  return auStack_10;
 }
 

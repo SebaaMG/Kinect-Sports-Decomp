@@ -64,13 +64,13 @@ void fn_82488BA0(undefined4 *param_1)
   int iStack_5c;
   int iStack_58;
   int iStack_54;
-  int iStack_50;
-  int iStack_4c;
+  struct { int first; int second; } stack_pair_50;
+
   int iStack_48;
   int iStack_40;
   int iStack_3c;
   undefined4 uStack_38;
-  int aiStack_30 [12];
+  int aiStack_30 [8];
   
   if ((param_1[1] != 0) && (param_1[2] == 0)) {
     fn_82350688();
@@ -131,18 +131,18 @@ void fn_82488BA0(undefined4 *param_1)
             }
             piVar7 = &iStack_40;
           }
-          iStack_50 = 0;
-          iStack_4c = 0;
+          stack_pair_50.first = 0;
+          stack_pair_50.second = 0;
           iStack_48 = 0;
-          if (&iStack_50 != piVar7) {
-            iStack_50 = *piVar7;
-            iStack_4c = piVar7[1];
+          if (&stack_pair_50.first != piVar7) {
+            stack_pair_50.first = *piVar7;
+            stack_pair_50.second = piVar7[1];
             iStack_48 = piVar7[2];
             *piVar7 = 0;
             piVar7[1] = 0;
             piVar7[2] = 0;
           }
-          fn_82514888(&iStack_50);
+          fn_82514888(&stack_pair_50.first);
           if (bVar2) {
             fn_822314E8(aiStack_30);
           }

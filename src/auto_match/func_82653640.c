@@ -28,9 +28,9 @@ typedef struct { U64 lo, hi; } V16;
 extern unsigned int __imp__VdGlobalDevice;
 extern unsigned int __imp__VdGlobalXamDevice;
 extern int fn_8265C940();
-extern int fn_82F691F0();
-extern int fn_831427BC();
-extern int fn_831427CC();
+extern int memset();
+extern int VdSetGraphicsInterruptCallback();
+extern int VdInitializeEngines();
 
 
 undefined8 fn_82653640(int param_1)
@@ -43,14 +43,14 @@ undefined8 fn_82653640(int param_1)
   RtlInitializeCriticalSection(param_1 + 0x3b34);
   RtlInitializeCriticalSection(param_1 + 0x3b50);
   *(byte *)(param_1 + 0x2abe) = *(byte *)(param_1 + 0x2abe) | 4;
-  fn_831427CC(0x2dff0003,0xffffffff826535b8,0,0xffffffff821883a0,0xffffffff82188820);
+  VdInitializeEngines(0x2dff0003,0xffffffff826535b8,0,0xffffffff821883a0,0xffffffff82188820);
   iVar3 = KeGetCurrentProcessType();
   if (iVar3 != 2) {
     ExRegisterTitleTerminateNotification(0xffffffff831bea50,1);
     ExRegisterTitleTerminateNotification(0xffffffff831bea60,1);
   }
   *(undefined4 *)(param_1 + 0x4220) = 0;
-  fn_831427BC(0xffffffff826455f0,param_1);
+  VdSetGraphicsInterruptCallback(0xffffffff826455f0,param_1);
   iVar3 = KeGetCurrentProcessType();
   piVar1 = __imp__VdGlobalXamDevice;
   if (iVar3 != 2) {
@@ -61,7 +61,7 @@ undefined8 fn_82653640(int param_1)
   *(int *)(param_1 + 0x2a90) = (int)uVar2;
   if ((uVar2 & 0xffffffff) != 0) {
                     /* WARNING: Subroutine does not return */
-    fn_82F691F0(uVar2,0,0x60);
+    memset(uVar2,0,0x60);
   }
   return 0xffffffff8007000e;
 }

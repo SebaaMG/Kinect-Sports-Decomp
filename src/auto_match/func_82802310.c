@@ -37,18 +37,18 @@ undefined8 fn_82802310(int param_1,int param_2)
   int iVar2;
   ulonglong uVar3;
   int iStack_30;
-  undefined4 auStack_2c [11];
+  undefined4 auStack_2c;
   
   uVar1 = *(ushort *)(param_1 + 0xe4);
   uVar3 = 0;
   if ((ulonglong)uVar1 != 0) {
     do {
-      iVar2 = fn_82800648(param_1,1,uVar3,auStack_2c,&iStack_30);
+      iVar2 = fn_82800648(param_1,1,uVar3,&auStack_2c,&iStack_30);
       if (iVar2 == 0) {
         return 0;
       }
       uVar3 = uVar3 + 1;
-      *(undefined4 *)(iStack_30 * 4 + param_2) = auStack_2c[0];
+      *(undefined4 *)(iStack_30 * 4 + param_2) = auStack_2c;
     } while ((uVar3 & 0xffffffff) < (ulonglong)uVar1);
   }
   return 1;

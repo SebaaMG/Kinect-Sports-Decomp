@@ -45,8 +45,8 @@ fn_82A368C8(int param_1,undefined4 param_2,uint *param_3,longlong param_4,ulongl
   int iVar2;
   ulonglong uVar3;
   undefined1 auStack_70 [16];
-  undefined4 uStack_60;
-  uint uStack_5c;
+  struct { undefined4 first; uint second; } stack_pair_60;
+
   uint uStack_58;
   undefined4 uStack_54;
   int iStack_50;
@@ -55,14 +55,14 @@ fn_82A368C8(int param_1,undefined4 param_2,uint *param_3,longlong param_4,ulongl
   if ((*(uint *)(param_1 + 8) & 1) == 0) {
     fn_82A36838();
   }
-  uStack_5c = *param_3;
+  stack_pair_60.second = *param_3;
   uStack_58 = 0;
-  *(undefined4 **)(param_1 + 0x4340) = &uStack_60;
+  *(undefined4 **)(param_1 + 0x4340) = &stack_pair_60.first;
   iVar2 = 0;
   *(code **)(param_1 + 0x4350) = fn_82A366C8;
   uStack_54 = 0;
   iStack_50 = 0;
-  uStack_60 = param_2;
+  stack_pair_60.first = param_2;
   uVar3 = param_5 & 0xffffffff;
   while (uVar3 != 0) {
     uVar3 = param_5;
@@ -80,7 +80,7 @@ fn_82A368C8(int param_1,undefined4 param_2,uint *param_3,longlong param_4,ulongl
   }
   fn_82A392D0(param_1 + 0x10);
   *param_3 = uStack_58;
-  if (uStack_5c < uStack_58) {
+  if (stack_pair_60.second < uStack_58) {
     uVar1 = 6;
   }
   return uVar1;

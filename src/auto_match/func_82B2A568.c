@@ -81,7 +81,7 @@ void fn_82B2A568(int param_1,int param_2)
   undefined4 uStack_74;
   int iStack_70;
   undefined4 uStack_6c;
-  int aiStack_68 [26];
+  int aiStack_68;
   
   puVar1 = *(uint **)(param_2 + 0x2c);
   uVar2 = *(undefined4 *)(param_2 + 0x30);
@@ -214,11 +214,11 @@ void fn_82B2A568(int param_1,int param_2)
               uStack_a0 = uVar7;
             }
             fn_82B82D28(*(undefined4 *)(uVar7 + 0x2c),uStack_98,&uStack_84,&uStack_6c,
-                              aiStack_68,0,param_2,0);
+                              &aiStack_68,0,param_2,0);
             uVar11 = uStack_84;
             uVar7 = uStack_a0;
             if (((((*(uint *)(uStack_84 + 8) ^ *(uint *)(param_2 + 8)) & 0x3f80) != 0) &&
-                (cVar8 = fn_82B19C90(param_1,param_2,uVar12,1,uStack_84,uStack_6c,aiStack_68[0],
+                (cVar8 = fn_82B19C90(param_1,param_2,uVar12,1,uStack_84,uStack_6c,aiStack_68,
                                          uStack_a0), uVar5 = uStack_9c, cVar8 != '\0')) &&
                (((cVar8 = fn_82B19C90(param_1,uVar7,uStack_98,0,uStack_9c,uStack_94,iStack_90,
                                           param_2), cVar8 != '\0' &&
@@ -234,7 +234,7 @@ void fn_82B2A568(int param_1,int param_2)
                 fn_82B8D488(param_1,uVar5,uVar7,0);
                 uVar11 = uStack_84;
               }
-              fn_82B28AC0(param_1,param_2,uVar2,uVar12,uVar11,uStack_6c,aiStack_68[0]);
+              fn_82B28AC0(param_1,param_2,uVar2,uVar12,uVar11,uStack_6c,aiStack_68);
               uVar7 = fn_82B843F0(param_1,uStack_a0);
               iVar9 = 0x2c;
               for (uVar11 = 0; uVar11 < (*(uint *)(uStack_a0 + 8) >> 0x13 & 7); uVar11 = uVar11 + 1)
@@ -263,7 +263,7 @@ void fn_82B2A568(int param_1,int param_2)
               fn_82B25248(param_1,uVar7,*(undefined4 *)(param_1 + 0x28c));
               uVar11 = uStack_84;
               uVar6 = uStack_6c;
-              iVar9 = aiStack_68[0];
+              iVar9 = aiStack_68;
               uStack_a0 = uVar7;
               goto LAB_82b2aeb4;
             }

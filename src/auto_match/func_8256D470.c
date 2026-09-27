@@ -38,7 +38,7 @@ int * fn_8256D470(int *param_1,int param_2,int param_3)
   undefined4 uVar4;
   undefined4 *puVar5;
   int iVar6;
-  undefined4 auStack_40 [16];
+  undefined4 auStack_40 [1];
   
   puVar1 = *(undefined4 **)(param_2 + 4);
   for (puVar5 = (undefined4 *)(param_3 + 8); puVar5 != puVar1; puVar5 = puVar5 + 2) {

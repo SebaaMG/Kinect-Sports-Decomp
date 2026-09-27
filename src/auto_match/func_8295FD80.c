@@ -36,14 +36,14 @@ undefined8 fn_8295FD80(int *param_1)
 {
   undefined8 uVar1;
   undefined4 uStack_20;
-  undefined4 auStack_1c [3];
+  undefined4 auStack_1c;
   
   uVar1 = fn_8295D0A8(param_1,0x26);
   if ((-1 < (int)uVar1) &&
      (uVar1 = (**(code **)(*param_1 + 0x148))
                         (param_1,*(undefined4 *)(**(int **)(param_1[0x41] + 8) * 4 + param_1[5]),
-                         auStack_1c,&uStack_20), -1 < (int)uVar1)) {
-    uVar1 = (**(code **)(*param_1 + 0x13c))(param_1,auStack_1c[0],0xe40000,uStack_20);
+                         &auStack_1c,&uStack_20), -1 < (int)uVar1)) {
+    uVar1 = (**(code **)(*param_1 + 0x13c))(param_1,auStack_1c,0xe40000,uStack_20);
     if ((-1 < (int)uVar1) &&
        ((uVar1 = (**(code **)(*param_1 + 0x134))(param_1), -1 < (int)uVar1 &&
         (uVar1 = fn_829548C8(param_1), -1 < (int)uVar1)))) {

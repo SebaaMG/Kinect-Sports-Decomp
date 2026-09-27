@@ -27,8 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 
 
-void fn_82803450(int param_1,int *param_2,uint *param_3,uint *param_4,uint *param_5,uint *param_6,
-                  int *param_7,int *param_8)
+void fn_82803450(int param_1, int *param_2, uint *param_3, uint *param_4, uint *param_5, uint *param_6, int *param_7, int *param_8, undefined8 unused_arg_9, undefined8 unused_arg_10, int in_stack_00000064, int in_stack_0000006c, int in_stack_00000074, int in_stack_0000007c)
 
 {
   ushort uVar1;
@@ -46,10 +45,10 @@ void fn_82803450(int param_1,int *param_2,uint *param_3,uint *param_4,uint *para
   undefined4 uVar12;
   int *in_stack_00000054;
   int *in_stack_0000005c;
-  int in_stack_00000064;
-  int in_stack_0000006c;
-  int in_stack_00000074;
-  int in_stack_0000007c;
+
+
+
+
   
   uVar1 = *(ushort *)(param_1 + 0x1c);
   iVar4 = param_2[1];

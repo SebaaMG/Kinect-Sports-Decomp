@@ -45,8 +45,8 @@ void fn_822CBFB8(undefined4 *param_1,byte *param_2,undefined8 param_3,undefined8
   ulonglong uVar6;
   byte bVar7;
   byte bVar8;
-  undefined4 uStack_30;
-  undefined4 uStack_2c;
+  struct { undefined4 first; undefined4 second; } stack_pair_30;
+
   
   uVar6 = (ulonglong)*param_2;
   uVar3 = 0x6d;
@@ -63,10 +63,10 @@ void fn_822CBFB8(undefined4 *param_1,byte *param_2,undefined8 param_3,undefined8
   }
   if (uVar6 == uVar3) {
 LAB_822cc01c:
-    uStack_30 = 0;
-    uStack_2c = 0;
-    fn_82517978(&uStack_30,*param_1,param_1[1],0,param_5);
-    fn_822CC748(&uStack_30,param_1 + 4);
+    stack_pair_30.first = 0;
+    stack_pair_30.second = 0;
+    fn_82517978(&stack_pair_30.first,*param_1,param_1[1],0,param_5);
+    fn_822CC748(&stack_pair_30.first,param_1 + 4);
   }
   bVar8 = *param_2;
   bVar5 = 0x68;

@@ -42,7 +42,7 @@ int * fn_826A98D8(int param_1,undefined4 *param_2,ulonglong param_3)
   char *pcVar6;
   undefined8 uVar7;
   char *pcVar8;
-  int aiStack_50 [20];
+  int aiStack_50;
   
   if (((undefined4 *)*param_2)[4] == 0) {
     piVar3 = (int *)0x0;
@@ -53,8 +53,8 @@ int * fn_826A98D8(int param_1,undefined4 *param_2,ulonglong param_3)
   else {
     pcVar8 = *(char **)*param_2;
     piVar3 = *(int **)(param_1 + 0x74);
-    aiStack_50[0] = *(int *)(*(int *)(param_1 + 0x78) + 8);
-    *(int *)(aiStack_50[0] + 8) = *(int *)(aiStack_50[0] + 8) + 1;
+    aiStack_50 = *(int *)(*(int *)(param_1 + 0x78) + 8);
+    *(int *)(aiStack_50 + 8) = *(int *)(aiStack_50 + 8) + 1;
     if (*pcVar8 == '/') {
       piVar3 = (int *)(**(code **)(*piVar3 + 0x54))(piVar3,0);
       pcVar8 = pcVar8 + 1;
@@ -86,19 +86,19 @@ LAB_826a99c0:
         iVar4 = fn_82694610(lVar2,pcVar8,(int)pcVar6 - (int)pcVar8);
       }
       *(int *)(iVar4 + 8) = *(int *)(iVar4 + 8) + 2;
-      lVar2 = (ulonglong)*(uint *)(aiStack_50[0] + 8) - 1;
-      *(int *)(aiStack_50[0] + 8) = (int)lVar2;
+      lVar2 = (ulonglong)*(uint *)(aiStack_50 + 8) - 1;
+      *(int *)(aiStack_50 + 8) = (int)lVar2;
       if (lVar2 == 0) {
-        fn_826944C8(aiStack_50[0]);
+        fn_826944C8(aiStack_50);
       }
       lVar2 = (ulonglong)*(uint *)(iVar4 + 8) - 1;
       *(int *)(iVar4 + 8) = (int)lVar2;
-      aiStack_50[0] = iVar4;
+      aiStack_50 = iVar4;
       if (lVar2 == 0) {
         fn_826944C8(iVar4);
       }
-      if (*(int *)(aiStack_50[0] + 0x10) != 0) {
-        piVar3 = (int *)(**(code **)(*piVar3 + 0xec))(piVar3,aiStack_50,uVar7);
+      if (*(int *)(aiStack_50 + 0x10) != 0) {
+        piVar3 = (int *)(**(code **)(*piVar3 + 0xec))(piVar3,&aiStack_50,uVar7);
       }
       if ((piVar3 == (int *)0x0) || (pcVar6 == (char *)0x0)) goto LAB_826a9ab4;
       pcVar8 = pcVar6 + 1;
@@ -109,10 +109,10 @@ LAB_826a99c0:
       fn_826A9168(param_1,0xffffffff820072ec,*(undefined4 *)*param_2);
     }
 LAB_826a9ab4:
-    lVar2 = (ulonglong)*(uint *)(aiStack_50[0] + 8) - 1;
-    *(int *)(aiStack_50[0] + 8) = (int)lVar2;
+    lVar2 = (ulonglong)*(uint *)(aiStack_50 + 8) - 1;
+    *(int *)(aiStack_50 + 8) = (int)lVar2;
     if (lVar2 == 0) {
-      fn_826944C8(aiStack_50[0]);
+      fn_826944C8(aiStack_50);
     }
   }
   return piVar3;

@@ -65,7 +65,7 @@ longlong fn_82999EC0(int *param_1)
   undefined1 auStack_120 [64];
   int aiStack_e0 [4];
   int aiStack_d0 [4];
-  undefined4 auStack_c0 [48];
+  undefined4 auStack_c0 [36];
   
   auStack_140[0] = 0;
   uStack_128 = 2;

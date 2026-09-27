@@ -32,7 +32,7 @@ void fn_8281CC00(float *param_1,float *param_2,float *param_3)
 
 {
   float *pfVar1;
-  float afStack_50 [20];
+  float afStack_50 [16];
   
   pfVar1 = afStack_50;
   if (param_1 != param_3) {

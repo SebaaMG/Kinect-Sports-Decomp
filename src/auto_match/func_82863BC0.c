@@ -40,7 +40,7 @@ void fn_82863BC0(int param_1,float *param_2)
   longlong lVar2;
   double dVar3;
   double dVar4;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [1];
   
   lVar2 = 2;
   *param_2 = lbl_821AAD20;

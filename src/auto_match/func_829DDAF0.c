@@ -42,7 +42,7 @@ void fn_829DDAF0(longlong param_1,longlong param_2)
   undefined4 in_register_000103f4;
   undefined4 in_register_000103f8;
   undefined4 in_vr63;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [1];
   
   fn_829DD678(auStack_30,param_1);
   altv207_13(in_vs32,in_vs35);

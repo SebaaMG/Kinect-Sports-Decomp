@@ -42,7 +42,7 @@ int fn_82983408(int param_1,int param_2,int param_3)
   longlong lVar5;
   char *pcVar7;
   char *pcVar8;
-  char acStack_50 [80];
+  char acStack_50 [16];
   
   if ((((param_2 != 0) && (*(int *)(param_2 + 4) == 3)) &&
       ((*(int *)(param_2 + 0x10) == 2 || (*(int *)(param_2 + 0x10) == 3)))) &&

@@ -34,21 +34,21 @@ extern int fn_828230A8();
 void fn_8282D760(undefined8 param_1,undefined8 param_2,code *param_3)
 
 {
-  int aiStack_30 [12];
+  int aiStack_30;
   
   do {
-    fn_82823080(param_2,aiStack_30);
-    if (aiStack_30[0] == 0) {
-      fn_828230A8(param_2,aiStack_30);
-      if (aiStack_30[0] == 0) {
-        fn_82823058(param_2,aiStack_30);
-        if (aiStack_30[0] == 0) {
+    fn_82823080(param_2,&aiStack_30);
+    if (aiStack_30 == 0) {
+      fn_828230A8(param_2,&aiStack_30);
+      if (aiStack_30 == 0) {
+        fn_82823058(param_2,&aiStack_30);
+        if (aiStack_30 == 0) {
           return;
         }
       }
     }
     fn_82822E38();
-    (*param_3)(param_1,aiStack_30[0]);
+    (*param_3)(param_1,aiStack_30);
   } while( true );
 }
 

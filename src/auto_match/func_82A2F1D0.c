@@ -48,7 +48,7 @@ fn_82A2F1D0(int param_1,longlong param_2,uint param_3,ulonglong param_4,uint par
   byte *pbVar4;
   ulonglong uVar5;
   uint uVar6;
-  int aiStack_70 [4];
+  int aiStack_70;
   undefined4 uStack_60;
   uint uStack_5c;
   undefined8 uStack_58;
@@ -106,14 +106,14 @@ LAB_82a2f244:
         *(char *)(iVar2 + 4) = *(char *)(iVar2 + 4) + -1;
       }
       if ((int)param_4 != -1) {
-        uVar3 = fn_82A2DDC0(param_1,param_4,0,0,aiStack_70);
+        uVar3 = fn_82A2DDC0(param_1,param_4,0,0,&aiStack_70);
         if ((int)uVar3 < 0) {
           return uVar3;
         }
-        iVar2 = ((int)param_4 + (int)((param_4 & 0xffffffff) / 0xaa) * -0xaa) * 0x18 + aiStack_70[0]
+        iVar2 = ((int)param_4 + (int)((param_4 & 0xffffffff) / 0xaa) * -0xaa) * 0x18 + aiStack_70
         ;
         *(uint *)(iVar2 + 0x14) = uStack_5c & 0xffffff | *(uint *)(iVar2 + 0x14) & 0xff000000;
-        uVar6 = aiStack_70[0] - *(int *)(param_1 + 0x34);
+        uVar6 = aiStack_70 - *(int *)(param_1 + 0x34);
         iVar2 = (((int)uVar6 >> 0xc) + (uint)((int)uVar6 < 0 && (uVar6 & 0xfff) != 0)) * 8 +
                 *(int *)(param_1 + 0x30);
         *(char *)(iVar2 + 4) = *(char *)(iVar2 + 4) + -1;

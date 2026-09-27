@@ -40,7 +40,7 @@ uint fn_82BBFAD8(undefined8 param_1,int param_2)
   float *pfVar6;
   longlong lVar7;
   undefined1 auStack_110 [8];
-  float afStack_108 [66];
+  float afStack_108 [62];
   
   pfVar5 = (float *)(param_2 + 0xc);
   pfVar6 = afStack_108;

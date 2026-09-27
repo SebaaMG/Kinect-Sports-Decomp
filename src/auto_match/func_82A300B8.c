@@ -50,7 +50,7 @@ undefined8 fn_82A300B8(int param_1,int param_2,longlong param_3,ulonglong param_
   ulonglong uVar11;
   uint uStack_70;
   int iStack_6c;
-  undefined1 auStack_68 [104];
+  undefined1 auStack_68 [1];
   
   uVar4 = (ulonglong)*(uint *)(param_2 + 0x14);
   uVar10 = param_3 + param_4 + 0xfff & 0xfffff000;

@@ -38,7 +38,7 @@ undefined8 fn_8245E230(int param_1)
   int iVar1;
   undefined8 uVar2;
   int iVar3;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [1];
   
   iVar3 = param_1 + 0xe4;
   RtlEnterCriticalSection(iVar3);

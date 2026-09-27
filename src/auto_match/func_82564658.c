@@ -62,8 +62,8 @@ void fn_82564658(double param_1,double param_2,double param_3,double param_4,dou
   float fStack0000004c;
   float fStack00000054;
   float fStack0000005c;
-  int iStack_20;
-  int iStack_1c;
+  struct { int first; int second; } stack_pair_20;
+
   
   fStack00000024 = (float)param_1;
   fStack0000002c = (float)param_2;
@@ -76,15 +76,15 @@ void fn_82564658(double param_1,double param_2,double param_3,double param_4,dou
   uStack0000001c = param_10;
   uVar1 = fn_8265C9E0(0x80);
   if ((uVar1 & 0xffffffff) == 0) {
-    iStack_1c = 0;
+    stack_pair_20.second = 0;
   }
   else {
-    iStack_1c = fn_825661E0(uVar1,param_9,&stack0x0000001c,&stack0x00000024,&stack0x0000002c,
+    stack_pair_20.second = fn_825661E0(uVar1,param_9,&stack0x0000001c,&stack0x00000024,&stack0x0000002c,
                                   &stack0x00000034,&stack0x0000003c,&stack0x00000044);
   }
-  iStack_20 = iStack_1c + 0x10;
-  fn_82566018(param_9 + 0x14,&iStack_20);
-  if (iStack_1c != 0) {
+  stack_pair_20.first = stack_pair_20.second + 0x10;
+  fn_82566018(param_9 + 0x14,&stack_pair_20.first);
+  if (stack_pair_20.second != 0) {
     fn_822315A0();
   }
   return;

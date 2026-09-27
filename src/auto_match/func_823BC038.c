@@ -38,19 +38,19 @@ void fn_823BC038(undefined8 param_1,undefined8 param_2,undefined4 *param_3)
 
 {
   int iVar1;
-  undefined4 uStack_20;
-  undefined4 uStack_1c;
+  struct { undefined4 first; undefined4 second; } stack_pair_20;
+
   undefined4 uStack_18;
   undefined4 uStack_14;
   
   fn_8223B610(param_2,&uStack_18,8,0,0);
   if (param_3 != (undefined4 *)0x0) {
-    uStack_20 = 0;
-    uStack_1c = 0;
-    fn_82517978(&uStack_20,uStack_18,uStack_14,0);
+    stack_pair_20.first = 0;
+    stack_pair_20.second = 0;
+    fn_82517978(&stack_pair_20.first,uStack_18,uStack_14,0);
     iVar1 = param_3[1];
-    param_3[1] = uStack_1c;
-    *param_3 = uStack_20;
+    param_3[1] = stack_pair_20.second;
+    *param_3 = stack_pair_20.first;
     if (iVar1 != 0) {
       fn_822315A0();
     }

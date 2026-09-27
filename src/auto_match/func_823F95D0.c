@@ -27,20 +27,20 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_40;
 extern unsigned int *auStack_50;
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 void fn_823F95D0(int param_1,undefined8 param_2,int param_3)
 
 {
   undefined4 auStack_50 [4];
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [32];
   
   (**(code **)(**(int **)(param_1 + 0x10) + 0x14))(*(int **)(param_1 + 0x10),param_2,auStack_50);
   (**(code **)(**(int **)(param_1 + 0x18) + 0x14))(*(int **)(param_1 + 0x18),param_2,auStack_40);
   if (param_3 != 0) {
     *(undefined4 *)(*(int *)(param_1 + 8) + param_3) = auStack_50[0];
-    fn_82F68CC0(*(int *)(param_1 + 0xc) + param_3,auStack_40,0x1c);
+    memcpy(*(int *)(param_1 + 0xc) + param_3,auStack_40,0x1c);
   }
   return;
 }

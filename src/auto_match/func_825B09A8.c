@@ -47,9 +47,9 @@ void fn_825B09A8(int *param_1,int param_2)
   int iVar8;
   int iVar9;
   int iVar10;
-  undefined4 auStack_40 [16];
+  undefined4 auStack_40;
   
-  fn_8284D860(*param_1,param_1[1],param_1 + 2,auStack_40);
+  fn_8284D860(*param_1,param_1[1],param_1 + 2,&auStack_40);
   if (param_1[2] != 0) {
     uVar2 = fn_8284E5C0(param_1[2],*(undefined4 *)(param_1[1] + 0x50),
                               *(undefined4 *)(*param_1 + 300));
@@ -85,7 +85,7 @@ void fn_825B09A8(int *param_1,int param_2)
       } while (uVar5 < *(uint *)(*param_1 + 300));
     }
     fn_8284E638(param_1[2],*(undefined4 *)(param_1[1] + 0x50),*(undefined4 *)(*param_1 + 300),
-                      auStack_40[0],param_1[3],iVar3);
+                      auStack_40,param_1[3],iVar3);
     uVar5 = 0;
     if (*(int *)(*param_1 + 300) != 0) {
       iVar8 = 0;

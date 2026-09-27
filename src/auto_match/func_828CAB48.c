@@ -36,7 +36,7 @@ extern unsigned int lbl_82026438;
 undefined4 * fn_828CAB48(undefined4 *param_1)
 
 {
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [1];
   
   *param_1 = &lbl_82026438;
   fn_828C91C0(param_1 + 2,auStack_30,auStack_30);

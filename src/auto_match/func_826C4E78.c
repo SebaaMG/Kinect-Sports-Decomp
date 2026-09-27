@@ -46,7 +46,7 @@ void fn_826C4E78(int *param_1)
   int *piVar4;
   uint *puVar5;
   undefined1 auStack_40 [16];
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
   
   piVar4 = (int *)(param_1[8] + 0x10);
   if (param_1[8] == 0) {

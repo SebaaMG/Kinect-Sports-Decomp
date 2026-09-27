@@ -40,17 +40,17 @@ void fn_82B8A2E0(undefined8 param_1,undefined4 param_2,char param_3)
 
 {
   undefined4 uStack0000001c;
-  undefined4 uStack_20;
-  undefined4 uStack_1c;
+  struct { undefined4 first; undefined4 second; } stack_pair_20;
+
   undefined4 uStack_18;
   undefined4 uStack_14;
   
-  uStack_1c = lbl_821AAD20;
+  stack_pair_20.second = lbl_821AAD20;
   uStack_18 = lbl_821AAD20;
   uStack_14 = lbl_821AAD20;
   uStack0000001c = param_2;
-  uStack_20 = param_2;
-  fn_82B86888(param_1,1,&uStack_20,(param_3 == '\0') + '\x01');
+  stack_pair_20.first = param_2;
+  fn_82B86888(param_1,1,&stack_pair_20.first,(param_3 == '\0') + '\x01');
   return;
 }
 

@@ -39,22 +39,22 @@ longlong fn_82A1CB48(undefined4 param_1,int param_2)
 
 {
   longlong lVar1;
-  undefined4 auStack_50 [2];
+  undefined4 auStack_50;
   undefined1 auStack_48 [8];
-  undefined4 uStack_40;
-  undefined4 uStack_3c;
+  struct { undefined4 first; undefined4 second; } stack_pair_40;
+
   undefined4 uStack_38;
   undefined1 auStack_30 [16];
   int iStack_20;
   int iStack_1c;
   
-  uStack_40 = 0;
+  stack_pair_40.first = 0;
   uStack_38 = 0x40;
-  uStack_3c = param_1;
-  lVar1 = NtOpenFile(auStack_50,0x100001,&uStack_40,auStack_48,3,0x800021);
+  stack_pair_40.second = param_1;
+  lVar1 = NtOpenFile(&auStack_50,0x100001,&stack_pair_40.first,auStack_48,3,0x800021);
   if (-1 < lVar1) {
-    lVar1 = NtQueryVolumeInformationFile(auStack_50[0],auStack_48,auStack_30,0x18,3);
-    NtClose(auStack_50[0]);
+    lVar1 = NtQueryVolumeInformationFile(auStack_50,auStack_48,auStack_30,0x18,3);
+    NtClose(auStack_50);
     if ((-1 < (int)lVar1) && (iStack_20 * iStack_1c != param_2)) {
       lVar1 = -0x3ffffeb1;
     }

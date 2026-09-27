@@ -36,7 +36,7 @@ undefined8 fn_826D5F50(undefined8 param_1,int *param_2,undefined4 *param_3,undef
   int iVar3;
   ulonglong uVar1;
   undefined8 uVar2;
-  undefined4 auStack_40 [16];
+  undefined4 auStack_40;
   
   iVar3 = (**(code **)(*param_2 + 0x40))(param_2);
   uVar1 = fn_8267B890(*(undefined4 *)(iVar3 + 0x14),0x1d8,0);
@@ -44,8 +44,8 @@ undefined8 fn_826D5F50(undefined8 param_1,int *param_2,undefined4 *param_3,undef
     uVar2 = 0;
   }
   else {
-    auStack_40[0] = *param_3;
-    uVar2 = fn_826D4148(uVar1,param_1,param_4,iVar3,param_2,auStack_40,0);
+    auStack_40 = *param_3;
+    uVar2 = fn_826D4148(uVar1,param_1,param_4,iVar3,param_2,&auStack_40,0);
   }
   return uVar2;
 }

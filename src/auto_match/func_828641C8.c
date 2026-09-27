@@ -37,14 +37,14 @@ extern int fn_82864158();
 void fn_828641C8(undefined8 param_1,undefined8 param_2,undefined8 param_3)
 
 {
-  undefined1 auStack_50 [4];
+  undefined1 auStack_50;
   float fStack_4c;
   undefined1 auStack_48 [16];
   undefined1 auStack_38 [56];
   
-  fn_82863D58(param_1,param_2,auStack_38,&fStack_4c,auStack_48,auStack_50);
+  fn_82863D58(param_1,param_2,auStack_38,&fStack_4c,auStack_48,&auStack_50);
   fn_82863DE0((double)fStack_4c,param_2,auStack_38);
-  fn_82864158(param_1,param_2,auStack_48,auStack_50[0],param_3);
+  fn_82864158(param_1,param_2,auStack_48,auStack_50,param_3);
   return;
 }
 

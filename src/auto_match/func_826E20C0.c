@@ -37,21 +37,21 @@ void fn_826E20C0(int param_1)
 
 {
   int iVar1;
-  undefined4 uStack_a8;
-  int iStack_a4;
+  struct { undefined4 first; int second; } stack_pair_a8;
+
   undefined4 uStack_a0;
   
   if (*(int *)(param_1 + 8) == 1) {
-    uStack_a8 = 0;
-    iStack_a4 = 0;
+    stack_pair_a8.first = 0;
+    stack_pair_a8.second = 0;
     uStack_a0 = 0;
     iVar1 = (*(int *)(param_1 + 0xc) + 2) * 4;
-    fn_826CD200(&uStack_a8,(longlong)(*(int *)(param_1 + 0x10) + 2) * (longlong)iVar1);
-    if (iStack_a4 != 0) {
+    fn_826CD200(&stack_pair_a8.first,(longlong)(*(int *)(param_1 + 0x10) + 2) * (longlong)iVar1);
+    if (stack_pair_a8.second != 0) {
                     /* WARNING: Subroutine does not return */
-      fn_82F691F0(uStack_a8,0,iVar1);
+      fn_82F691F0(stack_pair_a8.first,0,iVar1);
     }
-    fn_8267BE38(uStack_a8);
+    fn_8267BE38(stack_pair_a8.first);
   }
   return;
 }

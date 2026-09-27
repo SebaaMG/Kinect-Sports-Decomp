@@ -110,7 +110,7 @@ undefined8 fn_82680B50(int *param_1)
   undefined1 auStack_44be [2];
   undefined1 auStack_44bc [2];
   undefined1 auStack_44ba [2];
-  undefined1 auStack_44b8 [17592];
+  undefined1 auStack_44b8 [17576];
   
   if ((param_1 != (int *)0x0) && (cVar1 = (**(code **)(*param_1 + 8))(), cVar1 != '\0')) {
     (**(code **)(*param_1 + 0x28))(param_1,&uStack_44c0,1);

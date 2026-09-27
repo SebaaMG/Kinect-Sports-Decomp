@@ -45,26 +45,26 @@ void fn_8281D8C0(float *param_1,undefined8 param_2)
   double dVar5;
   float fStack_40;
   float fStack_3c;
-  float fStack_38;
-  float fStack_34;
+  struct { float first; float second; } stack_pair_38;
+
   float fStack_30;
   
   fn_8280A668(param_1,&fStack_3c,&fStack_40);
   dVar5 = (double)(lbl_82002AE0 - fStack_40);
-  fn_82810B78(param_2,&fStack_38);
+  fn_82810B78(param_2,&stack_pair_38.first);
   dVar4 = (double)fStack_40;
-  param_1[4] = (float)((double)(fStack_34 * fStack_34) * dVar5 + dVar4);
-  fVar1 = (float)((double)(fStack_34 * fStack_38) * dVar5);
-  fVar2 = (float)((double)(fStack_30 * fStack_38) * dVar5);
-  fVar3 = (float)((double)(fStack_30 * fStack_34) * dVar5);
-  *param_1 = (float)((double)(fStack_38 * fStack_38) * dVar5 + dVar4);
+  param_1[4] = (float)((double)(stack_pair_38.second * stack_pair_38.second) * dVar5 + dVar4);
+  fVar1 = (float)((double)(stack_pair_38.second * stack_pair_38.first) * dVar5);
+  fVar2 = (float)((double)(fStack_30 * stack_pair_38.first) * dVar5);
+  fVar3 = (float)((double)(fStack_30 * stack_pair_38.second) * dVar5);
+  *param_1 = (float)((double)(stack_pair_38.first * stack_pair_38.first) * dVar5 + dVar4);
   param_1[8] = (float)((double)(fStack_30 * fStack_30) * dVar5 + dVar4);
   param_1[3] = fVar1 - fStack_30 * fStack_3c;
-  param_1[6] = fStack_34 * fStack_3c + fVar2;
+  param_1[6] = stack_pair_38.second * fStack_3c + fVar2;
   param_1[1] = fStack_30 * fStack_3c + fVar1;
-  param_1[2] = fVar2 - fStack_34 * fStack_3c;
-  param_1[7] = fVar3 - fStack_38 * fStack_3c;
-  param_1[5] = fStack_38 * fStack_3c + fVar3;
+  param_1[2] = fVar2 - stack_pair_38.second * fStack_3c;
+  param_1[7] = fVar3 - stack_pair_38.first * fStack_3c;
+  param_1[5] = stack_pair_38.first * fStack_3c + fVar3;
   return;
 }
 

@@ -83,7 +83,7 @@ void fn_82747400(void)
   undefined1 auStack_90 [16];
   undefined1 auStack_80 [16];
   undefined1 auStack_70 [16];
-  undefined1 auStack_60 [96];
+  undefined1 auStack_60 [32];
   
   iVar6 = fn_82F6A538();
   dStack_e0 = lbl_82005710;

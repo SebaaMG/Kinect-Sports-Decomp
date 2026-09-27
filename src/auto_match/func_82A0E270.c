@@ -30,15 +30,14 @@ extern int fn_82A0DAE0();
 extern int fn_82A0DEE0();
 
 
-byte fn_82A0E270(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefined8 param_4,
-                  undefined8 param_5,undefined8 param_6,undefined8 param_7,undefined8 param_8)
+byte fn_82A0E270(undefined8 param_1, undefined8 param_2, undefined8 param_3, undefined8 param_4, undefined8 param_5, undefined8 param_6, undefined8 param_7, undefined8 param_8, undefined4 in_stack_00000054, int in_stack_0000005c)
 
 {
   byte bVar2;
   int iVar1;
   byte bVar3;
-  undefined4 in_stack_00000054;
-  int in_stack_0000005c;
+
+
   
   if (in_stack_0000005c == 0) {
     bVar2 = fn_82A0DEE0(param_1,param_2,param_4,param_5,param_6,param_7,param_8,in_stack_00000054)

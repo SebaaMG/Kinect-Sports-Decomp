@@ -45,7 +45,7 @@ extern int fn_82810328();
 extern int fn_82810B78();
 extern int fn_8281E128();
 extern int fn_8281E300();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int lbl_821AAD20;
 
 
@@ -69,8 +69,8 @@ void fn_827F9758(undefined8 param_1,int param_2,int param_3,undefined8 param_4,u
   fn_8281E128(auStack_160);
   dVar3 = (double)fn_8280A5D8(param_1);
   lVar1 = (param_6 & 0xffff) * 0x40;
-  fn_82F68CC0(auStack_110,(ulonglong)*(uint *)(param_2 + 0xc) + lVar1,0x40);
-  fn_82F68CC0(auStack_d0,(ulonglong)*(uint *)(param_3 + 0xc) + lVar1,0x40);
+  memcpy(auStack_110,(ulonglong)*(uint *)(param_2 + 0xc) + lVar1,0x40);
+  memcpy(auStack_d0,(ulonglong)*(uint *)(param_3 + 0xc) + lVar1,0x40);
   fn_8280CB70(param_4,auStack_110,auStack_110);
   fn_8280CB70(param_5,auStack_d0,auStack_d0);
   fn_8280CB58(auStack_110,auStack_150);

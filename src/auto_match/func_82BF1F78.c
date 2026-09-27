@@ -33,7 +33,7 @@ undefined8 fn_82BF1F78(int param_1)
 
 {
   undefined8 uVar1;
-  undefined1 auStack_2af [687];
+  undefined1 auStack_2af [671];
   
   if (*(int *)(param_1 + 4) == 0) {
     uVar1 = 900;

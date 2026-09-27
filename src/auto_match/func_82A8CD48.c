@@ -40,13 +40,13 @@ undefined8 fn_82A8CD48(uint *param_1,undefined8 param_2)
   ulonglong uVar2;
   char cVar3;
   longlong lVar4;
-  undefined4 auStack_30 [12];
+  undefined4 auStack_30;
   
-  auStack_30[0] = 0;
-  uVar2 = fn_82A8C850(auStack_30);
+  auStack_30 = 0;
+  uVar2 = fn_82A8C850(&auStack_30);
   *param_1 = (uint)uVar2;
   if (((uVar2 & 0xffffffff) < 0x49) &&
-     (cVar3 = fn_82A8CCB8(auStack_30,param_2,param_1[1],uVar2,0x60), cVar3 != '\0')) {
+     (cVar3 = fn_82A8CCB8(&auStack_30,param_2,param_1[1],uVar2,0x60), cVar3 != '\0')) {
     if (lbl_8315FA80 != 1) {
       uVar2 = (ulonglong)*param_1;
       if (-1 < (longlong)(uVar2 - 1)) {

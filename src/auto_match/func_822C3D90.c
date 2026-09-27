@@ -34,7 +34,7 @@ extern int fn_8251FBA8();
 extern int fn_8265CA60();
 extern int fn_8265CAA0();
 extern int fn_82A1DD38();
-extern int fn_82F63EC8();
+extern int atexit();
 extern unsigned int lbl_83298F5C;
 
 
@@ -46,7 +46,7 @@ undefined8 fn_822C3D90(int param_1,undefined8 param_2)
   ulonglong uVar3;
   undefined8 uVar4;
   int iVar5;
-  undefined4 auStack_30 [12];
+  undefined4 auStack_30 [1];
   
   iVar5 = 0;
   uVar3 = fn_8251F720(param_2,0);
@@ -65,7 +65,7 @@ undefined8 fn_822C3D90(int param_1,undefined8 param_2)
   if (uVar1 == 0) {
     lbl_83298F5C = uVar2 | 1;
     fn_8235A3B8();
-    fn_82F63EC8(0xffffffff8313caf8);
+    atexit(0xffffffff8313caf8);
   }
   uVar4 = fn_822B7900(0xffffffff83298ef8,iVar5);
   fn_8265CAA0(iVar5);

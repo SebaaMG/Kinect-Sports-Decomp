@@ -42,7 +42,7 @@ ulonglong fn_82705390(int param_1,undefined8 param_2,ulonglong param_3,undefined
   longlong lVar2;
   ulonglong uVar3;
   undefined8 uVar4;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [16];
   
   if (*(int *)(param_1 + 0x68) != 0) {
     lVar1 = fn_82693410();

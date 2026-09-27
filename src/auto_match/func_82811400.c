@@ -33,10 +33,10 @@ void fn_82811400(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefi
                   undefined8 param_5)
 
 {
-  undefined4 auStack_10 [4];
+  undefined4 auStack_10;
   
-  auStack_10[0] = 0;
-  fn_82811298(param_1,auStack_10,param_2,param_4,param_5,param_1);
+  auStack_10 = 0;
+  fn_82811298(param_1,&auStack_10,param_2,param_4,param_5,param_1);
   return;
 }
 

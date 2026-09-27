@@ -35,11 +35,11 @@ longlong fn_82C047A8(void)
 {
   ulonglong uVar1;
   ulonglong uStack_20;
-  longlong alStack_18 [3];
+  longlong alStack_18;
   
-  fn_82A1F160(alStack_18);
+  fn_82A1F160(&alStack_18);
   fn_82A1E968(&uStack_20);
-  uVar1 = alStack_18[0] / 1000;
+  uVar1 = alStack_18 / 1000;
   trapDoubleWordImmediate(6,uVar1,0);
   trapDoubleWordImmediate(5,uVar1 & ~((uStack_20 << 1 | uStack_20 >> 0x3f) - 1),0xffff);
   return (longlong)uStack_20 / (longlong)uVar1;

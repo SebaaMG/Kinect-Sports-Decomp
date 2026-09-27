@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_8265C9E0();
 extern int fn_82897ED8();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int lbl_82197140;
 
 
@@ -51,10 +51,10 @@ undefined4 * fn_82899030(undefined4 *param_1,longlong param_2,longlong param_3)
       uVar3 = fn_8265C9E0();
       *puVar4 = (int)uVar3;
       if (*(uint *)(iVar2 + 0x18) < 5) {
-        fn_82F68CC0(uVar3,(param_3 + 2U & 0x3fffffff) * 4 + param_2,param_1[3]);
+        memcpy(uVar3,(param_3 + 2U & 0x3fffffff) * 4 + param_2,param_1[3]);
         return param_1;
       }
-      fn_82F68CC0(uVar3,*(undefined4 *)((int)((param_3 + 2U & 0xffffffff) << 2) + iVar2),param_1[3]
+      memcpy(uVar3,*(undefined4 *)((int)((param_3 + 2U & 0xffffffff) << 2) + iVar2),param_1[3]
                   );
       return param_1;
     }

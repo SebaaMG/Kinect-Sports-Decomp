@@ -55,8 +55,8 @@ void fn_8266A888(void)
   char cVar4;
   int iVar3;
   undefined4 uStack_1c;
-  int iStack_18;
-  uint uStack_14;
+  struct { int first; uint second; } stack_pair_18;
+
   undefined1 auStack_10 [4];
   undefined1 auStack_c [12];
   
@@ -64,18 +64,18 @@ void fn_8266A888(void)
   fn_826660E8(0xffffffff831e7b08,uVar1);
   fn_8266AA68(0xffffffff831e7b08);
   if (lbl_831E7A98 == 0x5c) {
-    iStack_18 = fn_82665A98(0xffffffff831e7a9c);
-    if (-1 < iStack_18) {
-      fn_8266AC20(0xffffffff831e7b08,iStack_18);
-      uStack_14 = fn_8265ED50(0xffffffff831e7a9c);
-      if (uStack_14 == 0) {
+    stack_pair_18.first = fn_82665A98(0xffffffff831e7a9c);
+    if (-1 < stack_pair_18.first) {
+      fn_8266AC20(0xffffffff831e7b08,stack_pair_18.first);
+      stack_pair_18.second = fn_8265ED50(0xffffffff831e7a9c);
+      if (stack_pair_18.second == 0) {
         fn_8266C340(0xffffffff820015c0,0xffffffff82002724,0x1e2,0xffffffff8200276c);
       }
-      if (uStack_14 != 0) {
-        fn_8265F570((ulonglong)uStack_14 + 0x3c);
-        iStack_18 = fn_82665A98();
-        if (-1 < iStack_18) {
-          fn_82666560(0xffffffff831e7b08,&iStack_18);
+      if (stack_pair_18.second != 0) {
+        fn_8265F570((ulonglong)stack_pair_18.second + 0x3c);
+        stack_pair_18.first = fn_82665A98();
+        if (-1 < stack_pair_18.first) {
+          fn_82666560(0xffffffff831e7b08,&stack_pair_18.first);
         }
       }
     }
@@ -88,15 +88,15 @@ void fn_8266A888(void)
     if (cVar4 == '\0') break;
     puVar2 = (undefined4 *)fn_8265FA58(&uStack_1c,0);
     fn_8265F570(*puVar2);
-    iStack_18 = fn_82665A98();
-    if (-1 < iStack_18) {
-      fn_8266AC20(0xffffffff831e7b08,iStack_18);
+    stack_pair_18.first = fn_82665A98();
+    if (-1 < stack_pair_18.first) {
+      fn_8266AC20(0xffffffff831e7b08,stack_pair_18.first);
     }
     fn_8265D3D0(&uStack_1c);
   }
   iVar3 = fn_8265CF70(0xffffffff831e7a74);
-  for (iStack_18 = 0; iStack_18 < iVar3; iStack_18 = iStack_18 + 1) {
-    fn_8266AC20(0xffffffff831e7b08,iStack_18);
+  for (stack_pair_18.first = 0; stack_pair_18.first < iVar3; stack_pair_18.first = stack_pair_18.first + 1) {
+    fn_8266AC20(0xffffffff831e7b08,stack_pair_18.first);
   }
   return;
 }

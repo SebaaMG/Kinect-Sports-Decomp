@@ -42,19 +42,19 @@ fn_82A2A108(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefined4 
   int iVar2;
   uint uStack_40;
   undefined4 uStack_3c;
-  undefined4 uStack_38;
-  undefined4 uStack_34;
+  struct { undefined4 first; undefined4 second; } stack_pair_38;
+
   
   if (param_4 != (undefined4 *)0x0) {
     *param_4 = 0;
   }
   if (param_5 != (undefined4 *)0x0) {
-    uStack_34 = param_5[2];
-    uStack_38 = param_5[3];
+    stack_pair_38.second = param_5[2];
+    stack_pair_38.first = param_5[3];
     *param_5 = 0x103;
     uVar1 = (**(code **)(lbl_8315D3D0 + 0x10))
                       (param_1,param_5[4],0,-(uint)((param_5[4] & 1) == 0) & (uint)param_5,param_5,
-                       param_2,param_3,&uStack_38);
+                       param_2,param_3,&stack_pair_38.first);
     iVar2 = (int)uVar1;
     if ((-1 < iVar2) && (iVar2 != 0x103)) {
       if (param_4 != (undefined4 *)0x0) {

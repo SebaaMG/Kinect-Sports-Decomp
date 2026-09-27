@@ -87,8 +87,8 @@ bool fn_824BBA48(ulonglong param_1,int param_2,uint param_3,int param_4,longlong
   ulonglong uStack_e0;
   undefined4 uStack_d8;
   undefined4 uStack_d4;
-  undefined4 uStack_d0;
-  undefined4 uStack_cc;
+  struct { undefined4 first; undefined4 second; } stack_pair_d0;
+
   undefined4 uStack_c8;
   undefined4 uStack_c4;
   undefined4 uStack_c0;
@@ -129,10 +129,10 @@ bool fn_824BBA48(ulonglong param_1,int param_2,uint param_3,int param_4,longlong
       uVar13 = *(undefined4 *)((int)((param_5 + 0x1baU & 0xffffffff) << 2) + iVar19);
       uVar14 = *(undefined4 *)((int)((param_5 + 0x1bcU & 0xffffffff) << 2) + iVar19);
       uVar15 = *(undefined4 *)((int)((param_5 + 0x1bdU & 0xffffffff) << 2) + iVar19);
-      uStack_cc = *(undefined4 *)((int)((param_5 + 0x1c2U & 0xffffffff) << 2) + iVar19);
+      stack_pair_d0.second = *(undefined4 *)((int)((param_5 + 0x1c2U & 0xffffffff) << 2) + iVar19);
       uVar16 = *(undefined4 *)((int)((param_5 + 0x1aeU & 0xffffffff) << 2) + iVar19);
       uStack_b0 = *(undefined4 *)((int)((param_5 + 0x1c4U & 0xffffffff) << 2) + iVar19);
-      uStack_d0 = *(undefined4 *)((int)((param_5 + 0x1c3U & 0xffffffff) << 2) + iVar19);
+      stack_pair_d0.first = *(undefined4 *)((int)((param_5 + 0x1c3U & 0xffffffff) << 2) + iVar19);
       iVar18 = (((U64)(uStack_e0) >> 0) & 0xFFFFFFFF);
       uStack_b8 = *(undefined4 *)((int)((param_5 + 0x1c5U & 0xffffffff) << 2) + iVar19);
       uStack_b4 = *(undefined4 *)((int)((param_5 + 0x1c6U & 0xffffffff) << 2) + iVar19);
@@ -161,8 +161,8 @@ bool fn_824BBA48(ulonglong param_1,int param_2,uint param_3,int param_4,longlong
       fn_8245B168(iVar18,&uStack_e0,2);
       uStack_e0 = CONCAT26((short)uVar1,(((U64)(uStack_e0) >> 16) & 0xFFFFFFFFFFFF));
       fn_8245B168(iVar18,&uStack_e0,2);
-      fn_8245B168(iVar18,&uStack_d0,4);
-      fn_8245B168(iVar18,&uStack_cc,4);
+      fn_8245B168(iVar18,&stack_pair_d0.first,4);
+      fn_8245B168(iVar18,&stack_pair_d0.second,4);
       fn_8245B168(iVar18,&uStack_c8,4);
       fn_8245B168(iVar18,&uStack_c4,4);
       fn_8245B168(iVar18,&uStack_c0,4);

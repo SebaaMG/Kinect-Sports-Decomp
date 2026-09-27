@@ -39,8 +39,8 @@ void fn_82BAAB88(int param_1,int param_2)
   char cVar3;
   int iVar4;
   longlong lVar5;
-  undefined4 uStack_30;
-  int iStack_2c;
+  struct { undefined4 first; int second; } stack_pair_30;
+
   undefined4 auStack_28 [10];
   
   piVar1 = *(int **)((param_2 + 0x3a) * 4 + param_1);
@@ -51,12 +51,12 @@ void fn_82BAAB88(int param_1,int param_2)
   if ((cVar3 != '\0') && (piVar1[0x14] == 0xb)) {
     iVar2 = (param_2 + 0x20) * 4;
     iVar4 = 0;
-    iStack_2c = piVar1[0xec];
+    stack_pair_30.second = piVar1[0xec];
     lVar5 = 4;
-    uStack_30 = *(undefined4 *)(iVar2 + param_1);
+    stack_pair_30.first = *(undefined4 *)(iVar2 + param_1);
     do {
       *(undefined1 *)((int)auStack_28 + iVar4) =
-           *(undefined1 *)((int)auStack_28 + (*(byte *)((int)&uStack_30 + iVar4) - 4));
+           *(undefined1 *)((int)auStack_28 + (*(byte *)((int)&stack_pair_30.first + iVar4) - 4));
       iVar4 = iVar4 + 1;
       lVar5 = lVar5 + -1;
     } while (lVar5 != 0);

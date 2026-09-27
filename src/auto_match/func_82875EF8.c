@@ -53,7 +53,7 @@ undefined8 fn_82875EF8(longlong param_1)
   undefined8 uVar2;
   undefined8 uVar3;
   int *piVar4;
-  undefined4 **appuStack_100 [5];
+  undefined4 **appuStack_100 [1];
   uint uStack_ec;
   undefined4 **appuStack_e0 [5];
   uint uStack_cc;

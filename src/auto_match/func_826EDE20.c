@@ -40,16 +40,16 @@ void fn_826EDE20(int param_1,undefined8 param_2)
 
 {
   undefined4 *puVar1;
-  undefined4 auStack_50 [4];
-  undefined4 uStack_40;
-  undefined4 uStack_3c;
+  undefined4 auStack_50;
+  struct { undefined4 first; undefined4 second; } stack_pair_40;
+
   undefined4 uStack_38;
   undefined4 uStack_34;
   undefined4 uStack_30;
   
   if (*(int *)(param_1 + 0x68) == 0) {
-    auStack_50[0] = 2;
-    puVar1 = (undefined4 *)fn_8267BED0(param_1,0xc,auStack_50);
+    auStack_50 = 2;
+    puVar1 = (undefined4 *)fn_8267BED0(param_1,0xc,&auStack_50);
     if (puVar1 == (undefined4 *)0x0) {
       puVar1 = (undefined4 *)0x0;
     }
@@ -60,13 +60,13 @@ void fn_826EDE20(int param_1,undefined8 param_2)
     }
     *(undefined4 **)(param_1 + 0x68) = puVar1;
   }
-  uStack_40 = 0;
-  uStack_3c = 0;
+  stack_pair_40.first = 0;
+  stack_pair_40.second = 0;
   uStack_38 = 0;
   uStack_34 = 0;
   uStack_30 = *(undefined4 *)(*(int *)(param_1 + 0x68) + 4);
   fn_826EC4B0(*(int *)(param_1 + 0x68),param_2);
-  fn_826EBEB0(param_1 + 0x50,&uStack_40);
+  fn_826EBEB0(param_1 + 0x50,&stack_pair_40.first);
   *(bool *)(param_1 + 0x15) = *(char *)(param_1 + 0x14) == '\0';
   return;
 }

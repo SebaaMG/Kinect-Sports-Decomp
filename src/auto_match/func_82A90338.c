@@ -56,7 +56,7 @@ undefined8 fn_82A90338(int param_1,int *param_2)
   undefined1 auStack_c0 [32];
   undefined **appuStack_a0 [8];
   undefined **appuStack_80 [8];
-  undefined1 auStack_60 [96];
+  undefined1 auStack_60 [48];
   
   cVar2 = (**(code **)(*param_2 + 4))(param_2);
   if ((cVar2 != '\0') &&

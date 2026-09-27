@@ -54,8 +54,8 @@ void fn_826F16C0(uint *param_1,int *param_2)
   int iStack_34;
   int iStack_30;
   int iStack_2c;
-  int iStack_28;
-  int iStack_24;
+  struct { int first; int second; } stack_pair_28;
+
   int iStack_20;
   int iStack_1c;
   int iStack_18;
@@ -92,10 +92,10 @@ void fn_826F16C0(uint *param_1,int *param_2)
     *(byte *)((int)param_1 + 5) = *(byte *)((int)param_1 + 5) | 1;
     uVar4 = (uint)(param_2[1] != 0);
     iVar2 = param_2[1] - uVar4;
-    piVar3 = &iStack_28;
+    piVar3 = &stack_pair_28.first;
     iVar5 = *param_2 + uVar4;
-    iStack_28 = iVar5;
-    iStack_24 = iVar2;
+    stack_pair_28.first = iVar5;
+    stack_pair_28.second = iVar2;
   }
   else if (cVar1 == '-') {
     *(byte *)((int)param_1 + 6) = *(byte *)((int)param_1 + 6) | 0x20;

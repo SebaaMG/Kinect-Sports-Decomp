@@ -26,7 +26,7 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_40;
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 void fn_82551D80(int param_1,int param_2,int param_3)
@@ -35,7 +35,7 @@ void fn_82551D80(int param_1,int param_2,int param_3)
   uint uVar1;
   uint uVar2;
   bool bVar3;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [32];
   
   uVar1 = *(uint *)(param_1 + 0x10);
   uVar2 = *(uint *)(param_2 + 0x10);
@@ -48,9 +48,9 @@ void fn_82551D80(int param_1,int param_2,int param_3)
     uVar1 = uVar1 ^ uVar2;
   }
   if ((((~(ulonglong)uVar1 & 0xffffffff) >> 0x1f) + (ulonglong)bVar3 & 1) != 0) {
-    fn_82F68CC0(auStack_40,param_2,0x18);
-    fn_82F68CC0(param_2,param_1,0x18);
-    fn_82F68CC0(param_1,auStack_40,0x18);
+    memcpy(auStack_40,param_2,0x18);
+    memcpy(param_2,param_1,0x18);
+    memcpy(param_1,auStack_40,0x18);
   }
   uVar1 = *(uint *)(param_3 + 0x10);
   uVar2 = *(uint *)(param_2 + 0x10);
@@ -60,9 +60,9 @@ void fn_82551D80(int param_1,int param_2,int param_3)
   }
   if ((((~(ulonglong)(uVar2 ^ uVar1) & 0xffffffff) >> 0x1f) + (ulonglong)(uVar2 <= uVar1) & 1) != 0)
   {
-    fn_82F68CC0(auStack_40,param_3,0x18);
-    fn_82F68CC0(param_3,param_2,0x18);
-    fn_82F68CC0(param_2,auStack_40,0x18);
+    memcpy(auStack_40,param_3,0x18);
+    memcpy(param_3,param_2,0x18);
+    memcpy(param_2,auStack_40,0x18);
   }
   uVar1 = *(uint *)(param_2 + 0x10);
   uVar2 = *(uint *)(param_1 + 0x10);
@@ -72,9 +72,9 @@ void fn_82551D80(int param_1,int param_2,int param_3)
   }
   if ((((~(ulonglong)(uVar2 ^ uVar1) & 0xffffffff) >> 0x1f) + (ulonglong)(uVar2 <= uVar1) & 1) != 0)
   {
-    fn_82F68CC0(auStack_40,param_2,0x18);
-    fn_82F68CC0(param_2,param_1,0x18);
-    fn_82F68CC0(param_1,auStack_40,0x18);
+    memcpy(auStack_40,param_2,0x18);
+    memcpy(param_2,param_1,0x18);
+    memcpy(param_1,auStack_40,0x18);
   }
   return;
 }

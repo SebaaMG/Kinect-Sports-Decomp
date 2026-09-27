@@ -39,7 +39,7 @@ longlong fn_827E8478(undefined4 *param_1,int param_2,undefined8 param_3)
   int iVar3;
   undefined4 *puVar4;
   longlong lVar5;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [1];
   
   puVar1 = (undefined4 *)*param_1;
   lVar5 = 0;

@@ -50,14 +50,14 @@ void fn_826C4FD8(int *param_1,int param_2,undefined4 param_3,undefined4 param_4)
   int iStack_48;
   undefined4 uStack_44;
   undefined4 uStack_40;
-  undefined4 uStack_3c;
-  undefined4 uStack_38;
+  struct { undefined4 first; undefined4 second; } stack_pair_3c;
+
   undefined4 uStack_34;
   undefined4 uStack_30;
   undefined4 uStack_2c;
   
-  uStack_3c = 0;
-  uStack_38 = 0;
+  stack_pair_3c.first = 0;
+  stack_pair_3c.second = 0;
   uStack_34 = 0;
   uStack_30 = 0;
   uStack_2c = 0;
@@ -65,7 +65,7 @@ void fn_826C4FD8(int *param_1,int param_2,undefined4 param_3,undefined4 param_4)
   iStack_48 = param_2;
   uStack_44 = param_3;
   uStack_40 = param_4;
-  piStack_4c = (int *)(**(code **)(*param_1 + 0x24))(param_1,param_2,&uStack_3c);
+  piStack_4c = (int *)(**(code **)(*param_1 + 0x24))(param_1,param_2,&stack_pair_3c.first);
   if ((*(byte *)(piStack_4c[0x1d] + 0x66) & 0x10) != 0) {
     piStack_4c = *(int **)(param_2 + 0x18);
   }

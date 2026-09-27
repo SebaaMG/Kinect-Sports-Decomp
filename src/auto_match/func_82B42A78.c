@@ -51,8 +51,8 @@ void fn_82B42A78(undefined8 param_1,uint param_2,undefined8 param_3,int param_4)
   uint *puVar8;
   uint uVar9;
   int iVar10;
-  undefined4 uStack_60;
-  uint uStack_5c;
+  struct { undefined4 first; uint second; } stack_pair_60;
+
   
   puVar6 = (uint *)fn_82ABE250(param_1,8,6);
   puVar4 = puVar6 + 1;
@@ -73,12 +73,12 @@ LAB_82b42c58:
                     /* WARNING: Subroutine does not return */
         fn_82AA66A8(param_1,0x12c0);
       }
-      fn_82B85298(&uStack_60,param_1,uVar9,param_3,param_4);
-      uVar5 = fn_82B4BAA8(param_1,&uStack_60);
-      uStack_60 = fn_82AD35E8(param_1,uVar9,uVar9 + 0x18,uVar5,uVar5);
-      uStack_5c = uStack_5c & 0x10000 | 1;
+      fn_82B85298(&stack_pair_60.first,param_1,uVar9,param_3,param_4);
+      uVar5 = fn_82B4BAA8(param_1,&stack_pair_60.first);
+      stack_pair_60.first = fn_82AD35E8(param_1,uVar9,uVar9 + 0x18,uVar5,uVar5);
+      stack_pair_60.second = stack_pair_60.second & 0x10000 | 1;
       iVar7 = fn_82B4A218(uVar9,param_3,param_1);
-      *(ulonglong *)(iVar7 + param_4 * 8) = CONCAT44(uStack_60,uStack_5c);
+      *(ulonglong *)(iVar7 + param_4 * 8) = CONCAT44(stack_pair_60.first,stack_pair_60.second);
       do {
         if ((*(uint *)(iVar10 + 0x30) >> 0x13 & 1) != 0) break;
         iVar10 = *(int *)(iVar10 + 0x34);

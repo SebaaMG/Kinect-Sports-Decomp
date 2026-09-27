@@ -40,7 +40,7 @@ void fn_827533C8(ulonglong param_1,undefined8 param_2,undefined8 param_3,undefin
 {
   undefined8 uVar1;
   ulonglong uVar2;
-  uint auStack_50 [20];
+  uint auStack_50 [4];
   
   if ((param_1 & 0xffffffff) != 0) {
     fn_8268AFB0(auStack_50,lbl_831E7E64);

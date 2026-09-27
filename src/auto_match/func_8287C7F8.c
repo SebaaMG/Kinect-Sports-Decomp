@@ -31,9 +31,9 @@ extern int fn_82A1E968();
 ulonglong fn_8287C7F8(void)
 
 {
-  longlong alStack_10 [2];
+  longlong alStack_10;
   
-  fn_82A1E968(alStack_10);
-  return (ulonglong)(alStack_10[0] * 0x4e2) / 0xf38b;
+  fn_82A1E968(&alStack_10);
+  return (ulonglong)(alStack_10 * 0x4e2) / 0xf38b;
 }
 

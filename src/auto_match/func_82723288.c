@@ -55,7 +55,7 @@ void fn_82723288(int param_1)
   longlong lVar9;
   int *piVar11;
   undefined4 *apuStack_850 [4];
-  undefined1 auStack_840 [2112];
+  undefined1 auStack_840 [2048];
   
   if (*(int **)(param_1 + 8) != (int *)0x0) {
     iVar7 = (**(code **)(**(int **)(param_1 + 8) + 8))();

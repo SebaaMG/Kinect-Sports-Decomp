@@ -43,7 +43,7 @@ void fn_822CFD30(int param_1)
   undefined4 uVar4;
   int iVar5;
   int iVar6;
-  undefined1 auStack_60 [96];
+  undefined1 auStack_60 [64];
   
   if (*(int *)(*(int *)(param_1 + 0x1c0) + 0x204) != 0) {
     return;

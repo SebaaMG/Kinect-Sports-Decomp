@@ -39,7 +39,7 @@ longlong fn_82817FA0(int *param_1,char *param_2,int param_3)
   char *pcVar5;
   char *pcVar6;
   longlong lVar7;
-  int aiStack_40 [16];
+  int aiStack_40 [4];
   
   lVar7 = 0;
   if ((param_1 != (int *)0x0) && (param_2 != (char *)0x0)) {

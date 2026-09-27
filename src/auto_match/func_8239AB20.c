@@ -55,7 +55,7 @@ void fn_8239AB20(int param_1)
   undefined4 uVar15;
   undefined4 uStack_60;
   float fStack_5c;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [16];
   
   iVar9 = param_1 + 0x1e8;
   for (puVar10 = *(undefined8 **)(param_1 + 0x1e8); puVar10 != *(undefined8 **)(param_1 + 0x1ec);

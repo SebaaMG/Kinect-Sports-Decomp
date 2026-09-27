@@ -40,7 +40,7 @@ int * fn_828B52D0(int *param_1,int param_2,int *param_3)
   undefined8 uVar1;
   int iVar2;
   undefined1 auStack_30 [4];
-  int *apiStack_2c [11];
+  int * apiStack_2c;
   
   *param_1 = (int)&lbl_82024E20;
   fn_828D5330(param_1 + 2,auStack_30);
@@ -54,8 +54,8 @@ int * fn_828B52D0(int *param_1,int param_2,int *param_3)
   param_1[0x10] = iVar2;
   fn_828B3948(param_1 + 0x11,auStack_30,auStack_30);
   fn_828B3948(param_1 + 0x15,auStack_30,auStack_30);
-  apiStack_2c[0] = param_3;
-  fn_828B27A8(param_1 + 8,param_1[8],apiStack_2c);
+  apiStack_2c = param_3;
+  fn_828B27A8(param_1 + 8,param_1[8],&apiStack_2c);
   (**(code **)(*param_1 + 0x18))(param_1);
   return param_1;
 }

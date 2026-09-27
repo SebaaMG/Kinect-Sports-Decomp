@@ -48,7 +48,7 @@ extern int fn_82673A28();
 extern int fn_828647D8();
 extern int fn_82864898();
 extern int fn_82864988();
-extern int fn_82F691F0();
+extern int memset();
 extern unsigned int iStack_294;
 extern unsigned int iStack_29c;
 extern unsigned int lbl_82002B04;
@@ -79,8 +79,8 @@ void fn_82279768(undefined4 *param_1,undefined4 *param_2,undefined4 param_3,unde
   longlong lVar10;
   undefined4 in_stack_00000054;
   undefined4 *in_stack_0000005c;
-  undefined4 uStack_2b0;
-  undefined4 uStack_2ac;
+  struct { undefined4 first; undefined4 second; } stack_pair_2b0;
+
   undefined **ppuStack_2a8;
   undefined4 uStack_2a4;
   undefined1 auStack_2a0 [4];
@@ -89,7 +89,7 @@ void fn_82279768(undefined4 *param_1,undefined4 *param_2,undefined4 param_3,unde
   int iStack_294;
   undefined1 auStack_290 [48];
   undefined2 uStack_260;
-  undefined1 auStack_25e [606];
+  undefined1 auStack_25e [526];
   
   puVar9 = param_1 + 2;
   *param_1 = &lbl_821A82B8;
@@ -149,10 +149,10 @@ void fn_82279768(undefined4 *param_1,undefined4 *param_2,undefined4 param_3,unde
       fn_822315A0();
     }
     if (in_stack_0000005c != (undefined4 *)0x0) {
-      uStack_2b0 = 0;
-      uStack_2ac = 0;
-      fn_82517978(&uStack_2b0,*puVar9,param_1[3],0);
-      (**(code **)*in_stack_0000005c)(in_stack_0000005c,&uStack_2b0);
+      stack_pair_2b0.first = 0;
+      stack_pair_2b0.second = 0;
+      fn_82517978(&stack_pair_2b0.first,*puVar9,param_1[3],0);
+      (**(code **)*in_stack_0000005c)(in_stack_0000005c,&stack_pair_2b0.first);
     }
     fn_82864988(auStack_290,0xffffffff821a7cd8);
     uVar6 = fn_828647D8();
@@ -188,7 +188,7 @@ void fn_82279768(undefined4 *param_1,undefined4 *param_2,undefined4 param_3,unde
     fn_82672C20(*puVar9,0xffffffff821a822c,0,0);
     uStack_260 = lbl_820E975C;
                     /* WARNING: Subroutine does not return */
-    fn_82F691F0(auStack_25e,0,0x1fe);
+    memset(auStack_25e,0,0x1fe);
   }
   uStack_2a4 = 0;
   ppuStack_2a8 = &lbl_82002B04;

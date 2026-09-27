@@ -48,7 +48,7 @@ void fn_8295F950(int param_1,undefined8 param_2,int param_3)
   int iVar11;
   int iStack_50;
   undefined4 uStack_4c;
-  undefined4 auStack_48 [18];
+  undefined4 auStack_48 [10];
   
   puVar1 = *(uint **)(param_1 + 0x104);
   uVar2 = *puVar1;

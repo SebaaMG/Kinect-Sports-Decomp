@@ -38,7 +38,7 @@ undefined8 fn_82940730(int *param_1)
   uint uVar4;
   undefined8 uVar5;
   uint uVar6;
-  uint auStack_30 [12];
+  uint auStack_30;
   
   if (param_1[0xd] == 0) {
     uVar5 = 0xffffffff80004001;
@@ -57,25 +57,25 @@ undefined8 fn_82940730(int *param_1)
           (*(int *)(iVar3 + 0xc) != *(int *)(iVar2 + 0xc))) ||
          (*(int *)(iVar3 + 0x10) != *(int *)(iVar2 + 0x10))) {
         uVar4 = *(uint *)(*(int *)(*(int *)(iVar3 + 0x14) * 4 + param_1[5]) + 0xc) & 0x7ff;
-        auStack_30[0] = uVar4 | 0xb0001000;
+        auStack_30 = uVar4 | 0xb0001000;
         uVar1 = *(uint *)(*(int *)(*(int *)(iVar3 + 0x14) * 4 + param_1[5]) + 0x10);
         if (uVar1 != 0) {
           if (uVar1 == 1) {
-            auStack_30[0] = uVar4 | 0xb0551000;
+            auStack_30 = uVar4 | 0xb0551000;
           }
           else if (uVar1 < 3) {
-            auStack_30[0] = uVar4 | 0xb0aa1000;
+            auStack_30 = uVar4 | 0xb0aa1000;
           }
           else if (uVar1 == 3) {
-            auStack_30[0] = uVar4 | 0xb0ff1000;
+            auStack_30 = uVar4 | 0xb0ff1000;
           }
         }
         if (*(int *)(iVar3 + 0x18) == 0) {
-          auStack_30[0] = auStack_30[0] | 0xd000000;
+          auStack_30 = auStack_30 | 0xd000000;
         }
         uVar5 = (**(code **)(*param_1 + 0x23c))
                           (param_1,(longlong)*(int *)(param_1[0x41] + 0xc) * (longlong)(int)uVar6,
-                           *(int *)(param_1[0x41] + 0xc),auStack_30);
+                           *(int *)(param_1[0x41] + 0xc),&auStack_30);
         if ((int)uVar5 < 0) {
           return uVar5;
         }

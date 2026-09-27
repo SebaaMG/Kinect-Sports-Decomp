@@ -31,7 +31,7 @@ extern unsigned int *auStack_d0;
 extern int fn_82AA05D8();
 extern int fn_82AA1FC8();
 extern int fn_82F63F40();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int iStack_1d4;
 extern unsigned int iStack_1f8;
 extern unsigned int iStack_1fc;
@@ -56,8 +56,8 @@ void fn_82AA2370(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefi
   uint uVar5;
   uint uVar6;
   int iVar7;
-  int iStack_200;
-  int iStack_1fc;
+  struct { int first; int second; } stack_pair_200;
+
   int iStack_1f8;
   uint uStack_1f4;
   uint uStack_1f0;
@@ -69,9 +69,9 @@ void fn_82AA2370(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefi
   int iStack_1d4;
   undefined1 auStack_1d0 [128];
   undefined1 auStack_150 [128];
-  undefined1 auStack_d0 [208];
+  undefined1 auStack_d0 [128];
   
-  fn_82F68CC0(&iStack_200,param_5,0x30);
+  memcpy(&stack_pair_200.first,param_5,0x30);
   uVar2 = 0xffffffff820d29ec;
   if (uStack_1e0 == 1) {
     if (uStack_1dc != 0) {
@@ -81,37 +81,37 @@ void fn_82AA2370(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefi
   else {
     uVar2 = 0xffffffff820d31e8;
   }
-  fn_82F63F40(auStack_1d0,uVar2,param_3,param_2,iStack_200,param_4);
+  fn_82F63F40(auStack_1d0,uVar2,param_3,param_2,stack_pair_200.first,param_4);
   if (uStack_1e0 == 1) {
     if (uStack_1dc == 0) {
-      fn_82AA1FC8(param_1,auStack_1d0,&iStack_200);
+      fn_82AA1FC8(param_1,auStack_1d0,&stack_pair_200.first);
       if (uStack_1e0 != 1) goto LAB_82aa2430;
       if (uStack_1dc == 0) {
         return;
       }
     }
-    fn_82F63F40(auStack_150,0xffffffff820d29ec,param_3,param_2,iStack_200,param_4);
+    fn_82F63F40(auStack_150,0xffffffff820d29ec,param_3,param_2,stack_pair_200.first,param_4);
     piVar4 = (int *)(*(int *)(param_8 + 0xc) + param_6);
     uVar5 = uStack_1f4;
     for (uVar3 = (ulonglong)uStack_1dc; uVar3 != 0; uVar3 = uVar3 - 1) {
       iVar7 = piVar4[1] + param_6;
-      iStack_200 = *piVar4 + param_6;
+      stack_pair_200.first = *piVar4 + param_6;
       uStack_1e4 = (uint)*(ushort *)(iVar7 + 6);
       uStack_1e8 = (uint)*(ushort *)(iVar7 + 4);
       uStack_1f0 = (uint)*(ushort *)(piVar4[1] + param_6);
       uStack_1ec = (uint)*(ushort *)(iVar7 + 2);
       uStack_1e0 = (uint)*(ushort *)(iVar7 + 8);
       uStack_1dc = (uint)*(ushort *)(iVar7 + 10);
-      uStack_1f4 = fn_82AA05D8(&iStack_200,param_6,iVar7);
+      uStack_1f4 = fn_82AA05D8(&stack_pair_200.first,param_6,iVar7);
       if (uVar5 < uStack_1f4) {
         uStack_1f4 = uVar5;
       }
       uVar5 = uVar5 - uStack_1f4;
-      fn_82AA2370(param_1,0xffffffff821c7f2c,auStack_150,0xffffffff82196582,&iStack_200,param_6,
+      fn_82AA2370(param_1,0xffffffff821c7f2c,auStack_150,0xffffffff82196582,&stack_pair_200.first,param_6,
                     param_7,iVar7);
       iStack_1f8 = iStack_1f8 + uStack_1f4;
       if (iStack_1d4 != 0) {
-        iStack_1d4 = ((-(uint)(iStack_1fc != 0) & 3) + 1) * uStack_1f4 * 4 + iStack_1d4;
+        iStack_1d4 = ((-(uint)(stack_pair_200.second != 0) & 3) + 1) * uStack_1f4 * 4 + iStack_1d4;
       }
       piVar4 = piVar4 + 2;
     }
@@ -121,7 +121,7 @@ LAB_82aa2430:
     fn_82F63F40(auStack_150,0xffffffff821c8538,param_3,param_2,param_4);
     uVar5 = uStack_1e0;
     uStack_1e0 = 1;
-    uVar1 = fn_82AA05D8(&iStack_200,param_6,param_8);
+    uVar1 = fn_82AA05D8(&stack_pair_200.first,param_6,param_8);
     uVar3 = 0;
     uVar6 = uStack_1f4;
     uStack_1f4 = uVar1;
@@ -132,11 +132,11 @@ LAB_82aa2430:
           uStack_1f4 = uVar6;
         }
         uVar6 = uVar6 - uStack_1f4;
-        fn_82AA2370(param_1,0xffffffff82196582,auStack_150,auStack_d0,&iStack_200,param_6,param_7,
+        fn_82AA2370(param_1,0xffffffff82196582,auStack_150,auStack_d0,&stack_pair_200.first,param_6,param_7,
                       param_8);
         iStack_1f8 = iStack_1f8 + uStack_1f4;
         if (iStack_1d4 != 0) {
-          iStack_1d4 = ((-(uint)(iStack_1fc != 0) & 3) + 1) * uStack_1f4 * 4 + iStack_1d4;
+          iStack_1d4 = ((-(uint)(stack_pair_200.second != 0) & 3) + 1) * uStack_1f4 * 4 + iStack_1d4;
         }
         uVar3 = uVar3 + 1;
       } while ((uVar3 & 0xffffffff) < (ulonglong)uVar5);

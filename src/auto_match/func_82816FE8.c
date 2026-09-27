@@ -32,17 +32,17 @@ void fn_82816FE8(int param_1,uint param_2,undefined4 *param_3)
 
 {
   int iVar1;
-  int aiStack_30 [12];
+  int aiStack_30;
   
-  fn_82816EF0(param_1,param_2,aiStack_30);
-  if (aiStack_30[0] == 0) {
+  fn_82816EF0(param_1,param_2,&aiStack_30);
+  if (aiStack_30 == 0) {
     iVar1 = 0;
     *param_3 = 0;
     param_3[1] = 0;
   }
   else {
-    *param_3 = *(undefined4 *)(aiStack_30[0] + 4);
-    param_3[1] = *(undefined4 *)(aiStack_30[0] + 8);
+    *param_3 = *(undefined4 *)(aiStack_30 + 4);
+    param_3[1] = *(undefined4 *)(aiStack_30 + 8);
     if (*(int *)(param_1 + 0x38) == 0) {
       iVar1 = 0;
     }

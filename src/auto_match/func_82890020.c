@@ -50,7 +50,7 @@ longlong fn_82890020(int *param_1,ulonglong param_2,uint param_3)
   int aiStack_48 [2];
   undefined8 uStack_40;
   undefined1 auStack_38 [8];
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [1];
   
   iStack00000018 = (int)(param_2 >> 0x20);
   lVar3 = ((ulonglong)(uint)(iStack00000018 - *param_1 >> 2) & 0x7ffffff) * 0x20 +

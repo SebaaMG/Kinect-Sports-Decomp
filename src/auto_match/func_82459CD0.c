@@ -40,8 +40,8 @@ void fn_82459CD0(double *param_1)
   int iVar1;
   undefined4 uVar2;
   double dVar3;
-  undefined4 uStack_130;
-  undefined4 uStack_12c;
+  struct { undefined4 first; undefined4 second; } stack_pair_130;
+
   undefined4 uStack_120;
   undefined4 uStack_11c;
   
@@ -51,10 +51,10 @@ void fn_82459CD0(double *param_1)
   }
   else {
     uStack_11c = *(undefined4 *)(param_1 + 4);
-    uStack_130 = 0;
+    stack_pair_130.first = 0;
     uStack_120 = 1;
-    uStack_12c = 0;
-    iVar1 = fn_82CE09D0(0,0,&uStack_120,0,&uStack_130);
+    stack_pair_130.second = 0;
+    iVar1 = fn_82CE09D0(0,0,&uStack_120,0,&stack_pair_130.first);
     if (iVar1 != -1) {
       if (iVar1 < 1) {
         return;

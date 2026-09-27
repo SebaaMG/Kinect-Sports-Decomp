@@ -43,13 +43,13 @@ undefined4 fn_828A4ED0(undefined4 param_1)
   undefined4 uStack00000014;
   undefined1 uStack_20;
   int iStack_1c;
-  undefined4 uStack_18;
-  undefined4 uStack_14;
+  struct { undefined4 first; undefined4 second; } stack_pair_18;
+
   
   uStack00000014 = param_1;
-  fn_828A1C98(&uStack_18,0xffffffff83213f00,&stack0x00000014);
+  fn_828A1C98(&stack_pair_18.first,0xffffffff83213f00,&stack0x00000014);
   iStack_1c = 0;
-  fn_828A1E60(uStack_18,uStack_14,&iStack_1c,uStack_20);
+  fn_828A1E60(stack_pair_18.first,stack_pair_18.second,&iStack_1c,uStack_20);
   if (iStack_1c == 0) {
     return 0;
   }

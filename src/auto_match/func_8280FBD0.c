@@ -34,7 +34,7 @@ void fn_8280FBD0(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefi
                   undefined8 param_5,undefined8 param_6)
 
 {
-  undefined1 auStack_70 [112];
+  undefined1 auStack_70 [64];
   
   fn_8280FAD0(param_1,param_2,auStack_70);
   fn_8280F098(auStack_70,param_3,param_4,param_5,param_6);

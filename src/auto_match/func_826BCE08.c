@@ -36,7 +36,7 @@ void fn_826BCE08(char *param_1,undefined8 param_2)
   char cVar1;
   undefined4 *puVar2;
   char *pcVar3;
-  char acStack_180 [384];
+  char acStack_180 [352];
   
   puVar2 = (undefined4 *)fn_82F64258();
   cVar1 = *(char *)*puVar2;

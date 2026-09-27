@@ -50,7 +50,7 @@ undefined8 fn_826034A0(int *param_1)
   uint uVar4;
   int iVar5;
   undefined1 auStack_b0 [16];
-  undefined1 auStack_a0 [160];
+  undefined1 auStack_a0 [144];
   
   uVar4 = 0;
   if (param_1[1] != 0) {

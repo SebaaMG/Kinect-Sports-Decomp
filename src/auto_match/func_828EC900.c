@@ -26,8 +26,8 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_82CE1258();
-extern int fn_82F68CC0();
-extern int fn_82F691F0();
+extern int memcpy();
+extern int memset();
 
 
 void fn_828EC900(int param_1)
@@ -70,8 +70,8 @@ void fn_828EC900(int param_1)
             *puVar12 = *puVar13;
             lVar15 = lVar15 + -1;
           } while (lVar15 != 0);
-          fn_82F68CC0(param_1 + 0x40,param_1 + 0x1f0,0x10);
-          fn_82F68CC0(param_1 + 0x1c,param_1 + 0x200,0x24);
+          memcpy(param_1 + 0x40,param_1 + 0x1f0,0x10);
+          memcpy(param_1 + 0x1c,param_1 + 0x200,0x24);
           *(undefined4 *)(param_1 + 300) = 0;
           *(undefined4 *)(param_1 + 0x130) = 0;
           puVar14 = (undefined4 *)(param_1 + 0x58);
@@ -124,8 +124,8 @@ void fn_828EC900(int param_1)
             *puVar12 = *puVar13;
             lVar15 = lVar15 + -1;
           } while (lVar15 != 0);
-          fn_82F68CC0(param_1 + 0x40,param_1 + 0x1f0,0x10);
-          fn_82F68CC0(param_1 + 0x1c,param_1 + 0x200,0x24);
+          memcpy(param_1 + 0x40,param_1 + 0x1f0,0x10);
+          memcpy(param_1 + 0x1c,param_1 + 0x200,0x24);
           puVar14 = (undefined4 *)(param_1 + 0x58);
           lVar15 = 7;
           do {
@@ -171,15 +171,15 @@ void fn_828EC900(int param_1)
       uVar9 = *(uint *)(param_1 + 0x224);
       if (uVar9 == 0) {
                     /* WARNING: Subroutine does not return */
-        fn_82F691F0(param_1 + 0x14,0,0x3c);
+        memset(param_1 + 0x14,0,0x3c);
       }
       if (uVar9 == 1) {
                     /* WARNING: Subroutine does not return */
-        fn_82F691F0(param_1 + 0x14,0,0x3c);
+        memset(param_1 + 0x14,0,0x3c);
       }
       if (uVar9 < 3) {
                     /* WARNING: Subroutine does not return */
-        fn_82F691F0(param_1 + 0x14,0,0x3c);
+        memset(param_1 + 0x14,0,0x3c);
       }
       *(undefined1 *)(param_1 + 0x1e1) = 0;
     }

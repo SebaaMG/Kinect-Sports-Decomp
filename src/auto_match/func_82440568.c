@@ -26,14 +26,14 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_80;
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 void fn_82440568(int *param_1,int *param_2,int *param_3)
 
 {
   bool bVar1;
-  undefined1 auStack_80 [128];
+  undefined1 auStack_80 [96];
   
   if (((uint)param_1[0x11] < (uint)param_2[0x11]) ||
      ((param_2[0x11] == param_1[0x11] && (*param_2 < *param_1)))) {
@@ -43,9 +43,9 @@ void fn_82440568(int *param_1,int *param_2,int *param_3)
     bVar1 = false;
   }
   if (bVar1) {
-    fn_82F68CC0(auStack_80,param_2,0x5c);
-    fn_82F68CC0(param_2,param_1,0x5c);
-    fn_82F68CC0(param_1,auStack_80,0x5c);
+    memcpy(auStack_80,param_2,0x5c);
+    memcpy(param_2,param_1,0x5c);
+    memcpy(param_1,auStack_80,0x5c);
   }
   if (((uint)param_2[0x11] < (uint)param_3[0x11]) ||
      ((param_3[0x11] == param_2[0x11] && (*param_3 < *param_2)))) {
@@ -55,9 +55,9 @@ void fn_82440568(int *param_1,int *param_2,int *param_3)
     bVar1 = false;
   }
   if (bVar1) {
-    fn_82F68CC0(auStack_80,param_3,0x5c);
-    fn_82F68CC0(param_3,param_2,0x5c);
-    fn_82F68CC0(param_2,auStack_80,0x5c);
+    memcpy(auStack_80,param_3,0x5c);
+    memcpy(param_3,param_2,0x5c);
+    memcpy(param_2,auStack_80,0x5c);
   }
   if (((uint)param_1[0x11] < (uint)param_2[0x11]) ||
      ((param_2[0x11] == param_1[0x11] && (*param_2 < *param_1)))) {
@@ -67,9 +67,9 @@ void fn_82440568(int *param_1,int *param_2,int *param_3)
     bVar1 = false;
   }
   if (bVar1) {
-    fn_82F68CC0(auStack_80,param_2,0x5c);
-    fn_82F68CC0(param_2,param_1,0x5c);
-    fn_82F68CC0(param_1,auStack_80,0x5c);
+    memcpy(auStack_80,param_2,0x5c);
+    memcpy(param_2,param_1,0x5c);
+    memcpy(param_1,auStack_80,0x5c);
   }
   return;
 }

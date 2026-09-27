@@ -41,7 +41,7 @@ undefined8 fn_828DC748(int param_1)
   ulonglong uVar2;
   char cVar4;
   undefined8 uVar3;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
   
   fn_828B5580(auStack_30,param_1 + 0x60);
   uVar2 = fn_8288F1E8(*(undefined4 *)(param_1 + 0x6c),auStack_30);

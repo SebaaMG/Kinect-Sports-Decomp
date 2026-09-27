@@ -33,12 +33,12 @@ extern unsigned int uStack_20;
 undefined8 fn_82675D88(int param_1,undefined8 param_2,undefined8 param_3,undefined4 *param_4)
 
 {
-  undefined4 uStack_20;
-  undefined4 uStack_1c;
+  struct { undefined4 first; undefined4 second; } stack_pair_20;
+
   
-  fn_8263C7D8(*(undefined4 *)(param_1 + 0x28),param_2,&uStack_20,0,0);
-  param_4[2] = uStack_1c;
-  param_4[3] = uStack_20;
+  fn_8263C7D8(*(undefined4 *)(param_1 + 0x28),param_2,&stack_pair_20.first,0,0);
+  param_4[2] = stack_pair_20.second;
+  param_4[3] = stack_pair_20.first;
   *param_4 = *(undefined4 *)(param_1 + 0x20);
   param_4[1] = *(undefined4 *)(param_1 + 0x24);
   return 1;

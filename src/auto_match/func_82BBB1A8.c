@@ -66,8 +66,8 @@ void fn_82BBB1A8(int param_1)
   longlong lVar11;
   int iVar12;
   longlong lVar13;
-  undefined4 uStack_80;
-  undefined4 uStack_7c;
+  struct { undefined4 first; undefined4 second; } stack_pair_80;
+
   int aiStack_78 [2];
   undefined1 auStack_70 [4];
   int iStack_6c;
@@ -81,22 +81,22 @@ void fn_82BBB1A8(int param_1)
     iVar6 = *(int *)(*(int *)(*(int *)(param_1 + 0x814) + 8) + iVar12);
     if ((*(uint *)(iVar6 + 0xe4) & 1) != 0) {
       iVar7 = *(int *)(iVar6 + 0x80);
-      uStack_7c = ((((U64)(uStack_7c)) & (~(((U64)0xFF) << 8))) | ((((U64)((byte)((uint)iVar7 >> 0x10))) & ((U64)0xFF)) << 8));
-      uStack_7c = ((((U64)(uStack_7c)) & (~(((U64)0xFF) << 16))) | ((((U64)((byte)((uint)iVar7 >> 8))) & ((U64)0xFF)) << 16));
-      uStack_7c = ((((U64)(uStack_7c)) & (~(((U64)0xFF) << 24))) | ((((U64)((byte)iVar7)) & ((U64)0xFF)) << 24));
-      uStack_7c = ((((U64)(uStack_7c)) & (~(((U64)0xFF) << 0))) | ((((U64)((byte)((uint)iVar7 >> 0x18))) & ((U64)0xFF)) << 0));
-      uStack_80 = CONCAT31(CONCAT21(CONCAT11((char)((ulonglong)(((U64)(uStack_7c) >> 0) & 0xFF) - 1) -
-                                             (((((U64)(uStack_7c) >> 0) & 0xFF) - 2) +
-                                             ((ulonglong)(((U64)(uStack_7c) >> 0) & 0xFF) - 1 == 0)),
-                                             (char)((ulonglong)(((U64)(uStack_7c) >> 8) & 0xFF) - 1) -
-                                             (((((U64)(uStack_7c) >> 8) & 0xFF) - 2) +
-                                             ((ulonglong)(((U64)(uStack_7c) >> 8) & 0xFF) - 1 == 0))),
-                                    (char)((ulonglong)(((U64)(uStack_7c) >> 16) & 0xFF) - 1) -
-                                    (((((U64)(uStack_7c) >> 16) & 0xFF) - 2) + ((ulonglong)(((U64)(uStack_7c) >> 16) & 0xFF) - 1 == 0)))
-                           ,(char)((ulonglong)(byte)uStack_7c - 1) -
-                            (((byte)uStack_7c - 2) + ((ulonglong)(byte)uStack_7c - 1 == 0)));
-      *(uint *)(iVar6 + 0xc) = uStack_80;
-      uStack_7c = iVar7;
+      stack_pair_80.second = ((((U64)(stack_pair_80.second)) & (~(((U64)0xFF) << 8))) | ((((U64)((byte)((uint)iVar7 >> 0x10))) & ((U64)0xFF)) << 8));
+      stack_pair_80.second = ((((U64)(stack_pair_80.second)) & (~(((U64)0xFF) << 16))) | ((((U64)((byte)((uint)iVar7 >> 8))) & ((U64)0xFF)) << 16));
+      stack_pair_80.second = ((((U64)(stack_pair_80.second)) & (~(((U64)0xFF) << 24))) | ((((U64)((byte)iVar7)) & ((U64)0xFF)) << 24));
+      stack_pair_80.second = ((((U64)(stack_pair_80.second)) & (~(((U64)0xFF) << 0))) | ((((U64)((byte)((uint)iVar7 >> 0x18))) & ((U64)0xFF)) << 0));
+      stack_pair_80.first = CONCAT31(CONCAT21(CONCAT11((char)((ulonglong)(((U64)(stack_pair_80.second) >> 0) & 0xFF) - 1) -
+                                             (((((U64)(stack_pair_80.second) >> 0) & 0xFF) - 2) +
+                                             ((ulonglong)(((U64)(stack_pair_80.second) >> 0) & 0xFF) - 1 == 0)),
+                                             (char)((ulonglong)(((U64)(stack_pair_80.second) >> 8) & 0xFF) - 1) -
+                                             (((((U64)(stack_pair_80.second) >> 8) & 0xFF) - 2) +
+                                             ((ulonglong)(((U64)(stack_pair_80.second) >> 8) & 0xFF) - 1 == 0))),
+                                    (char)((ulonglong)(((U64)(stack_pair_80.second) >> 16) & 0xFF) - 1) -
+                                    (((((U64)(stack_pair_80.second) >> 16) & 0xFF) - 2) + ((ulonglong)(((U64)(stack_pair_80.second) >> 16) & 0xFF) - 1 == 0)))
+                           ,(char)((ulonglong)(byte)stack_pair_80.second - 1) -
+                            (((byte)stack_pair_80.second - 2) + ((ulonglong)(byte)stack_pair_80.second - 1 == 0)));
+      *(uint *)(iVar6 + 0xc) = stack_pair_80.first;
+      stack_pair_80.second = iVar7;
       piVar2 = (int *)fn_82BC0088(auStack_70,iStack_6c);
       *piVar2 = iVar6;
     }
@@ -131,22 +131,22 @@ void fn_82BBB1A8(int param_1)
     if ((*(uint *)(iVar12 + 0xe4) >> 9 & 1) != 0) {
       iVar7 = fn_82BA0450(iVar12);
       iVar6 = *(int *)(iVar12 + 0x80);
-      uStack_7c = ((((U64)(uStack_7c)) & (~(((U64)0xFF) << 8))) | ((((U64)((byte)((uint)iVar6 >> 0x10))) & ((U64)0xFF)) << 8));
-      uStack_7c = ((((U64)(uStack_7c)) & (~(((U64)0xFF) << 16))) | ((((U64)((byte)((uint)iVar6 >> 8))) & ((U64)0xFF)) << 16));
-      uStack_7c = ((((U64)(uStack_7c)) & (~(((U64)0xFF) << 24))) | ((((U64)((byte)iVar6)) & ((U64)0xFF)) << 24));
-      uStack_7c = ((((U64)(uStack_7c)) & (~(((U64)0xFF) << 0))) | ((((U64)((byte)((uint)iVar6 >> 0x18))) & ((U64)0xFF)) << 0));
-      uStack_80 = CONCAT31(CONCAT21(CONCAT11((char)((ulonglong)(((U64)(uStack_7c) >> 0) & 0xFF) - 1) -
-                                             (((((U64)(uStack_7c) >> 0) & 0xFF) - 2) +
-                                             ((ulonglong)(((U64)(uStack_7c) >> 0) & 0xFF) - 1 == 0)),
-                                             (char)((ulonglong)(((U64)(uStack_7c) >> 8) & 0xFF) - 1) -
-                                             (((((U64)(uStack_7c) >> 8) & 0xFF) - 2) +
-                                             ((ulonglong)(((U64)(uStack_7c) >> 8) & 0xFF) - 1 == 0))),
-                                    (char)((ulonglong)(((U64)(uStack_7c) >> 16) & 0xFF) - 1) -
-                                    (((((U64)(uStack_7c) >> 16) & 0xFF) - 2) + ((ulonglong)(((U64)(uStack_7c) >> 16) & 0xFF) - 1 == 0)))
-                           ,(char)((ulonglong)(byte)uStack_7c - 1) -
-                            (((byte)uStack_7c - 2) + ((ulonglong)(byte)uStack_7c - 1 == 0)));
-      uVar9 = (ulonglong)uStack_80;
-      uStack_7c = iVar6;
+      stack_pair_80.second = ((((U64)(stack_pair_80.second)) & (~(((U64)0xFF) << 8))) | ((((U64)((byte)((uint)iVar6 >> 0x10))) & ((U64)0xFF)) << 8));
+      stack_pair_80.second = ((((U64)(stack_pair_80.second)) & (~(((U64)0xFF) << 16))) | ((((U64)((byte)((uint)iVar6 >> 8))) & ((U64)0xFF)) << 16));
+      stack_pair_80.second = ((((U64)(stack_pair_80.second)) & (~(((U64)0xFF) << 24))) | ((((U64)((byte)iVar6)) & ((U64)0xFF)) << 24));
+      stack_pair_80.second = ((((U64)(stack_pair_80.second)) & (~(((U64)0xFF) << 0))) | ((((U64)((byte)((uint)iVar6 >> 0x18))) & ((U64)0xFF)) << 0));
+      stack_pair_80.first = CONCAT31(CONCAT21(CONCAT11((char)((ulonglong)(((U64)(stack_pair_80.second) >> 0) & 0xFF) - 1) -
+                                             (((((U64)(stack_pair_80.second) >> 0) & 0xFF) - 2) +
+                                             ((ulonglong)(((U64)(stack_pair_80.second) >> 0) & 0xFF) - 1 == 0)),
+                                             (char)((ulonglong)(((U64)(stack_pair_80.second) >> 8) & 0xFF) - 1) -
+                                             (((((U64)(stack_pair_80.second) >> 8) & 0xFF) - 2) +
+                                             ((ulonglong)(((U64)(stack_pair_80.second) >> 8) & 0xFF) - 1 == 0))),
+                                    (char)((ulonglong)(((U64)(stack_pair_80.second) >> 16) & 0xFF) - 1) -
+                                    (((((U64)(stack_pair_80.second) >> 16) & 0xFF) - 2) + ((ulonglong)(((U64)(stack_pair_80.second) >> 16) & 0xFF) - 1 == 0)))
+                           ,(char)((ulonglong)(byte)stack_pair_80.second - 1) -
+                            (((byte)stack_pair_80.second - 2) + ((ulonglong)(byte)stack_pair_80.second - 1 == 0)));
+      uVar9 = (ulonglong)stack_pair_80.first;
+      stack_pair_80.second = iVar6;
       uVar5 = fn_82BB9EC0(uVar9,*(undefined4 *)(iVar12 + 0xc));
       uVar3 = fn_82BB9F48(uVar9);
       if (uVar5 != uVar3) {
@@ -164,12 +164,12 @@ void fn_82BBB1A8(int param_1)
   {
     for (iVar6 = *(int *)(iVar12 + 0x1c); *(int *)(iVar6 + 8) != 0; iVar6 = *(int *)(iVar6 + 8)) {
       if ((*(uint *)(iVar6 + 0xe4) & 1) != 0) {
-        uStack_80 = *(uint *)(iVar6 + 0xc);
-        uStack_7c = *(int *)(iVar6 + 0x80);
+        stack_pair_80.first = *(uint *)(iVar6 + 0xc);
+        stack_pair_80.second = *(int *)(iVar6 + 0x80);
         iVar7 = 0;
         lVar11 = 4;
         do {
-          if (*(char *)((int)&uStack_80 + iVar7) == '\x01') {
+          if (*(char *)((int)&stack_pair_80.first + iVar7) == '\x01') {
             uVar10 = *(undefined1 *)((int)aiStack_78 + iVar7 + -4);
           }
           else {
@@ -179,7 +179,7 @@ void fn_82BBB1A8(int param_1)
           iVar7 = iVar7 + 1;
           lVar11 = lVar11 + -1;
         } while (lVar11 != 0);
-        *(int *)(iVar6 + 0x80) = uStack_7c;
+        *(int *)(iVar6 + 0x80) = stack_pair_80.second;
       }
     }
   }
@@ -200,48 +200,48 @@ void fn_82BBB1A8(int param_1)
               iVar8 = 0;
               iVar7 = *(int *)(iVar6 + 0x80);
               lVar13 = 4;
-              uStack_7c = ((((U64)(uStack_7c)) & (~(((U64)0xFF) << 16))) | ((((U64)((byte)((uint)iVar7 >> 8))) & ((U64)0xFF)) << 16));
-              uStack_7c = ((((U64)(uStack_7c)) & (~(((U64)0xFF) << 8))) | ((((U64)((byte)((uint)iVar7 >> 0x10))) & ((U64)0xFF)) << 8));
-              uStack_7c = ((((U64)(uStack_7c)) & (~(((U64)0xFF) << 0))) | ((((U64)((byte)((uint)iVar7 >> 0x18))) & ((U64)0xFF)) << 0));
-              uStack_7c = ((((U64)(uStack_7c)) & (~(((U64)0xFF) << 24))) | ((((U64)((byte)iVar7)) & ((U64)0xFF)) << 24));
-              uStack_80 = CONCAT31(CONCAT21(CONCAT11((char)((ulonglong)(((U64)(uStack_7c) >> 0) & 0xFF) - 1) -
-                                                     (((((U64)(uStack_7c) >> 0) & 0xFF) - 2) +
-                                                     ((ulonglong)(((U64)(uStack_7c) >> 0) & 0xFF) - 1 == 0)),
-                                                     (char)((ulonglong)(((U64)(uStack_7c) >> 8) & 0xFF) - 1) -
-                                                     (((((U64)(uStack_7c) >> 8) & 0xFF) - 2) +
-                                                     ((ulonglong)(((U64)(uStack_7c) >> 8) & 0xFF) - 1 == 0))),
-                                            (char)((ulonglong)(((U64)(uStack_7c) >> 16) & 0xFF) - 1) -
-                                            (((((U64)(uStack_7c) >> 16) & 0xFF) - 2) +
-                                            ((ulonglong)(((U64)(uStack_7c) >> 16) & 0xFF) - 1 == 0))),
-                                   (char)((ulonglong)(byte)uStack_7c - 1) -
-                                   (((byte)uStack_7c - 2) + ((ulonglong)(byte)uStack_7c - 1 == 0)));
+              stack_pair_80.second = ((((U64)(stack_pair_80.second)) & (~(((U64)0xFF) << 16))) | ((((U64)((byte)((uint)iVar7 >> 8))) & ((U64)0xFF)) << 16));
+              stack_pair_80.second = ((((U64)(stack_pair_80.second)) & (~(((U64)0xFF) << 8))) | ((((U64)((byte)((uint)iVar7 >> 0x10))) & ((U64)0xFF)) << 8));
+              stack_pair_80.second = ((((U64)(stack_pair_80.second)) & (~(((U64)0xFF) << 0))) | ((((U64)((byte)((uint)iVar7 >> 0x18))) & ((U64)0xFF)) << 0));
+              stack_pair_80.second = ((((U64)(stack_pair_80.second)) & (~(((U64)0xFF) << 24))) | ((((U64)((byte)iVar7)) & ((U64)0xFF)) << 24));
+              stack_pair_80.first = CONCAT31(CONCAT21(CONCAT11((char)((ulonglong)(((U64)(stack_pair_80.second) >> 0) & 0xFF) - 1) -
+                                                     (((((U64)(stack_pair_80.second) >> 0) & 0xFF) - 2) +
+                                                     ((ulonglong)(((U64)(stack_pair_80.second) >> 0) & 0xFF) - 1 == 0)),
+                                                     (char)((ulonglong)(((U64)(stack_pair_80.second) >> 8) & 0xFF) - 1) -
+                                                     (((((U64)(stack_pair_80.second) >> 8) & 0xFF) - 2) +
+                                                     ((ulonglong)(((U64)(stack_pair_80.second) >> 8) & 0xFF) - 1 == 0))),
+                                            (char)((ulonglong)(((U64)(stack_pair_80.second) >> 16) & 0xFF) - 1) -
+                                            (((((U64)(stack_pair_80.second) >> 16) & 0xFF) - 2) +
+                                            ((ulonglong)(((U64)(stack_pair_80.second) >> 16) & 0xFF) - 1 == 0))),
+                                   (char)((ulonglong)(byte)stack_pair_80.second - 1) -
+                                   (((byte)stack_pair_80.second - 2) + ((ulonglong)(byte)stack_pair_80.second - 1 == 0)));
               do {
                 pbVar1 = (byte *)((int)aiStack_78 + iVar8);
                 iVar8 = iVar8 + 1;
                 uVar5 = *(uint *)(&lbl_820E0814 + (uint)*pbVar1 * 4) | uVar5;
                 lVar13 = lVar13 + -1;
-                uStack_7c = iVar7;
+                stack_pair_80.second = iVar7;
               } while (lVar13 != 0);
-              while ((uStack_80 == 0 || (uVar5 == 0))) {
+              while ((stack_pair_80.first == 0 || (uVar5 == 0))) {
                 iVar6 = fn_82BA0450();
                 iVar7 = *(int *)(iVar6 + 0x80);
-                uStack_7c = ((((U64)(uStack_7c)) & (~(((U64)0xFF) << 16))) | ((((U64)((byte)((uint)iVar7 >> 8))) & ((U64)0xFF)) << 16));
-                uStack_7c = ((((U64)(uStack_7c)) & (~(((U64)0xFF) << 0))) | ((((U64)((byte)((uint)iVar7 >> 0x18))) & ((U64)0xFF)) << 0));
-                uStack_7c = ((((U64)(uStack_7c)) & (~(((U64)0xFF) << 8))) | ((((U64)((byte)((uint)iVar7 >> 0x10))) & ((U64)0xFF)) << 8));
-                uStack_7c = ((((U64)(uStack_7c)) & (~(((U64)0xFF) << 24))) | ((((U64)((byte)iVar7)) & ((U64)0xFF)) << 24));
-                uStack_80 = CONCAT31(CONCAT21(CONCAT11((char)((ulonglong)(((U64)(uStack_7c) >> 0) & 0xFF) - 1) -
-                                                       (((((U64)(uStack_7c) >> 0) & 0xFF) - 2) +
-                                                       ((ulonglong)(((U64)(uStack_7c) >> 0) & 0xFF) - 1 == 0)),
-                                                       (char)((ulonglong)(((U64)(uStack_7c) >> 8) & 0xFF) - 1) -
-                                                       (((((U64)(uStack_7c) >> 8) & 0xFF) - 2) +
-                                                       ((ulonglong)(((U64)(uStack_7c) >> 8) & 0xFF) - 1 == 0))),
-                                              (char)((ulonglong)(((U64)(uStack_7c) >> 16) & 0xFF) - 1) -
-                                              (((((U64)(uStack_7c) >> 16) & 0xFF) - 2) +
-                                              ((ulonglong)(((U64)(uStack_7c) >> 16) & 0xFF) - 1 == 0))),
-                                     (char)((ulonglong)(byte)uStack_7c - 1) -
-                                     (((byte)uStack_7c - 2) + ((ulonglong)(byte)uStack_7c - 1 == 0))
+                stack_pair_80.second = ((((U64)(stack_pair_80.second)) & (~(((U64)0xFF) << 16))) | ((((U64)((byte)((uint)iVar7 >> 8))) & ((U64)0xFF)) << 16));
+                stack_pair_80.second = ((((U64)(stack_pair_80.second)) & (~(((U64)0xFF) << 0))) | ((((U64)((byte)((uint)iVar7 >> 0x18))) & ((U64)0xFF)) << 0));
+                stack_pair_80.second = ((((U64)(stack_pair_80.second)) & (~(((U64)0xFF) << 8))) | ((((U64)((byte)((uint)iVar7 >> 0x10))) & ((U64)0xFF)) << 8));
+                stack_pair_80.second = ((((U64)(stack_pair_80.second)) & (~(((U64)0xFF) << 24))) | ((((U64)((byte)iVar7)) & ((U64)0xFF)) << 24));
+                stack_pair_80.first = CONCAT31(CONCAT21(CONCAT11((char)((ulonglong)(((U64)(stack_pair_80.second) >> 0) & 0xFF) - 1) -
+                                                       (((((U64)(stack_pair_80.second) >> 0) & 0xFF) - 2) +
+                                                       ((ulonglong)(((U64)(stack_pair_80.second) >> 0) & 0xFF) - 1 == 0)),
+                                                       (char)((ulonglong)(((U64)(stack_pair_80.second) >> 8) & 0xFF) - 1) -
+                                                       (((((U64)(stack_pair_80.second) >> 8) & 0xFF) - 2) +
+                                                       ((ulonglong)(((U64)(stack_pair_80.second) >> 8) & 0xFF) - 1 == 0))),
+                                              (char)((ulonglong)(((U64)(stack_pair_80.second) >> 16) & 0xFF) - 1) -
+                                              (((((U64)(stack_pair_80.second) >> 16) & 0xFF) - 2) +
+                                              ((ulonglong)(((U64)(stack_pair_80.second) >> 16) & 0xFF) - 1 == 0))),
+                                     (char)((ulonglong)(byte)stack_pair_80.second - 1) -
+                                     (((byte)stack_pair_80.second - 2) + ((ulonglong)(byte)stack_pair_80.second - 1 == 0))
                                     );
-                uStack_7c = iVar7;
+                stack_pair_80.second = iVar7;
               }
               fn_82BA05E8(piVar2,lVar11,iVar6);
               lVar11 = lVar11 + 1;
@@ -252,23 +252,23 @@ void fn_82BBB1A8(int param_1)
           if (((uint)piVar2[0x39] >> 9 & 1) != 0) {
             fn_82BA0450(piVar2);
             iVar6 = piVar2[0x20];
-            uStack_7c = ((((U64)(uStack_7c)) & (~(((U64)0xFF) << 8))) | ((((U64)((byte)((uint)iVar6 >> 0x10))) & ((U64)0xFF)) << 8));
-            uStack_7c = ((((U64)(uStack_7c)) & (~(((U64)0xFF) << 0))) | ((((U64)((byte)((uint)iVar6 >> 0x18))) & ((U64)0xFF)) << 0));
-            uStack_7c = ((((U64)(uStack_7c)) & (~(((U64)0xFF) << 24))) | ((((U64)((byte)iVar6)) & ((U64)0xFF)) << 24));
-            uStack_7c = ((((U64)(uStack_7c)) & (~(((U64)0xFF) << 16))) | ((((U64)((byte)((uint)iVar6 >> 8))) & ((U64)0xFF)) << 16));
-            uStack_80 = CONCAT31(CONCAT21(CONCAT11((char)((ulonglong)(((U64)(uStack_7c) >> 0) & 0xFF) - 1) -
-                                                   (((((U64)(uStack_7c) >> 0) & 0xFF) - 2) +
-                                                   ((ulonglong)(((U64)(uStack_7c) >> 0) & 0xFF) - 1 == 0)),
-                                                   (char)((ulonglong)(((U64)(uStack_7c) >> 8) & 0xFF) - 1) -
-                                                   (((((U64)(uStack_7c) >> 8) & 0xFF) - 2) +
-                                                   ((ulonglong)(((U64)(uStack_7c) >> 8) & 0xFF) - 1 == 0))),
-                                          (char)((ulonglong)(((U64)(uStack_7c) >> 16) & 0xFF) - 1) -
-                                          (((((U64)(uStack_7c) >> 16) & 0xFF) - 2) +
-                                          ((ulonglong)(((U64)(uStack_7c) >> 16) & 0xFF) - 1 == 0))),
-                                 (char)((ulonglong)(byte)uStack_7c - 1) -
-                                 (((byte)uStack_7c - 2) + ((ulonglong)(byte)uStack_7c - 1 == 0)));
-            uVar9 = (ulonglong)uStack_80;
-            uStack_7c = iVar6;
+            stack_pair_80.second = ((((U64)(stack_pair_80.second)) & (~(((U64)0xFF) << 8))) | ((((U64)((byte)((uint)iVar6 >> 0x10))) & ((U64)0xFF)) << 8));
+            stack_pair_80.second = ((((U64)(stack_pair_80.second)) & (~(((U64)0xFF) << 0))) | ((((U64)((byte)((uint)iVar6 >> 0x18))) & ((U64)0xFF)) << 0));
+            stack_pair_80.second = ((((U64)(stack_pair_80.second)) & (~(((U64)0xFF) << 24))) | ((((U64)((byte)iVar6)) & ((U64)0xFF)) << 24));
+            stack_pair_80.second = ((((U64)(stack_pair_80.second)) & (~(((U64)0xFF) << 16))) | ((((U64)((byte)((uint)iVar6 >> 8))) & ((U64)0xFF)) << 16));
+            stack_pair_80.first = CONCAT31(CONCAT21(CONCAT11((char)((ulonglong)(((U64)(stack_pair_80.second) >> 0) & 0xFF) - 1) -
+                                                   (((((U64)(stack_pair_80.second) >> 0) & 0xFF) - 2) +
+                                                   ((ulonglong)(((U64)(stack_pair_80.second) >> 0) & 0xFF) - 1 == 0)),
+                                                   (char)((ulonglong)(((U64)(stack_pair_80.second) >> 8) & 0xFF) - 1) -
+                                                   (((((U64)(stack_pair_80.second) >> 8) & 0xFF) - 2) +
+                                                   ((ulonglong)(((U64)(stack_pair_80.second) >> 8) & 0xFF) - 1 == 0))),
+                                          (char)((ulonglong)(((U64)(stack_pair_80.second) >> 16) & 0xFF) - 1) -
+                                          (((((U64)(stack_pair_80.second) >> 16) & 0xFF) - 2) +
+                                          ((ulonglong)(((U64)(stack_pair_80.second) >> 16) & 0xFF) - 1 == 0))),
+                                 (char)((ulonglong)(byte)stack_pair_80.second - 1) -
+                                 (((byte)stack_pair_80.second - 2) + ((ulonglong)(byte)stack_pair_80.second - 1 == 0)));
+            uVar9 = (ulonglong)stack_pair_80.first;
+            stack_pair_80.second = iVar6;
             iVar6 = fn_82BB9EC0(uVar9,piVar2[3]);
             iVar7 = fn_82BB9F48(uVar9);
             if (iVar6 != iVar7) {

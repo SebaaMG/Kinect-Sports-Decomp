@@ -37,7 +37,7 @@ bool fn_82A2C6F8(int param_1,undefined8 param_2)
   int iVar2;
   uint uVar3;
   int iStack_20;
-  undefined1 auStack_1c [12];
+  undefined1 auStack_1c [1];
   
   iVar2 = fn_82A2BAF0(param_1,param_2,1,&iStack_20,auStack_1c);
   if (iVar2 != 0) {

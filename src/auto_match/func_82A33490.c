@@ -36,17 +36,17 @@ fn_82A33490(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefined8 
 {
   int iVar1;
   ulonglong uVar2;
-  undefined4 auStack_10 [4];
+  undefined4 auStack_10;
   
   uVar2 = (param_5 & 0xffffffff) >> 2 & 1;
   if (param_6 != 0xffffffff) {
     uVar2 = ((ulonglong)(uint)(1 << (param_6 & 0x3f)) & 0xff) << 0x18 | uVar2;
   }
-  iVar1 = ExCreateThread(auStack_10,param_2,param_7,0xffffffff82a37050,param_3,param_4,uVar2);
+  iVar1 = ExCreateThread(&auStack_10,param_2,param_7,0xffffffff82a37050,param_3,param_4,uVar2);
   if (iVar1 < 0) {
     fn_82A2B760();
-    auStack_10[0] = 0;
+    auStack_10 = 0;
   }
-  return auStack_10[0];
+  return auStack_10;
 }
 

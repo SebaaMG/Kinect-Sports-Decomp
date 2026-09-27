@@ -40,8 +40,8 @@ undefined8 fn_82628EE0(int *param_1,int param_2)
   int *piVar3;
   int *piVar4;
   undefined4 *puVar5;
-  undefined4 uStack_30;
-  undefined4 uStack_2c;
+  struct { undefined4 first; undefined4 second; } stack_pair_30;
+
   undefined4 uStack_28;
   undefined4 uStack_24;
   
@@ -70,9 +70,9 @@ undefined8 fn_82628EE0(int *param_1,int param_2)
       piVar3 = (int *)0x0;
 LAB_82628f4c:
       if (piVar3 != (int *)0x0) {
-        uStack_30 = 0x16;
-        uStack_2c = 8;
-        (**(code **)(*piVar3 + 0xc))(piVar3,&uStack_30);
+        stack_pair_30.first = 0x16;
+        stack_pair_30.second = 8;
+        (**(code **)(*piVar3 + 0xc))(piVar3,&stack_pair_30.first);
       }
     }
   }

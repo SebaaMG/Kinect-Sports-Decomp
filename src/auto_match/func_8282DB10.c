@@ -48,15 +48,15 @@ void fn_8282DB10(int param_1)
   ulonglong uVar11;
   undefined4 *puVar12;
   int iStack_40;
-  int aiStack_3c [15];
+  int aiStack_3c;
   
   iVar10 = 0;
-  fn_828223C8(param_1 + 0x2f4,aiStack_3c);
-  if (aiStack_3c[0] != 0) {
+  fn_828223C8(param_1 + 0x2f4,&aiStack_3c);
+  if (aiStack_3c != 0) {
     do {
-      iVar2 = aiStack_3c[0];
-      *(undefined4 *)(aiStack_3c[0] + 0x18) = 0;
-      puVar9 = (uint *)(aiStack_3c[0] + 0x18);
+      iVar2 = aiStack_3c;
+      *(undefined4 *)(aiStack_3c + 0x18) = 0;
+      puVar9 = (uint *)(aiStack_3c + 0x18);
       uVar11 = 0;
       iVar8 = param_1 + 0x2fc;
       while (fn_828223C8(iVar8,&iStack_40), iStack_40 != 0) {
@@ -86,8 +86,8 @@ void fn_8282DB10(int param_1)
       *(uint *)(iVar2 + 0x10) = uVar1;
       *(int *)(iVar2 + 0x1c) = iVar8;
       *(int *)(iVar2 + 0xc) = iVar8;
-      fn_828223C8(aiStack_3c[0],aiStack_3c);
-    } while (aiStack_3c[0] != 0);
+      fn_828223C8(aiStack_3c,&aiStack_3c);
+    } while (aiStack_3c != 0);
   }
   iVar10 = param_1 + 0x2fc;
   while (fn_828223C8(iVar10,&iStack_40), iStack_40 != 0) {

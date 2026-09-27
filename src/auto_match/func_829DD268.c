@@ -34,7 +34,7 @@ void fn_829DD268(int param_1,undefined8 param_2,undefined8 param_3)
 {
   uint uVar1;
   uint uVar2;
-  int aiStack_60 [24];
+  int aiStack_60;
   
   uVar2 = 700 - *(int *)(param_1 + 0x24b1c8);
   uVar1 = *(uint *)(param_1 + 0xf4a10);
@@ -49,8 +49,8 @@ void fn_829DD268(int param_1,undefined8 param_2,undefined8 param_3)
       uVar2 = uVar2 + 1;
     } while (uVar2 < uVar1);
   }
-  aiStack_60[0] = param_1 + 0xf4a18;
-  fn_829DCFB0(*(int *)(param_1 + 0x24b1c8),param_2,aiStack_60,param_3);
+  aiStack_60 = param_1 + 0xf4a18;
+  fn_829DCFB0(*(int *)(param_1 + 0x24b1c8),param_2,&aiStack_60,param_3);
   return;
 }
 

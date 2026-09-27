@@ -48,7 +48,7 @@ void fn_823D6410(int param_1)
   longlong lVar9;
   int iStack_f4;
   undefined4 auStack_f0 [28];
-  undefined1 auStack_80 [128];
+  undefined1 auStack_80 [48];
   
   piVar3 = &iStack_f4;
   *(undefined4 *)(param_1 + 0x3b8) = 0xffffffff;

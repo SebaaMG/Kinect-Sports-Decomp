@@ -59,12 +59,12 @@ void fn_8280F300(double param_1,double param_2,double param_3)
   double dVar13;
   undefined8 uVar14;
   double dVar15;
-  float fStack_50;
-  float fStack_4c;
+  struct { float first; float second; } stack_pair_50;
+
   float fStack_48;
   float fStack_44;
   float fStack_40;
-  float afStack_3c [15];
+  float afStack_3c;
   
   dVar10 = (double)lbl_82002C5C;
   dVar15 = (double)(float)(param_2 * dVar10);
@@ -81,34 +81,34 @@ void fn_8280F300(double param_1,double param_2,double param_3)
   uVar12 = fn_8280A580(dVar15);
   uVar7 = fn_8280A580(dVar13);
   uVar14 = extraout_f1;
-  uVar7 = fn_8280A668(uVar11,uVar7,afStack_3c,&fStack_44);
-  uVar7 = fn_8280A668(uVar12,uVar7,&fStack_50,&fStack_4c);
+  uVar7 = fn_8280A668(uVar11,uVar7,&afStack_3c,&fStack_44);
+  uVar7 = fn_8280A668(uVar12,uVar7,&stack_pair_50.first,&stack_pair_50.second);
   fn_8280A668(uVar14,uVar7,&fStack_40,&fStack_48);
   iVar8 = in_r7 * 4;
   fVar4 = fStack_48 * fStack_44;
   fStack_44 = fStack_40 * fStack_44;
-  fStack_48 = fStack_48 * afStack_3c[0];
+  fStack_48 = fStack_48 * afStack_3c;
   bVar1 = (&lbl_83156DF1)[iVar8];
-  fStack_40 = fStack_40 * afStack_3c[0];
+  fStack_40 = fStack_40 * afStack_3c;
   bVar2 = (&lbl_83156DF2)[iVar8];
   pfVar9 = (float *)((uint)bVar1 * 4 + in_r6);
   if ((in_r7 & 8) == 0) {
     *(float *)((uint)(byte)(&lbl_83156DF0)[iVar8] * 4 + in_r6) =
-         fStack_48 * fStack_4c - fStack_44 * fStack_50;
-    fVar6 = fStack_40 * fStack_4c + fVar4 * fStack_50;
-    fVar5 = fStack_44 * fStack_4c - fStack_48 * fStack_50;
-    fStack_4c = fStack_40 * fStack_50 + fVar4 * fStack_4c;
+         fStack_48 * stack_pair_50.second - fStack_44 * stack_pair_50.first;
+    fVar6 = fStack_40 * stack_pair_50.second + fVar4 * stack_pair_50.first;
+    fVar5 = fStack_44 * stack_pair_50.second - fStack_48 * stack_pair_50.first;
+    stack_pair_50.second = fStack_40 * stack_pair_50.first + fVar4 * stack_pair_50.second;
   }
   else {
-    *(float *)((uint)(byte)(&lbl_83156DF0)[iVar8] * 4 + in_r6) = (fStack_48 + fStack_44) * fStack_4c
+    *(float *)((uint)(byte)(&lbl_83156DF0)[iVar8] * 4 + in_r6) = (fStack_48 + fStack_44) * stack_pair_50.second
     ;
-    fVar6 = (fStack_40 + fVar4) * fStack_50;
-    fVar5 = (fStack_44 - fStack_48) * fStack_50;
-    fStack_4c = (fVar4 - fStack_40) * fStack_4c;
+    fVar6 = (fStack_40 + fVar4) * stack_pair_50.first;
+    fVar5 = (fStack_44 - fStack_48) * stack_pair_50.first;
+    stack_pair_50.second = (fVar4 - fStack_40) * stack_pair_50.second;
   }
   *(float *)((uint)bVar1 * 4 + in_r6) = fVar6;
   *(float *)((uint)bVar2 * 4 + in_r6) = fVar5;
-  *(float *)(in_r6 + 0xc) = fStack_4c;
+  *(float *)(in_r6 + 0xc) = stack_pair_50.second;
   if ((in_r7 & 4) != 0) {
     *pfVar9 = -*pfVar9;
   }

@@ -34,14 +34,14 @@ extern unsigned int uStack_30;
 void fn_82DCDEF0(int param_1,undefined4 param_2)
 
 {
-  undefined4 uStack_30;
-  undefined4 uStack_2c;
-  undefined4 auStack_20 [8];
+  struct { undefined4 first; undefined4 second; } stack_pair_30;
+
+  undefined4 auStack_20 [4];
   
-  uStack_30 = 0;
-  uStack_2c = 0;
+  stack_pair_30.first = 0;
+  stack_pair_30.second = 0;
   auStack_20[0] = param_2;
-  fn_82DE0DB8(auStack_20,&uStack_30,*(undefined4 *)(param_1 + 0x20));
+  fn_82DE0DB8(auStack_20,&stack_pair_30.first,*(undefined4 *)(param_1 + 0x20));
   return;
 }
 

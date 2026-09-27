@@ -37,20 +37,20 @@ void fn_82704708(undefined4 param_1)
 
 {
   int iVar1;
-  undefined4 uStack_20;
-  undefined4 uStack_1c;
+  struct { undefined4 first; undefined4 second; } stack_pair_20;
+
   int iStack_18;
   undefined4 uStack_14;
   
-  uStack_20 = 0;
+  stack_pair_20.first = 0;
   uStack_14 = 0;
   iStack_18 = 0;
-  uStack_1c = param_1;
+  stack_pair_20.second = param_1;
   do {
-    iVar1 = fn_827039E8(&uStack_20);
+    iVar1 = fn_827039E8(&stack_pair_20.first);
   } while (iVar1 != 0);
   if (iStack_18 != 0) {
-    fn_82703910(uStack_1c);
+    fn_82703910(stack_pair_20.second);
   }
   return;
 }

@@ -35,14 +35,14 @@ void fn_82235AA0(int param_1,undefined8 param_2)
 {
   undefined1 auStack_30 [4];
   undefined4 uStack_2c;
-  undefined4 auStack_28 [10];
+  undefined4 auStack_28;
   
-  (**(code **)(**(int **)(param_1 + 0x68) + 0x14))(*(int **)(param_1 + 0x68),param_2,auStack_28);
+  (**(code **)(**(int **)(param_1 + 0x68) + 0x14))(*(int **)(param_1 + 0x68),param_2,&auStack_28);
   (**(code **)(**(int **)(param_1 + 0x70) + 0x14))(*(int **)(param_1 + 0x70),param_2,&uStack_2c);
   (**(code **)(**(int **)(param_1 + 0x78) + 0x14))(*(int **)(param_1 + 0x78),param_2,auStack_30);
   if (*(int *)(param_1 + 0x60) != 0) {
     (**(code **)(**(int **)(param_1 + 0x60) + 4))
-              (*(int **)(param_1 + 0x60),auStack_28[0],uStack_2c,auStack_30[0]);
+              (*(int **)(param_1 + 0x60),auStack_28,uStack_2c,auStack_30[0]);
   }
   return;
 }

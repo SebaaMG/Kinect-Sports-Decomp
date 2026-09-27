@@ -39,8 +39,8 @@ uint fn_82AC3AA0(int param_1,int param_2,int param_3,int param_4)
   uint uVar2;
   uint *puVar3;
   int iVar4;
-  uint uStack_30;
-  uint uStack_2c;
+  struct { uint first; uint second; } stack_pair_30;
+
   uint uStack_28;
   uint uStack_24;
   
@@ -50,14 +50,14 @@ uint fn_82AC3AA0(int param_1,int param_2,int param_3,int param_4)
       ((uVar2 >> 0xc & 0x3f) <= *(uint *)(param_4 + 0x20))) &&
      ((uVar2 >> 5 & 0x3f) <= *(uint *)(param_4 + 0x20))) {
     uVar1 = *(uint *)(iVar4 + 4);
-    uStack_30 = uVar1 & 7;
-    uStack_2c = uVar1 >> 3 & 7;
+    stack_pair_30.first = uVar1 & 7;
+    stack_pair_30.second = uVar1 >> 3 & 7;
     uStack_28 = uVar1 >> 6 & 7;
     uStack_24 = uVar1 >> 9 & 7;
     if ((((uVar2 & 0x80000) != 0) && (uVar1 = *(uint *)(iVar4 + 4), (uVar1 & 0x4000) == 0)) &&
        ((uVar1 & 0xc00000) == 0)) {
       iVar4 = 0;
-      puVar3 = &uStack_30;
+      puVar3 = &stack_pair_30.first;
       do {
         if (*puVar3 == 6) {
           return 0x80004005;

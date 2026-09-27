@@ -69,8 +69,8 @@ void fn_8228EDD0(int param_1,undefined8 param_2,undefined8 param_3,undefined8 pa
   ulonglong uVar7;
   undefined1 *puVar8;
   longlong lVar9;
-  int iStack_6c0;
-  int iStack_6bc;
+  struct { int first; int second; } stack_pair_6c0;
+
   undefined4 uStack_6b8;
   undefined4 uStack_6b0;
   undefined4 uStack_6ac;
@@ -87,17 +87,17 @@ void fn_8228EDD0(int param_1,undefined8 param_2,undefined8 param_3,undefined8 pa
   undefined1 *puStack_658;
   undefined1 auStack_650 [512];
   undefined1 auStack_450 [512];
-  undefined1 auStack_250 [592];
+  undefined1 auStack_250 [560];
   
   uVar1 = fn_8251F720(param_4,0);
   if (uVar1 != 0) {
     uVar2 = fn_8251FBA8(uVar1);
-    iStack_6c0 = 0;
-    iStack_6bc = 0;
+    stack_pair_6c0.first = 0;
+    stack_pair_6c0.second = 0;
     uVar2 = (uVar2 & 0xffffffff) >> 5;
     uStack_6b8 = 0;
     uVar6 = uVar2 * 0x20 + uVar1;
-    fn_82290340(&iStack_6c0,uVar2 << 1);
+    fn_82290340(&stack_pair_6c0.first,uVar2 << 1);
     auStack_690[0] = 0;
     auStack_690[1] = 0;
     auStack_690[2] = 0;
@@ -111,26 +111,26 @@ void fn_8228EDD0(int param_1,undefined8 param_2,undefined8 param_3,undefined8 pa
         uStack_6a8 = (undefined4)uVar7;
         uStack_6b0 = 0;
         uStack_6ac = 4;
-        fn_82290458(&iStack_6c0,&uStack_6b0);
+        fn_82290458(&stack_pair_6c0.first,&uStack_6b0);
         uStack_698 = (undefined4)uVar2;
         uStack_6a0 = 0;
         uStack_69c = 5;
-        fn_82290458(&iStack_6c0,&uStack_6a0);
+        fn_82290458(&stack_pair_6c0.first,&uStack_6a0);
         fn_82273C88(&uStack_6a0);
         fn_82273C88(&uStack_6b0);
         uVar7 = uVar7 + 0x20;
         uVar2 = uVar2 + 0x200;
       } while ((uVar7 & 0xffffffff) < (uVar6 & 0xffffffff));
     }
-    cVar3 = fn_82672F30(*(undefined4 *)(param_1 + 0x14),0xffffffff821a9a2c,0,iStack_6c0,
-                              iStack_6bc - iStack_6c0 >> 4,1);
+    cVar3 = fn_82672F30(*(undefined4 *)(param_1 + 0x14),0xffffffff821a9a2c,0,stack_pair_6c0.first,
+                              stack_pair_6c0.second - stack_pair_6c0.first >> 4,1);
     if (cVar3 != '\0') {
       fn_82672C20(*(undefined4 *)(param_1 + 0x14),0xffffffff821a9a50,0,0);
     }
     if (uVar5 != 0) {
       fn_8265CA20(uVar5);
     }
-    fn_822902E8(&iStack_6c0);
+    fn_822902E8(&stack_pair_6c0.first);
   }
   puVar4 = auStack_690 + 1;
   lVar9 = 3;

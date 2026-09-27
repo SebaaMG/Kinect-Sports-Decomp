@@ -35,7 +35,7 @@ undefined4 fn_824A00C8(int param_1,int *param_2)
 {
   int *piVar1;
   int iVar2;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [64];
   
   param_1 = *param_2 * 0x24 + param_1;
   *(undefined4 *)(param_1 + 4) = 0;

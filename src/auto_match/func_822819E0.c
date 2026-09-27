@@ -51,7 +51,7 @@ void fn_822819E0(int param_1,undefined4 *param_2)
   undefined1 auStack_1300 [32];
   undefined2 uStack_12e0;
   undefined1 auStack_12de [510];
-  undefined1 auStack_10e0 [4320];
+  undefined1 auStack_10e0 [4304];
   
   puStack_1310 = (undefined4 *)*param_2;
   *(undefined4 **)(param_1 + 100) = puStack_1310;

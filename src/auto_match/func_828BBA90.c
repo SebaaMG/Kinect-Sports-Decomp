@@ -41,22 +41,22 @@ void fn_828BBA90(int param_1,undefined4 *param_2,undefined4 *param_3,undefined8 
   undefined8 uVar1;
   undefined4 *puVar3;
   longlong lVar4;
-  int aiStack_40 [16];
+  int aiStack_40;
   
   lVar4 = 0;
-  aiStack_40[0] = **(int **)(param_1 + 0xfc);
-  if ((int *)aiStack_40[0] != *(int **)(param_1 + 0xfc)) {
+  aiStack_40 = **(int **)(param_1 + 0xfc);
+  if ((int *)aiStack_40 != *(int **)(param_1 + 0xfc)) {
     do {
       puVar3 = param_2;
       if (0xf < (uint)param_2[5]) {
         puVar3 = (undefined4 *)*param_2;
       }
-      iVar2 = fn_8260D428(aiStack_40[0] + 0xc,0,*(undefined4 *)(aiStack_40[0] + 0x1c),puVar3,
+      iVar2 = fn_8260D428(aiStack_40 + 0xc,0,*(undefined4 *)(aiStack_40 + 0x1c),puVar3,
                            param_2[4]);
       if (iVar2 == 0) break;
       lVar4 = lVar4 + 1;
-      fn_828A1958(aiStack_40);
-    } while (aiStack_40[0] != *(int *)(param_1 + 0xfc));
+      fn_828A1958(&aiStack_40);
+    } while (aiStack_40 != *(int *)(param_1 + 0xfc));
   }
   uVar1 = fn_828EA268((ulonglong)*(uint *)(param_1 + 0x100) - 1);
   fn_8223C478(param_4,uVar1,0);

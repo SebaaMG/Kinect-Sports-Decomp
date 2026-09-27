@@ -51,8 +51,8 @@ void fn_822F77B0(undefined8 param_1,uint *param_2)
   ulonglong uVar8;
   longlong lVar9;
   double dVar10;
-  undefined4 uStack_58;
-  float fStack_54;
+  struct { undefined4 first; float second; } stack_pair_58;
+
   int *piStack_50;
   int *piStack_4c;
   undefined4 uStack_48;
@@ -69,15 +69,15 @@ void fn_822F77B0(undefined8 param_1,uint *param_2)
   uVar4 = param_2[1];
   for (uVar8 = (ulonglong)*param_2; piVar3 = piStack_4c, piVar2 = piStack_50,
       (uVar8 & 0xffffffff) != (ulonglong)uVar4; uVar8 = uVar8 + 0x14) {
-    uStack_58 = (int)uVar8;
+    stack_pair_58.first = (int)uVar8;
     dVar10 = (double)fn_822F78F0(param_1,uVar8);
-    fStack_54 = (float)dVar10;
-    fn_822F8438(&piStack_50,&uStack_58);
+    stack_pair_58.second = (float)dVar10;
+    fn_822F8438(&piStack_50,&stack_pair_58.first);
   }
   fn_822F8298(piStack_50,piStack_4c,(int)piStack_4c - (int)piStack_50 >> 3,0);
   uVar4 = *param_2;
   for (piVar5 = piVar2; piVar5 != piVar3; piVar5 = piVar5 + 2) {
-    pfVar6 = &fStack_54;
+    pfVar6 = &stack_pair_58.second;
     pfVar7 = (float *)(*piVar5 + -4);
     lVar9 = 5;
     do {
@@ -86,7 +86,7 @@ void fn_822F77B0(undefined8 param_1,uint *param_2)
       *pfVar6 = *pfVar7;
       lVar9 = lVar9 + -1;
     } while (lVar9 != 0);
-    pfVar7 = &fStack_54;
+    pfVar7 = &stack_pair_58.second;
     pfVar6 = (float *)(uVar4 - 4);
     lVar9 = 5;
     do {

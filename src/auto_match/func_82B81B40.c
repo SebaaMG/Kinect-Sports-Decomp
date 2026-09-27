@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_82B806D8();
 extern int fn_82B808B0();
-extern int fn_82F65AC0();
+extern int stricmp();
 extern int fn_82F6A3F0();
 extern int fn_82F6B0C0();
 
@@ -45,7 +45,7 @@ fn_82B81B40(undefined8 param_1,longlong param_2,longlong param_3,undefined4 *par
   uint uVar6;
   undefined4 in_stack_00000054;
   undefined1 *in_stack_0000005c;
-  char *apcStack_60 [24];
+  char * apcStack_60;
   
   uVar6 = 0;
   puVar5 = param_4;
@@ -54,17 +54,17 @@ fn_82B81B40(undefined8 param_1,longlong param_2,longlong param_3,undefined4 *par
       iVar2 = fn_82F6B0C0(param_2,*puVar5,(uint)puVar5[1] >> 0x1c);
       if (iVar2 == 0) {
         param_4 = param_4 + uVar6 * 3;
-        lVar1 = fn_82F6A3F0((ulonglong)((uint)param_4[1] >> 0x1c) + param_2,apcStack_60,10);
-        if (*apcStack_60[0] != '\0') {
+        lVar1 = fn_82F6A3F0((ulonglong)((uint)param_4[1] >> 0x1c) + param_2,&apcStack_60,10);
+        if (*apcStack_60 != '\0') {
           if ((param_4[1] & 0x1c000) != 0) {
             return 0;
           }
-          iVar2 = fn_82F65AC0(apcStack_60[0],0xffffffff820d3a94);
+          iVar2 = stricmp(apcStack_60,0xffffffff820d3a94);
           if (iVar2 == 0) {
             uVar4 = 1;
           }
           else {
-            iVar2 = fn_82F65AC0(apcStack_60[0],0xffffffff820d8938);
+            iVar2 = stricmp(apcStack_60,0xffffffff820d8938);
             if (iVar2 != 0) {
               return 0;
             }

@@ -70,7 +70,7 @@ undefined8 fn_828B92A0(undefined8 param_1,int param_2)
   undefined4 uStack_c0;
   uint uStack_bc;
   undefined **appuStack_b0 [20];
-  undefined1 auStack_60 [96];
+  undefined1 auStack_60 [64];
   
   appuStack_b0[0] = &lbl_82020F40;
   appuStack_100[0] = (undefined **)&lbl_821AA8E0;

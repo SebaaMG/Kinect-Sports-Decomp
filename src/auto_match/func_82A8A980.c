@@ -34,15 +34,15 @@ extern int fn_82A8A890();
 void fn_82A8A980(undefined8 param_1,undefined8 param_2,undefined8 param_3,int param_4)
 
 {
-  undefined4 auStack_10 [4];
+  undefined4 auStack_10;
   
   if (param_4 == 6) {
-    auStack_10[0] = 0;
-    fn_82A8A890(auStack_10,param_1,param_2,param_3,0x34);
+    auStack_10 = 0;
+    fn_82A8A890(&auStack_10,param_1,param_2,param_3,0x34);
   }
   else if (param_4 == 5) {
-    auStack_10[0] = 0;
-    fn_82A8A408(auStack_10,param_1,param_2,param_3,0x30);
+    auStack_10 = 0;
+    fn_82A8A408(&auStack_10,param_1,param_2,param_3,0x30);
   }
   else {
     fn_82A8A480();

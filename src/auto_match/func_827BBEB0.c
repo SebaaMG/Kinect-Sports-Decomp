@@ -26,7 +26,7 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_827C1A60();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 undefined8 fn_827BBEB0(int *param_1)
@@ -170,8 +170,8 @@ LAB_827bbef8:
         uVar10 = fn_827C1A60(param_1);
         *puVar13 = uVar10;
       }
-      fn_82F68CC0(*puVar13,abStack_180,0x11);
-      fn_82F68CC0((ulonglong)*puVar13 + 0x11,abStack_160,0x100);
+      memcpy(*puVar13,abStack_180,0x11);
+      memcpy((ulonglong)*puVar13 + 0x11,abStack_160,0x100);
     }
     if (iVar9 != 0) {
       *(undefined4 *)(*param_1 + 0x14) = 0xb;

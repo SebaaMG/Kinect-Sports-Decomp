@@ -28,8 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 
 
 undefined8
-fn_826367A8(uint *param_1,uint *param_2,longlong param_3,ulonglong param_4,longlong param_5,
-             ulonglong param_6,ulonglong param_7,code *param_8)
+fn_826367A8(uint *param_1, uint *param_2, longlong param_3, ulonglong param_4, longlong param_5, ulonglong param_6, ulonglong param_7, code *param_8, undefined4 in_stack_00000054)
 
 {
   uint uVar1;
@@ -40,7 +39,7 @@ fn_826367A8(uint *param_1,uint *param_2,longlong param_3,ulonglong param_4,longl
   ulonglong uVar6;
   ulonglong uVar7;
   uint uVar8;
-  undefined4 in_stack_00000054;
+
   
   uVar4 = 0;
   if (((ulonglong)*param_2 == (param_4 & 0xffffffff)) && ((param_1[1] & 0x800) == 0)) {

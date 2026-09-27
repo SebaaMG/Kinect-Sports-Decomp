@@ -35,7 +35,7 @@ extern int fn_8288B760();
 extern int fn_8288F948();
 extern int fn_828A12E8();
 extern int fn_828AD740();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int iStack_34;
 extern unsigned int iStack_38;
 extern unsigned int iStack_3c;
@@ -55,8 +55,8 @@ ulonglong fn_822AC078(int param_1,int param_2,int param_3)
   int iVar7;
   ulonglong uVar9;
   int iStack_3c;
-  int iStack_38;
-  int iStack_34;
+  struct { int first; int second; } stack_pair_38;
+
   
   if (*(int *)(*(int *)(param_3 + 0x90) + 4) == 0) {
     return 0;
@@ -82,9 +82,9 @@ ulonglong fn_822AC078(int param_1,int param_2,int param_3)
   if (uVar9 == 0) {
     uVar9 = fn_82511928();
   }
-  fn_825138E0(&iStack_38,uVar9,1);
-  if (iStack_38 != 0) {
-    uVar1 = *(undefined4 *)(iStack_38 + 8);
+  fn_825138E0(&stack_pair_38.first,uVar9,1);
+  if (stack_pair_38.first != 0) {
+    uVar1 = *(undefined4 *)(stack_pair_38.first + 8);
     iVar7 = 0;
     uVar4 = fn_828A12E8(uVar1);
     iVar5 = fn_8288F948(uVar4,1);
@@ -117,7 +117,7 @@ LAB_822ac1bc:
             if (*(int *)(iVar7 + 0x860) == 0) goto LAB_822ac1bc;
           }
           if (iVar5 != 0) {
-            fn_82F68CC0(*(int **)(param_2 + 0x48) + 0x10,iVar5,1000);
+            memcpy(*(int **)(param_2 + 0x48) + 0x10,iVar5,1000);
             *(undefined4 *)(*(int *)(param_2 + 0x48) + 0x30) = 1;
           }
           break;
@@ -145,7 +145,7 @@ LAB_822ac1bc:
     uVar9 = 0;
   }
 LAB_822ac268:
-  if (iStack_34 != 0) {
+  if (stack_pair_38.second != 0) {
     fn_822315A0();
   }
   return uVar9;

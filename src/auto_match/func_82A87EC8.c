@@ -48,28 +48,28 @@ undefined8 fn_82A87EC8(int param_1,undefined8 param_2)
   int iVar7;
   int iVar8;
   undefined4 auStack_6a0 [2];
-  undefined **appuStack_698 [6];
-  uint uStack_680;
-  undefined4 uStack_67c;
+  undefined ** appuStack_698;
+  struct { uint first; undefined4 second; } stack_pair_680;
+
   undefined4 uStack_678;
   undefined4 uStack_674;
   int aiStack_670 [412];
   
   auStack_6a0[0] = 0;
-  uStack_67c = 0;
+  stack_pair_680.second = 0;
   uStack_678 = 0;
   uStack_674 = 0;
-  fn_82A8CF10(appuStack_698);
-  cVar4 = fn_82A87660(auStack_6a0,appuStack_698,&uStack_680);
+  fn_82A8CF10(&appuStack_698);
+  cVar4 = fn_82A87660(auStack_6a0,&appuStack_698,&stack_pair_680.first);
   while ((cVar4 != '\0' &&
-         (cVar4 = fn_82A87B60(auStack_6a0,appuStack_698,&uStack_680,aiStack_670,400,4),
+         (cVar4 = fn_82A87B60(auStack_6a0,&appuStack_698,&stack_pair_680.first,aiStack_670,400,4),
          cVar4 != '\0'))) {
-    if (uStack_680 !=
-        (((int)uStack_680 >> 1) + (uint)((int)uStack_680 < 0 && (uStack_680 & 1) != 0)) * 2) {
+    if (stack_pair_680.first !=
+        (((int)stack_pair_680.first >> 1) + (uint)((int)stack_pair_680.first < 0 && (stack_pair_680.first & 1) != 0)) * 2) {
       return 1;
     }
     iVar5 = 0;
-    if (0 < (int)uStack_680) {
+    if (0 < (int)stack_pair_680.first) {
       piVar6 = aiStack_670;
       do {
         iVar1 = *(int *)(param_1 + 0x24);
@@ -90,11 +90,11 @@ undefined8 fn_82A87EC8(int param_1,undefined8 param_2)
         *(undefined1 *)(iVar7 + 0x15) = *(undefined1 *)(iVar8 + 0x15);
         *(undefined1 *)(iVar7 + 0x16) = *(undefined1 *)(iVar8 + 0x16);
         *(undefined1 *)(iVar7 + 0x17) = *(undefined1 *)(iVar8 + 0x17);
-      } while (iVar5 < (int)uStack_680);
+      } while (iVar5 < (int)stack_pair_680.first);
     }
-    appuStack_698[0] = &lbl_821CB794;
-    fn_82A8CF10(appuStack_698,param_2);
-    cVar4 = fn_82A87660(auStack_6a0,appuStack_698,&uStack_680);
+    appuStack_698 = &lbl_821CB794;
+    fn_82A8CF10(&appuStack_698,param_2);
+    cVar4 = fn_82A87660(auStack_6a0,&appuStack_698,&stack_pair_680.first);
   }
   return 0;
 }

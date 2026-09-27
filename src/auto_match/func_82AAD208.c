@@ -35,18 +35,18 @@ void fn_82AAD208(ulonglong param_1,uint param_2,undefined8 param_3,undefined4 *p
   undefined4 *puVar1;
   uint uVar2;
   uint *puVar3;
-  uint auStack_30 [12];
+  uint auStack_30;
   
   puVar1 = (undefined4 *)*param_4;
   uVar2 = fn_82AAC8C0(((param_1 & 0xffffffff) >> 0x14 & 0x700 | param_1 & 0x1800) >> 8,
-                        param_1 & 0x7ff,param_3,auStack_30);
+                        param_1 & 0x7ff,param_3,&auStack_30);
   *puVar1 = 0x47;
   puVar3 = puVar1 + 1;
   if ((param_1 & 0xf0000) == 0xf0000) {
-    *puVar3 = (auStack_30[0] & 0x3f) << 0x10 | uVar2 & 0xffff;
+    *puVar3 = (auStack_30 & 0x3f) << 0x10 | uVar2 & 0xffff;
   }
   else {
-    *puVar3 = (auStack_30[0] & 0x3f) << 0x10 | 0x400000 | uVar2 & 0xffff;
+    *puVar3 = (auStack_30 & 0x3f) << 0x10 | 0x400000 | uVar2 & 0xffff;
     puVar3 = puVar1 + 2;
     uVar2 = (uint)((param_1 & 0x10000) != 0);
     if ((param_1 & 0x20000) != 0) {

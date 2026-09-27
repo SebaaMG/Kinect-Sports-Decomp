@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_4c;
 extern unsigned int *auStack_a0;
-extern int fn_82F691F0();
+extern int memset();
 extern int fn_8304EF20();
 extern int fn_8304F708();
 extern unsigned int uStack_50;
@@ -39,7 +39,7 @@ undefined8 fn_82866860(int param_1)
   int iVar1;
   undefined4 auStack_a0 [20];
   undefined4 uStack_50;
-  undefined1 auStack_4c [76];
+  undefined1 auStack_4c [60];
   
   auStack_a0[0] = 0;
   fn_8304EF20(auStack_a0);
@@ -50,6 +50,6 @@ undefined8 fn_82866860(int param_1)
   }
   uStack_50 = 0;
                     /* WARNING: Subroutine does not return */
-  fn_82F691F0(auStack_4c,0,0x2c);
+  memset(auStack_4c,0,0x2c);
 }
 

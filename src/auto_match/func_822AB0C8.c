@@ -31,7 +31,7 @@ extern int fn_822AC808();
 extern int fn_822ACAD8();
 extern int fn_82526C70();
 extern int fn_8265C9E0();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int lbl_82002B04;
 extern unsigned int lbl_821CC160;
 extern unsigned int uStack_5c;
@@ -67,7 +67,7 @@ int fn_822AB0C8(double param_1,int param_2,undefined8 param_3,undefined8 param_4
     *(undefined4 *)(param_2 + 0x24) = 0;
     *(int *)(param_2 + 0x4c) = (int)param_4;
     *(undefined4 *)(param_2 + 0x50) = param_5;
-    fn_82F68CC0(param_2 + 0x54,param_9,0x54);
+    memcpy(param_2 + 0x54,param_9,0x54);
     uVar1 = fn_8265C9E0(0xb0);
     if ((uVar1 & 0xffffffff) == 0) {
       uVar4 = 0;

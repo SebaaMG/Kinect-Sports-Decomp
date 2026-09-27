@@ -52,8 +52,8 @@ void fn_82647A70(ulonglong param_1)
   ulonglong uVar10;
   uint uVar11;
   ulonglong uVar12;
-  uint uStack_60;
-  undefined4 uStack_5c;
+  struct { uint first; undefined4 second; } stack_pair_60;
+
   uint uStack_58;
   uint uStack_54;
   undefined4 uStack_50;
@@ -91,13 +91,13 @@ void fn_82647A70(ulonglong param_1)
     uVar11 = uVar2 + 1;
   }
   if (*(code **)(iVar7 + 0x4170) != (code *)0x0) {
-    uStack_5c = *(undefined4 *)(iVar7 + 0x418c);
-    uStack_60 = (uint)(uVar4 != 0);
+    stack_pair_60.second = *(undefined4 *)(iVar7 + 0x418c);
+    stack_pair_60.first = (uint)(uVar4 != 0);
     uStack_50 = (undefined4)uVar9;
     uStack_58 = uVar2;
     uStack_54 = *(uint *)(iVar7 + 0x4180);
     uStack_4c = uVar11;
-    (**(code **)(iVar7 + 0x4170))(&uStack_60);
+    (**(code **)(iVar7 + 0x4170))(&stack_pair_60.first);
     uVar11 = uStack_4c;
   }
   *(uint *)(iVar7 + 0x4180) = uVar11;

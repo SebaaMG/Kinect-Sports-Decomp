@@ -53,7 +53,7 @@ longlong fn_8288E940(int *param_1)
   ulonglong uVar9;
   undefined4 uStack_50;
   undefined1 auStack_4c [4];
-  undefined1 auStack_48 [72];
+  undefined1 auStack_48 [8];
   
   lVar3 = fn_828A12E8(param_1[4]);
   fn_828B5580(auStack_48,param_1 + 5);

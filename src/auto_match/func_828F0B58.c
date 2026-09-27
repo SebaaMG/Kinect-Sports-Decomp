@@ -45,7 +45,7 @@ longlong fn_828F0B58(undefined8 param_1,undefined8 param_2,char *param_3,ulonglo
   int *piStack_8c;
   int *piStack_88;
   char *pcStack_84;
-  undefined1 auStack_80 [128];
+  undefined1 auStack_80 [64];
   
   piStack_88 = (int *)0x0;
   piStack_90 = (int *)0x0;

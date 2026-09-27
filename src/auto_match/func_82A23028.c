@@ -57,12 +57,12 @@ undefined8 fn_82A23028(int param_1,int param_2)
   ulonglong uVar8;
   undefined8 uVar9;
   ulonglong uVar10;
-  undefined4 uStack_90;
-  int iStack_8c;
+  struct { undefined4 first; int second; } stack_pair_90;
+
   undefined4 uStack_88;
   undefined4 uStack_84;
   uint auStack_80 [2];
-  uint auStack_78 [30];
+  uint auStack_78;
   
   uVar9 = 0;
   uVar10 = 0;
@@ -120,14 +120,14 @@ LAB_82a231b4:
     do {
       uVar10 = fn_8265C940(0x1000,lbl_8315D2EC);
       if (uVar10 == 0) goto LAB_82a232f4;
-      uStack_90 = 0;
+      stack_pair_90.first = 0;
       puVar2 = *(undefined4 **)(param_1 + 0x28);
-      iStack_8c = (*(int *)(param_1 + 0x20) + 1) * 0x1000;
-      uVar3 = (**(code **)(lbl_83219B8C + 0x10))(*puVar2,0,0,0,auStack_78,uVar10,0x1000,&uStack_90);
+      stack_pair_90.second = (*(int *)(param_1 + 0x20) + 1) * 0x1000;
+      uVar3 = (**(code **)(lbl_83219B8C + 0x10))(*puVar2,0,0,0,&auStack_78,uVar10,0x1000,&stack_pair_90.first);
       if ((int)uVar3 == 0x103) {
         uVar3 = NtWaitForSingleObjectEx(*puVar2,1,0,0);
         if (-1 < (int)uVar3) {
-          uVar3 = (ulonglong)auStack_78[0];
+          uVar3 = (ulonglong)auStack_78;
         }
       }
       uVar8 = (uVar3 & 0xffffffff) >> 0x1e;
@@ -151,20 +151,20 @@ LAB_82a231b4:
       *(uint *)(param_1 + 0x20) = uVar7;
     } while (uVar7 < *(ushort *)(iVar6 + 2));
     *(int *)(param_1 + 0x2c) = param_1 + 0x2c;
-    uStack_90 = 0xffffffff;
-    iStack_8c = 0xffffffff;
+    stack_pair_90.first = 0xffffffff;
+    stack_pair_90.second = 0xffffffff;
     *(int *)(param_1 + 0x30) = param_1 + 0x2c;
     while( true ) {
-      lVar4 = fn_82A21608(param_1,&uStack_90);
+      lVar4 = fn_82A21608(param_1,&stack_pair_90.first);
       if (lVar4 == 0) break;
       fn_82A1FBD8(param_1);
       fn_82A214B0(param_1);
     }
     RtlEnterCriticalSection();
-    uStack_90 = 0xffffffff;
-    iStack_8c = -1;
+    stack_pair_90.first = 0xffffffff;
+    stack_pair_90.second = -1;
     while( true ) {
-      iVar6 = fn_82A21608(param_1,&uStack_90);
+      iVar6 = fn_82A21608(param_1,&stack_pair_90.first);
       if (iVar6 == 0) break;
       *(undefined1 *)(iVar6 + 0x1a) = 1;
       *(uint *)(iVar6 + 0x1c) = *(uint *)(iVar6 + 0x1c) & 0xd1;

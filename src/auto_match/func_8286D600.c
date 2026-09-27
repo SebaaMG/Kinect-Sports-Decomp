@@ -26,7 +26,7 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_8265CA20();
-extern int fn_82F63CA0();
+extern int memmove();
 extern unsigned int lbl_82021574;
 extern unsigned int lbl_82021590;
 
@@ -45,7 +45,7 @@ void fn_8286D600(undefined4 *param_1)
     do {
       piVar2 = piVar2 + 1;
       piVar1 = (int *)*piVar3;
-      fn_82F63CA0(piVar3,piVar2,(param_1[2] - (int)piVar2 >> 2) << 2);
+      memmove(piVar3,piVar2,(param_1[2] - (int)piVar2 >> 2) << 2);
       param_1[2] = param_1[2] + -4;
       if (piVar1 != (int *)0x0) {
         (**(code **)(*piVar1 + 0x30))(piVar1,1);

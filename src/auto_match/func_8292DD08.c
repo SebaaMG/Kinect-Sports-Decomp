@@ -27,13 +27,13 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_82925600();
 extern int fn_82B8FD40();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 void fn_8292DD08(int param_1,int param_2,int param_3,undefined8 param_4)
 
 {
-  fn_82F68CC0(param_4,(longlong)*(int *)(param_1 + 0x60) * (longlong)param_2 +
+  memcpy(param_4,(longlong)*(int *)(param_1 + 0x60) * (longlong)param_2 +
                        (longlong)*(int *)(param_1 + 100) * (longlong)param_3 +
                        (ulonglong)*(uint *)(param_1 + 0x20),*(int *)(param_1 + 0x68) << 4);
   if (*(int *)(param_1 + 0x18) != 0) {

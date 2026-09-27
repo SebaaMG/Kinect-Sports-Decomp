@@ -31,12 +31,12 @@ extern int fn_82826568();
 void fn_8282AED8(int param_1,int param_2)
 
 {
-  int aiStack_10 [4];
+  int aiStack_10;
   
   if (((*(int *)(param_2 + 0x18) != 0) && (*(int *)(param_2 + 0x14) != 0)) &&
      (*(int *)(param_2 + 0x18) == *(int *)(param_1 + 0x3d8))) {
-    fn_82826568(param_1,*(int *)(param_2 + 0x14),aiStack_10);
-    *(undefined1 *)(aiStack_10[0] + 0x34) = 1;
+    fn_82826568(param_1,*(int *)(param_2 + 0x14),&aiStack_10);
+    *(undefined1 *)(aiStack_10 + 0x34) = 1;
   }
   return;
 }

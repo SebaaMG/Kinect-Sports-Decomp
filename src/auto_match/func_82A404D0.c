@@ -33,19 +33,19 @@ int fn_82A404D0(int param_1)
 {
   int *piVar1;
   int *piVar2;
-  int aiStack_30 [12];
+  int aiStack_30;
   
   piVar2 = (int *)(param_1 + 0x2c);
   (**(code **)(*(int *)(param_1 + 0x2c) + 8))(piVar2);
   piVar1 = (int *)(param_1 + 0x50);
-  aiStack_30[0] = 0;
+  aiStack_30 = 0;
   (**(code **)(*(int *)(param_1 + 0x50) + 8))(piVar1);
   if (*(int *)(param_1 + 0xa4) == 0) {
     if (*(int *)(param_1 + 0x1b8) != 0) {
-      aiStack_30[0] =
+      aiStack_30 =
            (**(code **)(**(int **)(param_1 + 0xb0) + 0x38))
                      (*(int **)(param_1 + 0xb0),*(undefined4 *)(param_1 + 0x214),param_1 + 0xac);
-      if (aiStack_30[0] < 0) goto LAB_82a40568;
+      if (aiStack_30 < 0) goto LAB_82a40568;
       *(undefined4 *)(param_1 + 0xa8) = 2;
     }
     *(undefined4 *)(param_1 + 0xa4) = 1;
@@ -53,7 +53,7 @@ int fn_82A404D0(int param_1)
 LAB_82a40568:
   (**(code **)(*piVar1 + 0x14))(piVar1);
   (**(code **)(*piVar2 + 0x14))(piVar2);
-  fn_82A40238(aiStack_30);
-  return aiStack_30[0];
+  fn_82A40238(&aiStack_30);
+  return aiStack_30;
 }
 

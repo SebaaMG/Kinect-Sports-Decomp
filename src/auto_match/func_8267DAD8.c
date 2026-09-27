@@ -43,8 +43,8 @@ fn_8267DAD8(undefined4 *param_1,undefined4 param_2,undefined4 param_3,undefined4
              undefined4 param_5,undefined4 param_6)
 
 {
-  undefined4 uStack_50;
-  undefined4 uStack_4c;
+  struct { undefined4 first; undefined4 second; } stack_pair_50;
+
   undefined4 uStack_48;
   undefined4 uStack_44;
   undefined4 uStack_40;
@@ -55,12 +55,12 @@ fn_8267DAD8(undefined4 *param_1,undefined4 param_2,undefined4 param_3,undefined4
   *param_1 = &lbl_82005670;
   param_1[3] = &lbl_8200565C;
   uStack_3c = 3;
-  uStack_50 = param_2;
-  uStack_4c = param_3;
+  stack_pair_50.first = param_2;
+  stack_pair_50.second = param_3;
   uStack_48 = param_4;
   uStack_44 = param_5;
   uStack_40 = param_6;
-  fn_8267D608(param_1,&uStack_50);
+  fn_8267D608(param_1,&stack_pair_50.first);
   return param_1;
 }
 

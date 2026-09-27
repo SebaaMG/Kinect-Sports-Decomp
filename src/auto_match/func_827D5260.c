@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_3c;
 extern int fn_82811400();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 void fn_827D5260(int *param_1)
@@ -38,7 +38,7 @@ void fn_827D5260(int *param_1)
   
   fn_82811400(auStack_3c,0x10);
   piVar1 = (int *)param_1[9];
-  fn_82F68CC0(auStack_3c,param_1 + 10,0x18);
+  memcpy(auStack_3c,param_1 + 10,0x18);
   (**(code **)(*param_1 + 8))(param_1,0);
   (**(code **)(*piVar1 + 0x18))(piVar1,param_1,auStack_3c);
   return;

@@ -35,8 +35,7 @@ extern unsigned int uStack_a8;
 extern unsigned int uStack_ac;
 
 
-ulonglong fn_8263AD78(longlong param_1,longlong param_2,ulonglong param_3,ulonglong param_4,
-                       int param_5,ulonglong param_6,undefined8 param_7,int param_8)
+ulonglong fn_8263AD78(longlong param_1, longlong param_2, ulonglong param_3, ulonglong param_4, int param_5, ulonglong param_6, undefined8 param_7, int param_8, uint in_stack_00000054, undefined8 unused_arg_10, uint in_stack_00000064)
 
 {
   byte bVar1;
@@ -57,8 +56,8 @@ ulonglong fn_8263AD78(longlong param_1,longlong param_2,ulonglong param_3,ulongl
   ulonglong uVar16;
   int iStack00000024;
   int iStack0000004c;
-  uint in_stack_00000054;
-  uint in_stack_00000064;
+
+
   uint *in_stack_0000006c;
   uint *in_stack_00000074;
   int *in_stack_0000007c;

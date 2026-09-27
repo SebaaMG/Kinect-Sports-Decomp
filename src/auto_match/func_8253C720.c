@@ -35,7 +35,7 @@ void fn_8253C720(int param_1,longlong param_2)
 {
   int iVar1;
   int iVar2;
-  undefined1 auStack_38 [56];
+  undefined1 auStack_38 [24];
   
   iVar1 = 0;
   if (0 < *(int *)(param_1 + 0x48)) {

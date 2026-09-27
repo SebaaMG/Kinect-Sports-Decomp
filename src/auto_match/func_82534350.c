@@ -56,7 +56,7 @@ undefined8 fn_82534350(int param_1)
   ulonglong uVar3;
   uint uVar5;
   int iVar6;
-  undefined1 auStack_170 [16];
+  undefined1 auStack_170;
   undefined1 auStack_160 [32];
   undefined1 auStack_140 [32];
   undefined1 auStack_120 [48];
@@ -71,10 +71,10 @@ undefined8 fn_82534350(int param_1)
   uVar5 = 0;
   if (*(int *)(param_1 + 8) != 0) {
     iVar6 = 0;
-    auStack_170[0] = 0x2e;
+    auStack_170 = 0x2e;
     do {
       fn_82230110(auStack_160,*(undefined4 *)(iVar6 + *(int *)(param_1 + 0xc)));
-      uVar2 = fn_82536D88(auStack_160,auStack_170,0xffffffffffffffff,1);
+      uVar2 = fn_82536D88(auStack_160,&auStack_170,0xffffffffffffffff,1);
       if ((int)uVar2 != -1) {
         fn_82230300(auStack_140,0,0);
         fn_82230218(auStack_140,auStack_160,0,uVar2);

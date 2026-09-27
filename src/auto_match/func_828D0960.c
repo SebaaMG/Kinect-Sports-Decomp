@@ -38,7 +38,7 @@ extern int fn_828AD740();
 extern int fn_828CFC68();
 extern int fn_828D0590();
 extern int fn_828D0890();
-extern int fn_82F63CA0();
+extern int memmove();
 
 
 void fn_828D0960(int param_1,int param_2)
@@ -75,7 +75,7 @@ LAB_828d09e0:
       if (cVar4 == '\0') {
         return;
       }
-      fn_82F63CA0(piVar6,piVar6 + 1,(*(int *)(param_1 + 8) - (int)(piVar6 + 1) >> 2) << 2);
+      memmove(piVar6,piVar6 + 1,(*(int *)(param_1 + 8) - (int)(piVar6 + 1) >> 2) << 2);
       *(int *)(param_1 + 8) = *(int *)(param_1 + 8) + -4;
       if (iVar2 == 0) {
         return;

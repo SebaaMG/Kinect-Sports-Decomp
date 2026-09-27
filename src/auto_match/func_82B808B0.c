@@ -35,7 +35,7 @@ fn_82B808B0(int param_1,int param_2,uint param_3,char param_4,ulonglong param_5,
              )
 
 {
-  undefined1 auStack_80 [112];
+  undefined1 auStack_80 [96];
   
   if ((param_3 == 0) && (*(int *)(param_1 + 0x38) != 0)) {
     *(undefined4 *)(*(int *)(param_1 + 0x38) + 0x1c) = 1;

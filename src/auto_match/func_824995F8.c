@@ -48,7 +48,7 @@ void fn_824995F8(int param_1)
   longlong lVar6;
   double dVar7;
   undefined **appuStack_b0 [20];
-  undefined1 auStack_60 [96];
+  undefined1 auStack_60 [48];
   
   iVar3 = *(int *)(*(int *)(param_1 + 0xc0) + 0x118);
   uVar1 = fn_82492818(appuStack_b0,iVar3 + 0x36c,0xffffffffffffffff,iVar3 + 0x160,iVar3 + 0x1e0,

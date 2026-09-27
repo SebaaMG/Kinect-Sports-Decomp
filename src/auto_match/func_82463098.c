@@ -73,10 +73,10 @@ void fn_82463098(int param_1,undefined8 param_2)
   undefined4 uStack_9c;
   undefined4 uStack_98;
   undefined4 uStack_94;
-  undefined4 uStack_90;
-  undefined4 uStack_8c;
+  struct { undefined4 first; undefined4 second; } stack_pair_90;
+
   undefined1 auStack_80 [16];
-  undefined1 auStack_70 [112];
+  undefined1 auStack_70 [32];
   
   iVar10 = (int)param_2;
   if (*(int *)(param_1 + 0x2e0) == iVar10) {
@@ -116,10 +116,10 @@ void fn_82463098(int param_1,undefined8 param_2)
   }
   else {
     if (iVar10 == 8) {
-      uStack_90 = 0x71;
-      uStack_8c = 8;
-      fn_8257C8F0(*(undefined4 *)(param_1 + 4),&uStack_90);
-      puVar12 = &uStack_90;
+      stack_pair_90.first = 0x71;
+      stack_pair_90.second = 8;
+      fn_8257C8F0(*(undefined4 *)(param_1 + 4),&stack_pair_90.first);
+      puVar12 = &stack_pair_90.first;
     }
     else {
       if (iVar10 != 9) {

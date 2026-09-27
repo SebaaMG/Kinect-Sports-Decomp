@@ -39,7 +39,7 @@ undefined8 fn_822B1D80(int param_1,int param_2,char param_3)
   char cVar4;
   undefined8 uVar2;
   ulonglong uVar3;
-  int aiStack_30 [12];
+  int aiStack_30;
   
   cVar4 = fn_8288B760(*(undefined4 *)(param_1 + 0x10));
   if ((cVar4 == '\0') ||
@@ -51,13 +51,13 @@ undefined8 fn_822B1D80(int param_1,int param_2,char param_3)
   else {
     uVar2 = 1;
     piVar1 = *(int **)(*(int *)(*(int *)(param_1 + 0x10) + 0x10) + 0x200);
-    aiStack_30[0] = *piVar1;
-    if ((int *)aiStack_30[0] != piVar1) {
+    aiStack_30 = *piVar1;
+    if ((int *)aiStack_30 != piVar1) {
       do {
-        if ((param_3 != '\0') || (*(char *)(*(int *)(aiStack_30[0] + 0x10) + 0x26) == '\0')) {
+        if ((param_3 != '\0') || (*(char *)(*(int *)(aiStack_30 + 0x10) + 0x26) == '\0')) {
           if (*(int **)(param_2 + 0x10) == (int *)0x0) {
                     /* WARNING: Subroutine does not return */
-            fn_82F63108(uVar3,*(undefined4 *)(aiStack_30[0] + 0x10));
+            fn_82F63108(uVar3,*(undefined4 *)(aiStack_30 + 0x10));
           }
           cVar4 = (**(code **)(**(int **)(param_2 + 0x10) + 4))();
           if (cVar4 == '\0') {
@@ -65,8 +65,8 @@ undefined8 fn_822B1D80(int param_1,int param_2,char param_3)
             break;
           }
         }
-        uVar3 = fn_82381BC0(aiStack_30);
-      } while (aiStack_30[0] != *(int *)(*(int *)(*(int *)(param_1 + 0x10) + 0x10) + 0x200));
+        uVar3 = fn_82381BC0(&aiStack_30);
+      } while (aiStack_30 != *(int *)(*(int *)(*(int *)(param_1 + 0x10) + 0x10) + 0x200));
     }
     fn_82359C18(param_2);
   }

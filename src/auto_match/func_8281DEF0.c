@@ -44,7 +44,7 @@ void fn_8281DEF0(longlong param_1,longlong param_2)
   longlong lVar1;
   double dVar2;
   double dVar3;
-  undefined1 auStack_a0 [16];
+  undefined1 auStack_a0 [1];
   undefined1 auStack_90 [48];
   undefined1 auStack_60 [96];
   

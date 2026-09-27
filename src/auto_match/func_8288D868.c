@@ -44,17 +44,17 @@ longlong fn_8288D868(int param_1)
   uint uVar4;
   undefined4 *puVar5;
   longlong lVar6;
-  int aiStack_40 [2];
+  int aiStack_40;
   undefined4 uStack_38;
   undefined4 uStack_34;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
   
   lVar6 = 1;
   piVar1 = *(int **)(*(int *)(param_1 + 0x10) + 0x230);
-  aiStack_40[0] = *piVar1;
-  if ((int *)aiStack_40[0] != piVar1) {
+  aiStack_40 = *piVar1;
+  if ((int *)aiStack_40 != piVar1) {
     do {
-      uVar2 = *(undefined4 *)(aiStack_40[0] + 0x10);
+      uVar2 = *(undefined4 *)(aiStack_40 + 0x10);
       if ((lVar6 == 0) || (iVar3 = fn_82A4AAA8(uVar2), iVar3 != 1)) {
 LAB_8288d90c:
         lVar6 = 0;
@@ -71,8 +71,8 @@ LAB_8288d90c:
         lVar6 = 1;
         if ((1 << (puVar5[1] & 0x3f) & *(uint *)*puVar5) == 0) goto LAB_8288d90c;
       }
-      fn_82381BC0(aiStack_40);
-    } while (aiStack_40[0] != *(int *)(*(int *)(param_1 + 0x10) + 0x230));
+      fn_82381BC0(&aiStack_40);
+    } while (aiStack_40 != *(int *)(*(int *)(param_1 + 0x10) + 0x230));
   }
   return lVar6;
 }

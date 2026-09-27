@@ -30,8 +30,8 @@ extern int fn_82BF2110();
 extern int fn_82BF2298();
 extern int fn_82BF23F8();
 extern int fn_82BF2608();
-extern int fn_82F68CC0();
-extern int fn_82F691F0();
+extern int memcpy();
+extern int memset();
 
 
 undefined8 fn_82BF26B0(int param_1,ulonglong param_2,longlong param_3)
@@ -50,7 +50,7 @@ undefined8 fn_82BF26B0(int param_1,ulonglong param_2,longlong param_3)
     uVar5 = 1;
   }
   else {
-    fn_82F68CC0(*(int *)(param_1 + 0x24),param_2,param_3);
+    memcpy(*(int *)(param_1 + 0x24),param_2,param_3);
     lVar3 = 0;
     param_3 = (ulonglong)*(uint *)(param_1 + 0x28) + param_3;
     lVar4 = 0;
@@ -97,7 +97,7 @@ undefined8 fn_82BF26B0(int param_1,ulonglong param_2,longlong param_3)
             *(undefined4 *)(param_1 + 0x30) = 0;
             *(undefined4 *)(param_1 + 8) = 0;
                     /* WARNING: Subroutine does not return */
-            fn_82F691F0(*(undefined4 *)(param_1 + 0x20),0,*(undefined4 *)(param_1 + 0x2c));
+            memset(*(undefined4 *)(param_1 + 0x20),0,*(undefined4 *)(param_1 + 0x2c));
           }
 LAB_82bf27b0:
           lVar3 = 0;

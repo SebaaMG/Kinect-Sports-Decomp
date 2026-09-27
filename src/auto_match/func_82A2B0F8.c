@@ -31,10 +31,10 @@ extern unsigned int *auStack_10;
 void fn_82A2B0F8(undefined4 param_1)
 
 {
-  undefined4 auStack_10 [4];
+  undefined4 auStack_10;
   
-  auStack_10[0] = param_1;
-  XMsgInProcessCall(0xfe,0x2c009,auStack_10,0);
+  auStack_10 = param_1;
+  XMsgInProcessCall(0xfe,0x2c009,&auStack_10,0);
   return;
 }
 

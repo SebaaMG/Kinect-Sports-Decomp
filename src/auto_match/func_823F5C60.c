@@ -38,8 +38,8 @@ void fn_823F5C60(int *param_1,undefined8 param_2,int *param_3)
   undefined8 uVar1;
   char cVar2;
   undefined4 *puVar3;
-  undefined4 uStack_30;
-  undefined4 uStack_2c;
+  struct { undefined4 first; undefined4 second; } stack_pair_30;
+
   undefined4 uStack_28;
   undefined4 uStack_24;
   
@@ -58,11 +58,11 @@ void fn_823F5C60(int *param_1,undefined8 param_2,int *param_3)
   }
   puVar3 = (undefined4 *)0x0;
 LAB_823f5ccc:
-  uStack_30 = *puVar3;
-  uStack_2c = puVar3[1];
+  stack_pair_30.first = *puVar3;
+  stack_pair_30.second = puVar3[1];
   uStack_28 = puVar3[2];
   uStack_24 = puVar3[3];
-  (**(code **)(*param_1 + 0x10))(param_1,param_2,&uStack_30);
+  (**(code **)(*param_1 + 0x10))(param_1,param_2,&stack_pair_30.first);
   return;
 }
 

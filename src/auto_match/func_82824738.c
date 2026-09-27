@@ -38,11 +38,11 @@ bool fn_82824738(int param_1,undefined8 param_2,int *param_3)
 {
   int iVar1;
   undefined4 uStack0000001c;
-  int aiStack_30 [12];
+  int aiStack_30;
   
   uStack0000001c = (undefined4)param_2;
-  fn_828233A8(param_1 + 0x3a4,aiStack_30,0xffffffff828245e8,param_2);
-  if (aiStack_30[0] == 0) {
+  fn_828233A8(param_1 + 0x3a4,&aiStack_30,0xffffffff828245e8,param_2);
+  if (aiStack_30 == 0) {
     fn_8257A9F0(*(undefined4 *)(param_1 + 0x3bc),&stack0x0000001c);
     *param_3 = ((*(int **)(param_1 + 0x3bc))[1] - **(int **)(param_1 + 0x3bc) >> 2) + -1;
     iVar1 = fn_828252E8(param_1,0x18);
@@ -51,8 +51,8 @@ bool fn_82824738(int param_1,undefined8 param_2,int *param_3)
     fn_82822F60(param_1 + 0x3a4,iVar1,0xffffffff828244e8);
   }
   else {
-    *param_3 = *(int *)(aiStack_30[0] + 0x14);
+    *param_3 = *(int *)(aiStack_30 + 0x14);
   }
-  return aiStack_30[0] == 0;
+  return aiStack_30 == 0;
 }
 

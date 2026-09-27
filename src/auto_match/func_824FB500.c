@@ -62,14 +62,14 @@ int * fn_824FB500(int *param_1,int param_2,int *param_3)
   int iVar10;
   int *piVar11;
   undefined8 uStack_b0;
-  undefined4 uStack_a8;
-  int iStack_a4;
+  struct { undefined4 first; int second; } stack_pair_a8;
+
   int iStack_a0;
   int iStack_9c;
   undefined8 uStack_98;
   undefined8 uStack_90;
   char acStack_88 [64];
-  char acStack_48 [72];
+  char acStack_48 [24];
   
   param_1[0x28] = 0;
   piVar11 = param_1 + 10;
@@ -128,9 +128,9 @@ LAB_824fb66c:
         uVar8 = *(uint *)(iVar5 + 0x6c) & 0xfffffff7;
         goto LAB_824fb66c;
       }
-      uStack_a8 = 0;
-      iStack_a4 = iVar5;
-      fn_824BF8A8(iVar2 + 0x1c,&uStack_a8);
+      stack_pair_a8.first = 0;
+      stack_pair_a8.second = iVar5;
+      fn_824BF8A8(iVar2 + 0x1c,&stack_pair_a8.first);
       uStack_b0 = CONCAT44(fRam831d4a38 * fRam831d4a30 + (((U64)(uStack_b0) >> 0) & 0xFFFFFFFF),
                            fRam831d4a3c * fRam831d4a34 + (((U64)(uStack_b0) >> 32) & 0xFFFFFFFF));
     }

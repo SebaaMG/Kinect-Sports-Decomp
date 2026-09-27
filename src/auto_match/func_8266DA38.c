@@ -36,16 +36,16 @@ void fn_8266DA38(int param_1,undefined8 param_2)
 
 {
   ulonglong uVar1;
-  int iStack_30;
-  int iStack_2c;
+  struct { int first; int second; } stack_pair_30;
+
   
   for (uVar1 = (ulonglong)*(uint *)(param_1 + 0xd8);
       (uVar1 & 0xffffffff) != (ulonglong)*(uint *)(param_1 + 0xdc); uVar1 = uVar1 + 0xc) {
-    fn_8266D9F0(&iStack_30,uVar1);
-    if (iStack_30 != 0) {
-      fn_8266F640(iStack_30,param_2);
+    fn_8266D9F0(&stack_pair_30.first,uVar1);
+    if (stack_pair_30.first != 0) {
+      fn_8266F640(stack_pair_30.first,param_2);
     }
-    if (iStack_2c != 0) {
+    if (stack_pair_30.second != 0) {
       fn_822315A0();
     }
   }

@@ -81,8 +81,8 @@ void fn_82770B88(int param_1,int param_2,uint param_3)
   uint uStack_b8;
   int *piStack_b4;
   uint uStack_b0;
-  float fStack_a0;
-  float fStack_9c;
+  struct { float first; float second; } stack_pair_a0;
+
   float fStack_98;
   float fStack_94;
   uint uStack_90;
@@ -126,20 +126,20 @@ void fn_82770B88(int param_1,int param_2,uint param_3)
           piVar7 = (int *)(**(code **)(**(int **)(param_3 + 0xc) + 0x18))
                                     (*(int **)(param_3 + 0xc),uVar9,0);
           if (piVar7 != (int *)0x0) {
-            fStack_a0 = (float)dVar13;
+            stack_pair_a0.first = (float)dVar13;
             fStack_94 = (float)dVar13;
-            fStack_9c = (float)dVar13;
+            stack_pair_a0.second = (float)dVar13;
             fStack_98 = (float)dVar13;
-            (**(code **)(*piVar7 + 0x14))(piVar7,&fStack_a0);
-            if (dVar13 < (double)(float)((double)fStack_98 - (double)fStack_a0)) {
-              if (dVar13 < (double)(float)((double)fStack_94 - (double)fStack_9c)) {
+            (**(code **)(*piVar7 + 0x14))(piVar7,&stack_pair_a0.first);
+            if (dVar13 < (double)(float)((double)fStack_98 - (double)stack_pair_a0.first)) {
+              if (dVar13 < (double)(float)((double)fStack_94 - (double)stack_pair_a0.second)) {
                 lStack_c0 = (longlong)*(int *)(param_1 + 0x10);
                 fStack_70 = (float)dVar13;
                 fStack_6c = (float)dVar13;
                 dVar11 = (double)lStack_c0;
-                fStack_80 = (float)((double)fStack_a0 * dVar12 - dVar11);
+                fStack_80 = (float)((double)stack_pair_a0.first * dVar12 - dVar11);
                 fStack_78 = (float)((double)fStack_98 * dVar12 + dVar11);
-                fStack_7c = (float)((double)fStack_9c * dVar12 - dVar11);
+                fStack_7c = (float)((double)stack_pair_a0.second * dVar12 - dVar11);
                 fStack_74 = (float)((double)fStack_94 * dVar12 + dVar11);
                 if ((dVar13 < (double)(fStack_78 - fStack_80)) &&
                    (dVar13 < (double)(fStack_74 - fStack_7c))) {

@@ -47,7 +47,7 @@ undefined4 * fn_822E4000(undefined4 *param_1,longlong param_2)
   undefined4 in_register_000104d4;
   undefined4 in_register_000104d8;
   undefined4 in_vr77;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [32];
   
   fn_822B54F8();
   *param_1 = &lbl_821ADF14;

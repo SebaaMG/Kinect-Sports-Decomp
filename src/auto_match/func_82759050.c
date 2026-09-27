@@ -37,7 +37,7 @@ undefined8 fn_82759050(undefined8 param_1,undefined8 param_2,undefined4 *param_3
   ulonglong uVar1;
   undefined8 uVar2;
   undefined4 uStack_30;
-  undefined4 auStack_2c [11];
+  undefined4 auStack_2c;
   
   uStack_30 = 0x142;
   uVar1 = fn_8267BED0(param_2,0x6c,&uStack_30);
@@ -45,8 +45,8 @@ undefined8 fn_82759050(undefined8 param_1,undefined8 param_2,undefined4 *param_3
     uVar2 = 0;
   }
   else {
-    auStack_2c[0] = *param_3;
-    uVar2 = fn_8269D7D8(uVar1,param_1,param_2,auStack_2c);
+    auStack_2c = *param_3;
+    uVar2 = fn_8269D7D8(uVar1,param_1,param_2,&auStack_2c);
   }
   return uVar2;
 }

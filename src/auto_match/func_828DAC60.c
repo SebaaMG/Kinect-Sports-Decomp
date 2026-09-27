@@ -69,7 +69,7 @@ void fn_828DAC60(int param_1)
   int iVar18;
   int iVar19;
   int iStack_80;
-  int aiStack_7c [31];
+  int aiStack_7c;
   
   cVar14 = fn_828ACCE8(*(undefined4 *)(param_1 + 8));
   if (cVar14 != '\0') {
@@ -90,11 +90,11 @@ LAB_828dac9c:
       bVar5 = false;
       puVar12 = (uint *)fn_828EDED8(*(undefined4 *)(*(int *)(param_1 + 8) + 0x8c));
       piVar1 = *(int **)(*(int *)(param_1 + 8) + 0x200);
-      aiStack_7c[0] = *piVar1;
-      if ((int *)aiStack_7c[0] != piVar1) {
+      aiStack_7c = *piVar1;
+      if ((int *)aiStack_7c != piVar1) {
         do {
-          piVar1 = *(int **)(aiStack_7c[0] + 0x10);
-          fn_82381BC0(aiStack_7c);
+          piVar1 = *(int **)(aiStack_7c + 0x10);
+          fn_82381BC0(&aiStack_7c);
           bVar15 = true;
           iStack_80 = *(int *)piVar1[0x16];
           if ((int *)iStack_80 != (int *)piVar1[0x16]) {
@@ -155,7 +155,7 @@ LAB_828dac9c:
               fn_828AECC0(uVar7,2);
             }
           }
-        } while (aiStack_7c[0] != *(int *)(*(int *)(param_1 + 8) + 0x200));
+        } while (aiStack_7c != *(int *)(*(int *)(param_1 + 8) + 0x200));
       }
       uVar10 = 7;
       if (!bVar5) {

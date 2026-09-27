@@ -49,7 +49,7 @@ void fn_828910B8(longlong param_1,longlong param_2)
   undefined1 auStack_48 [8];
   undefined1 auStack_40 [8];
   undefined1 auStack_38 [8];
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
   
   param_2 = param_2 + 0x14;
   lVar2 = param_1 + 0x24;

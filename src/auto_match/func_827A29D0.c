@@ -63,8 +63,8 @@ longlong fn_827A29D0(int param_1,ulonglong param_2,ulonglong param_3,char param_
   undefined4 uStack_58;
   undefined1 *puStack_54;
   undefined4 uStack_50;
-  undefined4 uStack_40;
-  undefined4 uStack_3c;
+  struct { undefined4 first; undefined4 second; } stack_pair_40;
+
   undefined1 *puStack_38;
   undefined4 uStack_34;
   
@@ -96,10 +96,10 @@ longlong fn_827A29D0(int param_1,ulonglong param_2,ulonglong param_3,char param_
             if (puVar6 == (undefined1 *)0x0) {
               puVar6 = &lbl_820E975C;
             }
-            puVar5 = &uStack_40;
+            puVar5 = &stack_pair_40.first;
             uVar4 = 6;
-            uStack_40 = uVar9;
-            uStack_3c = (int)uVar8;
+            stack_pair_40.first = uVar9;
+            stack_pair_40.second = (int)uVar8;
             puStack_38 = puVar6;
             uStack_34 = puVar3[1];
           }

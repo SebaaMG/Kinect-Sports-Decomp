@@ -43,7 +43,7 @@ void fn_828B7258(int param_1,int param_2,int param_3,undefined8 param_4,undefine
   int iVar7;
   double dVar8;
   double dVar9;
-  undefined4 auStack_60 [24];
+  undefined4 auStack_60 [1];
   
   iVar7 = param_2;
   while( true ) {

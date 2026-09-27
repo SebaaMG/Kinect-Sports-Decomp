@@ -37,15 +37,15 @@ undefined8 fn_826281A8(int param_1,int *param_2,undefined8 param_3)
   undefined4 *puVar1;
   int iVar2;
   undefined4 *puVar3;
-  uint auStack_30 [12];
+  uint auStack_30;
   
   puVar1 = *(undefined4 **)(param_1 + 0x38);
   for (puVar3 = *(undefined4 **)(param_1 + 0x34); puVar3 != puVar1; puVar3 = puVar3 + 1) {
     iVar2 = (**(code **)(*param_2 + 4))(param_2,*puVar3);
     if (iVar2 != 0) {
-      auStack_30[0] = fn_827D96A0(*puVar3);
-      auStack_30[0] = auStack_30[0] & 0xffff;
-      iVar2 = fn_827DDDD8(param_3,auStack_30);
+      auStack_30 = fn_827D96A0(*puVar3);
+      auStack_30 = auStack_30 & 0xffff;
+      iVar2 = fn_827DDDD8(param_3,&auStack_30);
       if (iVar2 == 0) {
         fn_827DDFB8(param_3,*puVar3);
       }

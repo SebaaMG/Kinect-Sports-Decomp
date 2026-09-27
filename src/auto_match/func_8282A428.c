@@ -48,8 +48,8 @@ undefined8 fn_8282A428(undefined8 param_1,int *param_2,int param_3,int *param_4)
   uint uVar6;
   int *piVar7;
   undefined1 auStack_60 [8];
-  int iStack_58;
-  int iStack_54;
+  struct { int first; int second; } stack_pair_58;
+
   
   iVar1 = *param_4;
   iVar2 = param_4[1];
@@ -74,11 +74,11 @@ undefined8 fn_8282A428(undefined8 param_1,int *param_2,int param_3,int *param_4)
         piVar7 = (int *)(*(int *)(iVar2 * 0x20 + iVar4 + 0x10) * uVar6 + param_3);
         cVar5 = fn_8282A0E8(iVar3,piVar7);
         if (cVar5 != '\0') {
-          iStack_58 = *piVar7;
-          iStack_54 = 0;
-          if (iStack_58 != 0) {
-            fn_8282A380(&iStack_58,iVar3,iVar1,auStack_60);
-            *piVar7 = iStack_54;
+          stack_pair_58.first = *piVar7;
+          stack_pair_58.second = 0;
+          if (stack_pair_58.first != 0) {
+            fn_8282A380(&stack_pair_58.first,iVar3,iVar1,auStack_60);
+            *piVar7 = stack_pair_58.second;
           }
         }
         uVar6 = uVar6 + 1;

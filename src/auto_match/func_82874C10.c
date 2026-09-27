@@ -41,7 +41,7 @@ int fn_82874C10(int param_1,undefined8 param_2)
   char *pcVar3;
   uint uVar4;
   int iVar5;
-  undefined1 auStack_a0 [160];
+  undefined1 auStack_a0 [112];
   
   pcVar1 = *(char **)(param_1 + 4);
   uVar4 = 0;

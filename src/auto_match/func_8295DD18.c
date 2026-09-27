@@ -53,7 +53,7 @@ undefined8 fn_8295DD18(int *param_1)
   int *piStack_38;
   int *piStack_34;
   undefined4 uStack_30;
-  undefined4 auStack_2c [11];
+  undefined4 auStack_2c;
   
   puVar1 = (uint *)param_1[0x41];
   uVar2 = puVar1[3];
@@ -72,12 +72,12 @@ undefined8 fn_8295DD18(int *param_1)
     uVar5 = fn_8295D0A8(param_1,uVar5);
     if (-1 < (int)uVar5) {
       uVar5 = (**(code **)(*param_1 + 0x140))
-                        (param_1,*(undefined4 *)(*piVar3 * 4 + param_1[5]),&uStack_50,auStack_2c,
+                        (param_1,*(undefined4 *)(*piVar3 * 4 + param_1[5]),&uStack_50,&auStack_2c,
                          &uStack_30);
       if (-1 < (int)uVar5) {
         uVar5 = (**(code **)(*param_1 + 0x144))(param_1,piVar3,uVar2,&uStack_44,uStack_30);
         if (((-1 < (int)uVar5) &&
-            (uVar5 = (**(code **)(*param_1 + 0x138))(param_1,uStack_50,uStack_44,auStack_2c[0]),
+            (uVar5 = (**(code **)(*param_1 + 0x138))(param_1,uStack_50,uStack_44,auStack_2c),
             -1 < (int)uVar5)) &&
            (uVar5 = (**(code **)(*param_1 + 0x148))
                               (param_1,*(undefined4 *)(*piStack_40 * 4 + param_1[5]),&uStack_50,

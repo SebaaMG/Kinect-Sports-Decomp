@@ -40,7 +40,7 @@ void fn_824BEFB0(int *param_1)
   longlong lVar1;
   undefined8 uVar3;
   undefined1 auStack_90 [48];
-  undefined1 auStack_60 [96];
+  undefined1 auStack_60 [64];
   
   if ((param_1[0x144] != 0) && (*(int *)(*(int *)(*param_1 + 0x14) + 0x20) != 0)) {
     uVar3 = fn_8248A9A8(param_1 + 0x44);

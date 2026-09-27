@@ -38,8 +38,8 @@ void fn_82361798(int *param_1,undefined8 param_2,int *param_3)
   undefined8 uVar1;
   char cVar2;
   int iVar3;
-  undefined4 uStack_30;
-  int iStack_2c;
+  struct { undefined4 first; int second; } stack_pair_30;
+
   
   if (param_3 != (int *)0x0) {
     if ((int *)*param_3 == (int *)0x0) {
@@ -57,11 +57,11 @@ void fn_82361798(int *param_1,undefined8 param_2,int *param_3)
   iVar3 = 0;
 LAB_82361808:
   if (iVar3 == 0) {
-    uStack_30 = 0;
-    iStack_2c = 0;
-    (**(code **)(*param_1 + 0x14))(param_1,param_2,&uStack_30);
-    fn_82361C50(param_3,&uStack_30);
-    if (iStack_2c != 0) {
+    stack_pair_30.first = 0;
+    stack_pair_30.second = 0;
+    (**(code **)(*param_1 + 0x14))(param_1,param_2,&stack_pair_30.first);
+    fn_82361C50(param_3,&stack_pair_30.first);
+    if (stack_pair_30.second != 0) {
       fn_822315A0();
     }
   }

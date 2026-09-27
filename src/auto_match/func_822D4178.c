@@ -82,7 +82,7 @@ void fn_822D4178(int param_1,undefined8 param_2,undefined8 param_3)
   int iVar11;
   char in_RESERVE;
   byte in_cr0;
-  undefined1 auStack_200 [4];
+  undefined1 auStack_200 [1];
   int iStack_1fc;
   undefined1 auStack_1f8 [8];
   undefined1 auStack_1f0 [4];

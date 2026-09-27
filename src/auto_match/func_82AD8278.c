@@ -50,7 +50,7 @@ fn_82AD8278(int param_1,undefined8 param_2,undefined8 param_3,undefined8 param_4
   int iVar9;
   int *piVar10;
   uint uStack_70;
-  int aiStack_6c [27];
+  int aiStack_6c;
   
   puVar7 = (uint *)fn_82ABE250(param_1,8,8);
   puVar1 = puVar7 + 1;
@@ -81,12 +81,12 @@ LAB_82ad837c:
             *(int *)(iVar8 + 8) = *(int *)(iVar8 + 8) + 1;
             *(int **)(iVar9 + 0x24) = piVar10;
             *(uint *)(iVar9 + 0x20) = *(uint *)(iVar9 + 0x20) & 0xfffffff0 | 9;
-            fn_82B82D28(uVar4,0,iVar9 + 0x10,&uStack_70,aiStack_6c,0,piVar10,0);
+            fn_82B82D28(uVar4,0,iVar9 + 0x10,&uStack_70,&aiStack_6c,0,piVar10,0);
             *(uint *)(iVar9 + 0x18) = uStack_70 | 0xe4;
-            if (aiStack_6c[0] == 0) {
-              fn_82B82D28(uVar5,0,iVar9 + 0x14,&uStack_70,aiStack_6c,0,piVar10,0);
+            if (aiStack_6c == 0) {
+              fn_82B82D28(uVar5,0,iVar9 + 0x14,&uStack_70,&aiStack_6c,0,piVar10,0);
               *(uint *)(iVar9 + 0x1c) = uStack_70 | 0xe4;
-              if (aiStack_6c[0] == 0) goto LAB_82ad842c;
+              if (aiStack_6c == 0) goto LAB_82ad842c;
             }
             fn_82AD5F68(puVar7);
             break;

@@ -35,7 +35,7 @@ void fn_828D7C30(void)
 
 {
   undefined1 auStack_b0 [48];
-  undefined1 auStack_80 [128];
+  undefined1 auStack_80 [112];
   
   fn_828D4D68();
                     /* WARNING: Subroutine does not return */

@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_82230110();
 extern int fn_82230218();
-extern int fn_82F63EC8();
+extern int atexit();
 extern unsigned int lbl_83214018;
 
 
@@ -37,7 +37,7 @@ undefined1 * fn_828AD7A0(undefined1 *param_1)
   if ((lbl_83214018 & 1) == 0) {
     lbl_83214018 = lbl_83214018 | 1;
     fn_82230110(0xffffffff83213ffc,0xffffffff82196582);
-    fn_82F63EC8(0xffffffff83141088);
+    atexit(0xffffffff83141088);
   }
   *(undefined4 *)(param_1 + 0x10) = 0;
   *(undefined4 *)(param_1 + 0x14) = 0xf;

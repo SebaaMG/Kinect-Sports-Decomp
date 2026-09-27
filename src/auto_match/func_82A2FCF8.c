@@ -28,8 +28,8 @@ typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_58;
 extern int fn_82A2E058();
 extern int fn_82A2E6A8();
-extern int fn_82F68CC0();
-extern int fn_82F691F0();
+extern int memcpy();
+extern int memset();
 extern unsigned int uStack_5c;
 extern unsigned int uStack_60;
 
@@ -44,7 +44,7 @@ fn_82A2FCF8(int param_1,int param_2,longlong param_3,ulonglong param_4,ulonglong
   ulonglong uVar4;
   undefined4 uStack_60;
   uint uStack_5c;
-  undefined1 auStack_58 [88];
+  undefined1 auStack_58 [8];
   
   while( true ) {
     uVar4 = 0x1000 - (param_5 & 0xfff);
@@ -53,7 +53,7 @@ fn_82A2FCF8(int param_1,int param_2,longlong param_3,ulonglong param_4,ulonglong
     }
     if ((ulonglong)*(uint *)(param_2 + 0x1c) <= (param_5 & 0xffffffff)) {
                     /* WARNING: Subroutine does not return */
-      fn_82F691F0(param_3,0,uVar4);
+      memset(param_3,0,uVar4);
     }
     uVar2 = fn_82A2E6A8(param_1,param_2,param_5,&uStack_60,auStack_58,0);
     if ((int)uVar2 < 0) {
@@ -62,7 +62,7 @@ fn_82A2FCF8(int param_1,int param_2,longlong param_3,ulonglong param_4,ulonglong
     uVar2 = fn_82A2E058(param_1,uStack_60,&uStack_5c);
     uVar3 = uStack_5c;
     if ((int)uVar2 < 0) break;
-    fn_82F68CC0(param_3,(ulonglong)uStack_5c + (param_5 & 0xfff),uVar4);
+    memcpy(param_3,(ulonglong)uStack_5c + (param_5 & 0xfff),uVar4);
     uVar3 = uVar3 - *(int *)(param_1 + 0x34);
     iVar1 = (((int)uVar3 >> 0xc) + (uint)((int)uVar3 < 0 && (uVar3 & 0xfff) != 0)) * 8 +
             *(int *)(param_1 + 0x30);

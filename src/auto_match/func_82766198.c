@@ -51,8 +51,8 @@ ulonglong fn_82766198(int *param_1,float *param_2,char param_3,int param_4)
   char cVar4;
   ulonglong uVar5;
   double dVar6;
-  float fStack_80;
-  float fStack_7c;
+  struct { float first; float second; } stack_pair_80;
+
   float fStack_78;
   float fStack_74;
   undefined1 auStack_70 [16];
@@ -63,23 +63,23 @@ ulonglong fn_82766198(int *param_1,float *param_2,char param_3,int param_4)
      (uVar5 = fn_8269AC18((double)lbl_82002AE0,param_4), uVar5 != 0)) {
     fn_8270D8E0(uVar5);
   }
-  fStack_80 = (float)param_1[1];
-  fStack_7c = (float)param_1[2];
+  stack_pair_80.first = (float)param_1[1];
+  stack_pair_80.second = (float)param_1[2];
   fStack_78 = (float)param_1[3];
   fStack_74 = (float)param_1[4];
   if ((*(byte *)(param_1 + 9) & 0x10) == 0) {
-    (**(code **)(*param_1 + 0x14))(param_1,&fStack_80);
+    (**(code **)(*param_1 + 0x14))(param_1,&stack_pair_80.first);
   }
   if ((uVar5 & 0xffffffff) != 0) {
-    pfVar3 = (float *)fn_8270E1B8(auStack_70,uVar5,&fStack_80);
+    pfVar3 = (float *)fn_8270E1B8(auStack_70,uVar5,&stack_pair_80.first);
     fStack_74 = pfVar3[3];
     fStack_78 = pfVar3[2];
-    fStack_7c = pfVar3[1];
-    fStack_80 = *pfVar3;
+    stack_pair_80.second = pfVar3[1];
+    stack_pair_80.first = *pfVar3;
   }
   dVar6 = (double)*param_2;
-  if ((((double)fStack_78 < dVar6) || (dVar6 < (double)fStack_80)) ||
-     ((fStack_74 < param_2[1] || (bVar1 = true, param_2[1] < fStack_7c)))) {
+  if ((((double)fStack_78 < dVar6) || (dVar6 < (double)stack_pair_80.first)) ||
+     ((fStack_74 < param_2[1] || (bVar1 = true, param_2[1] < stack_pair_80.second)))) {
     bVar1 = false;
   }
   if (bVar1) {

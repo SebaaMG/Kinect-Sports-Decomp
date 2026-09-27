@@ -35,12 +35,12 @@ uint fn_82A1BDD0(undefined4 param_1,undefined4 param_2,ulonglong param_3)
 {
   int iVar1;
   uint uVar2;
-  undefined4 uStack_20;
-  undefined4 uStack_1c;
+  struct { undefined4 first; undefined4 second; } stack_pair_20;
+
   
-  uStack_20 = param_1;
-  uStack_1c = param_2;
-  iVar1 = XMsgStartIORequest(0xfb,0xb0071,param_3,&uStack_20,8);
+  stack_pair_20.first = param_1;
+  stack_pair_20.second = param_2;
+  iVar1 = XMsgStartIORequest(0xfb,0xb0071,param_3,&stack_pair_20.first,8);
   if (iVar1 < 0) {
     uVar2 = 0x65b;
   }

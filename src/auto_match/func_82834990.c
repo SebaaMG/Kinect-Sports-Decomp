@@ -38,7 +38,7 @@ uint * fn_82834990(uint *param_1,int param_2,undefined8 param_3)
   char cVar2;
   uint *puVar3;
   uint uStack_30;
-  uint auStack_2c [11];
+  uint auStack_2c [1];
   
   uVar1 = fn_82834328(param_2,param_3);
   auStack_2c[0] = *(uint *)(param_2 + 4);

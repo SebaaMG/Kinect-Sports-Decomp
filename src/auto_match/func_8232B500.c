@@ -26,8 +26,8 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_8265C9E0();
-extern int fn_82F68CC0();
-extern int fn_82F691F0();
+extern int memcpy();
+extern int memset();
 extern unsigned int lbl_821B05F0;
 
 
@@ -56,7 +56,7 @@ undefined4 * fn_8232B500(undefined4 *param_1,undefined4 *param_2,undefined4 *par
     puVar3[2] = 1;
     if (puVar6 != (undefined4 *)0x0) {
       uVar1 = *param_3;
-      fn_82F691F0(puVar6,0,0xf0);
+      memset(puVar6,0,0xf0);
       puVar4 = param_2 + 0x3c;
       puVar3[0x40] = *puVar4;
       uVar2 = param_2[0x3d];
@@ -72,7 +72,7 @@ undefined4 * fn_8232B500(undefined4 *param_1,undefined4 *param_2,undefined4 *par
       if (param_2 != puVar4) {
         puVar5 = param_2;
         do {
-          fn_82F68CC0((int)puVar6 + ((int)puVar5 - (int)param_2),puVar5,0x18);
+          memcpy((int)puVar6 + ((int)puVar5 - (int)param_2),puVar5,0x18);
           puVar5 = puVar5 + 6;
         } while (puVar5 != puVar4);
       }

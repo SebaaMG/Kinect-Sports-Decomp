@@ -35,7 +35,7 @@ undefined8 fn_82BF3A88(char *param_1,ulonglong param_2,ulonglong param_3)
 
 {
   int iVar1;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
   
   fn_82BFA8D8(auStack_30);
   if ((((param_1 != (char *)0x0) && (*param_1 != '\0')) && ((param_2 & 0xffffffff) != 0)) &&

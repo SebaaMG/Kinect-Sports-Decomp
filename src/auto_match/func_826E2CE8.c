@@ -40,7 +40,7 @@ void fn_826E2CE8(int param_1)
   undefined8 uVar1;
   longlong lVar2;
   int iVar3;
-  undefined4 auStack_30 [12];
+  undefined4 auStack_30;
   
   fn_826A9280(param_1 + 0x14,0xffffffff8200d098);
   iVar3 = *(int *)(param_1 + 0x314);
@@ -51,8 +51,8 @@ void fn_826E2CE8(int param_1)
   lVar2 = fn_826DFB28(param_1,uVar1);
   fn_826E7A08(iVar3,lVar2 + 5,uVar1);
   fn_826F6638(lVar2,uVar1);
-  auStack_30[0] = (undefined4)lVar2;
-  fn_826AA460(*(int *)(param_1 + 0x2e8) * 0xc + param_1 + 0x2f0,auStack_30);
+  auStack_30 = (undefined4)lVar2;
+  fn_826AA460(*(int *)(param_1 + 0x2e8) * 0xc + param_1 + 0x2f0,&auStack_30);
   return;
 }
 

@@ -29,7 +29,7 @@ extern unsigned int *auStack_20;
 extern int fn_8251C390();
 extern int fn_828CAB48();
 extern int fn_829E53B0();
-extern int fn_82F63EC8();
+extern int atexit();
 extern unsigned int lbl_832143C0;
 
 
@@ -42,7 +42,7 @@ undefined8 fn_828CB310(void)
   if ((lbl_832143C0 & 1) == 0) {
     lbl_832143C0 = lbl_832143C0 | 1;
     fn_828CAB48(0xffffffff83214380);
-    fn_82F63EC8(0xffffffff83141310);
+    atexit(0xffffffff83141310);
   }
   fn_829E53B0(auStack_20);
   return 0xffffffff83214380;

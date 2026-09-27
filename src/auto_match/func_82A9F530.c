@@ -39,7 +39,7 @@ int fn_82A9F530(int param_1,uint param_2,int param_3)
   uint uVar3;
   int iVar4;
   undefined4 *puVar5;
-  undefined4 auStack_40 [16];
+  undefined4 auStack_40;
   
   piVar2 = (int *)(param_1 + 0x90);
   iVar4 = *(int *)(param_1 + 0x90);
@@ -62,8 +62,8 @@ int fn_82A9F530(int param_1,uint param_2,int param_3)
     iVar4 = *(int *)(*(int *)(param_3 + 0x18) + 0x2c);
     if (iVar4 != 0) {
       do {
-        auStack_40[0] = *(undefined4 *)(*(int *)(iVar4 + 8) + 0x28);
-        fn_82A9D3D8(puVar5 + 2,auStack_40,piVar2);
+        auStack_40 = *(undefined4 *)(*(int *)(iVar4 + 8) + 0x28);
+        fn_82A9D3D8(puVar5 + 2,&auStack_40,piVar2);
         if (*piVar2 < 0) {
           return *piVar2;
         }

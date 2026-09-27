@@ -54,7 +54,7 @@ undefined8 fn_82B1A198(undefined8 param_1,undefined8 param_2,int *param_3,int *p
   uint uStack_b0;
   uint uStack_ac;
   uint auStack_a8 [2];
-  undefined4 auStack_a0 [40];
+  undefined4 auStack_a0 [8];
   
   piVar2 = (int *)fn_82B455A8(param_1,*(undefined4 *)(*param_3 + 0x70));
   iVar3 = (**(code **)(*piVar2 + 4))();

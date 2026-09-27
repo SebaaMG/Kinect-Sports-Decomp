@@ -44,16 +44,16 @@ undefined4 * fn_82529A38(undefined8 param_1,ushort *param_2,int *param_3)
   undefined4 *puVar3;
   uint uVar4;
   undefined4 uVar5;
-  undefined4 uStack_40;
-  uint uStack_3c;
+  struct { undefined4 first; uint second; } stack_pair_40;
+
   
   if ((int)param_1 != 0) {
     iVar1 = fn_82587B68(param_1);
     puVar2 = (undefined4 *)(**(code **)(iVar1 + 8))();
-    uStack_3c = 0;
-    uStack_40 = 0;
-    (*(code *)*puVar2)(&uStack_40);
-    if ((*param_2 == uStack_3c) &&
+    stack_pair_40.second = 0;
+    stack_pair_40.first = 0;
+    (*(code *)*puVar2)(&stack_pair_40.first);
+    if ((*param_2 == stack_pair_40.second) &&
        (puVar3 = (undefined4 *)fn_82529830(param_1), puVar3 != (undefined4 *)0x0)) {
       *puVar3 = puVar2;
       puVar3[1] = (int)param_1;

@@ -41,7 +41,7 @@ undefined1 * fn_828B5A20(undefined1 *param_1,undefined2 *param_2,char param_3,un
   undefined4 *puVar5;
   char *pcVar6;
   undefined8 uVar7;
-  char acStack_230 [560];
+  char acStack_230 [512];
   
   if (*(char *)((int)param_2 + 7) == '\0') {
     if (param_3 == '\0') {

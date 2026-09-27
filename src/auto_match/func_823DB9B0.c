@@ -29,7 +29,7 @@ extern unsigned int *auStack_40;
 extern int fn_8227D9B0();
 extern int fn_8227DA30();
 extern int fn_824CCD80();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int uStack_1c;
 extern unsigned int uStack_20;
 extern unsigned int uStack_24;
@@ -81,7 +81,7 @@ void fn_823DB9B0(int param_1)
   puVar3[3] = uVar6;
   uStack_20 = 0;
   uStack_1c = 3;
-  fn_82F68CC0(uVar1,auStack_40,0x30);
+  memcpy(uVar1,auStack_40,0x30);
   return;
 }
 

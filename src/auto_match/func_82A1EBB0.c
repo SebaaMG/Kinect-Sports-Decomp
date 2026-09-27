@@ -28,12 +28,12 @@ typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_21e;
 extern unsigned int *auStack_2c8;
 extern unsigned int *auStack_2d0;
-extern int fn_82F691F0();
+extern int memset();
 extern unsigned int uStack_220;
 extern unsigned int uStack_2cc;
 
 
-undefined8 fn_82A1EBB0(void)
+undefined8 XapiPAL50Incompatible(void)
 
 {
   int iVar1;
@@ -54,7 +54,7 @@ undefined8 fn_82A1EBB0(void)
         XGetLanguage();
         uStack_220 = 0;
                     /* WARNING: Subroutine does not return */
-        fn_82F691F0(auStack_21e,0,0x1fe);
+        memset(auStack_21e,0,0x1fe);
       }
     }
   }

@@ -40,7 +40,7 @@ void fn_827EBDF8(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefi
 {
   undefined1 auStack_70 [16];
   undefined1 auStack_60 [16];
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [32];
   
   fn_82810328(param_4,param_1,auStack_70);
   fn_8281C9E8(param_3,param_6,auStack_50);

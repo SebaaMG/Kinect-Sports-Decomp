@@ -42,10 +42,10 @@ void fn_82683150(int param_1,undefined8 param_2,undefined8 param_3,undefined8 pa
   int iVar2;
   ulonglong uVar1;
   uint uVar3;
-  uint uStack_60;
-  int iStack_5c;
+  struct { uint first; int second; } stack_pair_60;
+
   byte bStack_58;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [16];
   
   iVar2 = (**(code **)(**(int **)(param_1 + 0x68) + 0x5c))();
   auStack_50[0] = 0;
@@ -60,17 +60,17 @@ void fn_82683150(int param_1,undefined8 param_2,undefined8 param_3,undefined8 pa
   if (uVar3 != 0) {
     *(uint *)(uVar3 + 8) = *(int *)(uVar3 + 8) + 1U & 0x8fffffff;
   }
-  iStack_5c = 0;
-  uStack_60 = uVar3;
-  fn_826964E0(auStack_50,&uStack_60);
-  if (((bStack_58 & 2) == 0) && (uStack_60 != 0)) {
+  stack_pair_60.second = 0;
+  stack_pair_60.first = uVar3;
+  fn_826964E0(auStack_50,&stack_pair_60.first);
+  if (((bStack_58 & 2) == 0) && (stack_pair_60.first != 0)) {
     fn_826824B0();
   }
-  uStack_60 = 0;
-  if (((bStack_58 & 1) == 0) && (iStack_5c != 0)) {
+  stack_pair_60.first = 0;
+  if (((bStack_58 & 1) == 0) && (stack_pair_60.second != 0)) {
     fn_826824B0();
   }
-  iStack_5c = 0;
+  stack_pair_60.second = 0;
   fn_82682D30(param_1,iVar2,auStack_50,param_2);
   if (uVar3 != 0) {
     fn_826824B0(uVar3);

@@ -49,23 +49,23 @@ fn_822376D8(undefined8 param_1,undefined8 param_2,undefined4 param_3,undefined8 
 {
   undefined8 uVar1;
   undefined1 auStack_80 [32];
-  undefined4 uStack_60;
-  undefined4 uStack_5c;
+  struct { undefined4 first; undefined4 second; } stack_pair_60;
+
   undefined8 uStack_58;
   undefined1 auStack_50 [28];
   code *pcStack_34;
   code *pcStack_30;
   
   uVar1 = fn_8223B688(auStack_80,param_4);
-  uStack_60 = (undefined4)param_2;
+  stack_pair_60.first = (undefined4)param_2;
   uStack_58 = CONCAT71(CONCAT61(CONCAT51(CONCAT41((uint)CONCAT21(0x101,param_5) << 8,1),param_6),
                                 param_7),param_8);
-  uStack_5c = param_3;
+  stack_pair_60.second = param_3;
   fn_8223B688(auStack_50,uVar1);
   pcStack_34 = fn_82238148;
   pcStack_30 = fn_8224AB50;
   fn_82230300(uVar1,1,0);
-  fn_822381A8(param_1,param_2,&uStack_60);
+  fn_822381A8(param_1,param_2,&stack_pair_60.first);
   fn_82230300(auStack_50,1,0);
   return param_1;
 }

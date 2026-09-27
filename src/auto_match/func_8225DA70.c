@@ -39,7 +39,7 @@ undefined8 fn_8225DA70(int param_1,undefined8 param_2,uint param_3,int *param_4)
   undefined4 **ppuVar5;
   int iVar6;
   undefined4 *puStack_30;
-  undefined4 *apuStack_2c [11];
+  undefined4 *apuStack_2c [1];
   
   puVar2 = (undefined4 *)(*(undefined4 **)(param_1 + 0x4c))[1];
   puStack_30 = *(undefined4 **)(param_1 + 0x4c);

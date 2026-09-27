@@ -37,16 +37,16 @@ void fn_829CD010(void)
 
 {
   int iVar1;
-  undefined4 uStack_40;
-  int iStack_3c;
+  struct { undefined4 first; int second; } stack_pair_40;
+
   undefined4 auStack_30 [8];
   
-  uStack_40 = 0;
-  iStack_3c = 0;
-  iVar1 = (*(code *)lbl_8315C3E8)(&uStack_40);
-  if ((((-1 < iVar1) && (iStack_3c != 0)) && (iStack_3c != 1)) &&
-     (((iStack_3c == 2 || (iStack_3c == 3)) ||
-      (((iStack_3c != 4 && (iStack_3c != 5)) && ((iStack_3c == 6 || (iStack_3c == 7)))))))) {
+  stack_pair_40.first = 0;
+  stack_pair_40.second = 0;
+  iVar1 = (*(code *)lbl_8315C3E8)(&stack_pair_40.first);
+  if ((((-1 < iVar1) && (stack_pair_40.second != 0)) && (stack_pair_40.second != 1)) &&
+     (((stack_pair_40.second == 2 || (stack_pair_40.second == 3)) ||
+      (((stack_pair_40.second != 4 && (stack_pair_40.second != 5)) && ((stack_pair_40.second == 6 || (stack_pair_40.second == 7)))))))) {
     auStack_30[0] = 2;
     lbl_8321505C = 0;
     fn_829C9BB0(auStack_30);

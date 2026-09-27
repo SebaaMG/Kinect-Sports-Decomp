@@ -82,7 +82,7 @@ void fn_82748EC8(int param_1)
   undefined1 auStack_50 [16];
   undefined1 auStack_40 [16];
   undefined1 auStack_30 [16];
-  undefined1 auStack_20 [32];
+  undefined1 auStack_20 [16];
   
   if (0 < *(int *)(param_1 + 0x1c)) {
     uVar1 = *(undefined4 *)(param_1 + 0x18);

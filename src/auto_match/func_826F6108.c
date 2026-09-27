@@ -40,7 +40,7 @@ undefined8 fn_826F6108(int param_1,ulonglong param_2,undefined8 param_3)
   char cVar2;
   longlong lVar3;
   int aiStack_50 [4];
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [16];
   
   if ((*(int **)(param_1 + 0x68) != (int *)0x0) && ((param_2 & 0xffffffff) != 0)) {
     iVar1 = (**(code **)(**(int **)(param_1 + 0x68) + 0x5c))();

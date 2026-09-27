@@ -60,8 +60,8 @@ void fn_827B00E8(int *param_1,uint *param_2)
   int iStack_70;
   uint uStack_6c;
   undefined4 uStack_68;
-  uint uStack_60;
-  int iStack_5c;
+  struct { uint first; int second; } stack_pair_60;
+
   uint uStack_58;
   uint uStack_54;
   int iStack_50;
@@ -89,7 +89,7 @@ void fn_827B00E8(int *param_1,uint *param_2)
       if ((uVar1 < uVar5) && (uVar5 < uVar6)) {
         if (uVar10 < uVar6) {
           uStack_58 = puVar7[2];
-          iStack_5c = uVar6 - uVar10;
+          stack_pair_60.second = uVar6 - uVar10;
           uStack_4c = puVar7[5];
           puVar7[1] = uVar5 - uVar1;
           puVar7[4] = uVar5 - uVar1;
@@ -97,10 +97,10 @@ void fn_827B00E8(int *param_1,uint *param_2)
           uStack_3c = *(undefined1 *)(puVar7 + 9);
           uStack_48 = puVar7[6];
           uStack_44 = puVar7[7];
-          uStack_60 = uVar10;
+          stack_pair_60.first = uVar10;
           uStack_54 = uVar10;
-          iStack_50 = iStack_5c;
-          fn_827AF558(&iStack_70,&uStack_60);
+          iStack_50 = stack_pair_60.second;
+          fn_827AF558(&iStack_70,&stack_pair_60.first);
         }
         else {
           uVar5 = (puVar7[1] - uVar6) + uVar5;

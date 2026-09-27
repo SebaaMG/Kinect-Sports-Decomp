@@ -34,12 +34,12 @@ undefined8 fn_82A26BB0(int param_1,undefined8 param_2)
 {
   undefined8 uVar1;
   undefined4 uStack_10;
-  undefined4 auStack_c [3];
+  undefined4 auStack_c;
   
   if ((*(uint *)(param_1 + 0x14) & 1) == 0) {
-    auStack_c[0] = *(undefined4 *)(param_1 + 0x20);
+    auStack_c = *(undefined4 *)(param_1 + 0x20);
     uStack_10 = 0;
-    uVar1 = NtFreeVirtualMemory(auStack_c,&uStack_10,0x8000,param_2);
+    uVar1 = NtFreeVirtualMemory(&auStack_c,&uStack_10,0x8000,param_2);
   }
   else {
     uVar1 = 0;

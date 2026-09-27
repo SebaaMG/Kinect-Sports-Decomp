@@ -45,10 +45,10 @@ fn_826A5D50(undefined4 *param_1,undefined8 param_2,undefined4 param_3,int *param
   longlong lVar3;
   int iVar4;
   uint uVar5;
-  undefined4 uStack_90;
-  undefined4 uStack_8c;
+  struct { undefined4 first; undefined4 second; } stack_pair_90;
+
   undefined1 uStack_88;
-  undefined1 auStack_80 [128];
+  undefined1 auStack_80 [32];
   
   *param_1 = (int)param_2;
   param_1[1] = param_3;
@@ -64,10 +64,10 @@ fn_826A5D50(undefined4 *param_1,undefined8 param_2,undefined4 param_3,int *param
     iVar4 = 0;
     do {
       uStack_88 = 0;
-      uStack_90 = 0;
-      uStack_8c = 0;
+      stack_pair_90.first = 0;
+      stack_pair_90.second = 0;
       uVar1 = param_1[4];
-      uVar2 = fn_826A29C0(auStack_80,param_2,*(undefined4 *)(*param_4 + iVar4),&uStack_90,param_5,
+      uVar2 = fn_826A29C0(auStack_80,param_2,*(undefined4 *)(*param_4 + iVar4),&stack_pair_90.first,param_5,
                             param_6);
       fn_826A19C0((ulonglong)uVar1 + lVar3,uVar2);
       fn_826A2A40(auStack_80);

@@ -34,14 +34,14 @@ void fn_82A0D628(int *param_1,undefined8 param_2,undefined8 param_3,undefined8 p
                   undefined8 param_5)
 
 {
-  undefined4 auStack_40 [16];
+  undefined4 auStack_40;
   
   if (*param_1 != 0) {
-    auStack_40[0] = 0;
+    auStack_40 = 0;
     if (lbl_83218C34 != (int *)0x0) {
-      (**(code **)(*lbl_83218C34 + 0x4c))(lbl_83218C34,0xa0,0x78,4,2,0x182a0186,auStack_40);
+      (**(code **)(*lbl_83218C34 + 0x4c))(lbl_83218C34,0xa0,0x78,4,2,0x182a0186,&auStack_40);
     }
-    fn_82A0F060(*param_1,param_2,param_3,param_4,2,param_5,auStack_40[0]);
+    fn_82A0F060(*param_1,param_2,param_3,param_4,2,param_5,auStack_40);
   }
   return;
 }

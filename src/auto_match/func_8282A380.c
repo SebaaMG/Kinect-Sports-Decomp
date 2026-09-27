@@ -37,7 +37,7 @@ void fn_8282A380(undefined8 param_1,longlong param_2,int param_3,int *param_4)
   undefined4 *puVar1;
   undefined4 *puVar2;
   int iVar3;
-  undefined4 *apuStack_30 [12];
+  undefined4 * apuStack_30;
   
   fn_828298A0(param_1,param_2,param_4);
   if (*param_4 == 0) {
@@ -46,14 +46,14 @@ void fn_8282A380(undefined8 param_1,longlong param_2,int param_3,int *param_4)
     }
     else {
       puVar1 = *(undefined4 **)(*(int *)(param_3 + 0x4c) + 4);
-      apuStack_30[0] = (undefined4 *)*puVar1;
-      while (puVar2 = apuStack_30[0], apuStack_30[0] != puVar1) {
-        iVar3 = fn_828297A0(apuStack_30[0][3],param_1);
+      apuStack_30 = (undefined4 *)*puVar1;
+      while (puVar2 = apuStack_30, apuStack_30 != puVar1) {
+        iVar3 = fn_828297A0(apuStack_30[3],param_1);
         if (iVar3 != 0) {
           *param_4 = puVar2[3];
           return;
         }
-        fn_82381BC0(apuStack_30);
+        fn_82381BC0(&apuStack_30);
       }
     }
   }

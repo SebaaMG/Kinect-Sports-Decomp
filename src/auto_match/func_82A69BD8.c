@@ -42,7 +42,7 @@ void fn_82A69BD8(int param_1,int *param_2)
   int iVar8;
   uint uVar9;
   short sStack_40;
-  undefined1 auStack_3e [62];
+  undefined1 auStack_3e [1];
   
   iVar7 = 0x7fff;
   iVar6 = 0;

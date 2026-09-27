@@ -32,7 +32,7 @@ extern int fn_82289670();
 extern int fn_8228ABB8();
 extern int fn_82484998();
 extern int fn_82486958();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int uStack_40;
 
 
@@ -45,7 +45,7 @@ void fn_82289EC0(int *param_1)
   int iVar4;
   int iVar5;
   undefined4 uStack_40;
-  undefined4 auStack_3c [15];
+  undefined4 auStack_3c;
   
   iVar3 = param_1[1];
   uVar2 = (**(code **)(**(int **)(*param_1 + 0x8c0) + 100))();
@@ -57,8 +57,8 @@ void fn_82289EC0(int *param_1)
     *(undefined4 *)(iVar1 + 0x768) = 4;
   }
   uStack_40 = *(undefined4 *)(*param_1 + 0x8c4);
-  auStack_3c[0] = *(undefined4 *)(*param_1 + 0x8c8);
-  fn_8228ABB8(iVar1,*(undefined4 *)(iVar1 + 0x6a0),uVar2,&uStack_40,auStack_3c);
+  auStack_3c = *(undefined4 *)(*param_1 + 0x8c8);
+  fn_8228ABB8(iVar1,*(undefined4 *)(iVar1 + 0x6a0),uVar2,&uStack_40,&auStack_3c);
   fn_822883D0(iVar1,*(undefined4 *)(iVar1 + 0x6a0),*param_1);
   fn_82484998(*(undefined4 *)(iVar1 + 0x11f0),iVar3);
   if (param_1[3] != 0) {
@@ -66,14 +66,14 @@ void fn_82289EC0(int *param_1)
        (iVar3 = fn_82486958(), iVar3 == 3)) {
       iVar3 = param_1[3];
       iVar4 = fn_8225F160();
-      fn_82F68CC0(iVar4 + 0x154,iVar3,0x24);
+      memcpy(iVar4 + 0x154,iVar3,0x24);
       *(undefined4 *)(iVar4 + 0x178) = 1;
     }
     iVar3 = param_1[3];
     iVar4 = *(int *)(iVar1 + 0x6a0);
     iVar5 = fn_8225F160();
     iVar5 = iVar4 * 0x28 + iVar5;
-    fn_82F68CC0(iVar5 + 300,iVar3,0x24);
+    memcpy(iVar5 + 300,iVar3,0x24);
     *(undefined4 *)(iVar5 + 0x150) = 1;
   }
   *(undefined4 *)(iVar1 + 0x604) = 1;

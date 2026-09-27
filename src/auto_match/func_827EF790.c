@@ -38,7 +38,7 @@ void fn_827EF790(undefined4 *param_1)
 {
   undefined8 uVar1;
   undefined4 auStack_50 [4];
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [32];
   
   *param_1 = &lbl_8201DCF8;
   if (param_1[0x4a] != 0) {

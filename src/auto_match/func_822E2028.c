@@ -36,18 +36,18 @@ void fn_822E2028(int *param_1)
 
 {
   undefined4 uVar1;
-  int iStack_20;
-  int iStack_1c;
+  struct { int first; int second; } stack_pair_20;
+
   
-  fn_824D2AE8(&iStack_20,param_1 + 0x16);
-  if (iStack_20 != 0) {
-    *(undefined4 *)(iStack_20 + 0xd4) = 1;
+  fn_824D2AE8(&stack_pair_20.first,param_1 + 0x16);
+  if (stack_pair_20.first != 0) {
+    *(undefined4 *)(stack_pair_20.first + 0xd4) = 1;
     uVar1 = lbl_821CC160;
-    *(undefined4 *)(iStack_20 + 0xe0) = lbl_821CC160;
-    *(undefined4 *)(iStack_20 + 0xe4) = uVar1;
+    *(undefined4 *)(stack_pair_20.first + 0xe0) = lbl_821CC160;
+    *(undefined4 *)(stack_pair_20.first + 0xe4) = uVar1;
   }
   (**(code **)(*param_1 + 0x20))(param_1);
-  if (iStack_1c != 0) {
+  if (stack_pair_20.second != 0) {
     fn_822315A0();
   }
   return;

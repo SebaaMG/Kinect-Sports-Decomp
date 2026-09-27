@@ -38,7 +38,7 @@ void fn_828BD5C8(int *param_1,undefined8 param_2)
   int iVar1;
   undefined8 uVar2;
   char cVar3;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
   
   uVar2 = (**(code **)(*param_1 + 4))();
   fn_828BEFD0(uVar2,param_2);

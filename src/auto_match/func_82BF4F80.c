@@ -34,13 +34,11 @@ extern int fn_82BF4EE8();
 
 
 undefined8
-fn_82BF4F80(undefined8 param_1,int param_2,undefined1 param_3,undefined8 param_4,
-             undefined8 param_5,undefined8 param_6,undefined8 param_7,undefined8 param_8,
-             undefined8 param_9)
+fn_82BF4F80(undefined8 param_1, int param_2, undefined1 param_3, undefined8 param_4, undefined8 param_5, undefined8 param_6, undefined8 param_7, undefined8 param_8, undefined8 param_9, undefined2 in_stack_0000005e)
 
 {
   int iVar1;
-  undefined2 in_stack_0000005e;
+
   
   iVar1 = fn_82BF4EE8(param_2,0x2f);
   if (iVar1 != 0) {

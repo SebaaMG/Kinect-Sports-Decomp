@@ -115,13 +115,13 @@ ulonglong fn_82895C50(ulonglong param_1,int param_2,undefined8 param_3)
   uint *puStack_f4;
   undefined4 uStack_f0;
   uint uStack_ec;
-  undefined **appuStack_e0 [56];
+  undefined ** appuStack_e0;
   
   uStack00000014 = (uint)param_1;
-  appuStack_e0[0] = &lbl_82020F40;
+  appuStack_e0 = &lbl_82020F40;
   appuStack_130[0] = (undefined **)&lbl_821AA8E0;
   ppuStack_194 = &lbl_82020F40;
-  fn_8223CD08(appuStack_e0,appuStack_130 + 1,0);
+  fn_8223CD08(&appuStack_e0,appuStack_130 + 1,0);
   ppuStack_198 = &lbl_82021284;
   *(undefined ***)((int)appuStack_130 + (int)appuStack_130[0][1]) = &lbl_82021284;
   fn_8223CF38(appuStack_130 + 1,2);
@@ -219,8 +219,8 @@ ulonglong fn_82895C50(ulonglong param_1,int param_2,undefined8 param_3)
   }
   fn_82F62528(auStack_128);
   *(undefined ***)((int)appuStack_130 + (int)appuStack_130[0][1]) = ppuVar13;
-  appuStack_e0[0] = &lbl_82020F30;
-  fn_82F62F60(appuStack_e0);
+  appuStack_e0 = &lbl_82020F30;
+  fn_82F62F60(&appuStack_e0);
   return param_1;
 }
 

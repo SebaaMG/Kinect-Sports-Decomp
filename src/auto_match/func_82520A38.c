@@ -29,7 +29,7 @@ extern unsigned int *auStack_30;
 extern int fn_82A1BB28();
 extern int fn_82A1BB50();
 extern int fn_82A1BC70();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 undefined8 fn_82520A38(int param_1,ulonglong param_2)
@@ -37,17 +37,17 @@ undefined8 fn_82520A38(int param_1,ulonglong param_2)
 {
   int iVar1;
   undefined8 uVar2;
-  undefined4 auStack_30 [12];
+  undefined4 auStack_30;
   
   uVar2 = 0;
   if ((param_2 & 0xffffffff) != 0) {
-    fn_82F68CC0(param_1 + 8,param_2,1000);
-    auStack_30[0] = 0;
-    iVar1 = fn_82A1BB50(0,0,0,auStack_30);
+    memcpy(param_1 + 8,param_2,1000);
+    auStack_30 = 0;
+    iVar1 = fn_82A1BB50(0,0,0,&auStack_30);
     if (-1 < iVar1) {
       *(undefined4 *)(param_1 + 0x7d8) = 1000;
-      iVar1 = fn_82A1BB28(auStack_30[0],param_1 + 0x3f0,param_1 + 0x7d8,param_1 + 8,1000);
-      fn_82A1BC70(auStack_30[0]);
+      iVar1 = fn_82A1BB28(auStack_30,param_1 + 0x3f0,param_1 + 0x7d8,param_1 + 8,1000);
+      fn_82A1BC70(auStack_30);
       if (-1 < iVar1) {
         uVar2 = 1;
       }

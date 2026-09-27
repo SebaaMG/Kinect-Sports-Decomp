@@ -36,7 +36,7 @@ undefined8 fn_82A33D80(int *param_1,int param_2,ulonglong param_3,ulonglong para
   int iVar1;
   ulonglong uVar2;
   undefined1 auStack_40 [16];
-  undefined1 auStack_30 [20];
+  undefined1 auStack_30 [1];
   uint uStack_1c;
   
   if (((param_1[0x61] & 1U) == 0) && ((*(uint *)(param_2 + 0x28) & 8) != 0)) {

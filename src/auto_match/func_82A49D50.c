@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_82A49A30();
 extern int fn_82A49C98();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int lbl_8208E054;
 extern unsigned int lbl_8208E058;
 extern unsigned int lbl_8208E05C;
@@ -44,8 +44,8 @@ void fn_82A49D50(ushort *param_1,undefined2 *param_2,undefined4 *param_3,undefin
 {
   ushort uVar1;
   undefined4 uVar2;
-  uint uStack_40;
-  undefined4 uStack_3c;
+  struct { uint first; undefined4 second; } stack_pair_40;
+
   undefined4 uStack_38;
   undefined4 uStack_34;
   
@@ -58,10 +58,10 @@ void fn_82A49D50(ushort *param_1,undefined2 *param_2,undefined4 *param_3,undefin
     uVar2 = fn_82A49C98(param_1,param_4);
     *(undefined4 *)(param_2 + 10) = uVar2;
     uStack_34 = lbl_8208E05C;
-    uStack_3c = lbl_8208E054;
+    stack_pair_40.second = lbl_8208E054;
     uStack_38 = lbl_8208E058;
-    uStack_40 = (uint)uVar1;
-    fn_82F68CC0(param_2 + 0xc,&uStack_40,0x10);
+    stack_pair_40.first = (uint)uVar1;
+    memcpy(param_2 + 0xc,&stack_pair_40.first,0x10);
     *param_3 = 0x28;
   }
   return;

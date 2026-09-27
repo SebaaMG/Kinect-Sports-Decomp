@@ -39,12 +39,12 @@ void fn_826C9648(int param_1,int param_2,undefined8 param_3)
 {
   undefined2 uVar1;
   int iVar2;
-  undefined4 auStack_40 [2];
+  undefined4 auStack_40;
   int *piStack_38;
   undefined4 uStack_34;
   
-  auStack_40[0] = *(undefined4 *)(param_2 + 0x44);
-  fn_826DCF88(&piStack_38,*(undefined4 *)(param_1 + 0x7c),auStack_40);
+  auStack_40 = *(undefined4 *)(param_2 + 0x44);
+  fn_826DCF88(&piStack_38,*(undefined4 *)(param_1 + 0x7c),&auStack_40);
   if (piStack_38 == (int *)0x0) {
     iVar2 = *(int *)(param_1 + 0x80);
     uVar1 = *(undefined2 *)(param_2 + 0x46);
@@ -54,8 +54,8 @@ void fn_826C9648(int param_1,int param_2,undefined8 param_3)
     fn_826C8D00(param_1 + 0xc,0xffffffff8200be10,**(undefined4 **)(iVar2 + 0xc),uVar1);
   }
   else {
-    auStack_40[0] = *(undefined4 *)(param_2 + 0x44);
-    iVar2 = (**(code **)(*piStack_38 + 0x24))(piStack_38,param_1,auStack_40,uStack_34);
+    auStack_40 = *(undefined4 *)(param_2 + 0x44);
+    iVar2 = (**(code **)(*piStack_38 + 0x24))(piStack_38,param_1,&auStack_40,uStack_34);
     fn_826C7308(param_1,param_2,iVar2,param_3);
     *(undefined4 *)(iVar2 + 0x18) = *(undefined4 *)(param_1 + 0xbc);
     fn_8267C498(iVar2);

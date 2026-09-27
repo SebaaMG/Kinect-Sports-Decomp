@@ -42,15 +42,15 @@ void fn_823F94E0(int param_1,undefined8 param_2,int param_3)
   undefined4 uVar4;
   undefined4 uVar5;
   undefined4 uVar6;
-  undefined1 auStack_40 [4];
+  undefined1 auStack_40;
   undefined4 uStack_3c;
   undefined4 uStack_38;
   undefined4 uStack_34;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
   
   (**(code **)(**(int **)(param_1 + 0x1c) + 0x14))(*(int **)(param_1 + 0x1c),param_2,auStack_30);
   (**(code **)(**(int **)(param_1 + 0x24) + 0x14))(*(int **)(param_1 + 0x24),param_2,&uStack_3c);
-  (**(code **)(**(int **)(param_1 + 0x2c) + 0x14))(*(int **)(param_1 + 0x2c),param_2,auStack_40);
+  (**(code **)(**(int **)(param_1 + 0x2c) + 0x14))(*(int **)(param_1 + 0x2c),param_2,&auStack_40);
   (**(code **)(**(int **)(param_1 + 0x34) + 0x14))(*(int **)(param_1 + 0x34),param_2,&uStack_38);
   (**(code **)(**(int **)(param_1 + 0x3c) + 0x14))(*(int **)(param_1 + 0x3c),param_2,&uStack_34);
   if (param_3 != 0) {
@@ -64,7 +64,7 @@ void fn_823F94E0(int param_1,undefined8 param_2,int param_3)
     puVar3[2] = uVar5;
     puVar3[3] = uVar6;
     *(undefined4 *)(*(int *)(param_1 + 0xc) + param_3) = uStack_3c;
-    *(undefined1 *)(*(int *)(param_1 + 0x10) + param_3) = auStack_40[0];
+    *(undefined1 *)(*(int *)(param_1 + 0x10) + param_3) = auStack_40;
     iVar1 = *(int *)(param_1 + 0x18);
     *(undefined4 *)(*(int *)(param_1 + 0x14) + param_3) = uStack_38;
     *(undefined4 *)(iVar1 + param_3) = uStack_34;

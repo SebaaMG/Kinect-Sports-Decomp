@@ -31,13 +31,12 @@ extern int fn_828EA268();
 
 
 undefined1 *
-fn_82890428(undefined1 *param_1,undefined8 param_2,undefined2 param_3,ushort param_4,
-             undefined4 param_5,undefined4 param_6,undefined4 param_7,undefined4 *param_8)
+fn_82890428(undefined1 *param_1, undefined8 param_2, undefined2 param_3, ushort param_4, undefined4 param_5, undefined4 param_6, undefined4 param_7, undefined4 *param_8, undefined1 in_stack_00000057)
 
 {
   undefined2 uVar1;
   ulonglong uVar2;
-  undefined1 in_stack_00000057;
+
   
   *(undefined4 *)(param_1 + 0x10) = 0;
   *(undefined4 *)(param_1 + 0x14) = 0xf;

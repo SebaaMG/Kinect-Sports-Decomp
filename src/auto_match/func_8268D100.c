@@ -52,8 +52,8 @@ void fn_8268D100(float *param_1,float *param_2,float *param_3)
   float fStack_34;
   float fStack_30;
   float fStack_2c;
-  float fStack_20;
-  float fStack_1c;
+  struct { float first; float second; } stack_pair_20;
+
   float fStack_18;
   float fStack_14;
   float fStack_10;
@@ -74,12 +74,12 @@ void fn_8268D100(float *param_1,float *param_2,float *param_3)
   fStack_18 = *param_3;
   fStack_c = param_3[1];
   fStack_40 = *param_1;
-  fStack_20 = param_3[2] - fStack_18;
-  fStack_1c = param_3[4] - fStack_18;
+  stack_pair_20.first = param_3[2] - fStack_18;
+  stack_pair_20.second = param_3[4] - fStack_18;
   fStack_14 = param_3[3] - fStack_c;
   fStack_10 = param_3[5] - fStack_c;
   uVar2 = fn_8268CD40(param_1,&fStack_40);
-  fn_8268CF60(uVar2,&fStack_20);
+  fn_8268CF60(uVar2,&stack_pair_20.first);
   return;
 }
 

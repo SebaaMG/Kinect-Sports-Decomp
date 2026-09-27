@@ -47,14 +47,14 @@ ulonglong fn_823B6C60(int param_1,undefined4 param_2)
   undefined4 *puVar2;
   char cVar4;
   ulonglong uVar3;
-  undefined4 *apuStack_a0 [4];
+  undefined4 * apuStack_a0;
   undefined **ppuStack_90;
   undefined4 uStack_8c;
   undefined ***pppuStack_80;
   undefined1 auStack_70 [16];
   int *piStack_60;
-  undefined4 uStack_50;
-  undefined4 uStack_4c;
+  struct { undefined4 first; undefined4 second; } stack_pair_50;
+
   undefined4 uStack_48;
   undefined4 auStack_44 [17];
   
@@ -64,24 +64,24 @@ ulonglong fn_823B6C60(int param_1,undefined4 param_2)
   puVar2 = (undefined4 *)*puVar1;
   uStack_8c = param_2;
   piStack_60 = (int *)(*(code *)lbl_821B5CB8)(&ppuStack_90,auStack_70);
-  apuStack_a0[0] = puVar2;
+  apuStack_a0 = puVar2;
   while( true ) {
-    puVar2 = apuStack_a0[0];
-    if (apuStack_a0[0] == puVar1) break;
-    uStack_50 = apuStack_a0[0][3];
-    uStack_4c = apuStack_a0[0][4];
-    uStack_48 = apuStack_a0[0][5];
-    fn_823BABB0(auStack_44,apuStack_a0[0] + 6);
+    puVar2 = apuStack_a0;
+    if (apuStack_a0 == puVar1) break;
+    stack_pair_50.first = apuStack_a0[3];
+    stack_pair_50.second = apuStack_a0[4];
+    uStack_48 = apuStack_a0[5];
+    fn_823BABB0(auStack_44,apuStack_a0 + 6);
     if (piStack_60 == (int *)0x0) {
                     /* WARNING: Subroutine does not return */
       fn_82F63108();
     }
-    cVar4 = (**(code **)(*piStack_60 + 4))(piStack_60,&uStack_50);
+    cVar4 = (**(code **)(*piStack_60 + 4))(piStack_60,&stack_pair_50.first);
     fn_823B9060(auStack_44);
     fn_8265CA20(auStack_44[0]);
     auStack_44[0] = 0;
     if (cVar4 != '\0') break;
-    fn_82250928(apuStack_a0);
+    fn_82250928(&apuStack_a0);
   }
   fn_82359C18(auStack_70);
   fn_82359C18(&ppuStack_90);

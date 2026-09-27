@@ -52,7 +52,7 @@ void fn_8229CBD0(undefined4 *param_1,undefined4 param_2,undefined4 param_3)
   undefined4 uStack_48;
   undefined1 auStack_40 [8];
   undefined4 uStack_38;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [32];
   
   uStack_60 = 0;
   uStack_5c = 0;

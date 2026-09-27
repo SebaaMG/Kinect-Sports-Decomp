@@ -62,7 +62,7 @@ undefined8 fn_8288F248(int param_1)
   int *piVar8;
   undefined4 uVar9;
   uint uVar10;
-  undefined4 auStack_70 [2];
+  undefined4 auStack_70;
   undefined1 auStack_68 [8];
   undefined1 auStack_60 [8];
   undefined1 auStack_58 [8];
@@ -109,8 +109,8 @@ undefined8 fn_8288F248(int param_1)
           uVar9 = (**(code **)(*piVar8 + 0xc))();
           uVar10 = fn_82A4AAA8();
           if (uVar10 < 2) {
-            auStack_70[0] = fn_828B55F8(iVar6);
-            piVar8 = (int *)fn_8288CD40(auStack_68,lVar5 + 0x94,auStack_70);
+            auStack_70 = fn_828B55F8(iVar6);
+            piVar8 = (int *)fn_8288CD40(auStack_68,lVar5 + 0x94,&auStack_70);
             iVar1 = *piVar8;
             uVar4 = fn_828B5580(auStack_58,iVar6);
             ppuStack_50 = &lbl_8202363C;

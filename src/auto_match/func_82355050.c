@@ -56,8 +56,8 @@ void fn_82355050(int param_1)
   uint uVar10;
   ulonglong uVar11;
   double dVar12;
-  int iStack_c0;
-  uint uStack_bc;
+  struct { int first; uint second; } stack_pair_c0;
+
   undefined4 uStack_b8;
   undefined4 uStack_b4;
   undefined1 auStack_b0 [64];
@@ -95,11 +95,11 @@ void fn_82355050(int param_1)
               uStack_b4 = *(undefined4 *)(iVar4 + 0x74);
               fStack_68 = (float)dVar12;
               uStack_b8 = (undefined4)uVar11;
-              iStack_c0 = 0;
-              uStack_bc = (uint)uVar9;
-              fn_82356BF0(piVar1,lVar6,uVar9,&iStack_c0);
+              stack_pair_c0.first = 0;
+              stack_pair_c0.second = (uint)uVar9;
+              fn_82356BF0(piVar1,lVar6,uVar9,&stack_pair_c0.first);
               *(undefined4 *)(param_1 + 0x29c) = 2;
-              fn_82357010(*(undefined4 *)(param_1 + 0x298),&iStack_c0);
+              fn_82357010(*(undefined4 *)(param_1 + 0x298),&stack_pair_c0.first);
               lVar6 = lVar6 + 1;
             }
             iVar4 = *piVar1;
@@ -134,11 +134,11 @@ void fn_82355050(int param_1)
                   fStack_68 = (float)dVar12;
                   uStack_b8 = (undefined4)uVar9;
                   uStack_70 = 0;
-                  iStack_c0 = iVar4;
-                  uStack_bc = uVar10;
-                  fn_82356BF0(piVar1,lVar6,0,&iStack_c0);
+                  stack_pair_c0.first = iVar4;
+                  stack_pair_c0.second = uVar10;
+                  fn_82356BF0(piVar1,lVar6,0,&stack_pair_c0.first);
                   *(undefined4 *)(param_1 + 0x29c) = 2;
-                  fn_82357010(*(undefined4 *)(param_1 + 0x298),&iStack_c0);
+                  fn_82357010(*(undefined4 *)(param_1 + 0x298),&stack_pair_c0.first);
                   lVar6 = lVar6 + 1;
                 }
                 iVar5 = *piVar1;

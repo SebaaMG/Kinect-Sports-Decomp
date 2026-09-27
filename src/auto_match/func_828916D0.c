@@ -84,8 +84,8 @@ undefined8 fn_828916D0(int param_1,undefined8 param_2,int *param_3)
   int iVar24;
   ulonglong uVar25;
   bool bVar26;
-  uint uStack_c0;
-  int iStack_bc;
+  struct { uint first; int second; } stack_pair_c0;
+
   uint uStack_b8;
   int iStack_b4;
   undefined1 auStack_b0 [8];
@@ -94,7 +94,7 @@ undefined8 fn_828916D0(int param_1,undefined8 param_2,int *param_3)
   
   iVar11 = (**(code **)(*param_3 + 8))(param_3);
   iVar13 = *(int *)(iVar11 + 0x10);
-  iStack_bc = iVar13;
+  stack_pair_c0.second = iVar13;
   lVar5 = fn_8240D928(*(undefined4 *)(param_1 + 0x48c));
   if (*(char *)((int)lVar5 + iVar11 + 0x34) == '\0') {
     return 0;
@@ -145,7 +145,7 @@ LAB_82891888:
   fn_828B55B0(auStack_a0);
   uVar6 = 0xffffffffffffffff;
   iVar4 = (int)((lVar5 + 9U & 0xffffffff) << 2);
-  uStack_c0 = 0xffffffff;
+  stack_pair_c0.first = 0xffffffff;
   uVar7 = 0;
   uVar1 = *(uint *)(iVar4 + iVar11);
   if (*(int *)(iVar13 + 8) != 0) {
@@ -179,7 +179,7 @@ LAB_82891888:
         }
         fn_8223C478(iVar23,1,0);
         fn_828E9DB8(iVar23,bVar26,1);
-        for (piVar18 = piVar12; iVar13 = iStack_bc, piVar18 != (int *)0x0;
+        for (piVar18 = piVar12; iVar13 = stack_pair_c0.second, piVar18 != (int *)0x0;
             piVar18 = (int *)fn_82897BD0(piVar18)) {
           uVar8 = fn_82897B18(piVar18);
           iVar13 = fn_82897620(iVar11,uVar8);
@@ -209,17 +209,17 @@ LAB_82891888:
               bVar3 = true;
               uVar6 = uVar10 - (uVar25 - (longlong)(int)(uVar25 / (uVar10 & 0xffffffff)) *
                                          (longlong)(int)uVar10);
-              uStack_c0 = (uint)uVar6;
+              stack_pair_c0.first = (uint)uVar6;
             }
             if (!bVar3) {
               iVar24 = fn_8287C5A0(uVar25);
               uStack_b8 = iVar24 - uVar2;
               puVar21 = &uStack_b8;
               if ((uVar6 & 0xffffffff) <= (ulonglong)uStack_b8) {
-                puVar21 = &uStack_c0;
+                puVar21 = &stack_pair_c0.first;
               }
-              uStack_c0 = *puVar21;
-              uVar6 = (ulonglong)uStack_c0;
+              stack_pair_c0.first = *puVar21;
+              uVar6 = (ulonglong)stack_pair_c0.first;
             }
           }
           if (bVar26) {

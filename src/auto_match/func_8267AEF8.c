@@ -32,7 +32,7 @@ extern int fn_8268F260();
 void fn_8267AEF8(int param_1,undefined8 param_2,undefined8 param_3)
 
 {
-  undefined1 auStack_10 [16];
+  undefined1 auStack_10 [1];
   
   fn_8268F260(*(undefined4 *)(param_1 + 0xc),param_2,param_3,auStack_10);
   return;

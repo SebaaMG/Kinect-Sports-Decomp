@@ -69,10 +69,10 @@ void fn_823B4F98(undefined8 param_1,int *param_2)
   int iStack_98;
   uint uStack_94;
   undefined8 uStack_90;
-  undefined4 uStack_80;
-  undefined4 uStack_7c;
+  struct { undefined4 first; undefined4 second; } stack_pair_80;
+
   uint uStack_78;
-  undefined1 auStack_70 [112];
+  undefined1 auStack_70 [48];
   
   iVar4 = param_2[0x2b];
   if (iVar4 != param_2[0x2c]) {
@@ -186,13 +186,13 @@ void fn_823B4F98(undefined8 param_1,int *param_2)
             piVar9 = *(int **)*piVar13;
           }
           if (uVar7 != uVar6) {
-            uStack_80 = 0;
-            uStack_7c = 0;
+            stack_pair_80.first = 0;
+            stack_pair_80.second = 0;
             if ((piVar9 != (int *)0x0) && ((undefined4 *)*piVar9 != (undefined4 *)0x0)) {
-              uStack_80 = *(undefined4 *)*piVar9;
+              stack_pair_80.first = *(undefined4 *)*piVar9;
             }
             uStack_78 = uVar7;
-            fn_823B8B00(auStack_70,aiStack_a0[0] + 0x18,&uStack_80);
+            fn_823B8B00(auStack_70,aiStack_a0[0] + 0x18,&stack_pair_80.first);
           }
           fn_82250928(aiStack_a0);
         } while (aiStack_a0[0] != param_2[0x18]);

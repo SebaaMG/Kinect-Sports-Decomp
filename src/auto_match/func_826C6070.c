@@ -37,7 +37,7 @@ void fn_826C6070(int param_1,undefined8 param_2,undefined4 *param_3,byte param_4
   char cVar2;
   byte bVar3;
   ulonglong uVar4;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [16];
   
   if ((uint)((undefined4 *)*param_3)[4] < 3) {
     return;

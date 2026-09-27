@@ -55,7 +55,7 @@ void fn_82286BF0(int param_1)
   int *piVar4;
   int *piVar5;
   int iVar6;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [16];
   
   fn_822889C0(auStack_40,param_1);
   fn_8228B6A8();

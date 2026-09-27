@@ -34,16 +34,15 @@ extern unsigned int lbl_82196288;
 
 
 undefined4 *
-fn_827F5C20(double param_1,double param_2,double param_3,undefined4 *param_4,int param_5,
-             undefined8 param_6,undefined8 param_7,undefined8 param_8,undefined8 param_9)
+fn_827F5C20(double param_1, double param_2, double param_3, undefined4 *param_4, int param_5, undefined8 param_6, undefined8 param_7, undefined8 param_8, undefined8 param_9, undefined4 in_stack_0000005c, undefined4 in_stack_00000064, undefined2 in_stack_0000006e, undefined4 in_stack_00000074, undefined4 in_stack_0000007c)
 
 {
   undefined4 uVar1;
-  undefined4 in_stack_0000005c;
-  undefined4 in_stack_00000064;
-  undefined2 in_stack_0000006e;
-  undefined4 in_stack_00000074;
-  undefined4 in_stack_0000007c;
+
+
+
+
+
   
   fn_827F41B8(param_4,param_8,param_9,2,param_4 + 0x38);
   uVar1 = lbl_82196288;

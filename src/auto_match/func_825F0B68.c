@@ -38,7 +38,7 @@ extern int fn_8265C990();
 extern int fn_8265C9E0();
 extern int fn_8265CA20();
 extern int fn_82A93F08();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 undefined8 fn_825F0B68(int param_1,ulonglong param_2,ulonglong param_3,int param_4)
@@ -51,7 +51,7 @@ undefined8 fn_825F0B68(int param_1,ulonglong param_2,ulonglong param_3,int param
   longlong lVar5;
   char acStack_80 [4];
   int aiStack_7c [3];
-  undefined1 auStack_70 [112];
+  undefined1 auStack_70 [16];
   
   if (((param_2 & 0xffffffff) != 0) && ((param_3 & 0xffffffff) != 0)) {
     param_4 = param_4 * 4;
@@ -79,7 +79,7 @@ undefined8 fn_825F0B68(int param_1,ulonglong param_2,ulonglong param_3,int param
     }
     uVar4 = fn_8265C9E0(0x34);
     *(undefined4 *)(param_4 + *(int *)(param_1 + 0xb0)) = uVar4;
-    fn_82F68CC0(*(undefined4 *)(param_4 + *(int *)(param_1 + 0xb0)),param_2,0x34);
+    memcpy(*(undefined4 *)(param_4 + *(int *)(param_1 + 0xb0)),param_2,0x34);
     uVar4 = *(undefined4 *)(param_1 + 0xb4);
     acStack_80[0] = '\0';
     uVar3 = fn_8240D930(*(undefined4 *)(*(int *)(param_1 + 0x1c) + param_4));
@@ -88,7 +88,7 @@ undefined8 fn_825F0B68(int param_1,ulonglong param_2,ulonglong param_3,int param
     ;
     if (lVar5 != 0) {
       if (acStack_80[0] == '\0') {
-        fn_82F68CC0(lVar5,param_2 + 0x34,param_3 - 0x34);
+        memcpy(lVar5,param_2 + 0x34,param_3 - 0x34);
       }
       fn_82A93F08(*(undefined4 *)(param_4 + *(int *)(param_1 + 0xb0)),lVar5,lVar5);
                     /* WARNING: Subroutine does not return */

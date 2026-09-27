@@ -33,12 +33,12 @@ void fn_822516D0(int param_1,undefined8 param_2)
 
 {
   undefined4 uStack_30;
-  undefined4 auStack_2c [11];
+  undefined4 auStack_2c;
   
-  (**(code **)(**(int **)(param_1 + 0x68) + 0x14))(*(int **)(param_1 + 0x68),param_2,auStack_2c);
+  (**(code **)(**(int **)(param_1 + 0x68) + 0x14))(*(int **)(param_1 + 0x68),param_2,&auStack_2c);
   (**(code **)(**(int **)(param_1 + 0x70) + 0x14))(*(int **)(param_1 + 0x70),param_2,&uStack_30);
   if (*(int *)(param_1 + 0x60) != 0) {
-    (**(code **)(**(int **)(param_1 + 0x60) + 4))(*(int **)(param_1 + 0x60),auStack_2c[0],uStack_30)
+    (**(code **)(**(int **)(param_1 + 0x60) + 4))(*(int **)(param_1 + 0x60),auStack_2c,uStack_30)
     ;
   }
   return;

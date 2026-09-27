@@ -45,7 +45,7 @@ void fn_82980C90(int param_1,undefined8 param_2,undefined8 param_3,undefined8 pa
   undefined8 uStack00000038;
   undefined8 uStack00000040;
   undefined8 uStack00000048;
-  undefined1 auStack_120 [288];
+  undefined1 auStack_120 [272];
   
   uStack00000030 = param_5;
   uStack00000038 = param_6;

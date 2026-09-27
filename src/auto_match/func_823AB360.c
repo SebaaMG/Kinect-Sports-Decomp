@@ -32,7 +32,7 @@ extern int fn_82358FD8();
 undefined8 fn_823AB360(undefined8 param_1,undefined8 param_2)
 
 {
-  undefined1 auStack_90 [144];
+  undefined1 auStack_90 [128];
   
   fn_82358FD8(param_2,auStack_90,0x40,0xffffffff821b5888);
   return 0xffffffff832992b8;

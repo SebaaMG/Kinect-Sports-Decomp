@@ -42,39 +42,39 @@ void fn_828C27D8(int param_1,undefined4 *param_2,undefined4 *param_3,undefined8 
   longlong lVar5;
   int *piVar6;
   ulonglong uVar7;
-  int aiStack_40 [16];
+  int aiStack_40;
   
   lVar5 = 0;
-  aiStack_40[0] = **(int **)(param_1 + 0xdc);
-  piVar6 = (int *)aiStack_40[0];
-  if ((int *)aiStack_40[0] != *(int **)(param_1 + 0xdc)) {
+  aiStack_40 = **(int **)(param_1 + 0xdc);
+  piVar6 = (int *)aiStack_40;
+  if ((int *)aiStack_40 != *(int **)(param_1 + 0xdc)) {
     do {
-      piVar6 = (int *)aiStack_40[0];
+      piVar6 = (int *)aiStack_40;
       puVar4 = param_2;
       if (0xf < (uint)param_2[5]) {
         puVar4 = (undefined4 *)*param_2;
       }
-      iVar3 = fn_8260D428(aiStack_40[0] + 0xc,0,*(undefined4 *)(aiStack_40[0] + 0x1c),puVar4,
+      iVar3 = fn_8260D428(aiStack_40 + 0xc,0,*(undefined4 *)(aiStack_40 + 0x1c),puVar4,
                            param_2[4]);
       if (iVar3 == 0) break;
       lVar5 = lVar5 + 1;
-      fn_828A1958(aiStack_40);
-      piVar6 = (int *)aiStack_40[0];
-    } while (aiStack_40[0] != *(int *)(param_1 + 0xdc));
+      fn_828A1958(&aiStack_40);
+      piVar6 = (int *)aiStack_40;
+    } while (aiStack_40 != *(int *)(param_1 + 0xdc));
   }
   piVar1 = *(int **)(*(int *)(*(int *)((int)piVar6 + 0x28) + 4) + 4);
-  aiStack_40[0] = *piVar1;
-  if ((int *)aiStack_40[0] != piVar1) {
+  aiStack_40 = *piVar1;
+  if ((int *)aiStack_40 != piVar1) {
     do {
       puVar4 = param_3;
       if (0xf < (uint)param_3[5]) {
         puVar4 = (undefined4 *)*param_3;
       }
-      iVar3 = fn_8260D428(aiStack_40[0] + 0xc,0,*(undefined4 *)(aiStack_40[0] + 0x1c),puVar4,
+      iVar3 = fn_8260D428(aiStack_40 + 0xc,0,*(undefined4 *)(aiStack_40 + 0x1c),puVar4,
                            param_3[4]);
     } while ((iVar3 != 0) &&
-            (fn_828A1958(aiStack_40),
-            aiStack_40[0] != *(int *)(*(int *)(*(int *)((int)piVar6 + 0x28) + 4) + 4)));
+            (fn_828A1958(&aiStack_40),
+            aiStack_40 != *(int *)(*(int *)(*(int *)((int)piVar6 + 0x28) + 4) + 4)));
   }
   uVar2 = fn_828EA268((ulonglong)*(uint *)(param_1 + 0xe0) - 1);
   uVar7 = (ulonglong)*(uint *)(*(int *)(*(int *)((int)piVar6 + 0x28) + 4) + 8);

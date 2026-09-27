@@ -46,7 +46,7 @@ void fn_82835308(int param_1,int param_2,int param_3)
   int iVar8;
   int iVar9;
   int iStack_60;
-  undefined4 auStack_5c [23];
+  undefined4 auStack_5c;
   
   *(int *)(param_1 + 0xac) = *(int *)(param_2 + 0xac) + *(int *)(param_1 + 0xac);
   iVar4 = fn_828252D0(*(int *)(param_2 + 0xa4) << 2);
@@ -65,18 +65,18 @@ void fn_82835308(int param_1,int param_2,int param_3)
         iVar1 = **(int **)(param_2 + 0x3bc);
         iVar2 = *(int *)(iVar1 + iVar3);
         if (iVar2 == 0) {
-          auStack_5c[0] = *(undefined4 *)(iVar3 + iVar4);
+          auStack_5c = *(undefined4 *)(iVar3 + iVar4);
         }
         else {
-          cVar5 = fn_82824738(param_1,iVar2,auStack_5c);
+          cVar5 = fn_82824738(param_1,iVar2,&auStack_5c);
           if (cVar5 != '\0') {
-            *(undefined4 *)(*(int *)(iVar9 + 0x10) * 4 + iVar4) = auStack_5c[0];
+            *(undefined4 *)(*(int *)(iVar9 + 0x10) * 4 + iVar4) = auStack_5c;
             *(undefined4 *)(iVar1 + iVar3) = 0;
           }
         }
         lVar6 = lVar6 + -1;
         iVar8 = iVar8 + 0x14;
-        *(undefined4 *)(iVar9 + 0x10) = auStack_5c[0];
+        *(undefined4 *)(iVar9 + 0x10) = auStack_5c;
         param_3 = iStack_60;
       } while (lVar6 != 0);
     }

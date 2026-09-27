@@ -49,7 +49,7 @@ void fn_822A12F8(undefined4 *param_1,int param_2,int param_3)
   int iStack_48;
   undefined1 auStack_40 [8];
   int iStack_38;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [1];
   
   if (((param_1[3] == 0) && (param_2 != 0)) && (param_3 != 0)) {
     puVar1 = auStack_5c;

@@ -31,12 +31,12 @@ extern unsigned int *auStack_10;
 void fn_82320DC8(int param_1,int param_2)
 
 {
-  undefined4 auStack_10 [4];
+  undefined4 auStack_10;
   
-  auStack_10[0] = *(undefined4 *)(*(int *)(param_1 + 4) + 0x28);
+  auStack_10 = *(undefined4 *)(*(int *)(param_1 + 4) + 0x28);
   (**(code **)(**(int **)(param_2 + 0x1b0) + 8))
             (*(int **)(param_2 + 0x1b0),(*(int *)(*(int *)(param_1 + 4) + 0x2c) == 0) + '\x19',
-             auStack_10);
+             &auStack_10);
   return;
 }
 

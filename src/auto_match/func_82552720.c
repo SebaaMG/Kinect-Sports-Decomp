@@ -40,8 +40,8 @@ undefined8 fn_82552720(void)
 
 {
   undefined8 uVar1;
-  undefined4 uStack_30;
-  undefined4 uStack_2c;
+  struct { undefined4 first; undefined4 second; } stack_pair_30;
+
   undefined4 uStack_28;
   undefined4 uStack_20;
   undefined4 uStack_1c;
@@ -50,11 +50,11 @@ undefined8 fn_82552720(void)
   uStack_20 = 0;
   uStack_1c = 0;
   uStack_18 = 0;
-  uStack_30 = 0;
-  uStack_2c = 0;
+  stack_pair_30.first = 0;
+  stack_pair_30.second = 0;
   uStack_28 = 0;
   uVar1 = fn_82552788();
-  fn_822CD140(&uStack_30);
+  fn_822CD140(&stack_pair_30.first);
   fn_822C18B8(&uStack_20);
   return uVar1;
 }

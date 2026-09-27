@@ -26,7 +26,7 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_8296CF68();
-extern int fn_82F691F0();
+extern int memset();
 
 
 undefined8 fn_829750C8(undefined8 param_1,ulonglong param_2)
@@ -37,6 +37,6 @@ undefined8 fn_829750C8(undefined8 param_1,ulonglong param_2)
     return 0xffffffff80004005;
   }
                     /* WARNING: Subroutine does not return */
-  fn_82F691F0(param_2,0,100);
+  memset(param_2,0,100);
 }
 

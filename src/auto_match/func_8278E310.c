@@ -41,7 +41,7 @@ void fn_8278E310(uint *param_1,undefined8 param_2,int *param_3)
   ulonglong uVar2;
   longlong lVar3;
   undefined1 auStack_40 [4];
-  int aiStack_3c [15];
+  int aiStack_3c;
   
   iVar1 = *param_3;
   if (iVar1 != 0) {
@@ -60,8 +60,8 @@ void fn_8278E310(uint *param_1,undefined8 param_2,int *param_3)
     if (iVar1 != 0) {
       fn_8267C4C8(iVar1);
     }
-    aiStack_3c[0] = iVar1;
-    fn_8278BEE8(lVar3 * 0xc + (ulonglong)*param_1 + 0x10,aiStack_3c);
+    aiStack_3c = iVar1;
+    fn_8278BEE8(lVar3 * 0xc + (ulonglong)*param_1 + 0x10,&aiStack_3c);
     if (iVar1 != 0) {
       fn_8267C4F0(iVar1);
     }

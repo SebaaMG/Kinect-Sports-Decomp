@@ -60,7 +60,7 @@ void fn_8225CB20(int param_1,undefined8 param_2,int param_3)
   int *piVar7;
   undefined4 uStack0000001c;
   undefined4 *puStack_80;
-  int aiStack_7c [3];
+  int aiStack_7c;
   undefined1 auStack_70 [24];
   undefined1 auStack_58 [16];
   int *piStack_48;
@@ -97,8 +97,8 @@ void fn_8225CB20(int param_1,undefined8 param_2,int param_3)
     fn_82522ED8();
     puVar1[0x40] = 0;
   }
-  fn_82829120(aiStack_7c,param_1 + 0x48,&puStack_80);
-  iVar2 = *(int *)(aiStack_7c[0] + 0x10);
+  fn_82829120(&aiStack_7c,param_1 + 0x48,&puStack_80);
+  iVar2 = *(int *)(aiStack_7c + 0x10);
   if (iVar2 != 0) {
     if (((*(int *)(iVar2 + 0x404) == 0) && (*(uint *)(iVar2 + 0x40c) < 3)) &&
        (*(int *)(iVar2 + 1000) == 0x3e5)) {
@@ -106,7 +106,7 @@ void fn_8225CB20(int param_1,undefined8 param_2,int param_3)
     }
     fn_8265CA20(iVar2);
   }
-  fn_82825AD0(aiStack_7c,param_1 + 0x48,aiStack_7c[0]);
+  fn_82825AD0(&aiStack_7c,param_1 + 0x48,aiStack_7c);
   if (param_3 == 0) {
     (**(code **)*puVar1)(puVar1);
   }

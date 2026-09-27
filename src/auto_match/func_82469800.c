@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_1ae;
 extern unsigned int *auStack_1ec;
-extern int fn_82F691F0();
+extern int memset();
 extern unsigned int lbl_820E975C;
 extern unsigned int uStack_1b0;
 
@@ -41,7 +41,7 @@ void fn_82469800(void)
   longlong lVar2;
   undefined4 auStack_1ec [15];
   undefined2 uStack_1b0;
-  undefined1 auStack_1ae [430];
+  undefined1 auStack_1ae [414];
   
   puVar1 = auStack_1ec;
   lVar2 = 3;
@@ -53,6 +53,6 @@ void fn_82469800(void)
   } while (lVar2 != 0);
   uStack_1b0 = lbl_820E975C;
                     /* WARNING: Subroutine does not return */
-  fn_82F691F0(auStack_1ae,0,0x7e);
+  memset(auStack_1ae,0,0x7e);
 }
 

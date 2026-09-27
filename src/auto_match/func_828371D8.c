@@ -34,7 +34,7 @@ extern unsigned int lbl_8320A898;
 void fn_828371D8(ulonglong param_1)
 
 {
-  undefined1 auStack_10 [16];
+  undefined1 auStack_10 [1];
   
   if ((param_1 & 0xffffffff) != 0) {
     fn_82836D68(param_1,auStack_10);

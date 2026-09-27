@@ -39,7 +39,7 @@ undefined8 fn_82862A60(int param_1,undefined8 param_2,undefined8 param_3,float *
   undefined8 uVar2;
   double dVar3;
   double dVar4;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [1];
   
   fn_82810328(param_1,param_3,auStack_40);
   dVar3 = (double)fn_82810280(param_2,auStack_40);

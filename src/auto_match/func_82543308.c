@@ -44,7 +44,7 @@ void fn_82543308(undefined4 *param_1,int param_2,undefined4 *param_3)
   int *piVar6;
   longlong lVar7;
   undefined8 uStack_b8;
-  undefined1 auStack_b0 [60];
+  undefined1 auStack_b0 [1];
   int iStack_74;
   undefined1 auStack_70 [112];
   

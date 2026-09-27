@@ -42,8 +42,8 @@ void fn_82610FA0(int param_1,code *param_2,undefined8 param_3)
 {
   undefined4 uStack_30;
   int iStack_2c;
-  undefined4 uStack_28;
-  undefined4 uStack_24;
+  struct { undefined4 first; undefined4 second; } stack_pair_28;
+
   
   if (*(int *)(param_1 + 0x14) != 0) {
     *(undefined4 *)(param_1 + 0x14) = 0;
@@ -52,10 +52,10 @@ void fn_82610FA0(int param_1,code *param_2,undefined8 param_3)
   fn_827D50C0(uStack_30,0);
   fn_827D5078(uStack_30,0);
   fn_827D5108(uStack_30,0);
-  uStack_28 = 0;
-  uStack_24 = 0;
-  fn_82517978(&uStack_28,uStack_30,iStack_2c,0);
-  (*param_2)(&uStack_28,param_3);
+  stack_pair_28.first = 0;
+  stack_pair_28.second = 0;
+  fn_82517978(&stack_pair_28.first,uStack_30,iStack_2c,0);
+  (*param_2)(&stack_pair_28.first,param_3);
   fn_827D5108(uStack_30,3);
   if (iStack_2c != 0) {
     fn_822315A0();

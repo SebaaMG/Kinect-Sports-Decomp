@@ -48,8 +48,8 @@ undefined8 fn_82368640(int param_1,undefined8 param_2,int param_3)
   undefined8 uVar2;
   int iVar3;
   undefined4 *apuStack_50 [4];
-  int iStack_40;
-  undefined4 uStack_3c;
+  struct { int first; undefined4 second; } stack_pair_40;
+
   undefined4 uStack_38;
   undefined4 uStack_34;
   
@@ -72,11 +72,11 @@ undefined8 fn_82368640(int param_1,undefined8 param_2,int param_3)
   }
   uStack_38 = *(undefined4 *)(((uint)LZCOUNT(param_3) >> 3 & 4) + **(int **)(param_1 + 8));
   uStack_34 = *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x1c) + 4) + 4);
-  uStack_3c = *(undefined4 *)(*(int *)(param_1 + 0x1c) + 8);
+  stack_pair_40.second = *(undefined4 *)(*(int *)(param_1 + 0x1c) + 8);
   *(undefined4 *)(iVar3 + 0x24) = *(undefined4 *)(param_3 * 4 + **(int **)(param_1 + 8));
   *(undefined4 **)(iVar3 + 0x28) = apuStack_50[0];
-  *(int **)(iVar3 + 0x2c) = &iStack_40;
-  iStack_40 = param_1;
+  *(int **)(iVar3 + 0x2c) = &stack_pair_40.first;
+  stack_pair_40.first = param_1;
   uVar2 = fn_8235A170();
   uVar2 = fn_822B7900(uVar2,iVar3);
   fn_8265CAA0(iVar3);

@@ -44,7 +44,7 @@ undefined8 fn_827D8560(int param_1,int param_2)
   int iVar2;
   ulonglong uVar3;
   undefined1 auStack_60 [8];
-  undefined1 auStack_58 [88];
+  undefined1 auStack_58 [24];
   
   iVar2 = param_1 + 0x6c;
   RtlEnterCriticalSection(iVar2);

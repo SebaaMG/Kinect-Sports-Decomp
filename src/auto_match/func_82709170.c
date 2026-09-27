@@ -52,7 +52,7 @@ ulonglong fn_82709170(int param_1,undefined8 param_2,ulonglong param_3,undefined
   longlong lVar7;
   int aiStack_60 [4];
   char acStack_50 [16];
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [16];
   
   if (*(int *)(param_1 + 0x68) == 0) {
     uVar1 = 0;

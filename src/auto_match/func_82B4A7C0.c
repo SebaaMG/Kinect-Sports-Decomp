@@ -34,7 +34,7 @@ extern int fn_82B46770();
 extern int fn_82B467D8();
 extern int fn_82B46EA8();
 extern int fn_82B47730();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 undefined8
@@ -51,7 +51,7 @@ fn_82B4A7C0(int param_1,char *param_2,int param_3,int param_4,undefined8 param_5
   int iVar7;
   char *pcVar8;
   uint uVar9;
-  undefined4 auStack_b0 [44];
+  undefined4 auStack_b0 [20];
   
   pcVar8 = param_2;
   if (param_2 == (char *)0x0) {
@@ -74,7 +74,7 @@ fn_82B4A7C0(int param_1,char *param_2,int param_3,int param_4,undefined8 param_5
   if (param_2 == (char *)0x0) {
     param_2 = (char *)fn_82B45DE8(param_1,param_3);
   }
-  fn_82F68CC0(uVar2,param_2,iVar7);
+  memcpy(uVar2,param_2,iVar7);
   uVar4 = fn_82B46EA8(param_1,param_5,param_6,param_7);
   puVar5 = (undefined4 *)fn_82AC6560(param_1,0x58,0x14);
   fn_82932548(auStack_b0);

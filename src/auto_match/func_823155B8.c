@@ -39,7 +39,7 @@ void fn_823155B8(undefined4 *param_1)
 
 {
   undefined4 *puVar1;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
   
   puVar1 = (undefined4 *)param_1[0x174];
   *param_1 = &lbl_821AF790;

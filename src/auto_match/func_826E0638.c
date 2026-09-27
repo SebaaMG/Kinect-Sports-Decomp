@@ -54,7 +54,7 @@ void fn_826E0638(int param_1)
   int iVar8;
   char in_RESERVE;
   byte bVar9;
-  uint auStack_60 [2];
+  uint auStack_60;
   int iStack_58;
   int iStack_54;
   uint auStack_50 [20];
@@ -75,15 +75,15 @@ void fn_826E0638(int param_1)
     fn_826A9280(iVar8,0xffffffff8200cb68,uVar2,((ulonglong)auStack_50[0] & 0xfffffffc) + 8);
     iStack_58 = 0;
     iStack_54 = 0;
-    auStack_60[0] = uVar2;
-    cVar4 = fn_826DC448(*(undefined4 *)(param_1 + 0x20),&iStack_58,auStack_60);
+    auStack_60 = uVar2;
+    cVar4 = fn_826DC448(*(undefined4 *)(param_1 + 0x20),&iStack_58,&auStack_60);
     bVar9 = (cVar4 == '\0') << 1;
     if (cVar4 == '\0') {
       fn_826DFA28(iVar8,0xffffffff8200cb88,((ulonglong)auStack_50[0] & 0xfffffffc) + 8);
     }
     else {
-      auStack_60[0] = uVar2;
-      fn_826DF328(*(undefined4 *)(param_1 + 0x20),auStack_50,auStack_60,&iStack_58);
+      auStack_60 = uVar2;
+      fn_826DF328(*(undefined4 *)(param_1 + 0x20),auStack_50,&auStack_60,&iStack_58);
     }
     if ((iStack_58 == 0) && (iStack_54 != 0)) {
       fn_82687270();

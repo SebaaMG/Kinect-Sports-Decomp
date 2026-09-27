@@ -46,7 +46,7 @@ void fn_828C17D0(undefined4 *param_1)
   int *piVar6;
   undefined4 *puVar7;
   int *piVar8;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [16];
   
   *param_1 = &lbl_8202604C;
   fn_82A1E658(param_1[10]);

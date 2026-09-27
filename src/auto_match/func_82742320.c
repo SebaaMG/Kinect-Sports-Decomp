@@ -46,7 +46,7 @@ void fn_82742320(void)
   undefined8 uVar2;
   int iVar5;
   double dVar6;
-  undefined1 auStack_90 [144];
+  undefined1 auStack_90 [96];
   
   iVar3 = fn_82F6A53C();
   cVar4 = fn_82695468(iVar3,0xf);

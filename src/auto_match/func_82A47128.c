@@ -29,8 +29,8 @@ extern unsigned int *auStack_14e;
 extern int fn_82A3FF60();
 extern int fn_82A447A0();
 extern int fn_82A4F4E0();
-extern int fn_82F68CC0();
-extern int fn_82F691F0();
+extern int memcpy();
+extern int memset();
 extern unsigned int lbl_8208E054;
 extern unsigned int lbl_8208E058;
 extern unsigned int lbl_8208E05C;
@@ -56,8 +56,8 @@ fn_82A47128(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefined8 
   int iVar1;
   short *psVar3;
   undefined8 uVar2;
-  undefined4 uStack_180;
-  undefined4 uStack_17c;
+  struct { undefined4 first; undefined4 second; } stack_pair_180;
+
   undefined4 uStack_178;
   undefined4 uStack_174;
   undefined4 uStack_170;
@@ -66,7 +66,7 @@ fn_82A47128(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefined8 
   undefined4 uStack_160;
   undefined4 uStack_15c;
   undefined2 uStack_150;
-  undefined1 auStack_14e [334];
+  undefined1 auStack_14e [318];
   
   psVar3 = (short *)fn_82A3FF60(0xffffffff83219d50,
                                       (ulonglong)*(ushort *)(param_5 + 0x10) + 0x12,0x20970002,0);
@@ -74,13 +74,13 @@ fn_82A47128(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefined8 
     uVar2 = 0xffffffff8007000e;
   }
   else {
-    fn_82F68CC0(psVar3,param_5,(ulonglong)*(ushort *)(param_5 + 0x10) + 0x12);
+    memcpy(psVar3,param_5,(ulonglong)*(ushort *)(param_5 + 0x10) + 0x12);
     if (*psVar3 == -2) {
-      uStack_17c = lbl_8208E054;
+      stack_pair_180.second = lbl_8208E054;
       uStack_178 = lbl_8208E058;
       uStack_174 = lbl_8208E05C;
-      uStack_180 = 1;
-      fn_82F68CC0(psVar3 + 0xc,&uStack_180,0x10);
+      stack_pair_180.first = 1;
+      memcpy(psVar3 + 0xc,&stack_pair_180.first,0x10);
       psVar3[9] = 0x10;
     }
     else {
@@ -100,7 +100,7 @@ fn_82A47128(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefined8 
       uStack_160 = 2;
       uStack_15c = 0;
                     /* WARNING: Subroutine does not return */
-      fn_82F691F0(auStack_14e,0,0x16);
+      memset(auStack_14e,0,0x16);
     }
   }
   return uVar2;

@@ -39,13 +39,13 @@ ulonglong fn_82644040(int param_1,ulonglong param_2,longlong param_3)
   int iVar4;
   ulonglong uVar5;
   uint uVar6;
-  int aiStack_30 [12];
+  int aiStack_30;
   
   if ((*(byte *)(param_1 + 0x2abd) & 0x20) == 0) {
     iVar1 = *(int *)(param_1 + 0x35a0);
-    aiStack_30[0] = (int)((param_2 & 0x3fffffff) << 2);
+    aiStack_30 = (int)((param_2 & 0x3fffffff) << 2);
     if (iVar1 == 0) {
-      uVar3 = fn_82643E10(param_1,1,aiStack_30,param_3);
+      uVar3 = fn_82643E10(param_1,1,&aiStack_30,param_3);
     }
     else if (*(int *)(iVar1 + 0x98) == 0) {
       iVar4 = KeGetCurrentProcessType();
@@ -55,7 +55,7 @@ ulonglong fn_82644040(int param_1,ulonglong param_2,longlong param_3)
       }
       uVar6 = *puVar2;
       RtlEnterCriticalSection((ulonglong)uVar6 + 0x3b50);
-      uVar3 = (**(code **)(iVar1 + 0xac))(*(undefined4 *)(iVar1 + 0xa4),1,aiStack_30,param_3);
+      uVar3 = (**(code **)(iVar1 + 0xac))(*(undefined4 *)(iVar1 + 0xa4),1,&aiStack_30,param_3);
       RtlLeaveCriticalSection((ulonglong)uVar6 + 0x3b50);
     }
     else {
@@ -75,7 +75,7 @@ ulonglong fn_82644040(int param_1,ulonglong param_2,longlong param_3)
         *(int *)(param_1 + 0x38) = *(int *)(param_1 + 0x38) + iVar1 * -4;
       }
     }
-    uVar6 = *(int *)(param_1 + 0x3b28) + aiStack_30[0];
+    uVar6 = *(int *)(param_1 + 0x3b28) + aiStack_30;
     *(uint *)(param_1 + 0x3b28) = uVar6;
     if ((*(uint *)(param_1 + 0x3b2c) < uVar6) && (*(int *)(param_1 + 0x3460) == 0)) {
       *(int *)(param_1 + 0x34) = *(int *)(param_1 + 0x30) + 0xa0;

@@ -28,7 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_60;
 extern int fn_8245AB78();
 extern int fn_82A1DD38();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int uStack_3c;
 extern unsigned int uStack_44;
 extern unsigned int uStack_48;
@@ -40,7 +40,7 @@ undefined8 fn_8245B630(int param_1,undefined8 param_2,undefined4 param_3,undefin
 
 {
   bool bVar1;
-  undefined1 auStack_60 [16];
+  undefined1 auStack_60;
   undefined4 uStack_50;
   undefined4 uStack_4c;
   undefined4 uStack_48;
@@ -51,8 +51,8 @@ undefined8 fn_8245B630(int param_1,undefined8 param_2,undefined4 param_3,undefin
   RtlEnterCriticalSection();
   if ((*(int *)(param_1 + 0x588) != 0) && (*(int *)(param_1 + 0x6a4) == 3)) {
     RtlLeaveCriticalSection(param_1);
-    auStack_60[0] = 3;
-    fn_82A1DD38(param_2,auStack_60,1);
+    auStack_60 = 3;
+    fn_82A1DD38(param_2,&auStack_60,1);
     uStack_4c = (undefined4)param_2;
     uStack_50 = 1;
     pcStack_40 = fn_8245AB78;
@@ -64,7 +64,7 @@ undefined8 fn_8245B630(int param_1,undefined8 param_2,undefined4 param_3,undefin
       bVar1 = false;
     }
     if (bVar1) {
-      fn_82F68CC0(param_1 + 0x5c4,&uStack_50,0x18);
+      memcpy(param_1 + 0x5c4,&uStack_50,0x18);
       *(undefined4 *)(param_1 + 0x574) = 1;
       RtlLeaveCriticalSection(param_1);
       return param_2;

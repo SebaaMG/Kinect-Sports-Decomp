@@ -33,11 +33,11 @@ extern int fn_82817868();
 void fn_828177C8(undefined8 param_1,undefined8 param_2)
 
 {
-  undefined4 auStack_10 [4];
+  undefined4 auStack_10;
   
-  auStack_10[0] = 0;
-  fn_828176F0(param_1,param_2,auStack_10);
-  fn_82817868(auStack_10[0]);
+  auStack_10 = 0;
+  fn_828176F0(param_1,param_2,&auStack_10);
+  fn_82817868(auStack_10);
   return;
 }
 

@@ -36,12 +36,12 @@ void fn_8233DE60(double param_1,int param_2,undefined8 param_3,undefined4 param_
 
 {
   undefined1 uStack_20;
-  float fStack_18;
-  undefined4 uStack_14;
+  struct { float first; undefined4 second; } stack_pair_18;
+
   
-  fStack_18 = (float)param_1;
-  uStack_14 = param_4;
-  fn_8233E9E0(param_2 + 0xc0,&fStack_18);
+  stack_pair_18.first = (float)param_1;
+  stack_pair_18.second = param_4;
+  fn_8233E9E0(param_2 + 0xc0,&stack_pair_18.first);
   fn_8233F530(*(int *)(param_2 + 0xc0),*(int *)(param_2 + 0xc4),
                     *(int *)(param_2 + 0xc4) - *(int *)(param_2 + 0xc0) >> 3,uStack_20);
   return;

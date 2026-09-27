@@ -63,8 +63,8 @@ undefined8 fn_829CCBC0(void)
   undefined4 uStack_ac;
   int iStack_a8;
   undefined4 uStack_a4;
-  undefined4 uStack_a0;
-  undefined4 uStack_9c;
+  struct { undefined4 first; undefined4 second; } stack_pair_a0;
+
   undefined4 uStack_98;
   undefined4 uStack_94;
   undefined4 uStack_90;
@@ -87,11 +87,11 @@ undefined8 fn_829CCBC0(void)
       iVar2 = uVar3 << 1;
     } while (uVar3 < 0x2000);
   }
-  uStack_a0 = 0;
-  uStack_9c = 0;
+  stack_pair_a0.first = 0;
+  stack_pair_a0.second = 0;
   uStack_98 = 0x2000;
   uStack_94 = 0;
-  fn_8263C7D8(0xffffffff8321723c,0,auStack_c0,&uStack_a0,0x1000);
+  fn_8263C7D8(0xffffffff8321723c,0,auStack_c0,&stack_pair_a0.first,0x1000);
   fn_8263C620(0xffffffff8321723c,0);
   uStack_54 = 1;
   auStack_70[0] = 0x21;

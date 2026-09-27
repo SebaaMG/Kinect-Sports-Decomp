@@ -36,7 +36,7 @@ extern int fn_828AD488();
 extern int fn_828AECC0();
 extern int fn_828C4240();
 extern int fn_82A4AAA8();
-extern int fn_82F63CA0();
+extern int memmove();
 
 
 undefined8 fn_828AE888(int param_1,undefined4 param_2)
@@ -47,7 +47,7 @@ undefined8 fn_828AE888(int param_1,undefined4 param_2)
   undefined8 uVar2;
   int iVar3;
   undefined4 *puVar4;
-  int aiStack_40 [16];
+  int aiStack_40 [8];
   
   cVar5 = fn_828ACC98();
   if (cVar5 == '\0') {
@@ -85,7 +85,7 @@ undefined8 fn_828AE888(int param_1,undefined4 param_2)
       fn_828A2CF8(param_1 + 0x268);
       iVar3 = *(int *)(param_1 + 600);
       if (iVar3 != *(int *)(param_1 + 0x25c)) {
-        fn_82F63CA0(iVar3,*(int *)(param_1 + 0x25c),0);
+        memmove(iVar3,*(int *)(param_1 + 0x25c),0);
         *(int *)(param_1 + 0x25c) = iVar3;
       }
       fn_828A3578(param_1 + 0x2f4);

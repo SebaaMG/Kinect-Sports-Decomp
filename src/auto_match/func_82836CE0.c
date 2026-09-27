@@ -25,13 +25,13 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F691F0();
+extern int memset();
 
 
 void fn_82836CE0(undefined8 param_1)
 
 {
                     /* WARNING: Subroutine does not return */
-  fn_82F691F0(param_1,0,0x38);
+  memset(param_1,0,0x38);
 }
 

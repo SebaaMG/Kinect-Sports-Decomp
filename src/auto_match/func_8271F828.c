@@ -54,31 +54,31 @@ void fn_8271F828(undefined8 param_1,int param_2,undefined4 param_3)
   longlong lVar3;
   int iVar5;
   int iVar6;
-  undefined4 uStack_70;
-  undefined4 uStack_6c;
+  struct { undefined4 first; undefined4 second; } stack_pair_70;
+
   undefined4 uStack_68;
   undefined1 auStack_60 [8];
   undefined4 uStack_58;
   undefined1 auStack_50 [16];
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [32];
   
-  uStack_70 = 0;
-  uStack_6c = 0;
+  stack_pair_70.first = 0;
+  stack_pair_70.second = 0;
   uStack_68 = 0;
   if (param_2 == 0) {
     auStack_50[0] = 1;
-    fn_826CD420(&uStack_70,auStack_50);
+    fn_826CD420(&stack_pair_70.first,auStack_50);
     puVar4 = auStack_50;
   }
   else {
     uVar2 = fn_82695520(auStack_40);
-    fn_826CD420(&uStack_70,uVar2);
+    fn_826CD420(&stack_pair_70.first,uVar2);
     puVar4 = auStack_40;
   }
   fn_82696330(puVar4);
   auStack_60[0] = 4;
   uStack_58 = param_3;
-  fn_826CD420(&uStack_70,auStack_60);
+  fn_826CD420(&stack_pair_70.first,auStack_60);
   fn_82696330(auStack_60);
   lVar3 = fn_826A7398(param_1);
   iVar5 = fn_82700248(lVar3 + 0xa2c,4);
@@ -97,9 +97,9 @@ void fn_8271F828(undefined8 param_1,int param_2,undefined4 param_3)
   }
   *(undefined4 *)(iVar5 + 0xc) = 0;
   *(code **)(iVar5 + 0x2c) = fn_8271E440;
-  fn_826CD840(iVar5 + 0x30,&uStack_70);
-  uVar1 = uStack_70;
-  fn_8269A990(uStack_70,uStack_6c);
+  fn_826CD840(iVar5 + 0x30,&stack_pair_70.first);
+  uVar1 = stack_pair_70.first;
+  fn_8269A990(stack_pair_70.first,stack_pair_70.second);
   fn_8267BE38(uVar1);
   return;
 }

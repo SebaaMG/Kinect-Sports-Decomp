@@ -339,8 +339,8 @@ void fn_82A11358(undefined8 param_1,undefined8 param_2,longlong param_3,longlong
   float fStack_4bc;
   float fStack_4b8;
   float fStack_4b4;
-  float fStack_4b0;
-  float fStack_4ac;
+  struct { float first; float second; } stack_pair_4b0;
+
   float fStack_4a8;
   float afStack_4a4 [44];
   float fStack_3f4;
@@ -379,8 +379,8 @@ void fn_82A11358(undefined8 param_1,undefined8 param_2,longlong param_3,longlong
   pfVar22 = afStack_4a4;
   pfVar17 = &fStack_4a8;
   dVar41 = 4.0;
-  pfVar18 = &fStack_4ac;
-  pfVar21 = &fStack_4b0;
+  pfVar18 = &stack_pair_4b0.second;
+  pfVar21 = &stack_pair_4b0.first;
   dVar36 = (double)uVar19;
   fVar3 = (float)(dVar36 * dVar42);
   fVar1 = (float)((double)(float)((double)fVar3 * dVar39) + dVar37);
@@ -552,7 +552,7 @@ void fn_82A11358(undefined8 param_1,undefined8 param_2,longlong param_3,longlong
   fn_82639330(*piVar6,0);
   fn_82639300(*piVar6,0);
   fn_82631578(*piVar6,piVar6[0x11]);
-  fn_82640058(*piVar6,8,0xc,&fStack_4b0,0x10);
+  fn_82640058(*piVar6,8,0xc,&stack_pair_4b0.first,0x10);
   fn_8263A1B8(*piVar6,0,piVar6[0x76d]);
   fn_8263A508(*piVar6,piVar6[0x2e]);
   fn_82639238(*piVar6,1);

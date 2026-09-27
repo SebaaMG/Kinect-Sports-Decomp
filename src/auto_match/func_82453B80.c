@@ -38,7 +38,7 @@ undefined8 fn_82453B80(int param_1,int param_2,int param_3)
   undefined4 uVar4;
   undefined4 uVar5;
   undefined4 uVar6;
-  undefined1 auStack_10 [16];
+  undefined1 auStack_10 [1];
   
   iVar3 = *(int *)(*(int *)(param_1 + 0x44) + 0x6c);
   while( true ) {

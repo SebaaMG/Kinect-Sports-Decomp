@@ -25,7 +25,7 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F640B0();
+extern int memchr();
 
 
 uint fn_822C1928(undefined4 *param_1,byte *param_2,uint param_3,uint param_4)
@@ -48,7 +48,7 @@ uint fn_822C1928(undefined4 *param_1,byte *param_2,uint param_3,uint param_4)
         puVar5 = (undefined4 *)*param_1;
       }
       pbVar8 = (byte *)((int)puVar5 + param_3);
-      while (pbVar1 = (byte *)fn_82F640B0(pbVar8,*param_2,pbVar7), pbVar1 != (byte *)0x0) {
+      while (pbVar1 = (byte *)memchr(pbVar8,*param_2,pbVar7), pbVar1 != (byte *)0x0) {
         lVar2 = 0;
         if (param_4 != 0) {
           pbVar3 = param_2;

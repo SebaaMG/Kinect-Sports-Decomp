@@ -50,7 +50,7 @@ undefined4 * fn_82433068(undefined4 *param_1,int param_2)
   undefined4 uVar5;
   int *piVar6;
   longlong lVar7;
-  undefined1 auStack_40 [40];
+  undefined1 auStack_40 [24];
   
   fn_82230110(auStack_40,param_2 + 0x24);
   fn_82437C78(param_1,auStack_40);

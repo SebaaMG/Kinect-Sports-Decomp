@@ -59,15 +59,15 @@ undefined8 fn_82869A90(int param_1,undefined8 param_2,undefined4 *param_3)
   ulonglong uVar4;
   ulonglong uVar5;
   ulonglong uVar6;
-  int iStack_1e0;
-  uint uStack_1dc;
+  struct { int first; uint second; } stack_pair_1e0;
+
   undefined1 auStack_1d8 [8];
   undefined1 *puStack_1d0;
   undefined1 auStack_180 [4];
   undefined4 uStack_17c;
   uint uStack_178;
   uint uStack_174;
-  undefined1 auStack_170 [20];
+  undefined1 auStack_170 [1];
   undefined1 auStack_15c [12];
   undefined1 auStack_150 [336];
   
@@ -80,20 +80,20 @@ undefined8 fn_82869A90(int param_1,undefined8 param_2,undefined4 *param_3)
   if ((int)uVar1 != 1) {
     return uVar1;
   }
-  iVar2 = fn_82866110(&uStack_17c,&iStack_1e0,0,8,&uStack_178);
+  iVar2 = fn_82866110(&uStack_17c,&stack_pair_1e0.first,0,8,&uStack_178);
   if ((iVar2 != 1) || (uStack_178 < 8)) {
     fn_82A1E658(uStack_17c);
     return 2;
   }
-  if ((iStack_1e0 == 0x414b504b) && (uStack_1dc != 0)) {
+  if ((stack_pair_1e0.first == 0x414b504b) && (stack_pair_1e0.second != 0)) {
     uVar1 = fn_82876408(param_1,param_2,0,0,auStack_180,auStack_170);
     if ((int)uVar1 != 1) goto LAB_82869ca8;
-    uVar5 = (ulonglong)uStack_1dc;
+    uVar5 = (ulonglong)stack_pair_1e0.second;
     uVar1 = fn_828766C8(param_1 + 4,auStack_170);
     iVar2 = fn_828774A0(auStack_15c,param_2,uVar5 + 8,uVar1,&uStack_174);
     if ((iVar2 != 0) && ((ulonglong)uStack_174 != 0)) {
       uVar4 = (ulonglong)uStack_178;
-      uVar6 = (ulonglong)uStack_1dc;
+      uVar6 = (ulonglong)stack_pair_1e0.second;
       uVar5 = 8;
       if (8 < uVar4) {
         fn_82A1DDC0((ulonglong)uStack_174 + 8,auStack_1d8,uVar4 - 8);
@@ -104,7 +104,7 @@ undefined8 fn_82869A90(int param_1,undefined8 param_2,undefined4 *param_3)
          ((iVar3 = fn_82866110(&uStack_17c,uVar5 + uStack_174,uStack_178,uVar6,&uStack_178),
           iVar3 == 1 && ((uVar6 & 0xffffffff) <= (ulonglong)uStack_178)))) {
         fn_82A1E658(uStack_17c);
-        uVar1 = fn_828767F0(iVar2 + 8,uStack_174,(ulonglong)uStack_1dc + 8);
+        uVar1 = fn_828767F0(iVar2 + 8,uStack_174,(ulonglong)stack_pair_1e0.second + 8);
         if ((int)uVar1 == 1) {
           if (*(int *)(param_1 + 0x424) == 0) {
             *(int *)(param_1 + 0x424) = iVar2;

@@ -33,12 +33,12 @@ void fn_8282D7E0(longlong param_1)
 
 {
   ulonglong uVar1;
-  uint auStack_10 [4];
+  uint auStack_10;
   
   uVar1 = param_1 + 0x2fc;
   do {
-    fn_828223C8(uVar1,auStack_10);
-    uVar1 = (ulonglong)auStack_10[0];
+    fn_828223C8(uVar1,&auStack_10);
+    uVar1 = (ulonglong)auStack_10;
   } while (uVar1 != 0);
   return;
 }

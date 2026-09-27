@@ -29,7 +29,7 @@ extern int fn_82398DA0();
 extern int fn_8239A928();
 extern int fn_823ADF20();
 extern int fn_8265CA20();
-extern int fn_82F63CA0();
+extern int memmove();
 
 
 void fn_82397BA8(int param_1)
@@ -58,7 +58,7 @@ void fn_82397BA8(int param_1)
   }
   iVar1 = *(int *)(param_1 + 0x1b4);
   if (iVar1 != *(int *)(param_1 + 0x1b8)) {
-    fn_82F63CA0(iVar1,*(int *)(param_1 + 0x1b8),0);
+    memmove(iVar1,*(int *)(param_1 + 0x1b8),0);
     *(int *)(param_1 + 0x1b8) = iVar1;
   }
   piVar2 = *(int **)(param_1 + 0x1a8);
@@ -72,7 +72,7 @@ void fn_82397BA8(int param_1)
   }
   iVar1 = *(int *)(param_1 + 0x1a4);
   if (iVar1 != *(int *)(param_1 + 0x1a8)) {
-    fn_82F63CA0(iVar1,*(int *)(param_1 + 0x1a8),0);
+    memmove(iVar1,*(int *)(param_1 + 0x1a8),0);
     *(int *)(param_1 + 0x1a8) = iVar1;
   }
   piVar2 = *(int **)(param_1 + 0x1c8);
@@ -86,7 +86,7 @@ void fn_82397BA8(int param_1)
   }
   iVar1 = *(int *)(param_1 + 0x1c4);
   if (iVar1 != *(int *)(param_1 + 0x1c8)) {
-    fn_82F63CA0(iVar1,*(int *)(param_1 + 0x1c8),0);
+    memmove(iVar1,*(int *)(param_1 + 0x1c8),0);
     *(int *)(param_1 + 0x1c8) = iVar1;
   }
   return;

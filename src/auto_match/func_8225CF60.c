@@ -58,7 +58,7 @@ uint fn_8225CF60(int param_1,undefined8 param_2,undefined8 param_3)
   undefined4 uStack_78;
   uint auStack_70 [2];
   undefined1 auStack_68 [24];
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [32];
   
   uVar1 = *(uint *)(param_1 + 0x44);
   *(uint *)(param_1 + 0x44) = uVar1 + 1;

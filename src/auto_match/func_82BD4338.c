@@ -26,7 +26,7 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_4e;
-extern int fn_82F691F0();
+extern int memset();
 extern unsigned int iStack_5c;
 extern unsigned int uStack_58;
 extern unsigned int uStack_60;
@@ -41,7 +41,7 @@ undefined8 fn_82BD4338(int param_1,int param_2)
   int iStack_5c;
   undefined4 uStack_58;
   undefined4 *puStack_54;
-  undefined1 auStack_4e [78];
+  undefined1 auStack_4e [30];
   
   uVar2 = 0xffffffff80004001;
   uStack_60 = 0;
@@ -52,7 +52,7 @@ undefined8 fn_82BD4338(int param_1,int param_2)
     iStack_5c = param_2;
     if (piVar1 == (int *)0x0) {
                     /* WARNING: Subroutine does not return */
-      fn_82F691F0(auStack_4e,0,0x10);
+      memset(auStack_4e,0,0x10);
     }
     if (param_2 != 0) {
       uVar2 = (**(code **)(*piVar1 + 4))(piVar1,&uStack_58);

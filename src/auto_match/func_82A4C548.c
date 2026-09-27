@@ -26,8 +26,8 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_82A1DDC0();
-extern int fn_82F68CC0();
-extern int fn_82F691F0();
+extern int memcpy();
+extern int memset();
 extern unsigned int iStack_3c;
 extern unsigned int iStack_40;
 extern unsigned int lbl_82002AE0;
@@ -50,8 +50,8 @@ void fn_82A4C548(int param_1,undefined8 param_2,undefined4 *param_3,undefined8 p
   undefined4 *puVar3;
   double dVar4;
   float afStack_60 [4];
-  undefined4 uStack_50;
-  undefined4 uStack_4c;
+  struct { undefined4 first; undefined4 second; } stack_pair_50;
+
   float *pfStack_48;
   undefined4 uStack_44;
   int iStack_40;
@@ -75,24 +75,24 @@ void fn_82A4C548(int param_1,undefined8 param_2,undefined4 *param_3,undefined8 p
       }
       else {
         uStack_38 = *(undefined4 *)(param_1 + 0x48);
-        uStack_50 = *puVar3;
+        stack_pair_50.first = *puVar3;
         pfStack_48 = afStack_60;
         afStack_60[0] = fVar2;
         uStack_44 = 0;
         uStack_30 = 0;
         uStack_2c = 1;
-        uStack_4c = uVar1;
+        stack_pair_50.second = uVar1;
         iStack_40 = *(int *)(param_1 + 0x3c);
         iStack_3c = *(int *)(param_1 + 0x40);
         uStack_34 = uStack_38;
-        (**(code **)(param_1 + 0x54))(&uStack_50);
+        (**(code **)(param_1 + 0x54))(&stack_pair_50.first);
       }
       if ((ulonglong)*(uint *)(param_1 + 0x44) != 0) {
-        fn_82F68CC0(*(undefined4 *)(param_1 + 0x30),
+        memcpy(*(undefined4 *)(param_1 + 0x30),
                      ((ulonglong)*(uint *)(param_1 + 0x44) - (ulonglong)*(uint *)(param_1 + 0x48) &
                      0x3fffffff) * 4 + (ulonglong)*(uint *)(param_1 + 0x2c),
                      *(uint *)(param_1 + 0x48) << 2);
-        fn_82F68CC0(((ulonglong)*(uint *)(param_1 + 0x48) & 0x3fffffff) * 4 +
+        memcpy(((ulonglong)*(uint *)(param_1 + 0x48) & 0x3fffffff) * 4 +
                      (ulonglong)*(uint *)(param_1 + 0x30),
                      ((ulonglong)*(uint *)(param_1 + 0x44) - (ulonglong)*(uint *)(param_1 + 0x48) &
                      0x3fffffff) * 4 + (ulonglong)*(uint *)(param_1 + 0x2c));
@@ -112,6 +112,6 @@ void fn_82A4C548(int param_1,undefined8 param_2,undefined4 *param_3,undefined8 p
     return;
   }
                     /* WARNING: Subroutine does not return */
-  fn_82F691F0(*(undefined4 *)(param_1 + 0x30),0,(ulonglong)*(uint *)(param_1 + 0x48) * 0xc);
+  memset(*(undefined4 *)(param_1 + 0x30),0,(ulonglong)*(uint *)(param_1 + 0x48) * 0xc);
 }
 

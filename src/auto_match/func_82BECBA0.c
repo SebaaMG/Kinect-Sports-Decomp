@@ -38,7 +38,7 @@ void fn_82BECBA0(int param_1)
 {
   longlong lVar1;
   int iStack_30;
-  int aiStack_2c [11];
+  int aiStack_2c [2];
   
   if (*(int *)(param_1 + 0x50) != 2) {
     lVar1 = -(ulonglong)(*(int *)(param_1 + 0x1c) != 0);

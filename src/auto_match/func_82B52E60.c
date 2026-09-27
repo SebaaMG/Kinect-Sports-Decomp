@@ -46,7 +46,7 @@ void fn_82B52E60(int param_1,int param_2,ulonglong param_3,undefined8 param_4,un
   ulonglong uVar3;
   int iStack_60;
   undefined4 *puStack_5c;
-  uint auStack_50 [20];
+  uint auStack_50 [4];
   
   puVar1 = (uint *)fn_82ABE250(param_1,8,3);
   puVar1[1] = (uint)puVar1 | 1;

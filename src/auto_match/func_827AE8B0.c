@@ -56,14 +56,14 @@ undefined4 * fn_827AE8B0(undefined4 *param_1,int param_2)
   int iVar6;
   uint uVar7;
   int iVar8;
-  undefined1 auStack_80 [4];
+  undefined1 auStack_80;
   uint auStack_7c [3];
   int iStack_70;
   undefined1 uStack_6c;
-  int iStack_68;
-  int iStack_64;
+  struct { int first; int second; } stack_pair_68;
+
   byte bStack_60;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [32];
   
   uStack_6c = 8;
   iStack_70 = param_2;
@@ -96,32 +96,32 @@ undefined4 * fn_827AE8B0(undefined4 *param_1,int param_2)
   }
   iVar6 = fn_826B14D8(param_2,10);
   bStack_60 = 0;
-  iStack_68 = *(int *)(iVar6 + 0x3c);
+  stack_pair_68.first = *(int *)(iVar6 + 0x3c);
   iVar8 = 0;
-  if (iStack_68 != 0) {
-    uVar7 = *(int *)(iStack_68 + 8) + 1;
-    *(uint *)(iStack_68 + 8) = uVar7;
-    *(uint *)(iStack_68 + 8) = uVar7 & 0x8fffffff;
-    iVar8 = iStack_68;
+  if (stack_pair_68.first != 0) {
+    uVar7 = *(int *)(stack_pair_68.first + 8) + 1;
+    *(uint *)(stack_pair_68.first + 8) = uVar7;
+    *(uint *)(stack_pair_68.first + 8) = uVar7 & 0x8fffffff;
+    iVar8 = stack_pair_68.first;
   }
-  iStack_64 = 0;
+  stack_pair_68.second = 0;
   if (*(int *)(iVar6 + 0x40) != 0) {
-    fn_826C3378(&iStack_68,*(int *)(iVar6 + 0x40),*(byte *)(iVar6 + 0x44) & 1);
-    iVar8 = iStack_68;
+    fn_826C3378(&stack_pair_68.first,*(int *)(iVar6 + 0x40),*(byte *)(iVar6 + 0x44) & 1);
+    iVar8 = stack_pair_68.first;
   }
-  auStack_80[0] = 0;
+  auStack_80 = 0;
   iVar6 = *(int *)(iVar8 + 0x10);
   uVar3 = fn_82695750(auStack_50,param_1);
-  (**(code **)(iVar6 + 0x28))(iVar8 + 0x10,&iStack_70,param_2 + 0x8c,uVar3,auStack_80);
+  (**(code **)(iVar6 + 0x28))(iVar8 + 0x10,&iStack_70,param_2 + 0x8c,uVar3,&auStack_80);
   fn_82696330(auStack_50);
-  if (((bStack_60 & 2) == 0) && (iStack_68 != 0)) {
+  if (((bStack_60 & 2) == 0) && (stack_pair_68.first != 0)) {
     fn_826824B0();
   }
-  iStack_68 = 0;
-  if (((bStack_60 & 1) == 0) && (iStack_64 != 0)) {
+  stack_pair_68.first = 0;
+  if (((bStack_60 & 1) == 0) && (stack_pair_68.second != 0)) {
     fn_826824B0();
   }
-  iStack_64 = 0;
+  stack_pair_68.second = 0;
   if (uVar5 != 0) {
     fn_826824B0(uVar5);
   }

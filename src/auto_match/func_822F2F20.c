@@ -54,7 +54,7 @@ void fn_822F2F20(int param_1)
   undefined4 uVar8;
   undefined4 uVar9;
   undefined1 in_vr12 [16];
-  undefined1 auStack_20 [16];
+  undefined1 auStack_20 [1];
   
   fn_822F25B0();
   bVar1 = *(int *)(*(int *)(param_1 + 0xc) + 0x24) == 0;

@@ -37,7 +37,7 @@ void fn_82B196F0(int param_1,int param_2)
   uint uVar3;
   int iVar4;
   uint uVar5;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30;
   
   uVar5 = *(uint *)(param_1 + 4);
   do {
@@ -93,8 +93,8 @@ void fn_82B196F0(int param_1,int param_2)
       return;
     }
     if (*(int *)(uVar5 + 0x2c) == param_2) {
-      auStack_30[0] = 0;
-      fn_82B18218(param_1,*(undefined4 *)(uVar5 + 0x50),auStack_30);
+      auStack_30 = 0;
+      fn_82B18218(param_1,*(undefined4 *)(uVar5 + 0x50),&auStack_30);
       if ((*(uint *)(uVar5 + 0x14) & 1) == 0) {
         uVar2 = *(uint *)(uVar5 + 0x14);
         iVar4 = uVar5 + 0x10;

@@ -41,7 +41,7 @@ void fn_82396CA0(int param_1)
   int *piVar1;
   int *piVar2;
   undefined4 auStack_60 [4];
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [48];
   
   if (*(int *)(param_1 + 0x2d0) != 0) {
     fn_82864988(auStack_50,0xffffffff821b4aac);

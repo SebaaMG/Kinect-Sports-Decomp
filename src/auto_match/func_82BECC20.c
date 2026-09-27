@@ -37,7 +37,7 @@ longlong fn_82BECC20(int param_1)
   longlong lVar1;
   longlong lVar2;
   int iStack_40;
-  int aiStack_3c [15];
+  int aiStack_3c [2];
   
   if (*(int *)(param_1 + 0x50) == 2) {
     lVar2 = 0;

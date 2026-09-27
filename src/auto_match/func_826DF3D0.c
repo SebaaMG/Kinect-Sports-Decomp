@@ -44,12 +44,12 @@ void fn_826DF3D0(int param_1,int *param_2)
   int iVar3;
   longlong lVar4;
   uint *puVar5;
-  undefined1 auStack_60 [4];
+  undefined1 auStack_60;
   undefined4 uStack_5c;
   uint *apuStack_58 [2];
   undefined4 uStack_50;
   undefined4 uStack_4c;
-  undefined1 auStack_48 [72];
+  undefined1 auStack_48 [8];
   
   iVar3 = *(int *)(*(int *)(*(int *)(*(int *)(param_1 + 0x1c) + 0xc) + 0x20) + 0x90);
   sync(1);
@@ -74,8 +74,8 @@ void fn_826DF3D0(int param_1,int *param_2)
         if (iVar1 != 0) {
           (**(code **)(*param_2 + 4))(param_2,param_1,iVar1,((ulonglong)*puVar5 & 0xfffffffc) + 8);
         }
-        auStack_60[0] = 1;
-        fn_826DF0B0(&uStack_5c,puVar5,auStack_60);
+        auStack_60 = 1;
+        fn_826DF0B0(&uStack_5c,puVar5,&auStack_60);
       }
       iVar3 = *(int *)(iVar3 + 0x18);
       sync(1);

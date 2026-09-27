@@ -42,12 +42,12 @@ int fn_8278E7B0(int param_1,int param_2)
   uint uVar3;
   int *piVar4;
   int *piVar5;
-  int aiStack_30 [12];
+  int aiStack_30;
   
   if ((*(ushort *)(param_2 + 0x2a) >> 9 & 1) == 0) {
     piVar5 = (int *)(param_1 + 8);
-    aiStack_30[0] = param_2;
-    iVar2 = fn_8278CC58(piVar5,aiStack_30);
+    aiStack_30 = param_2;
+    iVar2 = fn_8278CC58(piVar5,&aiStack_30);
     if (iVar2 < 0) {
       piVar4 = (int *)0x0;
     }
@@ -73,12 +73,12 @@ int fn_8278E7B0(int param_1,int param_2)
   else {
     iVar2 = fn_8278CD58(uVar1,param_2,*(undefined4 *)(param_1 + 0x1c));
   }
-  aiStack_30[0] = iVar2;
+  aiStack_30 = iVar2;
   if (((*(byte *)(param_1 + 0x4c) & 1) != 0) && ((*(ushort *)(iVar2 + 0x2a) >> 0xb & 1) != 0)) {
     fn_8278CF00(iVar2);
   }
   if ((*(ushort *)(param_2 + 0x2a) >> 9 & 1) == 0) {
-    fn_8278E310(param_1 + 8,param_1 + 8,aiStack_30);
+    fn_8278E310(param_1 + 8,param_1 + 8,&aiStack_30);
   }
   return iVar2;
 }

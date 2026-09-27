@@ -38,7 +38,7 @@ void fn_8246BB70(int param_1)
   int iVar3;
   longlong lVar4;
   undefined4 *puVar5;
-  int aiStack_40 [16];
+  int aiStack_40;
   
   puVar5 = (undefined4 *)(param_1 + 4);
   lVar4 = 2;
@@ -52,8 +52,8 @@ void fn_8246BB70(int param_1)
           if (iVar3 == 0) {
             iVar3 = fn_825200A8(param_1 + 0x34);
             if (iVar3 == 0) {
-              fn_82837D98(*(undefined4 *)(puVar2[3] + 0x14),0,aiStack_40);
-              if (puVar5[-1] != aiStack_40[0]) {
+              fn_82837D98(*(undefined4 *)(puVar2[3] + 0x14),0,&aiStack_40);
+              if (puVar5[-1] != aiStack_40) {
                 if (puVar2[3] != 0) {
                   fn_8251FA58();
                   puVar2[3] = 0;

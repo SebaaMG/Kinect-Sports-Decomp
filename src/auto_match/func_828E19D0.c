@@ -77,7 +77,7 @@ void fn_828E19D0(int *param_1)
   int iStack_9c;
   undefined4 uStack_98;
   undefined1 auStack_90 [16];
-  undefined1 auStack_80 [32];
+  undefined1 auStack_80 [1];
   undefined1 auStack_60 [96];
   
   cVar5 = fn_828ACCE8(param_1[6]);

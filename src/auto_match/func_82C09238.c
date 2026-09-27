@@ -42,7 +42,7 @@ fn_82C09238(int param_1,ulonglong param_2,undefined8 param_3,ulonglong param_4,u
   undefined8 uVar1;
   int iVar2;
   undefined1 auStack_50 [4];
-  int aiStack_4c [19];
+  int aiStack_4c [2];
   
   aiStack_4c[1] = 0;
   auStack_50[0] = 0;

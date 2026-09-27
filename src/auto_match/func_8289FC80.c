@@ -46,7 +46,7 @@ fn_8289FC80(undefined4 *param_1,longlong param_2,undefined4 param_3,undefined4 p
   int *piVar3;
   double dVar4;
   undefined1 auStack_40 [8];
-  undefined1 auStack_38 [56];
+  undefined1 auStack_38 [8];
   
   param_1[2] = param_4;
   param_1[10] = param_3;

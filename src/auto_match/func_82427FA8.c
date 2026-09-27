@@ -45,7 +45,7 @@ undefined4 * fn_82427FA8(undefined4 *param_1,int *param_2,undefined4 param_3,und
   undefined4 uVar4;
   longlong lVar5;
   ulonglong uVar6;
-  undefined1 auStack_240 [576];
+  undefined1 auStack_240 [512];
   
   param_1[1] = param_3;
   param_1[2] = param_4;

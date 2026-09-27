@@ -42,7 +42,7 @@ void fn_82289930(int param_1,int param_2)
   undefined4 uVar2;
   undefined1 auStack_410 [4];
   undefined1 auStack_40c [12];
-  undefined1 auStack_400 [1008];
+  undefined1 auStack_400 [992];
   
   if (param_1 == 0) {
     fn_82289408(param_2,2,0,0);

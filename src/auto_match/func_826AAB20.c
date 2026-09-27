@@ -35,13 +35,13 @@ void fn_826AAB20(uint *param_1)
 {
   uint uVar1;
   uint uVar2;
-  undefined4 uStack_30;
-  undefined4 uStack_2c;
+  struct { undefined4 first; undefined4 second; } stack_pair_30;
+
   
   uVar1 = *param_1;
-  uStack_2c = 0;
-  uStack_30 = 0;
-  fn_82682298(param_1,&uStack_30);
+  stack_pair_30.second = 0;
+  stack_pair_30.first = 0;
+  fn_82682298(param_1,&stack_pair_30.first);
   param_1[7] = 0;
   uVar2 = param_1[9];
   if (param_1[9] <= uVar1) {

@@ -42,7 +42,7 @@ undefined8 fn_822B5C38(int param_1,undefined8 param_2)
   ulonglong uVar1;
   undefined8 uVar2;
   int iVar3;
-  undefined4 auStack_40 [16];
+  undefined4 auStack_40 [4];
   
   iVar3 = 0;
   uVar1 = fn_8251F720(param_2,0);

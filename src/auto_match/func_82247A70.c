@@ -41,8 +41,8 @@ void fn_82247A70(undefined8 param_1,undefined8 param_2,undefined8 param_3)
   longlong lVar1;
   int iVar2;
   undefined4 uStack_420;
-  undefined4 auStack_41c [3];
-  undefined1 auStack_410 [1040];
+  undefined4 auStack_41c;
+  undefined1 auStack_410 [1008];
   
   lVar1 = fn_8223C610(param_2,0x20,0,0);
   if (lVar1 != 0) {
@@ -50,8 +50,8 @@ void fn_82247A70(undefined8 param_1,undefined8 param_2,undefined8 param_3)
     uStack_420 = 0;
     iVar2 = fn_82A1BCC0(0,0,0,&uStack_420);
     if (-1 < iVar2) {
-      auStack_41c[0] = 1000;
-      fn_82A1BC10(uStack_420,param_3,auStack_41c,auStack_410,lVar1);
+      auStack_41c = 1000;
+      fn_82A1BC10(uStack_420,param_3,&auStack_41c,auStack_410,lVar1);
       fn_82A1BC70(uStack_420);
     }
   }

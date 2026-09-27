@@ -44,8 +44,8 @@ undefined4 fn_8255BCC0(int param_1)
   uint uVar6;
   uint uVar7;
   longlong lVar8;
-  int iStack_40;
-  int iStack_3c;
+  struct { int first; int second; } stack_pair_40;
+
   
   uVar6 = 0;
   piVar2 = &lbl_8329615C;
@@ -73,16 +73,16 @@ undefined4 fn_8255BCC0(int param_1)
       iVar5 = 0;
 LAB_8255bd44:
       iVar3 = *(int *)(iVar5 + 0xd48);
-      fn_8255BB98(&iStack_40,iVar3);
-      if ((iStack_40 != 0) && (*(int *)(iStack_40 + 4) == param_1)) {
+      fn_8255BB98(&stack_pair_40.first,iVar3);
+      if ((stack_pair_40.first != 0) && (*(int *)(stack_pair_40.first + 4) == param_1)) {
         uVar1 = *(undefined4 *)(iVar3 + 0x14);
-        if (iStack_3c == 0) {
+        if (stack_pair_40.second == 0) {
           return uVar1;
         }
         fn_822315A0();
         return uVar1;
       }
-      if (iStack_3c != 0) {
+      if (stack_pair_40.second != 0) {
         fn_822315A0();
       }
       uVar7 = uVar7 + 1;

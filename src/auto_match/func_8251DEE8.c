@@ -37,18 +37,18 @@ void fn_8251DEE8(int *param_1)
   int *piVar2;
   int iVar3;
   int *piVar4;
-  undefined4 uStack_30;
-  undefined4 uStack_2c;
+  struct { undefined4 first; undefined4 second; } stack_pair_30;
+
   
   piVar4 = (int *)param_1[0x24];
   if ((int *)param_1[0x25] != piVar4) {
     piVar1 = (int *)param_1[0x25];
-    uStack_30 = 0x45;
-    uStack_2c = 8;
+    stack_pair_30.first = 0x45;
+    stack_pair_30.second = 8;
     for (; piVar4 < piVar1; piVar4 = piVar4 + 1) {
       piVar2 = (int *)*piVar4;
       if (piVar2[0xe] == 0) {
-        (**(code **)(*piVar2 + 0xc))(piVar2,&uStack_30);
+        (**(code **)(*piVar2 + 0xc))(piVar2,&stack_pair_30.first);
       }
     }
     if (5 < *(ushort *)(param_1 + 0x28)) {

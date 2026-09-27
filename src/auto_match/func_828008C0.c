@@ -41,7 +41,7 @@ fn_828008C0(int param_1,int param_2,ulonglong param_3,undefined4 *param_4,undefi
   ulonglong uVar2;
   undefined8 uVar3;
   undefined4 uStack_40;
-  undefined4 auStack_3c [15];
+  undefined4 auStack_3c;
   
   iVar1 = (param_2 + 8) * 4;
   uVar2 = fn_82817B08(*(undefined4 *)(*(int *)(param_1 + 4) + iVar1));
@@ -51,8 +51,8 @@ fn_828008C0(int param_1,int param_2,ulonglong param_3,undefined4 *param_4,undefi
   else {
     uStack_40 = 0;
     fn_82817B50(*(undefined4 *)(*(int *)(param_1 + 4) + iVar1),param_3,&uStack_40);
-    fn_82817BC8(uStack_40,auStack_3c);
-    *param_4 = auStack_3c[0];
+    fn_82817BC8(uStack_40,&auStack_3c);
+    *param_4 = auStack_3c;
     fn_82817C98(uStack_40,param_5);
     uVar3 = 1;
   }

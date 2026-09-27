@@ -30,7 +30,7 @@ extern int fn_8223B6E0();
 extern int fn_828CFCD8();
 extern int fn_828E9D28();
 extern int fn_82CE07C8();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int uStack_30;
 extern unsigned int uStack_34;
 extern unsigned int uStack_38;
@@ -94,7 +94,7 @@ LAB_828d02d8:
     }
     if ((bVar4) || (*(char *)(param_1 + 8) != '\0')) {
       *(undefined4 *)(param_1 + 0x80) = 1;
-      fn_82F68CC0(param_1 + 0x98,(ulonglong)*(uint *)(param_1 + 0x84) + 8,0x18);
+      memcpy(param_1 + 0x98,(ulonglong)*(uint *)(param_1 + 0x84) + 8,0x18);
       *(undefined4 *)(param_1 + 0xa0) = 0;
       *(undefined2 *)(param_1 + 0x9e) = 0;
       if ((*(ushort *)(param_1 + 0xa6) < 0x14) &&

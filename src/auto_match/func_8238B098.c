@@ -40,7 +40,7 @@ void fn_8238B098(double param_1,int param_2)
   int iVar3;
   undefined8 uVar2;
   ulonglong uVar4;
-  undefined4 auStack_20 [4];
+  undefined4 auStack_20;
   
   iVar3 = *(int *)(param_2 + 8);
   if ((*(int *)(iVar3 + 0x58) != *(int *)(iVar3 + 0x54)) && (*(int *)(iVar3 + 0x58) != 0)) {
@@ -53,11 +53,11 @@ void fn_8238B098(double param_1,int param_2)
   }
   if ((*(int *)(param_2 + 0x10) != 0) && (*(int *)(param_2 + 0x18) != 0)) {
     if (*(int *)(param_2 + 0x14) != 0) goto LAB_8238b140;
-    auStack_20[0] = *(undefined4 *)(param_2 + 0x10);
-    auStack_20[0] =
-         fn_82535298(auStack_20,**(undefined4 **)(iVar3 + 0x9b8),0xffffffff83296bc0,
+    auStack_20 = *(undefined4 *)(param_2 + 0x10);
+    auStack_20 =
+         fn_82535298(&auStack_20,**(undefined4 **)(iVar3 + 0x9b8),0xffffffff83296bc0,
                            0xffffffff83296bd0);
-    fn_82536288(auStack_20);
+    fn_82536288(&auStack_20);
   }
   *(undefined4 *)(param_2 + 0x14) = 1;
 LAB_8238b140:

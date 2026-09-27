@@ -26,7 +26,7 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_829C8440();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int lbl_83214FFC;
 extern unsigned int lbl_832156AC;
 extern unsigned int lbl_832156B0;
@@ -49,7 +49,7 @@ undefined8 fn_829C8848(int param_1,uint param_2)
     uVar1 = *(uint *)(&lbl_832156AC + iVar3);
     *(int *)(&lbl_832156AC + iVar3) = (int)((ulonglong)uVar1 - 1);
     if ((ulonglong)uVar1 - 1 == 0) {
-      fn_82F68CC0(&lbl_8321570C + iVar3,&lbl_832156B0 + param_2 * 0x61,0x5c);
+      memcpy(&lbl_8321570C + iVar3,&lbl_832156B0 + param_2 * 0x61,0x5c);
       KfReleaseSpinLock(0xffffffff8321506c,uVar2);
       fn_829C8440(param_2,1);
       uVar2 = 0;

@@ -27,7 +27,7 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_50;
 extern int fn_8267C0B8();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int lbl_831E7E60;
 extern unsigned int lbl_831E7E64;
 extern unsigned int uStack_38;
@@ -44,7 +44,7 @@ undefined4 fn_8267C378(undefined8 param_1)
     lVar1 = (ulonglong)lbl_831E7E60 + 0x2c4;
     RtlEnterCriticalSection(lVar1);
     if (lbl_831E7E64 == 0) {
-      fn_82F68CC0(auStack_50,param_1,0x20);
+      memcpy(auStack_50,param_1,0x20);
       uStack_38 = 1;
       lbl_831E7E64 = fn_8267C0B8(lbl_831E7E60,0xffffffff821c2764,0,auStack_50);
       RtlLeaveCriticalSection(lVar1);

@@ -47,30 +47,30 @@ void fn_82825428(int param_1)
   int *piVar2;
   uint uVar3;
   int iVar4;
-  int aiStack_30 [12];
+  int aiStack_30;
   
   while( true ) {
-    fn_828223C8(param_1 + 0x2fc,aiStack_30);
-    if (aiStack_30[0] == 0) break;
+    fn_828223C8(param_1 + 0x2fc,&aiStack_30);
+    if (aiStack_30 == 0) break;
     fn_82822368();
-    fn_82829B70(aiStack_30[0]);
-    fn_828282D8(aiStack_30[0]);
-    if (aiStack_30[0] != 0) {
+    fn_82829B70(aiStack_30);
+    fn_828282D8(aiStack_30);
+    if (aiStack_30 != 0) {
       fn_82F641F8();
     }
   }
   while( true ) {
-    fn_828223C8(param_1 + 0x2f4,aiStack_30);
-    if (aiStack_30[0] == 0) break;
+    fn_828223C8(param_1 + 0x2f4,&aiStack_30);
+    if (aiStack_30 == 0) break;
     fn_82822368();
-    if (*(int *)(aiStack_30[0] + 0x28) != 0) {
-      fn_82826050(*(int *)(aiStack_30[0] + 0x28),1);
+    if (*(int *)(aiStack_30 + 0x28) != 0) {
+      fn_82826050(*(int *)(aiStack_30 + 0x28),1);
     }
-    if (*(int *)(aiStack_30[0] + 8) != 0) {
+    if (*(int *)(aiStack_30 + 8) != 0) {
       fn_82F641F8();
     }
-    if (aiStack_30[0] != 0) {
-      fn_82F641F8(aiStack_30[0]);
+    if (aiStack_30 != 0) {
+      fn_82F641F8(aiStack_30);
     }
   }
   if (*(int *)(param_1 + 0x304) != 0) {

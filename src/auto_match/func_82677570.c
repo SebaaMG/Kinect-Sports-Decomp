@@ -41,8 +41,8 @@ void fn_82677570(int param_1,undefined4 *param_2,ulonglong param_3)
 
 {
   ulonglong uVar1;
-  undefined4 uStack_30;
-  undefined4 uStack_2c;
+  struct { undefined4 first; undefined4 second; } stack_pair_30;
+
   undefined4 uStack_28;
   undefined4 uStack_24;
   float fStack_20;
@@ -54,12 +54,12 @@ void fn_82677570(int param_1,undefined4 *param_2,ulonglong param_3)
   fStack_20 = (float)param_2[1] * lbl_82005328;
   fStack_1c = (float)param_2[3] * lbl_82005328;
   fStack_18 = (float)param_2[5] * lbl_82005328;
-  uStack_30 = *param_2;
+  stack_pair_30.first = *param_2;
   fStack_14 = (float)param_2[7] * lbl_82005328;
-  uStack_2c = param_2[2];
+  stack_pair_30.second = param_2[2];
   uStack_28 = param_2[4];
   uStack_24 = param_2[6];
-  fn_826311B8(*(undefined4 *)(param_1 + 0xd8),param_3,&uStack_30,2,
+  fn_826311B8(*(undefined4 *)(param_1 + 0xd8),param_3,&stack_pair_30.first,2,
                (ulonglong)
                (-0x8000000000000000 >> (((param_3 + 1 & 0xffffffff) >> 2) - uVar1 & 0x7f)) >>
                (uVar1 & 0x7f));

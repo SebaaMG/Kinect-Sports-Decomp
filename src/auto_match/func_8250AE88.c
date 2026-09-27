@@ -47,9 +47,9 @@ void fn_8250AE88(ulonglong param_1,ulonglong param_2,ulonglong param_3,undefined
   longlong lVar7;
   ulonglong uVar9;
   longlong lVar10;
-  undefined1 auStack_70 [8];
-  uint uStack_68;
-  uint uStack_64;
+  undefined1 auStack_70;
+  struct { uint first; uint second; } stack_pair_68;
+
   undefined1 auStack_60 [96];
   
   lVar5 = param_2 - param_1;
@@ -60,13 +60,13 @@ void fn_8250AE88(ulonglong param_1,ulonglong param_2,ulonglong param_3,undefined
       iVar8 = (int)param_3;
       param_2 = uVar6;
       if (iVar8 < 1) break;
-      fn_8250B780(&uStack_68,param_1,uVar6,param_4);
+      fn_8250B780(&stack_pair_68.first,param_1,uVar6,param_4);
       param_3 = (longlong)(iVar8 >> 1) + (ulonglong)(iVar8 < 0 && (param_3 & 1) != 0);
       param_3 = (longlong)((int)param_3 >> 1) + (ulonglong)((int)param_3 < 0 && (param_3 & 1) != 0)
                 + param_3;
-      uVar9 = (ulonglong)uStack_64;
-      param_2 = (ulonglong)uStack_68;
-      if ((int)(uStack_68 - (int)param_1) / 0x14 < (int)((int)uVar6 - uStack_64) / 0x14) {
+      uVar9 = (ulonglong)stack_pair_68.second;
+      param_2 = (ulonglong)stack_pair_68.first;
+      if ((int)(stack_pair_68.first - (int)param_1) / 0x14 < (int)((int)uVar6 - stack_pair_68.second) / 0x14) {
         fn_8250AE88(param_1,param_2,param_3,param_4);
         param_2 = uVar6;
         param_1 = uVar9;
@@ -86,7 +86,7 @@ void fn_8250AE88(ulonglong param_1,ulonglong param_2,ulonglong param_3,undefined
       if (0 < lVar7) {
         lVar1 = lVar7 * 0x14 + param_1;
         do {
-          puVar2 = &uStack_64;
+          puVar2 = &stack_pair_68.second;
           lVar7 = lVar7 + -1;
           lVar3 = lVar1 + -0x18;
           lVar10 = 5;
@@ -105,7 +105,7 @@ void fn_8250AE88(ulonglong param_1,ulonglong param_2,ulonglong param_3,undefined
       }
       lVar7 = param_2 - 0x14;
       do {
-        puVar2 = &uStack_64;
+        puVar2 = &stack_pair_68.second;
         lVar1 = lVar7 + -4;
         lVar3 = 5;
         do {
@@ -131,8 +131,8 @@ void fn_8250AE88(ulonglong param_1,ulonglong param_2,ulonglong param_3,undefined
     }
   }
   if ((1 < (int)uVar4) &&
-     (auStack_70[0] = (undefined1)param_4, (param_1 & 0xffffffff) != (param_2 & 0xffffffff))) {
-    fn_8250BC10(param_1,param_2,auStack_70);
+     (auStack_70 = (undefined1)param_4, (param_1 & 0xffffffff) != (param_2 & 0xffffffff))) {
+    fn_8250BC10(param_1,param_2,&auStack_70);
   }
   return;
 }

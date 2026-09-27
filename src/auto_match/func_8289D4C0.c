@@ -45,7 +45,7 @@ void fn_8289D4C0(undefined4 *param_1)
   undefined4 uVar2;
   int iVar3;
   int *piVar4;
-  int aiStack_30 [12];
+  int aiStack_30;
   
   *param_1 = &lbl_82023BA4;
   if (((int *)param_1[8] == (int *)0x0) ||
@@ -54,12 +54,12 @@ void fn_8289D4C0(undefined4 *param_1)
        (iVar3 = (**(code **)(*(int *)param_1[8] + 0xc))(), iVar3 == 0)) {
       if (((int *)param_1[8] != (int *)0x0) &&
          (((iVar3 = (**(code **)(*(int *)param_1[8] + 0x14))(), iVar3 != 0 && (param_1[10] != 0)) &&
-          (piVar4 = *(int **)(param_1[10] + 0x220), aiStack_30[0] = *piVar4,
-          (int *)aiStack_30[0] != piVar4)))) {
+          (piVar4 = *(int **)(param_1[10] + 0x220), aiStack_30 = *piVar4,
+          (int *)aiStack_30 != piVar4)))) {
         do {
-          fn_8289C078(param_1,*(undefined4 *)(aiStack_30[0] + 0x10));
-          fn_82381BC0(aiStack_30);
-        } while (aiStack_30[0] != *(int *)(param_1[10] + 0x220));
+          fn_8289C078(param_1,*(undefined4 *)(aiStack_30 + 0x10));
+          fn_82381BC0(&aiStack_30);
+        } while (aiStack_30 != *(int *)(param_1[10] + 0x220));
       }
     }
     else {
@@ -67,12 +67,12 @@ void fn_8289D4C0(undefined4 *param_1)
     }
   }
   else if ((param_1[10] != 0) &&
-          (piVar4 = *(int **)(param_1[10] + 0x220), aiStack_30[0] = *piVar4,
-          (int *)aiStack_30[0] != piVar4)) {
+          (piVar4 = *(int **)(param_1[10] + 0x220), aiStack_30 = *piVar4,
+          (int *)aiStack_30 != piVar4)) {
     do {
-      fn_8289C078(param_1,*(undefined4 *)(aiStack_30[0] + 0x10));
-      fn_82381BC0(aiStack_30);
-    } while (aiStack_30[0] != *(int *)(param_1[10] + 0x220));
+      fn_8289C078(param_1,*(undefined4 *)(aiStack_30 + 0x10));
+      fn_82381BC0(&aiStack_30);
+    } while (aiStack_30 != *(int *)(param_1[10] + 0x220));
   }
   if (param_1[10] != 0) {
     fn_828A13B8(param_1[10],param_1);
@@ -82,7 +82,7 @@ void fn_8289D4C0(undefined4 *param_1)
     (**(code **)*puVar1)(puVar1,1);
   }
   param_1[8] = 0;
-  fn_8289C9A8(aiStack_30,param_1 + 0x11,*(undefined4 *)param_1[0x12]);
+  fn_8289C9A8(&aiStack_30,param_1 + 0x11,*(undefined4 *)param_1[0x12]);
   uVar2 = param_1[0x12];
   piVar4 = (int *)fn_825089A0();
   (**(code **)(*piVar4 + 0x28))(piVar4,uVar2);

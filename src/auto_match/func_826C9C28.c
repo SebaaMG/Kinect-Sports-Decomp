@@ -41,8 +41,8 @@ undefined8 fn_826C9C28(int *param_1)
   uint uVar1;
   char cVar3;
   int iVar2;
-  undefined4 uStack_20;
-  undefined4 uStack_1c;
+  struct { undefined4 first; undefined4 second; } stack_pair_20;
+
   undefined2 uStack_18;
   undefined1 uStack_16;
   undefined1 uStack_15;
@@ -56,14 +56,14 @@ undefined8 fn_826C9C28(int *param_1)
       iVar2 = (**(code **)(*param_1 + 0x40))(param_1);
       uVar1 = *(uint *)(iVar2 + 0xb00) >> 0x1c & 3;
       if ((uVar1 == 3) || (uVar1 != 1)) {
-        uStack_1c = 0;
+        stack_pair_20.second = 0;
         uStack_18 = 0;
         uStack_16 = 0;
         uStack_14 = 0;
         uStack_13 = 0;
-        uStack_20 = 0x4000;
+        stack_pair_20.first = 0x4000;
         uStack_15 = 0xff;
-        (**(code **)(*param_1 + 0xe8))(param_1,&uStack_20);
+        (**(code **)(*param_1 + 0xe8))(param_1,&stack_pair_20.first);
       }
     }
   }

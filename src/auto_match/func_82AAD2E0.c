@@ -43,18 +43,18 @@ void fn_82AAD2E0(ulonglong param_1,ulonglong param_2,uint param_3,undefined8 par
   uint uVar7;
   uint *puVar8;
   uint *puVar9;
-  uint auStack_40 [16];
+  uint auStack_40;
   
   puVar1 = (undefined4 *)*param_5;
   *puVar1 = 0xc;
   uVar7 = fn_82AAC8C0(((param_1 & 0xffffffff) >> 0x14 & 0x700 | param_1 & 0x1800) >> 8,
-                        param_1 & 0x7ff,param_4,auStack_40);
+                        param_1 & 0x7ff,param_4,&auStack_40);
   if ((param_1 & 0xf0000) == 0xf0000) {
     puVar8 = puVar1 + 2;
-    puVar1[1] = (auStack_40[0] & 0x3f) << 0x10 | uVar7 & 0xffff;
+    puVar1[1] = (auStack_40 & 0x3f) << 0x10 | uVar7 & 0xffff;
   }
   else {
-    puVar1[1] = (auStack_40[0] & 0x3f) << 0x10 | 0x400000 | uVar7 & 0xffff;
+    puVar1[1] = (auStack_40 & 0x3f) << 0x10 | 0x400000 | uVar7 & 0xffff;
     uVar7 = (uint)((param_1 & 0x10000) != 0);
     if ((param_1 & 0x20000) != 0) {
       uVar7 = uVar7 | 4;

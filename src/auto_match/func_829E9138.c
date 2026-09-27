@@ -47,7 +47,7 @@ longlong fn_829E9138(int param_1,ulonglong param_2,ulonglong param_3,undefined4 
   float *pfVar6;
   ulonglong uVar7;
   undefined4 uStack_50;
-  undefined4 auStack_4c [19];
+  undefined4 auStack_4c;
   
   if (((param_2 & 0xffffffff) == 0) || (param_4 == (undefined4 *)0x0)) {
     lVar4 = -0x7ff8ffa9;
@@ -77,11 +77,11 @@ longlong fn_829E9138(int param_1,ulonglong param_2,ulonglong param_3,undefined4 
           fn_82A1DDC0(uVar7,param_2,(param_3 & 0x3fffffff) << 2);
           lVar1 = TBLr;
           lRam83218a30 = lRam83218a30 - lVar1;
-          iVar5 = fn_829EDB80(*(undefined4 *)(param_1 + 0x20),auStack_4c);
+          iVar5 = fn_829EDB80(*(undefined4 *)(param_1 + 0x20),&auStack_4c);
           lVar1 = TBLr;
           lRam83218a30 = lVar1 + lRam83218a30;
           if (iVar5 != 0) {
-            *param_4 = auStack_4c[0];
+            *param_4 = auStack_4c;
             fVar3 = lbl_82002D08;
             if (param_5 == (float *)0x0) {
               return lVar4;

@@ -40,19 +40,19 @@ uint fn_82953CA8(int *param_1,int param_2,uint *param_3,undefined8 param_4,undef
   undefined8 uVar5;
   ulonglong uVar6;
   uint uStack_30;
-  uint auStack_2c [11];
+  uint auStack_2c;
   
   uVar6 = 0;
   uStack_30 = 0;
-  auStack_2c[0] = 0;
+  auStack_2c = 0;
   if (param_5 != (undefined4 *)0x0) {
     *param_5 = 0;
   }
   iVar2 = *(int *)(param_2 + 4);
   if (param_1[0x22] == iVar2) {
-    auStack_2c[0] = *(uint *)(param_2 + 0xc);
+    auStack_2c = *(uint *)(param_2 + 0xc);
     uStack_30 = 0;
-    if ((uint)param_1[0xb] <= auStack_2c[0]) {
+    if ((uint)param_1[0xb] <= auStack_2c) {
       uVar4 = 0x1199;
       uVar5 = 0xffffffff82037a48;
 LAB_82953d10:
@@ -60,32 +60,32 @@ LAB_82953d10:
       return 0x88760b59;
     }
     uVar1 = param_1[0x14];
-    uVar3 = auStack_2c[0];
-    if ((uVar1 != 0) && (uVar1 <= auStack_2c[0])) {
+    uVar3 = auStack_2c;
+    if ((uVar1 != 0) && (uVar1 <= auStack_2c)) {
       uVar6 = 3;
       uStack_30 = 3;
-      uVar3 = auStack_2c[0] - uVar1;
-      auStack_2c[0] = auStack_2c[0] - uVar1;
+      uVar3 = auStack_2c - uVar1;
+      auStack_2c = auStack_2c - uVar1;
     }
   }
   else if (param_1[0x23] == iVar2) {
-    auStack_2c[0] = *(uint *)(param_2 + 0xc);
+    auStack_2c = *(uint *)(param_2 + 0xc);
     uVar6 = 3;
     uStack_30 = 3;
     uVar3 = 0;
-    if (auStack_2c[0] != 0) {
+    if (auStack_2c != 0) {
       uVar4 = 0x119c;
       uVar5 = 0xffffffff82037a20;
       goto LAB_82953d10;
     }
   }
   else if (param_1[0x21] == iVar2) {
-    iVar2 = (**(code **)(*param_1 + 0x158))(param_1,param_2,auStack_2c,&uStack_30);
+    iVar2 = (**(code **)(*param_1 + 0x158))(param_1,param_2,&auStack_2c,&uStack_30);
     if (iVar2 < 0) {
       return 0x80004005;
     }
     uVar6 = (ulonglong)uStack_30;
-    uVar3 = auStack_2c[0];
+    uVar3 = auStack_2c;
   }
   else {
     if (param_1[0x24] != iVar2) {
@@ -95,7 +95,7 @@ LAB_82953d10:
     uVar3 = *(uint *)(param_2 + 0xc);
     uVar6 = 0x13;
     uStack_30 = 0x13;
-    auStack_2c[0] = uVar3;
+    auStack_2c = uVar3;
     if ((uint)param_1[0xd] <= uVar3) {
       uVar4 = 0x11c5;
       uVar5 = 0xffffffff820379f4;

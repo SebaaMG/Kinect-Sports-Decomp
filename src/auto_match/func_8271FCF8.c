@@ -42,7 +42,7 @@ undefined8 fn_8271FCF8(uint *param_1,int *param_2)
   undefined8 uVar3;
   ulonglong uVar4;
   undefined1 auStack_50 [16];
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [16];
   
   if (param_2 == (int *)0x0) {
     uVar3 = 0;

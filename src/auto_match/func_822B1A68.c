@@ -33,20 +33,20 @@ void fn_822B1A68(int *param_1,int *param_2)
 {
   int iVar1;
   int *piVar2;
-  int aiStack_30 [12];
+  int aiStack_30;
   
   piVar2 = (int *)param_1[2];
   if (param_2 != piVar2) {
     if (piVar2 != (int *)0x0) {
-      fn_822B1B90(aiStack_30,piVar2 + 1);
+      fn_822B1B90(&aiStack_30,piVar2 + 1);
       *(int *)(*param_1 + 4) = param_1[1];
       *(int *)param_1[1] = *param_1;
       sync(1);
-      *(undefined4 *)(aiStack_30[0] + 8) = 0;
+      *(undefined4 *)(aiStack_30 + 8) = 0;
     }
     param_1[2] = (int)param_2;
     if (param_2 != (int *)0x0) {
-      fn_822B1B90(aiStack_30,param_2 + 1);
+      fn_822B1B90(&aiStack_30,param_2 + 1);
       piVar2 = (int *)(param_1[2] + 4);
       iVar1 = *piVar2;
       param_1[1] = (int)piVar2;
@@ -54,7 +54,7 @@ void fn_822B1A68(int *param_1,int *param_2)
       *(int **)(*piVar2 + 4) = param_1;
       *piVar2 = (int)param_1;
       sync(1);
-      *(undefined4 *)(aiStack_30[0] + 8) = 0;
+      *(undefined4 *)(aiStack_30 + 8) = 0;
     }
   }
   (**(code **)(*param_2 + 4))(param_2,param_1 + 4);

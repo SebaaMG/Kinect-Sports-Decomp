@@ -34,8 +34,8 @@ void fn_82441298(uint *param_1,undefined4 param_2,undefined8 param_3)
 
 {
   bool bVar1;
-  undefined4 uStack_10;
-  undefined4 uStack_c;
+  struct { undefined4 first; undefined4 second; } stack_pair_10;
+
   
   if (param_1[5] == 0) {
     if (((param_1[6] == 0) || (param_1[7] != 0)) || (bVar1 = true, (*param_1 & 0x100) != 0)) {
@@ -44,7 +44,7 @@ void fn_82441298(uint *param_1,undefined4 param_2,undefined8 param_3)
     if (((*param_1 & 0x80) == 0) && (!bVar1)) {
       return;
     }
-    uStack_c = 7;
+    stack_pair_10.second = 7;
     param_1[5] = 1;
   }
   else {
@@ -55,15 +55,15 @@ void fn_82441298(uint *param_1,undefined4 param_2,undefined8 param_3)
       if (((*param_1 & 0x100) == 0) && (param_1[7] == 0)) {
         return;
       }
-      uStack_c = 8;
+      stack_pair_10.second = 8;
     }
     else {
-      uStack_c = 9;
+      stack_pair_10.second = 9;
     }
     param_1[5] = 0;
   }
-  uStack_10 = param_2;
-  fn_824BF8A8(param_3,&uStack_10);
+  stack_pair_10.first = param_2;
+  fn_824BF8A8(param_3,&stack_pair_10.first);
   return;
 }
 

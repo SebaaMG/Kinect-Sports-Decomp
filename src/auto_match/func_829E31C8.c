@@ -54,8 +54,8 @@ uint fn_829E31C8(int param_1)
   float fStack_50;
   float fStack_4c;
   undefined1 auStack_48 [8];
-  undefined4 uStack_40;
-  undefined4 uStack_3c;
+  struct { undefined4 first; undefined4 second; } stack_pair_40;
+
   undefined4 uStack_38;
   undefined4 uStack_34;
   undefined4 uStack_30;
@@ -67,14 +67,14 @@ uint fn_829E31C8(int param_1)
   if ((*(char *)(param_1 + 0x6c) != '\0') && (*(char *)(param_1 + 0x6d) != '\0')) {
     uStack_38 = 1;
     uStack_34 = 1;
-    uStack_40 = lbl_82005748;
+    stack_pair_40.first = lbl_82005748;
     uStack_30 = 4;
-    uStack_3c = lbl_82005748;
+    stack_pair_40.second = lbl_82005748;
     uStack_28 = 1;
     uStack_1c = lbl_8201EBA4;
     uStack_20 = 0;
     uStack_18 = lbl_8201FBB0;
-    uVar1 = fn_829E3C40(*(undefined4 *)(param_1 + 8),&uStack_40);
+    uVar1 = fn_829E3C40(*(undefined4 *)(param_1 + 8),&stack_pair_40.first);
     if ((int)uVar1 < 0) {
       return uVar1;
     }

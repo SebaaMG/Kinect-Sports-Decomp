@@ -54,7 +54,7 @@ ulonglong fn_823E8AC0(undefined8 param_1,undefined8 param_2,longlong param_3,und
   undefined4 uVar14;
   uint auStack_120 [8];
   undefined4 auStack_100 [8];
-  undefined1 auStack_e0 [224];
+  undefined1 auStack_e0 [96];
   
   uVar4 = fn_822B4148();
   if ((uVar4 & 0xffffffff) == 0) {

@@ -38,7 +38,7 @@ undefined8 fn_82A694E8(int param_1,int param_2)
   int iVar4;
   uint uVar5;
   int iVar6;
-  undefined4 auStack_50 [20];
+  undefined4 auStack_50 [4];
   
   uVar1 = 0;
   if (*(short *)(param_1 + 0x22) != 0) {

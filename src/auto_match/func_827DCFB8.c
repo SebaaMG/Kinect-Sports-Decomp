@@ -43,7 +43,7 @@ fn_827DCFB8(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefined4 
   int iVar2;
   undefined8 uVar3;
   undefined4 *puStack0000002c;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
   
   puStack0000002c = param_4;
   fn_8281C510(param_2,auStack_30);

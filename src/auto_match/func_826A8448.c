@@ -52,7 +52,7 @@ fn_826A8448(int *param_1,int param_2,int *param_3,undefined8 param_4,undefined8 
   int aiStack_6c [3];
   undefined1 auStack_60 [4];
   int iStack_5c;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [16];
   
   iVar6 = param_2 + 0x78;
   if (*param_3 == *(int *)(*(int *)(param_2 + 0x78) + 0x11c)) {

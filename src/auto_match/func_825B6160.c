@@ -37,7 +37,7 @@ ulonglong fn_825B6160(int param_1,undefined8 param_2)
   int iVar2;
   ulonglong uVar1;
   undefined4 uStack_20;
-  uint auStack_1c [3];
+  uint auStack_1c;
   
   iVar2 = (**(code **)(**(int **)(param_1 + 4) + 0x24))();
   iVar2 = fn_828182C0(*(undefined4 *)(iVar2 + 0x20),param_2,0,&uStack_20);
@@ -45,8 +45,8 @@ ulonglong fn_825B6160(int param_1,undefined8 param_2)
     uVar1 = 0xffffffffffffffff;
   }
   else {
-    fn_82817C98(uStack_20,auStack_1c);
-    uVar1 = (ulonglong)auStack_1c[0];
+    fn_82817C98(uStack_20,&auStack_1c);
+    uVar1 = (ulonglong)auStack_1c;
   }
   return uVar1;
 }

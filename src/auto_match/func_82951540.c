@@ -37,7 +37,7 @@ extern int fn_82963A30();
 extern int fn_82963D50();
 extern int fn_82975BB8();
 extern int fn_82BA02A8();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int uStack_144;
 extern unsigned int uStack_148;
 extern unsigned int uStack_14c;
@@ -63,28 +63,28 @@ longlong fn_82951540(int *param_1,int param_2)
   undefined1 *puVar14;
   undefined4 uVar15;
   uint auStack_160 [4];
-  undefined4 uStack_150;
-  undefined4 uStack_14c;
+  struct { undefined4 first; undefined4 second; } stack_pair_150;
+
   undefined4 uStack_148;
   undefined4 uStack_144;
   undefined4 *apuStack_140 [16];
   int aiStack_100 [4];
   undefined1 auStack_f0 [16];
   undefined1 auStack_e0 [16];
-  int aiStack_d0 [52];
+  int aiStack_d0 [28];
   
   uStack_144 = 3;
   uVar2 = *(uint *)param_1[0x41];
-  uStack_14c = 1;
+  stack_pair_150.second = 1;
   uVar5 = uVar2 & 0xfffff;
   auStack_160[0] = 0;
-  uStack_150 = 0;
+  stack_pair_150.first = 0;
   uStack_148 = 2;
   iVar7 = fn_8294AC48(param_1,(uint *)param_1[0x41],0xffffffff82035c70,apuStack_140,auStack_160,
-                        aiStack_100,&uStack_150,uVar5);
+                        aiStack_100,&stack_pair_150.first,uVar5);
   if ((iVar7 == 0) ||
      (iVar7 = fn_8294AC48(param_1,param_1[0x41],0xffffffff82035cd0,apuStack_140,auStack_160,
-                            aiStack_100,&uStack_150,uVar5), iVar7 == 0)) {
+                            aiStack_100,&stack_pair_150.first,uVar5), iVar7 == 0)) {
     uVar13 = 0;
     puVar14 = auStack_f0;
     do {
@@ -128,10 +128,10 @@ longlong fn_82951540(int *param_1,int param_2)
           return lVar6;
         }
         iVar8 = (uVar2 & 0xfffff) * 4;
-        fn_82F68CC0(*(undefined4 *)(iVar7 + 0x10),*(undefined4 *)(param_1[0x41] + 0x10),iVar8);
-        fn_82F68CC0(*(undefined4 *)(iVar7 + 8),auStack_e0,iVar8);
-        fn_82F68CC0(iVar8 + *(int *)(iVar7 + 8),puVar14,iVar8);
-        fn_82F68CC0((uVar2 & 0xfffff) * 8 + *(int *)(iVar7 + 8),aiStack_d0,iVar8);
+        memcpy(*(undefined4 *)(iVar7 + 0x10),*(undefined4 *)(param_1[0x41] + 0x10),iVar8);
+        memcpy(*(undefined4 *)(iVar7 + 8),auStack_e0,iVar8);
+        memcpy(iVar8 + *(int *)(iVar7 + 8),puVar14,iVar8);
+        memcpy((uVar2 & 0xfffff) * 8 + *(int *)(iVar7 + 8),aiStack_d0,iVar8);
         bVar1 = false;
         iVar8 = param_1[5];
         puVar3 = *(uint **)(**(int **)(iVar7 + 8) * 4 + iVar8);

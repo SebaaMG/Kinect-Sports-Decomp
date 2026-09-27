@@ -40,7 +40,7 @@ undefined8 fn_8259A840(int param_1)
   longlong lVar1;
   undefined8 uVar2;
   int iVar3;
-  int aiStack_50 [20];
+  int aiStack_50 [12];
   
   lVar1 = fn_82A1BB18();
   fn_8259C5D8(param_1 + 0x60,1,lVar1 + 1);

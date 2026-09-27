@@ -31,7 +31,7 @@ extern int fn_8265CA20();
 extern int fn_8289E800();
 extern int fn_8289F1E8();
 extern int fn_828B6DD0();
-extern int fn_82F63CA0();
+extern int memmove();
 extern unsigned int lbl_820252A8;
 extern unsigned int uStack_50;
 
@@ -47,7 +47,7 @@ void fn_828B82D0(undefined4 *param_1)
   int *piVar6;
   undefined1 uStack_50;
   undefined4 *puStack_4c;
-  undefined4 auStack_48 [18];
+  undefined4 auStack_48;
   
   piVar5 = param_1 + 1;
   *param_1 = &lbl_820252A8;
@@ -68,13 +68,13 @@ void fn_828B82D0(undefined4 *param_1)
   }
   iVar1 = *piVar6;
   if (iVar1 != param_1[0xb]) {
-    fn_82F63CA0(iVar1,param_1[0xb],0);
+    memmove(iVar1,param_1[0xb],0);
     param_1[0xb] = iVar1;
   }
   uVar2 = param_1[5];
   puStack_4c = param_1;
-  fn_8289F1E8(auStack_48,(ulonglong)uVar2 + 0x1c0,&puStack_4c);
-  fn_8289E800(&puStack_4c,(ulonglong)uVar2 + 0x1c0,auStack_48[0]);
+  fn_8289F1E8(&auStack_48,(ulonglong)uVar2 + 0x1c0,&puStack_4c);
+  fn_8289E800(&puStack_4c,(ulonglong)uVar2 + 0x1c0,auStack_48);
   if (*piVar6 != 0) {
     fn_8265CA20();
   }

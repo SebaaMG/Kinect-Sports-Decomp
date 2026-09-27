@@ -38,14 +38,14 @@ int * fn_826949A8(int *param_1,uint *param_2,int param_3,int param_4)
   ulonglong uVar3;
   ulonglong uVar4;
   ulonglong uVar5;
-  uint auStack_50 [20];
+  uint auStack_50;
   
   if (param_3 == param_4) {
     iVar2 = *(int *)(*(int *)(*param_2 & 0xfffffc00) + 0x18);
   }
   else {
-    auStack_50[0] = *(uint *)*param_2;
-    uVar3 = (ulonglong)auStack_50[0];
+    auStack_50 = *(uint *)*param_2;
+    uVar3 = (ulonglong)auStack_50;
     iVar2 = 0;
     uVar4 = uVar3;
     uVar5 = uVar3;
@@ -53,15 +53,15 @@ int * fn_826949A8(int *param_1,uint *param_2,int param_3,int param_4)
       if (iVar2 == param_3) {
         uVar5 = uVar4;
       }
-      iVar1 = fn_826BD078(auStack_50);
+      iVar1 = fn_826BD078(&auStack_50);
       iVar2 = iVar2 + 1;
       if (iVar2 == param_4) goto LAB_82694a2c;
       if (iVar1 == 0) break;
-      uVar4 = (ulonglong)auStack_50[0];
+      uVar4 = (ulonglong)auStack_50;
     }
     if (iVar2 < param_4) {
 LAB_82694a2c:
-      uVar3 = (ulonglong)auStack_50[0];
+      uVar3 = (ulonglong)auStack_50;
     }
     if (uVar3 < uVar5) {
       uVar3 = uVar5;

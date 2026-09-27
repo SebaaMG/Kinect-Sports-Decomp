@@ -39,15 +39,15 @@ float * fn_82769900(int param_1,int param_2,float *param_3)
   undefined8 uVar3;
   uint uVar4;
   int iVar5;
-  undefined4 auStack_50 [2];
+  undefined4 auStack_50;
   short sStack_48;
   short sStack_46;
   short sStack_44;
   short sStack_42;
   
-  auStack_50[0] = *(undefined4 *)(param_1 + 8);
+  auStack_50 = *(undefined4 *)(param_1 + 8);
   uVar3 = fn_82767170();
-  fn_827671F0(auStack_50,uVar3);
+  fn_827671F0(&auStack_50,uVar3);
   if ((sStack_44 <= sStack_48) || (bVar2 = true, sStack_42 <= sStack_46)) {
     bVar2 = false;
   }

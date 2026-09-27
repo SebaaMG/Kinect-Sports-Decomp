@@ -34,7 +34,7 @@ void fn_827BD908(int *param_1)
 
 {
   longlong lVar1;
-  undefined1 auStack_d0 [208];
+  undefined1 auStack_d0 [192];
   
   (**(code **)(*param_1 + 0xc))(param_1,auStack_d0);
   lVar1 = fn_82F6AB08();

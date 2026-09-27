@@ -46,7 +46,7 @@ undefined8 fn_8295E2D8(int *param_1)
   ulonglong uVar8;
   uint uStack_30;
   uint uStack_2c;
-  undefined4 auStack_28 [4];
+  undefined4 auStack_28;
   
   iVar3 = param_1[0x41];
   if ((param_1[0x1b] & 0x100U) == 0) {
@@ -83,14 +83,14 @@ LAB_8295e3f8:
           }
           uVar5 = (**(code **)(*param_1 + 0x150))
                             (param_1,*(undefined4 *)
-                                      (**(int **)(param_1[0x41] + 0x10) * 4 + param_1[5]),auStack_28
+                                      (**(int **)(param_1[0x41] + 0x10) * 4 + param_1[5]),&auStack_28
                             );
           if ((int)uVar5 < 0) {
             return uVar5;
           }
           uVar5 = (**(code **)(*param_1 + 0x138))
                             (param_1,((uVar8 & 7) << 0x14 | 0x800000 | uVar8 & 0x18) << 8 |
-                                     uVar2 & 0x7ff,0xf0000,auStack_28[0]);
+                                     uVar2 & 0x7ff,0xf0000,auStack_28);
           if ((int)uVar5 < 0) {
             return uVar5;
           }

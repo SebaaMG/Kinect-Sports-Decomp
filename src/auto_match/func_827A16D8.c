@@ -39,7 +39,7 @@ longlong fn_827A16D8(int param_1,uint param_2,uint *param_3)
   ulonglong uVar3;
   uint uVar4;
   int *piVar5;
-  uint auStack_40 [2];
+  uint auStack_40;
   int *piStack_38;
   int iStack_34;
   
@@ -61,8 +61,8 @@ longlong fn_827A16D8(int param_1,uint param_2,uint *param_3)
       else {
         uVar3 = (ulonglong)(uint)piVar1[2];
       }
-      auStack_40[0] = 0;
-      fn_82791070(&piStack_38,*(undefined4 *)(param_1 + 8),uVar3,auStack_40);
+      auStack_40 = 0;
+      fn_82791070(&piStack_38,*(undefined4 *)(param_1 + 8),uVar3,&auStack_40);
       if (((piStack_38 == (int *)0x0) || (iStack_34 < 0)) ||
          (bVar2 = false, piStack_38[1] <= iStack_34)) {
         bVar2 = true;
@@ -77,7 +77,7 @@ longlong fn_827A16D8(int param_1,uint param_2,uint *param_3)
         }
         *param_3 = uVar4;
         return (ulonglong)**(uint **)(iStack_34 * 4 + *piStack_38) +
-               ((ulonglong)auStack_40[0] & 0x7fffffff) * 2;
+               ((ulonglong)auStack_40 & 0x7fffffff) * 2;
       }
     }
   }

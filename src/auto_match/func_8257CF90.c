@@ -46,7 +46,7 @@ undefined8 fn_8257CF90(undefined8 param_1,undefined4 param_2)
   int iVar3;
   int iVar4;
   int aiStack_60 [4];
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [32];
   
   uVar1 = fn_8251F720(param_1,0);
   if (uVar1 != 0) {

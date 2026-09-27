@@ -40,7 +40,7 @@ void fn_823029C0(int param_1)
   undefined4 in_register_000104d4;
   undefined4 in_register_000104d8;
   undefined4 in_vr77;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [32];
   
   iVar1 = *(int *)(param_1 + 0x30);
   puVar2 = (undefined4 *)((uint)(auStack_30 + in_r0) & 0xfffffff0);

@@ -42,7 +42,7 @@ fn_82984F30(undefined8 param_1,int *param_2,int *param_3,undefined4 *param_4,und
   undefined8 uVar1;
   int *piVar6;
   longlong lVar2;
-  int aiStack_50 [20];
+  int aiStack_50;
   
   if ((param_4 == (undefined4 *)0x0) || (param_5 == (undefined4 *)0x0)) {
     return 0xffffffff80004005;
@@ -64,16 +64,16 @@ fn_82984F30(undefined8 param_1,int *param_2,int *param_3,undefined4 *param_4,und
        (iVar5 = fn_829846B0(param_1,param_2,param_3,0), piVar6 = param_2, iVar5 == 0)) {
       return 0xffffffff80004005;
     }
-    uVar1 = fn_8297F800(param_1,param_2,param_3,aiStack_50);
+    uVar1 = fn_8297F800(param_1,param_2,param_3,&aiStack_50);
     if ((int)uVar1 < 0) {
       return uVar1;
     }
-    if (piVar6[5] != aiStack_50[0]) {
+    if (piVar6[5] != aiStack_50) {
       piVar6 = (int *)(**(code **)(*piVar6 + 4))(piVar6);
       if (piVar6 == (int *)0x0) {
         return 0xffffffff8007000e;
       }
-      piVar6[5] = aiStack_50[0];
+      piVar6[5] = aiStack_50;
     }
     if (param_6 != (undefined4 *)0x0) {
       lVar2 = (**(code **)(*piVar6 + 4))(piVar6);

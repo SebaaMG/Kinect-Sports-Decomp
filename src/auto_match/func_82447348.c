@@ -31,10 +31,10 @@ extern unsigned int *auStack_10;
 void fn_82447348(int param_1,undefined8 param_2,byte *param_3)
 
 {
-  uint auStack_10 [4];
+  uint auStack_10;
   
-  auStack_10[0] = (uint)*param_3;
-  (**(code **)(*(int *)(param_1 + 8) + 0x10))(param_1 + 8,param_2,auStack_10);
+  auStack_10 = (uint)*param_3;
+  (**(code **)(*(int *)(param_1 + 8) + 0x10))(param_1 + 8,param_2,&auStack_10);
   return;
 }
 

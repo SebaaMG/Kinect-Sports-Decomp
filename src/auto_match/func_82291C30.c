@@ -26,7 +26,7 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_103e;
-extern int fn_82F691F0();
+extern int memset();
 
 
 /* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
@@ -34,9 +34,9 @@ extern int fn_82F691F0();
 void fn_82291C30(void)
 
 {
-  undefined1 auStack_103e [4158];
+  undefined1 auStack_103e [4142];
   
                     /* WARNING: Subroutine does not return */
-  fn_82F691F0(auStack_103e,0,0x7fe);
+  memset(auStack_103e,0,0x7fe);
 }
 

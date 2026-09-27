@@ -34,7 +34,7 @@ extern int fn_82645688();
 extern int fn_82649D98();
 extern int fn_82652438();
 extern int fn_82652AA0();
-extern int fn_82F691F0();
+extern int memset();
 extern unsigned int uStack_120;
 
 
@@ -96,7 +96,7 @@ LAB_82652c04:
     cVar6 = fn_82652AA0(param_1);
     if (cVar6 != '\0') {
                     /* WARNING: Subroutine does not return */
-      fn_82F691F0(auStack_110,0,0xf0);
+      memset(auStack_110,0,0xf0);
     }
     *(undefined4 *)(param_1 + 0x5568) = 0;
   }

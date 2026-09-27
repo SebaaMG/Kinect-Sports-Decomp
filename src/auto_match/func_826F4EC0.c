@@ -36,7 +36,7 @@ void fn_826F4EC0(int param_1)
   code *pcVar2;
   int *piVar3;
   undefined8 uVar4;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
   
   if (*(int *)(param_1 + 0x2e8) == 1) {
     iVar1 = **(int **)(param_1 + 0x2ec);

@@ -28,7 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 extern int fn_829BAB18();
 extern int fn_829BABB0();
 extern int fn_829BAC48();
-extern int fn_82F672D8();
+extern int strncpy();
 extern int fn_82F6D428();
 
 
@@ -41,7 +41,7 @@ void fn_829BAC50(uint *param_1,undefined4 *param_2)
   param_2[3] = iVar1;
   if (iVar1 == 0) {
     *(undefined4 *)(*param_1 + 0x14) = 0x3f;
-    fn_82F672D8((ulonglong)*param_1 + 0x18,0xffffffff82196582,0x50);
+    strncpy((ulonglong)*param_1 + 0x18,0xffffffff82196582,0x50);
     (**(code **)*param_1)(param_1);
   }
   *param_2 = fn_829BAB18;

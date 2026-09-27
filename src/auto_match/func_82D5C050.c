@@ -39,7 +39,7 @@ fn_82D5C050(undefined4 *param_1,undefined4 *param_2,undefined4 *param_3,undefine
 {
   undefined4 uVar1;
   undefined4 uVar2;
-  undefined1 auStack_70 [112];
+  undefined1 auStack_70 [64];
   
   fn_82D757E8();
   *param_1 = &lbl_82139018;

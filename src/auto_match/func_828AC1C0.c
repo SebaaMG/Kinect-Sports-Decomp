@@ -34,7 +34,7 @@ void fn_828AC1C0(int *param_1,undefined8 param_2,undefined8 param_3)
 
 {
   ulonglong uVar1;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
   
   uVar1 = fn_828ABE08(param_3);
   if ((uVar1 & 0xffffffff) == 0) {

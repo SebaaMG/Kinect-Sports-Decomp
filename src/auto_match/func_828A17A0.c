@@ -28,7 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 #define CONCAT44(h,l) ((U64)((((U32)(h)) << 32) | ((U32)(l))))
 extern int fn_828D06D0();
 extern int fn_82A1BB18();
-extern int fn_82F63EC8();
+extern int atexit();
 extern int iRam83213fa0;
 extern int iRam83213fcc;
 extern __int64 lRam83213fd0;
@@ -71,7 +71,7 @@ int fn_828A17A0(void)
     if ((uRam83213fc4 & 1) == 0) {
       uRam83213fc4 = uRam83213fc4 | 1;
       fn_828D06D0(0xffffffff83213fa0);
-      fn_82F63EC8(0xffffffff83140a08);
+      atexit(0xffffffff83140a08);
     }
     iRam83213fcc = -0x7cdec060;
     (**(code **)(iRam83213fa0 + 4))();

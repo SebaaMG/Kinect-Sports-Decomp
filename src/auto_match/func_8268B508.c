@@ -30,7 +30,7 @@ extern int fn_8267BF50();
 extern int fn_8268B368();
 extern int fn_826BD598();
 extern int fn_826BD620();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int lbl_831E7E64;
 extern U64 storeWordConditionalIndexed();
 
@@ -63,7 +63,7 @@ void fn_8268B508(uint *param_1,ulonglong param_2,undefined8 param_3)
       uVar4 = (ulonglong)param_1[1];
     }
     lVar3 = fn_8268B368(param_1,uVar4,lVar3 + uVar6,0);
-    fn_82F68CC0(lVar3 + 8,uVar2 + 8,uVar6);
+    memcpy(lVar3 + 8,uVar2 + 8,uVar6);
     fn_826BD620(lVar3 + uVar6 + 8,param_2,param_3);
     *param_1 = (uint)lVar3 | *param_1 & 3;
     do {

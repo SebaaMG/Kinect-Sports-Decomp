@@ -60,7 +60,7 @@ void fn_8284E9E0(double param_1,int param_2,int param_3,int param_4)
   undefined1 auStack_140 [64];
   undefined1 auStack_100 [64];
   undefined1 auStack_c0 [64];
-  undefined1 auStack_80 [128];
+  undefined1 auStack_80 [64];
   
   if (*(float **)(param_4 + 0xbc) == (float *)0x0) {
     fVar1 = (float)((double)*(float *)(param_4 + 0xdc) * param_1 +

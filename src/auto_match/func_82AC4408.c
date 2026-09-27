@@ -49,7 +49,7 @@ uint fn_82AC4408(ulonglong param_1,int *param_2,uint *param_3,ulonglong param_4)
   ulonglong uVar10;
   uint uStack00000010;
   ulonglong uStack_40;
-  ulonglong auStack_38 [7];
+  ulonglong auStack_38 [1];
   
   _uStack00000010 = param_1;
   uVar5 = _uStack00000010;

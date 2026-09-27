@@ -43,7 +43,7 @@ fn_82944520(int param_1,uint param_2,undefined8 param_3,undefined8 param_4,undef
   ulonglong uVar4;
   undefined1 auStack_d0 [32];
   undefined1 auStack_b0 [32];
-  undefined1 auStack_90 [144];
+  undefined1 auStack_90 [112];
   
   uVar4 = 0;
   uVar2 = 0;

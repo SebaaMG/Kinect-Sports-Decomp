@@ -53,8 +53,8 @@ void fn_827875E0(undefined8 param_1,float *param_2,float *param_3,undefined8 par
   double dVar10;
   double dVar11;
   double dVar12;
-  float fStack_90;
-  float fStack_8c;
+  struct { float first; float second; } stack_pair_90;
+
   float fStack_88;
   
   iVar1 = fn_82F6A540();
@@ -68,63 +68,63 @@ void fn_827875E0(undefined8 param_1,float *param_2,float *param_3,undefined8 par
   dVar10 = (double)(param_5[1] * fVar3);
   dVar12 = (double)(param_5[3] * fVar3);
   dVar7 = (double)(param_5[4] * fVar3);
-  fStack_8c = param_3[1] - *param_5 * fVar3;
-  fStack_90 = *param_3 - *param_5 * fVar2;
-  fn_827856F0(piVar5,&fStack_90);
+  stack_pair_90.second = param_3[1] - *param_5 * fVar3;
+  stack_pair_90.first = *param_3 - *param_5 * fVar2;
+  fn_827856F0(piVar5,&stack_pair_90.first);
   fVar3 = (float)(*(int *)(iVar1 + 0x40) + -1);
   fVar2 = fVar3;
   if (*(char *)((int)param_5 + 0x36) != '\0') {
     fStack_88 = -(_seed_nan);
-    fStack_90 = (float)((double)*param_3 - dVar11);
-    fStack_8c = (float)((double)param_3[1] - dVar12);
-    fn_827856F0(piVar5,&fStack_90);
+    stack_pair_90.first = (float)((double)*param_3 - dVar11);
+    stack_pair_90.second = (float)((double)param_3[1] - dVar12);
+    fn_827856F0(piVar5,&stack_pair_90.first);
     fVar2 = (float)(*piVar5 + -1);
   }
   fVar4 = fVar3;
   if (*(char *)(param_5 + 0xe) != '\0') {
     fStack_88 = *(float *)(iVar1 + 0x14);
-    fStack_90 = (float)((double)*param_3 + dVar9);
-    fStack_8c = (float)(dVar10 + (double)param_3[1]);
-    fn_827856F0(piVar5,&fStack_90);
+    stack_pair_90.first = (float)((double)*param_3 + dVar9);
+    stack_pair_90.second = (float)(dVar10 + (double)param_3[1]);
+    fn_827856F0(piVar5,&stack_pair_90.first);
     fVar4 = (float)(*piVar5 + -1);
   }
   fVar6 = fVar4;
   if (*(char *)((int)param_5 + 0x37) != '\0') {
     fStack_88 = -(_seed_nan);
-    fStack_90 = (float)((double)*param_3 + dVar8);
-    fStack_8c = (float)(dVar7 + (double)param_3[1]);
-    fn_827856F0(piVar5,&fStack_90);
+    stack_pair_90.first = (float)((double)*param_3 + dVar8);
+    stack_pair_90.second = (float)(dVar7 + (double)param_3[1]);
+    fn_827856F0(piVar5,&stack_pair_90.first);
     fVar6 = (float)(*piVar5 + -1);
   }
   if ((*(char *)(param_5 + 0xd) != '\0') || (*(char *)((int)param_5 + 0x35) != '\0')) {
-    fStack_90 = *(float *)(iVar1 + 0x60);
-    fStack_8c = fVar4;
+    stack_pair_90.first = *(float *)(iVar1 + 0x60);
+    stack_pair_90.second = fVar4;
     fStack_88 = fVar3;
-    fn_827856F0(iVar1 + 0x50,&fStack_90);
-    fStack_90 = *(float *)(iVar1 + 0x60);
-    fStack_8c = *(float *)(iVar1 + 100);
+    fn_827856F0(iVar1 + 0x50,&stack_pair_90.first);
+    stack_pair_90.first = *(float *)(iVar1 + 0x60);
+    stack_pair_90.second = *(float *)(iVar1 + 100);
     fStack_88 = fVar4;
-    fn_827856F0(iVar1 + 0x50,&fStack_90);
+    fn_827856F0(iVar1 + 0x50,&stack_pair_90.first);
   }
   if (*(char *)((int)param_5 + 0x36) != '\0') {
-    fStack_90 = *(float *)(iVar1 + 0x68);
-    fStack_8c = *(float *)(iVar1 + 0x60);
+    stack_pair_90.first = *(float *)(iVar1 + 0x68);
+    stack_pair_90.second = *(float *)(iVar1 + 0x60);
     fStack_88 = fVar3;
-    fn_827856F0(iVar1 + 0x50,&fStack_90);
-    fStack_90 = *(float *)(iVar1 + 0x68);
-    fStack_8c = fVar3;
+    fn_827856F0(iVar1 + 0x50,&stack_pair_90.first);
+    stack_pair_90.first = *(float *)(iVar1 + 0x68);
+    stack_pair_90.second = fVar3;
     fStack_88 = fVar2;
-    fn_827856F0(iVar1 + 0x50,&fStack_90);
+    fn_827856F0(iVar1 + 0x50,&stack_pair_90.first);
   }
   if (*(char *)((int)param_5 + 0x37) != '\0') {
-    fStack_90 = *(float *)(iVar1 + 100);
-    fStack_8c = fVar6;
+    stack_pair_90.first = *(float *)(iVar1 + 100);
+    stack_pair_90.second = fVar6;
     fStack_88 = fVar4;
-    fn_827856F0(iVar1 + 0x50,&fStack_90);
-    fStack_90 = *(float *)(iVar1 + 100);
-    fStack_8c = *(float *)(iVar1 + 0x6c);
+    fn_827856F0(iVar1 + 0x50,&stack_pair_90.first);
+    stack_pair_90.first = *(float *)(iVar1 + 100);
+    stack_pair_90.second = *(float *)(iVar1 + 0x6c);
     fStack_88 = fVar6;
-    fn_827856F0(iVar1 + 0x50,&fStack_90);
+    fn_827856F0(iVar1 + 0x50,&stack_pair_90.first);
   }
   *(float *)(iVar1 + 0x60) = fVar3;
   *(float *)(iVar1 + 0x68) = fVar2;

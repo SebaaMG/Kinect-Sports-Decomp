@@ -38,7 +38,7 @@ void fn_828DC7C0(int param_1,undefined8 param_2)
   int iVar2;
   int iVar3;
   longlong lVar1;
-  undefined8 auStack_30 [6];
+  undefined8 auStack_30;
   
   iVar2 = fn_828E9DA8(param_2);
   iVar3 = fn_828E9D90(param_2);
@@ -49,8 +49,8 @@ void fn_828DC7C0(int param_1,undefined8 param_2)
     lVar1 = fn_828E9FF8(param_2,1);
   }
   *(bool *)(param_1 + 0x80) = lVar1 != 0;
-  fn_828D1F90(param_2,auStack_30,8,0);
-  *(undefined8 *)(param_1 + 0x88) = auStack_30[0];
+  fn_828D1F90(param_2,&auStack_30,8,0);
+  *(undefined8 *)(param_1 + 0x88) = auStack_30;
   return;
 }
 

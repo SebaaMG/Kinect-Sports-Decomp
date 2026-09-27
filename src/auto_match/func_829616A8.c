@@ -55,7 +55,7 @@ undefined8 fn_829616A8(int *param_1)
   ulonglong uVar15;
   int iVar16;
   undefined8 uVar17;
-  int aiStack_80 [32];
+  int aiStack_80;
   
   iVar11 = 0;
   uVar6 = 0xffffffff;
@@ -74,12 +74,12 @@ undefined8 fn_829616A8(int *param_1)
         trapWord(6,(ulonglong)*puVar1 & 0xfffff,0);
         if ((int)uVar12 != 0) {
           do {
-            uVar2 = fn_82963318(param_1[0x41],uVar14,aiStack_80);
+            uVar2 = fn_82963318(param_1[0x41],uVar14,&aiStack_80);
             uVar15 = 0;
             if (uVar2 != 0) {
               iVar16 = 0;
               do {
-                iVar3 = *(int *)(*(int *)(iVar16 + aiStack_80[0]) * 4 + param_1[5]);
+                iVar3 = *(int *)(*(int *)(iVar16 + aiStack_80) * 4 + param_1[5]);
                 uVar8 = *(uint *)(*(int *)(*(int *)(iVar3 + 4) * 4 + param_1[4]) + 4);
                 if (((((uVar8 & 0x10) == 0) || ((uVar8 & 0x200) != 0)) ||
                     (iVar3 = (**(code **)(*param_1 + 0x70))(param_1,*(undefined4 *)(iVar3 + 0x6c)),
@@ -106,13 +106,13 @@ undefined8 fn_829616A8(int *param_1)
                     return 0xffffffff8007000e;
                   }
                   fn_829640A0(*(undefined4 *)(iVar4 * 4 + param_1[5]),
-                               *(undefined4 *)(*(int *)(iVar16 + aiStack_80[0]) * 4 + param_1[5]));
+                               *(undefined4 *)(*(int *)(iVar16 + aiStack_80) * 4 + param_1[5]));
                   *(undefined4 *)(*(int *)(iVar4 * 4 + param_1[5]) + 0x6c) = 0xffffffff;
                   iVar11 = param_1[0x41];
-                  uVar6 = *(undefined4 *)(iVar16 + aiStack_80[0]);
+                  uVar6 = *(undefined4 *)(iVar16 + aiStack_80);
                 }
                 uVar15 = uVar15 + 1;
-                *(int *)(iVar16 + aiStack_80[0]) = iVar4;
+                *(int *)(iVar16 + aiStack_80) = iVar4;
                 iVar16 = iVar16 + 4;
               } while ((uVar15 & 0xffffffff) < (uVar2 & 0xffffffff));
             }

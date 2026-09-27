@@ -36,7 +36,7 @@ void fn_82B50030(undefined8 param_1,undefined8 param_2,undefined8 param_3)
 
 {
   undefined1 auStack_40 [16];
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
   
   fn_82B24700(auStack_30);
   fn_82B4B1D8(auStack_30,param_3);

@@ -41,7 +41,7 @@ undefined4 * fn_823865C8(uint *param_1)
   int iVar3;
   undefined4 *puVar4;
   undefined4 *puVar5;
-  undefined4 *apuStack_30 [2];
+  undefined4 * apuStack_30;
   undefined **ppuStack_28;
   undefined4 uStack_24;
   
@@ -80,8 +80,8 @@ undefined4 * fn_823865C8(uint *param_1)
     puVar4[3] = uVar2;
     *(undefined2 *)(puVar4 + 4) = 0;
   }
-  fn_82519388(apuStack_30,iVar3,puVar5);
-  puVar5 = apuStack_30[0];
+  fn_82519388(&apuStack_30,iVar3,puVar5);
+  puVar5 = apuStack_30;
 LAB_8238669c:
   return puVar5 + 4;
 }

@@ -38,7 +38,7 @@ void fn_826C2D98(int param_1,uint *param_2,undefined8 param_3)
   int iVar2;
   undefined8 uVar3;
   undefined1 auStack_50 [16];
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [16];
   
   uVar1 = *param_2;
   iVar2 = *(int *)(param_1 + 0x10);

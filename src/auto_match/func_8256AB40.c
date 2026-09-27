@@ -43,7 +43,7 @@ byte fn_8256AB40(int *param_1,int param_2)
   undefined4 uVar7;
   undefined4 uVar8;
   undefined4 uVar9;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [16];
   
   bVar5 = 1;
   lVar6 = 0;

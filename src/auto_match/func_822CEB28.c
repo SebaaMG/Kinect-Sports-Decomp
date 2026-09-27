@@ -42,7 +42,7 @@ undefined8 fn_822CEB28(int param_1,int *param_2,undefined4 *param_3,undefined8 p
   undefined8 uVar2;
   char cVar4;
   undefined4 *puVar5;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [16];
   
   puVar5 = param_3;
   if (0xf < (uint)param_3[5]) {

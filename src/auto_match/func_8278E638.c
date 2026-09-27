@@ -47,8 +47,8 @@ bool fn_8278E638(int param_1,char param_2)
   int *piVar7;
   int *piStack_40;
   int iStack_3c;
-  undefined4 uStack_38;
-  undefined4 uStack_34;
+  struct { undefined4 first; undefined4 second; } stack_pair_38;
+
   
   piVar7 = (int *)(param_1 + 0xc);
   iVar6 = 0;
@@ -56,18 +56,18 @@ bool fn_8278E638(int param_1,char param_2)
     iVar6 = **(int **)(param_1 + 0xc);
   }
   fn_8278C110(&piStack_40,piVar7);
-  uStack_38 = 0;
-  uStack_34 = 0;
-  cVar2 = fn_826A8E58(&piStack_40,&uStack_38);
+  stack_pair_38.first = 0;
+  stack_pair_38.second = 0;
+  cVar2 = fn_826A8E58(&piStack_40,&stack_pair_38.first);
   if (cVar2 == '\0') {
-    uStack_38 = 0;
-    uStack_34 = 0;
+    stack_pair_38.first = 0;
+    stack_pair_38.second = 0;
     do {
       if (*(int *)(*(int *)(iStack_3c * 0xc + *piStack_40 + 0x10) + 4) == 1) {
         fn_8278CAE8(&piStack_40);
       }
       fn_827741E8(&piStack_40);
-      cVar2 = fn_826A8E58(&piStack_40,&uStack_38);
+      cVar2 = fn_826A8E58(&piStack_40,&stack_pair_38.first);
     } while (cVar2 == '\0');
   }
   if (param_2 == '\0') {

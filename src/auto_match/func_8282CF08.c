@@ -43,7 +43,7 @@ undefined8 fn_8282CF08(int param_1,int param_2,undefined8 param_3)
   char cVar8;
   char cVar9;
   char cVar10;
-  byte abStack_30 [48];
+  byte abStack_30 [16];
   
   bVar1 = *(byte *)(param_1 + 0x134);
   bVar5 = bVar1 >> 5 & 1;

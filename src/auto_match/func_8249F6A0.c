@@ -47,7 +47,7 @@ void fn_8249F6A0(int *param_1)
   ulonglong uVar7;
   int *piVar8;
   double dVar9;
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [1];
   
   uVar6 = 0xffffffffffffffff;
   uVar7 = 0;

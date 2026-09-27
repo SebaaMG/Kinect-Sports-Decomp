@@ -36,7 +36,7 @@ longlong fn_82A47A60(int param_1,undefined8 param_2,longlong param_3)
   longlong lVar1;
   ulonglong uVar2;
   longlong lVar3;
-  uint auStack_40 [16];
+  uint auStack_40 [4];
   
   uVar2 = 0;
   auStack_40[0] = 0;

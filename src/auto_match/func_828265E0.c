@@ -33,13 +33,13 @@ void fn_828265E0(int param_1,undefined8 param_2,undefined8 param_3,int *param_4)
 
 {
   int iVar1;
-  int aiStack_40 [16];
+  int aiStack_40;
   
-  aiStack_40[0] = 0;
-  fn_828279E8(param_1,aiStack_40);
+  aiStack_40 = 0;
+  fn_828279E8(param_1,&aiStack_40);
   iVar1 = fn_82821678(param_3,param_2,*(undefined4 *)(param_1 + 0x48),
-                            *(undefined4 *)(aiStack_40[0] + 0x388),
-                            *(undefined4 *)(aiStack_40[0] + 0x3bc));
+                            *(undefined4 *)(aiStack_40 + 0x388),
+                            *(undefined4 *)(aiStack_40 + 0x3bc));
   if (iVar1 < 0) {
     *param_4 = 0;
   }

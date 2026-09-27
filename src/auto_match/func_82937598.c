@@ -42,13 +42,13 @@ undefined8 fn_82937598(int param_1,int param_2,undefined8 param_3,undefined4 *pa
   uint uVar6;
   char *pcVar7;
   char *pcVar8;
-  int iStack_160;
-  int aiStack_15c [3];
+  struct { int first; int second; } stack_pair_160;
+
   char acStack_150 [128];
-  char acStack_d0 [208];
+  char acStack_d0 [144];
   
-  fn_82937420(param_3,acStack_150,0x80,acStack_d0,0x80,aiStack_15c,&iStack_160);
-  if (aiStack_15c[0] == 2) {
+  fn_82937420(param_3,acStack_150,0x80,acStack_d0,0x80,&stack_pair_160.second,&stack_pair_160.first);
+  if (stack_pair_160.second == 2) {
     fn_82936290(acStack_150,0x80,*param_4);
   }
   if ((acStack_d0[0] != '\0') && (uVar6 = 0, param_4[0xe] != 0)) {
@@ -64,7 +64,7 @@ undefined8 fn_82937598(int param_1,int param_2,undefined8 param_3,undefined4 *pa
         pcVar8 = pcVar8 + 1;
         pcVar7 = pcVar7 + 1;
       } while (cVar1 == cVar2);
-      if (((cVar1 == cVar2) && (puVar3[0xd] == iStack_160)) && (puVar3[1] == *(int *)(param_2 + 4)))
+      if (((cVar1 == cVar2) && (puVar3[0xd] == stack_pair_160.first)) && (puVar3[1] == *(int *)(param_2 + 4)))
       {
         uVar4 = fn_82937598(param_1,param_2,acStack_d0,param_4[uVar6 + 0xf]);
         return uVar4;
@@ -86,8 +86,8 @@ undefined8 fn_82937598(int param_1,int param_2,undefined8 param_3,undefined4 *pa
       fn_82936290(uVar4,uVar6,acStack_150);
     }
     *puVar5 = (int)uVar4;
-    puVar5[0xd] = iStack_160;
-    puVar5[0xc] = aiStack_15c[0];
+    puVar5[0xd] = stack_pair_160.first;
+    puVar5[0xc] = stack_pair_160.second;
     puVar5[0xe] = 0;
     puVar5[1] = *(undefined4 *)(param_2 + 4);
     puVar5[10] = *(undefined4 *)(param_2 + 0x28);
@@ -114,8 +114,8 @@ undefined8 fn_82937598(int param_1,int param_2,undefined8 param_3,undefined4 *pa
       fn_82936290(uVar4,uVar6,acStack_150);
     }
     *puVar5 = (int)uVar4;
-    puVar5[0xd] = iStack_160;
-    puVar5[0xc] = aiStack_15c[0];
+    puVar5[0xd] = stack_pair_160.first;
+    puVar5[0xc] = stack_pair_160.second;
     puVar5[0xe] = 0;
     puVar5[10] = 0;
     puVar5[6] = 0;

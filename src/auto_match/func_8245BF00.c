@@ -40,7 +40,7 @@ void fn_8245BF00(int param_1)
   int iVar5;
   undefined4 *puVar6;
   int iStack_30;
-  undefined4 auStack_2c [11];
+  undefined4 auStack_2c;
   
   if (*(int *)(param_1 + 0x574) == 0) {
     RtlEnterCriticalSection();
@@ -61,14 +61,14 @@ void fn_8245BF00(int param_1)
       return;
     }
     iStack_30 = 0;
-    auStack_2c[0] = 0;
-    uVar4 = (**(code **)(*piVar1 + 8))(piVar1,&iStack_30,auStack_2c);
+    auStack_2c = 0;
+    uVar4 = (**(code **)(*piVar1 + 8))(piVar1,&iStack_30,&auStack_2c);
     *(undefined4 *)(param_1 + 0x71c) = uVar4;
     if (iStack_30 == 0) {
       return;
     }
     uVar4 = 0;
-    uVar2 = auStack_2c[0];
+    uVar2 = auStack_2c;
     iVar5 = iStack_30;
   }
   else {

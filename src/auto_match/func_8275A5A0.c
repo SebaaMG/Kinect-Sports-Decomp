@@ -89,8 +89,8 @@ void fn_8275A5A0(undefined8 param_1,undefined8 param_2,undefined8 param_3)
   undefined1 uStack_4bf;
   undefined1 uStack_4be;
   undefined1 uStack_4bd;
-  float fStack_4a0;
-  float fStack_49c;
+  struct { float first; float second; } stack_pair_4a0;
+
   float fStack_498;
   float fStack_494;
   float fStack_490;
@@ -192,15 +192,15 @@ void fn_8275A5A0(undefined8 param_1,undefined8 param_2,undefined8 param_3)
       dVar21 = (double)lbl_82002C5C;
       fStack_498 = lbl_821AAD20;
       dVar17 = (double)(float)((double)*(uint *)(iVar6 + 0x10) * dVar21);
-      fStack_4a0 = (float)(dVar17 - dVar19);
-      dVar13 = (double)fStack_4a0;
-      fStack_49c = (float)((double)*(float *)(iVar5 + 0x10) * dVar13);
-      fn_82759140(&fStack_4a0);
+      stack_pair_4a0.first = (float)(dVar17 - dVar19);
+      dVar13 = (double)stack_pair_4a0.first;
+      stack_pair_4a0.second = (float)((double)*(float *)(iVar5 + 0x10) * dVar13);
+      fn_82759140(&stack_pair_4a0.first);
       uVar10 = 1;
       if (1 < (uVar9 & 0xffffffff)) {
         dVar13 = (double)(float)(dVar19 / dVar13);
         dVar18 = (double)fStack_498;
-        dVar20 = (double)fStack_49c;
+        dVar20 = (double)stack_pair_4a0.second;
         dVar19 = (double)lbl_8201435C;
         do {
           uVar11 = 1;

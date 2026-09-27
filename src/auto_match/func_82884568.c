@@ -29,7 +29,7 @@ extern int fn_8223C3D0();
 extern int fn_8265CA20();
 extern int fn_82881B88();
 extern int fn_82884498();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 void fn_82884568(longlong param_1,undefined8 param_2,undefined8 param_3)
@@ -40,7 +40,7 @@ void fn_82884568(longlong param_1,undefined8 param_2,undefined8 param_3)
   int iVar3;
   int *piVar4;
   int iVar5;
-  int aiStack_40 [16];
+  int aiStack_40 [4];
   
   aiStack_40[0] = 0;
   aiStack_40[1] = 0;
@@ -65,7 +65,7 @@ void fn_82884568(longlong param_1,undefined8 param_2,undefined8 param_3)
   }
   puVar1 = *(undefined4 **)(*(int *)(iVar3 + 4) + iVar5 * 4);
   fn_8223C3D0(puVar1,param_3);
-  fn_82F68CC0(*puVar1,param_2,param_3);
+  memcpy(*puVar1,param_2,param_3);
   return;
 }
 

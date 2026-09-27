@@ -30,19 +30,18 @@ extern int fn_82CE3440();
 
 
 undefined8
-fn_82CE2A00(undefined4 *param_1,undefined4 param_2,undefined4 param_3,undefined4 param_4,
-             uint param_5,undefined4 param_6,undefined4 param_7,undefined4 param_8)
+fn_82CE2A00(undefined4 *param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4, uint param_5, undefined4 param_6, undefined4 param_7, undefined4 param_8, undefined4 in_stack_00000054, undefined4 in_stack_0000005c, undefined4 in_stack_00000064, undefined4 in_stack_0000006c, undefined4 in_stack_00000074, undefined4 in_stack_0000007c, undefined4 in_stack_00000084, int in_stack_0000008c)
 
 {
   int iVar1;
-  undefined4 in_stack_00000054;
-  undefined4 in_stack_0000005c;
-  undefined4 in_stack_00000064;
-  undefined4 in_stack_0000006c;
-  undefined4 in_stack_00000074;
-  undefined4 in_stack_0000007c;
-  undefined4 in_stack_00000084;
-  int in_stack_0000008c;
+
+
+
+
+
+
+
+
   
   if (((param_5 & 0x40) != 0) && (iVar1 = KeGetCurrentProcessType(), iVar1 == 1)) {
     param_5 = param_5 | 0x10;

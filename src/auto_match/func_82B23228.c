@@ -73,7 +73,7 @@ void fn_82B23228(int param_1)
   ulonglong uStack_88;
   ulonglong uStack_80;
   undefined4 uStack_74;
-  undefined1 auStack_70 [112];
+  undefined1 auStack_70 [48];
   
   bVar4 = false;
   for (uVar6 = *(uint *)((-(uint)((*(uint *)(param_1 + 4) & 1) == 0) & *(uint *)(param_1 + 4)) +

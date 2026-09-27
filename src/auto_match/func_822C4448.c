@@ -41,7 +41,7 @@ fn_822C4448(undefined8 param_1,int param_2,undefined8 param_3,undefined8 param_4
   undefined4 uVar4;
   undefined4 uVar5;
   undefined4 uVar6;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [1];
   
   iVar1 = *(int *)(param_2 + 0x24);
   if (((iVar1 == 0) || (param_5 == '\0')) || (*(int *)(iVar1 + 0x160) == 0)) {

@@ -34,7 +34,7 @@ undefined1 fn_82B45C18(undefined8 param_1,int param_2)
 
 {
   char cVar1;
-  undefined1 auStack_20 [16];
+  undefined1 auStack_20;
   
   if (param_2 == 0) {
                     /* WARNING: Subroutine does not return */
@@ -48,11 +48,11 @@ undefined1 fn_82B45C18(undefined8 param_1,int param_2)
                     /* WARNING: Subroutine does not return */
     fn_82AA66A8(param_1,0xe19);
   }
-  cVar1 = fn_82B45A50(param_1,*(undefined4 *)(param_2 + 8),auStack_20);
+  cVar1 = fn_82B45A50(param_1,*(undefined4 *)(param_2 + 8),&auStack_20);
   if (cVar1 == '\0') {
                     /* WARNING: Subroutine does not return */
     fn_82AA66A8(param_1,0xe19);
   }
-  return auStack_20[0];
+  return auStack_20;
 }
 

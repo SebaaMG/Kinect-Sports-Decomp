@@ -58,7 +58,7 @@ extern int fn_828C8058();
 extern int fn_828C8300();
 extern int fn_828D9D58();
 extern int fn_82A4AAA8();
-extern int fn_82F63CA0();
+extern int memmove();
 extern unsigned int iStack00000044;
 extern unsigned int iStack_60;
 extern unsigned int stack0x00000044;
@@ -164,7 +164,7 @@ ulonglong fn_828D2110(int param_1,undefined8 param_2,ulonglong param_3,undefined
         piVar10 = piVar6 + 1;
         do {
           if (*piVar6 == iVar9) {
-            fn_82F63CA0(piVar6,piVar10,(*(int *)(param_1 + 0x1e4) - (int)piVar10 >> 2) << 2);
+            memmove(piVar6,piVar10,(*(int *)(param_1 + 0x1e4) - (int)piVar10 >> 2) << 2);
             *(int *)(param_1 + 0x1e4) = *(int *)(param_1 + 0x1e4) + -4;
           }
           else {

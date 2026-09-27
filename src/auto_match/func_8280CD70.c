@@ -52,8 +52,8 @@ extern unsigned int uStack_5c;
 void fn_8280CD70(int param_1,undefined8 param_2,float *param_3,undefined8 param_4)
 
 {
-  float fStack_60;
-  undefined4 uStack_5c;
+  struct { float first; undefined4 second; } stack_pair_60;
+
   undefined4 uStack_58;
   undefined4 uStack_54;
   undefined4 uStack_50;
@@ -75,7 +75,7 @@ void fn_8280CD70(int param_1,undefined8 param_2,float *param_3,undefined8 param_
   uStack_50 = lbl_821AAD20;
   uStack_40 = lbl_821AAD20;
   uStack_30 = lbl_821AAD20;
-  uStack_5c = lbl_821AAD20;
+  stack_pair_60.second = lbl_821AAD20;
   uStack_3c = lbl_821AAD20;
   uStack_2c = lbl_821AAD20;
   uStack_58 = lbl_821AAD20;
@@ -86,10 +86,10 @@ void fn_8280CD70(int param_1,undefined8 param_2,float *param_3,undefined8 param_
   uStack_34 = lbl_821AAD20;
   fStack_24 = lbl_82002AE0;
   fStack_4c = lbl_82002AE0 / param_3[1];
-  fStack_60 = lbl_82002AE0 / *param_3;
+  stack_pair_60.first = lbl_82002AE0 / *param_3;
   fStack_38 = lbl_82002AE0 / param_3[2];
-  fn_8280CB70(param_1,&fStack_60,&fStack_60);
-  fn_8281E1F0(param_4,&fStack_60);
+  fn_8280CB70(param_1,&stack_pair_60.first,&stack_pair_60.first);
+  fn_8281E1F0(param_4,&stack_pair_60.first);
   return;
 }
 

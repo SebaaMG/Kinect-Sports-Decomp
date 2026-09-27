@@ -50,17 +50,17 @@ fn_825A1048(int *param_1,char *param_2,undefined2 *param_3,undefined8 param_4,in
   char *pcVar7;
   char cVar8;
   char cVar9;
-  int iStack_60;
-  int iStack_5c;
+  struct { int first; int second; } stack_pair_60;
+
   int iStack_58;
   undefined4 uStack_54;
   undefined4 uStack_50;
   
   uStack_54 = 0;
   uStack_50 = 0;
-  iStack_60 = *(int *)(*param_1 + 0xc) + *param_1;
-  iStack_5c = iStack_60 + 8;
-  iStack_58 = (*(int *)(iStack_60 + 4) + 1) * 6 + iStack_5c;
+  stack_pair_60.first = *(int *)(*param_1 + 0xc) + *param_1;
+  stack_pair_60.second = stack_pair_60.first + 8;
+  iStack_58 = (*(int *)(stack_pair_60.first + 4) + 1) * 6 + stack_pair_60.second;
   uVar4 = fn_82818440(param_2);
   iVar3 = 0;
   if (*(ushort *)(param_1 + 2) != 0) {
@@ -89,7 +89,7 @@ LAB_825a1124:
     } while (iVar3 < (int)(uint)*(ushort *)(param_1 + 2));
   }
   uVar5 = (uint)uVar4;
-  psVar2 = (short *)fn_8262E510(&iStack_60);
+  psVar2 = (short *)fn_8262E510(&stack_pair_60.first);
   if ((*psVar2 == 0) || (uVar5 == 0xffffffff)) {
     uVar1 = 0;
     *param_3 = 0;

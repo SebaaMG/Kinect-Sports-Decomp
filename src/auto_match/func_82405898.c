@@ -30,7 +30,7 @@ extern unsigned int *auStack_80;
 extern unsigned int fStack_58;
 extern int fn_8227DA30();
 extern int fn_82405638();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int lbl_821CA460;
 extern unsigned int lbl_821CC160;
 extern unsigned int uStack_4c;
@@ -57,7 +57,7 @@ void fn_82405898(double param_1,int param_2)
   float fVar11;
   float fVar12;
   undefined1 auStack_80 [16];
-  undefined1 auStack_70 [16];
+  undefined1 auStack_70 [1];
   undefined4 uStack_60;
   undefined4 uStack_5c;
   float fStack_58;
@@ -104,7 +104,7 @@ void fn_82405898(double param_1,int param_2)
   uStack_50 = 0;
   uStack_4c = 4;
   uStack_5c = uStack_60;
-  fn_82F68CC0(param_2 + 0xc0,auStack_70,0x30);
+  memcpy(param_2 + 0xc0,auStack_70,0x30);
   return;
 }
 

@@ -86,8 +86,8 @@ undefined8 fn_827611B8(int *param_1,int *param_2)
   float fStack_29c;
   float fStack_298;
   float fStack_294;
-  undefined4 uStack_290;
-  undefined4 uStack_28c;
+  struct { undefined4 first; undefined4 second; } stack_pair_290;
+
   undefined4 uStack_288;
   byte abStack_284 [4];
   undefined4 uStack_280;
@@ -123,10 +123,10 @@ undefined8 fn_827611B8(int *param_1,int *param_2)
     fn_82760648(auStack_1a0,param_2);
     while (cStack_200 != '\x01') {
       if (cStack_180 == '\x01') goto LAB_82761438;
-      pbVar10 = (byte *)&uStack_290;
+      pbVar10 = (byte *)&stack_pair_290.first;
       pbVar8 = (byte *)&uStack_280;
-      uStack_290 = uStack_20c;
-      uStack_28c = uStack_208;
+      stack_pair_290.first = uStack_20c;
+      stack_pair_290.second = uStack_208;
       uStack_288 = uStack_204;
       uStack_280 = uStack_18c;
       uStack_27c = uStack_188;

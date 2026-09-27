@@ -52,8 +52,8 @@ void fn_823F2978(int param_1,undefined8 param_2,undefined1 param_3,undefined8 pa
   undefined1 uStack0000003f;
   undefined4 uStack0000004c;
   undefined1 auStack_40 [8];
-  undefined4 uStack_38;
-  int iStack_34;
+  struct { undefined4 first; int second; } stack_pair_38;
+
   
   auStack_40[0] = 0;
   uStack0000003f = param_3;
@@ -65,25 +65,25 @@ void fn_823F2978(int param_1,undefined8 param_2,undefined1 param_3,undefined8 pa
   else {
     uVar1 = fn_822D7FE0();
   }
-  uStack_38 = 0;
-  iStack_34 = 0;
-  fn_822D79D8(&uStack_38,uVar1);
+  stack_pair_38.first = 0;
+  stack_pair_38.second = 0;
+  fn_822D79D8(&stack_pair_38.first,uVar1);
   (**(code **)(**(int **)(param_1 + 0x68) + 0x10))
-            (*(int **)(param_1 + 0x68),uStack_38,&stack0x00000020);
-  (**(code **)(**(int **)(param_1 + 0x70) + 0x10))(*(int **)(param_1 + 0x70),uStack_38,param_2);
-  (**(code **)(**(int **)(param_1 + 0x78) + 0x10))(*(int **)(param_1 + 0x78),uStack_38,auStack_40);
+            (*(int **)(param_1 + 0x68),stack_pair_38.first,&stack0x00000020);
+  (**(code **)(**(int **)(param_1 + 0x70) + 0x10))(*(int **)(param_1 + 0x70),stack_pair_38.first,param_2);
+  (**(code **)(**(int **)(param_1 + 0x78) + 0x10))(*(int **)(param_1 + 0x78),stack_pair_38.first,auStack_40);
   (**(code **)(**(int **)(param_1 + 0x80) + 0x10))
-            (*(int **)(param_1 + 0x80),uStack_38,&stack0x0000003f);
-  (**(code **)(**(int **)(param_1 + 0x88) + 0x10))(*(int **)(param_1 + 0x88),uStack_38,param_4);
+            (*(int **)(param_1 + 0x80),stack_pair_38.first,&stack0x0000003f);
+  (**(code **)(**(int **)(param_1 + 0x88) + 0x10))(*(int **)(param_1 + 0x88),stack_pair_38.first,param_4);
   (**(code **)(**(int **)(param_1 + 0x90) + 0x10))
-            (*(int **)(param_1 + 0x90),uStack_38,&stack0x0000004c);
+            (*(int **)(param_1 + 0x90),stack_pair_38.first,&stack0x0000004c);
   if (*(int *)(param_1 + 0x48) != 0) {
-    fn_828E9D90(uStack_38);
-    fn_828E9D40(uStack_38);
-    fn_822527F8(param_1,uStack_38,param_1 + 0x38);
+    fn_828E9D90(stack_pair_38.first);
+    fn_828E9D40(stack_pair_38.first);
+    fn_822527F8(param_1,stack_pair_38.first,param_1 + 0x38);
   }
-  fn_828E2B28(param_1,&uStack_38);
-  if (iStack_34 != 0) {
+  fn_828E2B28(param_1,&stack_pair_38.first);
+  if (stack_pair_38.second != 0) {
     fn_822315A0();
   }
   return;

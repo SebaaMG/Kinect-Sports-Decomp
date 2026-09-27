@@ -45,8 +45,8 @@ longlong fn_82636230(int param_1)
   int iVar2;
   ulonglong uVar3;
   ulonglong uVar4;
-  undefined4 uStack_40;
-  undefined4 uStack_3c;
+  struct { undefined4 first; undefined4 second; } stack_pair_40;
+
   undefined4 uStack_38;
   uint uStack_34;
   undefined4 uStack_30;
@@ -60,9 +60,9 @@ longlong fn_82636230(int param_1)
     lVar1 = 0;
   }
   else {
-    uStack_40 = 0;
+    stack_pair_40.first = 0;
     uVar4 = 0;
-    uStack_3c = 0;
+    stack_pair_40.second = 0;
     uVar3 = 0;
     uStack_38 = 0;
     uStack_34 = 0;
@@ -72,7 +72,7 @@ longlong fn_82636230(int param_1)
     uStack_24 = 0;
     uStack_20 = 0;
     uStack_1c = 0;
-    iVar2 = fn_82636580(param_1,&uStack_40);
+    iVar2 = fn_82636580(param_1,&stack_pair_40.first);
     if (-1 < iVar2) {
       uVar4 = (ulonglong)uStack_20;
       uVar3 = (ulonglong)uStack_34;

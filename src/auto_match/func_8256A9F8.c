@@ -37,7 +37,7 @@ void fn_8256A9F8(int param_1)
   int iVar1;
   int iVar2;
   int iVar3;
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
   
   fn_82837D98(*(undefined4 *)(*(int *)(param_1 + 0xc) + 0x14),0,auStack_30);
   fn_8251FA58(*(undefined4 *)(param_1 + 0xc));

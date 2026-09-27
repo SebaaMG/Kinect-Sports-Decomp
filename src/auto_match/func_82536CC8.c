@@ -41,7 +41,7 @@ void fn_82536CC8(void)
   undefined4 *puVar2;
   undefined8 uVar1;
   undefined1 auStack_70 [48];
-  undefined1 auStack_40 [40];
+  undefined1 auStack_40 [24];
   
   if (lbl_83297840 == (undefined4 *)0x0) {
     puVar2 = (undefined4 *)fn_8265C9E0(0x10);

@@ -43,7 +43,7 @@ float * fn_82718548(float *param_1,int param_2,undefined8 param_3)
   float fVar8;
   float *pfVar9;
   ulonglong uVar10;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [1];
   
   fVar1 = lbl_821AAD20;
   bVar7 = false;

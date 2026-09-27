@@ -66,8 +66,8 @@ undefined8 fn_827A8BB8(int *param_1,undefined4 *param_2,undefined8 param_3,undef
   undefined1 auStack_6d [3];
   undefined2 uStack_6a;
   undefined8 uStack_68;
-  float fStack_60;
-  float fStack_5c;
+  struct { float first; float second; } stack_pair_60;
+
   float fStack_58;
   float fStack_54;
   undefined2 uStack_50;
@@ -92,19 +92,19 @@ undefined8 fn_827A8BB8(int *param_1,undefined4 *param_2,undefined8 param_3,undef
   uStack_34 = param_2[3];
   uStack_30 = param_2[4];
   uStack_2c = param_2[5];
-  fStack_60 = lbl_821AAD20;
-  fStack_5c = lbl_821AAD20;
+  stack_pair_60.first = lbl_821AAD20;
+  stack_pair_60.second = lbl_821AAD20;
   fStack_58 = lbl_821AAD20;
   fStack_54 = lbl_821AAD20;
   uStack_40 = *param_2;
-  fn_827A8A28(&uStack_40,param_3,&fStack_60);
+  fn_827A8A28(&uStack_40,param_3,&stack_pair_60.first);
   (**(code **)(*piVar1 + 0x20))(piVar1,&uStack_40);
-  uStack_6a = (undefined2)(int)fStack_5c;
+  uStack_6a = (undefined2)(int)stack_pair_60.second;
   uStack_4e = uStack_6a;
   uStack_68 = ((((U64)(uStack_68)) & (~(((U64)0xFFFF) << 48))) | ((((U64)((undefined2)(int)fStack_58)) & ((U64)0xFFFF)) << 48));
   uStack_4c = (((U64)(uStack_68) >> 48) & 0xFFFF);
   uStack_6a = (undefined2)(int)fStack_54;
-  uStack_68 = ((((U64)(uStack_68)) & (~(((U64)0xFFFF) << 48))) | ((((U64)((undefined2)(int)fStack_60)) & ((U64)0xFFFF)) << 48));
+  uStack_68 = ((((U64)(uStack_68)) & (~(((U64)0xFFFF) << 48))) | ((((U64)((undefined2)(int)stack_pair_60.first)) & ((U64)0xFFFF)) << 48));
   uStack_50 = (((U64)(uStack_68) >> 48) & 0xFFFF);
   uStack_4a = uStack_4e;
   uStack_48 = (((U64)(uStack_68) >> 48) & 0xFFFF);
@@ -113,7 +113,7 @@ undefined8 fn_827A8BB8(int *param_1,undefined4 *param_2,undefined8 param_3,undef
   uStack_42 = uStack_6a;
   _auStack_6d = CONCAT14(0xff,(int)fStack_54);
   _uStack_70 = CONCAT17(0xff,CONCAT25(0xffff,_auStack_6d));
-  uStack_68 = (longlong)(int)fStack_60;
+  uStack_68 = (longlong)(int)stack_pair_60.first;
   (**(code **)(*piVar1 + 0x5c))(piVar1,&uStack_70);
   (**(code **)(*piVar1 + 0x3c))(piVar1,&uStack_50,4,1,0);
   (**(code **)(*piVar1 + 0x40))(piVar1,0xffffffff820116cc,6,1,0);

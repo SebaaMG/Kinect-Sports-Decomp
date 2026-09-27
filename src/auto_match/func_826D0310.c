@@ -35,7 +35,7 @@ undefined4 * fn_826D0310(undefined4 *param_1)
 {
   undefined4 *puVar1;
   undefined4 *puVar2;
-  undefined4 *apuStack_30 [12];
+  undefined4 * apuStack_30;
   
   param_1[4] = 0;
   param_1[5] = 0;
@@ -43,11 +43,11 @@ undefined4 * fn_826D0310(undefined4 *param_1)
   puVar2 = param_1 + 4;
   param_1[7] = 0;
   puVar1 = (undefined4 *)fn_8267BED0(param_1,0x84,0);
-  apuStack_30[0] = puVar1;
+  apuStack_30 = puVar1;
   if ((uint)param_1[6] < 0xf) {
     fn_82768EA0(puVar2,puVar2,0xf);
   }
-  fn_826EBE48(puVar2,apuStack_30);
+  fn_826EBE48(puVar2,&apuStack_30);
   param_1[1] = puVar1;
   param_1[2] = puVar1 + 0x20;
   *param_1 = puVar1;

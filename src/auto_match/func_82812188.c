@@ -48,7 +48,7 @@ void fn_82812188(undefined8 param_1,undefined8 param_2,undefined8 param_3)
   double dVar4;
   double dVar5;
   double dVar6;
-  undefined1 auStack_80 [16];
+  undefined1 auStack_80 [1];
   undefined1 auStack_70 [16];
   undefined1 auStack_60 [16];
   undefined1 auStack_50 [80];

@@ -44,7 +44,7 @@ longlong fn_8257AAC8(int param_1,undefined8 param_2)
   uint auStack_90 [4];
   undefined1 auStack_80 [32];
   undefined1 auStack_60 [28];
-  undefined1 auStack_44 [68];
+  undefined1 auStack_44 [20];
   
   fn_8257AB78(auStack_90,param_1,param_2);
   uVar2 = (ulonglong)auStack_90[0];

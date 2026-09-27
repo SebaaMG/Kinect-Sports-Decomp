@@ -621,8 +621,8 @@ void fn_82B2B908(undefined8 param_1,ulonglong param_2,undefined8 param_3)
   int iStack_438;
   int iStack_434;
   undefined4 uStack_430;
-  int iStack_42c;
-  undefined4 uStack_428;
+  struct { int first; undefined4 second; } stack_pair_42c;
+
   uint uStack_424;
   uint uStack_420;
   uint uStack_41c;
@@ -641,12 +641,12 @@ void fn_82B2B908(undefined8 param_1,ulonglong param_2,undefined8 param_3)
   double dStack_3d8;
   double dStack_3d0;
   undefined8 uStack_3c8;
-  undefined8 auStack_3c0 [2];
+  undefined8 auStack_3c0;
   uint auStack_3b0 [2];
   undefined8 uStack_3a8;
   undefined8 uStack_3a0;
   undefined8 uStack_398;
-  int aiStack_390 [2];
+  int aiStack_390 [1];
   undefined8 uStack_388;
   undefined8 uStack_380;
   undefined8 uStack_378;
@@ -964,10 +964,10 @@ LAB_82b2c1cc:
                   if (!bVar65) {
                     fn_82B252E0(iVar18,param_2,uVar4);
                   }
-                  fn_82B82580(puVar51,uVar59,auStack_3c0,&uStack_3e0);
+                  fn_82B82580(puVar51,uVar59,&auStack_3c0,&uStack_3e0);
                   fn_82B82580(puVar20,uVar59,&uStack_3f0,&uStack_3c8);
-                  dVar71 = (double)fn_82B810A8(auStack_3c0[0],uStack_3f0);
-                  dStack_368 = (double)fn_82B810A8(auStack_3c0[0],uStack_3c8);
+                  dVar71 = (double)fn_82B810A8(auStack_3c0,uStack_3f0);
+                  dStack_368 = (double)fn_82B810A8(auStack_3c0,uStack_3c8);
                   uStack_360 = fn_82B810A8(uStack_3e0,uStack_3f0);
                   uStack_358 = fn_82B810A8(uStack_3e0,uStack_3c8);
                   pdVar47 = &dStack_368;
@@ -1571,21 +1571,21 @@ LAB_82b30b10:
                     }
                     else if (uVar21 == 0x33) {
                       puVar51 = (uint *)piVar8[0xb];
-                      fn_82B82D28(puVar51,0,&iStack_42c,auStack_1b0,&iStack_4d8,0,param_2,0);
-                      uVar22 = *(uint *)(iStack_42c + 8) >> 7 & 0x7f;
+                      fn_82B82D28(puVar51,0,&stack_pair_42c.first,auStack_1b0,&iStack_4d8,0,param_2,0);
+                      uVar22 = *(uint *)(stack_pair_42c.first + 8) >> 7 & 0x7f;
                       if ((uVar22 == 0x36) && (iStack_4d8 == 0)) {
-                        uVar26 = *(undefined4 *)(iStack_42c + 0x2c);
+                        uVar26 = *(undefined4 *)(stack_pair_42c.first + 0x2c);
 LAB_82b30a7c:
                         uVar22 = fn_82B1B370(iVar18,0,param_2,uVar26);
                         goto LAB_82b30a90;
                       }
                       if ((uVar22 == 0x48) && (iStack_4d8 == 0)) {
                         uVar22 = fn_82B1AF98(iVar18,0,param_2,
-                                                   *(undefined4 *)(iStack_42c + 0x2c));
+                                                   *(undefined4 *)(stack_pair_42c.first + 0x2c));
                         goto LAB_82b30a90;
                       }
                       if ((uVar22 == 0x33) && (iStack_4d8 == 0)) {
-                        fn_82B82D28(*(undefined4 *)(iStack_42c + 0x2c),0,&uStack_4d0,
+                        fn_82B82D28(*(undefined4 *)(stack_pair_42c.first + 0x2c),0,&uStack_4d0,
                                           &uStack_424,&uStack_59c,0,param_2,0);
                         uVar14 = (ulonglong)uStack_59c;
                         uVar22 = uStack_4d0;
@@ -3168,9 +3168,9 @@ LAB_82b2f048:
                                (cVar36 = fn_82AF4A50(*(undefined4 *)(uStack_6ec + 0x30),
                                                            iStack_6e8), cVar36 != '\0')) {
                               fn_82B82D28(*(undefined4 *)(uVar21 + 0x2c),iVar19,&uStack_480,
-                                                &iStack_528,&uStack_428,0,param_2,0);
-                              uVar26 = uStack_428;
-                              cVar36 = fn_82AEFAD0(uStack_428,1);
+                                                &iStack_528,&stack_pair_42c.second,0,param_2,0);
+                              uVar26 = stack_pair_42c.second;
+                              cVar36 = fn_82AEFAD0(stack_pair_42c.second,1);
                               if (cVar36 != '\0') {
                                 uVar57 = fn_82AD1228(uVar26,1);
                                 iVar19 = iStack_528;

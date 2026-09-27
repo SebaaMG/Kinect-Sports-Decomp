@@ -46,7 +46,7 @@ void fn_82A74760(int *param_1,int param_2)
   uint *puVar7;
   int iStack_50;
   undefined4 uStack_4c;
-  int aiStack_48 [18];
+  int aiStack_48;
   
   iVar2 = *param_1;
   piVar6 = param_1 + 0x38;
@@ -68,7 +68,7 @@ void fn_82A74760(int *param_1,int param_2)
     }
     if (bVar1) goto LAB_82a74904;
     iVar4 = fn_82A75DF8(*(undefined4 *)(param_2 + 0x18),piVar6,&uStack_4c,&iStack_50,
-                              aiStack_48);
+                              &aiStack_48);
     if (iVar4 < 0) {
       return;
     }
@@ -92,7 +92,7 @@ void fn_82A74760(int *param_1,int param_2)
           param_1[0x84] = 0;
           *(uint *)(iVar2 + 0x14) =
                (uint)*(ushort *)((iStack_50 + -2) * 2 + *(int *)(param_2 + 0x20));
-          *(int *)(iVar2 + 0x18) = -1 - (aiStack_48[0] >> 0x1f);
+          *(int *)(iVar2 + 0x18) = -1 - (aiStack_48 >> 0x1f);
         }
       }
       return;

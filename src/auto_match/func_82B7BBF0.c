@@ -35,7 +35,7 @@ undefined4 fn_82B7BBF0(int param_1)
 {
   char cVar1;
   undefined4 uStack_20;
-  undefined1 auStack_1c [12];
+  undefined1 auStack_1c [1];
   
   cVar1 = fn_82BA0310(*(undefined4 *)(param_1 + 0xab0));
   (**(code **)(**(int **)(param_1 + 0x5d0) + 0xc))

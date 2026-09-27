@@ -42,7 +42,7 @@ void fn_825A0F28(undefined8 param_1,char *param_2,char *param_3,undefined8 param
   int iVar5;
   char cStack_231;
   undefined1 auStack_230 [256];
-  undefined1 auStack_130 [304];
+  undefined1 auStack_130 [288];
   
   pcVar4 = param_3;
   do {

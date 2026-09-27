@@ -33,7 +33,7 @@ void fn_8266DB08(int param_1,int param_2)
 
 {
   int *piVar1;
-  undefined1 auStack_10 [16];
+  undefined1 auStack_10 [1];
   
   piVar1 = *(int **)(param_1 + 0x1e0);
   while( true ) {

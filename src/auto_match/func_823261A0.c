@@ -40,7 +40,7 @@ undefined4 fn_823261A0(int param_1,int *param_2)
   undefined4 *puVar7;
   undefined4 *puVar8;
   undefined4 *puStack_40;
-  undefined4 *apuStack_3c [15];
+  undefined4 *apuStack_3c [1];
   
   iVar2 = *param_2;
   puVar7 = (undefined4 *)(iVar2 + 4);

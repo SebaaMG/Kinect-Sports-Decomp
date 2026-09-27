@@ -51,14 +51,14 @@ undefined8 fn_8276CE88(undefined8 param_1,int *param_2)
   uint uVar7;
   undefined2 uStack_6c;
   undefined2 uStack_6a;
-  undefined4 uStack_68;
-  undefined4 uStack_64;
+  struct { undefined4 first; undefined4 second; } stack_pair_68;
+
   undefined4 uStack_60;
   
-  uStack_68 = 0;
+  stack_pair_68.first = 0;
   uStack_60 = 0;
   uVar6 = 0;
-  uStack_64 = 0;
+  stack_pair_68.second = 0;
   uVar7 = 0;
   bVar1 = false;
   uVar5 = 0;
@@ -78,7 +78,7 @@ undefined8 fn_8276CE88(undefined8 param_1,int *param_2)
                                (uVar4 & 0xfff))) - 1) goto LAB_8276cf2c;
         uStack_6a = (undefined2)uVar7;
         uStack_6c = uVar6;
-        fn_8276AB50(&uStack_68,&uStack_6c);
+        fn_8276AB50(&stack_pair_68.first,&uStack_6c);
         bVar1 = false;
       }
       else {
@@ -105,11 +105,11 @@ LAB_8276cf2c:
   if (bVar1) {
     uStack_6a = (undefined2)uVar7;
     uStack_6c = uVar6;
-    fn_8276AB50(&uStack_68,&uStack_6c);
+    fn_8276AB50(&stack_pair_68.first,&uStack_6c);
   }
-  fn_827673B0(&uStack_68,0,uStack_64,0);
-  fn_8276B860(param_1,&uStack_68);
-  fn_8267BE38(uStack_68);
+  fn_827673B0(&stack_pair_68.first,0,stack_pair_68.second,0);
+  fn_8276B860(param_1,&stack_pair_68.first);
+  fn_8267BE38(stack_pair_68.first);
   return param_1;
 }
 

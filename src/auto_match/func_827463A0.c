@@ -75,7 +75,7 @@ void fn_827463A0(void)
   undefined1 auStack_80 [16];
   undefined1 auStack_70 [16];
   undefined1 auStack_60 [16];
-  undefined1 auStack_50 [80];
+  undefined1 auStack_50 [1];
   
   iVar5 = fn_82F6A548();
   cVar6 = fn_82695468(iVar5,0x11);

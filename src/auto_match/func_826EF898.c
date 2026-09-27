@@ -35,14 +35,14 @@ void fn_826EF898(int param_1)
 
 {
   undefined4 *puVar1;
-  undefined4 uStack_20;
-  undefined4 uStack_1c;
+  struct { undefined4 first; undefined4 second; } stack_pair_20;
+
   undefined1 auStack_18 [8];
   
   if (*(char *)(param_1 + 8) == '\0') {
-    uStack_20 = 0;
-    uStack_1c = 0;
-    puVar1 = (undefined4 *)fn_826EF830(auStack_18,param_1,&uStack_20);
+    stack_pair_20.first = 0;
+    stack_pair_20.second = 0;
+    puVar1 = (undefined4 *)fn_826EF830(auStack_18,param_1,&stack_pair_20.first);
     *(undefined4 *)(param_1 + 0x1c) = *puVar1;
     *(undefined4 *)(param_1 + 0x20) = puVar1[1];
     *(undefined1 *)(param_1 + 8) = 1;

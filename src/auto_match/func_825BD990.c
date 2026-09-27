@@ -38,8 +38,8 @@ undefined8 fn_825BD990(int param_1)
   uint uVar1;
   int iVar2;
   ulonglong uVar3;
-  undefined4 uStack_20;
-  int iStack_1c;
+  struct { undefined4 first; int second; } stack_pair_20;
+
   
   uVar3 = (ulonglong)*(uint *)(param_1 + 0x21c);
   uVar1 = *(uint *)(param_1 + 0x220);
@@ -47,15 +47,15 @@ undefined8 fn_825BD990(int param_1)
     if ((uVar3 & 0xffffffff) == (ulonglong)uVar1) {
       return 1;
     }
-    fn_82365BD8(&uStack_20,uVar3);
-    iVar2 = fn_827D98B0(uStack_20);
+    fn_82365BD8(&stack_pair_20.first,uVar3);
+    iVar2 = fn_827D98B0(stack_pair_20.first);
     if (iVar2 != 0) break;
     uVar3 = uVar3 + 8;
-    if (iStack_1c != 0) {
+    if (stack_pair_20.second != 0) {
       fn_822315A0();
     }
   }
-  if (iStack_1c != 0) {
+  if (stack_pair_20.second != 0) {
     fn_822315A0();
   }
   return 0;

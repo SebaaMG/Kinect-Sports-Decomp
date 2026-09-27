@@ -38,7 +38,7 @@ ulonglong fn_82871F60(undefined8 param_1,undefined8 param_2,undefined8 param_3)
   undefined8 uVar1;
   ulonglong uVar2;
   ulonglong uVar3;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [32];
   
   uVar1 = fn_82811400(auStack_40,4);
   uVar2 = fn_82811080(0xffffffff832116f8,0x8c,uVar1);

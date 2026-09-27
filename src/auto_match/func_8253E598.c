@@ -71,10 +71,10 @@ void fn_8253E598(int param_1,undefined8 param_2)
   undefined4 uVar15;
   undefined4 uVar16;
   undefined1 auStack_d0 [8];
-  undefined4 uStack_c8;
-  undefined4 uStack_c4;
-  int aiStack_c0 [4];
-  undefined1 auStack_b0 [16];
+  struct { undefined4 first; undefined4 second; } stack_pair_c8;
+
+  int aiStack_c0;
+  undefined1 auStack_b0 [1];
   undefined1 auStack_a0 [16];
   undefined1 auStack_90 [16];
   undefined1 auStack_80 [128];
@@ -147,11 +147,11 @@ LAB_8253e6cc:
       if (*(int *)(param_1 + 0x36c) != 0) {
         fn_825A5D30(param_1 + 0x310,param_1,*piVar9,*(undefined4 *)(param_1 + 0x4e0));
       }
-      fn_82A1EFC0(aiStack_c0,0,4);
-      uStack_c8 = 0x4c;
-      uStack_c4 = 0xc;
-      aiStack_c0[0] = param_1;
-      fn_8257C8F0(param_2,&uStack_c8);
+      fn_82A1EFC0(&aiStack_c0,0,4);
+      stack_pair_c8.first = 0x4c;
+      stack_pair_c8.second = 0xc;
+      aiStack_c0 = param_1;
+      fn_8257C8F0(param_2,&stack_pair_c8.first);
     }
     puVar3 = (undefined4 *)((uint)(auStack_90 + in_r0) & 0xfffffff0);
     *puVar3 = uVar13;

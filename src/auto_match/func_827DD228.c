@@ -52,7 +52,7 @@ undefined8 fn_827DD228(undefined8 param_1,undefined4 *param_2)
   ulonglong uVar9;
   ulonglong uVar10;
   uint uStack_40;
-  undefined1 auStack_3c [60];
+  undefined1 auStack_3c [1];
   
   uVar1 = *param_2;
   puVar2 = (undefined4 *)param_2[7];

@@ -55,8 +55,8 @@ void fn_82252510(int param_1,undefined8 param_2,int param_3)
   undefined1 auStack_d0 [4];
   float fStack_cc;
   undefined1 auStack_c8 [8];
-  undefined4 uStack_c0;
-  undefined4 uStack_bc;
+  struct { undefined4 first; undefined4 second; } stack_pair_c0;
+
   undefined4 uStack_b8;
   undefined4 uStack_b4;
   undefined4 uStack_b0;
@@ -67,13 +67,13 @@ void fn_82252510(int param_1,undefined8 param_2,int param_3)
   undefined1 auStack_80 [16];
   undefined1 auStack_70 [112];
   
-  uStack_c0 = 0xffffffff;
+  stack_pair_c0.first = 0xffffffff;
   puVar2 = (undefined4 *)((uint)(auStack_a0 + in_r0) & 0xfffffff0);
   *puVar2 = in_register_000104d0;
   puVar2[1] = in_register_000104d4;
   puVar2[2] = in_register_000104d8;
   puVar2[3] = in_vr77;
-  uStack_bc = 0xffffffff;
+  stack_pair_c0.second = 0xffffffff;
   uStack_b8 = 0xffffffff;
   uStack_b4 = 0xffffffff;
   uStack_b0 = 0;
@@ -81,7 +81,7 @@ void fn_82252510(int param_1,undefined8 param_2,int param_3)
   uStack_ab = 1;
   fn_82250D10(auStack_70);
   (**(code **)(**(int **)(param_1 + 0x68) + 0x14))(*(int **)(param_1 + 0x68),param_2,auStack_80);
-  (**(code **)(**(int **)(param_1 + 0x70) + 0x14))(*(int **)(param_1 + 0x70),param_2,&uStack_c0);
+  (**(code **)(**(int **)(param_1 + 0x70) + 0x14))(*(int **)(param_1 + 0x70),param_2,&stack_pair_c0.first);
   (**(code **)(**(int **)(param_1 + 0x78) + 0x14))(*(int **)(param_1 + 0x78),param_2,auStack_90);
   (**(code **)(**(int **)(param_1 + 0x80) + 0x14))(*(int **)(param_1 + 0x80),param_2,&fStack_cc);
   (**(code **)(**(int **)(param_1 + 0x88) + 0x14))(*(int **)(param_1 + 0x88),param_2,auStack_d0);
@@ -89,7 +89,7 @@ void fn_82252510(int param_1,undefined8 param_2,int param_3)
   (**(code **)(**(int **)(param_1 + 0x98) + 0x14))(*(int **)(param_1 + 0x98),param_2,auStack_c8);
   piVar1 = *(int **)(param_3 + 0x10);
   if (piVar1 != (int *)0x0) {
-    (**(code **)(*piVar1 + 4))((double)fStack_cc,piVar1,&uStack_c0);
+    (**(code **)(*piVar1 + 4))((double)fStack_cc,piVar1,&stack_pair_c0.first);
   }
   return;
 }

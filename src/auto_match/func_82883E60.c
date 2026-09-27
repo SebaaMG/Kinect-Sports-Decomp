@@ -37,19 +37,19 @@ void fn_82883E60(undefined8 param_1,undefined8 param_2)
   char cVar1;
   ulonglong uVar2;
   int *piVar3;
-  int *apiStack_40 [16];
+  int * apiStack_40;
   
-  apiStack_40[0] = (int *)*lbl_83212A04;
+  apiStack_40 = (int *)*lbl_83212A04;
   piVar3 = lbl_83212A04;
-  if (apiStack_40[0] != lbl_83212A04) {
+  if (apiStack_40 != lbl_83212A04) {
     do {
-      uVar2 = (ulonglong)(uint)apiStack_40[0][4];
+      uVar2 = (ulonglong)(uint)apiStack_40[4];
       if ((uVar2 != 0) && (cVar1 = fn_82880818(uVar2,param_1), cVar1 != '\0')) {
         fn_82883C18(uVar2 + 0x60,param_2);
         piVar3 = lbl_83212A04;
       }
-      fn_828EA790(apiStack_40);
-    } while (apiStack_40[0] != piVar3);
+      fn_828EA790(&apiStack_40);
+    } while (apiStack_40 != piVar3);
   }
   return;
 }

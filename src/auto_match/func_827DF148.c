@@ -40,12 +40,12 @@ undefined4 fn_827DF148(int param_1,undefined8 param_2,int param_3)
   undefined8 uVar2;
   int iVar3;
   undefined4 uStack_30;
-  int aiStack_2c [11];
+  int aiStack_2c;
   
   uStack_30 = fn_827D96A0(param_2);
-  fn_827E0658(aiStack_2c,param_1,&uStack_30);
-  if (aiStack_2c[0] != *(int *)(param_1 + 4)) {
-    uVar1 = *(undefined4 *)(aiStack_2c[0] + 0xc);
+  fn_827E0658(&aiStack_2c,param_1,&uStack_30);
+  if (aiStack_2c != *(int *)(param_1 + 4)) {
+    uVar1 = *(undefined4 *)(aiStack_2c + 0xc);
     uVar2 = fn_827E2598(uVar1);
     iVar3 = fn_827D9780(uVar2,param_2);
     if (iVar3 == 0) {

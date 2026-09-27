@@ -42,7 +42,7 @@ void fn_826E0428(int param_1)
   uint uVar3;
   ulonglong uVar2;
   int iVar4;
-  uint auStack_30 [12];
+  uint auStack_30;
   
   uVar3 = fn_826A6A38();
   uVar3 = uVar3 & 0xffff;
@@ -54,12 +54,12 @@ void fn_826E0428(int param_1)
   else {
     iVar4 = fn_826D28F0(uVar2,*(undefined4 *)(param_1 + 0x24));
   }
-  auStack_30[0] = uVar3;
-  fn_826CDAB8(iVar4,param_1,auStack_30);
+  auStack_30 = uVar3;
+  fn_826CDAB8(iVar4,param_1,&auStack_30);
   uVar1 = *(undefined4 *)(param_1 + 0x20);
   *(uint *)(iVar4 + 0xc) = uVar3;
-  auStack_30[0] = uVar3;
-  fn_826DDC60(uVar1,auStack_30,iVar4);
+  auStack_30 = uVar3;
+  fn_826DDC60(uVar1,&auStack_30,iVar4);
   fn_82687270(iVar4);
   return;
 }

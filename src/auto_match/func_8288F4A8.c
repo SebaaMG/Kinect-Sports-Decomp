@@ -44,7 +44,7 @@ void fn_8288F4A8(int *param_1,int param_2)
   int *piVar6;
   int iVar7;
   int iStack_40;
-  int aiStack_3c [15];
+  int aiStack_3c [1];
   
   iVar1 = param_1[1];
   for (iVar7 = *param_1; iVar7 != iVar1; iVar7 = iVar7 + 0x20) {

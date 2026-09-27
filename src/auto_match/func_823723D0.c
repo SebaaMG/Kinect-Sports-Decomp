@@ -51,7 +51,7 @@ void fn_823723D0(undefined8 param_1,int param_2,int param_3,int param_4,undefine
   undefined1 auStack_58 [8];
   undefined1 auStack_50 [8];
   undefined1 auStack_48 [8];
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [1];
   
   if (param_6 < 0x18) {
     uVar2 = *(uint *)(&lbl_831DCD58 + param_6 * 4);

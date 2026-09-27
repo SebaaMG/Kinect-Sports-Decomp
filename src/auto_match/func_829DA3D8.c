@@ -42,7 +42,7 @@ undefined8 fn_829DA3D8(ulonglong param_1,undefined8 param_2,undefined8 param_3)
   int iVar2;
   undefined8 uVar1;
   undefined1 auStack_240 [272];
-  undefined1 auStack_130 [304];
+  undefined1 auStack_130 [272];
   
   iVar2 = fn_82F664B0(0xffffffff832178f8,0x104);
   if ((((iVar2 == 0) && (iVar2 = fn_82F664B0(auStack_130,0x104,param_3), iVar2 == 0)) &&

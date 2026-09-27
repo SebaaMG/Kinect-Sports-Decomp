@@ -71,8 +71,8 @@ int fn_82499E30(int param_1,int *param_2)
   undefined8 uStack_118;
   undefined8 uStack_110;
   undefined8 uStack_108;
-  undefined4 uStack_100;
-  undefined4 uStack_fc;
+  struct { undefined4 first; undefined4 second; } stack_pair_100;
+
   undefined4 uStack_f8;
   undefined1 uStack_ef;
   undefined1 uStack_ee;
@@ -105,8 +105,8 @@ int fn_82499E30(int param_1,int *param_2)
     aiStack_d0[0] = *param_2;
     uStack_14c = 0;
     ppuStack_150 = &lbl_821BEBB8;
-    uStack_100 = 0;
-    uStack_fc = 0;
+    stack_pair_100.first = 0;
+    stack_pair_100.second = 0;
     uStack_f8 = 0;
     uStack_ef = 0;
     uStack_ee = 0;
@@ -118,13 +118,13 @@ int fn_82499E30(int param_1,int *param_2)
     uStack_88 = uStack_118;
     uStack_80 = uStack_110;
     uStack_78 = uStack_108;
-    fn_824925D0(auStack_70,&uStack_100);
+    fn_824925D0(auStack_70,&stack_pair_100.first);
     piVar4 = (int *)fn_8249A1F0(auStack_160,param_1,aiStack_d0);
     ppuStack_c0 = &lbl_821BEBB8;
     piVar4 = (int *)*piVar4;
     fn_82491E88(auStack_70);
     ppuStack_150 = &lbl_821BEBB8;
-    fn_82491E88(&uStack_100);
+    fn_82491E88(&stack_pair_100.first);
   }
   return (int)piVar4 + 0x20;
 }

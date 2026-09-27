@@ -41,7 +41,7 @@ void fn_824AEA50(int param_1)
   undefined4 uVar5;
   undefined4 uVar6;
   undefined4 uVar7;
-  undefined1 auStack_30 [24];
+  undefined1 auStack_30 [8];
   
   fn_824AEB10();
   iVar1 = *(int *)(param_1 + 0x3c);

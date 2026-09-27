@@ -39,12 +39,12 @@ void fn_82821728(int param_1,char param_2,char param_3)
   longlong lVar4;
   int iVar5;
   undefined4 *puVar6;
-  int aiStack_50 [20];
+  int aiStack_50;
   
   iVar1 = *(int *)(*(int *)(param_1 + 0x1c) + 0x5c);
   if ((*(int *)(param_1 + 0x20) != 0) && (param_2 == '\0')) {
-    fn_82820290(*(int *)(param_1 + 0x20),1,aiStack_50);
-    iVar1 = aiStack_50[0] + iVar1;
+    fn_82820290(*(int *)(param_1 + 0x20),1,&aiStack_50);
+    iVar1 = aiStack_50 + iVar1;
   }
   *(int *)(param_1 + 0x30) = iVar1;
   *(uint *)(param_1 + 0x34) = (uint)*(byte *)(*(int *)(param_1 + 0x1c) + 0x51) * 0x21 + iVar1;

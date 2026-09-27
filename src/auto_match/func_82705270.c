@@ -51,7 +51,7 @@ ulonglong fn_82705270(int param_1,undefined8 param_2,ulonglong param_3,undefined
   undefined8 uStack00000038;
   undefined8 uStack00000040;
   undefined8 uStack00000048;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [32];
   
   if (*(int *)(param_1 + 0x68) != 0) {
     uStack00000030 = param_5;

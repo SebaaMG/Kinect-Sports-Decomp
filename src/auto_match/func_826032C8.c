@@ -59,7 +59,7 @@ void fn_826032C8(int param_1)
   int iVar11;
   undefined1 uStack_d0;
   undefined1 auStack_c0 [16];
-  undefined1 auStack_b0 [176];
+  undefined1 auStack_b0 [128];
   
   puVar5 = (undefined4 *)fn_825A4E80();
   if (puVar5 != (undefined4 *)0x0) {

@@ -28,7 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_40;
 extern unsigned int *auStack_90;
 extern int fn_82553A18();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int iStack_7c;
 extern unsigned int lbl_82196290;
 extern unsigned int lbl_82196298;
@@ -57,7 +57,7 @@ void fn_8252B998(int param_1)
   undefined8 uStack_58;
   undefined8 uStack_50;
   undefined8 uStack_48;
-  undefined1 auStack_40 [64];
+  undefined1 auStack_40 [48];
   
   piVar1 = *(int **)(param_1 + 0x8c0);
   if (piVar1 != (int *)0x0) {
@@ -66,13 +66,13 @@ void fn_8252B998(int param_1)
                *(undefined4 *)(*(int *)(param_1 + 0x4c) + 0x44),
                *(undefined4 *)(*(int *)(param_1 + 0x4c) + 0x40));
     uVar2 = *(undefined4 *)(*(int *)(param_1 + 0x4c) + 0x1a8);
-    fn_82F68CC0(&uStack_70,param_1 + 0xf0,0x40);
+    memcpy(&uStack_70,param_1 + 0xf0,0x40);
     iVar6 = 0;
     if (0 < piVar1[0x48]) {
       iVar5 = 0;
       do {
         iStack_7c = piVar1[0x47];
-        fn_82F68CC0(auStack_90,auStack_40,0x10);
+        memcpy(auStack_90,auStack_40,0x10);
         fn_82553A18(uVar2,*(undefined4 *)(iVar5 + piVar1[0x49]),uStack_70,uStack_68,uStack_60,
                           uStack_58,uStack_50,uStack_48);
         iVar6 = iVar6 + 1;

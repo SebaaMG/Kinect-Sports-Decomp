@@ -36,14 +36,14 @@ undefined8 fn_82850708(int param_1,int param_2,undefined8 param_3,undefined4 *pa
 {
   int iVar1;
   undefined4 uStack_30;
-  int aiStack_2c [11];
+  int aiStack_2c;
   
   if (*(int *)(param_1 + 0x144) != 0) {
     iVar1 = fn_82817B08();
     if ((-1 < (int)param_3) && ((int)param_3 < iVar1)) {
       fn_82817B50(*(undefined4 *)(param_1 + 0x144),param_3,&uStack_30);
-      fn_82851858(uStack_30,aiStack_2c);
-      *param_4 = *(undefined4 *)(aiStack_2c[0] + param_2);
+      fn_82851858(uStack_30,&aiStack_2c);
+      *param_4 = *(undefined4 *)(aiStack_2c + param_2);
       return 1;
     }
   }

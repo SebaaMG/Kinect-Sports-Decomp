@@ -41,19 +41,19 @@ void fn_82826498(undefined8 param_1,ulonglong param_2,undefined4 param_3,code *p
   undefined8 uVar2;
   undefined4 uStack_40;
   uint uStack_3c;
-  undefined4 auStack_38 [14];
+  undefined4 auStack_38;
   
   fn_828261B0();
   uStack_3c = (uint)param_2;
   uStack_40 = param_3;
   uVar1 = param_2 & 0xffffffff;
   while (uVar1 != 0) {
-    uVar2 = (*param_4)(auStack_38[0],param_2,uStack_40,param_5);
-    fn_82826290(auStack_38[0],&uStack_3c,&uStack_40,uVar2);
+    uVar2 = (*param_4)(auStack_38,param_2,uStack_40,param_5);
+    fn_82826290(auStack_38,&uStack_3c,&uStack_40,uVar2);
     param_2 = (ulonglong)uStack_3c;
     uVar1 = param_2;
   }
-  fn_82826230(auStack_38);
+  fn_82826230(&auStack_38);
   return;
 }
 

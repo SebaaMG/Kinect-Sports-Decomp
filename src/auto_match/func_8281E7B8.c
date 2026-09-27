@@ -45,7 +45,7 @@ void fn_8281E7B8(undefined8 param_1,undefined8 param_2,undefined8 param_3)
 
 {
   double dVar1;
-  undefined1 auStack_70 [16];
+  undefined1 auStack_70 [1];
   undefined1 auStack_60 [16];
   undefined1 auStack_50 [16];
   undefined1 auStack_40 [64];

@@ -35,14 +35,14 @@ undefined8 fn_8281ABE0(int param_1,ulonglong param_2)
 {
   ulonglong uVar1;
   int iStack_30;
-  int aiStack_2c [11];
+  int aiStack_2c;
   
   fn_828233A8(param_1 + 0x88,&iStack_30,0xffffffff828192c8,param_2);
   if (iStack_30 != 0) {
-    fn_828233A8(param_1 + 0x88,aiStack_2c,0xffffffff828192c8,param_2);
-    uVar1 = (ulonglong)*(uint *)(aiStack_2c[0] + 0x28);
-    if (((uVar1 != 0) && (*(int *)(aiStack_2c[0] + 0x24) != 0)) &&
-       ((param_2 & 0xffffffff) == (ulonglong)*(uint *)(aiStack_2c[0] + 0x3c))) {
+    fn_828233A8(param_1 + 0x88,&aiStack_2c,0xffffffff828192c8,param_2);
+    uVar1 = (ulonglong)*(uint *)(aiStack_2c + 0x28);
+    if (((uVar1 != 0) && (*(int *)(aiStack_2c + 0x24) != 0)) &&
+       ((param_2 & 0xffffffff) == (ulonglong)*(uint *)(aiStack_2c + 0x3c))) {
       if ((*(uint *)(param_1 + 0xc) & 4) != 0) {
         param_2 = *(uint *)(param_1 + 0x78) + param_2;
         uVar1 = uVar1 + ((ulonglong)*(uint *)(param_1 + 0x78) & 0x7fffffff) * -2;

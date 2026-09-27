@@ -57,7 +57,7 @@ ulonglong fn_822ACC48(undefined4 *param_1,undefined8 param_2,ulonglong param_3,u
   undefined4 uVar14;
   undefined1 auStack_100 [16];
   undefined1 auStack_f0 [16];
-  undefined1 auStack_e0 [16];
+  undefined1 auStack_e0 [1];
   char acStack_d0 [128];
   char acStack_50 [80];
   

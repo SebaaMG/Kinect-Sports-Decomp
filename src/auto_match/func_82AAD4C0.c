@@ -38,21 +38,21 @@ void fn_82AAD4C0(ulonglong param_1,ulonglong param_2,uint param_3,undefined8 par
   undefined4 *puVar1;
   uint uVar2;
   uint *puVar3;
-  uint auStack_40 [16];
+  uint auStack_40;
   
   puVar1 = (undefined4 *)*param_5;
   *puVar1 = 0x47;
   uVar2 = fn_82AAC8C0(((param_1 & 0xffffffff) >> 0x14 & 0x700 | param_1 & 0x1800) >> 8,
-                        param_1 & 0x7ff,param_4,auStack_40);
+                        param_1 & 0x7ff,param_4,&auStack_40);
   if (((param_2 & 0xffffffff) >> 0x14 & 0x700) != 0 || (param_2 & 0x1800) != 0) {
     fn_82A29A38();
   }
   if ((param_1 & 0xf0000) == 0xf0000) {
     puVar3 = puVar1 + 2;
-    puVar1[1] = (auStack_40[0] & 0x3f) << 0x10 | uVar2 & 0xffff;
+    puVar1[1] = (auStack_40 & 0x3f) << 0x10 | uVar2 & 0xffff;
   }
   else {
-    puVar1[1] = (auStack_40[0] & 0x3f) << 0x10 | 0x400000 | uVar2 & 0xffff;
+    puVar1[1] = (auStack_40 & 0x3f) << 0x10 | 0x400000 | uVar2 & 0xffff;
     uVar2 = (uint)((param_1 & 0x10000) != 0);
     if ((param_1 & 0x20000) != 0) {
       uVar2 = uVar2 | 4;

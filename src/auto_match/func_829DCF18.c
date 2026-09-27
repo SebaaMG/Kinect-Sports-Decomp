@@ -38,7 +38,7 @@ void fn_829DCF18(int param_1,undefined8 param_2)
   int iVar2;
   int *piVar3;
   ulonglong uVar4;
-  int aiStack_80 [3];
+  int aiStack_80;
   int iStack_74;
   undefined1 auStack_70 [88];
   
@@ -57,8 +57,8 @@ void fn_829DCF18(int param_1,undefined8 param_2)
     }
   }
   else {
-    aiStack_80[0] = param_1;
-    fn_829DCFB0(uVar1,0x14,aiStack_80,auStack_70);
+    aiStack_80 = param_1;
+    fn_829DCFB0(uVar1,0x14,&aiStack_80,auStack_70);
     uVar1 = 0x14;
   }
   fn_829D4B80(param_2,param_1,uVar1,auStack_70);

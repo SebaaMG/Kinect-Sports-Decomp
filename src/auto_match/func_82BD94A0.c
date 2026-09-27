@@ -26,7 +26,7 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_82BD7F18();
-extern int fn_82F68CC0();
+extern int memcpy();
 
 
 undefined8 fn_82BD94A0(int param_1,int param_2)
@@ -43,7 +43,7 @@ undefined8 fn_82BD94A0(int param_1,int param_2)
   int *piVar9;
   ulonglong uVar10;
   longlong lVar11;
-  int aiStack_70 [28];
+  int aiStack_70 [4];
   
   piVar3 = *(int **)(*(int *)(param_1 + 4) + 8);
   iVar8 = 0;
@@ -92,7 +92,7 @@ undefined8 fn_82BD94A0(int param_1,int param_2)
       do {
         piVar1 = (int *)*piVar9;
         if (piVar1 != (int *)0x0) {
-          fn_82F68CC0((ulonglong)*(uint *)(*piVar1 + 8) + (ulonglong)*(uint *)(*piVar1 + 4),
+          memcpy((ulonglong)*(uint *)(*piVar1 + 8) + (ulonglong)*(uint *)(*piVar1 + 4),
                        (ulonglong)*(uint *)(*piVar3 + 8) + (ulonglong)*(uint *)(*piVar3 + 4),uVar10)
           ;
           iVar2 = *piVar1;

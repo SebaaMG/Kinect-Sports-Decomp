@@ -32,7 +32,7 @@ extern int fn_828BDBA0();
 void fn_828BDD70(longlong param_1,undefined8 param_2)
 
 {
-  undefined1 auStack_10 [16];
+  undefined1 auStack_10 [1];
   
   fn_828BDBA0(auStack_10,param_1 + 0x70,param_2);
   return;

@@ -42,7 +42,7 @@ extern unsigned int lbl_821CB794;
 void fn_822BDC28(undefined4 *param_1)
 
 {
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [16];
   
   *param_1 = &lbl_821ACD38;
   if (param_1[0x1fa] != 0) {

@@ -32,7 +32,7 @@ extern int fn_825ACAC8();
 void fn_8287FCD0(int param_1)
 
 {
-  undefined1 auStack_30 [48];
+  undefined1 auStack_30 [32];
   
   *(undefined4 *)(param_1 + 0x10) = 0;
   *(undefined4 *)(param_1 + 0x14) = 0;

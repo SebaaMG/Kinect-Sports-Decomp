@@ -34,8 +34,8 @@ undefined8 fn_82673C58(int param_1,undefined4 param_2,int param_3,int param_4)
 
 {
   int iVar1;
-  undefined4 uStack_10;
-  int iStack_c;
+  struct { undefined4 first; int second; } stack_pair_10;
+
   
   for (iVar1 = *(int *)(param_1 + 0x34); iVar1 != *(int *)(param_1 + 0x38); iVar1 = iVar1 + 8) {
     if (*(int *)(iVar1 + 4) == param_3) {
@@ -49,9 +49,9 @@ undefined8 fn_82673C58(int param_1,undefined4 param_2,int param_3,int param_4)
       if (param_4 == 0) {
         iVar1 = param_1 + 0x44;
       }
-      uStack_10 = param_2;
-      iStack_c = param_3;
-      fn_826738F0(iVar1,&uStack_10);
+      stack_pair_10.first = param_2;
+      stack_pair_10.second = param_3;
+      fn_826738F0(iVar1,&stack_pair_10.first);
       return 1;
     }
     if (*(int *)(iVar1 + 4) == param_3) break;
