@@ -20,7 +20,7 @@ A decompilation of **Kinect Sports** for Xbox 360.
 | Matched code | 215,892 / 15,705,500 (1.37463%) |
 | Fully linked code | 159,068 / 15,705,500 (1.01282%) |
 | Units with source | 52,185 |
-| Fuzzy match | 40.16278% |
+| Fuzzy match | 40.16256% |
 
 ## Building
 
