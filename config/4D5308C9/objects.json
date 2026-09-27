@@ -2979,9 +2979,9 @@
         ]
       },
       "auto_match/func_82516318.c": {
-        "status": "NonMatching",
+        "status": "Matching",
         "extra_cflags": [
-          "/O2"
+          "/O1"
         ]
       },
       "auto_match/func_82517678.c": {
