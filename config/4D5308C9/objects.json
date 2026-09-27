@@ -3067,7 +3067,12 @@
       "auto_match/func_8259C458.c": "MISSING",
       "auto_match/func_825A4488.c": "MISSING",
       "auto_match/func_825B61D0.c": "MISSING",
-      "auto_match/func_825BC348.c": "MISSING",
+      "auto_match/func_825BC348.c": {
+        "status": "Matching",
+        "extra_cflags": [
+          "/O1"
+        ]
+      },
       "auto_match/func_825DB640.c": "MISSING",
       "auto_match/func_825DB6A8.c": "MISSING",
       "auto_match/func_825EA908.c": "MISSING",
