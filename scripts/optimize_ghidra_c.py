@@ -29,10 +29,39 @@ SUBPIECE_WORD = re.compile(
     r"\b(?P<value>[A-Za-z_]\w*(?:\[\d+\])?)\._(?P<offset>[04])_4_")
 VECTOR_ARRAY = re.compile(r"(?m)^[ \t]+undefined1\s+(?P<name>\w+)\s*\[16\]\s*;")
 VECTOR_DEREF = re.compile(r"^\*\(undefined1\s*\(\s*\*\s*\)\s*\[16\]\)\((.*)\)$")
+GHIDRA_TYPES = """typedef unsigned char undefined1, byte, undefined, bool;
+#define true 1
+#define false 0
+typedef unsigned short undefined2, ushort, word;
+typedef unsigned int undefined4, uint, dword, ulong;
+typedef unsigned __int64 undefined8, ulonglong, qword;
+typedef __int64 longlong;
+typedef int (*code)();
+typedef unsigned char U8;
+typedef unsigned short U16;
+typedef unsigned int U32;
+typedef unsigned __int64 U64;
+typedef signed char S8;
+typedef signed short S16;
+typedef signed int S32;
+typedef __int64 S64;
+typedef struct { U64 lo, hi; } V16;
+"""
 
 
 def sha(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
+
+
+def raw_ghidra_variant(source: str, stem: str, symbol: str) -> str:
+    """Give directly exported Ghidra C the same types and name as other seeds."""
+    if 'typedef unsigned char undefined1;' in source:
+        return source
+    original = f'Jeff_{stem}'
+    if not re.search(r'\b' + re.escape(original) + r'\s*\(', source):
+        return source
+    body = re.sub(r'\b' + re.escape(original) + r'\b', symbol, source)
+    return GHIDRA_TYPES + '\n' + body
 
 
 def pointer_extern_repair_variants(source: str, compiler_error: str):
@@ -352,6 +381,9 @@ def optimize(stem: str, args, config: dict, names: dict) -> dict:
         if best is None:
             compiler_error = trials[0].get('compile_error', '')
             variants = list(pointer_extern_repair_variants(source, compiler_error))
+            raw = raw_ghidra_variant(source, stem, symbol)
+            if raw != source:
+                variants.insert(0, ('Ghidra C types and function name', raw))
             if 'error C2224:' in compiler_error:
                 repaired = subpiece_word_variant(source)
                 if repaired != source:
