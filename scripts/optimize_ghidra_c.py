@@ -27,6 +27,8 @@ POINTER_EXTERN = re.compile(
     r"(?m)^extern\s+(?:unsigned int|int|float|undefined4)\s+\*+\s*(?P<name>\w+)\s*;")
 SUBPIECE_WORD = re.compile(
     r"\b(?P<value>[A-Za-z_]\w*(?:\[\d+\])?)\._(?P<offset>[04])_4_")
+VECTOR_ARRAY = re.compile(r"(?m)^[ \t]+undefined1\s+(?P<name>\w+)\s*\[16\]\s*;")
+VECTOR_DEREF = re.compile(r"^\*\(undefined1\s*\(\s*\*\s*\)\s*\[16\]\)\((.*)\)$")
 
 
 def sha(data: bytes) -> str:
@@ -65,6 +67,87 @@ def subpiece_word_variant(source: str) -> str:
             return f'((uint)({value}))'
         return f'((uint)((ulonglong)({value}) >> 32))'
     return SUBPIECE_WORD.sub(replace, source)
+
+
+def vector_copy_variant(source: str, compiler_error: str) -> str:
+    """Render Ghidra's 16-byte array assignments as C memory copies."""
+    arrays = {match['name'] for match in VECTOR_ARRAY.finditer(source)}
+    lines = source.splitlines(keepends=True)
+    def operand(value):
+        value = value.strip()
+        if value in arrays:
+            return value
+        match = VECTOR_DEREF.fullmatch(value)
+        return f'(const void *)({match[1]})' if match else None
+    changed = False
+    for number in set(re.findall(
+            r"candidate\.c\((\d+)\)\s*:\s*error C2106:", compiler_error)):
+        index = int(number) - 1
+        if not 0 <= index < len(lines):
+            continue
+        line = lines[index]
+        if line.count(' = ') != 1 or not line.rstrip().endswith(';'):
+            continue
+        lhs, rhs = line.rstrip().removesuffix(';').split(' = ', 1)
+        target = operand(lhs)
+        value = operand(rhs)
+        if target is None or value is None:
+            continue
+        indent = line[:len(line) - len(line.lstrip())]
+        lines[index] = f'{indent}memcpy((void *)({target}), {value}, 16);\n'
+        changed = True
+    if not changed:
+        return source
+    result = ''.join(lines)
+    if not re.search(r'(?m)^extern\s+void\s+\*memcpy\(', result):
+        result = 'extern void *memcpy(void *, const void *, unsigned int);\n' + result
+    return result
+
+
+def missing_ram_extern_variant(source: str, compiler_error: str) -> str:
+    """Declare address-named Ghidra globals omitted from the C seed."""
+    names = set(re.findall(r"error C2065:\s*'([A-Za-z_]\w*Ram[0-9A-Fa-f]{8})'",
+                           compiler_error))
+    if not names or len(names) > 32:
+        return source
+    declarations = []
+    scalar = {'u': 'unsigned int', 'i': 'int', 'b': 'unsigned char',
+              'c': 'char', 'f': 'float', 'l': 'long long'}
+    for name in sorted(names):
+        prefix = name.split('Ram', 1)[0]
+        pointers = len(prefix) - len(prefix.lstrip('p'))
+        base = scalar.get(prefix[pointers:])
+        if base is None:
+            continue
+        declarations.append(f'extern {base} {"*" * pointers}{name};')
+    return '\n'.join(declarations) + '\n' + source if declarations else source
+
+
+def call_relocation_variant(source: str, diff_json: str, symbol: str) -> str:
+    """Use the original object's direct-call targets when Ghidra chose an alias."""
+    data = json.loads(diff_json)
+    left = next((s for s in data['left']['symbols'] if s['name'] == symbol), None)
+    right = next((s for s in data['right']['symbols'] if s['name'] == symbol), None)
+    if not left or not right or len(left.get('instructions', [])) != len(right.get('instructions', [])):
+        return source
+    targets = {}
+    for original, candidate in zip(left['instructions'], right['instructions']):
+        old = original.get('instruction', {}).get('formatted', '')
+        new = candidate.get('instruction', {}).get('formatted', '')
+        original_call = re.fullmatch(r'(b|bl) fn_([0-9A-Fa-f]{8})', old)
+        candidate_call = re.fullmatch(r'(b|bl) fn_([0-9A-Fa-f]{8})', new)
+        if not original_call or not candidate_call or original_call[1] != candidate_call[1]:
+            continue
+        wrong, correct = candidate_call[2].upper(), original_call[2].upper()
+        if wrong == correct:
+            continue
+        if wrong in targets and targets[wrong] != correct:
+            return source
+        targets[wrong] = correct
+    if not targets:
+        return source
+    return re.sub(r'\bfn_([0-9A-Fa-f]{8})\b',
+                  lambda m: 'fn_' + targets.get(m[1].upper(), m[1]), source)
 
 
 def scalar_variant(source: str, match: re.Match[str]) -> str | None:
@@ -275,6 +358,14 @@ def optimize(stem: str, args, config: dict, names: dict) -> dict:
                     variants.append(('64-bit subpiece fields', repaired))
                     variants.extend((label + ', subpiece fields', subpiece_word_variant(code))
                                     for label, code in list(variants))
+            if 'error C2106:' in compiler_error:
+                repaired = vector_copy_variant(source, compiler_error)
+                if repaired != source:
+                    variants.append(('16-byte vector copies', repaired))
+            if 'error C2065:' in compiler_error:
+                repaired = missing_ram_extern_variant(source, compiler_error)
+                if repaired != source:
+                    variants.append(('missing Ghidra global declarations', repaired))
             for label, variant in variants:
                 result = check(variant, flags, label)
                 if result and (best is None or result[0]['score'] > best[0]['score']):
@@ -324,6 +415,10 @@ def optimize(stem: str, args, config: dict, names: dict) -> dict:
             attempt(best[1], alternate, "optimization flags")
             if not best[0]["exact"]:
                 attempt(source, alternate, "original source, optimization flags")
+        if not best[0]["exact"]:
+            variant = call_relocation_variant(best[1], best[2], symbol)
+            if variant != best[1]:
+                attempt(variant, best[0]['cflags'], 'original call targets')
         result = {"address": stem, "fingerprint": fingerprint, "source_sha256": source_hash,
                   "target_sha256": target_hash, "compiler_sha256": args.compiler_hash,
                   "symbol": symbol, "baseline": baseline, "best": best[0], "trials": trials,
