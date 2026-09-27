@@ -3013,7 +3013,12 @@
       "auto_match/func_8251E5A0.c": "MISSING",
       "auto_match/func_8251E768.c": "MISSING",
       "auto_match/func_825200F0.c": "MISSING",
-      "auto_match/func_82520E00.c": "MISSING",
+      "auto_match/func_82520E00.c": {
+        "status": "Matching",
+        "extra_cflags": [
+          "/O1"
+        ]
+      },
       "auto_match/func_825211A8.c": "MISSING",
       "auto_match/func_825231B8.c": "MISSING",
       "auto_match/func_825255A8.c": "MISSING",
