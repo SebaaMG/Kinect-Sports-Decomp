@@ -2280,7 +2280,12 @@
           "/O2"
         ]
       },
-      "auto_match/func_8302B158.c": "MISSING",
+      "auto_match/func_8302B158.c": {
+        "status": "Matching",
+        "extra_cflags": [
+          "/O2"
+        ]
+      },
       "auto_match/func_8302B9B8.c": {
         "status": "Matching",
         "extra_cflags": [
