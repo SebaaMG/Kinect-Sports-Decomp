@@ -2992,7 +2992,7 @@
       },
       "auto_match/func_82518470.c": "MISSING",
       "auto_match/func_82519B90.c": {
-        "status": "NonMatching",
+        "status": "Matching",
         "extra_cflags": [
           "/O1"
         ]
