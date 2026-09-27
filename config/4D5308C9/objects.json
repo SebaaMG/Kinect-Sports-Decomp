@@ -2082,7 +2082,7 @@
         ]
       },
       "auto_match/func_82F93A00.c": {
-        "status": "NonMatching",
+        "status": "Matching",
         "extra_cflags": [
           "/O1"
         ]
