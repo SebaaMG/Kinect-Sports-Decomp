@@ -48,9 +48,9 @@ void fn_824D6210(int param_1)
   byte in_cr0;
   undefined4 uStack_20;
   int iStack_1c;
-  undefined1 auStack_18 [4];
+  undefined1 auStack_18 [1];
   int *piStack_14;
-  
+
   uVar2 = fn_82F51468(auStack_18,*(undefined4 *)(param_1 + 0x20));
   fn_824D2AE8(&uStack_20,uVar2);
   if (ZEXT48(piStack_14) != 0) {
@@ -74,4 +74,3 @@ void fn_824D6210(int param_1)
   }
   return;
 }
-

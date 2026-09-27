@@ -42,24 +42,24 @@ undefined4 * fn_8259B070(int param_1,undefined8 param_2)
   int iVar1;
   int iVar2;
   undefined4 *puVar3;
-  undefined4 uStack_40;
-  int iStack_3c;
+  struct { undefined4 first; int second; } stack_pair_40;
+
   struct { undefined4 first; undefined4 second; } stack_pair_38;
 
-  
+
   puVar3 = (undefined4 *)fn_8265C9E0(0x44);
   if (puVar3 == (undefined4 *)0x0) {
     puVar3 = (undefined4 *)0x0;
   }
   else {
-    uStack_40 = 0;
-    iStack_3c = 0;
-    fn_82517978(&uStack_40,*(undefined4 *)(param_1 + 4),*(undefined4 *)(param_1 + 8),1);
-    iVar2 = iStack_3c;
+    stack_pair_40.first = 0;
+    stack_pair_40.second = 0;
+    fn_82517978(&stack_pair_40.first,*(undefined4 *)(param_1 + 4),*(undefined4 *)(param_1 + 8),1);
+    iVar2 = stack_pair_40.second;
     stack_pair_38.first = 0;
     stack_pair_38.second = 0;
     iVar1 = *(int *)(param_1 + 0x94);
-    fn_82517978(&stack_pair_38.first,uStack_40,iStack_3c,0);
+    fn_82517978(&stack_pair_38.first,stack_pair_40.first,stack_pair_40.second,0);
     fn_827DE858(puVar3,&stack_pair_38.first,param_2);
     puVar3[0xf] = (uint)LZCOUNT(iVar1 + -2) >> 5;
     puVar3[5] = 0;
@@ -73,4 +73,3 @@ undefined4 * fn_8259B070(int param_1,undefined8 param_2)
   }
   return puVar3;
 }
-

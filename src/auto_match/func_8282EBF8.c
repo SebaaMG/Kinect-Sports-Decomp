@@ -35,8 +35,8 @@ void fn_8282EBF8(longlong param_1,int param_2,undefined8 param_3)
   uint uVar1;
   longlong lVar2;
   ulonglong uVar3;
-  undefined4 auStack_40 [16];
-  
+  undefined4 auStack_40;
+
   param_2 = param_2 - (int)param_1;
   uVar1 = param_2 >> 2;
   uVar3 = (longlong)(param_2 >> 3) + (ulonglong)((int)uVar1 < 0 && (uVar1 & 1) != 0);
@@ -44,11 +44,10 @@ void fn_8282EBF8(longlong param_1,int param_2,undefined8 param_3)
     lVar2 = (uVar3 & 0x3fffffff) * 4 + param_1;
     do {
       lVar2 = lVar2 + -4;
-      auStack_40[0] = *(undefined4 *)lVar2;
+      auStack_40 = *(undefined4 *)lVar2;
       uVar3 = uVar3 - 1;
-      fn_8282EB50(param_1,uVar3,uVar1,auStack_40,param_3);
+      fn_8282EB50(param_1,uVar3,uVar1,&auStack_40,param_3);
     } while (0 < (int)uVar3);
   }
   return;
 }
-

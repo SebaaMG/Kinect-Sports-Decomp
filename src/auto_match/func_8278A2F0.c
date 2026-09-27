@@ -110,8 +110,8 @@ void fn_8278A2F0(undefined8 param_1,undefined8 param_2,int param_3)
   uint uStack_110;
   undefined4 uStack_10c;
   uint uStack_108;
-  uint uStack_100;
-  undefined4 uStack_fc;
+  struct { uint first; undefined4 second; } stack_pair_100;
+
   uint uStack_f8;
   struct { int first; int second; } stack_pair_f0;
 
@@ -122,7 +122,7 @@ void fn_8278A2F0(undefined8 param_1,undefined8 param_2,int param_3)
   undefined4 uStack_d0;
   undefined4 uStack_cc;
   undefined4 uStack_c8;
-  
+
   puVar7 = (uint *)fn_82F6A548();
   puVar7[0x17] = 0;
   puVar22 = puVar7 + 0x17;
@@ -201,10 +201,10 @@ void fn_8278A2F0(undefined8 param_1,undefined8 param_2,int param_3)
                     }
                     fn_827888E8(dVar37,dVar35,puVar7);
                     uVar4 = *puVar7;
-                    uStack_100 = uStack_120;
-                    uStack_fc = uStack_11c;
+                    stack_pair_100.first = uStack_120;
+                    stack_pair_100.second = uStack_11c;
                     auStack_118 = uVar4;
-                    fn_82789C08(puVar7,&uStack_100);
+                    fn_82789C08(puVar7,&stack_pair_100.first);
                     fn_82789D68(puVar29,&auStack_118);
                     if ((uVar32 & 0xffffffff) < (uVar31 & 0xffffffff)) {
                       dVar36 = -dVar37;
@@ -322,12 +322,12 @@ void fn_8278A2F0(undefined8 param_1,undefined8 param_2,int param_3)
                                   ((uVar31 | uVar32 & 0xffffffff) >> 2 & 0xff) * 0xf + 3 &
                                  0xffffffff) << 2) +
                           *(int *)((uVar19 >> 8 & 0xfffffc) + puVar7[0xb]));
-                uStack_100 = *(uint *)((((uint)((uVar31 | uVar32 & 0xffffffff) >> 2) & 0xff) * 0xf +
+                stack_pair_100.first = *(uint *)((((uint)((uVar31 | uVar32 & 0xffffffff) >> 2) & 0xff) * 0xf +
                                         (uVar21 & 3) + 3) * 4 +
                                       *(int *)((uVar19 >> 8 & 0xfffffc) + puVar7[0xb]));
-                uStack_fc = uVar10;
+                stack_pair_100.second = uVar10;
                 uStack_f8 = uVar24;
-                fn_82789C08(puVar22,&uStack_100);
+                fn_82789C08(puVar22,&stack_pair_100.first);
                 uStack_110 = uVar24;
                 uStack_10c = uVar10;
                 uStack_108 = uVar4;
@@ -432,4 +432,3 @@ void fn_8278A2F0(undefined8 param_1,undefined8 param_2,int param_3)
   fn_82F6A594();
   return;
 }
-

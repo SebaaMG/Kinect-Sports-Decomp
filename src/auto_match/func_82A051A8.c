@@ -99,13 +99,13 @@ undefined1 * fn_82A051A8(undefined1 *param_1)
   undefined4 in_register_000103f8;
   undefined4 in_vr63;
   undefined1 auStack_50 [16];
-  float fStack_40;
-  float fStack_3c;
+  struct { float first; float second; } stack_pair_40;
+
   float fStack_38;
   float fStack_30;
   float fStack_2c;
   float fStack_28;
-  
+
   dVar7 = (double)lbl_821AAD20;
   if ((double)*(float *)(param_1 + 0x40c8) != dVar7) {
     puVar3 = (undefined1 *)
@@ -139,12 +139,12 @@ undefined1 * fn_82A051A8(undefined1 *param_1)
     param_1 = puVar3;
     do {
       altv207_13(in_vs42,in_vs40);
-      puVar2 = (undefined4 *)((int)&fStack_40 + in_r0 & 0xfffffff0);
+      puVar2 = (undefined4 *)((int)&stack_pair_40.first + in_r0 & 0xfffffff0);
       *puVar2 = in_register_000103f0;
       puVar2[1] = in_register_000103f4;
       puVar2[2] = in_register_000103f8;
       puVar2[3] = in_vr63;
-      if ((((double)fStack_40 != dVar7) || ((double)fStack_3c != dVar7)) ||
+      if ((((double)stack_pair_40.first != dVar7) || ((double)stack_pair_40.second != dVar7)) ||
          ((double)fStack_38 != dVar7)) {
         param_1 = &stack0x00000000 + -0x30;
         uVar1 = puVar5[-1];
@@ -162,12 +162,12 @@ undefined1 * fn_82A051A8(undefined1 *param_1)
         puVar5[-1] = uVar1;
       }
       altv207_13(in_vs42,in_vs37);
-      puVar2 = (undefined4 *)((int)&fStack_40 + in_r0 & 0xfffffff0);
+      puVar2 = (undefined4 *)((int)&stack_pair_40.first + in_r0 & 0xfffffff0);
       *puVar2 = in_register_000103f0;
       puVar2[1] = in_register_000103f4;
       puVar2[2] = in_register_000103f8;
       puVar2[3] = in_vr63;
-      if ((((double)fStack_40 != dVar7) || ((double)fStack_3c != dVar7)) ||
+      if ((((double)stack_pair_40.first != dVar7) || ((double)stack_pair_40.second != dVar7)) ||
          ((double)fStack_38 != dVar7)) {
         param_1 = &stack0x00000000 + -0x30;
         uVar1 = *puVar5;
@@ -185,12 +185,12 @@ undefined1 * fn_82A051A8(undefined1 *param_1)
         *puVar5 = uVar1;
       }
       altv207_13(in_vs32,in_vs42);
-      puVar2 = (undefined4 *)((int)&fStack_40 + in_r0 & 0xfffffff0);
+      puVar2 = (undefined4 *)((int)&stack_pair_40.first + in_r0 & 0xfffffff0);
       *puVar2 = in_register_000103f0;
       puVar2[1] = in_register_000103f4;
       puVar2[2] = in_register_000103f8;
       puVar2[3] = in_vr63;
-      if ((((double)fStack_40 != dVar7) || ((double)fStack_3c != dVar7)) ||
+      if ((((double)stack_pair_40.first != dVar7) || ((double)stack_pair_40.second != dVar7)) ||
          ((double)fStack_38 != dVar7)) {
         param_1 = &stack0x00000000 + -0x30;
         uVar1 = puVar5[1];
@@ -208,12 +208,12 @@ undefined1 * fn_82A051A8(undefined1 *param_1)
         puVar5[1] = uVar1;
       }
       altv207_13(in_vs42,in_vs38);
-      puVar2 = (undefined4 *)((int)&fStack_40 + in_r0 & 0xfffffff0);
+      puVar2 = (undefined4 *)((int)&stack_pair_40.first + in_r0 & 0xfffffff0);
       *puVar2 = in_register_000103f0;
       puVar2[1] = in_register_000103f4;
       puVar2[2] = in_register_000103f8;
       puVar2[3] = in_vr63;
-      if ((((double)fStack_40 != dVar7) || ((double)fStack_3c != dVar7)) ||
+      if ((((double)stack_pair_40.first != dVar7) || ((double)stack_pair_40.second != dVar7)) ||
          ((double)fStack_38 != dVar7)) {
         param_1 = &stack0x00000000 + -0x30;
         uVar1 = puVar5[2];
@@ -231,12 +231,12 @@ undefined1 * fn_82A051A8(undefined1 *param_1)
         puVar5[2] = uVar1;
       }
       altv207_13(in_vs42,in_vs39);
-      puVar2 = (undefined4 *)((int)&fStack_40 + in_r0 & 0xfffffff0);
+      puVar2 = (undefined4 *)((int)&stack_pair_40.first + in_r0 & 0xfffffff0);
       *puVar2 = in_register_000103f0;
       puVar2[1] = in_register_000103f4;
       puVar2[2] = in_register_000103f8;
       puVar2[3] = in_vr63;
-      if ((((double)fStack_40 != dVar7) || ((double)fStack_3c != dVar7)) ||
+      if ((((double)stack_pair_40.first != dVar7) || ((double)stack_pair_40.second != dVar7)) ||
          ((double)fStack_38 != dVar7)) {
         param_1 = &stack0x00000000 + -0x30;
         uVar1 = puVar5[3];
@@ -260,4 +260,3 @@ undefined1 * fn_82A051A8(undefined1 *param_1)
   }
   return param_1;
 }
-

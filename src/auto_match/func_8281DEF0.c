@@ -46,8 +46,8 @@ void fn_8281DEF0(longlong param_1,longlong param_2)
   double dVar3;
   undefined1 auStack_a0 [1];
   undefined1 auStack_90 [48];
-  undefined1 auStack_60 [96];
-  
+  undefined1 auStack_60 [48];
+
   fn_8280FC18(param_1,auStack_90);
   fn_8280EA40(auStack_90,auStack_a0);
   fn_8280E418(auStack_a0,auStack_a0);
@@ -66,4 +66,3 @@ void fn_8281DEF0(longlong param_1,longlong param_2)
   } while (lVar1 != 0);
   return;
 }
-

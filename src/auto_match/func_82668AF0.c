@@ -44,8 +44,8 @@ void fn_82668AF0(undefined4 param_1)
   undefined1 auStack_1c [4];
   undefined4 uStack_18;
   undefined1 auStack_14 [1];
-  undefined1 auStack_10 [16];
-  
+  undefined1 auStack_10 [1];
+
   uStack00000014 = param_1;
   puVar2 = (undefined4 *)fn_8265F8D8(auStack_1c,param_1);
   uVar1 = *puVar2;
@@ -54,4 +54,3 @@ void fn_82668AF0(undefined4 param_1)
   fn_82668B88(auStack_10,uStack00000014,uStack_18,uVar1);
   return;
 }
-

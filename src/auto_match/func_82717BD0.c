@@ -57,8 +57,8 @@ undefined8 fn_82717BD0(int *param_1,float *param_2,ulonglong param_3)
   int iStack_74;
   int iStack_70;
   int iStack_6c;
-  undefined1 auStack_60 [96];
-  
+  undefined1 auStack_60 [48];
+
   if ((((uint)param_1[0x23] >> 0xb & 1) == 0) &&
      (((param_3 & 2) == 0 || (cVar4 = (**(code **)(*param_1 + 8))(), cVar4 != '\0')))) {
     if ((*(byte *)((int)param_1 + 0x66) & 1) == 0) {
@@ -107,4 +107,3 @@ undefined8 fn_82717BD0(int *param_1,float *param_2,ulonglong param_3)
   }
   return 0;
 }
-

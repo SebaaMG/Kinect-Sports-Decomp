@@ -51,7 +51,7 @@ void fn_82392AB0(int param_1,undefined8 param_2,int param_3)
   undefined4 uVar5;
   undefined4 uVar6;
   undefined4 uVar7;
-  undefined1 auStack_a0 [4];
+  undefined1 auStack_a0;
   undefined4 uStack_9c;
   undefined4 uStack_98;
   undefined4 uStack_94;
@@ -63,7 +63,7 @@ void fn_82392AB0(int param_1,undefined8 param_2,int param_3)
   undefined4 uStack_74;
   undefined1 auStack_70 [16];
   undefined1 auStack_60 [64];
-  
+
   (**(code **)(**(int **)(param_1 + 0x2c) + 0x14))(*(int **)(param_1 + 0x2c),param_2,auStack_60);
   (**(code **)(**(int **)(param_1 + 0x34) + 0x14))(*(int **)(param_1 + 0x34),param_2,&stack_pair_80.first);
   (**(code **)(**(int **)(param_1 + 0x3c) + 0x14))(*(int **)(param_1 + 0x3c),param_2,&uStack_9c);
@@ -72,7 +72,7 @@ void fn_82392AB0(int param_1,undefined8 param_2,int param_3)
   (**(code **)(**(int **)(param_1 + 0x54) + 0x14))(*(int **)(param_1 + 0x54),param_2,&uStack_94);
   (**(code **)(**(int **)(param_1 + 0x5c) + 0x14))(*(int **)(param_1 + 0x5c),param_2,&uStack_90);
   (**(code **)(**(int **)(param_1 + 100) + 0x14))(*(int **)(param_1 + 100),param_2,auStack_8c);
-  (**(code **)(**(int **)(param_1 + 0x6c) + 0x14))(*(int **)(param_1 + 0x6c),param_2,auStack_a0);
+  (**(code **)(**(int **)(param_1 + 0x6c) + 0x14))(*(int **)(param_1 + 0x6c),param_2,&auStack_a0);
   if (param_3 != 0) {
     memcpy(*(int *)(param_1 + 8) + param_3,auStack_60,0x40);
     iVar4 = *(int *)(param_1 + 0xc) + param_3;
@@ -96,8 +96,7 @@ void fn_82392AB0(int param_1,undefined8 param_2,int param_3)
     *(undefined4 *)(*(int *)(param_1 + 0x20) + param_3) = uStack_90;
     iVar1 = *(int *)(param_1 + 0x28);
     *(undefined4 *)(iVar4 + param_3) = auStack_8c[0];
-    *(undefined1 *)(iVar1 + param_3) = auStack_a0[0];
+    *(undefined1 *)(iVar1 + param_3) = auStack_a0;
   }
   return;
 }
-

@@ -78,8 +78,8 @@ void fn_828C6480(int param_1,int param_2,char param_3)
   struct { int first; uint second; } stack_pair_90;
 
   undefined4 *apuStack_88 [2];
-  int iStack_80;
-  int iStack_7c;
+  struct { int first; int second; } stack_pair_80;
+
   undefined **ppuStack_78;
   undefined4 uStack_74;
   int *piStack_70;
@@ -87,7 +87,7 @@ void fn_828C6480(int param_1,int param_2,char param_3)
   uint uStack_68;
   uint uStack_64;
   uint uStack_60;
-  
+
   *(undefined4 *)(param_1 + 4) = 0;
   iVar10 = param_1 + 0xc;
   fn_828A24F8(iVar10,*(undefined4 *)(*(int *)(param_1 + 0x10) + 4));
@@ -129,11 +129,11 @@ void fn_828C6480(int param_1,int param_2,char param_3)
     puVar3 = (undefined4 *)0x0;
     while( true ) {
       apuStack_88[0] = puVar3;
-      fn_828A1C98(&iStack_80,iVar10,apuStack_88);
-      iVar9 = iStack_7c;
+      fn_828A1C98(&stack_pair_80.first,iVar10,apuStack_88);
+      iVar9 = stack_pair_80.second;
       iVar17 = 0;
-      stack_pair_90.first = iStack_80;
-      if (iStack_80 == iStack_7c) break;
+      stack_pair_90.first = stack_pair_80.first;
+      if (stack_pair_80.first == stack_pair_80.second) break;
       do {
         iVar17 = iVar17 + 1;
         fn_828EA790(&stack_pair_90.first);
@@ -166,8 +166,8 @@ void fn_828C6480(int param_1,int param_2,char param_3)
                     /* WARNING: Subroutine does not return */
     fn_82230040(&ppuStack_78);
   }
-  iStack_80 = 0;
-  iStack_7c = 0;
+  stack_pair_80.first = 0;
+  stack_pair_80.second = 0;
   piVar6[0] = 0;
   piVar6[1] = 0;
   *piVar6 = (int)&piStack_70;
@@ -234,12 +234,12 @@ void fn_828C6480(int param_1,int param_2,char param_3)
     lVar14 = (ulonglong)uStack_60 + (ulonglong)stack_pair_90.second;
     if (((piStack_70 == (int *)0x0) || ((int *)*piStack_70 == (int *)0x0)) ||
        (piVar6 = *(int **)*piStack_70, piVar6 == (int *)0x0)) {
-      iStack_80 = 0;
+      stack_pair_80.first = 0;
     }
     else {
-      iStack_80 = *piVar6;
+      stack_pair_80.first = *piVar6;
     }
-    iStack_7c = (int)lVar14;
+    stack_pair_80.second = (int)lVar14;
     if (((piStack_70 == (int *)0x0) || ((undefined4 *)*piStack_70 == (undefined4 *)0x0)) ||
        (stack_pair_90.first = *(undefined4 *)*piStack_70, (int *)stack_pair_90.first == (int *)0x0)) {
       stack_pair_90.first = 0;
@@ -247,7 +247,7 @@ void fn_828C6480(int param_1,int param_2,char param_3)
     else {
       stack_pair_90.first = *(int *)stack_pair_90.first;
     }
-    fn_828C62E0(CONCAT44(stack_pair_90.first,stack_pair_90.second),CONCAT44(iStack_80,iStack_7c),
+    fn_828C62E0(CONCAT44(stack_pair_90.first,stack_pair_90.second),CONCAT44(stack_pair_80.first,stack_pair_80.second),
                   lVar14 - (ulonglong)stack_pair_90.second,uRam83214379);
     iVar10 = 0;
     if (piStack_70 != (int *)0x0) {
@@ -342,4 +342,3 @@ LAB_828c6a54:
     uVar8 = uStack_64;
   } while( true );
 }
-

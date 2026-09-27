@@ -64,8 +64,8 @@ undefined4 * fn_824E4A90(undefined4 *param_1,undefined4 *param_2)
   undefined1 auStack_30 [4];
   undefined1 auStack_2c [4];
   undefined1 auStack_28 [4];
-  undefined1 auStack_24 [12];
-  
+  undefined1 auStack_24 [1];
+
   param_1[1] = param_2;
   *param_1 = &lbl_821C164C;
   if (param_2 == (undefined4 *)0x0) {
@@ -127,4 +127,3 @@ undefined4 * fn_824E4A90(undefined4 *param_1,undefined4 *param_2)
   param_1[0x10] = uVar2;
   return param_1;
 }
-

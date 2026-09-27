@@ -48,8 +48,8 @@ void fn_8227B968(undefined8 param_1)
   int iStack_4c;
   undefined1 auStack_48 [4];
   int iStack_44;
-  undefined1 auStack_40 [64];
-  
+  undefined1 auStack_40 [48];
+
   lVar4 = 0;
   do {
     fn_82526C70(auStack_40,0x10,0xffffffff821a84f0,lVar4);
@@ -71,4 +71,3 @@ void fn_8227B968(undefined8 param_1)
   }
   return;
 }
-

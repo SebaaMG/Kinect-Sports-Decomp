@@ -29,7 +29,7 @@ extern unsigned int *auStack_224;
 extern unsigned int *auStack_238;
 extern unsigned int *auStack_240;
 extern int fn_82CAD120();
-extern int fn_82F691F0();
+extern int memset();
 extern unsigned int iStack_13c;
 extern unsigned int iStack_150;
 extern unsigned int iStack_178;
@@ -210,7 +210,7 @@ void fn_82C91F40(int param_1)
   undefined4 uStack_b0;
   undefined4 uStack_ac;
   undefined8 uStack_a8;
-  
+
   uStack_1d4 = *(undefined4 *)(param_1 + 0xe4);
   iStack_13c = *(int *)(param_1 + 0xe0);
   piStack_1e0 = aiStack_1f4;
@@ -376,8 +376,7 @@ void fn_82C91F40(int param_1)
   *(undefined4 *)(*(int *)(param_1 + 0x7b8) + 0x4c) = uVar5;
   fn_82CAD120(*(undefined4 *)(param_1 + 0x7b8),*(undefined4 *)(param_1 + 0xf8),1);
                     /* WARNING: Subroutine does not return */
-  fn_82F691F0(*(undefined4 *)(param_1 + 0x1d0),0,
+  memset(*(undefined4 *)(param_1 + 0x1d0),0,
                ((ulonglong)*(uint *)(param_1 + 0x90) +
                 ((ulonglong)*(uint *)(param_1 + 0x90) & 0x7fffffff) * 2 & 0x3ffffff) << 6);
 }
-

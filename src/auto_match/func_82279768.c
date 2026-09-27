@@ -83,14 +83,14 @@ void fn_82279768(undefined4 *param_1,undefined4 *param_2,undefined4 param_3,unde
 
   undefined **ppuStack_2a8;
   undefined4 uStack_2a4;
-  undefined1 auStack_2a0 [4];
+  undefined1 auStack_2a0 [1];
   int iStack_29c;
   undefined1 auStack_298 [4];
   int iStack_294;
   undefined1 auStack_290 [48];
   undefined2 uStack_260;
   undefined1 auStack_25e [526];
-  
+
   puVar9 = param_1 + 2;
   *param_1 = &lbl_821A82B8;
   param_1[2] = 0;
@@ -195,4 +195,3 @@ void fn_82279768(undefined4 *param_1,undefined4 *param_2,undefined4 param_3,unde
                     /* WARNING: Subroutine does not return */
   fn_82230040(&ppuStack_2a8);
 }
-

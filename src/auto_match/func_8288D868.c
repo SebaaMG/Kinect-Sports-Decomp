@@ -45,10 +45,10 @@ longlong fn_8288D868(int param_1)
   undefined4 *puVar5;
   longlong lVar6;
   int aiStack_40;
-  undefined4 uStack_38;
-  undefined4 uStack_34;
+  struct { undefined4 first; undefined4 second; } stack_pair_38;
+
   undefined1 auStack_30 [16];
-  
+
   lVar6 = 1;
   piVar1 = *(int **)(*(int *)(param_1 + 0x10) + 0x230);
   aiStack_40 = *piVar1;
@@ -65,9 +65,9 @@ LAB_8288d90c:
                     /* WARNING: Subroutine does not return */
           fn_82F622E0(0xffffffff82023604);
         }
-        uStack_38 = *(undefined4 *)(param_1 + 0x3c);
-        uStack_34 = 0;
-        puVar5 = (undefined4 *)fn_8288BE40(auStack_30,&uStack_38);
+        stack_pair_38.first = *(undefined4 *)(param_1 + 0x3c);
+        stack_pair_38.second = 0;
+        puVar5 = (undefined4 *)fn_8288BE40(auStack_30,&stack_pair_38.first);
         lVar6 = 1;
         if ((1 << (puVar5[1] & 0x3f) & *(uint *)*puVar5) == 0) goto LAB_8288d90c;
       }
@@ -76,4 +76,3 @@ LAB_8288d90c:
   }
   return lVar6;
 }
-

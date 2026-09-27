@@ -113,8 +113,8 @@ fn_827ED650(float *param_1,float *param_2,undefined8 param_3,float *param_4,floa
   double dVar4;
   undefined1 auStack_2b0 [16];
   undefined1 auStack_2a0 [16];
-  float fStack_290;
-  float fStack_28c;
+  struct { float first; float second; } stack_pair_290;
+
   float fStack_288;
   undefined1 auStack_280 [16];
   undefined1 auStack_270 [16];
@@ -168,12 +168,12 @@ fn_827ED650(float *param_1,float *param_2,undefined8 param_3,float *param_4,floa
   undefined1 auStack_f0 [48];
   undefined1 auStack_c0 [64];
   undefined1 auStack_80 [128];
-  
+
   fn_82810328(param_4,param_1,auStack_148);
-  fn_8281CAE8(param_3,auStack_148,&fStack_290);
-  dVar3 = (double)fn_82809CB0((double)fStack_290);
+  fn_8281CAE8(param_3,auStack_148,&stack_pair_290.first);
+  dVar3 = (double)fn_82809CB0((double)stack_pair_290.first);
   if ((((double)*param_2 < dVar3) ||
-      (dVar3 = (double)fn_82809CB0((double)fStack_28c), (double)param_2[1] < dVar3)) ||
+      (dVar3 = (double)fn_82809CB0((double)stack_pair_290.second), (double)param_2[1] < dVar3)) ||
      (dVar3 = (double)fn_82809CB0((double)fStack_288), (double)param_2[2] < dVar3)) {
     iVar2 = fn_8280A5E8((double)*param_5);
     if (((iVar2 == 0) && (iVar2 = fn_8280A5E8((double)*param_5), iVar2 == 0)) &&
@@ -196,13 +196,13 @@ fn_827ED650(float *param_1,float *param_2,undefined8 param_3,float *param_4,floa
       fn_8281CFC8(&uStack_1d0,param_6,auStack_f0);
       fn_8280FC78(auStack_f0,auStack_80);
       fn_8280CB70(auStack_80,auStack_130,auStack_c0);
-      if ((double)fStack_290 < dVar3) {
+      if ((double)stack_pair_290.first < dVar3) {
         stack_pair_1a0.first = -*param_2;
       }
       else {
         stack_pair_1a0.first = *param_2;
       }
-      if ((double)fStack_28c < dVar3) {
+      if ((double)stack_pair_290.second < dVar3) {
         stack_pair_1a0.second = -param_2[1];
       }
       else {
@@ -281,4 +281,3 @@ LAB_827ed6d4:
   }
   return uVar1;
 }
-

@@ -46,8 +46,8 @@ void fn_828E91A8(int param_1)
   struct { undefined4 first; undefined4 second; } stack_pair_38;
 
   undefined4 uStack_30;
-  undefined1 auStack_2c [44];
-  
+  undefined1 auStack_2c [12];
+
   uStack_30 = *(undefined4 *)(*(int *)(param_1 + 4) + 0x28);
   fn_828B5580(auStack_2c,param_1 + 0x38);
   uVar1 = fn_828E8EF8();
@@ -58,4 +58,3 @@ void fn_828E91A8(int param_1)
   fn_828E4A20(param_1);
   return;
 }
-

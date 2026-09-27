@@ -25,7 +25,7 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F691F0();
+extern int memset();
 
 
 undefined8 fn_82C1CAA0(int *param_1,int param_2,undefined4 *param_3,int param_4)
@@ -34,7 +34,7 @@ undefined8 fn_82C1CAA0(int *param_1,int param_2,undefined4 *param_3,int param_4)
   undefined8 uVar1;
   int *in_r10;
   ushort *in_stack_00000054;
-  
+
   if ((((param_1 == (int *)0x0) || (*param_1 == 0)) || (param_3 == (undefined4 *)0x0)) ||
      ((param_2 != 0 && (param_4 == 0)))) {
     uVar1 = 0xffffffff80070057;
@@ -54,7 +54,7 @@ undefined8 fn_82C1CAA0(int *param_1,int param_2,undefined4 *param_3,int param_4)
       }
       param_1[0xad] = 0;
                     /* WARNING: Subroutine does not return */
-      fn_82F691F0(param_1[0x30],0,(ulonglong)*(ushort *)(*param_1 + 0x22) << 2);
+      memset(param_1[0x30],0,(ulonglong)*(ushort *)(*param_1 + 0x22) << 2);
     }
     uVar1 = 0xffffffff8004000a;
   }
@@ -69,4 +69,3 @@ undefined8 fn_82C1CAA0(int *param_1,int param_2,undefined4 *param_3,int param_4)
   }
   return uVar1;
 }
-

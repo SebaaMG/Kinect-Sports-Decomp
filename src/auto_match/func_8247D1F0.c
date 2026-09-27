@@ -50,8 +50,8 @@ void fn_8247D1F0(int param_1,int param_2)
   undefined4 uStack_450;
   undefined4 uStack_44c;
   undefined1 auStack_444 [1012];
-  undefined1 auStack_50 [80];
-  
+  undefined1 auStack_50 [64];
+
   fn_82486B08(&uStack_450);
   uVar1 = fn_8225C590();
   fn_82230300(auStack_470,0,0);
@@ -68,4 +68,3 @@ void fn_8247D1F0(int param_1,int param_2)
   fn_82230300(auStack_50,1,0);
   return;
 }
-

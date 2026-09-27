@@ -37,8 +37,8 @@ void fn_8286B5F8(longlong param_1,int param_2)
   uint uVar1;
   longlong lVar2;
   longlong lVar3;
-  undefined1 auStack_50 [80];
-  
+  undefined1 auStack_50 [32];
+
   uVar1 = (param_2 - (int)param_1) / 0x1c;
   lVar3 = (longlong)((int)uVar1 >> 1) + (ulonglong)((int)uVar1 < 0 && (uVar1 & 1) != 0);
   if (0 < lVar3) {
@@ -53,4 +53,3 @@ void fn_8286B5F8(longlong param_1,int param_2)
   }
   return;
 }
-

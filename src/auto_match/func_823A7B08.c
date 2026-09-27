@@ -91,7 +91,7 @@ undefined4 * fn_823A7B08(undefined4 *param_1)
   undefined4 *puVar8;
   undefined4 *puVar10;
   undefined4 *puVar11;
-  undefined1 auStack_170 [8];
+  undefined1 auStack_170;
   struct { undefined4 first; int second; } stack_pair_168;
 
   undefined4 auStack_160 [2];
@@ -111,7 +111,7 @@ undefined4 * fn_823A7B08(undefined4 *param_1)
   undefined1 auStack_d0 [32];
   undefined1 auStack_b0 [32];
   undefined1 auStack_90 [48];
-  
+
   fn_828E34D8();
   puVar8 = param_1 + 10;
   *param_1 = &lbl_82197334;
@@ -268,8 +268,8 @@ LAB_823a7e50:
   fn_828E2680(puVar11,1);
   stack_pair_168.first = 0;
   auStack_160[0] = 2;
-  auStack_170[0] = 0;
-  puVar8 = (undefined4 *)fn_82329EC0(auStack_148,auStack_170,&stack_pair_168.first,auStack_160);
+  auStack_170 = 0;
+  puVar8 = (undefined4 *)fn_82329EC0(auStack_148,&auStack_170,&stack_pair_168.first,auStack_160);
   stack_pair_168.first = *puVar8;
   iVar2 = puVar8[1];
   *puVar8 = 0;
@@ -405,8 +405,8 @@ LAB_823a806c:
 LAB_823a81c4:
   stack_pair_168.first = 2;
   auStack_160[0] = 0;
-  auStack_170[0] = 0;
-  puVar8 = (undefined4 *)fn_82329EC0(auStack_138,auStack_170,auStack_160,&stack_pair_168.first);
+  auStack_170 = 0;
+  puVar8 = (undefined4 *)fn_82329EC0(auStack_138,&auStack_170,auStack_160,&stack_pair_168.first);
   stack_pair_168.first = *puVar8;
   iVar2 = puVar8[1];
   *puVar8 = 0;
@@ -433,4 +433,3 @@ LAB_823a81c4:
   fn_828E2680(puVar5,1);
   return param_1;
 }
-

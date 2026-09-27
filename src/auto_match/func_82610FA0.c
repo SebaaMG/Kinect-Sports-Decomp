@@ -40,26 +40,25 @@ extern unsigned int uStack_30;
 void fn_82610FA0(int param_1,code *param_2,undefined8 param_3)
 
 {
-  undefined4 uStack_30;
-  int iStack_2c;
+  struct { undefined4 first; int second; } stack_pair_30;
+
   struct { undefined4 first; undefined4 second; } stack_pair_28;
 
-  
+
   if (*(int *)(param_1 + 0x14) != 0) {
     *(undefined4 *)(param_1 + 0x14) = 0;
   }
-  fn_827D5158(&uStack_30);
-  fn_827D50C0(uStack_30,0);
-  fn_827D5078(uStack_30,0);
-  fn_827D5108(uStack_30,0);
+  fn_827D5158(&stack_pair_30.first);
+  fn_827D50C0(stack_pair_30.first,0);
+  fn_827D5078(stack_pair_30.first,0);
+  fn_827D5108(stack_pair_30.first,0);
   stack_pair_28.first = 0;
   stack_pair_28.second = 0;
-  fn_82517978(&stack_pair_28.first,uStack_30,iStack_2c,0);
+  fn_82517978(&stack_pair_28.first,stack_pair_30.first,stack_pair_30.second,0);
   (*param_2)(&stack_pair_28.first,param_3);
-  fn_827D5108(uStack_30,3);
-  if (iStack_2c != 0) {
+  fn_827D5108(stack_pair_30.first,3);
+  if (stack_pair_30.second != 0) {
     fn_822315A0();
   }
   return;
 }
-

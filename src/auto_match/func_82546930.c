@@ -67,13 +67,13 @@ void fn_82546930(void)
   undefined4 uStack_54;
   undefined4 uStack_50;
   undefined4 uStack_4c;
-  undefined4 uStack_40;
-  undefined4 uStack_3c;
+  struct { undefined4 first; undefined4 second; } stack_pair_40;
+
   undefined4 uStack_38;
   undefined4 uStack_34;
   undefined4 uStack_30;
   undefined4 uStack_2c;
-  
+
   if (uRam8326b480 != 0) {
     stack_pair_60.first = 0;
     stack_pair_60.second = 0;
@@ -87,13 +87,13 @@ void fn_82546930(void)
     uStack_64 = (undefined4)(longlong)*(float *)(lbl_8320A898 + 0x321c);
     uStack_4c = *(undefined4 *)(lbl_8320A898 + 0x322c);
     uStack_54 = lbl_8326B434;
-    uStack_40 = uStack_6c;
-    uStack_3c = uStack_64;
+    stack_pair_40.first = uStack_6c;
+    stack_pair_40.second = uStack_64;
     uStack_30 = uStack_50;
     uStack_2c = uStack_4c;
     fn_82639EA8(lbl_8320A898,&stack_pair_60.first);
     fn_8263DE70((double)lbl_821CA460,lbl_8320A898,0,0,0xf,0);
-    fn_82639EA8(lbl_8320A898,&uStack_40);
+    fn_82639EA8(lbl_8320A898,&stack_pair_40.first);
   }
   fn_825467B8();
   bVar1 = iRam8326b47c != lbl_8326B478;
@@ -107,4 +107,3 @@ void fn_82546930(void)
   uRam8326b46c = 0;
   return;
 }
-

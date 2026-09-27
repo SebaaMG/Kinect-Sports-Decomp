@@ -42,9 +42,9 @@ void fn_82610E30(int param_1,code *param_2,undefined8 param_3)
 {
   struct { undefined4 first; int second; } stack_pair_30;
 
-  undefined4 uStack_28;
-  undefined4 uStack_24;
-  
+  struct { undefined4 first; undefined4 second; } stack_pair_28;
+
+
   if (*(int *)(param_1 + 0x14) == 0) {
     *(undefined4 *)(param_1 + 0x14) = 1;
   }
@@ -52,14 +52,13 @@ void fn_82610E30(int param_1,code *param_2,undefined8 param_3)
   fn_827D50C0(stack_pair_30.first,0);
   fn_827D5078(stack_pair_30.first,0);
   fn_827D5108(stack_pair_30.first,0);
-  uStack_28 = 0;
-  uStack_24 = 0;
-  fn_82517978(&uStack_28,stack_pair_30.first,stack_pair_30.second,0);
-  (*param_2)(&uStack_28,param_3);
+  stack_pair_28.first = 0;
+  stack_pair_28.second = 0;
+  fn_82517978(&stack_pair_28.first,stack_pair_30.first,stack_pair_30.second,0);
+  (*param_2)(&stack_pair_28.first,param_3);
   fn_827D5108(stack_pair_30.first,3);
   if (stack_pair_30.second != 0) {
     fn_822315A0();
   }
   return;
 }
-

@@ -61,9 +61,9 @@ void fn_82743FE0(int param_1)
   undefined4 *puStack_48;
   undefined4 *puStack_44;
   int aiStack_40 [1];
-  undefined1 auStack_30 [16];
+  undefined1 auStack_30 [1];
   undefined1 auStack_20 [8];
-  
+
   cVar3 = fn_82695468(param_1,0x10);
   if (cVar3 == '\0') {
     fn_826954C0(param_1,0xffffffff8200ef00,0,0);
@@ -134,4 +134,3 @@ void fn_82743FE0(int param_1)
   }
   return;
 }
-

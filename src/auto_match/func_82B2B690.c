@@ -63,8 +63,8 @@ void fn_82B2B690(int param_1,uint param_2,undefined8 param_3,ulonglong param_4,u
   double dVar15;
   uint uStack_90;
   uint uStack_8c;
-  undefined1 auStack_88 [136];
-  
+  undefined1 auStack_88 [8];
+
   uStack_8c = (uint)param_3;
   puVar1 = *(uint **)(param_2 + 0x30);
   uStack_90 = param_2;
@@ -127,4 +127,3 @@ void fn_82B2B690(int param_1,uint param_2,undefined8 param_3,ulonglong param_4,u
   fn_82B25248(param_1,uStack_90,*(undefined4 *)(param_1 + 0x28c));
   return;
 }
-

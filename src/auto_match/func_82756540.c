@@ -126,13 +126,13 @@ void fn_82756540(undefined8 param_1,longlong param_2,int param_3)
   undefined4 uStack_f4;
   undefined4 uStack_f0;
   undefined4 uStack_ec;
-  undefined4 uStack_e0;
-  undefined4 uStack_dc;
+  struct { undefined4 first; undefined4 second; } stack_pair_e0;
+
   undefined4 uStack_d8;
   undefined4 uStack_d4;
   undefined4 uStack_d0;
   undefined4 uStack_cc;
-  
+
   puVar8 = (undefined4 *)fn_82F6A540();
   fn_8269D7D8();
   *puVar8 = &lbl_820143F0;
@@ -162,13 +162,13 @@ void fn_82756540(undefined8 param_1,longlong param_2,int param_3)
   uStack_ec = *(undefined4 *)(iVar5 + 0x34);
   stack_pair_100.first = *(undefined4 *)(iVar5 + 0x20);
   stack_pair_100.second = *(undefined4 *)(iVar5 + 0x24);
-  uStack_e0 = stack_pair_100.first;
-  uStack_dc = stack_pair_100.second;
+  stack_pair_e0.first = stack_pair_100.first;
+  stack_pair_e0.second = stack_pair_100.second;
   uStack_d8 = uStack_f8;
   uStack_d4 = uStack_f4;
   uStack_d0 = uStack_f0;
   uStack_cc = uStack_ec;
-  fn_8268CD40(&stack_pair_100.first,&uStack_e0);
+  fn_8268CD40(&stack_pair_100.first,&stack_pair_e0.first);
   dVar29 = (double)lbl_821AAD20;
   fStack_110 = lbl_821AAD20;
   fStack_10c = lbl_821AAD20;
@@ -441,4 +441,3 @@ LAB_82756d2c:
   fn_82F6A58C(puVar8);
   return;
 }
-

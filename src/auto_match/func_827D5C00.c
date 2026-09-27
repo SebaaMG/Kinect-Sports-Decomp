@@ -48,19 +48,18 @@ extern unsigned int uStack_ac;
 
 
 undefined8
-fn_827D5C00(longlong param_1,undefined8 param_2,undefined8 param_3,undefined8 param_4,
-             undefined8 param_5,undefined8 param_6,undefined8 param_7,ulonglong param_8)
+fn_827D5C00(longlong param_1, undefined8 param_2, undefined8 param_3, undefined8 param_4, undefined8 param_5, undefined8 param_6, undefined8 param_7, ulonglong param_8, undefined4 in_stack_00000054, undefined4 in_stack_0000005c, int in_stack_00000064)
 
 {
   char cVar3;
   longlong lVar1;
   undefined8 uVar2;
-  undefined4 in_stack_00000054;
-  undefined4 in_stack_0000005c;
-  int in_stack_00000064;
+
+
+
   undefined4 uStack_ac;
-  undefined4 uStack_a8;
-  undefined4 uStack_a4;
+  struct { undefined4 first; undefined4 second; } stack_pair_a8;
+
   undefined4 uStack_a0;
   undefined4 uStack_9c;
   struct { undefined4 first; int second; } stack_pair_98;
@@ -68,7 +67,7 @@ fn_827D5C00(longlong param_1,undefined8 param_2,undefined8 param_3,undefined8 pa
   undefined4 uStack_90;
   undefined4 uStack_8c;
   undefined1 auStack_80 [96];
-  
+
   if ((param_8 & 0xffffffff) != 0) {
     fn_827E1820(param_8);
   }
@@ -82,18 +81,18 @@ fn_827D5C00(longlong param_1,undefined8 param_2,undefined8 param_3,undefined8 pa
     if (in_stack_00000064 != 0) {
       fn_82517A50(in_stack_00000064,&stack_pair_98.first);
     }
-    uStack_a8 = 0;
-    fn_82811438(auStack_80,&uStack_a8,0x10);
+    stack_pair_a8.first = 0;
+    fn_82811438(auStack_80,&stack_pair_a8.first,0x10);
     lVar1 = (**(code **)(*(int *)lbl_83156AA0 + 4))
                       (lbl_83156AA0,0x4c,auStack_80,in_stack_0000005c);
-    uStack_a4 = (undefined4)lVar1;
+    stack_pair_a8.second = (undefined4)lVar1;
     if (lVar1 == 0) {
       uVar2 = 0;
     }
     else {
       uStack_90 = 0;
       uStack_8c = 0;
-      uStack_a0 = uStack_a4;
+      uStack_a0 = stack_pair_a8.second;
       fn_82517978(&uStack_90,stack_pair_98.first,stack_pair_98.second,0);
       uVar2 = fn_827E22D0(lVar1,uStack_ac,param_4,param_5,param_6,0,in_stack_00000054,
                               in_stack_0000005c);
@@ -108,4 +107,3 @@ fn_827D5C00(longlong param_1,undefined8 param_2,undefined8 param_3,undefined8 pa
   }
   return uVar2;
 }
-

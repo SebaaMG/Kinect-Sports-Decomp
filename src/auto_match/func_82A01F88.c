@@ -1,0 +1,128 @@
+typedef unsigned char undefined1;
+typedef unsigned char byte;
+typedef unsigned char undefined;
+typedef unsigned char bool;
+#define true 1
+#define false 0
+typedef unsigned short undefined2;
+typedef unsigned short ushort;
+typedef unsigned short word;
+typedef unsigned int undefined4;
+typedef unsigned int uint;
+typedef unsigned int dword;
+typedef unsigned int ulong;
+typedef unsigned __int64 undefined8;
+typedef unsigned __int64 ulonglong;
+typedef unsigned __int64 qword;
+typedef __int64 longlong;
+typedef int (*code)();
+typedef unsigned char U8;
+typedef unsigned short U16;
+typedef unsigned int U32;
+typedef unsigned __int64 U64;
+typedef signed char S8;
+typedef signed short S16;
+typedef signed int S32;
+typedef __int64 S64;
+typedef struct { U64 lo, hi; } V16;
+extern int fn_829FD078();
+extern int fn_82A0D760();
+extern unsigned int lbl_821AAD20;
+extern unsigned int lbl_83218C48;
+extern V16 vectorSplatImmediateSignedWord128();
+extern void *memcpy(void *, const void *, unsigned int);
+
+
+int fn_82A01F88(int param_1)
+
+{
+  undefined4 uVar1;
+  int in_r0;
+  int iVar2;
+  longlong lVar3;
+  undefined1 auVar4 [16];
+
+  uVar1 = lbl_821AAD20;{ V16 _vt0 = vectorSplatImmediateSignedWord128(0); memcpy(auVar4, &_vt0, 16); }
+  *(undefined4 *)(param_1 + 0x30) = lbl_821AAD20;
+  *(undefined4 *)(param_1 + 0x34) = uVar1;
+  *(undefined4 *)(param_1 + 0x38) = uVar1;
+  *(undefined4 *)(param_1 + 0x96d0) = uVar1;
+  *(undefined4 *)(param_1 + 0x96d8) = uVar1;
+  *(undefined4 *)(param_1 + 0x4b80) = uVar1;
+  *(undefined4 *)(param_1 + 0x4b84) = uVar1;
+  *(undefined4 *)(param_1 + 0x4b88) = uVar1;
+  memcpy((void *)((const void *)(in_r0 + param_1 + 0x10 & 0xfffffff0)), auVar4, 16);
+  memcpy((void *)((const void *)(param_1 + 0x96b0U & 0xfffffff0)), auVar4, 16);
+  *(undefined4 *)(param_1 + 0xe220) = uVar1;
+  memcpy((void *)((const void *)(param_1 + 0x96c0U & 0xfffffff0)), auVar4, 16);
+  *(undefined4 *)(param_1 + 0x96d4) = uVar1;
+  memcpy((void *)((const void *)(param_1 + 0xe200U & 0xfffffff0)), auVar4, 16);
+  memcpy((void *)((const void *)(param_1 + 0x20U & 0xfffffff0)), auVar4, 16);
+  memcpy((void *)((const void *)(param_1 + 0x4b60U & 0xfffffff0)), auVar4, 16);
+  memcpy((void *)((const void *)(param_1 + 0x4b70U & 0xfffffff0)), auVar4, 16);
+  *(undefined4 *)(param_1 + 0x3c) = 0;
+  *(undefined4 *)(param_1 + 0x40) = 0;
+  *(undefined4 *)(param_1 + 0x48) = 0;
+  *(undefined4 *)(param_1 + 0x4c) = 0;
+  *(undefined4 *)(param_1 + 0x50) = 0;
+  *(undefined4 *)(param_1 + 0x44) = 0;
+  memcpy((void *)((const void *)(param_1 + 0xe210U & 0xfffffff0)), auVar4, 16);
+  *(undefined4 *)(param_1 + 0x54) = 1;
+  *(undefined4 *)(param_1 + 0x4b8c) = 0;
+  *(undefined4 *)(param_1 + 0x4b90) = 0;
+  *(undefined4 *)(param_1 + 0x4b98) = 0;
+  *(undefined4 *)(param_1 + 0x4b9c) = 0;
+  *(undefined4 *)(param_1 + 0x4ba0) = 0;
+  *(undefined4 *)(param_1 + 0x4b94) = 0;
+  *(undefined4 *)(param_1 + 0x4ba4) = 1;
+  *(undefined4 *)(param_1 + 0x96dc) = 0;
+  *(undefined4 *)(param_1 + 0x96e0) = 0;
+  *(undefined4 *)(param_1 + 0x96e8) = 0;
+  *(undefined4 *)(param_1 + 0x96ec) = 0;
+  *(undefined4 *)(param_1 + 0x96f0) = 0;
+  *(undefined4 *)(param_1 + 0xe224) = uVar1;
+  *(undefined4 *)(param_1 + 0xe228) = uVar1;
+  *(undefined4 *)(param_1 + 0x96e4) = 0;
+  *(undefined4 *)(param_1 + 0x96f4) = 1;
+  *(undefined4 *)(param_1 + 0xe22c) = 0;
+  *(undefined4 *)(param_1 + 0xe230) = 0;
+  *(undefined4 *)(param_1 + 0xe238) = 0;
+  *(undefined4 *)(param_1 + 0xe23c) = 0;
+  *(undefined4 *)(param_1 + 0xe240) = 0;
+  *(undefined4 *)(param_1 + 0xe234) = 0;
+  *(undefined4 *)(param_1 + 0xe244) = 1;
+  memcpy((void *)((const void *)(param_1 + 0x12d50U & 0xfffffff0)), auVar4, 16);
+  memcpy((void *)((const void *)(param_1 + 0x12d60U & 0xfffffff0)), auVar4, 16);
+  *(undefined4 *)(param_1 + 0x12d70) = uVar1;
+  *(undefined4 *)(param_1 + 0x12d74) = uVar1;
+  *(undefined4 *)(param_1 + 0x12d78) = uVar1;
+  *(undefined4 *)(param_1 + 0x12d7c) = 0;
+  *(undefined4 *)(param_1 + 0x12d80) = 0;
+  *(undefined4 *)(param_1 + 0x12d88) = 0;
+  *(undefined4 *)(param_1 + 0x12d8c) = 0;
+  *(undefined4 *)(param_1 + 0x12d90) = 0;
+  *(undefined4 *)(param_1 + 0x12d84) = 0;
+  *(undefined4 *)(param_1 + 0x12d94) = 1;
+  memcpy((void *)((const void *)(param_1 + 0x178a0U & 0xfffffff0)), auVar4, 16);
+  memcpy((void *)((const void *)(param_1 + 0x178b0U & 0xfffffff0)), auVar4, 16);
+  *(undefined4 *)(param_1 + 0x178c0) = uVar1;
+  *(undefined4 *)(param_1 + 0x178c4) = uVar1;
+  *(undefined4 *)(param_1 + 0x178c8) = uVar1;
+  *(undefined4 *)(param_1 + 0x178cc) = 0;
+  *(undefined4 *)(param_1 + 0x178d0) = 0;
+  *(undefined4 *)(param_1 + 0x178d8) = 0;
+  lVar3 = 0x12bf;
+  *(undefined4 *)(param_1 + 0x178dc) = 0;
+  iVar2 = param_1 + 0x1c3f0;
+  *(undefined4 *)(param_1 + 0x178e0) = 0;
+  *(undefined4 *)(param_1 + 0x178d4) = 0;
+  *(undefined4 *)(param_1 + 0x178e4) = 1;
+  do {
+    fn_82A0D760(iVar2);
+    lVar3 = lVar3 + -1;
+    iVar2 = iVar2 + 0x10;
+  } while (-1 < lVar3);
+  lbl_83218C48 = param_1;
+  fn_829FD078(param_1);
+  return param_1;
+}

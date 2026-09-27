@@ -59,10 +59,10 @@ undefined8 fn_82875EF8(longlong param_1)
   uint uStack_cc;
   undefined1 auStack_c0 [32];
   undefined1 auStack_a0 [32];
-  undefined1 auStack_80 [32];
+  undefined1 auStack_80 [16];
   undefined1 auStack_60 [32];
   undefined1 auStack_40 [64];
-  
+
   fn_828648B8(auStack_80,param_1 + 4);
   fn_8223B688(appuStack_e0,auStack_80);
   fn_82230300(auStack_80,1,0);
@@ -100,4 +100,3 @@ undefined8 fn_82875EF8(longlong param_1)
   fn_82230300(appuStack_e0,1,0);
   return uVar1;
 }
-

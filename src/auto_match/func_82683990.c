@@ -63,8 +63,8 @@ void fn_82683990(int param_1,int param_2)
   undefined8 uVar5;
   undefined8 uVar6;
   longlong lVar7;
-  int iStack_b0;
-  int iStack_ac;
+  struct { int first; int second; } stack_pair_b0;
+
   undefined4 uStack_a8;
   undefined1 auStack_a0 [16];
   struct { undefined4 first; uint second; } stack_pair_90;
@@ -80,9 +80,9 @@ void fn_82683990(int param_1,int param_2)
   int iStack_50;
   int iStack_4c;
   undefined4 uStack_48;
-  
-  iStack_b0 = 0;
-  iStack_ac = 0;
+
+  stack_pair_b0.first = 0;
+  stack_pair_b0.second = 0;
   uVar1 = *(undefined4 *)(param_2 + 0x18);
   uStack_a8 = 0;
   uStack_80 = 0;
@@ -99,7 +99,7 @@ void fn_82683990(int param_1,int param_2)
   }
   uVar5 = fn_826A7398(uVar1);
   fn_82682D30(uVar5,uVar1,auStack_a0,&uStack_80);
-  fn_82683928(&iStack_b0,&uStack_80);
+  fn_82683928(&stack_pair_b0.first,&uStack_80);
   lVar7 = 0;
   if (0 < *(int *)(param_2 + 0x1c)) {
     do {
@@ -108,25 +108,25 @@ void fn_82683990(int param_1,int param_2)
       uVar5 = fn_826957D0(param_2,lVar7);
       uVar6 = fn_826A7398(uVar1);
       fn_82682D30(uVar6,uVar1,uVar5,&uStack_70);
-      fn_82683928(&iStack_b0,&uStack_70);
+      fn_82683928(&stack_pair_b0.first,&uStack_70);
       fn_82273C88(&uStack_70);
       lVar7 = lVar7 + 1;
     } while ((int)lVar7 < *(int *)(param_2 + 0x1c));
   }
   uStack_5c = fn_826A7398(uVar1);
-  iVar4 = iStack_ac;
-  iVar3 = iStack_b0;
+  iVar4 = stack_pair_b0.second;
+  iVar3 = stack_pair_b0.first;
   puStack_60 = &stack_pair_90.first;
   puStack_58 = &uStack_80;
   if (*(int *)(param_2 + 0x1c) < 1) {
     iStack_50 = 0;
   }
   else {
-    iStack_50 = iStack_b0 + 0x10;
+    iStack_50 = stack_pair_b0.first + 0x10;
   }
   uStack_48 = *(undefined4 *)(param_1 + 0x34);
-  iStack_54 = iStack_b0;
-  iStack_4c = iStack_ac + -1;
+  iStack_54 = stack_pair_b0.first;
+  iStack_4c = stack_pair_b0.second + -1;
   (**(code **)(**(int **)(param_1 + 0x30) + 4))(*(int **)(param_1 + 0x30),&puStack_60);
   if ((stack_pair_90.second & 0x8f) != 0) {
     uVar2 = *(undefined4 *)(param_2 + 4);
@@ -140,4 +140,3 @@ void fn_82683990(int param_1,int param_2)
   fn_8267BE38(iVar3);
   return;
 }
-

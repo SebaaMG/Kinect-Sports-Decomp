@@ -72,8 +72,8 @@ void fn_827EBE60(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefi
   float fStack_a0;
   float fStack_9c;
   float fStack_98;
-  float fStack_90;
-  float fStack_8c;
+  struct { float first; float second; } stack_pair_90;
+
   float fStack_88;
   float fStack_80;
   float fStack_7c;
@@ -84,7 +84,7 @@ void fn_827EBE60(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefi
   float fStack_60;
   float fStack_5c;
   float fStack_58;
-  
+
   uVar1 = fn_82F6A544();
   fn_828104E8(param_4,param_5,&fStack_60);
   pfVar2 = (float *)param_4;
@@ -92,9 +92,9 @@ void fn_827EBE60(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefi
   dVar8 = (double)(fStack_5c - pfVar2[1]);
   dVar9 = (double)(fStack_58 - pfVar2[2]);
   fn_82810328(uVar1,&fStack_60,&stack_pair_b0.first);
-  fn_82810328(param_2,uVar1,&fStack_90);
+  fn_82810328(param_2,uVar1,&stack_pair_90.first);
   fn_82810328(param_3,uVar1,&fStack_a0);
-  fn_82810240(&fStack_90,&fStack_a0,&fStack_80);
+  fn_82810240(&stack_pair_90.first,&fStack_a0,&fStack_80);
   dVar4 = (double)fn_82809CB0((double)fStack_78);
   dVar10 = (double)(float)(dVar4 * dVar9);
   dVar4 = (double)fn_82809CB0((double)fStack_7c);
@@ -107,14 +107,14 @@ void fn_827EBE60(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefi
     dVar4 = (double)stack_pair_b0.first;
     if (dVar4 <= dVar7) {
       dVar10 = -dVar7;
-      if (((dVar10 <= dVar4) || (dVar10 <= (double)(float)((double)fStack_90 + dVar4))) ||
+      if (((dVar10 <= dVar4) || (dVar10 <= (double)(float)((double)stack_pair_90.first + dVar4))) ||
          (dVar10 <= (double)(float)((double)fStack_a0 + dVar4))) goto code_r0x827ebf98;
     }
-    else if (((double)(float)((double)fStack_90 + dVar4) <= dVar7) ||
+    else if (((double)(float)((double)stack_pair_90.first + dVar4) <= dVar7) ||
             ((double)(float)((double)fStack_a0 + dVar4) <= dVar7)) {
 code_r0x827ebf98:
       dVar10 = (double)stack_pair_b0.second;
-      dVar4 = (double)fStack_8c;
+      dVar4 = (double)stack_pair_90.second;
       if (dVar10 <= dVar8) {
         dVar3 = -dVar8;
         if (((dVar3 <= dVar10) || (dVar3 <= (double)(float)(dVar4 + dVar10))) ||
@@ -136,7 +136,7 @@ code_r0x827ec048:
           dVar3 = (double)(float)(dVar3 * dVar4 - (double)(float)(dVar5 * dVar10));
           dVar4 = (double)fn_82809CB0();
           dVar10 = (double)(float)(dVar4 * dVar8);
-          dVar4 = (double)fn_82809CB0((double)fStack_8c);
+          dVar4 = (double)fn_82809CB0((double)stack_pair_90.second);
           dVar4 = (double)(float)(dVar4 * dVar9 + dVar10);
           if (((dVar3 <= dVar4) || ((double)(float)(dVar3 + (double)fStack_80) <= dVar4)) &&
              ((-dVar4 <= dVar3 || (-dVar4 <= (double)(float)(dVar3 + (double)fStack_80))))) {
@@ -147,7 +147,7 @@ code_r0x827ec048:
             dVar4 = (double)(float)(dVar4 * dVar9 + dVar10);
             if (((dVar3 <= dVar4) || ((double)(float)(dVar3 - (double)fStack_80) <= dVar4)) &&
                ((-dVar4 <= dVar3 || (-dVar4 <= (double)(float)(dVar3 - (double)fStack_80))))) {
-              fn_82810328(&fStack_a0,&fStack_90,&fStack_70);
+              fn_82810328(&fStack_a0,&stack_pair_90.first,&fStack_70);
               dVar3 = (double)(fStack_6c * fStack_a8 - fStack_68 * stack_pair_b0.second);
               dVar4 = (double)fn_82809CB0();
               dVar10 = (double)(float)(dVar4 * dVar9);
@@ -155,10 +155,10 @@ code_r0x827ec048:
               dVar4 = (double)(float)(dVar4 * dVar8 + dVar10);
               if (((dVar3 <= dVar4) || ((double)(float)(dVar3 - (double)fStack_80) <= dVar4)) &&
                  ((-dVar4 <= dVar3 || (-dVar4 <= (double)(float)(dVar3 - (double)fStack_80))))) {
-                dVar3 = (double)(fStack_88 * stack_pair_b0.first - fStack_a8 * fStack_90);
+                dVar3 = (double)(fStack_88 * stack_pair_b0.first - fStack_a8 * stack_pair_90.first);
                 dVar4 = (double)fn_82809CB0();
                 dVar10 = (double)(float)(dVar4 * dVar7);
-                dVar4 = (double)fn_82809CB0((double)fStack_90);
+                dVar4 = (double)fn_82809CB0((double)stack_pair_90.first);
                 dVar4 = (double)(float)(dVar4 * dVar9 + dVar10);
                 if (((dVar3 <= dVar4) || ((double)(float)(dVar3 + (double)fStack_7c) <= dVar4)) &&
                    ((-dVar4 <= dVar3 || (-dVar4 <= (double)(float)(dVar3 + (double)fStack_7c))))) {
@@ -178,10 +178,10 @@ code_r0x827ec048:
                     if (((dVar10 <= dVar4) || ((double)(float)(dVar10 - (double)fStack_7c) <= dVar4)
                         ) && ((-dVar4 <= dVar10 ||
                               (-dVar4 <= (double)(float)(dVar10 - (double)fStack_7c))))) {
-                      dVar10 = (double)(stack_pair_b0.second * fStack_90 - fStack_8c * stack_pair_b0.first);
+                      dVar10 = (double)(stack_pair_b0.second * stack_pair_90.first - stack_pair_90.second * stack_pair_b0.first);
                       dVar4 = (double)fn_82809CB0();
                       dVar9 = (double)(float)(dVar4 * dVar7);
-                      dVar4 = (double)fn_82809CB0((double)fStack_90);
+                      dVar4 = (double)fn_82809CB0((double)stack_pair_90.first);
                       dVar4 = (double)(float)(dVar4 * dVar8 + dVar9);
                       if (((dVar10 <= dVar4) ||
                           ((double)(float)(dVar10 + (double)fStack_78) <= dVar4)) &&
@@ -225,4 +225,3 @@ code_r0x827ec388:
   fn_82F6A590(uVar1);
   return;
 }
-

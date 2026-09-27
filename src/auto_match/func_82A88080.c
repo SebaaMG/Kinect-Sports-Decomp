@@ -44,8 +44,8 @@ undefined8 fn_82A88080(int *param_1,int *param_2,longlong param_3)
   undefined1 auStack_c0 [1];
   undefined4 auStack_b0 [4];
   undefined1 auStack_a0 [64];
-  undefined1 auStack_60 [96];
-  
+  undefined1 auStack_60 [64];
+
   puVar3 = (undefined4 *)*param_1;
   auStack_b0[0] = lbl_8201DCB8;
   if (puVar3 == (undefined4 *)0x0) {
@@ -66,4 +66,3 @@ undefined8 fn_82A88080(int *param_1,int *param_2,longlong param_3)
   }
   return uVar1;
 }
-

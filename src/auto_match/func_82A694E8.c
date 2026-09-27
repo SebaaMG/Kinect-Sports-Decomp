@@ -38,19 +38,19 @@ undefined8 fn_82A694E8(int param_1,int param_2)
   int iVar4;
   uint uVar5;
   int iVar6;
-  undefined4 auStack_50 [4];
-  
+  undefined4 auStack_50;
+
   uVar1 = 0;
   if (*(short *)(param_1 + 0x22) != 0) {
     iVar3 = 0;
     do {
-      auStack_50[0] = 0;
+      auStack_50 = 0;
       iVar4 = iVar3 * 0x6f0 + param_2;
       uVar5 = 0;
       *(undefined2 *)(iVar4 + 0xb6) = 2;
       do {
         iVar6 = uVar5 * 0x38 + iVar4 + 200;
-        uVar1 = fn_82D7E470(iVar6,0x20,0,auStack_50,0);
+        uVar1 = fn_82D7E470(iVar6,0x20,0,&auStack_50,0);
         if ((int)uVar1 < 0) {
           return uVar1;
         }
@@ -66,4 +66,3 @@ undefined8 fn_82A694E8(int param_1,int param_2)
   }
   return uVar1;
 }
-

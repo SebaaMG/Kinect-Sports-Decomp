@@ -41,8 +41,7 @@ extern unsigned int uStack_a0;
 
 
 undefined4 *
-fn_823FCB80(undefined4 *param_1,undefined8 param_2,undefined8 param_3,undefined8 param_4,
-             undefined8 param_5,undefined4 *param_6,undefined8 param_7,undefined8 param_8)
+fn_823FCB80(undefined4 *param_1, undefined8 param_2, undefined8 param_3, undefined8 param_4, undefined8 param_5, undefined4 *param_6, undefined8 param_7, undefined8 param_8, undefined4 in_stack_00000054)
 
 {
   int iVar1;
@@ -54,7 +53,7 @@ fn_823FCB80(undefined4 *param_1,undefined8 param_2,undefined8 param_3,undefined8
   undefined8 uVar6;
   undefined8 uVar7;
   undefined8 uVar8;
-  undefined4 in_stack_00000054;
+
   struct { undefined4 first; int second; } stack_pair_a0;
 
   undefined1 auStack_98 [8];
@@ -64,7 +63,7 @@ fn_823FCB80(undefined4 *param_1,undefined8 param_2,undefined8 param_3,undefined8
   undefined1 auStack_78 [8];
   undefined1 auStack_70 [8];
   undefined1 auStack_68 [24];
-  
+
   param_1[1] = 1;
   *param_1 = &lbl_821AD588;
   param_1[2] = 1;
@@ -88,4 +87,3 @@ fn_823FCB80(undefined4 *param_1,undefined8 param_2,undefined8 param_3,undefined8
   }
   return param_1;
 }
-

@@ -27,8 +27,8 @@ typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern unsigned int *auStack_90;
 extern int fn_82C30370();
-extern int fn_82F68CC0();
-extern int fn_82F691F0();
+extern int memcpy();
+extern int memset();
 extern unsigned int lbl_82002AE0;
 extern unsigned int lbl_82002C5C;
 extern unsigned int lbl_820288CC;
@@ -49,7 +49,7 @@ undefined8 fn_82C3B0B8(int *param_1)
   double dVar10;
   uint auStack_90 [2];
   longlong lStack_88;
-  
+
   iVar2 = *param_1;
   auStack_90[0] = 0;
   uVar7 = 0;
@@ -104,7 +104,7 @@ undefined8 fn_82C3B0B8(int *param_1)
             if (uVar3 == 0) {
               param_1[0x73] = param_1[0x6e];
               if ((param_1[0x74] != 0) && (param_1[0x70] != 0)) {
-                fn_82F68CC0(param_1[0x74],param_1[0x70],
+                memcpy(param_1[0x74],param_1[0x70],
                              (longlong)(int)(uint)uVar1 * (longlong)(int)(uint)uVar1 * 4 &
                              0xfffffffc);
               }
@@ -112,7 +112,7 @@ undefined8 fn_82C3B0B8(int *param_1)
               param_1[0x6f] = 0;
               if (param_1[0x70] != 0) {
                     /* WARNING: Subroutine does not return */
-                fn_82F691F0(param_1[0x70],0,
+                memset(param_1[0x70],0,
                              (longlong)(int)(uint)uVar1 * (longlong)(int)uVar6 * 4 & 0xfffffffc);
               }
               if (((2 < *(int *)(iVar2 + 0x3c)) && (1 < uVar1)) && (*(int *)(iVar2 + 0xb0) != 1)) {
@@ -143,4 +143,3 @@ LAB_82c3b314:;} while (param_1[0x6d] != 4);
   }
   return uVar7;
 }
-

@@ -28,7 +28,7 @@ typedef struct { U64 lo, hi; } V16;
 extern int fn_8265C940();
 extern int fn_8265C990();
 extern int fn_82C038C8();
-extern int fn_82F691F0();
+extern int memset();
 
 
 undefined8 fn_82C145D0(ulonglong *param_1,ulonglong param_2)
@@ -43,7 +43,7 @@ undefined8 fn_82C145D0(ulonglong *param_1,ulonglong param_2)
   ulonglong uVar7;
   uint uVar8;
   byte *apbStack_90 [16];
-  
+
   uVar7 = *param_1;
   apbStack_90[0] = (byte *)0x0;
   uVar6 = 0;
@@ -71,7 +71,7 @@ undefined8 fn_82C145D0(ulonglong *param_1,ulonglong param_2)
           puVar2[1] = (int)uVar7;
           if ((uVar7 & 0xffffffff) != 0) {
                     /* WARNING: Subroutine does not return */
-            fn_82F691F0(uVar7,0,lVar4);
+            memset(uVar7,0,lVar4);
           }
           uVar6 = 5;
         }
@@ -103,4 +103,3 @@ undefined8 fn_82C145D0(ulonglong *param_1,ulonglong param_2)
   *param_1 = uVar5;
   return uVar6;
 }
-

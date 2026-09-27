@@ -57,9 +57,9 @@ void fn_827E9868(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefi
   double dVar10;
   double dVar11;
   undefined1 auStack_a0 [1];
-  undefined1 auStack_90 [16];
+  undefined1 auStack_90 [1];
   undefined1 auStack_80 [128];
-  
+
   uVar2 = fn_82F6A538();
   dVar8 = extraout_f1;
   fn_82810328(param_4,param_3,auStack_a0);
@@ -113,4 +113,3 @@ code_r0x827e9a24:
   fn_82F6A584(uVar2);
   return;
 }
-

@@ -51,8 +51,8 @@ void fn_827E9A68(undefined8 param_1,double param_2,undefined8 param_3,undefined8
   double dVar5;
   double dVar6;
   undefined1 auStack_70 [1];
-  undefined1 auStack_60 [96];
-  
+  undefined1 auStack_60 [16];
+
   uVar1 = fn_82F6A544();
   dVar5 = extraout_f1;
   fn_82810328(uVar1,param_5,auStack_60);
@@ -86,4 +86,3 @@ LAB_827e9b6c:
   fn_82F6A590(uVar1);
   return;
 }
-

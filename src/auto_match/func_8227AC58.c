@@ -39,18 +39,17 @@ void fn_8227AC58(int param_1,undefined8 param_2,undefined8 param_3)
   int iVar2;
   undefined8 uVar3;
   undefined8 uStack_30;
-  float fStack_28;
-  float fStack_24;
+  struct { float first; float second; } stack_pair_28;
+
   longlong lStack_20;
-  
+
   uVar3 = fn_8226C7C0(*(undefined4 *)(param_1 + 0xf0),param_2,&uStack_30,0);
-  uVar3 = fn_8226C7C0(uVar3,param_3,&fStack_28,0);
+  uVar3 = fn_8226C7C0(uVar3,param_3,&stack_pair_28.first,0);
   iVar1 = (int)(((U64)(uStack_30) >> 32) & 0xFFFFFFFF);
   iVar2 = (int)(((U64)(uStack_30) >> 0) & 0xFFFFFFFF);
-  lStack_20 = (longlong)(int)fStack_28;
+  lStack_20 = (longlong)(int)stack_pair_28.first;
   uStack_30 = (longlong)iVar1;
-  fn_8226B7E0(uVar3,iVar2,(ulonglong)(uint)(int)fStack_28 - 1,iVar1,
-                    (ulonglong)(uint)(int)fStack_24 - 1,0x18);
+  fn_8226B7E0(uVar3,iVar2,(ulonglong)(uint)(int)stack_pair_28.first - 1,iVar1,
+                    (ulonglong)(uint)(int)stack_pair_28.second - 1,0x18);
   return;
 }
-

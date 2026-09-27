@@ -74,7 +74,7 @@ int * fn_822DBA58(int *param_1,undefined4 *param_2,int *param_3)
   int aiStack_2a0;
   uint uStack_298;
   int iStack_294;
-  int aiStack_290 [2];
+  int aiStack_290;
   uint uStack_288;
   int iStack_284;
   undefined1 auStack_280 [12];
@@ -95,7 +95,7 @@ int * fn_822DBA58(int *param_1,undefined4 *param_2,int *param_3)
   undefined1 auStack_f0 [64];
   undefined1 auStack_b0 [64];
   undefined1 auStack_70 [112];
-  
+
   pcVar1 = (char *)*param_2;
   pcVar5 = pcVar1;
   do {
@@ -104,9 +104,9 @@ int * fn_822DBA58(int *param_1,undefined4 *param_2,int *param_3)
   } while (*pcVar7 != '\0');
   fn_822DB770(&aiStack_2a0,param_3);
   iStack_294 = param_3[3];
-  fn_822DB770(aiStack_290,&aiStack_2a0);
+  fn_822DB770(&aiStack_290,&aiStack_2a0);
   iStack_284 = iStack_294;
-  fn_822DB770(&stack_pair_2b0.first,aiStack_290);
+  fn_822DB770(&stack_pair_2b0.first,&aiStack_290);
   auStack_270[0] = 0;
   iStack_2a4 = iStack_284;
   fn_822DB770(auStack_280,&stack_pair_2b0.first);
@@ -115,7 +115,7 @@ int * fn_822DBA58(int *param_1,undefined4 *param_2,int *param_3)
   if ((8 < uStack_2a8) && (stack_pair_2b0.first != 0)) {
     fn_8265CAA0();
   }
-  if ((8 < uStack_288) && (aiStack_290[0] != 0)) {
+  if ((8 < uStack_288) && (aiStack_290 != 0)) {
     fn_8265CAA0();
   }
   uStack_240 = 0;
@@ -169,4 +169,3 @@ int * fn_822DBA58(int *param_1,undefined4 *param_2,int *param_3)
   }
   return param_1;
 }
-

@@ -51,11 +51,11 @@ void fn_823F2978(int param_1,undefined8 param_2,undefined1 param_3,undefined8 pa
   undefined8 uVar1;
   undefined1 uStack0000003f;
   undefined4 uStack0000004c;
-  undefined1 auStack_40 [8];
+  undefined1 auStack_40;
   struct { undefined4 first; int second; } stack_pair_38;
 
-  
-  auStack_40[0] = 0;
+
+  auStack_40 = 0;
   uStack0000003f = param_3;
   uStack0000004c = param_5;
   iVar2 = fn_8265C9E0(0x28);
@@ -71,7 +71,7 @@ void fn_823F2978(int param_1,undefined8 param_2,undefined1 param_3,undefined8 pa
   (**(code **)(**(int **)(param_1 + 0x68) + 0x10))
             (*(int **)(param_1 + 0x68),stack_pair_38.first,&stack0x00000020);
   (**(code **)(**(int **)(param_1 + 0x70) + 0x10))(*(int **)(param_1 + 0x70),stack_pair_38.first,param_2);
-  (**(code **)(**(int **)(param_1 + 0x78) + 0x10))(*(int **)(param_1 + 0x78),stack_pair_38.first,auStack_40);
+  (**(code **)(**(int **)(param_1 + 0x78) + 0x10))(*(int **)(param_1 + 0x78),stack_pair_38.first,&auStack_40);
   (**(code **)(**(int **)(param_1 + 0x80) + 0x10))
             (*(int **)(param_1 + 0x80),stack_pair_38.first,&stack0x0000003f);
   (**(code **)(**(int **)(param_1 + 0x88) + 0x10))(*(int **)(param_1 + 0x88),stack_pair_38.first,param_4);
@@ -88,4 +88,3 @@ void fn_823F2978(int param_1,undefined8 param_2,undefined1 param_3,undefined8 pa
   }
   return;
 }
-

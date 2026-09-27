@@ -73,8 +73,8 @@ void fn_82755D20(int *param_1,int *param_2)
   bool bVar4;
   int iVar5;
   double dVar6;
-  float fStack_a0;
-  float fStack_9c;
+  struct { float first; float second; } stack_pair_a0;
+
   float fStack_98;
   float fStack_94;
   struct { undefined4 first; undefined4 second; } stack_pair_90;
@@ -103,7 +103,7 @@ void fn_82755D20(int *param_1,int *param_2)
   undefined2 uStack_54;
   undefined2 uStack_52;
   undefined1 auStack_50 [64];
-  
+
   puVar1 = (undefined4 *)param_2[0x10];
   stack_pair_90.first = *puVar1;
   iVar2 = param_1[0x1a];
@@ -116,15 +116,15 @@ void fn_82755D20(int *param_1,int *param_2)
   memcpy(auStack_50,param_2[0x11],0x20);
   fn_8268D5D8(auStack_50,param_1 + 9);
   dVar6 = (double)lbl_821AAD20;
-  fStack_a0 = lbl_821AAD20;
-  fStack_9c = lbl_821AAD20;
+  stack_pair_a0.first = lbl_821AAD20;
+  stack_pair_a0.second = lbl_821AAD20;
   fStack_98 = lbl_821AAD20;
   fStack_94 = lbl_821AAD20;
-  fn_8268D280(&stack_pair_90.first,&fStack_a0,iVar2 + 0x10);
+  fn_8268D280(&stack_pair_90.first,&stack_pair_a0.first,iVar2 + 0x10);
   iVar5 = (**(code **)(*param_1 + 0x40))(param_1);
   bVar4 = false;
-  if ((((*(float *)(iVar5 + 0xd4) < fStack_9c) || (fStack_94 < *(float *)(iVar5 + 0xcc))) ||
-      (fStack_98 < *(float *)(iVar5 + 200))) || (bVar3 = true, *(float *)(iVar5 + 0xd0) < fStack_a0)
+  if ((((*(float *)(iVar5 + 0xd4) < stack_pair_a0.second) || (fStack_94 < *(float *)(iVar5 + 0xcc))) ||
+      (fStack_98 < *(float *)(iVar5 + 200))) || (bVar3 = true, *(float *)(iVar5 + 0xd0) < stack_pair_a0.first)
      ) {
     bVar3 = false;
   }
@@ -182,4 +182,3 @@ LAB_82755f68:
   *(byte *)(param_1 + 0x56) = *(byte *)(param_1 + 0x56) & 0xfd;
   return;
 }
-

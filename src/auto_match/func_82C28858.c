@@ -45,8 +45,8 @@ undefined8 fn_82C28858(int param_1,int param_2)
   undefined8 uVar4;
   undefined4 *puStack_50;
   int iStack_4c;
-  int aiStack_48 [6];
-  
+  int aiStack_48 [3];
+
   iVar1 = *(int *)(param_1 + 0x2c);
   aiStack_48[0] = 0;
   puStack_50 = (undefined4 *)0x0;
@@ -129,4 +129,3 @@ undefined8 fn_82C28858(int param_1,int param_2)
   }
   return uVar4;
 }
-

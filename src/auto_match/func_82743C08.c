@@ -44,8 +44,8 @@ void fn_82743C08(int param_1,int param_2,undefined8 *param_3)
   undefined1 auStack_70 [16];
   undefined1 auStack_60 [1];
   undefined1 auStack_50 [16];
-  undefined1 auStack_40 [64];
-  
+  undefined1 auStack_40 [16];
+
   puVar2 = auStack_70;
   puVar1 = (uint *)(param_1 + 0x78);
   lVar3 = 2;
@@ -71,4 +71,3 @@ void fn_82743C08(int param_1,int param_2,undefined8 *param_3)
   } while (-1 < lVar3);
   return;
 }
-

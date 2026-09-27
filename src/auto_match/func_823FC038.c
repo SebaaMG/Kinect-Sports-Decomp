@@ -51,25 +51,25 @@ fn_823FC038(undefined4 *param_1,undefined8 param_2,undefined4 *param_3,undefined
   undefined8 uVar5;
   struct { undefined4 first; int second; } stack_pair_80;
 
-  undefined4 uStack_78;
-  int iStack_74;
+  struct { undefined4 first; int second; } stack_pair_78;
+
   undefined1 auStack_70 [8];
   undefined1 auStack_68 [8];
   undefined1 auStack_60 [16];
-  
+
   param_1[1] = 1;
   *param_1 = &lbl_821AD588;
   param_1[2] = 1;
   if (param_1 + 3 != (undefined4 *)0x0) {
     iVar1 = param_6[1];
     uVar2 = *param_6;
-    uStack_78 = 0;
-    iStack_74 = 0;
+    stack_pair_78.first = 0;
+    stack_pair_78.second = 0;
     if (iVar1 != 0) {
       cVar6 = fn_8223AAC0(iVar1);
       if (cVar6 != '\0') {
-        uStack_78 = uVar2;
-        iStack_74 = iVar1;
+        stack_pair_78.first = uVar2;
+        stack_pair_78.second = iVar1;
       }
     }
     iVar1 = param_3[1];
@@ -83,8 +83,7 @@ fn_823FC038(undefined4 *param_1,undefined8 param_2,undefined4 *param_3,undefined
     uVar3 = fn_82365BD8(auStack_70,param_5);
     uVar4 = fn_82365BD8(auStack_68,param_4);
     uVar5 = fn_82365BD8(auStack_60,param_2);
-    fn_823FD088(param_1 + 3,uVar5,&stack_pair_80.first,uVar4,uVar3,&uStack_78);
+    fn_823FD088(param_1 + 3,uVar5,&stack_pair_80.first,uVar4,uVar3,&stack_pair_78.first);
   }
   return param_1;
 }
-

@@ -42,10 +42,10 @@ void fn_8272BB58(int param_1,undefined8 param_2,int *param_3)
   uint *puVar5;
   char in_RESERVE;
   byte in_cr0;
-  uint auStack_30 [2];
+  uint auStack_30 [1];
   uint *puStack_28;
   uint *puStack_24;
-  
+
   uVar2 = (**(code **)(*param_3 + 8))(param_3);
   if ((uVar2 & 0xff00) == 0x200) {
     uVar3 = (**(code **)(*(int *)param_3[3] + 0x3c))();
@@ -69,4 +69,3 @@ void fn_8272BB58(int param_1,undefined8 param_2,int *param_3)
   }
   return;
 }
-

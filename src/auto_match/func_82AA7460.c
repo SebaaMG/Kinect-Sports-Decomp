@@ -60,8 +60,8 @@ void fn_82AA7460(undefined4 param_1,undefined4 param_2,undefined4 param_3,undefi
   undefined4 *puStack00000034;
   undefined4 uStack0000003c;
   undefined4 uStack00000044;
-  undefined4 uStack_40;
-  undefined4 uStack_3c;
+  struct { undefined4 first; undefined4 second; } stack_pair_40;
+
   code *pcStack_38;
   int iStack_34;
   struct { undefined4 first; uint second; } stack_pair_30;
@@ -69,9 +69,9 @@ void fn_82AA7460(undefined4 param_1,undefined4 param_2,undefined4 param_3,undefi
   undefined1 uStack_28;
   int iStack_24;
   int iStack_20;
-  
+
   pcStack_38 = fn_82AA6210;
-  puStack00000034 = &uStack_40;
+  puStack00000034 = &stack_pair_40.first;
   iStack_34 = 0;
   uStack00000014 = param_1;
   uStack0000001c = param_2;
@@ -79,8 +79,8 @@ void fn_82AA7460(undefined4 param_1,undefined4 param_2,undefined4 param_3,undefi
   uStack0000002c = param_4;
   uStack0000003c = param_6;
   uStack00000044 = param_7;
-  uStack_40 = param_5;
-  uStack_3c = param_6;
+  stack_pair_40.first = param_5;
+  stack_pair_40.second = param_6;
   fn_82AA6110(param_3,&stack_pair_30.first);
   do {
     iStack_34 = fn_82AA6150(&stack_pair_30.first,puStack00000034,pcStack_38);
@@ -100,4 +100,3 @@ void fn_82AA7460(undefined4 param_1,undefined4 param_2,undefined4 param_3,undefi
   fn_82AA6EA0(&stack_pair_30.first,iStack_34);
   return;
 }
-

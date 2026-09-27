@@ -53,8 +53,8 @@ undefined8 fn_82A87EC8(int param_1,undefined8 param_2)
 
   undefined4 uStack_678;
   undefined4 uStack_674;
-  int aiStack_670 [412];
-  
+  int aiStack_670 [404];
+
   auStack_6a0[0] = 0;
   stack_pair_680.second = 0;
   uStack_678 = 0;
@@ -98,4 +98,3 @@ undefined8 fn_82A87EC8(int param_1,undefined8 param_2)
   }
   return 0;
 }
-

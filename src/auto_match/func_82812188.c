@@ -51,8 +51,8 @@ void fn_82812188(undefined8 param_1,undefined8 param_2,undefined8 param_3)
   undefined1 auStack_80 [1];
   undefined1 auStack_70 [16];
   undefined1 auStack_60 [16];
-  undefined1 auStack_50 [80];
-  
+  undefined1 auStack_50 [16];
+
   iVar1 = fn_82F6A548();
   fn_82810360(iVar1,auStack_80);
   fn_82810360(param_2,auStack_70);
@@ -84,4 +84,3 @@ void fn_82812188(undefined8 param_1,undefined8 param_2,undefined8 param_3)
   fn_82F6A594();
   return;
 }
-

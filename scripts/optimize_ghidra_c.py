@@ -385,6 +385,10 @@ def optimize(stem: str, args, config: dict, names: dict) -> dict:
                 best = result
 
         if not best[0]["exact"]:
+            variant = call_relocation_variant(best[1], best[2], symbol)
+            if variant != best[1]:
+                attempt(variant, best[0]['cflags'], 'original call targets')
+        if not best[0]["exact"]:
             renamed = re.sub(r"\bfn_([0-9A-Fa-f]{8})\b",
                              lambda m: names.get(m[1].upper(), m[0]), best[1])
             attempt(renamed, flags, "Jeff call symbols")

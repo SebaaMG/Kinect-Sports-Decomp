@@ -41,22 +41,22 @@ undefined8 fn_8245B630(int param_1,undefined8 param_2,undefined4 param_3,undefin
 {
   bool bVar1;
   undefined1 auStack_60;
-  undefined4 uStack_50;
-  undefined4 uStack_4c;
+  struct { undefined4 first; undefined4 second; } stack_pair_50;
+
   undefined4 uStack_48;
   undefined4 uStack_44;
   code *pcStack_40;
   undefined4 uStack_3c;
-  
+
   RtlEnterCriticalSection();
   if ((*(int *)(param_1 + 0x588) != 0) && (*(int *)(param_1 + 0x6a4) == 3)) {
     RtlLeaveCriticalSection(param_1);
     auStack_60 = 3;
     fn_82A1DD38(param_2,&auStack_60,1);
-    uStack_4c = (undefined4)param_2;
-    uStack_50 = 1;
+    stack_pair_50.second = (undefined4)param_2;
+    stack_pair_50.first = 1;
     pcStack_40 = fn_8245AB78;
-    uStack_48 = uStack_4c;
+    uStack_48 = stack_pair_50.second;
     uStack_44 = param_3;
     uStack_3c = param_4;
     RtlEnterCriticalSection(param_1);
@@ -64,7 +64,7 @@ undefined8 fn_8245B630(int param_1,undefined8 param_2,undefined4 param_3,undefin
       bVar1 = false;
     }
     if (bVar1) {
-      memcpy(param_1 + 0x5c4,&uStack_50,0x18);
+      memcpy(param_1 + 0x5c4,&stack_pair_50.first,0x18);
       *(undefined4 *)(param_1 + 0x574) = 1;
       RtlLeaveCriticalSection(param_1);
       return param_2;
@@ -73,4 +73,3 @@ undefined8 fn_8245B630(int param_1,undefined8 param_2,undefined4 param_3,undefin
   RtlLeaveCriticalSection(param_1);
   return 0;
 }
-

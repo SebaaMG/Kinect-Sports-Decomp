@@ -50,10 +50,10 @@ void fn_826A2010(int param_1)
   ulonglong uVar6;
   longlong lVar7;
   undefined4 *puStack_50;
-  int aiStack_4c [3];
+  int aiStack_4c;
   struct { uint first; undefined4 second; } stack_pair_40;
 
-  
+
   cVar5 = fn_82695468(param_1,7);
   if (cVar5 == '\0') {
     fn_826954C0(param_1,0xffffffff82006e38,0,0);
@@ -85,8 +85,8 @@ void fn_826A2010(int param_1)
     iVar4 = fn_82694610((ulonglong)*(uint *)(*(int *)(param_1 + 0x18) + 0x78) + 0x254,uVar6,
                               stack_pair_40.second);
     *(int *)(iVar4 + 8) = *(int *)(iVar4 + 8) + 1;
-    aiStack_4c[0] = iVar4;
-    fn_82681838(*(undefined4 *)(param_1 + 4),aiStack_4c);
+    aiStack_4c = iVar4;
+    fn_82681838(*(undefined4 *)(param_1 + 4),&aiStack_4c);
     lVar7 = (ulonglong)*(uint *)(iVar4 + 8) - 1;
     *(int *)(iVar4 + 8) = (int)lVar7;
     if (lVar7 == 0) {
@@ -96,4 +96,3 @@ void fn_826A2010(int param_1)
   }
   return;
 }
-

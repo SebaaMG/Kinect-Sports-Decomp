@@ -43,14 +43,13 @@ extern int fn_8265C9E0();
 extern unsigned int lbl_821A8D8C;
 
 
-void fn_822D4580(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefined8 param_4,
-                  undefined8 param_5,undefined8 param_6,undefined8 param_7,uint *param_8)
+void fn_822D4580(undefined8 param_1, undefined8 param_2, undefined8 param_3, undefined8 param_4, undefined8 param_5, undefined8 param_6, undefined8 param_7, uint *param_8, int in_stack_00000054, int in_stack_0000005c)
 
 {
   undefined8 uVar1;
   undefined4 *puVar2;
-  int in_stack_00000054;
-  int in_stack_0000005c;
+
+
   undefined4 *puStack_140;
   undefined4 *puStack_13c;
   undefined1 auStack_130 [32];
@@ -60,7 +59,7 @@ void fn_822D4580(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefi
   undefined1 auStack_b0 [32];
   undefined1 auStack_90 [32];
   undefined1 auStack_70 [32];
-  
+
   puStack_13c = (undefined4 *)fn_8265C9E0(0x1d0);
   if (puStack_13c == (undefined4 *)0x0) {
     puStack_13c = (undefined4 *)0x0;
@@ -112,4 +111,3 @@ void fn_822D4580(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefi
   }
   return;
 }
-

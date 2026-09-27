@@ -136,8 +136,8 @@ void fn_824EE018(undefined8 param_1,double param_2,double param_3,double param_4
   undefined1 auStack_130 [16];
   undefined1 auStack_120 [16];
   undefined1 auStack_110 [16];
-  float fStack_100;
-  float fStack_fc;
+  struct { float first; float second; } stack_pair_100;
+
   float fStack_f8;
   undefined4 uStack_f4;
   undefined4 uStack_f0;
@@ -156,7 +156,7 @@ void fn_824EE018(undefined8 param_1,double param_2,double param_3,double param_4
   float fStack_bc;
   undefined4 uStack_b8;
   undefined4 uStack_b4;
-  
+
   dVar14 = (double)fn_82F6A53C();
   puVar8 = lbl_8320A898;
   uVar12 = 0;
@@ -226,7 +226,7 @@ void fn_824EE018(undefined8 param_1,double param_2,double param_3,double param_4
     puVar7[1] = in_register_00010094;
     puVar7[2] = in_register_00010098;
     puVar7[3] = in_vr9;
-    puVar7 = (undefined4 *)((int)&fStack_100 + in_r0 & 0xfffffff0);
+    puVar7 = (undefined4 *)((int)&stack_pair_100.first + in_r0 & 0xfffffff0);
     *puVar7 = uVar29;
     puVar7[1] = uVar30;
     puVar7[2] = uVar31;
@@ -242,7 +242,7 @@ void fn_824EE018(undefined8 param_1,double param_2,double param_3,double param_4
     puVar7[2] = uVar23;
     puVar7[3] = uVar24;
     fn_826310E0(puVar8,0xc0,auStack_140,4,0x8000);
-    fn_826310E0(lbl_8320A898,0xc4,&fStack_100,4,0x4000);
+    fn_826310E0(lbl_8320A898,0xc4,&stack_pair_100.first,4,0x4000);
     puVar8 = lbl_8320A898;
     *(float *)(lbl_8320A898 + 0x280) = (float)param_4;
     *(float *)((int)puVar8 + 0x1404) = (float)param_5;
@@ -288,8 +288,8 @@ void fn_824EE018(undefined8 param_1,double param_2,double param_3,double param_4
       fn_82637C50(lbl_8320A898,6);
       fn_82637CE0(lbl_8320A898,7);
     }
-    fStack_100 = (float)dVar14;
-    fStack_fc = (float)param_2;
+    stack_pair_100.first = (float)dVar14;
+    stack_pair_100.second = (float)param_2;
     fStack_f8 = (float)param_3;
     fStack_ec = (float)dVar14;
     fStack_e8 = (float)param_2;
@@ -308,7 +308,7 @@ void fn_824EE018(undefined8 param_1,double param_2,double param_3,double param_4
     fStack_bc = (float)param_3;
     uStack_b8 = lbl_821CC160;
     uStack_b4 = lbl_821CA460;
-    fn_82640058(lbl_8320A898,0xd,4,&fStack_100,0x14);
+    fn_82640058(lbl_8320A898,0xd,4,&stack_pair_100.first,0x14);
     puVar8 = lbl_8320A898;
     *(uint *)(lbl_8320A898 + 0x529) = uVar3 & 7 | *(uint *)(lbl_8320A898 + 0x529) & 0xfffffff8;
     puVar8[2] = puVar8[2] | 0x40;
@@ -342,4 +342,3 @@ void fn_824EE018(undefined8 param_1,double param_2,double param_3,double param_4
   fn_82F6A588(1);
   return;
 }
-

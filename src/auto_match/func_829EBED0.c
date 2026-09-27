@@ -75,8 +75,8 @@ longlong fn_829EBED0(int param_1,int param_2,uint *param_3)
   undefined4 uStack_260;
   undefined4 uStack_25c;
   undefined4 uStack_250;
-  undefined4 uStack_24c;
-  undefined4 uStack_248;
+  struct { undefined4 first; undefined4 second; } stack_pair_24c;
+
   undefined4 uStack_244;
   undefined4 uStack_240;
   undefined4 uStack_23c;
@@ -88,7 +88,7 @@ longlong fn_829EBED0(int param_1,int param_2,uint *param_3)
   undefined4 uStack_1fc;
   undefined1 auStack_1ec [132];
   undefined1 auStack_168 [360];
-  
+
   uStack_280 = 0;
   uStack_27c = 0;
   uStack_278 = 0;
@@ -100,8 +100,8 @@ longlong fn_829EBED0(int param_1,int param_2,uint *param_3)
   uStack_260 = 0;
   uStack_25c = 0;
   uStack_250 = 0;
-  uStack_24c = 0;
-  uStack_248 = 0;
+  stack_pair_24c.first = 0;
+  stack_pair_24c.second = 0;
   uStack_244 = 0;
   uStack_240 = 0;
   uStack_23c = 1;
@@ -133,9 +133,8 @@ longlong fn_829EBED0(int param_1,int param_2,uint *param_3)
   }
   fn_829EB780(auStack_220);
   fn_829E9CB0(&uStack_238);
-  fn_829EABB8(&uStack_24c);
+  fn_829EABB8(&stack_pair_24c.first);
   fn_829E9CB0(&stack_pair_268.first);
   fn_829EABB8(&uStack_27c);
   return lVar1;
 }
-

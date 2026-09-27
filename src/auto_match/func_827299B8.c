@@ -75,8 +75,8 @@ void fn_827299B8(int param_1)
   undefined8 uVar3;
   int iVar6;
   int aiStack_b0 [2];
-  undefined4 uStack_a8;
-  undefined4 uStack_a4;
+  struct { undefined4 first; undefined4 second; } stack_pair_a8;
+
   undefined4 uStack_a0;
   undefined1 auStack_90 [4];
   int iStack_8c;
@@ -100,7 +100,7 @@ void fn_827299B8(int param_1)
   undefined4 uStack_3c;
   undefined4 uStack_38;
   undefined4 uStack_34;
-  
+
   iVar6 = param_1 + -0xd8;
   iVar4 = (**(code **)(*(int *)(param_1 + -0xd8) + 0x5c))(iVar6);
   uStack_60 = 0;
@@ -126,14 +126,14 @@ void fn_827299B8(int param_1)
   lVar2 = fn_826A7398();
   iVar5 = fn_826F74F8(lVar2 + 0xa2c,4,&stack_pair_70.first);
   if (iVar5 == 0) {
-    uStack_a8 = 0;
-    uStack_a4 = 0;
+    stack_pair_a8.first = 0;
+    stack_pair_a8.second = 0;
     uStack_a0 = 0;
     fn_82681728(aiStack_b0,(ulonglong)*(uint *)(iVar4 + 0x78) + 0x254,0xffffffff820111c4);
     auStack_90[0] = 5;
     iStack_8c = aiStack_b0[0];
     *(int *)(aiStack_b0[0] + 8) = *(int *)(aiStack_b0[0] + 8) + 1;
-    fn_826CD420(&uStack_a8,auStack_90);
+    fn_826CD420(&stack_pair_a8.first,auStack_90);
     fn_82696330(auStack_90);
     lVar2 = (ulonglong)*(uint *)(aiStack_b0[0] + 8) - 1;
     *(int *)(aiStack_b0[0] + 8) = (int)lVar2;
@@ -141,7 +141,7 @@ void fn_827299B8(int param_1)
       fn_826944C8(aiStack_b0[0]);
     }
     uVar3 = fn_82695520(auStack_80,iVar6);
-    fn_826CD420(&uStack_a8,uVar3);
+    fn_826CD420(&stack_pair_a8.first,uVar3);
     fn_82696330(auStack_80);
     lVar2 = fn_826A7398(iVar4);
     iVar4 = fn_82700248(lVar2 + 0xa2c,4);
@@ -156,12 +156,11 @@ void fn_827299B8(int param_1)
     }
     *(undefined4 *)(iVar4 + 0xc) = 0;
     *(code **)(iVar4 + 0x2c) = fn_827255B0;
-    fn_826CD840(iVar4 + 0x30,&uStack_a8);
-    uVar1 = uStack_a8;
-    fn_8269A990(uStack_a8,uStack_a4);
+    fn_826CD840(iVar4 + 0x30,&stack_pair_a8.first);
+    uVar1 = stack_pair_a8.first;
+    fn_8269A990(stack_pair_a8.first,stack_pair_a8.second);
     fn_8267BE38(uVar1);
   }
   fn_826CECC8(&stack_pair_70.first);
   return;
 }
-

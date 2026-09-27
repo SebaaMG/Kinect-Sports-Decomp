@@ -49,9 +49,9 @@ fn_8259B408(int param_1,undefined8 param_2,undefined4 param_3,undefined8 param_4
   undefined4 *puVar4;
   struct { undefined4 first; int second; } stack_pair_50;
 
-  undefined4 uStack_48;
-  undefined4 uStack_44;
-  
+  struct { undefined4 first; undefined4 second; } stack_pair_48;
+
+
   iVar1 = *param_5;
   uVar3 = fn_827D96A0(param_2);
   fn_82526C70(iVar1 + 0x170,0x2a,0xffffffff821c557c,uVar3);
@@ -65,11 +65,11 @@ fn_8259B408(int param_1,undefined8 param_2,undefined4 param_3,undefined8 param_4
     stack_pair_50.second = 0;
     fn_82517978(&stack_pair_50.first,*(undefined4 *)(param_1 + 4),*(undefined4 *)(param_1 + 8),1);
     iVar2 = stack_pair_50.second;
-    uStack_48 = 0;
-    uStack_44 = 0;
+    stack_pair_48.first = 0;
+    stack_pair_48.second = 0;
     iVar1 = *param_5;
-    fn_82517978(&uStack_48,stack_pair_50.first,stack_pair_50.second,0);
-    fn_827DE858(puVar4,&uStack_48,iVar1);
+    fn_82517978(&stack_pair_48.first,stack_pair_50.first,stack_pair_50.second,0);
+    fn_827DE858(puVar4,&stack_pair_48.first,iVar1);
     *puVar4 = &lbl_821CA774;
     fn_827D9630(puVar4 + 6,param_2);
     puVar4[0xc] = param_3;
@@ -82,4 +82,3 @@ fn_8259B408(int param_1,undefined8 param_2,undefined4 param_3,undefined8 param_4
   }
   return puVar4;
 }
-

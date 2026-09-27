@@ -60,7 +60,7 @@ void fn_826CA328(int param_1)
   double dVar8;
   double dVar9;
   undefined1 uStack_b0;
-  undefined1 auStack_af [7];
+  undefined1 auStack_af;
   struct { float first; float second; } stack_pair_a8;
 
   float fStack_a0;
@@ -71,8 +71,8 @@ void fn_826CA328(int param_1)
   double dStack_68;
   undefined1 auStack_60 [8];
   double dStack_58;
-  undefined1 auStack_50 [80];
-  
+  undefined1 auStack_50 [48];
+
   puVar1 = *(undefined1 **)(param_1 + 4);
   fn_826959C8(puVar1);
   *puVar1 = 0;
@@ -114,9 +114,9 @@ void fn_826CA328(int param_1)
           fn_82696330(auStack_70);
           dStack_58 = (double)stack_pair_a8.second * dVar8;
           auStack_60[0] = 3;
-          auStack_af[0] = 0;
+          auStack_af = 0;
           (**(code **)(*piVar6 + 0x28))
-                    (piVar6,puVar7,(ulonglong)*puVar7 + 0x1f0,auStack_60,auStack_af);
+                    (piVar6,puVar7,(ulonglong)*puVar7 + 0x1f0,auStack_60,&auStack_af);
           fn_82696330(auStack_60);
         }
       }
@@ -126,4 +126,3 @@ void fn_826CA328(int param_1)
   }
   return;
 }
-

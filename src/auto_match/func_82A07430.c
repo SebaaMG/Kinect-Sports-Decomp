@@ -72,16 +72,16 @@ longlong fn_82A07430(int param_1,undefined8 param_2,undefined4 *param_3)
   struct { float first; float second; } stack_pair_70;
 
   float fStack_68;
-  float fStack_60;
-  float fStack_5c;
+  struct { float first; float second; } stack_pair_60;
+
   float fStack_58;
-  
+
   puVar8 = (undefined4 *)((int)&stack_pair_70.first + in_r0 & 0xfffffff0);
   *puVar8 = in_register_00010010;
   puVar8[1] = in_register_00010014;
   puVar8[2] = in_register_00010018;
   puVar8[3] = in_vr1;
-  puVar8 = (undefined4 *)((int)&fStack_60 + in_r0 & 0xfffffff0);
+  puVar8 = (undefined4 *)((int)&stack_pair_60.first + in_r0 & 0xfffffff0);
   *puVar8 = in_register_00010020;
   puVar8[1] = in_register_00010024;
   puVar8[2] = in_register_00010028;
@@ -91,8 +91,8 @@ longlong fn_82A07430(int param_1,undefined8 param_2,undefined4 *param_3)
   uVar2 = (uint)((stack_pair_70.first / fStack_68) * lbl_8207F394 + lbl_82015BD0);
   uVar16 = (ulonglong)uVar2;
   uVar3 = (uint)(lbl_82015BD8 - (stack_pair_70.second / fStack_68) * lbl_8207F394);
-  uVar4 = (uint)((fStack_60 / fStack_58) * lbl_8207F394 + lbl_82015BD0);
-  uVar5 = (uint)(lbl_82015BD8 - (fStack_5c / fStack_58) * lbl_8207F394);
+  uVar4 = (uint)((stack_pair_60.first / fStack_58) * lbl_8207F394 + lbl_82015BD0);
+  uVar5 = (uint)(lbl_82015BD8 - (stack_pair_60.second / fStack_58) * lbl_8207F394);
   uVar13 = (ulonglong)uVar5;
   if ((((((int)uVar2 < 0) || (0x13f < (int)uVar2)) || ((int)uVar3 < 0)) ||
       ((0xef < (int)uVar3 || ((int)uVar4 < 0)))) ||
@@ -158,4 +158,3 @@ longlong fn_82A07430(int param_1,undefined8 param_2,undefined4 *param_3)
   }
   return lVar18;
 }
-

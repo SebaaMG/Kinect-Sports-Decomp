@@ -46,8 +46,8 @@ undefined8 fn_826FD5E8(undefined8 param_1,int param_2,float *param_3,undefined8 
 
 {
   undefined8 uVar1;
-  float fStack_80;
-  float fStack_7c;
+  struct { float first; float second; } stack_pair_80;
+
   struct { undefined4 first; undefined4 second; } stack_pair_70;
 
   undefined4 uStack_68;
@@ -55,7 +55,7 @@ undefined8 fn_826FD5E8(undefined8 param_1,int param_2,float *param_3,undefined8 
   undefined4 uStack_60;
   undefined4 uStack_5c;
   undefined1 auStack_50 [64];
-  
+
   uVar1 = fn_826F6FA8(param_2,0);
   fn_8268CC00(auStack_50);
   fn_8269A240(uVar1,auStack_50);
@@ -67,9 +67,8 @@ undefined8 fn_826FD5E8(undefined8 param_1,int param_2,float *param_3,undefined8 
   uStack_5c = *(undefined4 *)(param_2 + 0xfc);
   fn_8268CEC0(&stack_pair_70.first,param_4);
   fn_8268CEC0(&stack_pair_70.first,auStack_50);
-  fStack_80 = *param_3 * lbl_8200571C;
-  fStack_7c = param_3[1] * lbl_8200571C;
-  fn_8268CCB0(&stack_pair_70.first,param_1,&fStack_80);
+  stack_pair_80.first = *param_3 * lbl_8200571C;
+  stack_pair_80.second = param_3[1] * lbl_8200571C;
+  fn_8268CCB0(&stack_pair_70.first,param_1,&stack_pair_80.first);
   return param_1;
 }
-

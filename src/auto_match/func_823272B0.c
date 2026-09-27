@@ -34,7 +34,7 @@ extern int fn_8265C9E0();
 extern int fn_8286D250();
 extern int fn_8289C940();
 extern int fn_82F565A0();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern unsigned int lbl_82002B04;
 extern unsigned int lbl_821B03E8;
 extern unsigned int lbl_821B043C;
@@ -54,7 +54,7 @@ undefined4 * fn_823272B0(undefined4 *param_1)
   undefined1 auStack_80 [32];
   undefined8 uStack_60;
   undefined4 *puStack_58;
-  
+
   fn_822CA318();
   param_1[0x30] = 0;
   *param_1 = &lbl_821B03E8;
@@ -67,7 +67,7 @@ undefined4 * fn_823272B0(undefined4 *param_1)
   puVar1 = (undefined4 *)fn_8265C9E0(0x40);
   if (puVar1 != (undefined4 *)0x0) {
     *puVar1 = &lbl_821B0548;
-    fn_82F68CC0(puVar1 + 2,&uStack_60,0x38);
+    memcpy(puVar1 + 2,&uStack_60,0x38);
     puStack_90 = puVar1;
     fn_82F565A0(auStack_80,auStack_a0);
     fn_8289C940((ulonglong)(uint)param_1[0xd] + 0x33c,auStack_80);
@@ -83,4 +83,3 @@ undefined4 * fn_823272B0(undefined4 *param_1)
                     /* WARNING: Subroutine does not return */
   fn_82230040(&ppuStack_a8);
 }
-

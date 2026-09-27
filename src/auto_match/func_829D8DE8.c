@@ -46,8 +46,8 @@ void fn_829D8DE8(void)
   int iVar4;
   undefined4 uStack_50;
   int aiStack_4c [2];
-  longlong alStack_40 [8];
-  
+  longlong alStack_40;
+
   iVar4 = lbl_832179FC + 0x8f4e0;
   *(undefined4 *)(lbl_832179FC + 0x8f500) = 0;
   lVar2 = fn_829D6C98(iVar4);
@@ -55,12 +55,12 @@ void fn_829D8DE8(void)
   iVar1 = aiStack_4c[0];
   if (aiStack_4c[0] != 0) {
     while (lVar2 != 0) {
-      alStack_40[0] = 0;
+      alStack_40 = 0;
       uStack_50 = 0;
       aiStack_4c[1] = 0;
       aiStack_4c[0] = 0;
-      iVar3 = fn_82A2B218(lVar2,alStack_40,0,aiStack_4c + 1,0);
-      if ((iVar3 < 0) || (alStack_40[0] == 0)) {
+      iVar3 = fn_82A2B218(lVar2,&alStack_40,0,aiStack_4c + 1,0);
+      if ((iVar3 < 0) || (alStack_40 == 0)) {
         uStack_50 = 0x32000;
         iVar3 = XamReadBiometricData(lVar2,aiStack_4c,iVar1,&uStack_50,0);
         if ((iVar3 != 0) || (aiStack_4c[0] == 0)) {
@@ -75,4 +75,3 @@ void fn_829D8DE8(void)
   }
   return;
 }
-

@@ -42,8 +42,8 @@ void fn_827DDFB8(undefined8 param_1,undefined8 param_2)
   undefined1 auStack_70 [1];
   undefined1 auStack_60 [32];
   undefined4 auStack_40 [2];
-  undefined1 auStack_38 [56];
-  
+  undefined1 auStack_38 [24];
+
   uVar2 = fn_827D96A0(param_2);
   uVar1 = fn_827D9630(auStack_60,param_2);
   auStack_40[0] = uVar2;
@@ -51,4 +51,3 @@ void fn_827DDFB8(undefined8 param_1,undefined8 param_2)
   fn_827DE748(auStack_70,param_1,auStack_40);
   return;
 }
-

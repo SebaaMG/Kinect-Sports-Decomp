@@ -52,8 +52,8 @@ undefined8 fn_82755978(undefined8 param_1,int *param_2,char param_3)
   int aiStack_d0;
   struct { uint first; int second; } stack_pair_c0;
 
-  undefined1 auStack_90 [144];
-  
+  undefined1 auStack_90 [96];
+
   fn_8268B330();
   iVar7 = 0;
   uVar9 = 0;
@@ -97,4 +97,3 @@ undefined8 fn_82755978(undefined8 param_1,int *param_2,char param_3)
   }
   return param_1;
 }
-

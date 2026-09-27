@@ -103,8 +103,8 @@ void fn_82776370(int param_1,int *param_2,int *param_3,undefined8 param_4,char p
   float fStack_e4;
   float fStack_e0;
   char cStack_dc;
-  float fStack_d8;
-  float fStack_d4;
+  struct { float first; float second; } stack_pair_d8;
+
   float fStack_d0;
   float fStack_cc;
   float fStack_c8;
@@ -115,7 +115,7 @@ void fn_82776370(int param_1,int *param_2,int *param_3,undefined8 param_4,char p
   undefined4 uStack_ac;
   undefined4 uStack_94;
   int iStack_88;
-  
+
   if (param_3 != (int *)0x0) {
     fn_82762930(&uStack_b0);
     dVar14 = (double)(*(float *)(param_1 + 0x9c8) * lbl_82014C4C);
@@ -215,9 +215,9 @@ void fn_82776370(int param_1,int *param_2,int *param_3,undefined8 param_4,char p
           stack_pair_110.first = fStack_e4;
           stack_pair_110.second = fStack_e0;
           if (param_6 != '\0') {
-            fn_8268CCB0(param_1 + 0x9cc,&fStack_d8,&stack_pair_110.first);
-            stack_pair_110.first = fStack_d8;
-            stack_pair_110.second = fStack_d4;
+            fn_8268CCB0(param_1 + 0x9cc,&stack_pair_d8.first,&stack_pair_110.first);
+            stack_pair_110.first = stack_pair_d8.first;
+            stack_pair_110.second = stack_pair_d8.second;
           }
           lStack_108 = (longlong)(int)stack_pair_110.second;
           lStack_100 = (longlong)(int)stack_pair_110.first;
@@ -255,4 +255,3 @@ void fn_82776370(int param_1,int *param_2,int *param_3,undefined8 param_4,char p
   }
   return;
 }
-

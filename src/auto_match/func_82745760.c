@@ -67,9 +67,9 @@ void fn_82745760(int param_1)
   int aiStack_60 [4];
   undefined1 auStack_50 [1];
   undefined1 auStack_40 [16];
-  undefined1 auStack_30 [16];
+  undefined1 auStack_30 [1];
   undefined1 auStack_20 [8];
-  
+
   cVar3 = fn_82695468(param_1,0x11);
   if (cVar3 == '\0') {
     fn_826954C0(param_1,0xffffffff8200eef4,0,0);
@@ -146,4 +146,3 @@ void fn_82745760(int param_1)
   }
   return;
 }
-

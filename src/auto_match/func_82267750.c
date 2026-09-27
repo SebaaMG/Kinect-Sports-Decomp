@@ -45,10 +45,10 @@ void fn_82267750(undefined4 *param_1,int param_2)
   int iVar5;
   undefined8 uVar6;
   undefined8 uVar7;
-  int aiStack_50 [2];
+  int aiStack_50;
   struct { undefined4 first; int second; } stack_pair_48;
 
-  
+
   piVar1 = (int *)*param_1;
   piVar2 = (int *)*piVar1;
   while( true ) {
@@ -61,7 +61,7 @@ void fn_82267750(undefined4 *param_1,int param_2)
     piVar1 = (int *)*param_1;
   }
   puVar4 = *(undefined4 **)(iVar3 + 0x520);
-  aiStack_50[0] = iVar3;
+  aiStack_50 = iVar3;
   if (puVar4 != (undefined4 *)0x0) {
     if (*(int *)(iVar3 + 0x51c) != 0) {
       iVar5 = *(int *)(iVar3 + 0x540);
@@ -90,7 +90,6 @@ void fn_82267750(undefined4 *param_1,int param_2)
     fn_8265CA20(piVar2);
     param_1[1] = param_1[1] + -1;
   }
-  fn_82267EB0(param_1 + 3,aiStack_50);
+  fn_82267EB0(param_1 + 3,&aiStack_50);
   return;
 }
-

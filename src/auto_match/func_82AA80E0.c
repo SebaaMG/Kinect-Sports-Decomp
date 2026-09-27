@@ -170,8 +170,8 @@ fn_82AA80E0(double param_1,ulonglong param_2,ulonglong param_3,ulonglong param_4
   undefined4 uStack_148;
   undefined4 uStack_144;
   undefined4 uStack_140;
-  uint uStack_130;
-  undefined4 uStack_12c;
+  struct { uint first; undefined4 second; } stack_pair_130;
+
   uint uStack_128;
   uint uStack_124;
   undefined1 auStack_120 [4];
@@ -191,7 +191,7 @@ fn_82AA80E0(double param_1,ulonglong param_2,ulonglong param_3,ulonglong param_4
   undefined4 uStack_c4;
   undefined4 uStack_c0;
   undefined1 auStack_b0 [176];
-  
+
   uVar18 = (uint)param_3;
   uVar12 = (uint)param_4;
   uVar13 = (uint)param_5;
@@ -205,9 +205,9 @@ fn_82AA80E0(double param_1,ulonglong param_2,ulonglong param_3,ulonglong param_4
   iVar9 = 0;
   auStack_1d0[0] = 4;
   if (in_stack_0000005c == (uint *)0x0) {
-    in_stack_0000005c = &uStack_130;
-    uStack_130 = 0;
-    uStack_12c = 0;
+    in_stack_0000005c = &stack_pair_130.first;
+    stack_pair_130.first = 0;
+    stack_pair_130.second = 0;
     uStack_128 = uVar12;
     uStack_124 = uVar13;
   }
@@ -501,4 +501,3 @@ LAB_82aa877c:
   fn_82B63EC8(&stack0x00000000 + -0x1a8);
   return uVar7;
 }
-

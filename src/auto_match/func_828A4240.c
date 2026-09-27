@@ -51,11 +51,11 @@ void fn_828A4240(int *param_1,uint param_2)
   struct { undefined4 first; undefined4 second; } stack_pair_60;
 
   int iStack_58;
-  undefined4 uStack_50;
-  undefined4 uStack_4c;
+  struct { undefined4 first; undefined4 second; } stack_pair_50;
+
   int iStack_48;
   undefined1 auStack_40 [32];
-  
+
   uVar8 = param_1[4];
   if (param_2 < uVar8) {
     piVar3 = (int *)*param_1;
@@ -74,12 +74,12 @@ void fn_828A4240(int *param_1,uint param_2)
     if ((piVar5 != (int *)0x0) && ((undefined4 *)*piVar5 != (undefined4 *)0x0)) {
       piVar3 = *(int **)*piVar5;
     }
-    uStack_50 = 0;
-    uStack_4c = 0;
+    stack_pair_50.first = 0;
+    stack_pair_50.second = 0;
     if ((piVar3 != (int *)0x0) && ((undefined4 *)*piVar3 != (undefined4 *)0x0)) {
-      uStack_50 = *(undefined4 *)*piVar3;
+      stack_pair_50.first = *(undefined4 *)*piVar3;
     }
-    fn_828C5A90(auStack_40,param_1,&uStack_50,&stack_pair_60.first);
+    fn_828C5A90(auStack_40,param_1,&stack_pair_50.first,&stack_pair_60.first);
   }
   else {
     while (uVar8 < param_2) {
@@ -109,4 +109,3 @@ void fn_828A4240(int *param_1,uint param_2)
   }
   return;
 }
-

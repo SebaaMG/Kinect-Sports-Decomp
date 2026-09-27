@@ -99,8 +99,8 @@ void fn_826CA540(int param_1)
   float fStack_12c;
   float fStack_128;
   float fStack_124;
-  float fStack_120;
-  float fStack_11c;
+  struct { float first; float second; } stack_pair_120;
+
   float fStack_118;
   float fStack_114;
   float fStack_110;
@@ -115,7 +115,7 @@ void fn_826CA540(int param_1)
   undefined1 auStack_a0 [32];
   undefined1 auStack_80 [32];
   undefined1 auStack_60 [80];
-  
+
   piVar6 = (int *)fn_826C59F8();
   if (piVar6 == (int *)0x0) {
     return;
@@ -188,13 +188,13 @@ void fn_826CA540(int param_1)
     fn_8268D280(auStack_e0,&fStack_130,&stack_pair_150.first);
     fn_8268CC00(auStack_c0);
     fn_8269A240(piVar8,auStack_c0);
-    fStack_120 = (float)dVar13;
-    fStack_11c = (float)dVar13;
+    stack_pair_120.first = (float)dVar13;
+    stack_pair_120.second = (float)dVar13;
     fStack_118 = (float)dVar13;
     fStack_114 = (float)dVar13;
-    fn_8268D280(auStack_c0,&fStack_120,&fStack_110);
-    if ((((fStack_124 < fStack_11c) || (fStack_114 < fStack_12c)) || (fStack_118 < fStack_130)) ||
-       (uVar10 = 1, fStack_128 < fStack_120)) {
+    fn_8268D280(auStack_c0,&stack_pair_120.first,&fStack_110);
+    if ((((fStack_124 < stack_pair_120.second) || (fStack_114 < fStack_12c)) || (fStack_118 < fStack_130)) ||
+       (uVar10 = 1, fStack_128 < stack_pair_120.first)) {
       uVar10 = 0;
     }
     puVar1 = *(undefined1 **)(param_1 + 4);
@@ -253,4 +253,3 @@ void fn_826CA540(int param_1)
   puVar1[4] = uVar10;
   return;
 }
-

@@ -72,8 +72,8 @@ void fn_826ED8F0(int param_1,int *param_2)
   double dVar12;
   undefined4 *puStack_f0;
   undefined1 uStack_ec;
-  int iStack_e0;
-  int iStack_dc;
+  struct { int first; int second; } stack_pair_e0;
+
   float fStack_d8;
   int iStack_d4;
   int iStack_d0;
@@ -90,10 +90,10 @@ void fn_826ED8F0(int param_1,int *param_2)
   int iStack_94;
   int iStack_90;
   float fStack_8c;
-  
+
   uStack_c0 = *(undefined4 *)(param_1 + 0x10);
-  iStack_e0 = param_2[3];
-  iStack_dc = param_2[4];
+  stack_pair_e0.first = param_2[3];
+  stack_pair_e0.second = param_2[4];
   fStack_d8 = (float)param_2[5];
   iStack_d4 = param_2[6];
   piVar1 = *(int **)(*(int *)*param_2 + 0xc);
@@ -104,7 +104,7 @@ void fn_826ED8F0(int param_1,int *param_2)
   uStack_b4 = lbl_821AAD20;
   uStack_ac = lbl_821AAD20;
   uStack_b0 = uStack_c0;
-  fn_8268CEC0(&iStack_e0,&uStack_c0);
+  fn_8268CEC0(&stack_pair_e0.first,&uStack_c0);
   (**(code **)(*piVar1 + 0x28))(piVar1,param_2 + 9);
   bVar2 = true;
   uVar5 = 0;
@@ -127,7 +127,7 @@ void fn_826ED8F0(int param_1,int *param_2)
           else {
             fn_8277B700(param_1 + 0x34,piVar1,&puStack_f0);
           }
-          (**(code **)(*piVar1 + 0x20))(piVar1,&iStack_e0);
+          (**(code **)(*piVar1 + 0x20))(piVar1,&stack_pair_e0.first);
           bVar2 = false;
         }
         uVar8 = 0;
@@ -160,8 +160,8 @@ void fn_826ED8F0(int param_1,int *param_2)
         if (*(int *)(iVar9 + iVar4 + 4) != 0) {
           fStack_8c = (float)((double)fStack_cc + dVar12);
           fStack_98 = (float)((double)fStack_d8 + dVar12);
-          stack_pair_a0.first = iStack_e0;
-          stack_pair_a0.second = iStack_dc;
+          stack_pair_a0.first = stack_pair_e0.first;
+          stack_pair_a0.second = stack_pair_e0.second;
           iStack_94 = iStack_d4;
           iStack_90 = iStack_d0;
           (**(code **)(*piVar1 + 0x20))(piVar1,&stack_pair_a0.first);
@@ -186,7 +186,7 @@ void fn_826ED8F0(int param_1,int *param_2)
         iVar4 = **(int **)(param_1 + 0x68) + iVar4 * 0x154;
         fn_8270DF10(iVar4,*param_2,
                           (ulonglong)*(uint *)(iVar4 + 0x14c) * 0x28 + (ulonglong)(uint)param_2[1],
-                          &iStack_e0);
+                          &stack_pair_e0.first);
 LAB_826edc44:
         bVar2 = true;
       }
@@ -198,4 +198,3 @@ LAB_826edc44:
   (**(code **)(*piVar1 + 0x40))(piVar1,0,0,0,0);
   return;
 }
-

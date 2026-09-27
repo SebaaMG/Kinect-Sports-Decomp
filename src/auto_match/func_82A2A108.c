@@ -40,11 +40,11 @@ fn_82A2A108(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefined4 
 {
   ulonglong uVar1;
   int iVar2;
-  uint uStack_40;
-  undefined4 uStack_3c;
+  struct { uint first; undefined4 second; } stack_pair_40;
+
   struct { undefined4 first; undefined4 second; } stack_pair_38;
 
-  
+
   if (param_4 != (undefined4 *)0x0) {
     *param_4 = 0;
   }
@@ -67,18 +67,18 @@ fn_82A2A108(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefined4 
     }
     goto LAB_82a2a274;
   }
-  uVar1 = (**(code **)(lbl_8315D3D0 + 0x10))(param_1,0,0,0,&uStack_40,param_2,param_3,0);
+  uVar1 = (**(code **)(lbl_8315D3D0 + 0x10))(param_1,0,0,0,&stack_pair_40.first,param_2,param_3,0);
   if ((int)uVar1 == 0x103) {
     uVar1 = NtWaitForSingleObjectEx(param_1,1,0,0);
     if (-1 < (int)uVar1) {
-      uVar1 = (ulonglong)uStack_40;
+      uVar1 = (ulonglong)stack_pair_40.first;
       goto LAB_82a2a228;
     }
   }
   else {
 LAB_82a2a228:
     if (-1 < (int)uVar1) {
-      *param_4 = uStack_3c;
+      *param_4 = stack_pair_40.second;
       return 1;
     }
   }
@@ -87,10 +87,9 @@ LAB_82a2a228:
     return 1;
   }
   if ((uVar1 & 0xc0000000) == 0x80000000) {
-    *param_4 = uStack_3c;
+    *param_4 = stack_pair_40.second;
   }
 LAB_82a2a274:
   fn_82A2B760(uVar1);
   return 0;
 }
-

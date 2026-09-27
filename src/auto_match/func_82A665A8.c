@@ -63,25 +63,25 @@ void fn_82A665A8(undefined4 *param_1)
   double dVar25;
   double dVar26;
   double dVar27;
-  float fStack_90;
-  uint uStack_8c;
+  struct { float first; uint second; } stack_pair_90;
+
   longlong lStack_88;
-  
-  fStack_90 = (float)param_1[3];
+
+  stack_pair_90.first = (float)param_1[3];
   uVar21 = 0;
   uVar17 = (ulonglong)(uint)param_1[6];
   psVar4 = (short *)*param_1;
   uVar16 = ZEXT48(psVar4);
   lVar19 = (ulonglong)(uint)param_1[2] + 8;
-  dVar23 = (double)fStack_90;
-  uStack_8c = (uint)(float)param_1[4];
-  uVar18 = (ulonglong)uStack_8c;
+  dVar23 = (double)stack_pair_90.first;
+  stack_pair_90.second = (uint)(float)param_1[4];
+  uVar18 = (ulonglong)stack_pair_90.second;
   iVar10 = param_1[1];
   dVar26 = (double)lbl_8201467C;
   uVar5 = param_1[7];
   uVar6 = param_1[9];
   uVar22 = (ulonglong)uVar6;
-  dVar25 = (double)((float)param_1[4] - (float)(longlong)(int)uStack_8c);
+  dVar25 = (double)((float)param_1[4] - (float)(longlong)(int)stack_pair_90.second);
   pfVar20 = (float *)lVar19;
   if (uVar17 != 0) {
     lStack_88 = (longlong)*psVar4;
@@ -103,7 +103,7 @@ void fn_82A665A8(undefined4 *param_1)
         uVar22 = uVar22 + 1;
       }
     } while ((int)uVar22 < 1);
-    fStack_90 = (float)dVar23;
+    stack_pair_90.first = (float)dVar23;
   }
   pfVar14 = (float *)(uVar21 * 4 + iVar10);
   if (((uint)pfVar14 & 0xc) != 0) {
@@ -120,20 +120,20 @@ void fn_82A665A8(undefined4 *param_1)
       dVar23 = dVar25 + dVar23;
       pfVar14 = pfVar14 + 1;
       while( true ) {
-        fStack_90 = (float)dVar23;
-        dVar23 = (double)fStack_90;
+        stack_pair_90.first = (float)dVar23;
+        dVar23 = (double)stack_pair_90.first;
         if (dVar23 < dVar27) break;
         dVar23 = dVar23 - dVar27;
         uVar22 = uVar22 + 1;
       }
     } while (((uint)pfVar14 & 0xc) != 0);
-    uStack_8c = (uint)sVar1;
+    stack_pair_90.second = (uint)sVar1;
   }
   if (0xf < uVar5 - uVar21) {
     uVar6 = uVar5 - uVar21 & 0xfffffff0;
     lVar8 = fn_82A662D0((uVar22 & 0x7fffffff) * 2 + uVar16 + -2,uVar21 * 4 + iVar10,uVar6,
-                              &fStack_90);
-    dVar23 = (double)fStack_90;
+                              &stack_pair_90.first);
+    dVar23 = (double)stack_pair_90.first;
     uVar21 = uVar6 + uVar21;
     uVar22 = lVar8 + uVar22;
   }
@@ -228,4 +228,3 @@ LAB_82a6679c:
   }
   return;
 }
-

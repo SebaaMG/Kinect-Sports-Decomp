@@ -57,12 +57,12 @@ undefined8 fn_82A74B48(int *param_1,int param_2)
   int *piVar10;
   int *piVar11;
   uint uStack_b0;
-  undefined4 uStack_ac;
-  int iStack_a8;
-  
+  struct { undefined4 first; int second; } stack_pair_ac;
+
+
   uVar2 = *(uint *)(param_2 + 0x24);
   iVar3 = *param_1;
-  iStack_a8 = ((int)uVar2 >> 8) + (uint)((int)uVar2 < 0 && (uVar2 & 0xff) != 0);
+  stack_pair_ac.second = ((int)uVar2 >> 8) + (uint)((int)uVar2 < 0 && (uVar2 & 0xff) != 0);
   piVar10 = param_1 + 0x38;
   uVar4 = 0;
   piVar11 = param_1 + 0x81;
@@ -84,11 +84,11 @@ LAB_82a74ff4:
       *(int *)(iVar3 + 0x10) = (int)(short)iVar8;
       return uVar4;
     }
-    uVar4 = fn_82A75DF8(0xffffffff820a8d98,piVar10,&uStack_ac,&uStack_b0,0);
+    uVar4 = fn_82A75DF8(0xffffffff820a8d98,piVar10,&stack_pair_ac.first,&uStack_b0,0);
     if ((int)uVar4 < 0) {
       return uVar4;
     }
-    uVar4 = fn_82A6D200(piVar10,uStack_ac);
+    uVar4 = fn_82A6D200(piVar10,stack_pair_ac.first);
     if ((int)uVar4 < 0) {
       return uVar4;
     }
@@ -107,11 +107,11 @@ LAB_82a74ff4:
     }
     goto switchD_82a74be4_caseD_6;
   case 2:
-    uVar4 = fn_82A75DF8(0xffffffff820a8f78,piVar10,&uStack_ac,&uStack_b0,0);
+    uVar4 = fn_82A75DF8(0xffffffff820a8f78,piVar10,&stack_pair_ac.first,&uStack_b0,0);
     if ((int)uVar4 < 0) {
       return uVar4;
     }
-    uVar4 = fn_82A6D200(piVar10,uStack_ac);
+    uVar4 = fn_82A6D200(piVar10,stack_pair_ac.first);
     if ((int)uVar4 < 0) {
       return uVar4;
     }
@@ -124,11 +124,11 @@ LAB_82a74ff4:
     }
     break;
   case 3:
-    uVar4 = fn_82A75DF8(0xffffffff820a9198,piVar10,&uStack_ac,&uStack_b0,0);
+    uVar4 = fn_82A75DF8(0xffffffff820a9198,piVar10,&stack_pair_ac.first,&uStack_b0,0);
     if ((int)uVar4 < 0) {
       return uVar4;
     }
-    uVar4 = fn_82A6D200(piVar10,uStack_ac);
+    uVar4 = fn_82A6D200(piVar10,stack_pair_ac.first);
     if ((int)uVar4 < 0) {
       return uVar4;
     }
@@ -206,7 +206,7 @@ LAB_82a74d8c:
     goto switchD_82a74be4_caseD_6;
   case 0xe:
     if (piVar11[param_1[0x83] + 5] != 0) {
-      if ((*(int *)(iVar3 + 0x250) == 0) && (iStack_a8 < param_1[0x84])) {
+      if ((*(int *)(iVar3 + 0x250) == 0) && (stack_pair_ac.second < param_1[0x84])) {
         param_1[0x85] = 1;
       }
       *(int *)(iVar3 + 0x10) = (int)(short)param_1[0x84];
@@ -229,7 +229,7 @@ LAB_82a74d8c:
     iVar8 = param_1[0x84];
     param_1[0x83] = iVar7;
     param_1[0x84] = iVar8 + 1;
-    if ((*(int *)(iVar3 + 0x250) == 0) && (iStack_a8 < iVar8 + 1)) {
+    if ((*(int *)(iVar3 + 0x250) == 0) && (stack_pair_ac.second < iVar8 + 1)) {
       param_1[0x85] = 1;
     }
     iVar8 = param_1[0x84];
@@ -248,4 +248,3 @@ switchD_82a74be4_caseD_f:
   uVar4 = fn_82A74760(param_1,param_2);
   return uVar4;
 }
-

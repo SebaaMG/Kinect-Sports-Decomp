@@ -90,10 +90,10 @@ void fn_828958A0(int param_1,undefined8 param_2)
   undefined4 uStack_98;
   undefined **ppuStack_94;
   int iStack_90;
-  undefined4 uStack_8c;
-  uint uStack_88;
+  struct { undefined4 first; uint second; } stack_pair_8c;
+
   int iStack_84;
-  
+
   iVar13 = param_1 + 0x494;
   iVar9 = 0;
   fn_828E9D40(iVar13);
@@ -170,16 +170,16 @@ LAB_828959c8:
               piVar5 = (int *)fn_82897BD0(piVar5);
               ppuStack_94 = &lbl_82197140;
               if (iStack_90 == 7) {
-                if (uStack_88 < 5) {
-                  uStack_8c = 0;
+                if (stack_pair_8c.second < 5) {
+                  stack_pair_8c.first = 0;
                 }
                 else {
-                  fn_8265CA20(uStack_8c);
-                  uStack_8c = 0;
+                  fn_8265CA20(stack_pair_8c.first);
+                  stack_pair_8c.first = 0;
                 }
               }
               else if (iStack_90 == 8) {
-                fn_82897F68(&uStack_8c,0);
+                fn_82897F68(&stack_pair_8c.first,0);
               }
               fn_828B55B0(auStack_a0);
               ppuStack_b0 = &lbl_82197140;
@@ -207,4 +207,3 @@ LAB_828959c8:
     fn_828B55B0(auStack_b8);
   } while( true );
 }
-

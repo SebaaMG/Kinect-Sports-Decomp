@@ -25,7 +25,7 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F691F0();
+extern int memset();
 
 
 void fn_829BC7D8(int *param_1,int param_2,int param_3,int *param_4)
@@ -47,7 +47,7 @@ void fn_829BC7D8(int *param_1,int param_2,int param_3,int *param_4)
   longlong lVar14;
   char acStack_581 [269];
   int aiStack_474 [285];
-  
+
   if ((param_3 < 0) || (3 < param_3)) {
     *(undefined4 *)(*param_1 + 0x14) = 0x32;
     *(int *)(*param_1 + 0x18) = param_3;
@@ -137,6 +137,5 @@ void fn_829BC7D8(int *param_1,int param_2,int param_3,int *param_4)
   } while (lVar14 != 0);
   param_4[0x11] = 0xfffff;
                     /* WARNING: Subroutine does not return */
-  fn_82F691F0(param_4 + 0x24,0,0x400);
+  memset(param_4 + 0x24,0,0x400);
 }
-

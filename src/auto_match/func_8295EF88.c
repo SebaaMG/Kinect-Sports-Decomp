@@ -45,19 +45,19 @@ undefined8 fn_8295EF88(int *param_1)
   undefined4 uStack_2c;
   struct { uint first; undefined4 second; } stack_pair_28;
 
-  undefined4 uStack_20;
-  undefined4 auStack_1c;
-  
+  struct { undefined4 first; undefined4 second; } stack_pair_20;
+
+
   uVar1 = fn_8295D0A8(param_1,1);
   if ((-1 < (int)uVar1) &&
      (uVar1 = (**(code **)(*param_1 + 0x140))
                         (param_1,*(undefined4 *)(**(int **)(param_1[0x41] + 0x10) * 4 + param_1[5]),
-                         &uStack_30,&auStack_1c,&uStack_20), -1 < (int)uVar1)) {
+                         &uStack_30,&stack_pair_20.second,&stack_pair_20.first), -1 < (int)uVar1)) {
     uVar1 = (**(code **)(*param_1 + 0x144))
                       (param_1,*(undefined4 *)(param_1[0x41] + 0x10),
-                       *(undefined4 *)(param_1[0x41] + 0xc),&uStack_2c,uStack_20);
+                       *(undefined4 *)(param_1[0x41] + 0xc),&uStack_2c,stack_pair_20.first);
     if ((-1 < (int)uVar1) &&
-       ((uVar1 = (**(code **)(*param_1 + 0x138))(param_1,uStack_30,uStack_2c,auStack_1c),
+       ((uVar1 = (**(code **)(*param_1 + 0x138))(param_1,uStack_30,uStack_2c,stack_pair_20.second),
         -1 < (int)uVar1 &&
         (uVar1 = (**(code **)(*param_1 + 0x148))
                            (param_1,*(undefined4 *)(**(int **)(param_1[0x41] + 8) * 4 + param_1[5]),
@@ -86,4 +86,3 @@ undefined8 fn_8295EF88(int *param_1)
   }
   return uVar1;
 }
-

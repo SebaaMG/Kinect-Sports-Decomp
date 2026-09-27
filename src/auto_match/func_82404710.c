@@ -44,10 +44,10 @@ void fn_82404710(double param_1,int param_2)
   int iVar2;
   undefined8 uVar1;
   float fStack0000001c;
-  float afStack_30 [2];
+  float afStack_30;
   struct { undefined4 first; int second; } stack_pair_28;
 
-  
+
   fStack0000001c = (float)param_1;
   iVar2 = fn_8265C9E0(0x28);
   if (iVar2 == 0) {
@@ -64,10 +64,10 @@ void fn_82404710(double param_1,int param_2)
   if (*(int *)(param_2 + 0x48) != 0) {
     fn_828E9D90(stack_pair_28.first);
     fn_828E9D40(stack_pair_28.first);
-    (**(code **)(**(int **)(param_2 + 0x68) + 0x14))(*(int **)(param_2 + 0x68),stack_pair_28.first,afStack_30)
+    (**(code **)(**(int **)(param_2 + 0x68) + 0x14))(*(int **)(param_2 + 0x68),stack_pair_28.first,&afStack_30)
     ;
     if (*(int **)(param_2 + 0x48) != (int *)0x0) {
-      (**(code **)(**(int **)(param_2 + 0x48) + 4))((double)afStack_30[0]);
+      (**(code **)(**(int **)(param_2 + 0x48) + 4))((double)afStack_30);
     }
   }
   fn_828E2B28(param_2,&stack_pair_28.first);
@@ -76,4 +76,3 @@ void fn_82404710(double param_1,int param_2)
   }
   return;
 }
-

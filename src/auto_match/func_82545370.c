@@ -39,14 +39,13 @@ void fn_82545370(undefined8 param_1,undefined8 param_2,undefined8 param_3)
 {
   struct { undefined4 first; undefined4 second; } stack_pair_20;
 
-  undefined4 uStack_18;
-  undefined4 uStack_14;
-  
+  struct { undefined4 first; undefined4 second; } stack_pair_18;
+
+
   stack_pair_20.first = lbl_821CC160;
   stack_pair_20.second = lbl_821CC160;
-  uStack_18 = lbl_821CA460;
-  uStack_14 = lbl_821CA460;
-  fn_825453C0(param_1,param_2,&stack_pair_20.first,&uStack_18,param_3);
+  stack_pair_18.first = lbl_821CA460;
+  stack_pair_18.second = lbl_821CA460;
+  fn_825453C0(param_1,param_2,&stack_pair_20.first,&stack_pair_18.first,param_3);
   return;
 }
-

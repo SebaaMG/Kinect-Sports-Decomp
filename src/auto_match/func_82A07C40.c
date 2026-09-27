@@ -80,8 +80,8 @@ void fn_82A07C40(undefined8 param_1,int param_2)
   struct { float first; float second; } stack_pair_100;
 
   float fStack_f8;
-  float fStack_f0;
-  float fStack_ec;
+  struct { float first; float second; } stack_pair_f0;
+
   float fStack_e8;
   float fStack_e4;
   float fStack_e0;
@@ -100,11 +100,11 @@ void fn_82A07C40(undefined8 param_1,int param_2)
   float fStack_ac;
   float fStack_a8;
   float fStack_a4;
-  
+
   iVar2 = fn_82F6DA04();
   dVar3 = (double)lbl_821AAD20;
-  fStack_f0 = lbl_821AAD20;
-  fStack_ec = lbl_821AAD20;
+  stack_pair_f0.first = lbl_821AAD20;
+  stack_pair_f0.second = lbl_821AAD20;
   fStack_e8 = lbl_821AAD20;
   fStack_e4 = lbl_821AAD20;
   fStack_e0 = lbl_821AAD20;
@@ -123,8 +123,8 @@ void fn_82A07C40(undefined8 param_1,int param_2)
   fStack_ac = lbl_821AAD20;
   fStack_a8 = lbl_821AAD20;
   fStack_a4 = lbl_821AAD20;
-  fn_82A022A0(&fStack_f0);
-  fn_82A022A0(&fStack_f0);
+  fn_82A022A0(&stack_pair_f0.first);
+  fn_82A022A0(&stack_pair_f0.first);
   fn_82A022A0(&fStack_e8);
   fn_82A022A0(&fStack_e8);
   fn_82A022A0(&fStack_b0);
@@ -170,10 +170,10 @@ void fn_82A07C40(undefined8 param_1,int param_2)
   fn_82A022A0(&fStack_c0);
   fn_82A022A0(&fStack_b8);
   fn_82A022A0(&fStack_b8);
-  fn_82A02760(iVar2,&fStack_f0);
+  fn_82A02760(iVar2,&stack_pair_f0.first);
   if (lbl_83218C34 != (int *)0x0) {
-    fStack_f0 = *(float *)(iVar2 + 0x40a0);
-    fStack_ec = *(float *)(iVar2 + 0x40a8);
+    stack_pair_f0.first = *(float *)(iVar2 + 0x40a0);
+    stack_pair_f0.second = *(float *)(iVar2 + 0x40a8);
     fStack_e8 = *(float *)(iVar2 + 0x40b0);
     fStack_e4 = *(float *)(iVar2 + 0x40b8);
     fStack_e0 = *(float *)(iVar2 + 0x40c0);
@@ -182,9 +182,8 @@ void fn_82A07C40(undefined8 param_1,int param_2)
     fStack_d4 = *(float *)(iVar2 + 0x40d8);
     fStack_d0 = *(float *)(iVar2 + 0x40e0);
     fStack_cc = *(float *)(iVar2 + 0x40e8);
-    (**(code **)(*lbl_83218C34 + 0x58))(lbl_83218C34,*(undefined4 *)(iVar2 + 0x4144),&fStack_f0);
+    (**(code **)(*lbl_83218C34 + 0x58))(lbl_83218C34,*(undefined4 *)(iVar2 + 0x4144),&stack_pair_f0.first);
   }
   fn_82F6DC9C();
   return;
 }
-

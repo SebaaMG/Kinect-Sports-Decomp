@@ -70,13 +70,13 @@ float * fn_826CC520(float *param_1,int param_2,undefined4 *param_3)
   float fStack_78;
   float fStack_74;
   undefined1 auStack_70 [16];
-  undefined4 uStack_60;
-  undefined4 uStack_5c;
+  struct { undefined4 first; undefined4 second; } stack_pair_60;
+
   undefined4 uStack_58;
   undefined4 uStack_54;
   undefined4 uStack_50;
   undefined4 uStack_4c;
-  
+
   stack_pair_90.first = lbl_821AAD20;
   uVar10 = (ulonglong)*(uint *)(param_2 + 0xac);
   dVar11 = (double)lbl_821AAD20;
@@ -87,20 +87,20 @@ float * fn_826CC520(float *param_1,int param_2,undefined4 *param_3)
   param_1[1] = stack_pair_90.first;
   param_1[2] = stack_pair_90.first;
   param_1[3] = stack_pair_90.first;
-  fn_8268CC00(&uStack_60);
+  fn_8268CC00(&stack_pair_60.first);
   if (uVar10 != 0) {
     iVar9 = 0;
     do {
       piVar3 = *(int **)(*(int *)(param_2 + 0xa8) + iVar9);
       if (piVar3 != (int *)0x0) {
-        uStack_60 = *param_3;
-        uStack_5c = param_3[1];
+        stack_pair_60.first = *param_3;
+        stack_pair_60.second = param_3[1];
         uStack_58 = param_3[2];
         uStack_54 = param_3[3];
         uStack_50 = param_3[4];
         uStack_4c = param_3[5];
-        fn_8268CEC0(&uStack_60,piVar3 + 0x11);
-        pfVar8 = (float *)(**(code **)(*piVar3 + 0x28))(auStack_70,piVar3,&uStack_60);
+        fn_8268CEC0(&stack_pair_60.first,piVar3 + 0x11);
+        pfVar8 = (float *)(**(code **)(*piVar3 + 0x28))(auStack_70,piVar3,&stack_pair_60.first);
         fStack_88 = pfVar8[2];
         stack_pair_90.first = *pfVar8;
         fStack_84 = pfVar8[3];
@@ -191,4 +191,3 @@ float * fn_826CC520(float *param_1,int param_2,undefined4 *param_3)
   }
   return param_1;
 }
-

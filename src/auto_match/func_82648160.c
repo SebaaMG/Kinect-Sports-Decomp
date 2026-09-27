@@ -108,8 +108,8 @@ void fn_82648160(int param_1,longlong param_2,byte *param_3)
   uint uStack_1e4;
   uint uStack_1e0;
   undefined4 auStack_1dc [3];
-  uint uStack_1d0;
-  uint uStack_1cc;
+  struct { uint first; uint second; } stack_pair_1d0;
+
   uint uStack_1c8;
   uint uStack_1c4;
   int aiStack_1b0 [3];
@@ -129,30 +129,30 @@ void fn_82648160(int param_1,longlong param_2,byte *param_3)
   ushort uStack_98;
   ushort uStack_96;
   ushort uStack_8a;
-  
+
   lVar7 = KeGetCurrentProcessType();
   *(int *)(param_1 + 0x4188) = *(int *)(param_1 + 0x4188) + 1;
   iVar4 = (int)lVar7 + -3 + (uint)(lVar7 + -2 == 0);
   iVar12 = (int)(lVar7 + -2);
-  memcpy(&uStack_1d0,param_2 + 0x1c,0x18);
-  uVar22 = (ulonglong)uStack_1cc;
-  if ((uStack_1cc & 0x3f) == 0x32) {
+  memcpy(&stack_pair_1d0.first,param_2 + 0x1c,0x18);
+  uVar22 = (ulonglong)stack_pair_1d0.second;
+  if ((stack_pair_1d0.second & 0x3f) == 0x32) {
     uVar22 = uVar22 & 0xffffffffffffffc0 | 6;
 LAB_826481d4:
-    uStack_1cc = (uint)uVar22;
+    stack_pair_1d0.second = (uint)uVar22;
   }
-  else if ((uStack_1cc & 0x3f) == 7) {
+  else if ((stack_pair_1d0.second & 0x3f) == 7) {
     uVar22 = uVar22 & 0xffffffffffffffc0 | 0x36;
     goto LAB_826481d4;
   }
   uVar20 = (ulonglong)(*(uint *)(param_1 + 0x35fc) >> 0x11);
-  uStack_1d0 = *(uint *)(param_1 + 0x35fc) >> 7 & 0x3fc | uStack_1d0 & 0xfffffc03;
+  stack_pair_1d0.first = *(uint *)(param_1 + 0x35fc) >> 7 & 0x3fc | stack_pair_1d0.first & 0xfffffc03;
   uVar20 = (ulonglong)uStack_1c4 & 0xffffe000 | uVar20 & 0x1ffe | uVar20 & 1;
   uStack_1c4 = (uint)uVar20;
   if ((*(byte *)(param_1 + 0x2ac0) & 0x40) != 0) {
     fn_82647258(param_1);
     uVar20 = (ulonglong)uStack_1c4;
-    uVar22 = (ulonglong)uStack_1cc;
+    uVar22 = (ulonglong)stack_pair_1d0.second;
   }
   memcpy(param_1 + 0x3ad0,param_2,0x34);
   iVar2 = *(int *)(param_1 + 0x3600);
@@ -220,7 +220,7 @@ code_r0x82648384:
   VdGetSystemCommandBuffer(auStack_180,auStack_1dc);
   if (*(int *)(param_1 + 0x54f4) == 0) {
     lVar7 = fn_82643A48(param_1,0x40);
-    VdSwap(lVar7 + 4,&uStack_1d0,(ulonglong)*(uint *)(param_1 + 0x2a90) + 8,auStack_180,
+    VdSwap(lVar7 + 4,&stack_pair_1d0.first,(ulonglong)*(uint *)(param_1 + 0x2a90) + 8,auStack_180,
                     auStack_1dc[0],&uStack_1e4,&uStack_1e0,&stack_pair_1f0.first);
     *(int *)(param_1 + 0x30) = (int)lVar7 + 0x100;
   }
@@ -412,4 +412,3 @@ LAB_8264871c:
   fn_82637398(param_1,0);
   return;
 }
-

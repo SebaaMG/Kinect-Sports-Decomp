@@ -41,21 +41,21 @@ undefined8 fn_8281F1B0(longlong param_1,undefined4 *param_2)
   int iVar2;
   undefined8 uVar1;
   double dVar3;
-  undefined4 uStack_40;
-  undefined4 uStack_3c;
+  struct { undefined4 first; undefined4 second; } stack_pair_40;
+
   undefined4 uStack_38;
   struct { undefined4 first; undefined4 second; } stack_pair_30;
 
   undefined4 uStack_28;
-  
-  uStack_40 = *param_2;
-  uStack_3c = param_2[1];
+
+  stack_pair_40.first = *param_2;
+  stack_pair_40.second = param_2[1];
   uStack_38 = param_2[2];
   stack_pair_30.first = param_2[3];
   dVar3 = (double)lbl_8201DCB8;
   stack_pair_30.second = param_2[4];
   uStack_28 = param_2[5];
-  iVar2 = fn_82810380(dVar3,param_1,&uStack_40);
+  iVar2 = fn_82810380(dVar3,param_1,&stack_pair_40.first);
   if (iVar2 == 0) {
     uVar1 = 0;
   }
@@ -64,4 +64,3 @@ undefined8 fn_8281F1B0(longlong param_1,undefined4 *param_2)
   }
   return uVar1;
 }
-

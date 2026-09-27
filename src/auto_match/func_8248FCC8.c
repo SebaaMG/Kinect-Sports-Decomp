@@ -46,9 +46,9 @@ void fn_8248FCC8(ulonglong param_1,ulonglong param_2,ulonglong param_3)
   ulonglong uVar8;
   ulonglong uVar10;
   int *piVar11;
-  uint uStack_40;
-  uint uStack_3c;
-  
+  struct { uint first; uint second; } stack_pair_40;
+
+
   lVar6 = param_2 - param_1;
   uVar4 = (int)lVar6 >> 2;
   uVar8 = param_2;
@@ -57,13 +57,13 @@ void fn_8248FCC8(ulonglong param_1,ulonglong param_2,ulonglong param_3)
       iVar9 = (int)param_3;
       param_2 = uVar8;
       if (iVar9 < 1) break;
-      fn_8248FEA8(&uStack_40,param_1,uVar8);
+      fn_8248FEA8(&stack_pair_40.first,param_1,uVar8);
       param_3 = (longlong)(iVar9 >> 1) + (ulonglong)(iVar9 < 0 && (param_3 & 1) != 0);
       param_3 = (longlong)((int)param_3 >> 1) + (ulonglong)((int)param_3 < 0 && (param_3 & 1) != 0)
                 + param_3;
-      uVar10 = (ulonglong)uStack_3c;
-      param_2 = (ulonglong)uStack_40;
-      if ((int)(uStack_40 - (int)param_1 & 0xfffffffc) < (int)((int)uVar8 - uStack_3c & 0xfffffffc))
+      uVar10 = (ulonglong)stack_pair_40.second;
+      param_2 = (ulonglong)stack_pair_40.first;
+      if ((int)(stack_pair_40.first - (int)param_1 & 0xfffffffc) < (int)((int)uVar8 - stack_pair_40.second & 0xfffffffc))
       {
         fn_8248FCC8(param_1,param_2,param_3);
         param_2 = uVar8;
@@ -85,9 +85,9 @@ void fn_8248FCC8(ulonglong param_1,ulonglong param_2,ulonglong param_3)
         lVar7 = (uVar8 & 0x3fffffff) * 4 + param_1;
         do {
           lVar7 = lVar7 + -4;
-          uStack_40 = *(uint *)lVar7;
+          stack_pair_40.first = *(uint *)lVar7;
           uVar8 = uVar8 - 1;
-          fn_82490210(param_1,uVar8,uVar4,&uStack_40);
+          fn_82490210(param_1,uVar8,uVar4,&stack_pair_40.first);
         } while (0 < (int)uVar8);
       }
       if ((int)uVar4 < 2) {
@@ -96,10 +96,10 @@ void fn_8248FCC8(ulonglong param_1,ulonglong param_2,ulonglong param_3)
       puVar2 = (undefined4 *)param_1;
       do {
         iVar9 = (int)lVar6;
-        uStack_40 = *(uint *)((int)puVar2 + iVar9 + -4);
+        stack_pair_40.first = *(uint *)((int)puVar2 + iVar9 + -4);
         lVar6 = lVar6 + -4;
         *(undefined4 *)((int)puVar2 + iVar9 + -4) = *puVar2;
-        fn_82490210(param_1,0,(int)(uint)lVar6 >> 2,&uStack_40);
+        fn_82490210(param_1,0,(int)(uint)lVar6 >> 2,&stack_pair_40.first);
       } while (4 < (int)((uint)lVar6 & 0xfffffffc));
       return;
     }
@@ -132,4 +132,3 @@ void fn_8248FCC8(ulonglong param_1,ulonglong param_2,ulonglong param_3)
   }
   return;
 }
-

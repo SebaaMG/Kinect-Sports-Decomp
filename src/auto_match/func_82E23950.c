@@ -26,14 +26,13 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_82E23870();
-extern int fn_82E320E0();
+extern int fn_82E245E8();
 
 
 void fn_82E23950(void)
 
 {
   fn_82E23870();
-  fn_82E320E0();
+  fn_82E245E8();
   return;
 }
-

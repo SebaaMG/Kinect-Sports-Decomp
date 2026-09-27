@@ -37,19 +37,19 @@ extern unsigned int iStack_20;
 undefined8 fn_82396DA8(int param_1)
 
 {
-  int iStack_20;
-  int iStack_1c;
+  struct { int first; int second; } stack_pair_20;
+
   struct { int first; int second; } stack_pair_18;
 
-  
-  fn_82359DB8(&iStack_20,param_1 + 0x40,*(undefined4 *)(param_1 + 0x54));
-  if ((iStack_20 != 0) && (*(int *)(iStack_20 + 4) == 5)) {
-    fn_82522588(&stack_pair_18.first,&iStack_20);
+
+  fn_82359DB8(&stack_pair_20.first,param_1 + 0x40,*(undefined4 *)(param_1 + 0x54));
+  if ((stack_pair_20.first != 0) && (*(int *)(stack_pair_20.first + 4) == 5)) {
+    fn_82522588(&stack_pair_18.first,&stack_pair_20.first);
     if (*(int *)(stack_pair_18.first + 0x20) == 2) {
       if (stack_pair_18.second != 0) {
         fn_822315A0();
       }
-      if (iStack_1c != 0) {
+      if (stack_pair_20.second != 0) {
         fn_822315A0();
       }
       return 1;
@@ -58,9 +58,8 @@ undefined8 fn_82396DA8(int param_1)
       fn_822315A0();
     }
   }
-  if (iStack_1c != 0) {
+  if (stack_pair_20.second != 0) {
     fn_822315A0();
   }
   return 0;
 }
-

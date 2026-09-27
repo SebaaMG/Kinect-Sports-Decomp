@@ -29,7 +29,7 @@ extern unsigned int *auStack_68;
 extern unsigned int *auStack_78;
 extern int fn_82C10AD0();
 extern int fn_82C1E938();
-extern int fn_82F691F0();
+extern int memset();
 extern unsigned int uStack_6c;
 extern unsigned int uStack_70;
 extern unsigned int uStack_7a;
@@ -55,12 +55,12 @@ undefined8 fn_82C20438(int param_1,longlong param_2)
   ushort uStack_7e;
   ushort uStack_7c;
   ushort uStack_7a;
-  ushort auStack_78 [2];
+  ushort auStack_78;
   ushort *puStack_74;
   uint uStack_70;
   undefined4 uStack_6c;
-  undefined4 auStack_68 [26];
-  
+  undefined4 auStack_68 [2];
+
   piVar1 = *(int **)(param_1 + 0x1c);
   auStack_68[0] = 0;
   uVar9 = param_2 - 0x18;
@@ -71,7 +71,7 @@ undefined8 fn_82C20438(int param_1,longlong param_2)
   uStack_7e = 0;
   uStack_7c = 0;
   uStack_7a = 0;
-  auStack_78[0] = 0;
+  auStack_78 = 0;
   uVar7 = (**(code **)(*piVar1 + 0xc))(*piVar1,uVar9);
   if ((int)uVar7 < 0) {
     return uVar7;
@@ -93,13 +93,13 @@ undefined8 fn_82C20438(int param_1,longlong param_2)
     if ((int)uVar7 < 0) {
       return uVar7;
     }
-    uVar7 = fn_82C1E938(param_1,auStack_78,auStack_68,&uStack_70,&uStack_6c);
+    uVar7 = fn_82C1E938(param_1,&auStack_78,auStack_68,&uStack_70,&uStack_6c);
     if ((int)uVar7 < 0) {
       return uVar7;
     }
     if (*(short *)(piVar1[1] + 0x38) < 1) {
       uVar7 = fn_82C10AD0(piVar1[0x38],0xb,0x20,&puStack_74);
-      uVar6 = auStack_78[0];
+      uVar6 = auStack_78;
       uVar5 = uStack_7a;
       uVar4 = uStack_7c;
       uVar3 = uStack_7e;
@@ -120,7 +120,7 @@ undefined8 fn_82C20438(int param_1,longlong param_2)
       puStack_74[1] = uStack_7e >> 1;
       puStack_74[2] = uStack_7c >> 1;
       puStack_74[3] = uStack_7a >> 1;
-      puStack_74[4] = auStack_78[0] >> 1;
+      puStack_74[4] = auStack_78 >> 1;
       puStack_74[6] = 0;
       puStack_74[7] = 0;
       puStack_74[8] = 0;
@@ -137,7 +137,7 @@ undefined8 fn_82C20438(int param_1,longlong param_2)
           return uVar7;
         }
                     /* WARNING: Subroutine does not return */
-        fn_82F691F0(*(undefined4 *)(puStack_74 + 6),0,uVar2);
+        memset(*(undefined4 *)(puStack_74 + 6),0,uVar2);
       }
       if (uStack_7e != 0) {
         uVar7 = fn_82C10AD0(piVar1[0x38],0xb,uStack_7e,puStack_74 + 8);
@@ -145,7 +145,7 @@ undefined8 fn_82C20438(int param_1,longlong param_2)
           return uVar7;
         }
                     /* WARNING: Subroutine does not return */
-        fn_82F691F0(*(undefined4 *)(puStack_74 + 8),0,uVar3);
+        memset(*(undefined4 *)(puStack_74 + 8),0,uVar3);
       }
       if (uStack_7c != 0) {
         uVar7 = fn_82C10AD0(piVar1[0x38],0xb,uStack_7c,puStack_74 + 10);
@@ -153,7 +153,7 @@ undefined8 fn_82C20438(int param_1,longlong param_2)
           return uVar7;
         }
                     /* WARNING: Subroutine does not return */
-        fn_82F691F0(*(undefined4 *)(puStack_74 + 10),0,uVar4);
+        memset(*(undefined4 *)(puStack_74 + 10),0,uVar4);
       }
       if (uStack_7a != 0) {
         uVar7 = fn_82C10AD0(piVar1[0x38],0xb,uStack_7a,puStack_74 + 0xc);
@@ -161,15 +161,15 @@ undefined8 fn_82C20438(int param_1,longlong param_2)
           return uVar7;
         }
                     /* WARNING: Subroutine does not return */
-        fn_82F691F0(*(undefined4 *)(puStack_74 + 0xc),0,uVar5);
+        memset(*(undefined4 *)(puStack_74 + 0xc),0,uVar5);
       }
-      if (auStack_78[0] != 0) {
-        uVar7 = fn_82C10AD0(piVar1[0x38],0xb,auStack_78[0],puStack_74 + 0xe);
+      if (auStack_78 != 0) {
+        uVar7 = fn_82C10AD0(piVar1[0x38],0xb,auStack_78,puStack_74 + 0xe);
         if ((int)uVar7 < 0) {
           return uVar7;
         }
                     /* WARNING: Subroutine does not return */
-        fn_82F691F0(*(undefined4 *)(puStack_74 + 0xe),0,uVar6);
+        memset(*(undefined4 *)(puStack_74 + 0xe),0,uVar6);
       }
       *(short *)(piVar1[1] + 0x38) = *(short *)(piVar1[1] + 0x38) + 1;
       uVar9 = (uVar9 - uStack_70) - 10;
@@ -186,4 +186,3 @@ undefined8 fn_82C20438(int param_1,longlong param_2)
   }
   return 0xffffffff8050000c;
 }
-

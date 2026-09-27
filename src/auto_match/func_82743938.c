@@ -62,14 +62,14 @@ void fn_82743938(int param_1)
   double dVar9;
   undefined1 auStack_a0 [1];
   undefined1 auStack_90 [16];
-  undefined1 auStack_80 [8];
+  undefined1 auStack_80 [1];
   double dStack_78;
   undefined1 auStack_70 [16];
   undefined1 auStack_60 [16];
   undefined1 auStack_50 [16];
   undefined1 auStack_40 [16];
   undefined1 auStack_30 [48];
-  
+
   fn_826BC950();
   fn_82681898(*(undefined4 *)(param_1 + 4));
   if (1 < *(int *)(param_1 + 0x1c)) {
@@ -144,4 +144,3 @@ void fn_82743938(int param_1)
   }
   return;
 }
-

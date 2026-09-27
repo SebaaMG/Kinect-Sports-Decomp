@@ -78,8 +78,8 @@ void fn_825ECEF0(int param_1)
   undefined4 in_register_000104b4;
   undefined4 in_register_000104b8;
   undefined4 in_vr75;
-  undefined4 uStack_110;
-  undefined4 uStack_10c;
+  struct { undefined4 first; undefined4 second; } stack_pair_110;
+
   undefined4 uStack_108;
   int iStack_104;
   undefined1 auStack_100 [16];
@@ -95,7 +95,7 @@ void fn_825ECEF0(int param_1)
   undefined4 uStack_c8;
   undefined1 auStack_c0 [64];
   undefined1 auStack_80 [128];
-  
+
   iVar4 = *(int *)(param_1 + 8);
   iVar5 = *(int *)(param_1 + 4);
   iVar12 = iVar4 * 0x200 + iVar5;
@@ -103,10 +103,10 @@ void fn_825ECEF0(int param_1)
   memcpy(auStack_c0,iVar12 + 0x90,0x40);
   uStack_ec = lbl_821CC160;
   uStack_108 = *(undefined4 *)(iVar5 + 0xae4);
-  uStack_110 = *(undefined4 *)(param_1 + 0x10);
+  stack_pair_110.first = *(undefined4 *)(param_1 + 0x10);
   piVar7 = *(int **)((*(uint *)(iVar5 + 0xaf0) % 3 + 5) * 4 + param_1);
   iVar5 = *piVar7;
-  uStack_10c = 4;
+  stack_pair_110.second = 4;
   puVar9 = (undefined4 *)((uint)(auStack_100 + in_r0) & 0xfffffff0);
   *puVar9 = in_register_000104b0;
   puVar9[1] = in_register_000104b4;
@@ -174,9 +174,8 @@ void fn_825ECEF0(int param_1)
   *(uint *)(iVar5 + 0x293c) = *(uint *)(iVar5 + 0x293c) | 8;
   *(ulonglong *)(iVar5 + 0x10) = *(ulonglong *)(iVar5 + 0x10) | 0x40200;
   piVar6 = *(int **)(param_1 + 4);
-  fn_8257DE30(*(undefined4 *)(*piVar6 + 0xb8),3,&uStack_110,piVar6[0x2ba],
+  fn_8257DE30(*(undefined4 *)(*piVar6 + 0xb8),3,&stack_pair_110.first,piVar6[0x2ba],
                     piVar6 + *(int *)(param_1 + 8) * 0x80 + 0x5d);
   fn_82623338(piVar7);
   return;
 }
-

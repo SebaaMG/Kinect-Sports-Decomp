@@ -88,8 +88,8 @@ void fn_82715F40(undefined1 param_1,int param_2)
   byte bVar1;
   int *piVar2;
   int * apiStack_e0;
-  undefined4 uStack_d0;
-  undefined4 uStack_cc;
+  struct { undefined4 first; undefined4 second; } stack_pair_d0;
+
   undefined2 uStack_c8;
   undefined1 uStack_c6;
   undefined1 uStack_c5;
@@ -145,7 +145,7 @@ void fn_82715F40(undefined1 param_1,int param_2)
   undefined1 uStack_45;
   undefined1 uStack_44;
   undefined1 uStack_43;
-  
+
   fn_82715DE8(&apiStack_e0);
   fn_82715E48(apiStack_60,param_2);
   piVar2 = apiStack_e0;
@@ -198,13 +198,13 @@ LAB_82716078:
         }
         cStack_c4 = *(char *)((int)apiStack_60[0] + 0x93);
         *(char *)((int)apiStack_60[0] + 0x93) = cStack_c4 + '\x01';
-        uStack_d0 = 0x8000;
-        uStack_cc = 0;
+        stack_pair_d0.first = 0x8000;
+        stack_pair_d0.second = 0;
         uStack_c8 = 0;
         uStack_c6 = 0;
         uStack_c3 = 0;
         uStack_c5 = param_1;
-        (**(code **)(*apiStack_60[0] + 0xe8))(apiStack_60[0],&uStack_d0);
+        (**(code **)(*apiStack_60[0] + 0xe8))(apiStack_60[0],&stack_pair_d0.first);
         *(byte *)(param_2 + 0x20) = *(byte *)(param_2 + 0x20) | 0x20;
         piVar2 = apiStack_60[0];
       }
@@ -299,4 +299,3 @@ LAB_827161ac:
   }
   return;
 }
-

@@ -50,8 +50,8 @@ fn_82303038(undefined4 *param_1,int param_2,undefined8 param_3,int param_4,undef
   undefined4 in_vr77;
   undefined1 auStack_90 [1];
   undefined1 auStack_70 [32];
-  undefined1 auStack_50 [80];
-  
+  undefined1 auStack_50 [48];
+
   fn_82230110(auStack_90,0xffffffff821aee20);
   fn_822C70F0(param_1,auStack_90,param_2);
   fn_82230300(auStack_90,1,0);
@@ -87,4 +87,3 @@ fn_82303038(undefined4 *param_1,int param_2,undefined8 param_3,int param_4,undef
   fn_82230300(auStack_50,1,0);
   return param_1;
 }
-

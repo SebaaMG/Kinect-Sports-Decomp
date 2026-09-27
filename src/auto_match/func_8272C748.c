@@ -44,15 +44,15 @@ int * fn_8272C748(int *param_1,undefined8 param_2,char param_3,int *param_4)
   ushort uVar1;
   char cVar3;
   int iVar2;
-  float fStack_50;
-  float fStack_4c;
+  struct { float first; float second; } stack_pair_50;
+
   struct { int first; int second; } stack_pair_40;
 
   int iStack_38;
   int iStack_34;
   int iStack_30;
   int iStack_2c;
-  
+
   if (((((uint)param_1[0x23] >> 0xb & 1) == 0) &&
       (cVar3 = (**(code **)(*param_1 + 8))(), cVar3 != '\0')) && (param_4 != param_1)) {
     stack_pair_40.first = param_1[0x11];
@@ -61,9 +61,9 @@ int * fn_8272C748(int *param_1,undefined8 param_2,char param_3,int *param_4)
     iStack_34 = param_1[0x14];
     iStack_30 = param_1[0x15];
     iStack_2c = param_1[0x16];
-    fn_8268D008(&stack_pair_40.first,&fStack_50,param_2);
+    fn_8268D008(&stack_pair_40.first,&stack_pair_50.first,param_2);
     if ((*(short *)(param_1 + 0x19) == 0) &&
-       (cVar3 = (**(code **)(*param_1 + 0x30))(param_1,&fStack_50,1), cVar3 != '\0')) {
+       (cVar3 = (**(code **)(*param_1 + 0x30))(param_1,&stack_pair_50.first,1), cVar3 != '\0')) {
       if (param_3 != '\0') {
         return param_1;
       }
@@ -85,7 +85,7 @@ int * fn_8272C748(int *param_1,undefined8 param_2,char param_3,int *param_4)
       }
       if ((((uVar1 & 1) == 0) && ((*(ushort *)(param_1 + 0x32) >> 1 & 1) != 0)) &&
          (((*(byte *)(*(int *)(param_1[0x28] + 8) + 0x20) & 1) != 0 &&
-          (cVar3 = fn_827A1070((double)fStack_50,(double)fStack_4c), cVar3 != '\0')))) {
+          (cVar3 = fn_827A1070((double)stack_pair_50.first,(double)stack_pair_50.second), cVar3 != '\0')))) {
         return param_1;
       }
       while ((param_1 = (int *)param_1[8], param_1 != (int *)0x0 &&
@@ -104,4 +104,3 @@ int * fn_8272C748(int *param_1,undefined8 param_2,char param_3,int *param_4)
   }
   return (int *)0x0;
 }
-

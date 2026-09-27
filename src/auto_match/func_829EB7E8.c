@@ -66,11 +66,11 @@ longlong fn_829EB7E8(int *param_1,int param_2,int param_3,undefined4 *param_4,in
   int iStack_9c;
   int iStack_98;
   int iStack_94;
-  undefined4 uStack_90;
-  undefined4 uStack_8c;
+  struct { undefined4 first; undefined4 second; } stack_pair_90;
+
   undefined4 uStack_88;
   undefined4 uStack_84;
-  
+
   if (((((*(int *)(param_2 + 0x18) != *(int *)(param_3 + 0x18)) || (*(int *)(param_2 + 0x18) == 0))
        || (*(int *)(param_2 + 0x10) == 0)) ||
       ((*(int *)(param_2 + 0x14) == 0 || (*(int *)(param_3 + 0x10) == 0)))) ||
@@ -99,11 +99,11 @@ longlong fn_829EB7E8(int *param_1,int param_2,int param_3,undefined4 *param_4,in
   if (param_4 == (undefined4 *)0x0) {
     uStack_a8 = *(undefined4 *)(param_3 + 0x10);
     uStack_a4 = *(undefined4 *)(param_3 + 0x14);
-    puVar4 = &uStack_90;
+    puVar4 = &stack_pair_90.first;
     stack_pair_b0.first = 0;
     stack_pair_b0.second = 0;
-    uStack_90 = 0;
-    uStack_8c = 0;
+    stack_pair_90.first = 0;
+    stack_pair_90.second = 0;
     uStack_88 = uStack_a8;
     uStack_84 = uStack_a4;
   }
@@ -175,4 +175,3 @@ LAB_829ebabc:
   fn_829EAC30(param_1);
   return lVar5;
 }
-

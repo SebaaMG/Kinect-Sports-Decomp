@@ -45,8 +45,8 @@ void fn_8240DB68(int param_1)
   undefined4 in_vr77;
   undefined1 auStack_60 [1];
   undefined1 auStack_50 [16];
-  undefined1 auStack_40 [64];
-  
+  undefined1 auStack_40 [32];
+
   uVar3 = (ulonglong)*(uint *)(param_1 + 0x24);
   fn_822B3058(auStack_60,*(undefined4 *)(param_1 + 0x40));
   iVar2 = (**(code **)(*(int *)uVar3 + 4))(uVar3);
@@ -63,4 +63,3 @@ void fn_8240DB68(int param_1)
   puVar1[3] = in_vr77;
   return;
 }
-

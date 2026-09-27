@@ -66,10 +66,10 @@ void fn_827808F8(int param_1)
   struct { uint first; uint second; } stack_pair_a0;
 
   uint uStack_98;
-  uint uStack_90;
-  uint uStack_8c;
+  struct { uint first; uint second; } stack_pair_90;
+
   uint uStack_88;
-  
+
   uVar21 = 1;
   uVar22 = 1;
   stack_pair_a0.first = *(uint *)**(int **)(param_1 + 0x1a0);
@@ -142,14 +142,14 @@ LAB_827809d4:
       bVar24 = dVar25 <= (double)((pfVar16[1] - fVar3) * (fVar5 - fVar4) -
                                  (fVar6 - pfVar16[1]) * (fVar4 - fVar7));
     }
-    uStack_90 = stack_pair_a0.first;
-    uStack_8c = stack_pair_a0.second;
+    stack_pair_90.first = stack_pair_a0.first;
+    stack_pair_90.second = stack_pair_a0.second;
     if ((bVar23) && (bVar24)) {
       if ((fVar2 - pfVar15[1]) * (fVar2 - pfVar15[1]) + fVar13 * fVar13 <
           (fVar6 - fVar3) * (fVar6 - fVar3) + (fVar5 - fVar7) * (fVar5 - fVar7)) goto LAB_82780c14;
 LAB_82780bdc:
       if (((stack_pair_a0.first != stack_pair_a0.second) && (stack_pair_a0.second != uStack_88)) && (uStack_88 != stack_pair_a0.first)) {
-        fn_8277E9F8(param_1 + 0x184,&uStack_90);
+        fn_8277E9F8(param_1 + 0x184,&stack_pair_90.first);
       }
       uVar22 = uVar22 + 1;
       uVar20 = uVar20 + 1;
@@ -165,4 +165,3 @@ LAB_82780c14:
     }
   } while( true );
 }
-

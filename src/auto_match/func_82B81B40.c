@@ -33,8 +33,7 @@ extern int fn_82F6B0C0();
 
 
 undefined8
-fn_82B81B40(undefined8 param_1,longlong param_2,longlong param_3,undefined4 *param_4,uint param_5,
-             undefined8 param_6,undefined8 param_7,undefined8 param_8)
+fn_82B81B40(undefined8 param_1, longlong param_2, longlong param_3, undefined4 *param_4, uint param_5, undefined8 param_6, undefined8 param_7, undefined8 param_8, undefined4 in_stack_00000054)
 
 {
   int iVar2;
@@ -43,10 +42,10 @@ fn_82B81B40(undefined8 param_1,longlong param_2,longlong param_3,undefined4 *par
   undefined8 uVar4;
   undefined4 *puVar5;
   uint uVar6;
-  undefined4 in_stack_00000054;
+
   undefined1 *in_stack_0000005c;
   char * apcStack_60;
-  
+
   uVar6 = 0;
   puVar5 = param_4;
   if (param_5 != 0) {
@@ -87,4 +86,3 @@ fn_82B81B40(undefined8 param_1,longlong param_2,longlong param_3,undefined4 *par
   }
   return 0;
 }
-

@@ -30,8 +30,9 @@ def main():
     parser.add_argument('--wibo', required=True)
     parser.add_argument('--objdiff', required=True)
     parser.add_argument('--jobs', type=int, default=26)
-    parser.add_argument('--chunk-size', type=int, default=256)
-    parser.add_argument('--batch-timeout', type=int, default=240)
+    parser.add_argument('--chunk-size', type=int, default=26)
+    parser.add_argument('--small-timeout', type=int, default=900)
+    parser.add_argument('--large-timeout', type=int, default=1800)
     parser.add_argument('--allow-subset', action='store_true',
                         help='run a targeted manifest from a prior full-game audit')
     args = parser.parse_args()
@@ -100,8 +101,8 @@ def main():
                        '--jobs', str(min(args.jobs, len(batch))), '--resume-verified']
             if args.source_root:
                 command += ['--source-root', str(args.source_root)]
-            timeout = (args.batch_timeout if any(size > 20000 for _, size in batch)
-                       else min(args.batch_timeout, 60))
+            timeout = (args.large_timeout if any(size > 20000 for _, size in batch)
+                       else args.small_timeout)
             try:
                 result = subprocess.run(command, capture_output=True, text=True,
                                         timeout=timeout)

@@ -59,8 +59,8 @@ undefined8 fn_8294E2C8(int param_1)
   undefined1 auStack_130 [64];
   undefined1 auStack_f0 [16];
   undefined4 auStack_e0 [1];
-  int aiStack_d0 [52];
-  
+  int aiStack_d0 [40];
+
   uStack_138 = 2;
   auStack_150[0] = 0;
   stack_pair_140.first = 0;
@@ -131,4 +131,3 @@ LAB_8294e314:
   }
   return uVar5;
 }
-

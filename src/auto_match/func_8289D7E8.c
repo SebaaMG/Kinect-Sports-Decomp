@@ -29,7 +29,7 @@ extern unsigned int *auStack_40;
 extern int fn_825089A0();
 extern int fn_8265C9E0();
 extern int fn_82899700();
-extern int fn_82F691F0();
+extern int memset();
 extern unsigned int lbl_82023BA4;
 extern unsigned int lbl_82197140;
 
@@ -41,7 +41,7 @@ undefined4 * fn_8289D7E8(undefined4 *param_1,ulonglong param_2)
   int *piVar2;
   undefined4 uVar3;
   undefined1 auStack_40 [32];
-  
+
   *param_1 = &lbl_82023BA4;
   param_1[1] = &lbl_82197140;
   param_1[2] = 7;
@@ -69,6 +69,5 @@ undefined4 * fn_8289D7E8(undefined4 *param_1,ulonglong param_2)
   }
   uVar1 = fn_8265C9E0(param_2);
                     /* WARNING: Subroutine does not return */
-  fn_82F691F0(uVar1,0,param_2);
+  memset(uVar1,0,param_2);
 }
-

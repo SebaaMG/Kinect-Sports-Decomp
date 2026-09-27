@@ -83,25 +83,25 @@ void fn_825CDA68(int param_1)
   undefined1 auStack_a0 [4];
   undefined1 auStack_9c [4];
   undefined1 auStack_98 [8];
-  undefined4 uStack_90;
-  undefined4 uStack_8c;
+  struct { undefined4 first; undefined4 second; } stack_pair_90;
+
   undefined4 uStack_88;
   undefined4 uStack_84;
   undefined1 auStack_80 [112];
-  
+
   uStack_88 = 0;
-  uStack_90 = 2000;
+  stack_pair_90.first = 2000;
   *(undefined1 *)(param_1 + 0x11c) = 1;
-  uStack_8c = 0xffffffff;
+  stack_pair_90.second = 0xffffffff;
   uStack_84 = 0;
-  uVar3 = fn_8263C910(0x140,0xb4,0x18280186,0,&uStack_90);
+  uVar3 = fn_8263C910(0x140,0xb4,0x18280186,0,&stack_pair_90.first);
   *(undefined4 *)(param_1 + 0x48) = uVar3;
-  uStack_90 = 0x7f0;
-  uVar3 = fn_8263C910(0x80,0x80,0x18280186,0,&uStack_90);
+  stack_pair_90.first = 0x7f0;
+  uVar3 = fn_8263C910(0x80,0x80,0x18280186,0,&stack_pair_90.first);
   *(undefined4 *)(param_1 + 0xb8) = uVar3;
-  uStack_90 = 0x7a0;
-  uStack_8c = 0xd98;
-  uVar3 = fn_8263C910(0x140,0xb4,0x1a220197,0,&uStack_90);
+  stack_pair_90.first = 0x7a0;
+  stack_pair_90.second = 0xd98;
+  uVar3 = fn_8263C910(0x140,0xb4,0x1a220197,0,&stack_pair_90.first);
   *(undefined4 *)(param_1 + 0x4c) = uVar3;
   uVar2 = fn_82544718(auStack_80,0x140,0xb4,0x18280186,0,&stack_pair_d0.second);
   memcpy(param_1 + 0x50,uVar2,0x34);
@@ -193,4 +193,3 @@ void fn_825CDA68(int param_1)
                     /* WARNING: Subroutine does not return */
   fn_8262F8D8(iVar4,10,0,uVar1,0,uVar1,*(uint *)(iVar4 + 0x1c) & 0x3fffffc,0);
 }
-

@@ -85,8 +85,8 @@ bool fn_824BBA48(ulonglong param_1,int param_2,uint param_3,int param_4,longlong
   uint uStack00000024;
   int iStack00000034;
   ulonglong uStack_e0;
-  undefined4 uStack_d8;
-  undefined4 uStack_d4;
+  struct { undefined4 first; undefined4 second; } stack_pair_d8;
+
   struct { undefined4 first; undefined4 second; } stack_pair_d0;
 
   undefined4 uStack_c8;
@@ -98,7 +98,7 @@ bool fn_824BBA48(ulonglong param_1,int param_2,uint param_3,int param_4,longlong
   undefined4 uStack_b0;
   undefined4 uStack_ac;
   undefined4 auStack_a8 [42];
-  
+
   uStack00000014 = (uint)param_1;
   iStack00000034 = (int)param_5;
   iStack0000001c = param_2;
@@ -137,9 +137,9 @@ bool fn_824BBA48(ulonglong param_1,int param_2,uint param_3,int param_4,longlong
       uStack_b8 = *(undefined4 *)((int)((param_5 + 0x1c5U & 0xffffffff) << 2) + iVar19);
       uStack_b4 = *(undefined4 *)((int)((param_5 + 0x1c6U & 0xffffffff) << 2) + iVar19);
       uStack_ac = *(undefined4 *)((iStack00000034 + 0x1c8) * 4 + iVar19);
-      uStack_d8 = *(undefined4 *)((iStack00000034 + 0x1c7) * 4 + iVar19);
+      stack_pair_d8.first = *(undefined4 *)((iStack00000034 + 0x1c7) * 4 + iVar19);
       auStack_a8[0] = *(undefined4 *)((iStack00000034 + 0x1c9) * 4 + iVar19);
-      uStack_d4 = *(undefined4 *)((iStack00000034 + 0x1ca) * 4 + iVar19);
+      stack_pair_d8.second = *(undefined4 *)((iStack00000034 + 0x1ca) * 4 + iVar19);
       uStack_e0 = (ulonglong)*(uint *)((int)((param_5 + 0x1acU & 0xffffffff) << 2) + iVar19);
       fn_8245AF50(iVar18,6);
       uVar17 = uStack_e0;
@@ -150,12 +150,12 @@ bool fn_824BBA48(ulonglong param_1,int param_2,uint param_3,int param_4,longlong
       fn_8245B050(iVar18,uVar21,4);
       fn_8245B050(iVar18,uStack00000024 & 0xff,4);
       fn_8245B100(iVar18);
-      fn_8245B168(iVar18,&uStack_d8,4);
-      uStack_d8 = uVar3;
-      fn_8245B168(iVar18,&uStack_d8,4);
+      fn_8245B168(iVar18,&stack_pair_d8.first,4);
+      stack_pair_d8.first = uVar3;
+      fn_8245B168(iVar18,&stack_pair_d8.first,4);
       uStack_e0 = CONCAT26((short)uVar17,(((U64)(uStack_e0) >> 16) & 0xFFFFFFFFFFFF));
       fn_8245B168(iVar18,&uStack_e0,2);
-      uStack_e0 = CONCAT26((short)uStack_d4,(((U64)(uStack_e0) >> 16) & 0xFFFFFFFFFFFF));
+      uStack_e0 = CONCAT26((short)stack_pair_d8.second,(((U64)(uStack_e0) >> 16) & 0xFFFFFFFFFFFF));
       fn_8245B168(iVar18,&uStack_e0,2);
       uStack_e0 = CONCAT26((short)uVar4,(((U64)(uStack_e0) >> 16) & 0xFFFFFFFFFFFF));
       fn_8245B168(iVar18,&uStack_e0,2);
@@ -232,4 +232,3 @@ bool fn_824BBA48(ulonglong param_1,int param_2,uint param_3,int param_4,longlong
   }
   return iVar20 == 0;
 }
-

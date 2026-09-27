@@ -49,14 +49,14 @@ void fn_827B5330(undefined4 *param_1)
   uint *puVar3;
   struct { int first; int second; } stack_pair_70;
 
-  undefined4 uStack_60;
-  undefined4 uStack_5c;
+  struct { undefined4 first; undefined4 second; } stack_pair_60;
+
   undefined4 uStack_58;
   undefined4 uStack_54;
   undefined4 uStack_50;
   undefined4 uStack_4c;
   undefined4 uStack_48;
-  
+
   puVar3 = param_1 + 5;
   param_1[9] = 0;
   param_1[0xd] = 0;
@@ -73,13 +73,13 @@ void fn_827B5330(undefined4 *param_1)
       uStack_58 = *param_1;
       uStack_54 = param_1[1];
       param_1[0x11] = 0;
-      uStack_60 = 0;
-      uStack_5c = 0;
+      stack_pair_60.first = 0;
+      stack_pair_60.second = 0;
       uStack_50 = 0xffffffff;
       uStack_4c = 0xffffffff;
       uStack_48 = 0xffffffff;
       uVar2 = param_1[2];
-      fn_827B4FF0(param_1 + 0x11,&uStack_60);
+      fn_827B4FF0(param_1 + 0x11,&stack_pair_60.first);
       fn_827B5240(param_1,0,0);
       if (uVar2 < (uint)param_1[2]) {
         iVar1 = param_1[9];
@@ -92,4 +92,3 @@ void fn_827B5330(undefined4 *param_1)
   }
   return;
 }
-

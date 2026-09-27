@@ -107,8 +107,8 @@ void fn_826D1050(int param_1)
   undefined4 uStack_10c;
   undefined4 uStack_108;
   undefined4 uStack_104;
-  uint uStack_100;
-  int iStack_fc;
+  struct { uint first; int second; } stack_pair_100;
+
   byte bStack_f8;
   struct { undefined4 first; undefined4 second; } stack_pair_f0;
 
@@ -156,17 +156,17 @@ void fn_826D1050(int param_1)
   undefined4 uStack_3c;
   undefined4 uStack_38;
   undefined4 uStack_34;
-  
+
   iVar1 = *(int *)(param_1 + 0x18);
   uVar2 = *(undefined4 *)(iVar1 + 0x78);
   bStack_f8 = 0;
-  uStack_100 = 0;
-  iStack_fc = 0;
+  stack_pair_100.first = 0;
+  stack_pair_100.second = 0;
   uVar3 = fn_826957D0(param_1,0);
   fn_82696D38(&aiStack_120,uVar3,iVar1,0xffffffffffffffff,0);
   if (*(int *)(aiStack_120 + 0x10) != 0) {
     cVar6 = fn_826B0F10(uVar2,(ulonglong)*(uint *)(param_1 + 0x18) + 0x78,&aiStack_120,
-                              &uStack_100);
+                              &stack_pair_100.first);
     if (cVar6 == '\0') {
       piVar4 = (int *)fn_826BD928(*(undefined4 *)(param_1 + 8));
       if (piVar4 != (int *)0x0) {
@@ -201,8 +201,8 @@ void fn_826D1050(int param_1)
       if (piVar4 != (int *)0x0) {
         piVar4[1] = piVar4[1] + 1;
       }
-      lVar7 = (ulonglong)uStack_100 + 0x10;
-      if ((ulonglong)uStack_100 == 0) {
+      lVar7 = (ulonglong)stack_pair_100.first + 0x10;
+      if ((ulonglong)stack_pair_100.first == 0) {
         lVar7 = 0;
       }
       fn_8269A858(piVar4,lVar7);
@@ -247,7 +247,7 @@ void fn_826D1050(int param_1)
       uStack_b0 = 0;
       uStack_a4 = 0;
       piStack_a8 = piVar4;
-      fn_826C3768(&uStack_90,&uStack_100);
+      fn_826C3768(&uStack_90,&stack_pair_100.first);
       uStack_74 = 0;
       uVar3 = (**(code **)(*piVar4 + 0x40))(piVar4);
       fn_826F75B8(&uStack_b0,uVar3);
@@ -261,13 +261,12 @@ void fn_826D1050(int param_1)
   if (lVar7 == 0) {
     fn_826944C8(aiStack_120);
   }
-  if (((bStack_f8 & 2) == 0) && (uStack_100 != 0)) {
+  if (((bStack_f8 & 2) == 0) && (stack_pair_100.first != 0)) {
     fn_826824B0();
   }
-  uStack_100 = 0;
-  if (((bStack_f8 & 1) == 0) && (iStack_fc != 0)) {
+  stack_pair_100.first = 0;
+  if (((bStack_f8 & 1) == 0) && (stack_pair_100.second != 0)) {
     fn_826824B0();
   }
   return;
 }
-

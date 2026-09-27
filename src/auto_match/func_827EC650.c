@@ -40,8 +40,8 @@ undefined8 fn_827EC650(undefined8 param_1,undefined8 param_2,undefined8 param_3)
   float fVar1;
   double dVar2;
   double dVar3;
-  undefined1 auStack_40 [40];
-  
+  undefined1 auStack_40 [1];
+
   dVar2 = (double)fn_82810308();
   dVar3 = (double)fn_82810280(param_1,param_2);
   dVar2 = (double)(float)(dVar2 - dVar3);
@@ -68,4 +68,3 @@ undefined8 fn_827EC650(undefined8 param_1,undefined8 param_2,undefined8 param_3)
   }
   return 1;
 }
-

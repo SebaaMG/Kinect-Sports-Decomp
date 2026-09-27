@@ -26,20 +26,19 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_82A35450();
-extern int fn_82A374A0();
+extern int fn_82A37558();
 extern int fn_82A37A68();
-extern int fn_82A37CB8();
-extern int fn_82A382C8();
+extern int fn_82A37F28();
+extern int fn_82A38670();
 
 
 void fn_82A35510(longlong param_1)
 
 {
   fn_82A35450();
-  fn_82A374A0(param_1 + 0x10c);
+  fn_82A37558(param_1 + 0x10c);
   fn_82A37A68(param_1 + 0xc4);
-  fn_82A37CB8(param_1 + 0x8c);
-  fn_82A382C8(param_1 + 0x50);
+  fn_82A37F28(param_1 + 0x8c);
+  fn_82A38670(param_1 + 0x50);
   return;
 }
-

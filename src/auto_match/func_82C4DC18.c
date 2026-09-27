@@ -50,10 +50,10 @@ ulonglong fn_82C4DC18(int param_1,undefined8 param_2,int param_3,uint *param_4,u
 
   uint uStack_88;
   uint uStack_84;
-  undefined4 uStack_80;
-  uint uStack_7c;
+  struct { undefined4 first; uint second; } stack_pair_80;
+
   uint uStack_78;
-  
+
   uVar1 = *(undefined4 *)(param_1 + 0x1c);
   iVar2 = *(int *)(*(int *)(param_1 + 0x18) + 8);
   uVar3 = *(uint *)(iVar2 + 8);
@@ -106,9 +106,9 @@ LAB_82c4dd24:
   *param_4 = stack_pair_90.first;
   if ((((stack_pair_90.first & 1) == 0) && ((stack_pair_90.second & 1) == 0)) && (param_3 == 0xc)) {
     uStack_78 = stack_pair_90.second;
-    uStack_80 = 1;
-    uStack_7c = stack_pair_90.first * 0xc + 7 >> 3;
-    uVar5 = fn_82C107F8(param_2,uVar1,0x90070,&uStack_80);
+    stack_pair_80.first = 1;
+    stack_pair_80.second = stack_pair_90.first * 0xc + 7 >> 3;
+    uVar5 = fn_82C107F8(param_2,uVar1,0x90070,&stack_pair_80.first);
     if (-1 < (int)uVar5) {
       *param_6 = stack_pair_90.second * stack_pair_90.first * 3 >> 1 & 0x1fffffff;
       return uVar5;
@@ -117,4 +117,3 @@ LAB_82c4dd24:
   }
   return 0xffffffff80500002;
 }
-

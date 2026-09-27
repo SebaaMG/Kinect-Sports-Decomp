@@ -33,7 +33,7 @@ extern int fn_82279768();
 extern int fn_822C5B18();
 extern int fn_8248F4B8();
 extern int fn_82BA02A8();
-extern int fn_82F691F0();
+extern int memset();
 extern unsigned int lbl_820E975C;
 extern unsigned int lbl_82193CD8;
 extern unsigned int lbl_821A7FEC;
@@ -59,7 +59,7 @@ void fn_82273D38(undefined4 *param_1,undefined8 param_2,undefined8 param_3)
   undefined ***pppuStack_270;
   undefined2 uStack_240;
   undefined1 auStack_23e [574];
-  
+
   pcStack_27c = fn_8248F4B8;
   pppuStack_270 = &ppuStack_280;
   ppuStack_280 = &lbl_821A7FF4;
@@ -93,6 +93,5 @@ void fn_82273D38(undefined4 *param_1,undefined8 param_2,undefined8 param_3)
   fn_82273FC8(param_1);
   uStack_240 = lbl_820E975C;
                     /* WARNING: Subroutine does not return */
-  fn_82F691F0(auStack_23e,0,0x1fe);
+  memset(auStack_23e,0,0x1fe);
 }
-

@@ -49,9 +49,7 @@ extern unsigned int lbl_821AAD20;
 extern unsigned int lbl_831F13B4;
 
 
-void fn_827EA708(undefined8 param_1,double param_2,undefined8 param_3,undefined8 param_4,
-                  undefined8 param_5,undefined8 param_6,undefined8 param_7,undefined8 param_8,
-                  undefined8 param_9,undefined8 param_10)
+void fn_827EA708(undefined8 param_1, double param_2, undefined8 param_3, undefined8 param_4, undefined8 param_5, undefined8 param_6, undefined8 param_7, undefined8 param_8, undefined8 param_9, undefined8 param_10, undefined8 unused_arg_11, undefined8 unused_arg_12, undefined4 in_stack_00000074)
 
 {
   undefined8 uVar1;
@@ -64,7 +62,7 @@ void fn_827EA708(undefined8 param_1,double param_2,undefined8 param_3,undefined8
   undefined4 in_stack_00000054;
   undefined4 in_stack_0000005c;
   float *in_stack_0000006c;
-  undefined4 in_stack_00000074;
+
   undefined1 auStack_f0 [16];
   undefined1 auStack_e0 [16];
   undefined1 auStack_d0 [16];
@@ -75,7 +73,7 @@ void fn_827EA708(undefined8 param_1,double param_2,undefined8 param_3,undefined8
   undefined1 auStack_80 [16];
   undefined1 auStack_70 [16];
   undefined1 auStack_60 [1];
-  
+
   uVar1 = fn_82F6A548();
   dVar5 = extraout_f1;
   fn_82810558(param_9,param_6);
@@ -121,4 +119,3 @@ code_r0x827ea908:
   fn_82F6A594(uVar1);
   return;
 }
-

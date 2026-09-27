@@ -25,7 +25,7 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F691F0();
+extern int memset();
 extern unsigned int uStack00000014;
 
 
@@ -36,12 +36,11 @@ undefined8 fn_82B68798(undefined4 param_1)
   int in_r8;
   longlong in_r9;
   undefined4 uStack00000014;
-  
+
   if (0x10 < in_r8) {
     return 0xffffffffffffffff;
   }
   uStack00000014 = param_1;
                     /* WARNING: Subroutine does not return */
-  fn_82F691F0(in_r7,0,(in_r9 + 6) * 3);
+  memset(in_r7,0,(in_r9 + 6) * 3);
 }
-

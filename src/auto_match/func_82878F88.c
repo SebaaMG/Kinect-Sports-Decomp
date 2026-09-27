@@ -53,8 +53,8 @@ undefined8 fn_82878F88(int *param_1,int *param_2,uint *param_3)
   undefined1 auStack_e0 [48];
   undefined1 auStack_b0 [28];
   undefined1 auStack_94 [36];
-  undefined1 auStack_70 [112];
-  
+  undefined1 auStack_70 [48];
+
   bVar2 = false;
   if (param_2 != (int *)0x0) {
     for (iVar7 = *param_2; iVar7 != param_2[1]; iVar7 = iVar7 + 0x20) {
@@ -95,4 +95,3 @@ undefined8 fn_82878F88(int *param_1,int *param_2,uint *param_3)
   }
   return uVar5;
 }
-

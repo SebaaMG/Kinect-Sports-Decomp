@@ -51,8 +51,8 @@ void fn_823FA2E8(int param_1,undefined8 param_2,int param_3)
   undefined4 uStack_44;
   undefined4 uStack_40;
   undefined4 auStack_3c [1];
-  undefined1 auStack_30 [48];
-  
+  undefined1 auStack_30 [16];
+
   (**(code **)(**(int **)(param_1 + 0x28) + 0x14))(*(int **)(param_1 + 0x28),param_2,&uStack_4c);
   (**(code **)(**(int **)(param_1 + 0x30) + 0x14))(*(int **)(param_1 + 0x30),param_2,&uStack_48);
   (**(code **)(**(int **)(param_1 + 0x38) + 0x14))(*(int **)(param_1 + 0x38),param_2,&uStack_44);
@@ -81,4 +81,3 @@ void fn_823FA2E8(int param_1,undefined8 param_2,int param_3)
   }
   return;
 }
-

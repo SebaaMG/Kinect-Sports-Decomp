@@ -69,13 +69,13 @@ longlong fn_82B241A0(undefined8 param_1,int param_2)
   struct { int first; uint second; } stack_pair_c8;
 
   int iStack_c0;
-  int iStack_b8;
-  uint uStack_b4;
+  struct { int first; uint second; } stack_pair_b8;
+
   int iStack_b0;
   int iStack_a8;
   uint uStack_a4;
   int iStack_a0;
-  
+
   lVar6 = 0;
   for (uVar11 = *(uint *)(param_2 + 4); ((uVar11 & 1) == 0 && (uVar11 != 0));
       uVar11 = *(uint *)((uVar11 & 0xfffffffe) + 4)) {
@@ -108,14 +108,14 @@ LAB_82b24234:
         bVar2 = false;
         iStack_b0 = 0;
         uVar21 = 0;
-        uStack_b4 = -(uint)((*(uint *)(param_2 + 4) & 1) == 0) & *(uint *)(param_2 + 4);
-        iStack_b8 = param_2;
+        stack_pair_b8.second = -(uint)((*(uint *)(param_2 + 4) & 1) == 0) & *(uint *)(param_2 + 4);
+        stack_pair_b8.first = param_2;
         while( true ) {
-          if ((uStack_b4 == 0) || (bVar3 = false, iStack_b0 == *(int *)(uStack_b4 + 8))) {
+          if ((stack_pair_b8.second == 0) || (bVar3 = false, iStack_b0 == *(int *)(stack_pair_b8.second + 8))) {
             bVar3 = true;
           }
           if (bVar3) break;
-          piVar4 = (int *)fn_82ACB180(&iStack_b8);
+          piVar4 = (int *)fn_82ACB180(&stack_pair_b8.first);
           uVar21 = uVar21 + 1;
           puVar10 = (uint *)(uVar11 + 4);
           if ((~uVar11 & 1) == 0) {
@@ -179,16 +179,16 @@ LAB_82b24400:
           uVar18 = 0;
           iStack_b0 = 0;
           uVar19 = 0;
-          uStack_b4 = -(uint)((*(uint *)(param_2 + 4) & 1) == 0) & *(uint *)(param_2 + 4);
-          iStack_b8 = param_2;
+          stack_pair_b8.second = -(uint)((*(uint *)(param_2 + 4) & 1) == 0) & *(uint *)(param_2 + 4);
+          stack_pair_b8.first = param_2;
           do {
             do {
               do {
-                if ((uStack_b4 == 0) || (bVar2 = false, iStack_b0 == *(int *)(uStack_b4 + 8))) {
+                if ((stack_pair_b8.second == 0) || (bVar2 = false, iStack_b0 == *(int *)(stack_pair_b8.second + 8))) {
                   bVar2 = true;
                 }
                 if (bVar2) goto LAB_82b24570;
-                piVar4 = (int *)fn_82ACB180(&iStack_b8);
+                piVar4 = (int *)fn_82ACB180(&stack_pair_b8.first);
                 iVar16 = *piVar4;
                 uVar19 = uVar19 + 1;
                 puVar10 = (uint *)(uVar11 + 4);
@@ -270,4 +270,3 @@ LAB_82b243d8:
     lVar14 = lVar14 + 1;
   } while( true );
 }
-

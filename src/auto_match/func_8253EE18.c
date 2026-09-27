@@ -67,8 +67,8 @@ void fn_8253EE18(undefined8 param_1,undefined8 param_2,undefined8 param_3)
   undefined1 auStack_80 [1];
   undefined1 auStack_70 [16];
   undefined1 auStack_60 [16];
-  undefined1 auStack_50 [80];
-  
+  undefined1 auStack_50 [16];
+
   iVar6 = (int)param_1;
   if ((((*(int *)(iVar6 + 0x820) != 0) && (iVar1 = *(int *)(iVar6 + 0x4c), iVar1 != 0)) &&
       (iVar2 = *(int *)(iVar6 + 0x3a8), iVar2 != 0)) && (*(int *)(iVar6 + 0x7c0) != 0)) {
@@ -154,4 +154,3 @@ LAB_8253efdc:
   }
   return;
 }
-

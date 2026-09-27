@@ -61,8 +61,8 @@ ulonglong fn_82A33FC0(int *param_1,undefined4 *param_2,undefined8 param_3,ulongl
   int in_stack_00000054;
   uint uStack_d0;
   uint auStack_cc [3];
-  undefined4 uStack_c0;
-  undefined4 uStack_bc;
+  struct { undefined4 first; undefined4 second; } stack_pair_c0;
+
   undefined4 uStack_b8;
   undefined4 uStack_b4;
   undefined4 uStack_b0;
@@ -83,7 +83,7 @@ ulonglong fn_82A33FC0(int *param_1,undefined4 *param_2,undefined8 param_3,ulongl
   undefined4 uStack_70;
   undefined4 uStack_6c;
   undefined4 uStack_68;
-  
+
   auStack_cc[0] = 0;
   if (param_6 == (longlong *)0x0) {
     uVar3 = *(ulonglong *)(param_2 + 0xc) & 0xffffffff;
@@ -101,9 +101,9 @@ ulonglong fn_82A33FC0(int *param_1,undefined4 *param_2,undefined8 param_3,ulongl
     *param_5 = 0x103;
     uStack_b4 = param_2[4];
     uStack_ac = param_2[1];
-    uStack_bc = *param_2;
+    stack_pair_c0.second = *param_2;
     uStack_90 = (undefined4)param_7;
-    uStack_c0 = 2;
+    stack_pair_c0.first = 2;
     uStack_b0 = 0xffffffff;
     stack_pair_84.first = 0;
     uStack_78 = 0;
@@ -159,7 +159,7 @@ ulonglong fn_82A33FC0(int *param_1,undefined4 *param_2,undefined8 param_3,ulongl
     if ((param_8 == 0) && ((param_7 & 0xffffffff) != 0)) {
       NtClearEvent(param_7);
     }
-    iVar2 = fn_82A37680(param_1 + 0x31,&uStack_c0);
+    iVar2 = fn_82A37680(param_1 + 0x31,&stack_pair_c0.first);
     if (bVar1) {
       if (iVar2 == 0) {
         uStack_d0 = 0xc0000017;
@@ -183,4 +183,3 @@ ulonglong fn_82A33FC0(int *param_1,undefined4 *param_2,undefined8 param_3,ulongl
   }
   return uVar3;
 }
-

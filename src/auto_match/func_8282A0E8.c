@@ -40,21 +40,20 @@ extern unsigned int uStack_58;
 bool fn_8282A0E8(longlong param_1,undefined4 param_2)
 
 {
-  int iStack_60;
-  int iStack_5c;
+  struct { int first; int second; } stack_pair_60;
+
   struct { undefined4 first; undefined4 second; } stack_pair_58;
 
   undefined1 auStack_40 [16];
   undefined4 uStack_30;
   undefined4 uStack_2c;
   undefined4 uStack_28;
-  
+
   stack_pair_58.first = param_2;
-  fn_828299A8(&stack_pair_58.first,param_1,&iStack_60);
-  uStack_2c = *(undefined4 *)(iStack_60 + 0xc);
+  fn_828299A8(&stack_pair_58.first,param_1,&stack_pair_60.first);
+  uStack_2c = *(undefined4 *)(stack_pair_60.first + 0xc);
   uStack_28 = stack_pair_58.second;
   uStack_30 = param_2;
-  fn_828233A8(param_1 + 0x36c,&iStack_5c,0xffffffff82829f58,auStack_40);
-  return iStack_5c == 0;
+  fn_828233A8(param_1 + 0x36c,&stack_pair_60.second,0xffffffff82829f58,auStack_40);
+  return stack_pair_60.second == 0;
 }
-

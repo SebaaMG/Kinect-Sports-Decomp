@@ -119,8 +119,8 @@ void fn_82731860(int *param_1,undefined8 param_2,char param_3,char param_4)
   ulonglong uVar10;
   longlong lVar11;
   byte bVar12;
-  undefined4 uStack_950;
-  int iStack_94c;
+  struct { undefined4 first; int second; } stack_pair_950;
+
   undefined4 uStack_948;
   undefined4 uStack_944;
   struct { undefined4 first; int second; } stack_pair_940;
@@ -175,7 +175,7 @@ void fn_82731860(int *param_1,undefined8 param_2,char param_3,char param_4)
   undefined4 uStack_6c;
   undefined1 *puStack_68;
   undefined4 uStack_64;
-  
+
   bVar4 = false;
   if (((int *)param_1[0x34] == (int *)0x0) || (bVar2 = true, *(int *)param_1[0x34] == 0)) {
     bVar2 = false;
@@ -356,8 +356,8 @@ void fn_82731860(int *param_1,undefined8 param_2,char param_3,char param_4)
       fn_827266E8(param_1,auStack_8d0,&ppuStack_8f0);
       uStack_944 = fn_8267BF50(param_1);
       puVar1 = (uint *)param_1[0x34];
-      uStack_950 = 0;
-      iStack_94c = 0;
+      stack_pair_950.first = 0;
+      stack_pair_950.second = 0;
       uStack_948 = 0;
       if ((puVar1 == (uint *)0x0) || (bVar3 = true, *puVar1 == 0)) {
         bVar3 = false;
@@ -369,12 +369,12 @@ void fn_82731860(int *param_1,undefined8 param_2,char param_3,char param_4)
         lVar9 = 0;
       }
       fn_82799EB8(param_1[0x28],lVar11,0xffffffffffffffff,*(ushort *)(param_1 + 0x32) >> 4 & 1,
-                      &uStack_950,lVar9,auStack_8d0,&ppuStack_8f0);
-      if (iStack_94c != 0) {
-        fn_82728090(param_1,&uStack_950);
+                      &stack_pair_950.first,lVar9,auStack_8d0,&ppuStack_8f0);
+      if (stack_pair_950.second != 0) {
+        fn_82728090(param_1,&stack_pair_950.first);
       }
-      fn_82726458(uStack_950,iStack_94c);
-      fn_8267BE38(uStack_950);
+      fn_82726458(stack_pair_950.first,stack_pair_950.second);
+      fn_8267BE38(stack_pair_950.first);
       ppuStack_8f0 = &lbl_82010C6C;
       fn_8278B290(&ppuStack_8f0);
       fn_8267C488(&ppuStack_8f0);
@@ -404,4 +404,3 @@ void fn_82731860(int *param_1,undefined8 param_2,char param_3,char param_4)
   (**(code **)(*param_1 + 0x13c))(param_1);
   return;
 }
-

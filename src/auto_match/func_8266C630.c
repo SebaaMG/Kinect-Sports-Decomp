@@ -26,14 +26,13 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_82639EA8();
-extern int fn_8263A1B8();
+extern int fn_8263A1B0();
 
 
 void fn_8266C630(int param_1)
 
 {
-  fn_8263A1B8(*(undefined4 *)(param_1 + 0xcc),0,*(undefined4 *)(param_1 + 0xac));
+  fn_8263A1B0(*(undefined4 *)(param_1 + 0xcc),0,*(undefined4 *)(param_1 + 0xac));
   fn_82639EA8(*(undefined4 *)(param_1 + 0xcc),param_1 + 0xb0);
   return;
 }
-

@@ -31,16 +31,15 @@ extern int fn_82A76808();
 extern unsigned int uStack_30;
 
 
-void fn_82A5D068(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefined8 param_4,
-                  undefined8 param_5,undefined8 param_6,undefined8 param_7,undefined4 *param_8)
+void fn_82A5D068(undefined8 param_1, undefined8 param_2, undefined8 param_3, undefined8 param_4, undefined8 param_5, undefined8 param_6, undefined8 param_7, undefined4 *param_8, undefined4 in_stack_00000054, undefined4 in_stack_0000005c)
 
 {
   int iVar1;
-  undefined4 in_stack_00000054;
-  undefined4 in_stack_0000005c;
+
+
   undefined4 uStack_30;
   undefined4 auStack_2c;
-  
+
   uStack_30 = 0;
   auStack_2c = 0;
   iVar1 = fn_82A76808(param_2,param_3,param_5,param_6,&uStack_30);
@@ -51,4 +50,3 @@ void fn_82A5D068(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefi
   }
   return;
 }
-

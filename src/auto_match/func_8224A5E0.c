@@ -39,29 +39,28 @@ void fn_8224A5E0(int param_1,undefined8 param_2,int param_3)
 
 {
   int iVar1;
-  undefined4 uStack_430;
-  undefined4 uStack_42c;
+  struct { undefined4 first; undefined4 second; } stack_pair_430;
+
   undefined4 uStack_428;
   undefined1 auStack_420 [256];
   undefined1 auStack_320 [256];
   undefined1 auStack_220 [256];
   undefined1 auStack_120 [256];
-  
+
   (**(code **)(**(int **)(param_1 + 0x1c) + 0x14))(*(int **)(param_1 + 0x1c),param_2,auStack_220);
   (**(code **)(**(int **)(param_1 + 0x24) + 0x14))(*(int **)(param_1 + 0x24),param_2,auStack_420);
   (**(code **)(**(int **)(param_1 + 0x2c) + 0x14))(*(int **)(param_1 + 0x2c),param_2,auStack_320);
   (**(code **)(**(int **)(param_1 + 0x34) + 0x14))(*(int **)(param_1 + 0x34),param_2,auStack_120);
-  (**(code **)(**(int **)(param_1 + 0x3c) + 0x14))(*(int **)(param_1 + 0x3c),param_2,&uStack_430);
+  (**(code **)(**(int **)(param_1 + 0x3c) + 0x14))(*(int **)(param_1 + 0x3c),param_2,&stack_pair_430.first);
   if (param_3 != 0) {
     memcpy(*(int *)(param_1 + 8) + param_3,auStack_220,0x100);
     memcpy(*(int *)(param_1 + 0xc) + param_3,auStack_420,0x100);
     memcpy(*(int *)(param_1 + 0x10) + param_3,auStack_320,0x100);
     memcpy(*(int *)(param_1 + 0x14) + param_3,auStack_120,0x100);
     iVar1 = *(int *)(param_1 + 0x18) + param_3;
-    *(undefined4 *)(*(int *)(param_1 + 0x18) + param_3) = uStack_430;
-    *(undefined4 *)(iVar1 + 4) = uStack_42c;
+    *(undefined4 *)(*(int *)(param_1 + 0x18) + param_3) = stack_pair_430.first;
+    *(undefined4 *)(iVar1 + 4) = stack_pair_430.second;
     *(undefined4 *)(iVar1 + 8) = uStack_428;
   }
   return;
 }
-

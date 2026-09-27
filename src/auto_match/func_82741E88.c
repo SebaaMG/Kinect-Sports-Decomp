@@ -81,8 +81,8 @@ void fn_82741E88(int param_1)
   undefined1 auStack_50 [16];
   undefined1 auStack_40 [16];
   undefined1 auStack_30 [16];
-  undefined1 auStack_20 [8];
-  
+  undefined1 auStack_20 [1];
+
   cVar5 = fn_82695468(param_1,0xf);
   if (cVar5 == '\0') {
     fn_826954C0(param_1,0xffffffff8200ef08,0,0);
@@ -183,4 +183,3 @@ void fn_82741E88(int param_1)
   }
   return;
 }
-

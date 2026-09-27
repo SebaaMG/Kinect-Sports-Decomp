@@ -49,8 +49,8 @@ fn_827EA490(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefined8 
   undefined1 auStack_90 [1];
   undefined1 auStack_80 [16];
   undefined1 auStack_70 [16];
-  undefined1 auStack_60 [96];
-  
+  undefined1 auStack_60 [16];
+
   iVar2 = fn_8280A5E8((double)*param_5);
   if (((iVar2 == 0) && (iVar2 = fn_8280A5E8((double)param_5[1]), iVar2 == 0)) &&
      (iVar2 = fn_8280A5E8((double)param_5[2]), iVar2 == 0)) {
@@ -69,4 +69,3 @@ fn_827EA490(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefined8 
   }
   return uVar1;
 }
-

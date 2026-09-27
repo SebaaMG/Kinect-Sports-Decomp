@@ -25,13 +25,12 @@ typedef signed short S16;
 typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
-extern int fn_82F68B78();
+extern int fn_823A6F60();
 
 
 void fn_823A0A38(longlong param_1)
 
 {
-  fn_82F68B78(param_1 + 0xc);
+  fn_823A6F60(param_1 + 0xc);
   return;
 }
-

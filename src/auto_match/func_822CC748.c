@@ -44,19 +44,19 @@ void fn_822CC748(undefined4 *param_1,float *param_2)
   double dVar1;
   double dVar2;
   double dVar3;
-  undefined4 uStack_50;
-  undefined4 uStack_4c;
+  struct { undefined4 first; undefined4 second; } stack_pair_50;
+
   double dStack_48;
   struct { undefined4 first; undefined4 second; } stack_pair_40;
 
   double dStack_38;
-  
+
   stack_pair_40.first = 0;
   stack_pair_40.second = 0;
-  uStack_50 = 0;
-  uStack_4c = 0;
+  stack_pair_50.first = 0;
+  stack_pair_50.second = 0;
   fn_8266FA50(*param_1,&stack_pair_40.first,0xffffffff821ad1e0);
-  fn_8266FA50(*param_1,&uStack_50,0xffffffff821ad1f4);
+  fn_8266FA50(*param_1,&stack_pair_50.first,0xffffffff821ad1f4);
   dVar2 = lbl_82195518;
   dVar3 = (double)lbl_821CC160;
   if (dStack_38 == lbl_82195518) {
@@ -73,11 +73,10 @@ void fn_822CC748(undefined4 *param_1,float *param_2)
     dVar2 = (double)fn_8266FB20(*param_1);
     param_2[1] = (float)(dStack_48 / dVar2);
   }
-  fn_82273C88(&uStack_50);
+  fn_82273C88(&stack_pair_50.first);
   fn_82273C88(&stack_pair_40.first);
   if (param_1[1] != 0) {
     fn_822315A0();
   }
   return;
 }
-

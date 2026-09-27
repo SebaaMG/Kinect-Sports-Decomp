@@ -26,7 +26,7 @@ typedef signed int S32;
 typedef __int64 S64;
 typedef struct { U64 lo, hi; } V16;
 extern int fn_82645110();
-extern int fn_82F68CC0();
+extern int memcpy();
 extern int iRam832823e4;
 
 
@@ -35,7 +35,7 @@ void fn_82630270(int param_1)
 {
   uint uVar1;
   ulonglong uVar2;
-  
+
   if (iRam832823e4 == 0) {
     uVar1 = *(uint *)(param_1 + 0x30);
     if (*(uint *)(param_1 + 0x38) < uVar1) {
@@ -50,7 +50,7 @@ void fn_82630270(int param_1)
     *(undefined4 *)(uVar1 + 0x1c) = 0xc0102b00;
     *(undefined4 *)(uVar1 + 0x20) = 0;
     *(undefined4 *)(uVar1 + 0x24) = 0xf;
-    fn_82F68CC0(uVar1 + 0x28,0xffffffff8218da88,0x3c);
+    memcpy(uVar1 + 0x28,0xffffffff8218da88,0x3c);
     *(undefined4 *)(uVar1 + 100) = 0x12180;
     *(undefined4 *)(uVar1 + 0x68) = 0x7000000;
     *(undefined4 *)(uVar1 + 0x6c) = 0;
@@ -68,4 +68,3 @@ void fn_82630270(int param_1)
   }
   return;
 }
-

@@ -139,8 +139,8 @@ void fn_82771458(int *param_1,int *param_2,int param_3)
   double dVar34;
   double dVar35;
   undefined8 uStack_330;
-  float fStack_328;
-  int iStack_324;
+  struct { float first; int second; } stack_pair_328;
+
   float fStack_320;
   undefined8 uStack_318;
   float fStack_310;
@@ -182,7 +182,7 @@ void fn_82771458(int *param_1,int *param_2,int param_3)
   undefined1 auStack_180 [80];
   undefined1 auStack_130 [32];
   char cStack_110;
-  
+
   iVar27 = param_1[0x24];
   fStack_320 = *(float *)(param_3 + 0x1c);
   dVar35 = (double)fStack_320;
@@ -234,7 +234,7 @@ void fn_82771458(int *param_1,int *param_2,int param_3)
       *(short *)(iVar29 + 4) = (short)iVar16;
       uStack_2e8 = *(undefined4 *)(iVar31 + 8);
       _fStack_328 = CONCAT44(*(undefined4 *)(iVar13 + 8),iVar16);
-      puVar12 = (undefined4 *)fn_82779470(dVar35,auStack_298,&uStack_2e8,&fStack_328);
+      puVar12 = (undefined4 *)fn_82779470(dVar35,auStack_298,&uStack_2e8,&stack_pair_328.first);
       *(undefined4 *)(iVar29 + 8) = *puVar12;
       iVar16 = *(int *)(iVar31 + 0xc);
       if (iVar16 != 0) {
@@ -296,7 +296,7 @@ void fn_82771458(int *param_1,int *param_2,int param_3)
       fVar1 = (float)dVar34;
       uVar19 = (((ulonglong)((uint)fVar1 >> 0x17) & 0xff) - 0x40 & 0xffffffff) >> 1;
     }
-    _fStack_328 = CONCAT44(fVar1,iStack_324);
+    _fStack_328 = CONCAT44(fVar1,stack_pair_328.second);
     uVar23 = 6;
     uVar22 = 2;
     fStack_25e = fStack_320;
@@ -469,4 +469,3 @@ LAB_82771bb8:
   }
   return;
 }
-

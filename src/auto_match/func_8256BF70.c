@@ -51,11 +51,11 @@ fn_8256BF70(int param_1,undefined8 param_2,undefined8 param_3,code *param_4,unde
   undefined8 uVar2;
   undefined8 uVar6;
   ulonglong uVar7;
-  int iStack_80;
-  int iStack_7c;
+  struct { int first; int second; } stack_pair_80;
+
   struct { undefined4 first; undefined4 second; } stack_pair_78;
 
-  
+
   uVar1 = *(uint *)(param_1 + 0x90);
   for (uVar7 = (ulonglong)*(uint *)(param_1 + 0x8c); (uVar7 & 0xffffffff) != (ulonglong)uVar1;
       uVar7 = uVar7 + 8) {
@@ -68,25 +68,25 @@ fn_8256BF70(int param_1,undefined8 param_2,undefined8 param_3,code *param_4,unde
     if (iVar5 == iVar4) break;
   }
   uVar6 = 0;
-  iStack_80 = 0;
-  iStack_7c = 0;
+  stack_pair_80.first = 0;
+  stack_pair_80.second = 0;
   if ((uVar7 & 0xffffffff) == (ulonglong)*(uint *)(param_1 + 0x90)) {
     stack_pair_78.first = 0;
     stack_pair_78.second = 0;
     fn_82517978(&stack_pair_78.first,*param_7,param_7[1],0);
-    fn_8256C290(param_2,param_3,param_4,param_5,&iStack_80,&stack_pair_78.first,param_8);
+    fn_8256C290(param_2,param_3,param_4,param_5,&stack_pair_80.first,&stack_pair_78.first,param_8);
     iVar4 = 0;
-    if (iStack_80 != 0) {
-      fn_82376640(param_1 + 0x8c,&iStack_80);
-      iVar4 = iStack_80;
+    if (stack_pair_80.first != 0) {
+      fn_82376640(param_1 + 0x8c,&stack_pair_80.first);
+      iVar4 = stack_pair_80.first;
     }
     uVar6 = 1;
   }
   else {
-    fn_8256D528(&iStack_80,uVar7);
-    iVar4 = iStack_80;
+    fn_8256D528(&stack_pair_80.first,uVar7);
+    iVar4 = stack_pair_80.first;
     if (param_4 != (code *)0x0) {
-      uVar2 = fn_827D9C40(&stack_pair_78.first,iStack_80);
+      uVar2 = fn_827D9C40(&stack_pair_78.first,stack_pair_80.first);
       (*param_4)(uVar2,param_5);
     }
   }
@@ -94,9 +94,9 @@ fn_8256BF70(int param_1,undefined8 param_2,undefined8 param_3,code *param_4,unde
     *(int *)(iVar4 + 0x22c) = *(int *)(iVar4 + 0x22c) + 1;
   }
   if ((param_6 & 0xffffffff) != 0) {
-    fn_8256D528(param_6,&iStack_80);
+    fn_8256D528(param_6,&stack_pair_80.first);
   }
-  if (iStack_7c != 0) {
+  if (stack_pair_80.second != 0) {
     fn_822315A0();
   }
   if (param_7[1] != 0) {
@@ -104,4 +104,3 @@ fn_8256BF70(int param_1,undefined8 param_2,undefined8 param_3,code *param_4,unde
   }
   return uVar6;
 }
-

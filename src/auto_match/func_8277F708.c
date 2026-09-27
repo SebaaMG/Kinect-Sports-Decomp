@@ -43,8 +43,8 @@ void fn_8277F708(double param_1,int param_2,int param_3,int *param_4)
 {
   int iVar1;
   uint uVar2;
-  int iStack_50;
-  int iStack_4c;
+  struct { int first; int second; } stack_pair_50;
+
   struct { float first; undefined4 second; } stack_pair_40;
 
   undefined4 uStack_38;
@@ -52,7 +52,7 @@ void fn_8277F708(double param_1,int param_2,int param_3,int *param_4)
   undefined4 uStack_30;
   undefined4 uStack_2c;
   undefined4 uStack_28;
-  
+
   if (((param_3 != 0) && (iVar1 = *(int *)(param_3 + 4), iVar1 != 0)) &&
      (*(char *)(*(int *)(iVar1 + 0x10) + *(int *)(param_2 + 0x24)) != '\0')) {
     if (*(int *)(iVar1 + 0x14) == 0) {
@@ -68,11 +68,10 @@ void fn_8277F708(double param_1,int param_2,int param_3,int *param_4)
       *(uint *)(iVar1 + 0x14) =
            *(int *)((uVar2 >> 2 & 0x3ffffffc) + *(int *)(param_2 + 0x140)) + (uVar2 & 0xf) * 0x1c;
     }
-    iStack_50 = param_4[2];
-    iStack_4c = param_4[1];
-    fn_8277E8B8(param_2 + 0x144,&iStack_50);
+    stack_pair_50.first = param_4[2];
+    stack_pair_50.second = param_4[1];
+    fn_8277E8B8(param_2 + 0x144,&stack_pair_50.first);
     *(int *)(*(int *)(iVar1 + 0x14) + 0x14) = *(int *)(*(int *)(iVar1 + 0x14) + 0x14) + 1;
   }
   return;
 }
-
