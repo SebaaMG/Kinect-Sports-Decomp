@@ -3063,7 +3063,12 @@
       "auto_match/func_8256EA58.c": "MISSING",
       "auto_match/func_825709D8.c": "MISSING",
       "auto_match/func_8258F858.c": "MISSING",
-      "auto_match/func_8259A340.c": "MISSING",
+      "auto_match/func_8259A340.c": {
+        "status": "Matching",
+        "extra_cflags": [
+          "/O1"
+        ]
+      },
       "auto_match/func_8259C458.c": "MISSING",
       "auto_match/func_825A4488.c": "MISSING",
       "auto_match/func_825B61D0.c": "MISSING",
