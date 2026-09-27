@@ -2936,7 +2936,7 @@
         ]
       },
       "auto_match/func_824C4180.c": {
-        "status": "NonMatching",
+        "status": "Matching",
         "extra_cflags": [
           "/O1"
         ]
