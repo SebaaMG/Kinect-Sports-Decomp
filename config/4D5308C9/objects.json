@@ -2410,7 +2410,12 @@
           "/O1"
         ]
       },
-      "auto_match/func_83075D90.c": "MISSING",
+      "auto_match/func_83075D90.c": {
+        "status": "Matching",
+        "extra_cflags": [
+          "/O1"
+        ]
+      },
       "auto_match/func_83085A60.c": {
         "status": "Matching",
         "extra_cflags": [
