@@ -2807,7 +2807,7 @@
         ]
       },
       "auto_match/func_826384C0.c": {
-        "status": "NonMatching",
+        "status": "Matching",
         "extra_cflags": [
           "/O1"
         ]
