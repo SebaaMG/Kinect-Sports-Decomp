@@ -1,26 +1,11 @@
-typedef unsigned char undefined1, byte, undefined, bool;
-#define true 1
-#define false 0
-typedef unsigned short undefined2, ushort, word;
-typedef unsigned int undefined4, uint, dword, ulong;
-typedef unsigned __int64 undefined8, ulonglong, qword;
-typedef __int64 longlong;
-typedef int (*code)();
-typedef unsigned char U8;
-typedef unsigned short U16;
-typedef unsigned int U32;
-typedef unsigned __int64 U64;
-typedef signed char S8;
-typedef signed short S16;
-typedef signed int S32;
-typedef __int64 S64;
-typedef struct { U64 lo, hi; } V16;
-
-
-void fn_82653BD0(int param_1,undefined4 param_2)
-
+/* 0x82653BD0: 4/5 instructions match (addis, slwi, stw).
+ * The trailing eieio cannot be reproduced with cl 16.00.10224.0:
+ *   - volatile stores emit no barrier,
+ *   - _ReadWriteBarrier/_WriteBarrier/_ReadBarrier expand to nothing,
+ *   - `__asm eieio` is rejected with C2759 "Opcode not supported by backend"
+ *     (c2.dll's code generator opcode table has no eieio, only sync).
+ */
+void fn_82653BD0(int object, int value)
 {
-  *(undefined4 *)((param_1 + 0x1ff20000) * 4) = param_2;
-  enforceInOrderExecutionIO();
-  return;
+    *(int *)((object + 0x1ff20000) * 4) = value;
 }
