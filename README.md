@@ -19,8 +19,8 @@ A decompilation of **Kinect Sports** for Xbox 360.
 | Functions with matching code | 6,219 |
 | Matched code | 239,844 / 15,705,500 (1.52713%) |
 | Fully linked code | 230,996 / 15,705,500 (1.47080%) |
-| Units with source | 52,853 |
-| Fuzzy match | 41.85981% |
+| Units with source | 52,856 |
+| Fuzzy match | 41.85983% |
 
 ## Building
 
