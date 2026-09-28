@@ -2429,7 +2429,12 @@
           "/O1"
         ]
       },
-      "auto_match/func_8309F520.c": "MISSING",
+      "auto_match/func_8309F520.c": {
+        "status": "Matching",
+        "extra_cflags": [
+          "/O1"
+        ]
+      },
       "auto_match/func_83128138.c": "MISSING",
       "auto_match/func_83128148.c": "MISSING",
       "auto_match/func_83128158.c": "MISSING",
