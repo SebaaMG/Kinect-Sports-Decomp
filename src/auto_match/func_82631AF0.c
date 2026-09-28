@@ -1,26 +1,12 @@
-typedef unsigned char undefined1, byte, undefined, bool;
-#define true 1
-#define false 0
-typedef unsigned short undefined2, ushort, word;
-typedef unsigned int undefined4, uint, dword, ulong;
-typedef unsigned __int64 undefined8, ulonglong, qword;
-typedef __int64 longlong;
-typedef int (*code)();
-typedef unsigned char U8;
-typedef unsigned short U16;
-typedef unsigned int U32;
-typedef unsigned __int64 U64;
-typedef signed char S8;
-typedef signed short S16;
-typedef signed int S32;
-typedef __int64 S64;
-typedef struct { U64 lo, hi; } V16;
-
-
-void fn_82631AF0(int param_1,undefined4 param_2)
-
+// Kinect Sports retail 4D5308C9, function 0x82631AF0 (20 bytes).
+// Stores a 32-bit value at +0x2ed8, then sets bit 0x80000 in the 64-bit
+// field at +0x10. Field addresses are taken through local pointers so the
+// emitted code keeps the store ahead of the reload, as in the original.
+void fn_82631AF0(int object, unsigned int param_2)
 {
-  *(undefined4 *)(param_1 + 0x2ed8) = param_2;
-  *(ulonglong *)(param_1 + 0x10) = *(ulonglong *)(param_1 + 0x10) | 0x80000;
-  return;
+    unsigned int *value_slot = (unsigned int *)(object + 0x2ed8);
+    unsigned long long *flags = (unsigned long long *)(object + 0x10);
+
+    *value_slot = param_2;
+    *flags |= 0x80000u;
 }
