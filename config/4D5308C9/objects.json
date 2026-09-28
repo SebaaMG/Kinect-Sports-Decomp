@@ -321567,7 +321567,40 @@
         "extra_cflags": [
           "/O1"
         ]
-      }
+      },
+      "auto_match/func_82EF1198.c": "MISSING",
+      "auto_match/func_82781FA0.c": "MISSING",
+      "auto_match/func_82B41E50.c": "MISSING",
+      "auto_match/func_826785E0.c": "MISSING",
+      "auto_match/func_82D53B60.c": "MISSING",
+      "auto_match/func_82D5EFB8.c": "MISSING",
+      "auto_match/func_82860120.c": "MISSING",
+      "auto_match/func_83065218.c": "MISSING",
+      "auto_match/func_8242DD78.c": "MISSING",
+      "auto_match/func_824FB3C8.c": "MISSING",
+      "auto_match/func_825D9D38.c": "MISSING",
+      "auto_match/func_825E4848.c": "MISSING",
+      "auto_match/func_82455848.c": "MISSING",
+      "auto_match/func_82591810.c": "MISSING",
+      "auto_match/func_824FDD30.c": "MISSING",
+      "auto_match/func_825D9788.c": "MISSING",
+      "auto_match/func_82E3BF28.c": "MISSING",
+      "auto_match/func_82F68A98.c": "MISSING",
+      "auto_match/func_824FB738.c": "MISSING",
+      "auto_match/func_82592340.c": "MISSING",
+      "auto_match/func_82C751C0.c": "MISSING",
+      "auto_match/func_82FE7B00.c": "MISSING",
+      "auto_match/func_82A6AD30.c": "MISSING",
+      "auto_match/func_82FFA6E8.c": "MISSING",
+      "auto_match/func_82D53BD8.c": "MISSING",
+      "auto_match/func_82FE8728.c": "MISSING",
+      "auto_match/func_82F63CA0.c": "MISSING",
+      "auto_match/func_82FE87E0.c": "MISSING",
+      "auto_match/func_82985288.c": "MISSING",
+      "auto_match/func_82E92C20.c": "MISSING",
+      "auto_match/func_82FE75A0.c": "MISSING",
+      "auto_match/func_822845D8.c": "MISSING",
+      "auto_match/func_82862E08.c": "MISSING"
     }
   }
 }
