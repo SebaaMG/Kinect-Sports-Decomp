@@ -1,26 +1,6 @@
-typedef unsigned char undefined1, byte, undefined, bool;
-#define true 1
-#define false 0
-typedef unsigned short undefined2, ushort, word;
-typedef unsigned int undefined4, uint, dword, ulong;
-typedef unsigned __int64 undefined8, ulonglong, qword;
-typedef __int64 longlong;
-typedef int (*code)();
-typedef unsigned char U8;
-typedef unsigned short U16;
-typedef unsigned int U32;
-typedef unsigned __int64 U64;
-typedef signed char S8;
-typedef signed short S16;
-typedef signed int S32;
-typedef __int64 S64;
-typedef struct { U64 lo, hi; } V16;
-
-
-void fn_826384E0(int param_1,undefined1 param_2)
-
+// Kinect Sports retail 4D5308C9, function 0x826384E0 (20 bytes).
+void fn_826384E0(int param_1, unsigned char param_2)
 {
-  *(undefined1 *)(param_1 + 0x2901) = param_2;
-  *(ulonglong *)(param_1 + 0x10) = *(ulonglong *)(param_1 + 0x10) | 0x10000000;
-  return;
+    *(volatile unsigned char *)(param_1 + 0x2901) = param_2;
+    *(volatile unsigned long long *)(param_1 + 0x10) |= 0x10000000u;
 }
