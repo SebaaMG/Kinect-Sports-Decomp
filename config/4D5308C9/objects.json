@@ -3831,7 +3831,12 @@
           "/O1"
         ]
       },
-      "auto_match/func_82610DC8.c": "MISSING",
+      "auto_match/func_82610DC8.c": {
+        "status": "Matching",
+        "extra_cflags": [
+          "/O1"
+        ]
+      },
       "auto_match/func_82623608.c": {
         "status": "Matching",
         "extra_cflags": [
