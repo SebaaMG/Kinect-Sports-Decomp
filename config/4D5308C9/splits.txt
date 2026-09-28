@@ -211730,3 +211730,39 @@ auto_match/func_822845D8.c:
 
 auto_match/func_82862E08.c:
 	.text       start:0x82862E08 end:0x82862ED4
+
+auto_match/func_827B9368.c:
+	.text       start:0x827B9368 end:0x827B93BC
+
+auto_match/func_8284E2D8.c:
+	.text       start:0x8284E2D8 end:0x8284E324
+
+auto_match/func_8285F430.c:
+	.text       start:0x8285F430 end:0x8285F454
+
+auto_match/func_8304D6F0.c:
+	.text       start:0x8304D6F0 end:0x8304D714
+
+auto_match/func_828EE3F8.c:
+	.text       start:0x828EE3F8 end:0x828EE418
+
+auto_match/func_82AC557C.c:
+	.text       start:0x82AC557C end:0x82AC559C
+
+auto_match/func_826BC850.c:
+	.text       start:0x826BC850 end:0x826BC86C
+
+auto_match/func_827D5680.c:
+	.text       start:0x827D5680 end:0x827D569C
+
+auto_match/func_827F9468.c:
+	.text       start:0x827F9468 end:0x827F9484
+
+auto_match/func_82AC8910.c:
+	.text       start:0x82AC8910 end:0x82AC8950
+
+auto_match/func_82B43908.c:
+	.text       start:0x82B43908 end:0x82B43948
+
+auto_match/func_82616AF0.c:
+	.text       start:0x82616AF0 end:0x82616B2C
